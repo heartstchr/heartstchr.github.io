@@ -3,10 +3,16 @@
 	padding:0px;
 }
 h1{
-	font:bold 20px Tahoma;
+	font:bold 20px;
+    font-family: 'Microsoft Tai Le';
 	}
 h2{
-	font:bold 14px Tahoma;
+font-size: large;
+font-style: italic;
+font-family: Georgia, serif;
+color:#44636d;
+font-weight: bold;
+line-height: 300%;
 	}
 header,section,footer,aside,nav,article,hgroup{
 	display:block;
@@ -17,14 +23,17 @@ body{
 a{
 text-decoration:none;
 }
+a:visited {
+color: darkblue;
+}
 #big_wrapper{
 	width:1000px;
 	margin:20px auto;
 	text-align:left;
 }
 #top_header{
-	background:#97B9F3;
-	border:1px solid #25E98F;
+	background:rgba(201, 221, 221, 0.97);
+	border:2px solid #ebfcfc;
 padding:20px;
 border-top-color:lightgrey;
 border-left-color:aliceblue;
@@ -32,10 +41,11 @@ border-top-left-radius:30px;
 border-bottom-right-radius:30px;
 }
 #top_menu{
-	background:#E9F490;
+	background:rgba(168, 180, 178, 0.97);
 	color:white;
     width:40%;
     float:right;
+    border:1px solid #ebfcfc;
     border-top-right-radius:30px;
     border-bottom-left-radius:30px;
 }
@@ -58,7 +68,7 @@ border-bottom-right-radius:30px;
 	width:220px;
 	margin:20px 0px;
 	padding:30px;
-	background:#6316D6;
+	background:rgba(201, 221, 221, 0.97);
 	}
 #the_footer{
 	clear:both;
@@ -67,13 +77,28 @@ border-bottom-right-radius:30px;
 	border-top:2px solid #44F836;
 }
 article{
-background:#36F8C8 ;
+background:rgba(201, 221, 221, 0.97);
 padding:20px;
 margin-bottom:15px;
-border-left:dotted #114e3f;
+border:2px solid #ebfcfc;
+border-left : 1px dotted #114e3f;
 border-top-left-radius:30px;
 border-bottom-left-radius:30px;
-
+}
+ article >p {
+    background:rgba(7, 48, 160, 0.64);
+    margin:5px;
+    padding:10px;
+    font-family:'Times New Roman';
+    border-radius:10px;
+    color:rgba(201, 221, 221, 0.97);
+}
+img {
+box-shadow:rgba(87, 81, 81, 0.27) 5px 5px;
+}
+figcaption {
+text-align:center;
+font-family:'Jing Jing';
 }
 article > footer{
 	text-align:right;
