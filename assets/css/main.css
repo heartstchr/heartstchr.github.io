@@ -3,10 +3,22 @@
 	padding:0px;
 }
 h1{
+    text-align:center;
 	font:bold 20px;
     font-family: 'Microsoft Tai Le';
+    background-color:rgba(149, 198, 190, 0.81);
+    border-radius:5px;
+    padding:5px;
+    box-shadow:rgba(139, 188, 180, 0.81) 10px 10px;
 	}
+span {
+color:white;
+}
+span:hover {
+    color:darkblue;
+    }
 h2{
+    text-align:center;
 font-size: large;
 font-style: italic;
 font-family: Georgia, serif;
@@ -19,6 +31,7 @@ header,section,footer,aside,nav,article,hgroup{
 	}
 body{
 	text-align: center;
+    background-color:aliceblue;
 	}
 a{
 text-decoration:none;
@@ -43,20 +56,29 @@ border-bottom-right-radius:30px;
 #top_menu{
 	background:rgba(168, 180, 178, 0.97);
 	color:white;
+    padding-left:5px;
+    padding-right:5px;
     width:40%;
     float:right;
     border:1px solid #ebfcfc;
     border-top-right-radius:30px;
-    border-bottom-left-radius:30px;
+    border-bottom-left-radius:30px;  
 }
 #top_menu li{
 	display:inline-block;
 	list-style:none;
-	padding-left:10%;
+	padding-left:7.5%;
     padding-top:10px;
     padding-bottom:10px;
 	font:bold 14px Tahoma;
 
+}
+.list a:hover {
+color:rgba(200, 251, 251, 0.82);
+text-transform:lowercase;
+padding:5px;
+border:1px solid black;
+font-family: Georgia, serif;
 }
 #main_section{
 	float:left;
