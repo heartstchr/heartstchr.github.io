@@ -109,11 +109,17 @@ article{
 background:rgba(201, 221, 221, 0.97);
 padding:20px;
 margin-bottom:15px;
-border:2px solid #ebfcfc;
 border-left: 1px dotted #114e3f;
 border-top-left-radius:30px;
 border-bottom-left-radius:30px;
 }
+    article:hover {
+	background:white;
+    box-shadow:rgba(17, 57, 245, 0.76) 3px 4px;
+    z-index:6;
+    border:3px double black;
+    }
+
  article >p {
     background:rgba(7, 48, 160, 0.64);
     margin:5px;
@@ -126,7 +132,12 @@ figure img {
 box-shadow:rgba(87, 81, 81, 0.27) 5px 5px;
 margin:30px 20px 10px 0px;
 }
+
+img:hover {
+rotation:3deg;
+}
 figcaption {
+    color:rgba(3, 42, 30, 0.96);
 text-align:center;
 font-family:'Jing Jing';
 }
