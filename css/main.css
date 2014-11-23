@@ -19,10 +19,10 @@ a.active {
     color: #CDD3D3;
 }
 a:active{
-    box-shadow: 0 -30px 30px 4px black;
+    box-shadow: 0 -14px 35px 0px black;
 }
 a:hover{
-border-bottom: 1px solid rgba(127, 73, 195, 0.9);
+border-bottom: 1px solid white;
 color: #CDD3D3 !important;
 }
 h1,
@@ -169,7 +169,7 @@ header .intro-text .skills {
 .navbar-inverse {
     border: 0;
     border-bottom: 2px solid black;
-    background-color: rgba(92, 93, 178, 0.79) !important;
+    background-color: rgba(123, 71, 200, 0.87) !important;
 }
 
 section {
@@ -469,8 +469,51 @@ margin-right: 20px;
 box-shadow: 0 -14px 30px 4px rgb(223, 218, 218);
 }
 a{
-    color: white ;
+    color: black ;
 }
 strong>a{
     color:black;
+    text-decoration: none;
 }
+
+/*.widget-front.hover .round-div,
+article.hover .round-div{
+    -webkit-transform:scale(1.3);
+    -moz-transform:scale(1.3);
+    -ms-transform:scale(1.3);
+    -o-transform:scale(1.3);
+    transform:scale(1.3);
+    cursor:pointer
+}
+.thumb-wrapper {
+width: 269px;
+max-width: 100%;
+height: 250px;
+position: relative;
+left: -1px;
+top: 0;
+display: block;
+overflow: hidden;
+text-align: center;
+margin: auto;
+}*/
+/*.portfolio-link>img{
+background: #ff9600; 
+background: rgba( 255,150,0,0.95 ); 
+position: absolute;
+top: 0;
+left: 0;
+width: 100%; 
+height: 100%;
+-moz-box-shadow: inset 0 0 0 1px rgba(255,182,78,1), 0 0 20px rgba(0,0,0,0.6);
+-webkit-box-shadow: inset 0 0 0 1px rgba(255,182,78,1), 0 0 20px rgba(0,0,0,0.6);
+box-shadow: inset 0 0 0 1px rgba(255,182,78,1), 0 0 20px rgba(0,0,0,0.6);
+text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+text-align: center;
+z-index: 10;
+-webkit-transform: scale(0); 
+-moz-transform: scale(0);
+-o-transform: scale(0);
+-ms-transform: scale(0);
+transform: scale(0);
+}*/
