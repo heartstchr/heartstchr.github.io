@@ -196,7 +196,13 @@ section.success {
         padding-top: 75px;
     }
 }
-
+#portfolio{
+    background: rgb(241, 241, 241);
+}
+#portfolio .container{
+    background: rgb(249, 249, 249);
+    border: 1px solid rgba(163, 155, 155, 0.2);
+}
 #portfolio .portfolio-item {
     right: 0;
     margin: 0 0 15px;
