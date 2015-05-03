@@ -33,8 +33,8 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script async src="https://maps.googleapis.com/maps/api/js"></script>
-    <script >
+    <script defer src="https://maps.googleapis.com/maps/api/js"></script>
+    <script  defer >
       function initialize() {
         var mapCanvas = document.getElementById('map-canvas');
         var mapOptions = {
@@ -60,9 +60,13 @@
         width: 100% !important;
         height: 100% !important;
     }
+    .portfolio-link img{
+    	width:359;
+    	height:255;
+    }
 
     </style>
-    <script>
+    <script defer>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -131,7 +135,7 @@
     </header>
 <!-- add -->
 	<div align="center" style='background:rgb(241, 241, 241);'>
-		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script defer src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
 			     data-ad-client="ca-pub-6802795079617307"
 			     data-ad-slot="3893096078"></ins>
@@ -1710,7 +1714,7 @@
     <script defer src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script type="text/javascript">
+    <script  defer type="text/javascript">
 		// jQuery for page scrolling feature - requires jQuery Easing plugin
 		$(function() {
 		    $('.page-scroll a').bind('click', function(event) {
