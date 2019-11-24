@@ -5,7 +5,9 @@ body {
 p {
     font-size: 20px;
 }
-
+@-ms-viewport{
+width: device-width;
+}
 p.small {
     font-size: 16px;
 }
@@ -23,7 +25,7 @@ a:active{
 }
 a:hover{
 border-bottom: 1px solid white;
-color: #CDD3D3 !important;
+color: #0046bb !important;
 }
 h1,
 h2,
@@ -164,12 +166,14 @@ font-family: 'Roboto', sans-serif;
 .navbar .navbar-nav li a:focus {
     outline: 0;
 }
-
+.navbar-default .navbar-brand{
+    color:black;
+}
 .navbar-default,
 .navbar-inverse {
     border: 0;
-    border-bottom: 2px solid black;
-    background-color: rgba(48, 48, 48, 0.95) !important;
+    background-color: white !important;
+    box-shadow: 0 4px 6px 0 rgba(32,33,36,0.28);
 }
 section {
     padding: 100px 0;
@@ -182,11 +186,12 @@ section h2 {
 }
 
 section.success {
-    color: #fff;
-    background: rgba(140, 144, 144, 0.75);
-    box-shadow: 0 55px 35px 35px black;
+    color: #000;
+    background: rgb(255, 255, 255);
 }
-
+.remove {
+    display: none;
+}
 @media(max-width:767px) {
     section {
         padding: 75px 0;
@@ -206,6 +211,8 @@ section.success {
 #portfolio .portfolio-item {
     right: 0;
     margin: 0 0 15px;
+    height: 260px;
+    overflow: hidden;
 }
 
 #portfolio .portfolio-item .portfolio-link {
@@ -218,7 +225,7 @@ section.success {
 #portfolio .portfolio-item .portfolio-link .caption {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 260px;
     opacity: 0;
     background: rgba(24,188,156,.9);
     -webkit-transition: all ease .5s;
@@ -352,7 +359,7 @@ footer .footer-col {
 }
 
 footer .footer-below {
-    padding: 25px 0;
+    padding: 5px 0;
     background-color: white;
     color: black;
     border-top: 1px solid black;
@@ -462,11 +469,11 @@ footer .footer-below {
   .navbar-default .navbar-nav>.active>a:focus {
 color: #ffffff;
 }
-.navbar-nav>li>a {
-/*box-shadow: 0 -14px 35px 0px rgba(129, 99, 237, 0.92) ;*/
+.navbar-default .navbar-nav>li>a{
+    color: black; 
 }
-.navbar-nav>li {
-margin-right: 20px;
+.navbar-toggle{
+    background-color:black;
 }
 .modal-body {
 box-shadow: 0 -14px 30px 4px rgb(223, 218, 218);
