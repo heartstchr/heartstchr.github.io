@@ -99,18 +99,19 @@
         </div>
         <!-- /.container -->
     </nav>
-
     <!-- Header -->
     <header>
-        <div class="container">
+        <div class="container" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name" class="remove">Jiwan Ghosal</span>
             <div class="row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-3">
-                    <img class="img-responsive" src="img/jiwan.png" alt="Jiwan Ghosal" height=200px width=200px>
+                    <img class="img-responsive" itemprop="image" src="img/jiwan.png" alt="Photo of Jiwan Ghosal"
+                        height=200px width=200px>
                 </div>
                 <div class="col-sm-5">
                     <div class="intro-text">
-                        <span class="name">Welcomes You</span>
+                        <span class="name" itemprop="name">Welcomes You</span>
                         <hr>
                     </div>
                 </div>
@@ -119,11 +120,23 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="intro-text">
-                        <span class="skills">Senior Full Stack Developer (Backend & Frontend) - Graphic Artist - UI/UX
+                        <span class="skills" itemprop="jobTitle">Senior Full Stack Developer (Backend & Frontend) -
+                            Graphic Artist - UI/UX
                             Designer</span>
                     </div>
                 </div>
             </div>
+            <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="remove">
+                <span itemprop="streetAddress">
+                    Hyderabad
+                </span>
+                <span itemprop="addressLocality">Telangana</span>,
+                <span itemprop="addressRegion">India</span>
+                <span itemprop="postalCode">500032</span>
+            </div>
+            <span class="remove" itemprop="telephone">+91 70262 17029</span>
+            <a class="remove" href="mailto:jiwan.cse@gmail.com" itemprop="email">
+                jiwan.cse@gmail.com</a>
         </div>
     </header>
     <!-- About Section -->
@@ -138,7 +151,8 @@
             <div class="row">
                 <div>
                     <p class="remove">Jiwan Ghosal</p>
-                    <p class="remove">Senior Member of Technical Staff at Mobistreak | Full Stack Developer at Upstox | Web Developer
+                    <p class="remove">Senior Member of Technical Staff at Mobistreak | Full Stack Developer at Upstox |
+                        Web Developer
                         Freelance</p>
                     <hr>
                     <p class="remove">Profile Summary</p>
@@ -229,7 +243,9 @@
                     <p>--<a href="https://en.wikipedia.org/wiki/Web_application" target="_blank">wikipedia</a></p>
                 </blockquote>
                 <div class="row">
-                    <div class="col-sm-4 portfolio-item">
+                    <div class="col-sm-4 portfolio-item" itemscope itemtype="https://schema.org/SoftwareApplication">
+                        <span itemprop="name" class="remove">Command Line Dictionary</span> <span class="remove" itemprop="operatingSystem">TERMINAL</span>
+                        <link itemprop="applicationCategory" href="https://schema.org/DeveloperApplication"/>
                         <a href="https://github.com/heartstchr/dic" class="portfolio-link" target="_blank">
                             <div class="caption">
                                 <div class="caption-content">
@@ -240,7 +256,9 @@
                                 alt="Command line dictionary">
                         </a>
                     </div>
-                    <div class="col-sm-4 portfolio-item">
+                    <div class="col-sm-4 portfolio-item" itemscope itemtype="https://schema.org/SoftwareApplication">
+                        <span itemprop="name" class="remove">Partner Upstox</span> <span class="remove" itemprop="operatingSystem">Browser</span>
+                        <link itemprop="applicationCategory" href="https://schema.org/BusinessApplication"/>
                         <a href="https://upstox.com/sub-broker/" class="portfolio-link" target="_blank">
                             <div class="caption">
                                 <div class="caption-content">
@@ -251,7 +269,9 @@
                                 alt="Open a Sub-Broker account with Upstox">
                         </a>
                     </div>
-                    <div class="col-sm-4 portfolio-item">
+                    <div class="col-sm-4 portfolio-item" itemscope itemtype="https://schema.org/SoftwareApplication">
+                        <span itemprop="name" class="remove">Open Demat Account</span> <span class="remove" itemprop="operatingSystem">Browser</span>
+                        <link itemprop="applicationCategory" href="https://schema.org/BusinessApplication"/>
                         <a href="https://upstox.com/open-demat-account/" class="portfolio-link" target="_blank">
                             <div class="caption">
                                 <div class="caption-content">
@@ -262,7 +282,9 @@
                                 alt="Open a Demat Account Online - Demat Account Opening at Upstox">
                         </a>
                     </div>
-                    <div class="col-sm-4 portfolio-item">
+                    <div class="col-sm-4 portfolio-item" itemscope itemtype="https://schema.org/SoftwareApplication">
+                        <span itemprop="name" class="remove">Call matrix</span> <span class="remove" itemprop="operatingSystem">Browser</span>
+                        <link itemprop="applicationCategory" href="https://schema.org/BusinessApplication"/>
                         <a href="https://www.callmatrix.io/" class="portfolio-link" target="_blank">
                             <div class="caption">
                                 <div class="caption-content">
@@ -273,7 +295,9 @@
                                 alt="CallMatrix - Call Intelligence, Marketing &amp; Analytics Platform">
                         </a>
                     </div>
-                    <div class="col-sm-4 portfolio-item">
+                    <div class="col-sm-4 portfolio-item" itemscope itemtype="https://schema.org/SoftwareApplication">
+                        <span itemprop="name" class="remove">Stock Market</span> <span class="remove" itemprop="operatingSystem">Browser</span>
+                        <link itemprop="applicationCategory" href="https://schema.org/BusinessApplication"/>
                         <a href="https://github.com/heartstchr/StockMarket" class="portfolio-link" target="_blank">
                             <div class="caption">
                                 <div class="caption-content">
@@ -283,18 +307,20 @@
                             <img src="img/portfolio/stocks.png" class="img-responsive"
                                 alt="Consuming socket data and plot realtime d3 graph">
                         </a>
-                    </div> 
-                    <div class="col-sm-4 portfolio-item">
-                            <a href="https://www.behance.net/gallery/74532693/Liqx" class="portfolio-link" target="_blank">
-                                <div class="caption">
-                                    <div class="caption-content">
-                                        <i class="fa fa-search-plus fa-3x"></i>
-                                    </div>
+                    </div>
+                    <div class="col-sm-4 portfolio-item" itemscope itemtype="https://schema.org/SoftwareApplication">
+                        <span itemprop="name" class="remove">Liqx App | UI design for liqur delivery app</span> <span class="remove" itemprop="operatingSystem">Photo shop</span>
+                        <link itemprop="applicationCategory" href="https://schema.org/BusinessApplication"/>
+                        <a href="https://www.behance.net/gallery/74532693/Liqx" class="portfolio-link" target="_blank">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
-                                <img src="img/portfolio/liqx.png" class="img-responsive"
-                                    alt="UI design for liqur delivery app">
-                            </a>
-                        </div>
+                            </div>
+                            <img src="img/portfolio/liqx.png" class="img-responsive"
+                                alt="UI design for liqur delivery app">
+                        </a>
+                    </div>
                 </div>
             </section>
             <!-- LOGO section-->
