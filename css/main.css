@@ -2987,3 +2987,6 @@ strong>a {
 .logo{
     display: inline-block;
 }
+.ads{
+    overflow:hidden;
+}
