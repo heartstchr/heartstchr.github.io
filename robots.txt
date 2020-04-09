@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://heartstchr.github.io/sitemap.xml
+Sitemap: https://heartstchr.github.io/sitemap.xml
