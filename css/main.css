@@ -2807,7 +2807,7 @@ footer h3 {
 
 footer .footer-above {
     padding-top: 50px;
-    background-color: rgba(100, 100, 100, .85)
+    background-color: rgb(177, 177, 177);
 }
 
 footer .footer-col {
@@ -2816,10 +2816,8 @@ footer .footer-col {
 
 footer .footer-below {
     padding: 5px 0;
-    background-color: #fff;
-    color: #000;
-    border-top: 1px solid #000;
-    box-shadow: 0 -20px 50px 4px rgba(8, 7, 7, .48)
+    background-color: #f1f1f1;
+    color: #7b7b7b;
 }
 
 .btn-social {
