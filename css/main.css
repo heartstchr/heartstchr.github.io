@@ -2494,7 +2494,7 @@ h6 {
 
 hr.star-light,
 hr.star-primary {
-    margin: 25px auto 30px;
+    margin: 5px auto 10px;
     padding: 0;
     max-width: 250px;
     border: 0;
@@ -2633,7 +2633,6 @@ section {
 section h2 {
     margin: 0;
     font-size: 2em;
-    box-shadow: 0 -3px 3px -1px rgba(157, 157, 157, .81)
 }
 
 section.success {
@@ -2945,7 +2944,7 @@ strong>a {
 }
 
 .row .text-center {
-    box-shadow: 0 -3px 6px -2px rgba(165, 156, 156, .8)
+    padding-top: 10px;
 }
 
 #map-canvas {
