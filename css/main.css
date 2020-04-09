@@ -2970,11 +2970,14 @@ strong>a {
 .blue {
     color: #0046bb!important;
 }
-.organisation {
+.organisation img{
     padding: 5px;
     border: 1px solid #f1f1f1;
     border-radius: 4px;
     width: 50px;
+}
+.organisation p{
+    font-size: 10px;
 }
 #jiwanGhosal{
     border-radius: 50%;
