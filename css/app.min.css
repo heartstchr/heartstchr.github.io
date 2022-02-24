@@ -16782,7 +16782,8 @@ img {
   opacity: 0;
   -webkit-transition: .1s ease-out;
   transition: .1s ease-out;
-  top: 30px
+  top: 30px;
+  border-radius: 10px !important;
 }
 
 .search-content.tab-pane.active {
