@@ -31644,3 +31644,9 @@ header .navbar-default .navbar-brand img {
   padding: 0;
   margin: 0;
 }
+.multiselect__option--disabled {
+  background: transparent;
+  color: #2574bb;
+  font-weight: 500;
+  margin-top: 18px;
+}
