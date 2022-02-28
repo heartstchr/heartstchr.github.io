@@ -16766,7 +16766,7 @@ img {
 
 .search-body {
   position: relative;
-  height: 240px
+  height: auto;
 }
 
 .search-content {
