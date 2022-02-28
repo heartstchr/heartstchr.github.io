@@ -188,7 +188,6 @@ a {
 }
 
 a:hover {
-  color: #0000b3;
   text-decoration: underline
 }
 
@@ -14794,7 +14793,7 @@ img {
 }
 
 @-webkit-keyframes loadingC {
-  0 {
+  0% {
       -webkit-transform: translate(0, 0);
       transform: translate(0, 0)
   }
@@ -14809,7 +14808,7 @@ img {
 }
 
 @keyframes loadingC {
-  0 {
+  0% {
       -webkit-transform: translate(0, 0);
       transform: translate(0, 0)
   }
