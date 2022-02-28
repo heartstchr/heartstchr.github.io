@@ -31645,8 +31645,8 @@ header .navbar-default .navbar-brand img {
   margin: 0;
 }
 .multiselect__option--disabled {
-  background: transparent;
-  color: #2574bb;
+  background: transparent !important;
+  color: #2574bb !important;
   font-weight: 500;
   margin-top: 18px;
 }
