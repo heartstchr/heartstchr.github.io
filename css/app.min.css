@@ -31634,11 +31634,12 @@ header .navbar-default .navbar-brand img {
 }
 .gq-col-group, .gq-col-room {
   padding: 0 !important;
+  width: 100%;
 }
 .dp-info-content {
   font-size: 12px !important;
 }
-.multiselect__content{
+.multiselect__content li{
   list-style-type: none !important;
   padding: 0;
   margin: 0;
