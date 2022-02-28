@@ -31638,3 +31638,8 @@ header .navbar-default .navbar-brand img {
 .dp-info-content {
   font-size: 12px !important;
 }
+.multiselect__content{
+  list-style-type: none !important;
+  padding: 0;
+  margin: 0;
+}
