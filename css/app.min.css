@@ -13450,7 +13450,7 @@ Modified icons to fit ionicon’s grid from original.
   margin-top: 7px;
   top: 100px;
   left: 20px;
-  z-index: 100000;
+  z-index: 100000 !important;
   display: none;
   font-size: 15px;
   line-height: 1em;
@@ -31650,3 +31650,4 @@ header .navbar-default .navbar-brand img {
   font-weight: 500;
   margin-top: 18px;
 }
+
