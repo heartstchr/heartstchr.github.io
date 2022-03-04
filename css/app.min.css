@@ -12331,7 +12331,8 @@ html.mm-opening .mm-slideout {
 }
 
 .icon-remove:before {
-  content: ""
+  content: "X";
+  color: red;
 }
 
 .icon-checked1:before {
@@ -12339,7 +12340,7 @@ html.mm-opening .mm-slideout {
 }
 
 .icon-add1:before {
-  content: ""
+  content: "+"
 }
 
 .icon-contact:before {
