@@ -31652,5 +31652,5 @@ header .navbar-default .navbar-brand img {
   min-height: 58px !important;
 }
 .fa-flightplushotel:before{
-  content: "\f236  + \f072";
+  content: "\f072 + \f236";
 }
