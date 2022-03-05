@@ -31654,3 +31654,9 @@ header .navbar-default .navbar-brand img {
 .fa-flightplushotel:before{
   content: "\f072 + \f236";
 }
+.gq-col-room{
+  height: 58px;
+}
+.gq-room-pax-dropdown{
+  min-width: 235px;
+}
