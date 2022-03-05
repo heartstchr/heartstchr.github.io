@@ -31653,5 +31653,5 @@ header .navbar-default .navbar-brand img {
 }
 
 .multiselect__input{
-  min-height: 58px;
+  min-height: 58px !important;
 }
