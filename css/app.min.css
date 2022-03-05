@@ -16780,8 +16780,6 @@ img {
   display: unset;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: .1s ease-out;
-  transition: .1s ease-out;
   top: 30px;
   border-radius: 10px !important;
 }
@@ -16797,8 +16795,6 @@ img {
   perspective: 1000px;
   -webkit-transform: translateY(-30px);
   transform: translateY(-30px);
-  -webkit-transition: .3s cubic-bezier(0.29, 0.32, 0.4, 1);
-  transition: .3s cubic-bezier(0.29, 0.32, 0.4, 1)
 }
 
 .part-of-my-stay-landing {
@@ -31638,7 +31634,7 @@ header .navbar-default .navbar-brand img {
   width: 100%;
 }
 .dp-info-content {
-  font-size: 12px !important;
+  font-size: 15px !important;
 }
 .multiselect__content li{
   list-style-type: none !important;
