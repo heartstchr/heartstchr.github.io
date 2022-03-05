@@ -14387,7 +14387,7 @@ Modified icons to fit ionicon’s grid from original.
   top: 0;
   display: block;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
 }
 
 .slick-track:before,
@@ -31652,3 +31652,6 @@ header .navbar-default .navbar-brand img {
   margin-top: 18px;
 }
 
+.multiselect__input{
+  min-height: 58px;
+}
