@@ -31636,7 +31636,7 @@ header .navbar-default .navbar-brand img {
 .dp-info-content {
   font-size: 15px !important;
 }
-.multiselect__content li{
+.multiselect__content li {
   list-style-type: none !important;
   padding: 0;
   margin: 0;
@@ -31648,15 +31648,22 @@ header .navbar-default .navbar-brand img {
   margin-top: 18px;
 }
 
-.multiselect__input{
+.multiselect__input {
   min-height: 58px !important;
 }
-.fa-flightplushotel:before{
+.fa-flightplushotel:before {
   content: "\f072 + \f236";
 }
-.gq-col-room{
+.gq-col-room {
   height: 58px;
 }
-.gq-room-pax-dropdown{
+.gq-room-pax-dropdown {
   min-width: 235px;
+}
+.slick-track , .slick-list {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+.slick-slide {
+  width: 100% !important;
 }
