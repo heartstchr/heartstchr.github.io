@@ -31667,3 +31667,6 @@ header .navbar-default .navbar-brand img {
 .slick-slide {
   width: 100% !important;
 }
+.search-navigation a {
+  padding: 12px 44px;
+}
