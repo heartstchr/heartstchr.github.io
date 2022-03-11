@@ -16782,7 +16782,7 @@ img {
   opacity: 0;
   top: 30px;
   border-radius: 10px !important;
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 .search-content.tab-pane.active {
