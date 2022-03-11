@@ -13451,7 +13451,7 @@ Modified icons to fit ionicon’s grid from original.
   margin-top: 7px;
   top: 100px;
   left: 20px;
-  z-index: 100000 !important;
+  z-index: 100000000 !important;
   display: none;
   font-size: 15px;
   line-height: 1em;
