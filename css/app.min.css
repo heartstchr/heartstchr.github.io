@@ -31714,3 +31714,7 @@ header .navbar-default .navbar-brand img {
   text-decoration: none;
   cursor: pointer;
 }
+
+.modal-content > .gq-room-pax-dropdown{
+  left: 0 !important;
+}
