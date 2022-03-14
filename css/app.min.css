@@ -31672,3 +31672,6 @@ header .navbar-default .navbar-brand img {
 .search-navigation a {
   padding: 12px 44px;
 }
+.light-box-modal {
+  z-index: 100050;
+}
