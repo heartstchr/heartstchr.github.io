@@ -31718,3 +31718,14 @@ header .navbar-default .navbar-brand img {
 .modal-content > .gq-room-pax-dropdown{
   left: 0 !important;
 }
+
+.bookNow{
+  background-color: #5d92fe;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
