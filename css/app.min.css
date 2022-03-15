@@ -31661,6 +31661,7 @@ header .navbar-default .navbar-brand img {
 }
 .gq-room-pax-dropdown {
   min-width: 235px;
+  left: 0 !important;
 }
 .slick-track , .slick-list {
   display: flex !important;
