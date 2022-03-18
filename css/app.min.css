@@ -14346,7 +14346,7 @@ Modified icons to fit ionicon’s grid from original.
 
 .slick-slider {
   position: relative;
-  display: block;
+  display: flex;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-touch-callout: none;
