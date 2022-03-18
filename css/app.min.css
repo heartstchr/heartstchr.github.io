@@ -14364,7 +14364,7 @@ Modified icons to fit ionicon’s grid from original.
   overflow: hidden;
   display: block;
   margin: 0;
-  padding: 0
+  padding: 0 !important;
 }
 
 .slick-list:focus {
