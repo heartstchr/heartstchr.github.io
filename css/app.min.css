@@ -31651,7 +31651,7 @@ header .navbar-default .navbar-brand img {
 }
 
 .multiselect__input {
-  min-height: 58px !important;
+  min-height: 50px !important;
 }
 .fa-flightplushotel{
   width: 44px;
