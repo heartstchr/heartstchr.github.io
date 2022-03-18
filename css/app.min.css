@@ -15798,7 +15798,7 @@ img {
   align-items: center;
   background-color: #fff;
   border: 1px solid #bfbfbf;
-  height: 57px
+  height: 50px;
 }
 
 .search-tabs .search-grid .box-search .search-input:after {
@@ -31739,6 +31739,6 @@ header .navbar-default .navbar-brand img {
 .ipt-search {
   height: 50px !important;
 }
-.box-search {
-  margin: 0 5px 5px 0;
+.select-flight {
+  margin: 0 !important;
 }
