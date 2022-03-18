@@ -31653,9 +31653,11 @@ header .navbar-default .navbar-brand img {
 .multiselect__input {
   min-height: 58px !important;
 }
+.fa-flightplushotel{
+  width: 44px;
+}
 .fa-flightplushotel:before {
   content: "\f072 + \f236";
-  width: 100%;
 }
 .gq-col-room {
   height: 58px;
