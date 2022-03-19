@@ -31744,7 +31744,7 @@ header .navbar-default .navbar-brand img {
   margin: 0 !important;
 }
 
-@media(min-width:576px) {
+@media(max-width:576px) {
   .modal-content {
     width: 300px;
     padding: 10px;
