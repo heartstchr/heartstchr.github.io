@@ -31743,3 +31743,10 @@ header .navbar-default .navbar-brand img {
 .select-flight {
   margin: 0 !important;
 }
+
+@media(min-width:576px) {
+  .modal-content {
+    width: 300px;
+    padding: 10px;
+  }
+}
