@@ -31705,7 +31705,8 @@ header .navbar-default .navbar-brand img {
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 70%;
+  width: 650px;
+  height: 650px;
 }
 
 .close {
