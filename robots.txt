@@ -1,2 +1,5 @@
-User-agent: *
-Sitemap: https://heartstchr.github.io/sitemap.xml
+
+User-agent:*
+Disallow:
+
+Sitemap: https://heartstchr.github.io/heartstchr.github.io/sitemap.xml
