@@ -1,0 +1,2 @@
+export const typeMap = {"article":{"/":{"path":"/article/","keys":["v-413b31e6","v-23c19a76","v-75baf5e7","v-565edcb2","v-14442e32","v-72a3fb38","v-2e3eac9e","v-74bc627b","v-8eee07aa","v-6dc367c8","v-256073f8","v-762004f2","v-012dca4b","v-f2f69f58"]}},"star":{"/":{"path":"/star/","keys":[]}},"timeline":{"/":{"path":"/timeline/","keys":["v-413b31e6","v-23c19a76","v-75baf5e7","v-565edcb2","v-14442e32","v-72a3fb38"]}}};
+
