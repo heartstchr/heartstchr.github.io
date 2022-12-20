@@ -5,14 +5,15 @@ title: Home
 heroImage: /img/jiwan.png
 heroText: Jiwan Ghosal
 tagline: Senior Full Stack Developer - Graphic Artist - UI/UX Designer
+containerClass: fancy-container
 actions:
   - text: About 💡
     link: /demo/
     type: primary
 
-  - text: Graphics
-    link: /graphics/
-  
+  - text: Projects
+    link: /projects/
+
   - text: Blog
     link: /blog/
 
@@ -22,7 +23,7 @@ actions:
 features:
   - title: Capgemini
     icon: /img/home/capgemini2.png
-    details: Leisure, Travel & Tourism
+    details: Consulting & technology services
     link: https://www.capgemini.com/
 
   - title: CatchThatBus
@@ -49,9 +50,9 @@ Full Stack Developer (Backend & Frontend) experienced in a wide variety of techn
 ## skills
 
 <div class="row">
-  <div class="col-md-4" v-for= "(item, index) in skils">
-      <p><i class=""></i> {{item.name}}</p>
-      <div class="col-sm-12" v-for= "(part, i) in item.value">
+  <div class="col-md-3" v-for= "(item, index) in skils">
+      <h3><i class=""></i> {{item.name}}</h3>
+      <div class="col-sm-4" v-for= "(part, i) in item.value">
         <span class="badge badge-info teal">{{part}}</span>
       </div>
   </div>
@@ -63,7 +64,7 @@ Full Stack Developer (Backend & Frontend) experienced in a wide variety of techn
         skils: [
           {
             name: "Front end",
-            value: ["HTML5","CSS3","JavaScript ( ES6 )","Stylus","AngularJS","VueJS","NuxtJS","ReactJS","UI/UX Design","Web Design","Web Application","Web view","Graphics Design","SEO","Service Worker","Webpack"]
+            value: ["VueJS","Vuepress", "Storybook", "Lit", "HTML5","CSS3","JavaScript(ES6)", "NuxtJS","ReactJS","AngularJS", "UI/UX Design","Web Design","Web Application","Web view","Service Worker","Webpack", "Rollup"]
           },
           {
             name: " Back end",
@@ -71,11 +72,19 @@ Full Stack Developer (Backend & Frontend) experienced in a wide variety of techn
           },
           {
             name: "DevOps",
-            value: ["Git","CICD","Ansible","Docker","Kibana","AWS S3","AWS ECS","AWS EC2","AWS Cognito","AWS Lambda","AWS API Gateway","AWS Cloud Watch","AWS VPC","AWS SQS","AWS SNS"],
+            value: ["Git","CICD","Ansible", "Azure", "YAML", "Docker","Kibana", "Azure Gateway", "Azure Blob" ,"S3","ECS","EC2","Cognito","Lambda","API Gateway","Cloud Watch","VPC","SQS","SNS"],
           },
           {
             name: "Graphics",
-            value: ["Davinci Resolve", "Adobe Premier pro", "Coral Draw", "Adobe Photoshop"],
+            value: ["Coral Draw", "Adobe Photoshop"],
+          },
+          {
+            name: "Video Editing",
+            value: ["Davinci Resolve", "Adobe Premier pro"],
+          },
+          {
+            name: "Marketing",
+            value: ["SEO", "Google Adwords"],
           }
         ]
     })
