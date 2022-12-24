@@ -1,2 +1,2 @@
-## Highlight Features
+Graphics
 

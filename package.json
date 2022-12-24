@@ -1,8 +1,7 @@
 {
   "name": "heartstchr.github.io",
   "version": "2.0.0",
-  "description": "A project of Jiwan ghosal",
-  "license": "MIT",
+  "description": "A portfolio of Jiwan ghosal",
   "type": "module",
   "scripts": {
     "docs:build": "vuepress build docs",
