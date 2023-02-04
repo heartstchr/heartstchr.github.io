@@ -13,7 +13,7 @@ order: 2
 </blockquote>
 
 <div class="row">
-  <div class="col-sm-4 portfolio-item flex-container" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(project, index) in projects">
+  <div class="col-sm-4 portfolio-item flex-container flex-item-left" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(project, index) in projects">
       <div class="appTitle">
           <span itemprop="name">{{project.name}}</span> | <span class="blue"
               itemprop="operatingSystem">{{project.software}}</span>
@@ -122,6 +122,13 @@ order: 2
     }
     blockquote {
         margin-bottom:100px;
+    }
+    .portfolio-link img{
+        width:50%;
+    }
+    .flex-item-left {
+        padding: 10px;
+        flex: 50%;
     }
     .portfolio-item {
         padding:20px;
