@@ -3,6 +3,8 @@ title: Projects
 icon: code
 order: 2
 ---
+
+
 <blockquote>
     <p>In computing, a web application or web app is a client–server computer program that the client
         (including the user interface and client-side logic) runs in a web browser. Common web
@@ -11,7 +13,7 @@ order: 2
 </blockquote>
 
 <div class="row">
-  <div class="col-sm-4 portfolio-item" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(project, index) in projects">
+  <div class="col-sm-4 portfolio-item flex-container" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(project, index) in projects">
       <div class="appTitle">
           <span itemprop="name">{{project.name}}</span> | <span class="blue"
               itemprop="operatingSystem">{{project.software}}</span>
@@ -112,3 +114,30 @@ order: 2
     })
   }
 </script>
+<style>
+    .appTitle{
+        margin-bottom:10px;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    blockquote {
+        margin-bottom:100px;
+    }
+    .portfolio-item {
+        padding:20px;
+        box-shadow: 0 1px 6px 0 #20212451;
+        border-radius: 4px;
+        margin-bottom: 30px;
+    }
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* Responsive layout - makes a one column layout instead of a two-column layout */
+    @media (max-width: 800px) {
+        .flex-container {
+            flex-direction: column;
+        }
+    }
+</style>
