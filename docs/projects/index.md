@@ -12,8 +12,8 @@ order: 2
     <p>--<a href="https://en.wikipedia.org/wiki/Web_application" target="_blank">wikipedia</a></p>
 </blockquote>
 
-<div class="row">
-  <div class="col-sm-4 portfolio-item flex-container flex-item-left" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(project, index) in projects">
+<div class="container">
+  <div class="col-sm-4 portfolio-item column" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(project, index) in projects">
       <div class="appTitle">
           <span itemprop="name">{{project.name}}</span> | <span class="blue"
               itemprop="operatingSystem">{{project.software}}</span>
@@ -126,25 +126,22 @@ order: 2
     .portfolio-link img{
         width:50%;
     }
-    .flex-item-left {
-        padding: 10px;
-        flex: 50%;
-    }
     .portfolio-item {
         padding:20px;
         box-shadow: 0 1px 6px 0 #20212451;
         border-radius: 4px;
         margin-bottom: 30px;
     }
-    .flex-container {
-        display: flex;
-        flex-direction: row;
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 20px;
+        width: 100%;
+        margin: 20px auto;
     }
 
-    /* Responsive layout - makes a one column layout instead of a two-column layout */
-    @media (max-width: 800px) {
-        .flex-container {
-            flex-direction: column;
-        }
+    .column {
+        padding: 20px;
+        text-align: center;
     }
 </style>
