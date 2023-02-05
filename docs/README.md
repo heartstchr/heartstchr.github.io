@@ -49,8 +49,8 @@ Full Stack Developer (Backend & Frontend) experienced in a wide variety of techn
 
 ## skills
 
-<div class="row">
-  <div class="col-md-3" v-for= "(item, index) in skils">
+<div class="container">
+  <div class="column" v-for= "(item, index) in skils">
       <h3><i class=""></i> {{item.name}}</h3>
       <div class="col-sm-4" v-for= "(part, i) in item.value">
         <span class="badge badge-info teal">{{part}}</span>
@@ -90,3 +90,17 @@ Full Stack Developer (Backend & Frontend) experienced in a wide variety of techn
     })
   }
 </script>
+
+<style>
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    width: 60%;
+    margin: 20px auto;
+}
+.column {
+    padding: 20px;
+    text-align: center;
+}
+</style>
