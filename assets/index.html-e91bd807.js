@@ -1,0 +1,11 @@
+import{_ as o,V as a,W as t,a2 as l}from"./framework-c0174883.js";const i="/img/portfolio/small_mozilaclub.jpg",s="/img/portfolio/small_jeclatbanner.jpg",e="/img/portfolio/small_woodhood.png",n={},c=l('<section id="Banner"><h4>Banners</h4><blockquote><p>A banner can be a flag or other piece of cloth bearing a symbol, logo, slogan or other message. Also, a bar shape piece of non-cloth advertising material sporting a name, slogan, or other marketing message.</p><p>--<a href="https://en.wikipedia.org/wiki/Banner" target="_blank">wikipedia</a></p></blockquote><div class="row"><!-- place your Banners image--><div class="col-sm-4 portfolio-item"><a href="#portfolioModalbanner1" class="portfolio-link" data-toggle="modal"><div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div><img src="'+i+'" class="img-responsive" alt=" Mozilla Firefox Club"></a></div><div class="col-sm-4 portfolio-item"><a href="#portfolioModalbanner2" class="portfolio-link" data-toggle="modal"><div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div><img src="'+s+`" class="img-responsive" alt="Cultural and Social Fest Banner"></a></div><!-- &lt;div class=&quot;col-sm-4 portfolio-item&quot;&gt;
+            &lt;a href=&quot;#portfolioModalbanner3&quot; class=&quot;portfolio-link&quot; data-toggle=&quot;modal&quot;&gt;
+                &lt;div class=&quot;caption&quot;&gt;
+                    &lt;div class=&quot;caption-content&quot;&gt;
+                        &lt;i class=&quot;fa fa-search-plus fa-3x&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;img src=&quot;/img/portfolio/small_juteboard.jpg&quot; class=&quot;img-responsive&quot;
+                    alt=&quot;National Jute Board&quot;&gt;
+            &lt;/a&gt;
+        &lt;/div&gt; --><div class="col-sm-4 portfolio-item"><a href="#portfolioModalbanner4" class="portfolio-link" data-toggle="modal"><div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div><img src="`+e+'" class="img-responsive" alt=" Mozilla Firefox Club"></a></div></div></section>',1),r=[c];function d(p,g){return a(),t("div",null,r)}const m=o(n,[["render",d],["__file","index.html.vue"]]);export{m as default};

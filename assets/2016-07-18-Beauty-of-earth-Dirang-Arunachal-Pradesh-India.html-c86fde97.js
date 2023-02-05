@@ -1,4 +1,4 @@
-import{_ as r,a as n,b as l,c as i}from"./fb-01498e19.js";import{_ as s}from"./ArunachalPradeshBrabhaputra-cd584624.js";import{_ as c,V as h,W as u,X as e,a2 as o,$ as t,E as _}from"./framework-1ec7e59d.js";const d={},p=e("p",null,"Travel points: Gwahati ► Bomdila ► Dirang ► Sella Pass",-1),f=e("blockquote",null,[e("p",null,"Pre-requisite")],-1),m=e("pre",null,[e("code",null,`▬ To cross Bomdila check post  you require pass. But don't worry driver will do it for you.
+import{_ as r,a as n,b as l,c as i}from"./fb-01498e19.js";import{_ as s}from"./ArunachalPradeshBrabhaputra-cd584624.js";import{_ as c,V as h,W as u,X as e,a1 as o,$ as t,E as _}from"./framework-c0174883.js";const d={},p=e("p",null,"Travel points: Gwahati ► Bomdila ► Dirang ► Sella Pass",-1),f=e("blockquote",null,[e("p",null,"Pre-requisite")],-1),m=e("pre",null,[e("code",null,`▬ To cross Bomdila check post  you require pass. But don't worry driver will do it for you.
 ▬ A cab having heater.
 ▬ Woollen cloth.
 ▬ Avoid taking respiratory patient.
