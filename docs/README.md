@@ -64,7 +64,7 @@ Full Stack Developer (Backend & Frontend) experienced in a wide variety of techn
         skils: [
           {
             name: "Front end",
-            value: ["VueJS","Vuepress", "Storybook", "Lit", "HTML5","CSS3","JavaScript(ES6)", "NuxtJS","ReactJS","AngularJS", "UI/UX Design","Web Design","Web Application","Web view","Service Worker","Webpack", "Rollup"]
+            value: ["VueJS", "Vuepress", "Storybook", "Lit", "Storybook", "HTML5","CSS3","JavaScript(ES6)", "NuxtJS","ReactJS","AngularJS", "UI/UX Design","Web Design","Web Application","Web view","Service Worker","Webpack", "Rollup"]
           },
           {
             name: " Back end",
@@ -73,6 +73,10 @@ Full Stack Developer (Backend & Frontend) experienced in a wide variety of techn
           {
             name: "DevOps",
             value: ["Git","CICD","Ansible", "Azure", "YAML", "Docker","Kibana", "Azure Gateway", "Azure Blob" ,"S3","ECS","EC2","Cognito","Lambda","API Gateway","Cloud Watch","VPC","SQS","SNS"],
+          },
+          {
+            name: "Testing",
+            value: ["Jest","Testcafe","Lighthouse","Playwright"],
           },
           {
             name: "Graphics",
