@@ -16,7 +16,7 @@ order: 3
       </div>
       <link itemprop="applicationCategory" :href="service.schema" />
       <div itemprop="name">{{service.description}}</div>
-      <Button size="large" color="deeppink">Contact Us</Button>
+      <a href="mailto:jiwan.cse@gmail.com" size="large" color="deeppink">Contact Us</a>
   </div>
 </div>
 
