@@ -1,6 +1,6 @@
 ---
 title: Projects
-icon: code
+icon: discover
 order: 2
 ---
 

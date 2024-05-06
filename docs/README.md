@@ -8,11 +8,14 @@ tagline: Senior Full Stack Developer - Graphic Artist - UI/UX Designer
 containerClass: fancy-container
 actions:
   - text: About 💡
-    link: /demo/
+    link: /about/
     type: primary
 
   - text: Projects
     link: /projects/
+  
+  - text: Services
+    link: /services/
 
   - text: Blog
     link: /blog/

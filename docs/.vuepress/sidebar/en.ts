@@ -10,6 +10,12 @@ export const enSidebar = sidebar({
       link: "projects/",
     },
     {
+      icon: "code",
+      text: "Services",
+      prefix: "services/",
+      link: "services/",
+    },
+    {
       text: "Graphics",
       icon: "creative",
       prefix: "graphics/",
