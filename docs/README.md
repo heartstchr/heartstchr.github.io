@@ -51,7 +51,7 @@ footer: Copyright © 2022
 I am a seasoned Full Stack Developer with extensive experience in both backend and frontend technologies. With a demonstrated history of success in the industry, I bring a comprehensive skill set that covers all phases of software development, including planning, implementation, testing, monitoring, and delivery. My expertise is complemented by a Google certification in Search Engine Marketing (SEM), adding a valuable dimension to my technical capabilities.
 </p>
 
-## Skills
+## Skills & Expertise
 
 <div class="flex felx-row gap-2 grid nested-grid">
   <div class="col-3 gap-1 grid mt-4 h-min surface-card shadow-1 grid-nogutter" v-for= "(item, index) in skills">
