@@ -29,9 +29,7 @@ export default hopeTheme({
       "/zh/demo/encrypt.html": ["1234"],
     },
   },
-  blog: {
-    roundAvatar: true,
-  },
+  blog: {},
   plugins: {
     blog:true,
     comment: {
@@ -40,25 +38,14 @@ export default hopeTheme({
     mdEnhance: {
       align: true,
       attrs: true,
-      chart: true,
       codetabs: true,
-      container: true,
       demo: true,
-      echarts: true,
-      flowchart: true,
       gfm: true,
-      imageLazyload: true,
       figure: true,
-      imageSize: true,
       include: true,
-      katex: true,
       mark: true,
-      mermaid: true,
       playground: {
         presets: ["ts", "vue"],
-      },
-      presentation: {
-        plugins: ["highlight", "math", "search", "notes", "zoom"],
       },
       stylize: [
         {
@@ -82,7 +69,6 @@ export default hopeTheme({
     pwa: {
       favicon: "/favicon.ico",
       cacheHTML: true,
-      cachePic: true,
       appendBase: true,
       apple: {
         icon: "/assets/icon/apple-icon-152.png",

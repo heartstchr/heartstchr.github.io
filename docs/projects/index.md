@@ -4,7 +4,6 @@ icon: discover
 order: 2
 ---
 
-
 <div class="flex flex-column gap-4">
     <div>I take pride in delivering innovative and impactful projects across various domains. Our dedication to excellence and our commitment to client satisfaction are reflected in every project we undertake.</div>
     <div>Here, you can explore some of my featured projects, which demonstrate my expertise and commitment to excellence. If you're looking for a professional to bring your vision to life, you're in the right place.</div>
@@ -14,7 +13,7 @@ order: 2
   <div class="col-5 surface-card shadow-1 m-2 p-2" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(project, index) in projects">
       <link itemprop="applicationCategory" :href="project.schema" />
       <a :href="project.link" class="portfolio-link" target="_blank">
-          <Image :src="project.img" class="" :alt="project.altText" width="100%"/>
+          <img :src="project.img" class="" :alt="project.altText" width="100%"/>
       </a>
       <div class="text-md font-bold mt-4">
           <div itemprop="name">{{project.name}}</div> 
@@ -22,7 +21,7 @@ order: 2
       </div>
       <div class="mt-4">{{project.description}}</div>
       <div class="flex grid mt-4 p-2">
-        <div v-for= "(part, i) in project.skills"> <Tag severity="secondary" :value="part"></Tag></div>
+        <div v-for= "(part, i) in project.skills"> <div class="text-sm px-2 ml-2 mb-2 surface-100 border-round-xs line-height-3">{{part}}</div></div>
       </div>
   </div>
 </div>

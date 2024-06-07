@@ -96,21 +96,27 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
   </div>
 </div>
 
-## Skills & Expertise
+## 
 
 <div class="flex felx-row gap-2 grid nested-grid justify-content-center my-8">
+  <div class="text-center col-12">
+    <div class="text-6xl font-bold">Skills & Expertise</div>
+  </div>
   <div class="col-3 gap-1 grid mt-4 h-min surface-card shadow-1 grid-nogutter" v-for= "(item, index) in skills">
       <div class="col-12 font-bold text-xl">{{item.name}}</div>
-      <div v-for= "(part, i) in item.value"> <Tag severity="secondary" :value="part"></Tag></div>
+      <div v-for= "(part, i) in item.value"> <div class="text-sm px-2 surface-100 border-round-xs line-height-3">{{part}}</div></div>
   </div>
 </div>
 
-## Other Skills
+##
 
 <div class="flex felx-row gap-2 grid nested-grid justify-content-center my-8">
+  <div class="text-center col-12">
+    <div class="text-6xl font-bold">Other skills</div>
+  </div>
   <div class="col-3 gap-1 grid mt-4 h-min surface-card shadow-1 grid-nogutter" v-for= "(item, index) in otherSkills">
       <div class="col-12 font-bold text-xl">{{item.name}}</div>
-      <div v-for= "(part, i) in item.value"> <Tag severity="secondary" :value="part"></Tag></div>
+      <div v-for= "(part, i) in item.value"> <div class="text-sm px-2 surface-100 border-round-xs line-height-3">{{part}}</div></div>
   </div>
 </div>
 
