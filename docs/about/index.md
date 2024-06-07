@@ -1,21 +1,37 @@
-[![Jiwan Ghosal's  trips | Travel yard](https://i9.ytimg.com/vi_webp/FSfJcwkm_7o/mq3.webp?sqp=CLjx_p4G-oaymwEmCMACELQB8quKqQMa8AEB-AHUBoAC4AOKAgwIABABGGUgSig_MA8=&rs=AOn4CLDY3vhP42lbB7uzI4Yupo9erjvb3w)](https://youtu.be/FSfJcwkm_7o)
+<div class="my-8">
+  <div class="text-center">
+    <div class="text-6xl font-bold">About</div>
+  </div>
+  <div class="my-4 text-md"> Jiwan Ghosal is a multifaceted freelance professional with a diverse skill set and a passion for continuous exploration and creativity. With extensive experience in Full Stack Development, Jiwan excels in both backend and frontend technologies, making significant contributions to various projects within the tech industry. His expertise spans across all stages of Agile Software Development, from planning and implementation to testing, monitoring, and delivery. Additionally, Jiwan holds a Google certification in Search Engine Marketing (SEM), showcasing his proficiency in enhancing online visibility and driving targeted traffic.</div>
+</div>
 
-Jiwan Ghosal is a freelance Full Stack Developer (Backend & Frontend) experienced in a wide variety of technologies and software tools with a demonstrated history of working in the industry. Agile Software Development and contribute in all steps of planning, implementation, test, monitoring and delivery.Also, a Google certified SEM Analyst. 
+##
 
-Jiwan ghosal is a hard core traveller, youtuber, Graphic Artist, Logo Designer, Web Developer, UI/UX Designer.
+<div class="my-8">
+  <div class="text-center">
+    <div class="text-6xl font-bold">Creative Endeavors</div>
+  </div>
+  <div class="my-4 text-center text-md"> Jiwan ghosal is a hard core traveller, youtuber, Graphic Artist, Logo Designer, Web Developer, UI/UX Designer.</div>
+</div>
 
+##
 
-Jiwan Ghosal, live in city of Coal Capital of India. He travel with only a bag pack, which helps me to go anywhere and anytime. Film all of it and show it to you.
-
-- #jiwanghosal 
-- #travel 
-- #vlog 
-- #filmmaking
-- #videocreator
-
-[Click here to Subscribe](https://www.youtube.com/c/JiwanGhosal/?sub_confirmation=1)
-
-My three mantras to travel around the India and hopefully  world are the following.
-1. Adventures trip. Never Plan a trip but choose the date and time wisely.
-2. Ready to pack your bag. 2 sets of cloth and the rest important belongings.
-3. Always travel light.
+<div class="my-8">
+  <div class="text-center">
+    <div class="text-6xl font-bold">The Adventurous Spirit</div>
+  </div>
+  <div class="my-4 text-center text-md"> Jiwan Ghosal resides in the vibrant city of Dhanbad, known as the Coal Capital of India. As a hardcore traveler, he embraces the freedom of exploring new places with just a backpack, ready to embark on spontaneous adventures. Jiwan documents his travels through compelling videos, capturing the essence of his journeys and sharing them with a wide audience.</div>
+    - #jiwanghosal 
+    - #travel 
+    - #vlog 
+    - #filmmaking
+    - #videocreator
+    <div class="my-4 text-4xl font-bold">YouTube Channel</div>
+    <div class="my-4 text-xl">Follow Jiwan’s travels and adventures <a href="https://www.youtube.com/c/JiwanGhosal/?sub_confirmation=1" target="_blank">Click here to Subscribe</a></div>
+    <div>My three mantras to travel around the India and hopefully  world are the following.</div>
+    <ol>
+    <li>Adventures trip. Never Plan a trip but choose the date and time wisely.</li>
+    <li>Ready to pack your bag. Two sets of cloth and the rest important belongings.</li>
+    <li>Always travel light.</li>
+    </ol>
+</div>

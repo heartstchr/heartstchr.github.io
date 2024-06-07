@@ -5,37 +5,34 @@ order: 2
 ---
 
 
-<div>
-    <p>I take pride in delivering innovative and impactful projects across various domains. Our dedication to excellence and our commitment to client satisfaction are reflected in every project we undertake.</p>
-    <p>Here, you can explore some of my featured projects, which demonstrate my expertise and commitment to excellence. If you're looking for a professional to bring your vision to life, you're in the right place.</p>
+<div class="flex flex-column gap-4">
+    <div>I take pride in delivering innovative and impactful projects across various domains. Our dedication to excellence and our commitment to client satisfaction are reflected in every project we undertake.</div>
+    <div>Here, you can explore some of my featured projects, which demonstrate my expertise and commitment to excellence. If you're looking for a professional to bring your vision to life, you're in the right place.</div>
 </div>
 
-<div class="grid">
-  <div class="col-4 surface-card shadow-1 m-2 p-2" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(project, index) in projects">
+<div class="grid mt-4">
+  <div class="col-5 surface-card shadow-1 m-2 p-2" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(project, index) in projects">
       <link itemprop="applicationCategory" :href="project.schema" />
       <a :href="project.link" class="portfolio-link" target="_blank">
-          <img :src="project.img" class="img-responsive"
-              alt="{{project.altText}}">
+          <Image :src="project.img" class="" :alt="project.altText" width="100%"/>
       </a>
       <div class="text-md font-bold mt-4">
           <div itemprop="name">{{project.name}}</div> 
-          <div class="text-xs" itemprop="operatingSystem">{{project.software}}</div>
+          <div class="text-xs mt-2" itemprop="operatingSystem">{{project.software}}</div>
       </div>
       <div class="mt-4">{{project.description}}</div>
-      <div class="flex grid mt-4">
-        <div class="col bg-bluegray-100 p-1 m-1 white-space-nowrap border-round-md text-center w-min" v-for= "(part, i) in project.skills">{{part}}</div>
+      <div class="flex grid mt-4 p-2">
+        <div v-for= "(part, i) in project.skills"> <Tag severity="secondary" :value="part"></Tag></div>
       </div>
   </div>
 </div>
 
-<script>
-  export default {
-    data: () => ({
-        projects: [
+<script setup lang="ts">
+    const projects= [
             {
                 name: "Catch That Bus",
                 description: "Book Malaysia and Singapore Bus Ticket Online",
-                skills: ["Javascript", "ES6", "VueJs", "Vuex","Axios","API integration", "Responsive", "ExpressJS", "MongoDB"],
+                skills: ["Javascript", "ES6", "VueJs", "Vuex","Vite","Axios","API integration", "Responsive", "ExpressJS", "MongoDB", "git", "EC2",  "eslint", "prettier"],
                 software: "Browser",
                 schema: "https://schema.org/DeveloperApplication",
                 link: "https://m.catchthatbus.com",
@@ -45,7 +42,7 @@ order: 2
             {
                 name: "Catch That Bus APP",
                 description: "IOS app for booking Malaysia and Singapore Bus Ticket Online",
-                skills: ["Cordova", "Javascript", "ES6", "VueJs", "Vuex","Axios","API integration", "Responsive", "ExpressJS", "MongoDB"],
+                skills: ["Cordova", "Javascript", "ES6", "VueJs", "Vuex","Axios","API integration", "Responsive", "ExpressJS", "MongoDB", "git","eslint", "prettier"],
                 software: "IOS APP",
                 schema: "https://schema.org/DeveloperApplication",
                 link: "https://apps.apple.com/my/app/catchthatbus/id1025824078",
@@ -55,7 +52,7 @@ order: 2
             {
                 name: "Trokka Attraction",
                 description: "Book Attractions and Tours for Your Next Holiday",
-                skills: ["Javascript", "ES6", "VueJs", "Vuex","Axios","API integration", "Responsive", "ExpressJS", "MongoDB"],
+                skills: ["Javascript", "ES6", "VueJs", "Vuex","Axios","API integration", "Responsive", "ExpressJS", "MongoDB", "git", "EC2"],
                 software: "Browser",
                 schema: "https://schema.org/DeveloperApplication",
                 link: "https://m.trokka.com/attraction",
@@ -66,7 +63,7 @@ order: 2
                 name: "klang Sentral",
                 description: "Book Malaysia and Singapore Bus Ticket Online",
                 software: "Browser",
-                skills: ["VueJs", "Vuex"],
+                skills: ["NodeJS", "PHP"],
                 schema: "https://schema.org/DeveloperApplication",
                 link: "https://klangsentral.com/#/",
                 img: "/img/portfolio/klang.gif",
@@ -76,7 +73,7 @@ order: 2
                 name: "Command Line Dictionary",
                 description: "CLI for Dictionary",
                 software: "TERMINAL",
-                skills: ["VueJs", "Vuex"],
+                skills: ["inquirer", "commander", "plop", "eslint", "prettier"],
                 schema: "https://schema.org/DeveloperApplication",
                 link: "https://github.com/heartstchr/dic",
                 img: "/img/portfolio/dictionary.png",
@@ -85,7 +82,7 @@ order: 2
             {
                 name: "Partner Dashboard Upstox",
                 description: "Open a Sub-Broker account with Upstox",
-                skills: ["VueJs", "Vuex"],
+                skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS"],
                 software: "Browser",
                 schema: "https://schema.org/BusinessApplication",
                 link: "https://upstox.com/sub-broker/",
@@ -95,7 +92,7 @@ order: 2
             {
                 name: "Open Demat Account for Upstox",
                 description: "Open a Demat Account Online - Demat Account Opening at Upstox",
-                skills: ["VueJs", "Vuex"],
+                skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS","Digital Ocean"],
                 software: "Browser",
                 schema: "https://schema.org/BusinessApplication",
                 link: "https://upstox.com/open-demat-account/",
@@ -105,7 +102,7 @@ order: 2
             {
                 name: "CallMatrix",
                 description: "Call Intelligence, Marketing &amp; Analytics Platform",
-                skills: ["VueJs", "Vuex"],
+                skills: ["NodeJS", "MongoDB", "MSSQL", "HapiJS","Digital Ocean"],
                 software: "Browser",
                 schema: "https://schema.org/BusinessApplication",
                 link: "https://www.callmatrix.io/",
@@ -115,7 +112,7 @@ order: 2
             {
                 name: "Stock Market",
                 description: "Consuming socket data and plot realtime d3 graph",
-                skills: ["VueJs", "Vuex"],
+                skills: ["D3JS", "AngularJS", "NodeJS"],
                 software: "Browser",
                 schema: "https://schema.org/BusinessApplication",
                 link: "https://github.com/heartstchr/StockMarket",
@@ -125,7 +122,7 @@ order: 2
             {
                 name: "Liqx App | Liqur delivery app",
                 description: "UI design for liqur delivery app",
-                skills: ["VueJs", "Vuex"],
+                skills: ["Photoshop", "CoralDraw"],
                 software: "Photoshop",
                 schema: "https://schema.org/BusinessApplication",
                 link: "https://www.behance.net/gallery/74532693/Liqx",
@@ -133,36 +130,4 @@ order: 2
                 altText: "UI design for liqur delivery app"
             },
         ]
-    })
-  }
 </script>
-<style>
-    .appTitle{
-        margin-bottom:10px;
-        font-size: 1.2em;
-        font-weight: bold;
-    }
-    blockquote {
-        margin-bottom:100px;
-    }
-    .portfolio-link img{
-        width:100%;
-    }
-    .portfolio-item {
-        padding:20px;
-        box-shadow: 0 1px 6px 0 #20212451;
-        border-radius: 4px;
-        margin-bottom: 30px;
-    }
-    .container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        grid-gap: 20px;
-        width: 100%;
-        margin: 20px auto;
-    }
-
-    .column {
-        padding: 20px;
-    }
-</style>
