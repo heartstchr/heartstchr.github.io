@@ -54,10 +54,8 @@ Full Stack Developer (Backend & Frontend) experienced in a wide variety of techn
 
 <div class="container">
   <div class="column" v-for= "(item, index) in skils">
-      <h3><i class=""></i> {{item.name}}</h3>
-      <div class="col-sm-4" v-for= "(part, i) in item.value">
-        <span class="badge badge-info teal">{{part}}</span>
-      </div>
+      <h3>{{item.name}}</h3>
+      <div class="badge badge-info teal" v-for= "(part, i) in item.value">{{part}}</div>
   </div>
 </div>
 

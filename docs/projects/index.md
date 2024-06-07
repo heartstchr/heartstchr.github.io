@@ -5,24 +5,24 @@ order: 2
 ---
 
 
-<blockquote>
-    <p>In computing, a web application or web app is a client–server computer program that the client
-        (including the user interface and client-side logic) runs in a web browser. Common web
-        applications include webmail, online retail sales, online banking, and online auction.</p>
-    <p>--<a href="https://en.wikipedia.org/wiki/Web_application" target="_blank">wikipedia</a></p>
-</blockquote>
+<div>
+    <p>I take pride in delivering innovative and impactful projects across various domains. Our dedication to excellence and our commitment to client satisfaction are reflected in every project we undertake.</p>
+    <p>Here, you can explore some of my featured projects, which demonstrate my expertise and commitment to excellence. If you're looking for a professional to bring your vision to life, you're in the right place.</p>
+</div>
 
 <div class="container">
-  <div class="col-sm-4 portfolio-item column" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(project, index) in projects">
-      <div class="appTitle">
-          <span itemprop="name">{{project.name}}</span> | <span class="blue"
-              itemprop="operatingSystem">{{project.software}}</span>
-      </div>
+  <div class="col-6 portfolio-item column" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(project, index) in projects">
       <link itemprop="applicationCategory" :href="project.schema" />
       <a :href="project.link" class="portfolio-link" target="_blank">
           <img :src="project.img" class="img-responsive"
               alt="{{project.altText}}">
       </a>
+      <div class="appTitle">
+          <span itemprop="name">{{project.name}}</span> | <span class="blue"
+              itemprop="operatingSystem">{{project.software}}</span>
+      </div>
+      <div>{{project.description}}</div>
+      <div class="surface-50" v-for= "(part, i) in project.skills">{{part}}</div>
   </div>
 </div>
 
@@ -31,7 +31,9 @@ order: 2
     data: () => ({
         projects: [
             {
-                name: "CatchThatBus",
+                name: "Catch That Bus",
+                description: "Book Malaysia and Singapore Bus Ticket Online",
+                skills: ["VueJs", "Vuex"],
                 software: "Browser",
                 schema: "https://schema.org/DeveloperApplication",
                 link: "https://m.catchthatbus.com",
@@ -124,7 +126,7 @@ order: 2
         margin-bottom:100px;
     }
     .portfolio-link img{
-        width:50%;
+        width:100%;
     }
     .portfolio-item {
         padding:20px;
@@ -142,6 +144,5 @@ order: 2
 
     .column {
         padding: 20px;
-        text-align: center;
     }
 </style>
