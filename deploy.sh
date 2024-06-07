@@ -4,7 +4,7 @@
 set -e
 
 # build
-pnpm docs:build
+pnpm build
 
 # navigate into the build output directory
 cd docs/.vuepress/dist
