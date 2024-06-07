@@ -1,10 +1,18 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from "vuepress";
+import Components from 'unplugin-vue-components/vite';
+import { PrimeVueResolver } from 'unplugin-vue-components/resolvers';
 import theme from "./theme.js";
 
 export default defineUserConfig({
   bundler: viteBundler({
-    viteOptions: {},
+    viteOptions: {
+      plugins: [
+        Components({
+          resolvers: [PrimeVueResolver()],
+        }),
+      ],
+    },
     vuePluginOptions: {},
   }),
   base: "/",

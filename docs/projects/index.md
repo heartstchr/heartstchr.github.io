@@ -10,19 +10,21 @@ order: 2
     <p>Here, you can explore some of my featured projects, which demonstrate my expertise and commitment to excellence. If you're looking for a professional to bring your vision to life, you're in the right place.</p>
 </div>
 
-<div class="container">
-  <div class="col-6 portfolio-item column" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(project, index) in projects">
+<div class="grid">
+  <div class="col-4 surface-card shadow-1 m-2 p-2" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(project, index) in projects">
       <link itemprop="applicationCategory" :href="project.schema" />
       <a :href="project.link" class="portfolio-link" target="_blank">
           <img :src="project.img" class="img-responsive"
               alt="{{project.altText}}">
       </a>
-      <div class="appTitle">
-          <span itemprop="name">{{project.name}}</span> | <span class="blue"
-              itemprop="operatingSystem">{{project.software}}</span>
+      <div class="text-md font-bold mt-4">
+          <div itemprop="name">{{project.name}}</div> 
+          <div class="text-xs" itemprop="operatingSystem">{{project.software}}</div>
       </div>
-      <div>{{project.description}}</div>
-      <div class="surface-50" v-for= "(part, i) in project.skills">{{part}}</div>
+      <div class="mt-4">{{project.description}}</div>
+      <div class="flex grid mt-4">
+        <div class="col bg-bluegray-100 p-1 m-1 white-space-nowrap border-round-md text-center w-min" v-for= "(part, i) in project.skills">{{part}}</div>
+      </div>
   </div>
 </div>
 
@@ -33,7 +35,7 @@ order: 2
             {
                 name: "Catch That Bus",
                 description: "Book Malaysia and Singapore Bus Ticket Online",
-                skills: ["VueJs", "Vuex"],
+                skills: ["Javascript", "ES6", "VueJs", "Vuex","Axios","API integration", "Responsive", "ExpressJS", "MongoDB"],
                 software: "Browser",
                 schema: "https://schema.org/DeveloperApplication",
                 link: "https://m.catchthatbus.com",
@@ -41,15 +43,9 @@ order: 2
                 altText: "Book Malaysia and Singapore Bus Ticket Online | CatchThatBus"
             },
             {
-                name: "Trokka Attraction",
-                software: "Browser",
-                schema: "https://schema.org/DeveloperApplication",
-                link: "https://m.trokka.com/attraction",
-                img: "/img/portfolio/trokka.gif",
-                altText: "Trokka.com | Book Attractions and Tours for Your Next Holiday"
-            },
-            {
-                name: "CatchThatBus APP",
+                name: "Catch That Bus APP",
+                description: "IOS app for booking Malaysia and Singapore Bus Ticket Online",
+                skills: ["Cordova", "Javascript", "ES6", "VueJs", "Vuex","Axios","API integration", "Responsive", "ExpressJS", "MongoDB"],
                 software: "IOS APP",
                 schema: "https://schema.org/DeveloperApplication",
                 link: "https://apps.apple.com/my/app/catchthatbus/id1025824078",
@@ -57,8 +53,20 @@ order: 2
                 altText: "Book Malaysia and Singapore Bus Ticket Online | CatchThatBus"
             },
             {
-                name: "klang Sentral",
+                name: "Trokka Attraction",
+                description: "Book Attractions and Tours for Your Next Holiday",
+                skills: ["Javascript", "ES6", "VueJs", "Vuex","Axios","API integration", "Responsive", "ExpressJS", "MongoDB"],
                 software: "Browser",
+                schema: "https://schema.org/DeveloperApplication",
+                link: "https://m.trokka.com/attraction",
+                img: "/img/portfolio/trokka.gif",
+                altText: "Trokka.com | Book Attractions and Tours for Your Next Holiday"
+            },
+            {
+                name: "klang Sentral",
+                description: "Book Malaysia and Singapore Bus Ticket Online",
+                software: "Browser",
+                skills: ["VueJs", "Vuex"],
                 schema: "https://schema.org/DeveloperApplication",
                 link: "https://klangsentral.com/#/",
                 img: "/img/portfolio/klang.gif",
@@ -66,7 +74,9 @@ order: 2
             },
             {
                 name: "Command Line Dictionary",
+                description: "CLI for Dictionary",
                 software: "TERMINAL",
+                skills: ["VueJs", "Vuex"],
                 schema: "https://schema.org/DeveloperApplication",
                 link: "https://github.com/heartstchr/dic",
                 img: "/img/portfolio/dictionary.png",
@@ -74,6 +84,8 @@ order: 2
             },
             {
                 name: "Partner Dashboard Upstox",
+                description: "Open a Sub-Broker account with Upstox",
+                skills: ["VueJs", "Vuex"],
                 software: "Browser",
                 schema: "https://schema.org/BusinessApplication",
                 link: "https://upstox.com/sub-broker/",
@@ -82,6 +94,8 @@ order: 2
             },
             {
                 name: "Open Demat Account for Upstox",
+                description: "Open a Demat Account Online - Demat Account Opening at Upstox",
+                skills: ["VueJs", "Vuex"],
                 software: "Browser",
                 schema: "https://schema.org/BusinessApplication",
                 link: "https://upstox.com/open-demat-account/",
@@ -90,6 +104,8 @@ order: 2
             },
             {
                 name: "CallMatrix",
+                description: "Call Intelligence, Marketing &amp; Analytics Platform",
+                skills: ["VueJs", "Vuex"],
                 software: "Browser",
                 schema: "https://schema.org/BusinessApplication",
                 link: "https://www.callmatrix.io/",
@@ -98,6 +114,8 @@ order: 2
             },
             {
                 name: "Stock Market",
+                description: "Consuming socket data and plot realtime d3 graph",
+                skills: ["VueJs", "Vuex"],
                 software: "Browser",
                 schema: "https://schema.org/BusinessApplication",
                 link: "https://github.com/heartstchr/StockMarket",
@@ -106,6 +124,8 @@ order: 2
             },
             {
                 name: "Liqx App | Liqur delivery app",
+                description: "UI design for liqur delivery app",
+                skills: ["VueJs", "Vuex"],
                 software: "Photoshop",
                 schema: "https://schema.org/BusinessApplication",
                 link: "https://www.behance.net/gallery/74532693/Liqx",
