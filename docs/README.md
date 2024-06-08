@@ -4,7 +4,7 @@ icon: home
 title: Home
 heroImage: /img/jiwan.png
 heroText: Jiwan Ghosal
-tagline: Senior Full Stack Developer & Google Certified SEM Analyst
+tagline: Senior Full Stack Developer MERN, MEVN & Microsoft Certified with AZ 900 & Google Certified SEM Analyst 
 containerClass: fancy-container
 actions:
   - text: About 💡
@@ -42,9 +42,9 @@ copyright: false
 footer: Copyright © 2022
 ---
 
-<div class="text-md text-2xl mt-8">Full Stack Developer with extensive experience in both backend and frontend technologies.</div>
+<div class="text-md text-2xl mt-8">Full Stack Developer with extensive experience in Javascript, NodeJS ecosystem and Cloud.</div>
 <div class="my-4">
-With a demonstrated history of success in the industry, I bring a comprehensive skill set that covers all phases of software development, including planning, implementation, testing, monitoring, and delivery.
+With a demonstrated history of success in the industry, I bring a comprehensive skill set that covers all phases of software development, including Planning, Implementation, Automated testing, Monitoring, and Contineous Integration and Contineous Delivery.
 </div>
 
 
@@ -91,8 +91,23 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
     <div class="text-6xl font-bold">What Our Customers Are Saying</div>
     <div class="my-4 text-md">I treat every client as a strategic partner. Here’s what they have to say about working with Jiwan Ghosal</div>
   </div>
-  <div class="my-4 text-center text-md">
-  
+  <div class="my-4 text-center text-md overflow-x-scroll ">
+    <div class="flex flex-row align-items-center">
+      <div class="col-6 surface-card shadow-1 border-round-md p-2 m-2" v-for="(testimonial, index) in testimonials" :key="index">
+        <div class="font-italic mb-8">
+          <div><span class="font-bold text-7xl">"</span> {{ testimonial.message }}</div>
+        </div>
+        <div class="flex align-items-center">
+          <img :src="testimonial.avatar" alt="Avatar" class="border-circle" width="50px" />
+          <a :href="testimonial.link">
+            <div class="flex flex-column align-items-start ml-2">
+              <div>{{ testimonial.name }}</div>
+              <div>{{ testimonial.designation }}</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -202,5 +217,35 @@ const features = [
   }
 ]
 
-</script>
+const testimonials = [
+  {
+    name: 'Harris Malik',
+    designation: 'Senior Product Manager at 8x8',
+    message: 'Jiwan is one of the most valuable people I have ever met. He is smart, professional, and never fails to surprise us with creative solutions to difficult problems. Jiwan\'s personality and skills would be a great asset to any company. Highly recommended.',
+    avatar: 'https://media.licdn.com/dms/image/D5603AQG8ooyo97JCoA/profile-displayphoto-shrink_400_400/0/1682841547784?e=1723075200&v=beta&t=WbH3BcbAEAyHeARhHPZFnON1BjdItx1V_GBx5k6iiP4',
+    link: 'https://www.linkedin.com/in/harrismalik04/'
+  },
+  {
+    name: 'Shyam Kumar',
+    designation: 'Senior Product Manager at Angel One',
+    message: 'I had the pleasure of working with Jiwan for around 2 years. I always found him to a very dependable and hardworking colleague. Many time he went over and above to meet the product requirements, it might be either working overtime to release the project on time or working with other teams to get the production issue fixed. He was always the go to person in the team. I wish him all the best for the future endeavours and I can fully vouch that he will give his 100% every time.',
+    avatar: 'https://media.licdn.com/dms/image/D5603AQHZpSlK7j89uA/profile-displayphoto-shrink_100_100/0/1698672442801?e=1723075200&v=beta&t=E85rxj2C06FDC5FQdl8iBdjN1CapnTEBy6nLLWTj7vs',
+    link: 'https://www.linkedin.com/in/shyam-kumar-k/'
+  },
+  {
+    name: 'Jurgen Sweere',
+    designation: 'Front End Expert at ABN Amro',
+    message: 'Jiwan never stopped amazing me. He brings a lot of front-end knowledge to the table and is able to quickly learn anything new. Jiwan is a great colleague to have!',
+    avatar: 'https://media.licdn.com/dms/image/C5603AQGLWlLKfqFZgw/profile-displayphoto-shrink_100_100/0/1516235161685?e=1723075200&v=beta&t=Rk4L37_1TEaDNqfaf6UuDzvVuD8EFeHAN9yy7LJu1rc',
+    link: 'https://www.linkedin.com/in/jurgensweere'
+  },
+  {
+    name: 'Erkan Ateşli',
+    designation: 'Chapter Lead at ABN AMRO Bank N.V.',
+    message: 'In our connects with Jiwan at ABN AMRO, i noticed that he has in debt knowledge in his expertise field. He can transfer his knowledge easily to others. With his strong analytics skills, he can handle complex questions as usual. Jiwan is a brave colleague i’ve met and we had a lot of fun during the India visit and especially at the party. ',
+    avatar: 'https://media.licdn.com/dms/image/C4E03AQFg4Oh_B9JEeQ/profile-displayphoto-shrink_100_100/0/1621625662967?e=1723075200&v=beta&t=-pCdN3E5__viY6S0t-na984qkDxxuOAyGToq3UnTKM0',
+    link: 'https://www.linkedin.com/in/erkanatesli'
+  }
+];
 
+</script>
