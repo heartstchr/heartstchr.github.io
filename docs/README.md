@@ -41,13 +41,14 @@ features:
 copyright: false
 footer: Copyright © 2022
 ---
+<div class="flex felx-row justify-content-center">
+  <Button label="Consultation form" @click="visible = true" />
+</div>
 
 <div class="text-md text-2xl mt-8">Full Stack Developer with extensive experience in Javascript, NodeJS ecosystem and Cloud.</div>
 <div class="my-4">
 With a demonstrated history of success in the industry, I bring a comprehensive skill set that covers all phases of software development, including Planning, Implementation, Automated testing, Monitoring, and Contineous Integration and Contineous Delivery.
 </div>
-
-
 <div v-if="questions" class="mt-8">
   <div class="text-xl font-bold">Frequently Asked Questions</div>
   <div v-for="question in questions" :key="question.id">
@@ -57,6 +58,46 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
     </div>
   </div>
 </div>
+
+<Dialog 
+  v-model:visible="visible"
+  header="Consultation form"
+  modal
+  :pt="{
+      root: 'border-none',
+      mask: {
+          style: 'backdrop-filter: blur(2px)'
+      }
+  }"
+  :style="{ width: '60rem' }">
+    <span class="p-text-secondary block mb-5">Update your information.</span>
+    <form class="felx flex-column">
+      <div class="felx flex-column gap-2 mb-4 w-full">
+        <label for="name">Name</label>
+        <InputText id="name" v-model="form.name" required class="w-full" />
+      </div>
+      <div class="felx flex-column gap-2 mb-4 w-full">
+        <label for="email">Email</label>
+        <InputText id="email" v-model="form.email" type="email" required  class="w-full"/>
+      </div>
+      <div class="felx flex-column gap-2 mb-4 w-full">
+        <label for="phone">Phone</label>
+        <InputText id="phone" v-model="form.phone" type="tel"  class="w-full"/>
+      </div>
+      <div class="felx flex-column gap-2 mb-4 w-full">
+        <label for="service">Service</label>
+        <Dropdown id="service" v-model="form.service" :options="services" optionLabel="name" placeholder="Select a service" class="w-full" />
+      </div>
+      <div class="felx flex-column gap-2 mb-4 w-full">
+        <label for="message">Message</label>
+        <Textarea id="message" v-model="form.message" rows="5"  class="w-full"/>
+      </div>
+    </form>
+    <div class="flex justify-content-end gap-2">
+        <Button type="button" label="Cancel" severity="secondary" @click="visible = false"></Button>
+        <Button type="submit" label="Send" @click="submitForm"></Button>
+    </div>
+</Dialog>
 
 ##
 
@@ -141,7 +182,36 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
 
 
 <script setup lang="ts">
+import { ref } from "vue";
 
+const visible = ref(false);
+const form = ref({
+  name: '',
+  email: '',
+  phone: '',
+  service: null,
+  message: ''
+});
+
+const services = ref([
+  { name: 'Custom Web Development', code: 'C' },
+  { name: 'E-commerce Solutions', code: 'D' },
+  { name: 'API Development and Integration', code: 'DE' },
+  { name: 'Figma to Web', code: 'M' },
+  { name: 'Mobile App Development', code: 'M' },
+  { name: 'CICD', code: 'M' },
+  { name: 'Hosting', code: 'M' },
+  { name: 'Doamin', code: 'M' },
+  { name: 'Maintenance and Support', code: 'M' },
+  { name: 'Consulting and Technical Advisory', code: 'M' },
+  { name: 'Others', code: 'M' },
+]);
+
+const submitForm = () => {
+  visible.value = false
+  console.log('Form submitted:', form.value);
+  // Add form submission logic here (e.g., send data to an API)
+};
 const skills = [
   {
     name: "Front end",
