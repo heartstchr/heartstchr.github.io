@@ -2,7 +2,7 @@
   "name": "heartstchr.github.io",
   "version": "2.0.0",
   "description": "A portfolio of Jiwan ghosal",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "docs:build": "vuepress build docs",
     "docs:clean-dev": "vuepress dev docs --clean-cache",

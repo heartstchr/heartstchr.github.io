@@ -81,6 +81,7 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
     <div class="my-4 text-md">Let's Work Together!</div>
   </div>
   <div class="my-4 text-center text-md"> I'm always eager to take on new challenges and collaborate on exciting projects. If you’re looking for a dedicated Full Stack Developer feel free to reach out. <a href="mailto:jiwan.cse@gmail.com" size="large" color="deeppink" class="text-center">Send email</a></div>
+  <Button label="Send email"></Button>
 </div>
 
 

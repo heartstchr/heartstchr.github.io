@@ -14,6 +14,11 @@ export default defineUserConfig({
           resolvers: [PrimeVueResolver()],
         }),
       ],
+      ssr: {
+          noExternal: [
+              'primevue',
+          ],
+      },
     },
     vuePluginOptions: {},
   }),
