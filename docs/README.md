@@ -81,7 +81,6 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
     <div class="my-4 text-md">Let's Work Together!</div>
   </div>
   <div class="my-4 text-center text-md"> I'm always eager to take on new challenges and collaborate on exciting projects. If you’re looking for a dedicated Full Stack Developer feel free to reach out. <a href="mailto:jiwan.cse@gmail.com" size="large" color="deeppink" class="text-center">Send email</a></div>
-  <Button label="Send email"></Button>
 </div>
 
 
@@ -105,7 +104,7 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
   </div>
   <div class="col-3 gap-1 grid mt-4 h-min surface-card shadow-1 grid-nogutter" v-for= "(item, index) in skills">
       <div class="col-12 font-bold text-xl">{{item.name}}</div>
-      <div v-for= "(part, i) in item.value"> <div class="text-sm px-2 surface-100 border-round-xs line-height-3">{{part}}</div></div>
+      <div v-for= "(part, i) in item.value"><Tag>{{part}}</Tag></div>
   </div>
 </div>
 
@@ -117,7 +116,7 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
   </div>
   <div class="col-3 gap-1 grid mt-4 h-min surface-card shadow-1 grid-nogutter" v-for= "(item, index) in otherSkills">
       <div class="col-12 font-bold text-xl">{{item.name}}</div>
-      <div v-for= "(part, i) in item.value"> <div class="text-sm px-2 surface-100 border-round-xs line-height-3">{{part}}</div></div>
+      <div v-for= "(part, i) in item.value"> <Tag>{{part}}</Tag></div>
   </div>
 </div>
 
