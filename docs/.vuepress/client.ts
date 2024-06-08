@@ -4,6 +4,7 @@ import 'primevue/resources/primevue.min.css' // core styles
 import 'primeicons/primeicons.css' // icons
 import 'primeflex/primeflex.css'
 import 'primevue/resources/themes/aura-light-green/theme.css'
+import "./styles/flags.css";
 
 export default defineClientConfig({
   enhance({ app }) {

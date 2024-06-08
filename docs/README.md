@@ -99,10 +99,14 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
         </div>
         <div class="flex align-items-center">
           <img :src="testimonial.avatar" alt="Avatar" class="border-circle" width="50px" />
-          <a :href="testimonial.link">
+          <a :href="testimonial.link" target="_blank">
             <div class="flex flex-column align-items-start ml-2">
               <div>{{ testimonial.name }}</div>
               <div>{{ testimonial.designation }}</div>
+              <div>
+                <img :alt="testimonial.name" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" :class="`flag flag-${testimonial.code.toLowerCase()} mr-2`" style="width: 18px" />
+                {{ testimonial.location }}
+              </div>
             </div>
           </a>
         </div>
@@ -223,28 +227,36 @@ const testimonials = [
     designation: 'Senior Product Manager at 8x8',
     message: 'Jiwan is one of the most valuable people I have ever met. He is smart, professional, and never fails to surprise us with creative solutions to difficult problems. Jiwan\'s personality and skills would be a great asset to any company. Highly recommended.',
     avatar: 'https://media.licdn.com/dms/image/D5603AQG8ooyo97JCoA/profile-displayphoto-shrink_400_400/0/1682841547784?e=1723075200&v=beta&t=WbH3BcbAEAyHeARhHPZFnON1BjdItx1V_GBx5k6iiP4',
-    link: 'https://www.linkedin.com/in/harrismalik04/'
+    link: 'https://www.linkedin.com/in/harrismalik04/',
+    location: 'Malaysia',
+    code: 'my'
   },
   {
     name: 'Shyam Kumar',
     designation: 'Senior Product Manager at Angel One',
     message: 'I had the pleasure of working with Jiwan for around 2 years. I always found him to a very dependable and hardworking colleague. Many time he went over and above to meet the product requirements, it might be either working overtime to release the project on time or working with other teams to get the production issue fixed. He was always the go to person in the team. I wish him all the best for the future endeavours and I can fully vouch that he will give his 100% every time.',
     avatar: 'https://media.licdn.com/dms/image/D5603AQHZpSlK7j89uA/profile-displayphoto-shrink_100_100/0/1698672442801?e=1723075200&v=beta&t=E85rxj2C06FDC5FQdl8iBdjN1CapnTEBy6nLLWTj7vs',
-    link: 'https://www.linkedin.com/in/shyam-kumar-k/'
+    link: 'https://www.linkedin.com/in/shyam-kumar-k/',
+    location: 'India',
+    code: 'in'
   },
   {
     name: 'Jurgen Sweere',
     designation: 'Front End Expert at ABN Amro',
     message: 'Jiwan never stopped amazing me. He brings a lot of front-end knowledge to the table and is able to quickly learn anything new. Jiwan is a great colleague to have!',
     avatar: 'https://media.licdn.com/dms/image/C5603AQGLWlLKfqFZgw/profile-displayphoto-shrink_100_100/0/1516235161685?e=1723075200&v=beta&t=Rk4L37_1TEaDNqfaf6UuDzvVuD8EFeHAN9yy7LJu1rc',
-    link: 'https://www.linkedin.com/in/jurgensweere'
+    link: 'https://www.linkedin.com/in/jurgensweere',
+    location: 'The Netherlands',
+    code: 'nl'
   },
   {
     name: 'Erkan Ateşli',
     designation: 'Chapter Lead at ABN AMRO Bank N.V.',
     message: 'In our connects with Jiwan at ABN AMRO, i noticed that he has in debt knowledge in his expertise field. He can transfer his knowledge easily to others. With his strong analytics skills, he can handle complex questions as usual. Jiwan is a brave colleague i’ve met and we had a lot of fun during the India visit and especially at the party. ',
     avatar: 'https://media.licdn.com/dms/image/C4E03AQFg4Oh_B9JEeQ/profile-displayphoto-shrink_100_100/0/1621625662967?e=1723075200&v=beta&t=-pCdN3E5__viY6S0t-na984qkDxxuOAyGToq3UnTKM0',
-    link: 'https://www.linkedin.com/in/erkanatesli'
+    link: 'https://www.linkedin.com/in/erkanatesli',
+    location: 'The Netherlands',
+    code: 'nl'
   }
 ];
 
