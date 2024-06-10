@@ -10,19 +10,23 @@ order: 2
 </div>
 
 <div class="grid mt-4">
-  <div class="col-5 surface-card shadow-1 m-2 p-2" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(project, index) in projects">
-      <link itemprop="applicationCategory" :href="project.schema" />
-      <a :href="project.link" target="_blank" class="w-full">
-          <Image :src="project.img" class="" :alt="project.altText" width="100%"/>
-      </a>
-      <div class="text-md font-bold mt-4">
-          <div itemprop="name">{{project.name}}</div> 
-          <div class="text-xs mt-2" itemprop="operatingSystem">{{project.software}}</div>
-      </div>
-      <div class="mt-4">{{project.description}}</div>
-      <div class="flex grid mt-4 p-2">
-        <div v-for= "(part, i) in project.skills"> <Tag>{{part}}</Tag></div>
-      </div>
+  <div class="surface-card shadow-1 m-2 p-2 flex flex-row" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(project, index) in projects">
+    <div class="col-6">
+        <div class="text-md font-bold mt-4">
+            <div itemprop="name">{{project.name}}</div> 
+            <div class="text-xs mt-2" itemprop="operatingSystem">{{project.software}}</div>
+        </div>
+        <div class="mt-4">{{project.description}}</div>
+        <div class="flex grid mt-4 p-2">
+            <div v-for= "(part, i) in project.skills" class="mr-2 mb-2"> <Tag>{{part}}</Tag></div>
+        </div>
+    </div>
+    <div class="col-6">
+        <link itemprop="applicationCategory" :href="project.schema" />
+        <a :href="project.link" target="_blank" class="w-full">
+            <Image :src="project.img" class="" :alt="project.altText" width="100%"/>
+        </a>
+    </div>  
   </div>
 </div>
 
@@ -36,6 +40,7 @@ const projects= [
         schema: "https://schema.org/DeveloperApplication",
         link: "https://m.catchthatbus.com",
         img: "/img/portfolio/catchthatbus.gif",
+        class: "col-5",
         altText: "Book Malaysia and Singapore Bus Ticket Online | CatchThatBus"
     },
     {
@@ -46,6 +51,7 @@ const projects= [
         schema: "https://schema.org/DeveloperApplication",
         link: "https://apps.apple.com/my/app/catchthatbus/id1025824078",
         img: "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/ad/b9/3b/adb93b8f-08b6-ac23-8f9e-906f7b2529c2/pr_source.png/230x0w.png",
+        class: "col-5",
         altText: "Book Malaysia and Singapore Bus Ticket Online | CatchThatBus"
     },
     {
@@ -56,6 +62,7 @@ const projects= [
         schema: "https://schema.org/DeveloperApplication",
         link: "https://m.trokka.com/attraction",
         img: "/img/portfolio/trokka.gif",
+        class: "col-5",
         altText: "Trokka.com | Book Attractions and Tours for Your Next Holiday"
     },
     {
@@ -66,6 +73,7 @@ const projects= [
         schema: "https://schema.org/DeveloperApplication",
         link: "https://klangsentral.com/#/",
         img: "/img/portfolio/klang.gif",
+        class: "col-12",
         altText: "Book Malaysia and Singapore Bus Ticket Online | klangsentral"
     },
     {
@@ -76,6 +84,7 @@ const projects= [
         schema: "https://schema.org/DeveloperApplication",
         link: "https://github.com/heartstchr/dic",
         img: "/img/portfolio/dictionary.png",
+        class: "col-12",
         altText: "CLI for Dictionary"
     },
     {
@@ -86,6 +95,7 @@ const projects= [
         schema: "https://schema.org/BusinessApplication",
         link: "https://upstox.com/sub-broker/",
         img: "/img/portfolio/partnerUpstox.png",
+        class: "col-12",
         altText: "Open a Sub-Broker account with Upstox"
     },
     {
@@ -96,6 +106,7 @@ const projects= [
         schema: "https://schema.org/BusinessApplication",
         link: "https://upstox.com/open-demat-account/",
         img: "/img/portfolio/openDemat.png",
+        class: "col-12",
         altText: "Open a Demat Account Online - Demat Account Opening at Upstox"
     },
     {
@@ -106,6 +117,7 @@ const projects= [
         schema: "https://schema.org/BusinessApplication",
         link: "https://www.callmatrix.io/",
         img: "/img/portfolio/callmatrix.png",
+        class: "col-12",
         altText: "CallMatrix - Call Intelligence, Marketing &amp; Analytics Platform"
     },
     {
@@ -116,6 +128,7 @@ const projects= [
         schema: "https://schema.org/BusinessApplication",
         link: "https://github.com/heartstchr/StockMarket",
         img: "/img/portfolio/stocks.png",
+        class: "col-5",
         altText: "Consuming socket data and plot realtime d3 graph"
     },
     {
@@ -126,6 +139,7 @@ const projects= [
         schema: "https://schema.org/BusinessApplication",
         link: "https://www.behance.net/gallery/74532693/Liqx",
         img: "/img/portfolio/liqx.png",
+        class: "col-5",
         altText: "UI design for liqur delivery app"
     },
 ]

@@ -3,7 +3,7 @@ home: true
 icon: home
 title: Home
 heroImage: /img/jiwan.png
-heroText: Jiwan Ghosal
+heroText: Hi 👋, I am Jiwan Ghosal
 tagline: Senior Full Stack Developer MERN, MEVN & Microsoft Certified with AZ 900 & Google Certified SEM Analyst 
 containerClass: fancy-container
 actions:
@@ -11,7 +11,7 @@ actions:
     link: /about/
     type: primary
 
-  - text: Projects
+  - text: See my work
     link: /projects/
   
   - text: Services
@@ -124,7 +124,19 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
     <div class="text-6xl font-bold">Contact Me</div>
     <div class="my-4 text-md">Let's Work Together!</div>
   </div>
-  <div class="my-4 text-center text-md"> I'm always eager to take on new challenges and collaborate on exciting projects. If you’re looking for a dedicated Full Stack Developer feel free to reach out. <a href="mailto:jiwan.cse@gmail.com" size="large" color="deeppink" class="text-center">Send email</a></div>
+  <div class="my-4 text-center text-md"> I'm always eager to take on new challenges and collaborate on exciting projects. If you’re looking for a dedicated Full Stack Developer feel free to reach out. <a href="mailto:jiwan.cse@gmail.com" size="large" color="deeppink" class="text-center">Send email</a>
+  </div>
+  <div class="flex flex-row justify-content-end flex-wrap gap-4 p-3 mx-6">
+    <a
+      v-for="(socialElement, socialIndex) in social"
+      :key="socialIndex"
+      :href="socialElement.url"
+      target="_blank"
+      class="flex flex-row text-600 gap-2"
+      >
+      <i :class="socialElement.icon" style="font-size: 1rem"></i>
+      </a>
+  </div>
 </div>
 
 
@@ -195,6 +207,13 @@ const form = ref({
   service: null,
   message: ''
 });
+
+const social= [
+  { label: 'Facebook', icon: 'pi pi-facebook', url: 'https://www.facebook.com/profile.php?id=100004925264462' },
+  { label: 'Instagram', icon: 'pi pi-instagram', url: 'https://www.instagram.com/jiwan_ghosal/' },
+  { label: 'youtube', icon: 'pi pi-youtube', url: 'https://www.youtube.com/@JiwanGhosal' },
+  { label: 'linkedin', icon: 'pi pi-linkedin', url: 'https://www.linkedin.com/in/jiwanghosal/' }
+]
 
 const services = ref([
   { name: 'Custom Web Development', code: 'C' },
