@@ -68,13 +68,19 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
 ##
 
 <div v-if="questions" class="mt-8">
-  <div class="text-xl font-bold">Frequently Asked Questions</div>
-  <div v-for="question in questions" :key="question.id">
-    <div class="flex flex-column my-4 gap-2">
-      <div class="font-bold">Q {{ question.question }}</div>
-      <div>A {{ question.answer }}</div>
+<div class="text-xl font-bold">Frequently Asked Questions</div>
+<div class="grid md:mx-8 mt-8 overflow-hidden border-round-2xl" :style="getImage()">
+  <div class="md:col-6 col-12">
+    <div class="surface-100 p-6 border-round-2xl">
+      <div v-for="question in questions" :key="question.id">
+        <div class="flex flex-column my-4 gap-2">
+          <div class="font-bold">Q {{ question.question }}</div>
+          <div>A {{ question.answer }}</div>
+        </div>
+      </div>
     </div>
   </div>
+</div>
 </div>
 
 <Dialog 
@@ -237,7 +243,7 @@ const submitForm = () => {
 const skills = [
   {
     name: "Front end",
-    value: ["VueJS", "Vuepress", "Storybook", "Lit", "Storybook", "HTML5","CSS3","JavaScript(ES6)", "NuxtJS","ReactJS","AngularJS", "UI/UX Design","Web Design","Web Application","Web view","Service Worker","Webpack", "Rollup"]
+    value: ["VueJS", "Vue3", "Nuxt", "Vite","Pinia","Axios", "Vuepress", "Storybook", "Lit","ReactJS", "HTML5","CSS3","JavaScript(ES6)","AngularJS", "UI/UX Design","Web Design","Web Application","Web view","Service Worker","Webpack", "Rollup"]
   },
   {
     name: "Back end",
@@ -285,6 +291,9 @@ const questions = [
     answer: `$25/hr`
   }
 ]
+
+
+const getImage = () =>`background-image: url('/img/home/faq.jpeg');  background-repeat: no-repeat; background-size: cover;`
 
 const features = [
   {

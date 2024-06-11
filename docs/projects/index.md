@@ -33,13 +33,35 @@ order: 2
 <script setup lang="ts">
 const projects= [
     {
+        name: "Recipes",
+        description: "Recipes - Social Network",
+        skills: ["Javascript", "ES6", "Vue3", "Pinia","Vite","Axios","Express", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
+        software: "Browser",
+        schema: "https://schema.org/DeveloperApplication",
+        link: "http://recipes-client.s3-website.ap-south-1.amazonaws.com/",
+        img: "/img/projects/recepie.gif",
+        class: "col-5",
+        altText: "Recipes - Social Network | Recipes"
+    },
+    {
+        name: "Tv maze",
+        description: "TVmaze - Add TV information to your website or app.",
+        skills: ["Javascript", "ES6", "VueJs", "Vuex","Vite","Axios","API integration", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
+        software: "Browser",
+        schema: "https://schema.org/DeveloperApplication",
+        link: "https://heartstchr.github.io/tvmaze/",
+        img: "/img/projects/tvmaze.gif",
+        class: "col-5",
+        altText: "TVmaze - Add TV information to your website or app. | Tv maze"
+    },
+    {
         name: "Catch That Bus",
         description: "Book Malaysia and Singapore Bus Ticket Online",
         skills: ["Javascript", "ES6", "VueJs", "Vuex","Vite","Axios","API integration", "Responsive", "ExpressJS", "MongoDB", "git", "EC2",  "eslint", "prettier"],
         software: "Browser",
         schema: "https://schema.org/DeveloperApplication",
         link: "https://m.catchthatbus.com",
-        img: "/img/portfolio/catchthatbus.gif",
+        img: "/img/projects/catchthatbus.gif",
         class: "col-5",
         altText: "Book Malaysia and Singapore Bus Ticket Online | CatchThatBus"
     },
@@ -61,7 +83,7 @@ const projects= [
         software: "Browser",
         schema: "https://schema.org/DeveloperApplication",
         link: "https://m.trokka.com/attraction",
-        img: "/img/portfolio/trokka.gif",
+        img: "/img/projects/trokka.gif",
         class: "col-5",
         altText: "Trokka.com | Book Attractions and Tours for Your Next Holiday"
     },
@@ -72,7 +94,7 @@ const projects= [
         skills: ["NodeJS", "PHP"],
         schema: "https://schema.org/DeveloperApplication",
         link: "https://klangsentral.com/#/",
-        img: "/img/portfolio/klang.gif",
+        img: "/img/projects/klang.gif",
         class: "col-12",
         altText: "Book Malaysia and Singapore Bus Ticket Online | klangsentral"
     },
@@ -83,7 +105,7 @@ const projects= [
         skills: ["inquirer", "commander", "plop", "eslint", "prettier"],
         schema: "https://schema.org/DeveloperApplication",
         link: "https://github.com/heartstchr/dic",
-        img: "/img/portfolio/dictionary.png",
+        img: "/img/projects/dictionary.png",
         class: "col-12",
         altText: "CLI for Dictionary"
     },
@@ -94,7 +116,7 @@ const projects= [
         software: "Browser",
         schema: "https://schema.org/BusinessApplication",
         link: "https://upstox.com/sub-broker/",
-        img: "/img/portfolio/partnerUpstox.png",
+        img: "/img/projects/partnerUpstox.png",
         class: "col-12",
         altText: "Open a Sub-Broker account with Upstox"
     },
@@ -105,7 +127,7 @@ const projects= [
         software: "Browser",
         schema: "https://schema.org/BusinessApplication",
         link: "https://upstox.com/open-demat-account/",
-        img: "/img/portfolio/openDemat.png",
+        img: "/img/projects/openDemat.png",
         class: "col-12",
         altText: "Open a Demat Account Online - Demat Account Opening at Upstox"
     },
@@ -116,7 +138,7 @@ const projects= [
         software: "Browser",
         schema: "https://schema.org/BusinessApplication",
         link: "https://www.callmatrix.io/",
-        img: "/img/portfolio/callmatrix.png",
+        img: "/img/projects/callmatrix.png",
         class: "col-12",
         altText: "CallMatrix - Call Intelligence, Marketing &amp; Analytics Platform"
     },
@@ -127,7 +149,7 @@ const projects= [
         software: "Browser",
         schema: "https://schema.org/BusinessApplication",
         link: "https://github.com/heartstchr/StockMarket",
-        img: "/img/portfolio/stocks.png",
+        img: "/img/projects/stocks.png",
         class: "col-5",
         altText: "Consuming socket data and plot realtime d3 graph"
     },
@@ -138,7 +160,7 @@ const projects= [
         software: "Photoshop",
         schema: "https://schema.org/BusinessApplication",
         link: "https://www.behance.net/gallery/74532693/Liqx",
-        img: "/img/portfolio/liqx.png",
+        img: "/img/projects/liqx.png",
         class: "col-5",
         altText: "UI design for liqur delivery app"
     },
