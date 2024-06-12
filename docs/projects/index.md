@@ -34,6 +34,17 @@ order: 2
 <script setup lang="ts">
 const projects= [
     {
+        name: "Quatar Airways widget",
+        description: "Book flights to destinations around the world with Qatar Airways &amp; fly on board an award-winning airline. Enjoy special fares, collect Avios &amp; more.",
+        skills: ["Javascript", "ES6", "Vue3","Landingi", "Pinia","Vite","Axios","Express", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
+        software: "Browser",
+        schema: "https://schema.org/DeveloperApplication",
+        link: "http://recipes-client.s3-website.ap-south-1.amazonaws.com/",
+        img: "/img/projects/quatar.png",
+        class: "col-5",
+        altText: "Quatar Airways"
+    },
+    {
         name: "Recipes",
         description: "Recipes - Social Network",
         skills: ["Javascript", "ES6", "Vue3", "Pinia","Vite","Axios","Express", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
