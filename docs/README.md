@@ -333,15 +333,6 @@ const testimonials = [
     code: 'my'
   },
   {
-    name: 'Shyam Kumar',
-    designation: 'Senior Product Manager at Angel One',
-    message: 'I had the pleasure of working with Jiwan for around 2 years. I always found him to a very dependable and hardworking colleague. Many time he went over and above to meet the product requirements, it might be either working overtime to release the project on time or working with other teams to get the production issue fixed. He was always the go to person in the team. I wish him all the best for the future endeavours and I can fully vouch that he will give his 100% every time.',
-    avatar: 'https://media.licdn.com/dms/image/D5603AQHZpSlK7j89uA/profile-displayphoto-shrink_100_100/0/1698672442801?e=1723075200&v=beta&t=E85rxj2C06FDC5FQdl8iBdjN1CapnTEBy6nLLWTj7vs',
-    link: 'https://www.linkedin.com/in/shyam-kumar-k/',
-    location: 'India',
-    code: 'in'
-  },
-  {
     name: 'Jurgen Sweere',
     designation: 'Front End Expert at ABN Amro',
     message: 'Jiwan never stopped amazing me. He brings a lot of front-end knowledge to the table and is able to quickly learn anything new. Jiwan is a great colleague to have!',
@@ -349,6 +340,15 @@ const testimonials = [
     link: 'https://www.linkedin.com/in/jurgensweere',
     location: 'The Netherlands',
     code: 'nl'
+  },
+  {
+    name: 'Shyam Kumar',
+    designation: 'Senior Product Manager at Angel One',
+    message: 'I had the pleasure of working with Jiwan for around 2 years. I always found him to a very dependable and hardworking colleague. Many time he went over and above to meet the product requirements, it might be either working overtime to release the project on time or working with other teams to get the production issue fixed. He was always the go to person in the team. I wish him all the best for the future endeavours and I can fully vouch that he will give his 100% every time.',
+    avatar: 'https://media.licdn.com/dms/image/D5603AQHZpSlK7j89uA/profile-displayphoto-shrink_100_100/0/1698672442801?e=1723075200&v=beta&t=E85rxj2C06FDC5FQdl8iBdjN1CapnTEBy6nLLWTj7vs',
+    link: 'https://www.linkedin.com/in/shyam-kumar-k/',
+    location: 'India',
+    code: 'in'
   },
   {
     name: 'Erkan Ateşli',
