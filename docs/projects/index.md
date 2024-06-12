@@ -23,8 +23,9 @@ order: 2
     </div>
     <div class="col-6">
         <link itemprop="applicationCategory" :href="project.schema" />
-        <a :href="project.link" target="_blank" class="w-full">
+        <a :href="project.link" target="_blank" class="w-full flex flex-row">
             <Image :src="project.img" class="" :alt="project.altText" width="100%"/>
+            <Image v-if="project.imgMobile" :src="project.imgMobile" class="" :alt="project.altText" width="100%"/>
         </a>
     </div>  
   </div>
@@ -40,6 +41,7 @@ const projects= [
         schema: "https://schema.org/DeveloperApplication",
         link: "http://recipes-client.s3-website.ap-south-1.amazonaws.com/",
         img: "/img/projects/recepie.gif",
+        imgMobile: "/img/projects/recepie-mobile.gif",
         class: "col-5",
         altText: "Recipes - Social Network | Recipes"
     },
