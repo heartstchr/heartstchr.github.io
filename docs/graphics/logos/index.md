@@ -1,3 +1,6 @@
+---
+editLink: false
+---
 <section id="Logo">
     <h3>Logo</h3>
     <blockquote>

@@ -38,8 +38,25 @@ features:
     details: Marketing and Advertising
     link: https://www.mobistreak.com/
 
+editLink: false
 copyright: false
-footer: Copyright © 2022
+footer: '<div class="card surface-100 text-600">
+ <div class="flex flex-wrap">
+      <div class="w-full">
+        <div class="gap-2">
+          <div class="card flex md:flex-row flex-column justify-content-between flex-grow-1 my-4 align-item-center gap-4">
+            <div class="flex flex-row justify-content-between align-items-center gap-2">Copyright © 2022</div>
+            <div class="flex md:flex-row flex-column justify-content-between align-items-center gap-4">
+              <a href="/about" class="text-600"> About </a>
+              <a href="/projects" class="text-600"> Projects </a>
+              <a href="/services" class="text-600"> Services </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>'
+
 ---
 <div class="flex felx-row justify-content-center">
   <Button label="Consultation form" @click="visible = true" />
@@ -360,5 +377,77 @@ const testimonials = [
     code: 'nl'
   }
 ];
+
+const footer = {
+  social: [
+    { label: 'Facebook', icon: 'pi pi-facebook', url: 'https://www.facebook.com/example' },
+    { label: 'Instagram', icon: 'pi pi-instagram', url: 'https://www.instagram.com/example' },
+    { label: 'Ticktock', icon: 'pi pi-tiktok', url: 'https://www.ticktok.com/example' },
+    { label: 'youtube', icon: 'pi pi-youtube', url: 'https://www.youtube.com/@findingthespots' },
+    { label: 'pintrest', icon: 'pi pi-pinterest', url: 'https://www.pinterest.com/example' }
+  ],
+  columns: [
+    {
+      title: 'Company',
+      links: [
+        { label: 'About', url: '/about' },
+        { label: 'Blog', url: '/blog' },
+        { label: 'Guides', url: '/guides' },
+        { label: 'Select', url: '/select' },
+        { label: 'Careers', url: '/careers' }
+      ]
+    },
+    {
+      title: 'Support',
+      links: [
+        { label: 'List Your Spot', url: '/register-your-spot' },
+        { label: 'FAQ', url: '/faq' },
+        { label: 'Community', url: '/community' },
+        { label: 'Guidelines', url: '/guidelines' },
+        { label: 'Resource Center', url: '/resource-center' },
+        { label: 'Trust & Safety', url: '/trust-safety' }
+      ]
+    },
+    {
+      title: 'Type of Location',
+      links: [
+        { label: 'Studios', url: '/test' },
+        { label: 'Residences', url: '/test' },
+        { label: 'Restuarant', url: '/test' },
+        { label: 'Hotel', url: '/test' },
+        { label: 'yacht & Boats', url: '/test' },
+        { label: 'Gallery', url: '/test' },
+        { label: 'Fitness Studio', url: '/test' },
+        { label: 'Office Space', url: '/test' },
+        { label: 'View All', url: '/test' }
+      ]
+    },
+    {
+      title: 'Cities',
+      links: [
+        { label: 'Amsterdam', url: '/test' },
+        { label: 'Rotterdam', url: '/test' },
+        { label: 'Utrecht', url: '/test' },
+        { label: 'Paris', url: '/test' },
+        { label: 'Milan', url: '/test' },
+        { label: 'Hamburg', url: '/test' },
+        { label: 'Brussels', url: '/test' },
+        { label: 'View All', url: '/test' }
+      ]
+    },
+    {
+      title: 'Features',
+      links: [
+        { label: 'Music', url: '/test' },
+        { label: 'Outdoor', url: '/test' },
+        { label: 'Roooftop', url: '/test' },
+        { label: 'Conference Room', url: '/test' },
+        { label: 'Loft', url: '/test' },
+        { label: 'Party Hall', url: '/test' },
+        { label: 'View All', url: '/test' }
+      ]
+    }
+  ]
+}
 
 </script>

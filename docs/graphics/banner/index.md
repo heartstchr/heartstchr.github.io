@@ -1,3 +1,6 @@
+---
+editLink: false
+---
 <section id="Banner">
     <h4>Banners</h4>
     <blockquote>

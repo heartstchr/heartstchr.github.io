@@ -1,3 +1,6 @@
+---
+editLink: false
+---
 <section id="vCard">
     <h4>Business card</h4>
     <blockquote>

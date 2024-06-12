@@ -1,3 +1,6 @@
+---
+editLink: false
+---
 <section id="TShirt">
     <h3 id="Painting">Painting</h3>
     <h4>T shirt painting</h4>
