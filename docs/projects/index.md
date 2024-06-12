@@ -39,7 +39,7 @@ const projects= [
         skills: ["Javascript", "ES6", "Vue3","Landingi", "Pinia","Vite","Axios","Express", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
         software: "Browser",
         schema: "https://schema.org/DeveloperApplication",
-        link: "http://recipes-client.s3-website.ap-south-1.amazonaws.com/",
+        link: "https://www.qatarairways.com/en-us/homepage.html",
         img: "/img/projects/quatar.png",
         class: "col-5",
         altText: "Quatar Airways"
