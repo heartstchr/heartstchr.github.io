@@ -15,29 +15,29 @@ export const enSidebar = sidebar({
       prefix: "services/",
       link: "services/",
     },
-    {
-      text: "Graphics",
-      icon: "creative",
-      prefix: "graphics/",
-      link: "graphics/",
-      children: [
-        {
-          text: "Banner",
-          link: "banner/",
-        },
-        {
-          text: "Logos",
-          link: "logos/",
-        },
-        {
-          text: "Paintings",
-          link: "paintings/",
-        },
-        {
-          text: "Vcard",
-          link: "vcard/",
-        },
-      ],
-    },
+    // {
+    //   text: "Graphics",
+    //   icon: "creative",
+    //   prefix: "graphics/",
+    //   link: "graphics/",
+    //   children: [
+    //     {
+    //       text: "Banner",
+    //       link: "banner/",
+    //     },
+    //     {
+    //       text: "Logos",
+    //       link: "logos/",
+    //     },
+    //     {
+    //       text: "Paintings",
+    //       link: "paintings/",
+    //     },
+    //     {
+    //       text: "Vcard",
+    //       link: "vcard/",
+    //     },
+    //   ],
+    // },
   ],
 });

@@ -53,7 +53,7 @@ footer: '<div class="card surface-100 text-600">
 const projects= [
     {
         name: "Quatar Airways widget",
-        description: "Book flights to destinations around the world with Qatar Airways &amp; fly on board an award-winning airline. Enjoy special fares, collect Avios &amp; more.",
+        description: "Book flights to destinations around the world with Qatar Airways and fly on board an award-winning airline. Enjoy special fares, collect Avios, and more.",
         skills: ["Javascript", "ES6", "Vue3","Landingi", "Pinia","Vite","Axios","Express", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
         software: "Browser",
         schema: "https://schema.org/DeveloperApplication",
@@ -64,7 +64,7 @@ const projects= [
     },
     {
         name: "Recipes",
-        description: "Recipes - Social Network",
+        description: "Recipes: Social Network",
         skills: ["Javascript", "ES6", "Vue3", "Pinia","Vite","Axios","Express", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
         software: "Browser",
         schema: "https://schema.org/DeveloperApplication",
@@ -76,7 +76,7 @@ const projects= [
     },
     {
         name: "Tv maze",
-        description: "TVmaze - Add TV information to your website or app.",
+        description: "TVmaze: Add TV information to your website or app.",
         skills: ["Javascript", "ES6", "VueJs", "Vuex","Vite","Axios","API integration", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
         software: "Browser",
         schema: "https://schema.org/DeveloperApplication",
@@ -87,25 +87,25 @@ const projects= [
     },
     {
         name: "Catch That Bus",
-        description: "Book Malaysia and Singapore Bus Ticket Online",
+        description: "Book Malaysia and Singapore bus tickets online.",
         skills: ["Javascript", "ES6", "VueJs", "Vuex","Vite","Axios","API integration", "Responsive", "ExpressJS", "MongoDB", "git", "EC2",  "eslint", "prettier"],
         software: "Browser",
         schema: "https://schema.org/DeveloperApplication",
         link: "https://m.catchthatbus.com",
         img: "/img/projects/catchthatbus.gif",
         class: "col-5",
-        altText: "Book Malaysia and Singapore Bus Ticket Online | CatchThatBus"
+        altText: "Book Malaysia and Singapore bus tickets online. | CatchThatBus"
     },
     {
         name: "Catch That Bus APP",
-        description: "IOS app for booking Malaysia and Singapore Bus Ticket Online",
+        description: "IOS app for booking Malaysia and Singapore bus tickets online",
         skills: ["Cordova", "Javascript", "ES6", "VueJs", "Vuex","Axios","API integration", "Responsive", "ExpressJS", "MongoDB", "git","eslint", "prettier"],
         software: "IOS APP",
         schema: "https://schema.org/DeveloperApplication",
         link: "https://apps.apple.com/my/app/catchthatbus/id1025824078",
         img: "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/ad/b9/3b/adb93b8f-08b6-ac23-8f9e-906f7b2529c2/pr_source.png/230x0w.png",
         class: "col-5",
-        altText: "Book Malaysia and Singapore Bus Ticket Online | CatchThatBus"
+        altText: "IOS app for booking Malaysia and Singapore bus tickets online | CatchThatBus"
     },
     {
         name: "Trokka Attraction",
@@ -142,58 +142,58 @@ const projects= [
     },
     {
         name: "Partner Dashboard Upstox",
-        description: "Open a Sub-Broker account with Upstox",
+        description: "Open a sub-broker account with Upstox.",
         skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS"],
         software: "Browser",
         schema: "https://schema.org/BusinessApplication",
         link: "https://upstox.com/sub-broker/",
         img: "/img/projects/partnerUpstox.png",
         class: "col-12",
-        altText: "Open a Sub-Broker account with Upstox"
+        altText: "Open a sub-broker account with Upstox."
     },
     {
         name: "Open Demat Account for Upstox",
-        description: "Open a Demat Account Online - Demat Account Opening at Upstox",
+        description: "Open a Demat Account Online: Demat Account Opening at Upstox",
         skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS","Digital Ocean"],
         software: "Browser",
         schema: "https://schema.org/BusinessApplication",
         link: "https://upstox.com/open-demat-account/",
         img: "/img/projects/openDemat.png",
         class: "col-12",
-        altText: "Open a Demat Account Online - Demat Account Opening at Upstox"
+        altText: "Open a Demat Account Online: Demat Account Opening at Upstox"
     },
     {
         name: "CallMatrix",
-        description: "Call Intelligence, Marketing &amp; Analytics Platform",
+        description: "Call Intelligence, Marketing, and Analytics Platform",
         skills: ["NodeJS", "MongoDB", "MSSQL", "HapiJS","Digital Ocean"],
         software: "Browser",
         schema: "https://schema.org/BusinessApplication",
         link: "https://www.callmatrix.io/",
         img: "/img/projects/callmatrix.png",
         class: "col-12",
-        altText: "CallMatrix - Call Intelligence, Marketing &amp; Analytics Platform"
+        altText: "CallMatrix - Call Intelligence, Marketing, and Analytics Platform"
     },
     {
         name: "Stock Market",
-        description: "Consuming socket data and plot realtime d3 graph",
+        description: "Consuming socket data and plotting a real-time D3 graph",
         skills: ["D3JS", "AngularJS", "NodeJS"],
         software: "Browser",
         schema: "https://schema.org/BusinessApplication",
         link: "https://github.com/heartstchr/StockMarket",
         img: "/img/projects/stocks.png",
         class: "col-5",
-        altText: "Consuming socket data and plot realtime d3 graph"
+        altText: "Consuming socket data and plotting a real-time D3 graph"
     },
     {
         name: "Liqx App | Liqur delivery app",
-        description: "UI design for liqur delivery app",
+        description: "UI design for the Liqur Delivery app",
         skills: ["Photoshop", "CoralDraw"],
         software: "Photoshop",
         schema: "https://schema.org/BusinessApplication",
         link: "https://www.behance.net/gallery/74532693/Liqx",
         img: "/img/projects/liqx.png",
         class: "col-5",
-        altText: "UI design for liqur delivery app"
+        altText: "UI design for the Liqur Delivery app"
     },
 ]
 </script>

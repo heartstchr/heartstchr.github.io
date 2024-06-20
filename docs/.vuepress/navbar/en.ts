@@ -32,7 +32,7 @@ export const enNavbar = navbar([
   //   ],
   // },
   { text: "About", icon: "discover", link: "/about/" },
-  { text: "Blog", icon: "rss", link: "/blog/" },
+  // { text: "Blog", icon: "rss", link: "/blog/" },
   {
     text: "YouTube",
     icon: "youtube-play",

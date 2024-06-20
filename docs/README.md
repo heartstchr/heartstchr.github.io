@@ -4,7 +4,7 @@ icon: home
 title: Home
 heroImage: /img/jiwan.png
 heroText: Hi 👋, I am Jiwan Ghosal
-tagline: Senior Full Stack Developer MERN, MEVN & Microsoft Certified with AZ 900 & Google Certified SEM Analyst 
+tagline: Senior Full-Stack Developer, MERN, MEVN, and Microsoft Certified with AZ 900 and Google Certified SEM Analyst 
 containerClass: fancy-container
 actions:
   - text: About 💡
@@ -20,22 +20,22 @@ actions:
 features:
   - title: Capgemini
     icon: /img/home/capgemini2.png
-    details: Consulting & technology services
+    details: Consulting and technology services
     link: https://www.capgemini.com/
 
   - title: CatchThatBus
     icon: /img/home/catchthatbus.png
-    details: Leisure, Travel & Tourism
+    details: Leisure, Travel, and Tourism
     link: https://www.catchthatbus.com/
 
   - title: Upstox
     icon: /img/home/upstox.jpeg
-    details: Online Stock Broker
+    details: Online stock broker
     link: https://www.upstox.com/
 
   - title: Mobistreak
     icon: /img/home/mobistreak.png
-    details: Marketing and Advertising
+    details: Marketing and advertising
     link: https://www.mobistreak.com/
 
 editLink: false
@@ -77,9 +77,9 @@ footer: '<div class="card surface-100 text-600">
     </div>
   </div>
 </div>
-<div class="text-md text-2xl mt-8">Full Stack Developer with extensive experience in Javascript, NodeJS ecosystem and Cloud.</div>
+<div class="text-md text-2xl mt-8">Full-stack developer with extensive experience in Javascript, the NodeJS ecosystem, and the cloud.</div>
 <div class="my-4">
-With a demonstrated history of success in the industry, I bring a comprehensive skill set that covers all phases of software development, including Planning, Implementation, Automated testing, Monitoring, and Contineous Integration and Contineous Delivery.
+With a demonstrated history of success in the industry, I bring a comprehensive skill set that covers all phases of software development, including planning, implementation, automated testing, monitoring, and continuous integration and delivery.
 </div>
 
 ##
@@ -91,8 +91,8 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
     <div class="surface-100 p-6 border-round-2xl">
       <div v-for="question in questions" :key="question.id">
         <div class="flex flex-column my-4 gap-2">
-          <div class="font-bold">Q {{ question.question }}</div>
-          <div>A {{ question.answer }}</div>
+          <div class="font-bold">Q: {{ question.question }}</div>
+          <div>A: {{ question.answer }}</div>
         </div>
       </div>
     </div>
@@ -145,9 +145,9 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
 <div class="my-8">
   <div class="text-center">
     <div class="text-6xl font-bold">Contact Me</div>
-    <div class="my-4 text-md">Let's Work Together!</div>
+    <div class="my-4 text-md">Let's work together!</div>
   </div>
-  <div class="my-4 text-center text-md"> I'm always eager to take on new challenges and collaborate on exciting projects. If you’re looking for a dedicated Full Stack Developer feel free to reach out. <a href="mailto:jiwan.cse@gmail.com" size="large" color="deeppink" class="text-center">Send email</a>
+  <div class="my-4 text-center text-md">I'm always eager to take on new challenges and collaborate on exciting projects. If you’re looking for a dedicated full-stack developer, feel free to reach out.<a href="mailto:jiwan.cse@gmail.com" size="large" color="deeppink" class="text-center">Send email</a>
   </div>
   <div class="flex flex-row justify-content-end flex-wrap gap-4 p-3 mx-6">
     <a
@@ -168,7 +168,7 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
 <div class="my-8">
   <div class="text-center">
     <div class="text-6xl font-bold">What Our Customers Are Saying</div>
-    <div class="my-4 text-md">I treat every client as a strategic partner. Here’s what they have to say about working with Jiwan Ghosal</div>
+    <div class="my-4 text-md">I treat every client as a strategic partner. Here’s what they have to say about working with Jiwan Ghosal.</div>
   </div>
   <div class="my-4 text-center text-md overflow-x-scroll ">
     <div class="flex flex-row align-items-center">
@@ -198,7 +198,7 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
 
 <div class="flex felx-row gap-2 grid nested-grid justify-content-center my-8">
   <div class="text-center col-12">
-    <div class="text-6xl font-bold">Skills & Expertise</div>
+    <div class="text-6xl font-bold">Skills and expertise</div>
   </div>
   <div class="col-3 gap-1 grid mt-4 h-min surface-card shadow-1 grid-nogutter" v-for= "(item, index) in skills">
       <div class="col-12 font-bold text-xl">{{item.name}}</div>
@@ -295,7 +295,7 @@ const questions = [
   {
     id: 1,
     question: "How can I start a project with Jiwan Ghosal?",
-    answer: `You can start by contacting us through our phone, email, or filling out the consultation form.`
+    answer: `You can start by contacting us through our phone, email, or by filling out the consultation form.`
   },
   {
     id: 2,
@@ -316,26 +316,22 @@ const features = [
   {
     icon: 'pi pi-calculator',
     title: 'No minimum order',
-    description:
-      'Try our service without any hassles'
+    description: 'Try our service without any hassle.'
   },
   {
     icon: 'pi pi-bolt',
     title: 'Fast Delivery',
-    description:
-      'I have got you covered'
+    description: 'I have got you covered.'
   },
   {
     icon: 'pi pi-calendar-clock',
     title: 'Support',
-    description:
-      'I am here to help!'
+    description: 'I am here to help!'
   },
   {
     icon: 'pi pi-eye',
     title: 'Free Demo',
-    description:
-      'Free demo bi weekly to update progress'
+    description: 'Free demo biweekly to update progress.'
   }
 ]
 
@@ -361,7 +357,7 @@ const testimonials = [
   {
     name: 'Shyam Kumar',
     designation: 'Senior Product Manager at Angel One',
-    message: 'I had the pleasure of working with Jiwan for around 2 years. I always found him to a very dependable and hardworking colleague. Many time he went over and above to meet the product requirements, it might be either working overtime to release the project on time or working with other teams to get the production issue fixed. He was always the go to person in the team. I wish him all the best for the future endeavours and I can fully vouch that he will give his 100% every time.',
+    message: 'I had the pleasure of working with Jiwan for around 2 years. I always found him to be a very dependable and hardworking colleague. Many times he went above and beyond to meet the product requirements; it might be either working overtime to release the project on time or working with other teams to get the production issue fixed. He was always the go-to person on the team. I wish him all the best in his future endeavors, and I can fully vouch that he will give his 100% every time.',
     avatar: 'https://media.licdn.com/dms/image/D5603AQHZpSlK7j89uA/profile-displayphoto-shrink_100_100/0/1698672442801?e=1723075200&v=beta&t=E85rxj2C06FDC5FQdl8iBdjN1CapnTEBy6nLLWTj7vs',
     link: 'https://www.linkedin.com/in/shyam-kumar-k/',
     location: 'India',
@@ -370,7 +366,7 @@ const testimonials = [
   {
     name: 'Erkan Ateşli',
     designation: 'Chapter Lead at ABN AMRO Bank N.V.',
-    message: 'In our connects with Jiwan at ABN AMRO, i noticed that he has in debt knowledge in his expertise field. He can transfer his knowledge easily to others. With his strong analytics skills, he can handle complex questions as usual. Jiwan is a brave colleague i’ve met and we had a lot of fun during the India visit and especially at the party. ',
+    message: 'In our connection with Jiwan at ABN AMRO, I noticed that he has a lot of knowledge in his field of expertise. He can transfer his knowledge easily to others. With his strong analytics skills, he can handle complex questions as usual. Jiwan is a brave colleague I’ve met, and we had a lot of fun during the India visit and especially at the party. ',
     avatar: 'https://media.licdn.com/dms/image/C4E03AQFg4Oh_B9JEeQ/profile-displayphoto-shrink_100_100/0/1621625662967?e=1723075200&v=beta&t=-pCdN3E5__viY6S0t-na984qkDxxuOAyGToq3UnTKM0',
     link: 'https://www.linkedin.com/in/erkanatesli',
     location: 'The Netherlands',

@@ -23,7 +23,7 @@ footer: '<div class="card surface-100 text-600">
 ---
 
 
-<div class="font-italic">I am your one-stop destination for comprehensive development and hosting services. I offer a wide range of solutions to meet your digital needs. Here's what I can do for you</div>
+<div class="font-italic">I am your one-stop destination for comprehensive development and hosting services. I offer a wide range of solutions to meet your digital needs. Here's what I can do for you:</div>
 
 <div class="grid mt-4">
   <div class="surface-card shadow-1 m-2 p-4 col-12 border-round-2xl" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(service, index) in services">
@@ -46,31 +46,31 @@ const services = [
         name: "Consulting and Technical Advisory",
         schema: "https://schema.org/DeveloperApplication",
         img: "/img/service/ConsultingAndTechnicalAdvisory.jpeg",
-        description: "Whether you're just starting out with your project or facing technical challenges, I am here to provide expert guidance and support. We offer consulting services to help you make informed decisions and overcome any obstacles you may encounter along the way"
+        description: "Whether you're just starting out with your project or facing technical challenges, I am here to provide expert guidance and support. We offer consulting services to help you make informed decisions and overcome any obstacles you may encounter along the way."
     },
     {
         name: "Custom Web Development",
         schema: "https://schema.org/DeveloperApplication",
         img: "/img/service/CustomWebDevelopment.jpeg",
-        description: "I create responsive and visually stunning websites that are optimized for performance and user experience. Whether you need a simple landing page or a complex web application, I have the skills to make it happen"
+        description: "I create responsive and visually stunning websites that are optimized for performance and user experience. Whether you need a simple landing page or a complex web application, I have the skills to make it happen."
     },
     {
         name: "E-commerce Solutions",
         schema: "https://schema.org/DeveloperApplication",
         img: "/img/service/E-commerceSolutions.jpeg",
-        description: "I am specialize in building robust e-commerce platforms that empower businesses to sell their products and services online seamlessly. Our solutions are scalable, secure, and equipped with advanced features to drive sales and enhance customer satisfaction"
+        description: "I specialize in building robust e-commerce platforms that empower businesses to sell their products and services online seamlessly. Our solutions are scalable, secure, and equipped with advanced features to drive sales and enhance customer satisfaction."
     },
     {
         name: "API Development and Integration",
         schema: "https://schema.org/DeveloperApplication",
         img: "/img/service/APIDevelopmentAndIntegration.jpeg",
-        description: "Need to integrate third-party services or create custom APIs for your application? I have got the expertise to develop RESTful APIs that facilitate seamless communication between different systems and enhance the functionality of your software"
+        description: "Need to integrate third-party services or create custom APIs for your application? I have the expertise to develop RESTful APIs that facilitate seamless communication between different systems and enhance the functionality of your software."
     },
     {
         name: "Figma to Web",
         schema: "https://schema.org/DeveloperApplication",
         img: "/img/service/FigmatoWeb.jpeg",
-        description: "I will figma to website for you. With Vue and Vue Ecosystem I create creative websites that exactly meet your requirments. Fully customizable, but a lot lighter."
+        description: "I will convert Figma to a website for you. With Vue and the Vue Ecosystem, I create creative websites that exactly meet your requirements. Fully customizable, but a lot lighter."
     },
     {
         name: "Mobile App Development",
@@ -80,22 +80,22 @@ const services = [
     {
         name: "CICD",
         schema: "https://schema.org/DeveloperApplication",
-        description: "When your existing website could use an update, or your Wordpress plugins are lagging behind, your registrations are about to expire or your design could use a refresher. I am available for all kinds of maintenance."
+        description: "I specialize in creating and optimizing CI/CD pipelines to streamline your software delivery process. Leveraging tools like Jenkins, GitLab CI, and Terraform, I automate builds, tests, and deployments, ensuring faster and more reliable releases. My expertise in scripting and Infrastructure as Code (IaC) enhances efficiency and scalability, allowing your development team to focus on innovation. Whether you're starting from scratch or need to refine existing workflows, I provide tailored solutions that drive productivity and quality in your software projects."
     },
     {
         name: "Hosting",
         schema: "https://schema.org/DeveloperApplication",
-        description: "I offer reliable and secure hosting solutions to ensure your website or application is always available to your users. From shared hosting to dedicated servers, we have options to suit your needs and budget"
+        description: "I offer comprehensive hosting services designed to ensure your applications run smoothly, securely, and efficiently. From setting up cloud infrastructure using AWS, Azure, or Google Cloud, to configuring and maintaining web servers, databases, and load balancers, I provide end-to-end solutions tailored to your needs. My expertise in containerization with Docker and orchestration with Kubernetes ensures scalable and resilient deployments. With a focus on uptime, security, and performance, I deliver hosting solutions that allow your business to thrive in a digital landscape."
     },
     {
         name: "Doamin",
         schema: "https://schema.org/DeveloperApplication",
-        description: "Registering a domain name is a piece of cake. Could you use some help with that? I can give you advice about the party and also offer you a helping hand during registration. Also if you want to transfer your domain name to a new website."
+        description: "Registering a domain name is a piece of cake. Could you use some help with that? I can give you advice about the party and also offer you a helping hand during registration. Also, if you want to transfer your domain name to a new website."
     },
     {
         name: "Maintenance and Support",
         schema: "https://schema.org/DeveloperApplication",
-        description: "My commitment doesn't end with the delivery of the project. I provide ongoing maintenance and support services to ensure your application remains up-to-date, secure, and performing optimally at all times"
+        description: "I provide dedicated maintenance and support services to keep your software systems running smoothly and efficiently. My services include regular updates, performance monitoring, bug fixing, and security patches to ensure optimal functionality and protection. With a proactive approach, I identify and resolve potential issues before they impact your operations, offering 24/7 support to address urgent needs. Trust in my expertise to maintain the reliability, security, and performance of your CI/CD pipelines and hosting environments, allowing you to focus on your core business activities."
     }
 ]
 </script>
