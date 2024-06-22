@@ -59,7 +59,9 @@ footer: '<div class="card surface-100 text-600">
 
 ---
 <div class="flex felx-row justify-content-center">
-  <!-- <Button label="Consultation form" @click="visible = true" /> -->
+  <a href="https://calendly.com/d/cn9s-fr9-rzx/one-off-meeting" target="_blank" rel="noopener">
+    <Button label="Consultation form" />
+  </a>
 </div>
 
 
@@ -295,7 +297,7 @@ const questions = [
   {
     id: 1,
     question: "How can I start a project with Jiwan Ghosal?",
-    answer: `You can start by contacting me through email.`
+    answer: `You can start by contacting us through our phone, email, or by filling out the consultation form.`
   },
   {
     id: 2,
