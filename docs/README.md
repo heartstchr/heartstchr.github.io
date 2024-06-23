@@ -72,7 +72,7 @@ footer: '<div class="card surface-100 text-600">
   </div>
   <div class="my-4 text-center text-md overflow-x-scroll ">
     <div class="flex flex-row align-items-center">
-      <div class="col-6 surface-card shadow-1 border-round-md p-2 m-2" v-for="(testimonial, index) in testimonials" :key="index">
+      <div class="md:col-6 col-12 surface-card shadow-1 border-round-md p-2 m-2" v-for="(testimonial, index) in testimonials" :key="index">
         <div class="font-italic mb-8">
           <div><span class="font-bold text-7xl">"</span> {{ testimonial.message }}</div>
         </div>
@@ -99,7 +99,7 @@ footer: '<div class="card surface-100 text-600">
 <div class="my-4">
   <div class="my-4 font-bold text-5xl text-center">Commitment</div>
   <div class="grid mt-4">
-    <div class="md:col col-12" v-for="feature in features" :key="feature.title">
+    <div class="md:col col-12 text-center" v-for="feature in features" :key="feature.title">
       <i :class="feature.icon" class="m-auto text-400 pl-3" style="font-size: 5rem"></i>
       <div class="mt-4 font-bold text-base">{{ feature.title }}</div>
       <div class="mt-2 text-sm">
@@ -178,8 +178,8 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
   <div class="text-center col-12">
     <div class="text-6xl font-bold">Skills and expertise</div>
   </div>
-  <div class="col-3 gap-1 grid mt-4 h-min surface-card shadow-1 grid-nogutter border-round-md" v-for= "(item, index) in skills">
-      <div class="col-12 font-bold text-xl text-900">{{item.name}}</div>
+  <div class="md:col-3 col-12 gap-1 grid mt-4 h-min surface-card shadow-1 grid-nogutter border-round-md" v-for= "(item, index) in skills">
+      <div class="col-12 font-bold text-xl text-900 mb-4">{{item.name}}</div>
       <div v-for= "(part, i) in item.value"><Tag>{{part}}</Tag></div>
   </div>
 </div>
@@ -190,8 +190,8 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
   <div class="text-center col-12">
     <div class="text-6xl font-bold">Other skills</div>
   </div>
-  <div class="col-3 gap-1 grid mt-4 h-min surface-card shadow-1 grid-nogutter border-round-md" v-for= "(item, index) in otherSkills">
-      <div class="col-12 font-bold text-xl text-900">{{item.name}}</div>
+  <div class="md:col-3 col-12 gap-1 grid mt-4 h-min surface-card shadow-1 grid-nogutter border-round-md" v-for= "(item, index) in otherSkills">
+      <div class="col-12 font-bold text-xl text-900 mb-4">{{item.name}}</div>
       <div v-for= "(part, i) in item.value"> <Tag>{{part}}</Tag></div>
   </div>
 </div>
