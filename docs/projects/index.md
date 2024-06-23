@@ -58,16 +58,6 @@ footer: '<div class="card surface-100 text-600">
 <script setup lang="ts">
 const projects= [
     {
-        name: "Quatar Airways widget",
-        description: "Book flights to destinations around the world with Qatar Airways and fly on board an award-winning airline. Enjoy special fares, collect Avios, and more.",
-        skills: ["Javascript", "ES6", "Vue3","Landingi", "Pinia","Vite","Axios","Express", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
-        software: "Browser",
-        schema: "https://schema.org/DeveloperApplication",
-        link: "https://www.qatarairways.com/en-us/homepage.html",
-        img: "/img/projects/quatar.png",
-        altText: "Quatar Airways"
-    },
-    {
         name: "Recipes",
         description: "Recipes: Social Network",
         skills: ["Javascript", "ES6", "Vue3", "Pinia","Vite","Axios","Express", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
@@ -78,6 +68,16 @@ const projects= [
         img: "/img/projects/recepie.gif",
         imgMobile: "/img/projects/recepie-mobile.gif",
         altText: "Recipes - Social Network | Recipes"
+    },
+    {
+        name: "Quatar Airways widget",
+        description: "Book flights to destinations around the world with Qatar Airways and fly on board an award-winning airline. Enjoy special fares, collect Avios, and more.",
+        skills: ["Javascript", "ES6", "Vue3","Landingi", "Pinia","Vite","Axios","Express", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
+        software: "Browser",
+        schema: "https://schema.org/DeveloperApplication",
+        link: "https://www.qatarairways.com/en-us/homepage.html",
+        img: "/img/projects/quatar.png",
+        altText: "Quatar Airways"
     },
     {
         name: "Tv maze",
