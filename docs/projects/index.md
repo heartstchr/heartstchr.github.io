@@ -41,6 +41,9 @@ footer: '<div class="card surface-100 text-600">
         <a :href="project.link" target="_blank" class="w-full flex flex-row no-underline mt-4">
             <Button label="Live Demo" icon="pi pi-angle-double-right" severity="help" />
         </a>
+        <a v-if="project.codeLink" :href="project.codeLink" target="_blank" class="w-full flex flex-row no-underline mt-4">
+            <Button label="Code" icon="pi pi-github" severity="info" />
+        </a>
     </div>
     <div class="col-6">
         <link itemprop="applicationCategory" :href="project.schema" />
@@ -71,6 +74,7 @@ const projects= [
         software: "Browser",
         schema: "https://schema.org/DeveloperApplication",
         link: "http://recipes-client.s3-website.ap-south-1.amazonaws.com/",
+        codeLink: "https://github.com/heartstchr/recipe",
         img: "/img/projects/recepie.gif",
         imgMobile: "/img/projects/recepie-mobile.gif",
         altText: "Recipes - Social Network | Recipes"
@@ -82,6 +86,7 @@ const projects= [
         software: "Browser",
         schema: "https://schema.org/DeveloperApplication",
         link: "https://heartstchr.github.io/tvmaze/",
+        codeLink: "https://github.com/heartstchr/tvshows",
         img: "/img/projects/tvmaze.gif",
         altText: "TVmaze - Add TV information to your website or app. | Tv maze"
     },
@@ -132,6 +137,7 @@ const projects= [
         skills: ["inquirer", "commander", "plop", "eslint", "prettier"],
         schema: "https://schema.org/DeveloperApplication",
         link: "https://github.com/heartstchr/dic",
+        codeLink: "https://github.com/heartstchr/dic",
         img: "/img/projects/dictionary.png",
         altText: "CLI for Dictionary"
     },
