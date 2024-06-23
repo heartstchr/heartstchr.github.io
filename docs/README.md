@@ -204,8 +204,11 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
     <div class="text-6xl font-bold">Contact Me</div>
     <div class="my-4 text-md">Let's work together!</div>
   </div>
-  <div class="my-4 text-center text-md">I'm always eager to take on new challenges and collaborate on exciting projects. If you’re looking for a dedicated full-stack developer, feel free to reach out.<a href="mailto:jiwan.cse@gmail.com" size="large" color="deeppink" class="text-center">Send email</a>
+  <div class="my-4 text-center text-md">I'm always eager to take on new challenges and collaborate on exciting projects. If you’re looking for a dedicated full-stack developer, feel free to reach out.
   </div>
+  <a href="mailto:jiwan.cse@gmail.com" size="large" color="deeppink" class="flex justify-content-center text-center no-underline"> 
+    <Button label="Send email" icon="pi pi-envelope" severity="info" />
+  </a>
   <div class="flex flex-row justify-content-end flex-wrap gap-4 p-3 mx-6">
     <a
       v-for="(socialElement, socialIndex) in social"
