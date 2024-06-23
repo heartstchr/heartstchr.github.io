@@ -38,13 +38,16 @@ footer: '<div class="card surface-100 text-600">
         <div class="flex grid mt-4 p-2">
             <div v-for= "(part, i) in project.skills" class="mr-2 mb-2"> <Tag>{{part}}</Tag></div>
         </div>
+        <a :href="project.link" target="_blank" class="w-full flex flex-row no-underline mt-4">
+            <Button label="Live Demo" icon="pi pi-angle-double-right" severity="help" />
+        </a>
     </div>
     <div class="col-6">
         <link itemprop="applicationCategory" :href="project.schema" />
-        <a :href="project.link" target="_blank" class="w-full flex flex-row">
+        <div class="w-full flex flex-row">
             <Image :src="project.img" class="" :alt="project.altText" width="100%"/>
             <Image v-if="project.imgMobile" :src="project.imgMobile" class="" :alt="project.altText" width="100%"/>
-        </a>
+        </div>
     </div>  
   </div>
 </div>
@@ -59,7 +62,6 @@ const projects= [
         schema: "https://schema.org/DeveloperApplication",
         link: "https://www.qatarairways.com/en-us/homepage.html",
         img: "/img/projects/quatar.png",
-        class: "col-5",
         altText: "Quatar Airways"
     },
     {
@@ -71,7 +73,6 @@ const projects= [
         link: "http://recipes-client.s3-website.ap-south-1.amazonaws.com/",
         img: "/img/projects/recepie.gif",
         imgMobile: "/img/projects/recepie-mobile.gif",
-        class: "col-5",
         altText: "Recipes - Social Network | Recipes"
     },
     {
@@ -82,7 +83,6 @@ const projects= [
         schema: "https://schema.org/DeveloperApplication",
         link: "https://heartstchr.github.io/tvmaze/",
         img: "/img/projects/tvmaze.gif",
-        class: "col-5",
         altText: "TVmaze - Add TV information to your website or app. | Tv maze"
     },
     {
@@ -93,7 +93,6 @@ const projects= [
         schema: "https://schema.org/DeveloperApplication",
         link: "https://m.catchthatbus.com",
         img: "/img/projects/catchthatbus.gif",
-        class: "col-5",
         altText: "Book Malaysia and Singapore bus tickets online. | CatchThatBus"
     },
     {
@@ -104,7 +103,6 @@ const projects= [
         schema: "https://schema.org/DeveloperApplication",
         link: "https://apps.apple.com/my/app/catchthatbus/id1025824078",
         img: "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/ad/b9/3b/adb93b8f-08b6-ac23-8f9e-906f7b2529c2/pr_source.png/230x0w.png",
-        class: "col-5",
         altText: "IOS app for booking Malaysia and Singapore bus tickets online | CatchThatBus"
     },
     {
@@ -115,7 +113,6 @@ const projects= [
         schema: "https://schema.org/DeveloperApplication",
         link: "https://m.trokka.com/attraction",
         img: "/img/projects/trokka.gif",
-        class: "col-5",
         altText: "Trokka.com | Book Attractions and Tours for Your Next Holiday"
     },
     {
@@ -126,7 +123,6 @@ const projects= [
         schema: "https://schema.org/DeveloperApplication",
         link: "https://klangsentral.com/#/",
         img: "/img/projects/klang.gif",
-        class: "col-12",
         altText: "Book Malaysia and Singapore Bus Ticket Online | klangsentral"
     },
     {
@@ -137,7 +133,6 @@ const projects= [
         schema: "https://schema.org/DeveloperApplication",
         link: "https://github.com/heartstchr/dic",
         img: "/img/projects/dictionary.png",
-        class: "col-12",
         altText: "CLI for Dictionary"
     },
     {
@@ -148,7 +143,6 @@ const projects= [
         schema: "https://schema.org/BusinessApplication",
         link: "https://upstox.com/sub-broker/",
         img: "/img/projects/partnerUpstox.png",
-        class: "col-12",
         altText: "Open a sub-broker account with Upstox."
     },
     {
@@ -159,7 +153,6 @@ const projects= [
         schema: "https://schema.org/BusinessApplication",
         link: "https://upstox.com/open-demat-account/",
         img: "/img/projects/openDemat.png",
-        class: "col-12",
         altText: "Open a Demat Account Online: Demat Account Opening at Upstox"
     },
     {
@@ -168,9 +161,8 @@ const projects= [
         skills: ["NodeJS", "MongoDB", "MSSQL", "HapiJS","Digital Ocean"],
         software: "Browser",
         schema: "https://schema.org/BusinessApplication",
-        link: "https://www.callmatrix.io/",
+        link: "http://app.callmatrix.io/#/signup",
         img: "/img/projects/callmatrix.png",
-        class: "col-12",
         altText: "CallMatrix - Call Intelligence, Marketing, and Analytics Platform"
     },
     {
@@ -181,7 +173,6 @@ const projects= [
         schema: "https://schema.org/BusinessApplication",
         link: "https://github.com/heartstchr/StockMarket",
         img: "/img/projects/stocks.png",
-        class: "col-5",
         altText: "Consuming socket data and plotting a real-time D3 graph"
     },
     {
@@ -192,7 +183,6 @@ const projects= [
         schema: "https://schema.org/BusinessApplication",
         link: "https://www.behance.net/gallery/74532693/Liqx",
         img: "/img/projects/liqx.png",
-        class: "col-5",
         altText: "UI design for the Liqur Delivery app"
     },
 ]
