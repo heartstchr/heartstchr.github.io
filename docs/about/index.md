@@ -1,7 +1,26 @@
+---
+title: About
+order: 4
+editLink: false
+copyright: false
+footer: '<div class="card surface-100 text-600">
+ <div class="flex flex-wrap">
+      <div class="w-full">
+        <div class="gap-2">
+          <div class="card flex md:flex-row flex-column justify-content-between flex-grow-1 my-4 align-item-center gap-4">
+            <div class="flex flex-row justify-content-between align-items-center gap-2">Copyright © 2022</div>
+            <div class="flex md:flex-row flex-column justify-content-between align-items-center gap-4">
+              <a href="/about" class="text-600"> About </a>
+              <a href="/projects" class="text-600"> Projects </a>
+              <a href="/services" class="text-600"> Services </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>'
+---
 <div class="my-8">
-  <div class="text-center">
-    <div class="text-6xl font-bold">About</div>
-  </div>
   <div class="my-4 text-md"> Jiwan Ghosal is a multifaceted freelance professional with a diverse skill set and a passion for continuous exploration and creativity. With extensive experience in full-stack development, Jiwan excels in both backend and frontend technologies, making significant contributions to various projects within the tech industry. His expertise spans all stages of agile software development, from planning and implementation to testing, monitoring, and delivery. Additionally, Jiwan holds a Google certification in Search Engine Marketing (SEM), showcasing his proficiency in enhancing online visibility and driving targeted traffic.</div>
 </div>
 

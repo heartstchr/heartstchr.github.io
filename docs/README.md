@@ -63,6 +63,37 @@ footer: '<div class="card surface-100 text-600">
 </div>
 
 
+## 
+
+<div class="my-8">
+  <div class="text-center">
+    <div class="text-6xl font-bold">What Customers Are Saying</div>
+    <div class="my-4 text-md">I treat every client as a strategic partner. Here’s what they have to say about working with Jiwan Ghosal.</div>
+  </div>
+  <div class="my-4 text-center text-md overflow-x-scroll ">
+    <div class="flex flex-row align-items-center">
+      <div class="col-6 surface-card shadow-1 border-round-md p-2 m-2" v-for="(testimonial, index) in testimonials" :key="index">
+        <div class="font-italic mb-8">
+          <div><span class="font-bold text-7xl">"</span> {{ testimonial.message }}</div>
+        </div>
+        <div class="flex align-items-center">
+          <img :src="testimonial.avatar" alt="Avatar" class="border-circle" width="50px" />
+          <a :href="testimonial.link" target="_blank">
+            <div class="flex flex-column align-items-start ml-2">
+              <div>{{ testimonial.name }}</div>
+              <div>{{ testimonial.designation }}</div>
+              <div>
+                <img :alt="testimonial.name" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" :class="`flag flag-${testimonial.code.toLowerCase()} mr-2`" style="width: 18px" />
+                {{ testimonial.location }}
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 ##
 
 <div class="my-4">
@@ -85,7 +116,7 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
 ##
 
 <div v-if="questions" class="mt-8">
-<div class="text-xl font-bold">Frequently Asked Questions</div>
+<div class="my-4 font-bold text-5xl text-center">Frequently Asked Questions</div>
 <div class="grid md:mx-8 mt-8 overflow-hidden border-round-2xl" :style="getImage()">
   <div class="md:col-6 col-12">
     <div class="surface-100 p-6 border-round-2xl">
@@ -162,38 +193,6 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
   </div>
 </div>
 
-
-## 
-
-<div class="my-8">
-  <div class="text-center">
-    <div class="text-6xl font-bold">What Our Customers Are Saying</div>
-    <div class="my-4 text-md">I treat every client as a strategic partner. Here’s what they have to say about working with Jiwan Ghosal.</div>
-  </div>
-  <div class="my-4 text-center text-md overflow-x-scroll ">
-    <div class="flex flex-row align-items-center">
-      <div class="col-6 surface-card shadow-1 border-round-md p-2 m-2" v-for="(testimonial, index) in testimonials" :key="index">
-        <div class="font-italic mb-8">
-          <div><span class="font-bold text-7xl">"</span> {{ testimonial.message }}</div>
-        </div>
-        <div class="flex align-items-center">
-          <img :src="testimonial.avatar" alt="Avatar" class="border-circle" width="50px" />
-          <a :href="testimonial.link" target="_blank">
-            <div class="flex flex-column align-items-start ml-2">
-              <div>{{ testimonial.name }}</div>
-              <div>{{ testimonial.designation }}</div>
-              <div>
-                <img :alt="testimonial.name" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" :class="`flag flag-${testimonial.code.toLowerCase()} mr-2`" style="width: 18px" />
-                {{ testimonial.location }}
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 ## 
 
 <div class="flex felx-row gap-2 grid nested-grid justify-content-center my-8">
@@ -232,10 +231,10 @@ const form = ref({
 });
 
 const social= [
+  { label: 'linkedin', icon: 'pi pi-linkedin', url: 'https://www.linkedin.com/in/jiwanghosal/' },
   { label: 'Facebook', icon: 'pi pi-facebook', url: 'https://www.facebook.com/profile.php?id=100004925264462' },
   { label: 'Instagram', icon: 'pi pi-instagram', url: 'https://www.instagram.com/jiwan_ghosal/' },
   { label: 'youtube', icon: 'pi pi-youtube', url: 'https://www.youtube.com/@JiwanGhosal' },
-  { label: 'linkedin', icon: 'pi pi-linkedin', url: 'https://www.linkedin.com/in/jiwanghosal/' }
 ]
 
 const services = ref([
@@ -373,77 +372,5 @@ const testimonials = [
     code: 'nl'
   }
 ];
-
-const footer = {
-  social: [
-    { label: 'Facebook', icon: 'pi pi-facebook', url: 'https://www.facebook.com/example' },
-    { label: 'Instagram', icon: 'pi pi-instagram', url: 'https://www.instagram.com/example' },
-    { label: 'Ticktock', icon: 'pi pi-tiktok', url: 'https://www.ticktok.com/example' },
-    { label: 'youtube', icon: 'pi pi-youtube', url: 'https://www.youtube.com/@findingthespots' },
-    { label: 'pintrest', icon: 'pi pi-pinterest', url: 'https://www.pinterest.com/example' }
-  ],
-  columns: [
-    {
-      title: 'Company',
-      links: [
-        { label: 'About', url: '/about' },
-        { label: 'Blog', url: '/blog' },
-        { label: 'Guides', url: '/guides' },
-        { label: 'Select', url: '/select' },
-        { label: 'Careers', url: '/careers' }
-      ]
-    },
-    {
-      title: 'Support',
-      links: [
-        { label: 'List Your Spot', url: '/register-your-spot' },
-        { label: 'FAQ', url: '/faq' },
-        { label: 'Community', url: '/community' },
-        { label: 'Guidelines', url: '/guidelines' },
-        { label: 'Resource Center', url: '/resource-center' },
-        { label: 'Trust & Safety', url: '/trust-safety' }
-      ]
-    },
-    {
-      title: 'Type of Location',
-      links: [
-        { label: 'Studios', url: '/test' },
-        { label: 'Residences', url: '/test' },
-        { label: 'Restuarant', url: '/test' },
-        { label: 'Hotel', url: '/test' },
-        { label: 'yacht & Boats', url: '/test' },
-        { label: 'Gallery', url: '/test' },
-        { label: 'Fitness Studio', url: '/test' },
-        { label: 'Office Space', url: '/test' },
-        { label: 'View All', url: '/test' }
-      ]
-    },
-    {
-      title: 'Cities',
-      links: [
-        { label: 'Amsterdam', url: '/test' },
-        { label: 'Rotterdam', url: '/test' },
-        { label: 'Utrecht', url: '/test' },
-        { label: 'Paris', url: '/test' },
-        { label: 'Milan', url: '/test' },
-        { label: 'Hamburg', url: '/test' },
-        { label: 'Brussels', url: '/test' },
-        { label: 'View All', url: '/test' }
-      ]
-    },
-    {
-      title: 'Features',
-      links: [
-        { label: 'Music', url: '/test' },
-        { label: 'Outdoor', url: '/test' },
-        { label: 'Roooftop', url: '/test' },
-        { label: 'Conference Room', url: '/test' },
-        { label: 'Loft', url: '/test' },
-        { label: 'Party Hall', url: '/test' },
-        { label: 'View All', url: '/test' }
-      ]
-    }
-  ]
-}
 
 </script>

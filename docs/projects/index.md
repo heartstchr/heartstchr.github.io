@@ -38,7 +38,7 @@ footer: '<div class="card surface-100 text-600">
         <div class="flex grid mt-4 p-2">
             <div v-for= "(part, i) in project.skills" class="mr-2 mb-2"> <Tag>{{part}}</Tag></div>
         </div>
-        <a :href="project.link" target="_blank" class="w-full flex flex-row no-underline mt-4">
+        <a v-if="project.link" :href="project.link" target="_blank" class="w-full flex flex-row no-underline mt-4">
             <Button label="Live Demo" icon="pi pi-angle-double-right" severity="help" />
         </a>
         <a v-if="project.codeLink" :href="project.codeLink" target="_blank" class="w-full flex flex-row no-underline mt-4">
@@ -136,7 +136,6 @@ const projects= [
         software: "TERMINAL",
         skills: ["inquirer", "commander", "plop", "eslint", "prettier"],
         schema: "https://schema.org/DeveloperApplication",
-        link: "https://github.com/heartstchr/dic",
         codeLink: "https://github.com/heartstchr/dic",
         img: "/img/projects/dictionary.png",
         altText: "CLI for Dictionary"
