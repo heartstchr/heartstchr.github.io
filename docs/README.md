@@ -171,6 +171,32 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
     </div>
 </Dialog>
 
+
+## 
+
+<div class="flex felx-row gap-2 grid nested-grid justify-content-center my-8">
+  <div class="text-center col-12">
+    <div class="text-6xl font-bold">Skills and expertise</div>
+  </div>
+  <div class="col-3 gap-1 grid mt-4 h-min surface-card shadow-1 grid-nogutter border-round-md" v-for= "(item, index) in skills">
+      <div class="col-12 font-bold text-xl text-900">{{item.name}}</div>
+      <div v-for= "(part, i) in item.value"><Tag>{{part}}</Tag></div>
+  </div>
+</div>
+
+##
+
+<div class="flex felx-row gap-2 grid nested-grid justify-content-center my-8">
+  <div class="text-center col-12">
+    <div class="text-6xl font-bold">Other skills</div>
+  </div>
+  <div class="col-3 gap-1 grid mt-4 h-min surface-card shadow-1 grid-nogutter border-round-md" v-for= "(item, index) in otherSkills">
+      <div class="col-12 font-bold text-xl text-900">{{item.name}}</div>
+      <div v-for= "(part, i) in item.value"> <Tag>{{part}}</Tag></div>
+  </div>
+</div>
+
+
 ##
 
 <div class="my-8">
@@ -190,30 +216,6 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
       >
       <i :class="socialElement.icon" style="font-size: 1rem"></i>
       </a>
-  </div>
-</div>
-
-## 
-
-<div class="flex felx-row gap-2 grid nested-grid justify-content-center my-8">
-  <div class="text-center col-12">
-    <div class="text-6xl font-bold">Skills and expertise</div>
-  </div>
-  <div class="col-3 gap-1 grid mt-4 h-min surface-card shadow-1 grid-nogutter" v-for= "(item, index) in skills">
-      <div class="col-12 font-bold text-xl">{{item.name}}</div>
-      <div v-for= "(part, i) in item.value"><Tag>{{part}}</Tag></div>
-  </div>
-</div>
-
-##
-
-<div class="flex felx-row gap-2 grid nested-grid justify-content-center my-8">
-  <div class="text-center col-12">
-    <div class="text-6xl font-bold">Other skills</div>
-  </div>
-  <div class="col-3 gap-1 grid mt-4 h-min surface-card shadow-1 grid-nogutter" v-for= "(item, index) in otherSkills">
-      <div class="col-12 font-bold text-xl">{{item.name}}</div>
-      <div v-for= "(part, i) in item.value"> <Tag>{{part}}</Tag></div>
   </div>
 </div>
 

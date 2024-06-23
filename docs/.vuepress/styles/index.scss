@@ -20,6 +20,9 @@
 .vp-footer-wrapper{
     background-color: var(--surface-100) !important;
 }
-.vp-page-meta {
-    display: none;
+
+.vp-article-title span{
+    background-color: #669eff;
+    padding: 4px;
+    border-radius: 4px;
 }

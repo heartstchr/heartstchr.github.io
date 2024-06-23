@@ -2,6 +2,7 @@
 title: Services
 icon: code
 order: 3
+lastUpdated: false
 editLink: false
 copyright: false
 footer: '<div class="card surface-100 text-600">

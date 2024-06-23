@@ -2,6 +2,7 @@
 title: Projects
 icon: discover
 order: 2
+lastUpdated: false
 editLink: false
 copyright: false
 footer: '<div class="card surface-100 text-600">
