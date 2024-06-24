@@ -86,7 +86,7 @@ const services = [
         description: "I offer comprehensive hosting services to ensure your applications run smoothly, securely, and efficiently. From setting up cloud infrastructure on AWS, Azure, or Google Cloud, to configuring and maintaining web servers, databases, and load balancers, I provide end-to-end solutions tailored to your needs. My expertise in containerization with Docker and orchestration with Kubernetes ensures scalable and resilient deployments. With a focus on uptime, security, and performance, I deliver hosting solutions that enable your business to thrive in the digital landscape."
     },
     {
-        name: "Doamin",
+        name: "Domain",
         img: "/img/service/domain.jpg",
         description: "Registering a domain name is simple, but I can offer expert advice and assistance to make the process even easier. Need help choosing the right provider or transferring your domain to a new website? I'm here to guide you every step of the way."
     }
