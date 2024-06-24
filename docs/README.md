@@ -72,7 +72,7 @@ footer: '<div class="card surface-100 text-600">
   </div>
   <div class="my-4 text-center text-md overflow-x-scroll ">
     <div class="flex flex-row align-items-center">
-      <div class="md:col-6 col-12 surface-card shadow-1 border-round-md p-2 m-2" v-for="(testimonial, index) in testimonials" :key="index">
+      <div class="md:col-6 col-12 surface-card shadow-1 border-round-md p-2 m-2 text-900" v-for="(testimonial, index) in testimonials" :key="index">
         <div class="font-italic mb-8">
           <div><span class="font-bold text-7xl">"</span> {{ testimonial.message }}</div>
         </div>
@@ -119,7 +119,7 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
 <div class="my-4 font-bold text-5xl text-center">Frequently Asked Questions</div>
 <div class="grid md:mx-8 mt-8 overflow-hidden border-round-2xl" :style="getImage()">
   <div class="md:col-6 col-12">
-    <div class="surface-100 p-6 border-round-2xl">
+    <div class="surface-100 p-6 border-round-2xl text-900">
       <div v-for="question in questions" :key="question.id">
         <div class="flex flex-column my-4 gap-2">
           <div class="font-bold">Q: {{ question.question }}</div>
@@ -199,7 +199,7 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
 
 ##
 
-<div class="my-8">
+<div class="pt-8 surface-100 border-round-md text-900">
   <div class="text-center">
     <div class="text-6xl font-bold">Contact Me</div>
     <div class="my-4 text-md">Let's work together!</div>
