@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> be3faba605c07636be6ee056ab27b1e610d4005f
 name: Deploy Docs
 
 on:
   push:
     branches:
-<<<<<<< HEAD
-      - main
-=======
       - vuepress
->>>>>>> be3faba605c07636be6ee056ab27b1e610d4005f
 
 permissions:
   contents: write
