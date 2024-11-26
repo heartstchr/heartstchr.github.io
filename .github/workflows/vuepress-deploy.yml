@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> be3faba605c07636be6ee056ab27b1e610d4005f
 name: Deploy Docs
 
 on:
   push:
     branches:
+<<<<<<< HEAD
       - main
+=======
+      - vuepress
+>>>>>>> be3faba605c07636be6ee056ab27b1e610d4005f
 
 permissions:
   contents: write
@@ -42,7 +49,7 @@ jobs:
           NODE_OPTIONS: --max_old_space_size=8192
         run: |-
           pnpm run docs:build
-          > src/.vuepress/dist/.nojekyll
+          > docs/.vuepress/dist/.nojekyll
 
       - name: Deploy Docs
         uses: JamesIves/github-pages-deploy-action@v4
