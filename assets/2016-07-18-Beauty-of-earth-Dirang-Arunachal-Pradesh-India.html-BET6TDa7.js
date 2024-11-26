@@ -1,4 +1,4 @@
-import{_ as o,a as n,b as i,c as l}from"./fb-T4SefgOY.js";import{_ as s}from"./ArunachalPradeshBrabhaputra-Bjj_XEHb.js";import{_ as c}from"./plugin-vue_export-helper-DlAUqK2U.js";import{r as h,o as u,c as p,a as t,f as r,k as e}from"./app-B-xnMzuJ.js";const d={},g=t("p",null,"Travel points: Gwahati ► Bomdila ► Dirang ► Sella Pass",-1),m=t("blockquote",null,[t("p",null,"Pre-requisite")],-1),_=t("pre",null,[t("code",null,`▬ To cross Bomdila check post  you require pass. But don't worry driver will do it for you.
+import{_ as o,a as n,b as i,c as l}from"./fb-T4SefgOY.js";import{_ as s}from"./ArunachalPradeshBrabhaputra-Bjj_XEHb.js";import{_ as c}from"./plugin-vue_export-helper-DlAUqK2U.js";import{r as h,o as u,c as p,a as t,f as r,k as e}from"./app-ChhztaiS.js";const d={},g=t("p",null,"Travel points: Gwahati ► Bomdila ► Dirang ► Sella Pass",-1),m=t("blockquote",null,[t("p",null,"Pre-requisite")],-1),_=t("pre",null,[t("code",null,`▬ To cross Bomdila check post  you require pass. But don't worry driver will do it for you.
 ▬ A cab having heater.
 ▬ Woollen cloth.
 ▬ Avoid taking respiratory patient.
