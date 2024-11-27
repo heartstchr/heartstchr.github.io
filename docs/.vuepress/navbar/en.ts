@@ -36,6 +36,6 @@ export const enNavbar = navbar([
   {
     text: "YouTube",
     icon: "youtube-play",
-    link: "https://www.youtube.com/@JiwanGhosal",
+    link: "https://www.youtube.com/@stackseekers",
   },
 ]);
