@@ -4,7 +4,7 @@ icon: home
 title: Home
 heroImage: /img/jiwan.png
 heroText: Hi 👋, I am Jiwan Ghosal
-tagline: Senior Full-Stack Developer, MERN, MEVN, and Microsoft Certified with AZ 900 and Google Certified SEM Analyst 
+tagline: Senior Full-Stack Developer, MERN, MEVN, and Microsoft Certified with AZ 900. 
 containerClass: fancy-container
 actions:
   - text: About 💡
