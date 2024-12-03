@@ -323,7 +323,7 @@ const getImage = () =>`background-image: url('/img/home/faq.jpeg');  background-
 
 const features = [
   {
-    icon: 'pi pi-calculator',
+    icon: 'pi pi-tag',
     title: 'No minimum order',
     description: 'Try our service without any hassle.'
   },
