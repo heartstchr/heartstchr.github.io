@@ -3,7 +3,45 @@ import { navbar } from "vuepress-theme-hope";
 export const enNavbar = navbar([
   "/",
   { text: "Projects", icon: "discover", link: "/projects/" },
-  { text: "Services", icon: "code", link: "/services/" },
+  {
+    text: "Services",
+    icon: "code",
+    link: "/services/",
+    children: [
+      {
+        text: "Figma to web",
+        link: "services/#FigmatoWeb",
+      },
+      {
+        text: "API Developement",
+        link: "services/#APIDevelopmentAndIntegration",
+      },
+      {
+        text: "Web Development",
+        link: "services/#CustomWebDevelopment",
+      },
+      {
+        text: "Consulting",
+        link: "services/#ConsultingAndTechnicalAdvisory",
+      },
+      {
+        text: "E-commerce",
+        link: "services/#E-commerceSolutions",
+      },{
+        text: "Mobile App",
+        link: "services/#mobileAppDevelopment",
+      },{
+        text: "CICD",
+        link: "services/#cicd",
+      },{
+        text: "Hosting",
+        link: "services/#hosting",
+      },{
+        text: "Domain",
+        link: "services/#domain",
+      },
+    ],
+  },
   // {
   //   text: "Graphics",
   //   icon: "creative",
