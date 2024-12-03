@@ -117,7 +117,7 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
   </div>
   <div class="my-4 text-center text-md overflow-x-scroll ">
     <div class="flex flex-row align-items-center">
-      <div class="md:col-6 col-12 surface-card shadow-1 border-round-md p-2 m-2 text-900" v-for="(testimonial, index) in testimonials" :key="index">
+      <div class="md:col-6 col-12 surface-card shadow-1 border-round-md p-2 m-2 text-900 vp-feature-item" v-for="(testimonial, index) in testimonials" :key="index">
         <div class="font-italic mb-8">
           <div><span class="font-bold text-7xl">"</span> {{ testimonial.message }}</div>
         </div>
@@ -145,7 +145,7 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
   <div class="my-4 font-bold text-5xl text-center">Frequently Asked Questions</div>
   <div class="grid md:mx-8 mt-8 overflow-hidden border-round-2xl" :style="getImage()">
     <div class="md:col-6 col-12">
-      <div class="surface-100 p-6 border-round-2xl text-900">
+      <div class="surface-100 p-6 border-round-2xl text-900 vp-feature-item">
         <div v-for="question in questions" :key="question.id">
           <div class="flex flex-column my-4 gap-2">
             <div class="font-bold">Q: {{ question.question }}</div>
@@ -204,7 +204,7 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
   <div class="text-center col-12">
     <div class="text-6xl font-bold">Skills and expertise</div>
   </div>
-  <div class="md:col-3 col-12 gap-1 grid mt-4 h-min surface-card shadow-1 grid-nogutter border-round-md" v-for= "(item, index) in skills">
+  <div class="md:col-3 col-12 gap-1 grid mt-4 h-min surface-card shadow-1 grid-nogutter border-round-md vp-feature-item" v-for= "(item, index) in skills">
       <div class="col-12 font-bold text-xl text-900 mb-4">{{item.name}}</div>
       <div v-for= "(part, i) in item.value"><Tag>{{part}}</Tag></div>
   </div>
@@ -216,7 +216,7 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
   <div class="text-center col-12">
     <div class="text-6xl font-bold">Other skills</div>
   </div>
-  <div class="md:col-3 col-12 gap-1 grid mt-4 h-min surface-card shadow-1 grid-nogutter border-round-md" v-for= "(item, index) in otherSkills">
+  <div class="md:col-3 col-12 gap-1 grid mt-4 h-min surface-card shadow-1 grid-nogutter border-round-md vp-feature-item" v-for= "(item, index) in otherSkills">
       <div class="col-12 font-bold text-xl text-900 mb-4">{{item.name}}</div>
       <div v-for= "(part, i) in item.value"> <Tag>{{part}}</Tag></div>
   </div>
@@ -225,7 +225,7 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
 
 ##
 
-<div class="pt-8 surface-100 border-round-md text-900" id="contact">
+<div class="pt-8 surface-100 border-round-md text-900 vp-feature-item" id="contact">
   <div class="text-center">
     <div class="text-6xl font-bold">Contact Me</div>
     <div class="my-4 text-md">Let's work together!</div>
@@ -408,7 +408,7 @@ const testimonials = [
   {
     name: 'Shyam Kumar',
     designation: 'Senior Product Manager at Angel One',
-    message: 'I had the pleasure of working with Jiwan for around 2 years. I always found him to be a very dependable and hardworking colleague. Many times he went above and beyond to meet the product requirements; it might be either working overtime to release the project on time or working with other teams to get the production issue fixed. He was always the go-to person on the team. I wish him all the best in his future endeavors, and I can fully vouch that he will give his 100% every time.',
+    message: 'I always found Jiwan to be a very dependable and hardworking colleague. Many times he went above and beyond to meet the product requirements; it might be either working overtime to release the project on time or working with other teams to get the production issue fixed. He was always the go-to person on the team.',
     avatar: 'https://media.licdn.com/dms/image/v2/D5603AQHZpSlK7j89uA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1698672442801?e=1738195200&v=beta&t=lXm4yDQlyLnGzUFtfzqjDGEgBzttasSc03uUb5s0ZVc',
     link: 'https://www.linkedin.com/in/shyam-kumar-k/',
     location: 'India',

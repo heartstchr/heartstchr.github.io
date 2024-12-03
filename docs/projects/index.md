@@ -29,8 +29,9 @@ footer: '<div class="card surface-100 text-600">
 </div>
 
 <div class="grid mt-4">
-  <div class="surface-card shadow-1 m-2 p-2 flex flex-row" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(project, index) in projects">
-    <div class="col-6">
+<div class="vp-feature-item col-12 shadow-1" v-for= "(project, index) in projects">
+  <div class="surface-card flex md:flex-row flex-column" itemscope itemtype="https://schema.org/SoftwareApplication">
+    <div class="md:col-6 col-12">
         <div class="text-md font-bold mt-4">
             <div itemprop="name">{{project.name}}</div> 
             <div class="text-xs mt-2" itemprop="operatingSystem">{{project.software}}</div>
@@ -46,13 +47,14 @@ footer: '<div class="card surface-100 text-600">
             <Button label="Code" icon="pi pi-github" severity="info" />
         </a>
     </div>
-    <div class="col-6">
+    <div class="md:col-6 col-12">
         <link itemprop="applicationCategory" :href="project.schema" />
         <div class="w-full flex flex-row">
             <Image :src="project.img" class="" :alt="project.altText" width="100%"/>
             <Image v-if="project.imgMobile" :src="project.imgMobile" class="" :alt="project.altText" width="100%"/>
         </div>
     </div>  
+  </div>
   </div>
 </div>
 
