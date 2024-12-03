@@ -66,6 +66,47 @@ footer: '<div class="card surface-100 text-600">
   <!-- <Button label="Consultation form" @click="visible = true" /> -->
 </div>
 
+##
+
+<div class="my-4">
+  <div class="my-4 font-bold text-5xl text-center">Commitment</div>
+  <div class="grid mt-4">
+    <div class="md:col col-12 text-center" v-for="feature in features" :key="feature.title">
+      <i :class="feature.icon" class="m-auto text-400 pl-3" style="font-size: 5rem"></i>
+      <div class="mt-4 font-bold text-base">{{ feature.title }}</div>
+      <div class="mt-2 text-sm">
+        {{ feature.description }}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="text-md text-2xl mt-8">Full-stack developer with extensive experience in Javascript, the NodeJS ecosystem, and the Azure cloud.</div>
+<div class="my-4">
+With a demonstrated history of success in the industry, I bring a comprehensive skill set that covers all phases of software development, including planning, implementation, automated testing, monitoring, and continuous integration and delivery.
+</div>
+
+<div class="my-4">
+  <div class="grid mt-4">
+    <div class="md:col col-12 text-center" v-for="stackLogo in stackLogos" :key="stackLogo.title">
+      <i :class="stackLogo.icon" class="m-auto text-400 pl-3" style="font-size: 5rem"></i>
+      <img :src="stackLogo.link" alt="Avatar" width="100px" />
+      <div class="mt-4 font-bold text-base">{{ stackLogo.title }}</div>
+      <div class="mt-2 text-sm">
+        {{ stackLogo.description }}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="my-4">
+  <div class="grid mt-4">
+    <div class="md:col-6 col-12 text-center">
+      <img src="/img/home/JiwanGhosalMicrosoftAz900.png" alt="Avatar" />
+    </div>
+    <div class="md:col-6 col-12 text-center">
+      <img src="/img/home/connectedManager.png" alt="Avatar" />
+    </div>
+  </div>
+</div>
 
 ## 
 
@@ -100,39 +141,20 @@ footer: '<div class="card surface-100 text-600">
 
 ##
 
-<div class="my-4">
-  <div class="my-4 font-bold text-5xl text-center">Commitment</div>
-  <div class="grid mt-4">
-    <div class="md:col col-12 text-center" v-for="feature in features" :key="feature.title">
-      <i :class="feature.icon" class="m-auto text-400 pl-3" style="font-size: 5rem"></i>
-      <div class="mt-4 font-bold text-base">{{ feature.title }}</div>
-      <div class="mt-2 text-sm">
-        {{ feature.description }}
-      </div>
-    </div>
-  </div>
-</div>
-<div class="text-md text-2xl mt-8">Full-stack developer with extensive experience in Javascript, the NodeJS ecosystem, and the cloud.</div>
-<div class="my-4">
-With a demonstrated history of success in the industry, I bring a comprehensive skill set that covers all phases of software development, including planning, implementation, automated testing, monitoring, and continuous integration and delivery.
-</div>
-
-##
-
 <div v-if="questions" class="mt-8">
-<div class="my-4 font-bold text-5xl text-center">Frequently Asked Questions</div>
-<div class="grid md:mx-8 mt-8 overflow-hidden border-round-2xl" :style="getImage()">
-  <div class="md:col-6 col-12">
-    <div class="surface-100 p-6 border-round-2xl text-900">
-      <div v-for="question in questions" :key="question.id">
-        <div class="flex flex-column my-4 gap-2">
-          <div class="font-bold">Q: {{ question.question }}</div>
-          <div>A: {{ question.answer }}</div>
+  <div class="my-4 font-bold text-5xl text-center">Frequently Asked Questions</div>
+  <div class="grid md:mx-8 mt-8 overflow-hidden border-round-2xl" :style="getImage()">
+    <div class="md:col-6 col-12">
+      <div class="surface-100 p-6 border-round-2xl text-900">
+        <div v-for="question in questions" :key="question.id">
+          <div class="flex flex-column my-4 gap-2">
+            <div class="font-bold">Q: {{ question.question }}</div>
+            <div>A: {{ question.answer }}</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 
 <Dialog 
@@ -341,6 +363,25 @@ const features = [
     icon: 'pi pi-eye',
     title: 'Free Demo',
     description: 'Free demo biweekly to update progress.'
+  }
+]
+
+const stackLogos = [
+  {
+    link: '/img/home/vuejs.png',
+    title: 'VueJs',
+  },
+  {
+    link: '/img/home/reactjs.png',
+    title: 'ReactJS',
+  },
+  {
+    link: '/img/home/nodejs.png',
+    title: 'NodeJs',
+  },
+  {
+    link: '/img/home/mongodb.png',
+    title: 'MongoDb',
   }
 ]
 
