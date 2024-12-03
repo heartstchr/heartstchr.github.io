@@ -27,7 +27,7 @@ footer: '<div class="card surface-100 text-600">
 <div class="font-italic">I am your one-stop destination for comprehensive development and hosting services. I offer a wide range of solutions to meet your digital needs. Here's what I can do for you:</div>
 
 <div class="grid mt-4">
-  <div class="surface-card shadow-1 m-2 p-4 col-12 border-round-2xl" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(service, index) in services">
+  <div class="surface-card shadow-1 m-2 p-4 col-12 border-round-2xl vp-feature-item" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(service, index) in services">
     <Image v-if="service.img" :src="service.img" class="" :alt="service.name" width="100%"/>
       <div class="text-2xl font-bold">
           <span itemprop="name">{{service.name}}</span>
