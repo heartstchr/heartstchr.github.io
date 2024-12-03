@@ -1,42 +1,46 @@
 ---
 home: true
-icon: home
+icon: pi pi-home
 title: Home
 heroImage: /img/jiwan.png
 heroText: Hi 👋, I am Jiwan Ghosal
 tagline: Senior Full-Stack Developer, MERN, MEVN, and Microsoft Certified with AZ 900. 
 containerClass: fancy-container
 actions:
-  - text: About 💡
-    link: /about/
+  - text: See my work! 💡
+    link: /projects/
     type: primary
 
-  - text: See my work
-    link: /projects/
-  
+  - text: Hire Now! 
+    icon: pi pi-briefcase
+    link: mailto:jiwan.cse@gmail.com
+    type: secondary
+
   - text: Services
     link: /services/
 
-features:
-  - title: Capgemini
-    icon: /img/home/capgemini2.png
-    details: Consulting and technology services
-    link: https://www.capgemini.com/
+highlights:
+  - header: Delivering Results for Industry Leaders
+    features:
+      - title: Capgemini
+        icon: /img/home/capgemini2.png
+        details: Consulting and technology services
+        link: https://www.capgemini.com/
 
-  - title: CatchThatBus
-    icon: /img/home/catchthatbus.png
-    details: Leisure, Travel, and Tourism
-    link: https://www.catchthatbus.com/
+      - title: CatchThatBus
+        icon: /img/home/catchthatbus.png
+        details: Leisure, Travel, and Tourism
+        link: https://www.catchthatbus.com/
 
-  - title: Upstox
-    icon: /img/home/upstox.jpeg
-    details: Online stock broker
-    link: https://www.upstox.com/
+      - title: Upstox
+        icon: /img/home/upstox.jpeg
+        details: Online stock broker
+        link: https://www.upstox.com/
 
-  - title: Mobistreak
-    icon: /img/home/mobistreak.png
-    details: Marketing and advertising
-    link: https://www.mobistreak.com/
+      - title: Mobistreak
+        icon: /img/home/mobistreak.png
+        details: Marketing and advertising
+        link: https://www.mobistreak.com/
 
 editLink: false
 copyright: false
@@ -199,7 +203,7 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
 
 ##
 
-<div class="pt-8 surface-100 border-round-md text-900">
+<div class="pt-8 surface-100 border-round-md text-900" id="contact">
   <div class="text-center">
     <div class="text-6xl font-bold">Contact Me</div>
     <div class="my-4 text-md">Let's work together!</div>
@@ -309,8 +313,8 @@ const questions = [
   },
   {
     id: 3,
-    question: 'What is the hourly rate?',
-    answer: `$25/hr`
+    question: 'What is the process?',
+    answer: `Requirement -> Timeline -> Developement -> Delivery & support`
   }
 ]
 
