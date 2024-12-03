@@ -59,6 +59,56 @@ footer: '<div class="card surface-100 text-600">
 <script setup lang="ts">
 const projects= [
     {
+        name: "Partner Dashboard Upstox",
+        description: "Open a sub-broker account with Upstox.",
+        skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS"],
+        software: "Browser",
+        schema: "https://schema.org/BusinessApplication",
+        link: "https://upstox.com/sub-broker/",
+        img: "/img/projects/partnerUpstox.png",
+        altText: "Open a sub-broker account with Upstox."
+    },
+    {
+        name: "Open Demat Account for Upstox",
+        description: "Open a Demat Account Online: Demat Account Opening at Upstox",
+        skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS","Digital Ocean"],
+        software: "Browser",
+        schema: "https://schema.org/BusinessApplication",
+        link: "https://upstox.com/open-demat-account/",
+        img: "/img/projects/openDemat.png",
+        altText: "Open a Demat Account Online: Demat Account Opening at Upstox"
+    },
+    {
+        name: "Catch That Bus",
+        description: "Book Malaysia and Singapore bus tickets online.",
+        skills: ["Javascript", "ES6", "VueJs", "Vuex","Vite","Axios","API integration", "Responsive", "ExpressJS", "MongoDB", "git", "EC2",  "eslint", "prettier"],
+        software: "Browser",
+        schema: "https://schema.org/DeveloperApplication",
+        link: "https://m.catchthatbus.com",
+        img: "/img/projects/catchthatbus.gif",
+        altText: "Book Malaysia and Singapore bus tickets online. | CatchThatBus"
+    },
+    {
+        name: "Trokka Attraction",
+        description: "Book Attractions and Tours for Your Next Holiday",
+        skills: ["Javascript", "ES6", "VueJs", "Vuex","Axios","API integration", "Responsive", "ExpressJS", "MongoDB", "git", "EC2"],
+        software: "Browser",
+        schema: "https://schema.org/DeveloperApplication",
+        link: "https://m.trokka.com/attraction",
+        img: "/img/projects/trokka.gif",
+        altText: "Trokka.com | Book Attractions and Tours for Your Next Holiday"
+    },
+    {
+        name: "CallMatrix",
+        description: "Call Intelligence, Marketing, and Analytics Platform",
+        skills: ["NodeJS", "MongoDB", "MSSQL", "HapiJS","Digital Ocean"],
+        software: "Browser",
+        schema: "https://schema.org/BusinessApplication",
+        link: "http://app.callmatrix.io/#/signup",
+        img: "/img/projects/callmatrix.png",
+        altText: "CallMatrix - Call Intelligence, Marketing, and Analytics Platform"
+    },
+    {
         name: "Recipes",
         description: "Recipes: Social Network",
         skills: ["Javascript", "ES6", "Vue3", "Pinia","Vite","Axios","Express", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
@@ -67,7 +117,6 @@ const projects= [
         link: "http://recipes-client.s3-website.ap-south-1.amazonaws.com/",
         codeLink: "https://github.com/heartstchr/recipe",
         img: "/img/projects/recepie.gif",
-        imgMobile: "/img/projects/recepie-mobile.gif",
         altText: "Recipes - Social Network | Recipes"
     },
     {
@@ -92,14 +141,24 @@ const projects= [
         altText: "TVmaze - Add TV information to your website or app. | Tv maze"
     },
     {
-        name: "Catch That Bus",
-        description: "Book Malaysia and Singapore bus tickets online.",
-        skills: ["Javascript", "ES6", "VueJs", "Vuex","Vite","Axios","API integration", "Responsive", "ExpressJS", "MongoDB", "git", "EC2",  "eslint", "prettier"],
-        software: "Browser",
+        name: "Command Line Dictionary",
+        description: "CLI for Dictionary",
+        software: "TERMINAL",
+        skills: ["inquirer", "commander", "plop", "eslint", "prettier"],
         schema: "https://schema.org/DeveloperApplication",
-        link: "https://m.catchthatbus.com",
-        img: "/img/projects/catchthatbus.gif",
-        altText: "Book Malaysia and Singapore bus tickets online. | CatchThatBus"
+        codeLink: "https://github.com/heartstchr/dic",
+        img: "/img/projects/dictionary.png",
+        altText: "CLI for Dictionary"
+    },
+    {
+        name: "Stock Market",
+        description: "Consuming socket data and plotting a real-time D3 graph",
+        skills: ["D3JS", "AngularJS", "NodeJS"],
+        software: "Browser",
+        schema: "https://schema.org/BusinessApplication",
+        codeLink: "https://github.com/heartstchr/StockMarket",
+        img: "/img/projects/stocks.png",
+        altText: "Consuming socket data and plotting a real-time D3 graph"
     },
     {
         name: "Catch That Bus APP",
@@ -112,16 +171,6 @@ const projects= [
         altText: "IOS app for booking Malaysia and Singapore bus tickets online | CatchThatBus"
     },
     {
-        name: "Trokka Attraction",
-        description: "Book Attractions and Tours for Your Next Holiday",
-        skills: ["Javascript", "ES6", "VueJs", "Vuex","Axios","API integration", "Responsive", "ExpressJS", "MongoDB", "git", "EC2"],
-        software: "Browser",
-        schema: "https://schema.org/DeveloperApplication",
-        link: "https://m.trokka.com/attraction",
-        img: "/img/projects/trokka.gif",
-        altText: "Trokka.com | Book Attractions and Tours for Your Next Holiday"
-    },
-    {
         name: "klang Sentral",
         description: "Book Malaysia and Singapore Bus Ticket Online",
         software: "Browser",
@@ -130,66 +179,6 @@ const projects= [
         link: "https://klangsentral.com/#/",
         img: "/img/projects/klang.gif",
         altText: "Book Malaysia and Singapore Bus Ticket Online | klangsentral"
-    },
-    {
-        name: "Command Line Dictionary",
-        description: "CLI for Dictionary",
-        software: "TERMINAL",
-        skills: ["inquirer", "commander", "plop", "eslint", "prettier"],
-        schema: "https://schema.org/DeveloperApplication",
-        codeLink: "https://github.com/heartstchr/dic",
-        img: "/img/projects/dictionary.png",
-        altText: "CLI for Dictionary"
-    },
-    {
-        name: "Partner Dashboard Upstox",
-        description: "Open a sub-broker account with Upstox.",
-        skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS"],
-        software: "Browser",
-        schema: "https://schema.org/BusinessApplication",
-        link: "https://upstox.com/sub-broker/",
-        img: "/img/projects/partnerUpstox.png",
-        altText: "Open a sub-broker account with Upstox."
-    },
-    {
-        name: "Open Demat Account for Upstox",
-        description: "Open a Demat Account Online: Demat Account Opening at Upstox",
-        skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS","Digital Ocean"],
-        software: "Browser",
-        schema: "https://schema.org/BusinessApplication",
-        link: "https://upstox.com/open-demat-account/",
-        img: "/img/projects/openDemat.png",
-        altText: "Open a Demat Account Online: Demat Account Opening at Upstox"
-    },
-    {
-        name: "CallMatrix",
-        description: "Call Intelligence, Marketing, and Analytics Platform",
-        skills: ["NodeJS", "MongoDB", "MSSQL", "HapiJS","Digital Ocean"],
-        software: "Browser",
-        schema: "https://schema.org/BusinessApplication",
-        link: "http://app.callmatrix.io/#/signup",
-        img: "/img/projects/callmatrix.png",
-        altText: "CallMatrix - Call Intelligence, Marketing, and Analytics Platform"
-    },
-    {
-        name: "Stock Market",
-        description: "Consuming socket data and plotting a real-time D3 graph",
-        skills: ["D3JS", "AngularJS", "NodeJS"],
-        software: "Browser",
-        schema: "https://schema.org/BusinessApplication",
-        link: "https://github.com/heartstchr/StockMarket",
-        img: "/img/projects/stocks.png",
-        altText: "Consuming socket data and plotting a real-time D3 graph"
-    },
-    {
-        name: "Liqx App | Liqur delivery app",
-        description: "UI design for the Liqur Delivery app",
-        skills: ["Photoshop", "CoralDraw"],
-        software: "Photoshop",
-        schema: "https://schema.org/BusinessApplication",
-        link: "https://www.behance.net/gallery/74532693/Liqx",
-        img: "/img/projects/liqx.png",
-        altText: "UI design for the Liqur Delivery app"
-    },
+    }
 ]
 </script>
