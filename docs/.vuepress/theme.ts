@@ -8,7 +8,7 @@ export default hopeTheme({
     name: "Jiwan Ghosal",
     url: "http://heartstchr.github.io/",
   },
-  logo: "/img/jiwan.png",
+  logo: "/img/logojiwanghosal.png",
   repo: "heartstchr",
   docsDir: "/src",
   pageInfo: [],
