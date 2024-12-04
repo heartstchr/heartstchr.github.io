@@ -12,9 +12,9 @@ footer: '<div class="card surface-100 text-600">
           <div class="card flex md:flex-row flex-column justify-content-between flex-grow-1 my-4 align-item-center gap-4">
             <div class="flex flex-row justify-content-between align-items-center gap-2">Copyright © 2022</div>
             <div class="flex md:flex-row flex-column justify-content-between align-items-center gap-4">
-              <a href="/projects" class="text-600"> Projects </a>
-              <a href="/services" class="text-600"> Services </a>
-              <a href="/about" class="text-600"> About </a>
+              <a href="/projects/" class="text-600"> Projects </a>
+              <a href="/services/" class="text-600"> Services </a>
+              <a href="/about/" class="text-600"> About </a>
             </div>
           </div>
         </div>
@@ -24,8 +24,14 @@ footer: '<div class="card surface-100 text-600">
 ---
 
 <div class="flex flex-column gap-4">
-    <div>I take pride in delivering innovative and impactful projects across various domains. Our dedication to excellence and our commitment to client satisfaction are reflected in every project we undertake.</div>
-    <div>Here, you can explore some of my featured projects, which demonstrate my expertise and commitment to excellence. If you're looking for a professional to bring your vision to life, you're in the right place.</div>
+    <div>I take immense pride in delivering innovative and impactful projects across diverse domains. Each project is a testament to my dedication to excellence and unwavering commitment to client satisfaction, ensuring every solution is both functional and transformative.</div>
+    <div>Here, you’ll find a showcase of some of my featured projects, highlighting my expertise and passion for creating meaningful digital experiences. These projects reflect my ability to turn ideas into reality, tailored to meet each client’s unique needs.</div>
+    <div>If you’re searching for a professional who can bring your vision to life with precision and creativity, you’ve come to the right place. Let’s build something extraordinary together!</div>
+    <div>
+        <a href="https://cal.com/stackseekers" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
+            <Button label="Schedule Meeting" icon="pi pi-calendar-clock" severity="primary" />
+        </a>
+    </div>
 </div>
 
 <div class="grid mt-4">

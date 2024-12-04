@@ -4,20 +4,15 @@ icon: pi pi-home
 title: Home
 heroImage: /img/jiwan.png
 heroText: Hi 👋, I am Jiwan Ghosal
-tagline: Senior Full-Stack Developer, MERN, MEVN, and Microsoft Certified with AZ 900. 
+tagline: Experienced full-stack developer specializing in scalable web, mobile, and software solutions. Let’s bring your vision to life.
 containerClass: fancy-container
 actions:
-  - text: See my work! 💡
+  - text: See my work 💡
     link: /projects/
     type: primary
-
-  - text: Hire Now! 
-    icon: pi pi-briefcase
-    link: mailto:jiwan.cse@gmail.com
-    type: secondary
-
-  - text: Services
-    link: /services/
+  - text: Schedule Meeting
+    icon: pi pi-calendar-clock
+    link: https://cal.com/stackseekers
 
 highlights:
   - header: Delivering Results for Industry Leaders
@@ -51,9 +46,9 @@ footer: '<div class="card surface-100 text-600">
           <div class="card flex md:flex-row flex-column justify-content-between flex-grow-1 my-4 align-item-center gap-4">
             <div class="flex flex-row justify-content-between align-items-center gap-2">Copyright © 2022</div>
             <div class="flex md:flex-row flex-column justify-content-between align-items-center gap-4">
-              <a href="/projects" class="text-600"> Projects </a>
-              <a href="/services" class="text-600"> Services </a>
-              <a href="/about" class="text-600"> About </a>
+              <a href="/projects/" class="text-600"> Projects </a>
+              <a href="/services/" class="text-600"> Services </a>
+              <a href="/about/" class="text-600"> About </a>
             </div>
           </div>
         </div>
@@ -62,24 +57,6 @@ footer: '<div class="card surface-100 text-600">
   </div>'
 
 ---
-<div class="flex felx-row justify-content-center">
-  <!-- <Button label="Consultation form" @click="visible = true" /> -->
-</div>
-
-##
-
-<div class="my-4">
-  <div class="my-4 font-bold text-5xl text-center">Commitment</div>
-  <div class="grid mt-4">
-    <div class="md:col col-12 text-center" v-for="feature in features" :key="feature.title">
-      <i :class="feature.icon" class="m-auto text-400 pl-3" style="font-size: 5rem"></i>
-      <div class="mt-4 font-bold text-base">{{ feature.title }}</div>
-      <div class="mt-2 text-sm">
-        {{ feature.description }}
-      </div>
-    </div>
-  </div>
-</div>
 <div class="text-md text-2xl mt-8">Full-stack developer with extensive experience in Javascript, the NodeJS ecosystem, and the Azure cloud.</div>
 <div class="my-4">
 With a demonstrated history of success in the industry, I bring a comprehensive skill set that covers all phases of software development, including planning, implementation, automated testing, monitoring, and continuous integration and delivery.
@@ -108,12 +85,10 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
   </div>
 </div>
 
-## 
-
 <div class="my-8">
   <div class="text-center">
     <div class="text-6xl font-bold">What Customers Are Saying</div>
-    <div class="my-4 text-md">I treat every client as a strategic partner. Here’s what they have to say about working with Jiwan Ghosal.</div>
+    <div class="my-4 text-md">I value every client as a strategic partner. Here’s what they’ve shared about their experience working with me.</div>
   </div>
   <div class="my-4 text-center text-md overflow-x-scroll ">
     <div class="flex flex-row align-items-center">
@@ -139,18 +114,23 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
   </div>
 </div>
 
-##
+
 
 <div v-if="questions" class="mt-8">
   <div class="my-4 font-bold text-5xl text-center">Frequently Asked Questions</div>
   <div class="grid md:mx-8 mt-8 overflow-hidden border-round-2xl" :style="getImage()">
-    <div class="md:col-6 col-12">
-      <div class="surface-100 p-6 border-round-2xl text-900 vp-feature-item">
+    <div class="md:col-8 col-12">
+      <div class="surface-100 p-6 mb-6 border-round-2xl text-900 vp-feature-item">
         <div v-for="question in questions" :key="question.id">
           <div class="flex flex-column my-4 gap-2">
             <div class="font-bold">Q: {{ question.question }}</div>
             <div>A: {{ question.answer }}</div>
           </div>
+        </div>
+        <div class="mt-4">
+          <a href="mailto:jiwan.cse@gmail.com" size="large" color="deeppink" class="flex justify-content-center text-center no-underline"> 
+            <Button label="Send email" icon="pi pi-envelope" severity="info" />
+          </a>
         </div>
       </div>
     </div>
@@ -202,17 +182,15 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
 
 <div class="flex felx-row gap-2 grid nested-grid justify-content-center my-8">
   <div class="text-center col-12">
-    <div class="text-6xl font-bold">Skills and expertise</div>
+    <div class="text-6xl font-bold">Skills</div>
   </div>
   <div class="md:col-3 col-12 gap-1 grid mt-4 h-min surface-card shadow-1 grid-nogutter border-round-md vp-feature-item" v-for= "(item, index) in skills">
       <div class="col-12 font-bold text-xl text-900 mb-4">{{item.name}}</div>
-      <div v-for= "(part, i) in item.value"><Tag>{{part}}</Tag></div>
+      <div class= "p-1" v-for= "(part, i) in item.value"><Tag>{{part}}</Tag></div>
   </div>
 </div>
 
-##
-
-<div class="flex felx-row gap-2 grid nested-grid justify-content-center my-8">
+<!-- <div class="flex felx-row gap-2 grid nested-grid justify-content-center my-8">
   <div class="text-center col-12">
     <div class="text-6xl font-bold">Other skills</div>
   </div>
@@ -220,7 +198,7 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
       <div class="col-12 font-bold text-xl text-900 mb-4">{{item.name}}</div>
       <div v-for= "(part, i) in item.value"> <Tag>{{part}}</Tag></div>
   </div>
-</div>
+</div> -->
 
 
 ##
@@ -230,7 +208,7 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
     <div class="text-6xl font-bold">Contact Me</div>
     <div class="my-4 text-md">Let's work together!</div>
   </div>
-  <div class="my-4 text-center text-md">I'm always eager to take on new challenges and collaborate on exciting projects. If you’re looking for a dedicated full-stack developer, feel free to reach out.
+  <div class="my-4 text-center text-xl">I'm always excited to tackle new challenges and bring ideas to life. If you’re searching for a committed full-stack developer to make your vision a reality, don’t hesitate to get in touch - I’d love to collaborate!
   </div>
   <a href="mailto:jiwan.cse@gmail.com" size="large" color="deeppink" class="flex justify-content-center text-center no-underline"> 
     <Button label="Send email" icon="pi pi-envelope" severity="info" />
@@ -291,15 +269,15 @@ const submitForm = () => {
 const skills = [
   {
     name: "Front end",
-    value: ["VueJS", "Vue3", "Nuxt", "Vite","Pinia","Axios", "Vuepress", "Storybook", "Lit","ReactJS", "HTML5","CSS3","JavaScript(ES6)","AngularJS", "UI/UX Design","Web Design","Web Application","Web view","Service Worker","Webpack", "Rollup"]
+    value: ["VueJS", "Vue3", "Nuxt", "ReactJS", "Vite", "Pinia","Axios", "Vuepress", "Storybook", "Lit","HTML5","CSS3","JavaScript(ES6)", "TypeScript"]
   },
   {
     name: "Back end",
-    value: ["ExpressJS","NodeJS","HapiJS","LoopbackJS","MYSQL","MSSQL","PLSQL","MongoDB","DynamoDB"],
+    value: ["ExpressJS","NodeJS","MYSQL","MSSQL","PLSQL","MongoDB","DynamoDB"],
   },
   {
     name: "Hosting & Deployment",
-    value: ["Git","CICD","Ansible", "Azure", "YAML", "Docker","Kibana", "Azure Gateway", "Azure Blob" ,"S3","ECS","EC2","Cognito","Lambda","API Gateway","Cloud Watch","VPC","SQS","SNS"],
+    value: ["Git","CICD","Ansible", "YAML", "Docker","Kibana","Azure", "AWS"],
   },
   {
     name: "Automation Testing",
@@ -307,38 +285,41 @@ const skills = [
   }
 ];
 
-const otherSkills = [
-  {
-    name: "Graphics",
-    value: ["Coral Draw", "Adobe Photoshop"],
-  },
-  {
-    name: "Video Editing",
-    value: ["Davinci Resolve", "Adobe Premier pro"],
-  },
-  {
-    name: "Marketing",
-    value: ["SEO", "Google Adwords"],
-  }
-];
+// const otherSkills = [
+//   {
+//     name: "Graphics",
+//     value: ["Coral Draw", "Adobe Photoshop"],
+//   },
+//   {
+//     name: "Video Editing",
+//     value: ["Davinci Resolve", "Adobe Premier pro"],
+//   },
+//   {
+//     name: "Marketing",
+//     value: ["SEO", "Google Adwords"],
+//   }
+// ];
 
 const questions = [
   {
     id: 1,
-    question: "How can I start a project with Jiwan Ghosal?",
-    answer: `You can start by contacting us through email.`
+    question: "How can I start a project with you?",
+    answer: "You can start by reaching out to me via email. I’ll get back to you promptly to discuss your requirements and next steps."
   },
   {
     id: 2,
-    question: 'What services do you offer?',
-    answer: `We offer a wide range of services, including Custom Web Development, E-commerce Solutions, API Development and Integration, Figma to Web, Hosting & Deployment`
+    question: "What services do you provide?",
+    answer: "I offer a variety of services tailored to your needs, including Custom Web Development, E-commerce Solutions, API Development and Integration, Figma to Web Conversion, and Hosting & Deployment. Let’s find the best solution for your project!"
   },
   {
     id: 3,
-    question: 'What is the process?',
-    answer: `Requirement -> Timeline -> Developement -> Delivery & support`
+    question: "What does the project process look like?",
+    answer: `It’s simple and straightforward:
+    1) We start with understanding your requirements, 
+    2) Set a clear timeline, 
+    3) I handle the development phase, and 4) Deliver your project with ongoing support to ensure success.`
   }
-]
+];
 
 
 const getImage = () =>`background-image: url('/img/home/faq.jpeg');  background-repeat: no-repeat; background-size: cover;`

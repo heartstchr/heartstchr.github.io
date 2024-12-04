@@ -12,9 +12,9 @@ footer: '<div class="card surface-100 text-600">
           <div class="card flex md:flex-row flex-column justify-content-between flex-grow-1 my-4 align-item-center gap-4">
             <div class="flex flex-row justify-content-between align-items-center gap-2">Copyright © 2022</div>
             <div class="flex md:flex-row flex-column justify-content-between align-items-center gap-4">
-              <a href="/projects" class="text-600"> Projects </a>
-              <a href="/services" class="text-600"> Services </a>
-              <a href="/about" class="text-600"> About </a>
+              <a href="/projects/" class="text-600"> Projects </a>
+              <a href="/services/" class="text-600"> Services </a>
+              <a href="/about/" class="text-600"> About </a>
             </div>
           </div>
         </div>
@@ -23,8 +23,22 @@ footer: '<div class="card surface-100 text-600">
   </div>'
 ---
 
+<div class="flex flex-column gap-4">
+  <div>I’m your ultimate partner for all things development and hosting, offering a comprehensive range of services to bring your digital vision to life. With a deep understanding of modern technologies and trends, I aim to provide solutions that are not only functional but also innovative and future-ready.
+  </div>
 
-<div class="font-italic">I am your one-stop destination for comprehensive development and hosting services. I offer a wide range of solutions to meet your digital needs. Here's what I can do for you:</div>
+  <div>
+  Whether you’re looking for a custom-built website that stands out, a seamless mobile application to engage your audience, or reliable hosting and deployment services to ensure everything runs smoothly, I’ve got you covered. Each service is designed with your unique requirements in mind to deliver the best results.
+  </div>
+
+  <div>
+  My focus is always on delivering high-quality, personalized solutions. By understanding your specific needs and goals, I create digital experiences that truly resonate with your target audience. Let’s explore the many ways I can help you succeed in the digital space.</div>
+  <div>
+        <a href="https://cal.com/stackseekers" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
+            <Button label="Schedule Meeting" icon="pi pi-calendar-clock" severity="primary" />
+        </a>
+    </div>
+</div>
 
 <div class="grid mt-4">
   <div class="surface-card shadow-1 m-2 p-4 col-12 border-round-2xl vp-feature-item" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(service, index) in services" :id="service.code">
@@ -48,12 +62,12 @@ const services = [
     {
         name: "Figma to Web",
         code: "FigmatoWeb",
-        description: "Transform your Figma designs into fully functional websites with me. Using VueJS/ReactJS and their ecosystems, I craft innovative websites tailored precisely to your needs. Enjoy fully customizable yet remarkably lightweight solutions."
+        description: "Turn your Figma designs into fully functional, dynamic websites with my expertise. Leveraging the power of VueJS, ReactJS, and their robust ecosystems, I create innovative websites tailored precisely to your requirements. My solutions are fully customizable, ensuring they align perfectly with your vision, while remaining exceptionally lightweight for optimal performance."
     },
     {
         name: "API Development and Integration",
         code: "APIDevelopmentAndIntegration",
-        description: "Need to integrate third-party services or develop custom APIs for your application? I specialize in creating RESTful APIs that enable seamless communication between systems and enhance your software's functionality."
+        description: "Need to integrate third-party services or develop custom APIs for your application? I specialize in creating RESTful APIs, enabling seamless communication between systems and enhancing your software's functionality"
     },
     {
         name: "Custom Web Development",
