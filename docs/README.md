@@ -3,7 +3,7 @@ home: true
 icon: pi pi-home
 title: Home
 heroImage: /img/jiwan.png
-heroText: Hi 👋, I am Jiwan Ghosal
+heroText: Hi, I am Jiwan Ghosal
 tagline: Experienced full-stack developer specializing in scalable web, mobile, and software solutions. Let’s bring your vision to life.
 containerClass: fancy-container
 actions:
@@ -64,7 +64,7 @@ With a demonstrated history of success in the industry, I bring a comprehensive 
 
 <div class="my-4">
   <div class="grid mt-4">
-    <div class="md:col col-12 text-center" v-for="stackLogo in stackLogos" :key="stackLogo.title">
+    <div class="md:col col-6 text-center" v-for="stackLogo in stackLogos" :key="stackLogo.title">
       <i :class="stackLogo.icon" class="m-auto text-400 pl-3" style="font-size: 5rem"></i>
       <img :src="stackLogo.link" alt="Avatar" width="100px" />
       <div class="mt-4 font-bold text-base">{{ stackLogo.title }}</div>
