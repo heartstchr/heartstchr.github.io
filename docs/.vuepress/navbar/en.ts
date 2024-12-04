@@ -76,7 +76,7 @@ export const enNavbar = navbar([
   { text: "About", icon: "discover", link: "/about/" },
   // { text: "Blog", icon: "rss", link: "/blog/" },
   {
-    text: "YouTube",
+    text: "Videos",
     icon: "pi pi-youtube",
     link: "https://www.youtube.com/@stackseekers",
   },
