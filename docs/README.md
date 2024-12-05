@@ -128,10 +128,12 @@ copyright: false
   <div class="text-center">
     <div class="text-4xl font-bold">Skills</div>
   </div>
-  <div class="md:col-3 col-12 gap-1 grid mt-4 h-min surface-card shadow-1 grid-nogutter border-round-md text-900 vp-feature-item" 
-    v-for= "(item, index) in skills">
-      <div class="col-12 font-medium text-xl mb-4">{{item.name}}</div>
-      <div class= "p-1" v-for= "(part, i) in item.value"><Tag>{{part}}</Tag></div>
+  <div class="flex felx-row gap-2">
+    <div class="md:col-3 col-12 gap-1 grid mt-4 h-min surface-card shadow-1 grid-nogutter border-round-md text-900 vp-feature-item" 
+      v-for= "(item, index) in skills">
+        <div class="col-12 font-medium text-xl mb-4">{{item.name}}</div>
+        <div class= "p-1" v-for= "(part, i) in item.value"><Tag>{{part}}</Tag></div>
+    </div>
   </div>
 </div>
 
