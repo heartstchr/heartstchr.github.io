@@ -8,14 +8,19 @@
     width: fit-content;
 }
 
-// .vp-breadcrumb, .vp-page-title, .theme-hope-content, .vp-page-meta, .vp-page-nav {
-//     margin-inline:  0 !important;
-//     padding-inline: 0 !important;
-// }
-
-.vp-feature-item, .vp-hero-info-wrapper {
-    margin-top: 4rem !important; 
+.vp-hero-info-wrapper, .vp-feature-wrapper{
+    margin-top:1.5rem;
 }
+.vp-feature-header{
+    margin:0;
+}
+.vp-feature{
+    padding: 0 1.5rem;
+}
+.vp-features{
+    margin: 1.5rem 0;
+}
+
 
 .vp-footer-wrapper{
     background-color: var(--surface-100) !important;
