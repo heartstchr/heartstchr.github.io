@@ -175,7 +175,7 @@ copyright: false
     { label: 'Instagram', icon: 'pi pi-instagram', url: 'https://www.instagram.com/jiwan_ghosal/' },
     { label: 'youtube', icon: 'pi pi-youtube', url: 'https://www.youtube.com/@stackseekers' },
   ]
-
+/*
   const services = ref([
     { name: 'Custom Web Development', code: 'C' },
     { name: 'E-commerce Solutions', code: 'D' },
@@ -188,7 +188,7 @@ copyright: false
     { name: 'Maintenance and Support', code: 'M' },
     { name: 'Consulting and Technical Advisory', code: 'M' },
     { name: 'Others', code: 'M' },
-  ]);
+  ]);*/
 
   const skills = [
     {

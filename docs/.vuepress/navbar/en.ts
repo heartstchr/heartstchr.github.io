@@ -9,24 +9,24 @@ export const enNavbar = navbar([
     link: "/services/",
     children: [
       {
+        text: "Consulting",
+        link: "services/#ConsultingAndTechnicalAdvisory",
+      },
+      {
         text: "Figma to web",
         link: "services/#FigmatoWeb",
       },
       {
-        text: "API Developement",
-        link: "services/#APIDevelopmentAndIntegration",
+        text: "E-commerce",
+        link: "services/#E-commerceSolutions",
       },
       {
         text: "Web Development",
         link: "services/#CustomWebDevelopment",
       },
       {
-        text: "Consulting",
-        link: "services/#ConsultingAndTechnicalAdvisory",
-      },
-      {
-        text: "E-commerce",
-        link: "services/#E-commerceSolutions",
+        text: "API Developement",
+        link: "services/#APIDevelopmentAndIntegration",
       },
       {
         text: "Mobile App",

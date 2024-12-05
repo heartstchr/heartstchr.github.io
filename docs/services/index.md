@@ -43,14 +43,19 @@ copyright: false
 <script setup lang="ts">
 const services = [
     {
+        name: "Consulting and Support",
+        code: "ConsultingAndTechnicalAdvisory",
+        description: "Whether you're just starting your project or facing technical challenges, I'm here to provide expert guidance and support. I offer consulting services to help you make informed decisions and overcome any obstacles along the way."
+    },
+    {
         name: "Figma to Web",
         code: "FigmatoWeb",
         description: "Turn your Figma designs into fully functional, dynamic websites with my expertise. Leveraging the power of VueJS, ReactJS, and their robust ecosystems, I create innovative websites tailored precisely to your requirements. My solutions are fully customizable, ensuring they align perfectly with your vision, while remaining exceptionally lightweight for optimal performance."
     },
     {
-        name: "API Development and Integration",
-        code: "APIDevelopmentAndIntegration",
-        description: "Need to integrate third-party services or develop custom APIs for your application? I specialize in creating RESTful APIs, enabling seamless communication between systems and enhancing your software's functionality"
+        name: "E-commerce Solutions",
+        code: "E-commerceSolutions",
+        description: "I specialize in building robust e-commerce platforms that empower businesses to sell their products and services online effortlessly. My solutions are scalable, secure, and packed with advanced features to drive sales and boost customer satisfaction."
     },
     {
         name: "Custom Web Development",
@@ -58,15 +63,10 @@ const services = [
         description: "I design responsive and visually stunning websites optimized for performance and user experience. Whether you need a simple landing page or a complex web application, I have the expertise to bring your vision to life."
     },
     {
-        name: "Consulting and Support",
-        code: "ConsultingAndTechnicalAdvisory",
-        description: "Whether you're just starting your project or facing technical challenges, I'm here to provide expert guidance and support. I offer consulting services to help you make informed decisions and overcome any obstacles along the way."
-    },
-    {
-        name: "E-commerce Solutions",
-        code: "E-commerceSolutions",
-        description: "I specialize in building robust e-commerce platforms that empower businesses to sell their products and services online effortlessly. My solutions are scalable, secure, and packed with advanced features to drive sales and boost customer satisfaction."
-    },
+        name: "API Development and Integration",
+        code: "APIDevelopmentAndIntegration",
+        description: "Need to integrate third-party services or develop custom APIs for your application? I specialize in creating RESTful APIs, enabling seamless communication between systems and enhancing your software's functionality"
+    },    
     {
         name: "Mobile App Development",
         code: "mobileAppDevelopment",
