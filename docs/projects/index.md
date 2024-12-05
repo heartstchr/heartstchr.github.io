@@ -38,20 +38,22 @@ footer: '<div class="card surface-100 text-600">
 <div class="vp-feature-item col-12 shadow-1" v-for= "(project, index) in projects">
   <div class="surface-card flex md:flex-row flex-column" itemscope itemtype="https://schema.org/SoftwareApplication">
     <div class="md:col-6 col-12">
-        <div class="text-md font-bold mt-4">
+        <div class="text-4xl font-bold mt-4">
             <div itemprop="name">{{project.name}}</div> 
             <div class="text-xs mt-2" itemprop="operatingSystem">{{project.software}}</div>
         </div>
-        <div class="mt-4">{{project.description}}</div>
+        <div class="my-4 text-xl">{{project.description}}</div>
         <div class="flex grid mt-4 p-2">
             <div v-for= "(part, i) in project.skills" class="mr-2 mb-2"> <Tag>{{part}}</Tag></div>
         </div>
-        <a v-if="project.link" :href="project.link" target="_blank" class="w-full flex flex-row no-underline mt-4">
-            <Button label="Live Demo" icon="pi pi-angle-double-right" severity="help" />
-        </a>
-        <a v-if="project.codeLink" :href="project.codeLink" target="_blank" class="w-full flex flex-row no-underline mt-4">
-            <Button label="Code" icon="pi pi-github" severity="info" />
-        </a>
+        <div class="flex flex-row justify-content-between align-items-center gap-2">
+            <a v-if="project.link" :href="project.link" target="_blank" class="w-full flex flex-row no-underline mt-4">
+                <Button label="Demo" icon="pi pi-angle-double-right" severity="help" />
+            </a>
+            <a v-if="project.codeLink" :href="project.codeLink" target="_blank" class="w-full flex flex-row no-underline mt-4">
+                <Button label="Repo" icon="pi pi-github" severity="contrast" />
+            </a>
+        </div>
     </div>
     <div class="md:col-6 col-12">
         <link itemprop="applicationCategory" :href="project.schema" />

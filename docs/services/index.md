@@ -26,15 +26,15 @@ copyright: false
 
 <div class="grid mt-4">
   <div class="surface-card shadow-1 m-2 p-4 col-12 border-round-2xl vp-feature-item" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(service, index) in services" :id="service.code">
+    <div class="text-4xl font-bold mb-4">
+        <span itemprop="name">{{service.name}}</span>
+    </div>
     <Image v-if="service.code" :src="`/img/service/${service.code}.jpeg`" class="" :alt="service.name" width="100%"/>
-      <div class="text-2xl font-bold">
-          <span itemprop="name">{{service.name}}</span>
-      </div>
       <div class="mt-4 flex flex-column gap-2">
         <link itemprop="applicationCategory" :href="service.schema" />
         <div itemprop="name">{{service.description}}</div>
         <a href="mailto:jiwan.cse@gmail.com" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
-          <Button label="Send email" icon="pi pi-envelope" severity="info" />
+          <Button label="Hire Now" icon="pi pi-briefcase" severity="primary" raised rounded />
         </a>
       </div>
   </div>
