@@ -66,8 +66,8 @@ copyright: false
 </div>
 <div class="my-4">
   <div class="grid my-4">
-    <div class="md:col-6 col-12 text-center">
-      <img src="/img/home/JiwanGhosalMicrosoftAz900.png" alt="Avatar" />
+    <div class="col-12">
+      <img src="/img/home/JiwanGhosalMicrosoftAz900.png" alt="Jiwan Ghosal Microsoft Az900" />
     </div>
   </div>
 </div>
