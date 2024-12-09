@@ -40,7 +40,7 @@ highlights:
 editLink: false
 copyright: false
 ---
-
+<div class="hidden">Hi, I am Jiwan Ghosal Experienced full-stack developer specializing in scalable web, mobile, and software solutions. Let’s bring your vision to life.</div>
 <div class="flex flex-column gap-4">
   <div class="text-xl">
     I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development —
