@@ -15,6 +15,7 @@ export const enSidebar = sidebar({
       prefix: "services/",
       link: "services/",
     },
+    { text: "About", icon: "pi pi-user", link: "/about/" },
     // {
     //   text: "Graphics",
     //   icon: "creative",
