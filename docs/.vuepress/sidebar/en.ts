@@ -4,13 +4,13 @@ export const enSidebar = sidebar({
   "/": [
     "",
     {
-      icon: "discover",
+      icon: "pi pi-briefcase",
       text: "Projects",
       prefix: "projects/",
       link: "projects/",
     },
     {
-      icon: "code",
+      icon: "pi pi-code",
       text: "Services",
       prefix: "services/",
       link: "services/",
