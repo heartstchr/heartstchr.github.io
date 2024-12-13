@@ -19,13 +19,13 @@ copyright: false
   My focus is always on delivering high-quality, personalized solutions. By understanding your specific needs and goals, I create digital experiences that truly resonate with your target audience. Let’s explore the many ways I can help you succeed in the digital space.</div>
   <div>
         <a href="https://cal.com/stackseekers" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
-            <Button label="Schedule Meeting" icon="pi pi-calendar-clock" severity="primary" />
+            <Button label="Schedule Meeting" icon="pi pi-calendar-clock" severity="primary" raised rounded />
         </a>
     </div>
 </div>
 
-<div class="grid my-4">
-  <div class="surface-card shadow-1 m-2 p-4 col-12 border-round-2xl vp-feature-item" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(service, index) in services" :id="service.code">
+<div class="grid my-6" v-for= "(service, index) in services" :id="service.code">
+  <div class="surface-card shadow-1 m-2 p-4 col-12 border-round-2xl vp-feature-item" itemscope itemtype="https://schema.org/SoftwareApplication">
     <div class="text-4xl font-bold mb-4">
         <span itemprop="name">{{service.name}}</span>
     </div>

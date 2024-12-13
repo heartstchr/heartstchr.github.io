@@ -29,7 +29,7 @@ footer: '<div class="card surface-100 text-600">
     <div>If you’re searching for a professional who can bring your vision to life with precision and creativity, you’ve come to the right place. Let’s build something extraordinary together!</div>
     <div>
         <a href="https://cal.com/stackseekers" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
-            <Button label="Schedule Meeting" icon="pi pi-calendar-clock" severity="primary" />
+            <Button label="Schedule Meeting" icon="pi pi-calendar-clock" severity="primary" raised rounded />
         </a>
     </div>
 </div>
@@ -48,10 +48,10 @@ footer: '<div class="card surface-100 text-600">
                 </div>
                 <div class="flex flex-row justify-content-between align-items-center gap-2">
                     <a v-if="project.link" :href="project.link" target="_blank" class="w-full flex flex-row no-underline mt-4">
-                        <Button label="Live Demo" icon="pi pi-angle-double-right" severity="help" />
+                        <Button label="Live Demo" icon="pi pi-angle-double-right" severity="help" raised rounded/>
                     </a>
                     <a v-if="project.codeLink" :href="project.codeLink" target="_blank" class="w-full flex flex-row no-underline mt-4">
-                        <Button label="Repo" icon="pi pi-github" severity="contrast" />
+                        <Button label="Repo" icon="pi pi-github" severity="contrast" raised rounded />
                     </a>
                 </div>
             </div>

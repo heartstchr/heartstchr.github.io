@@ -71,7 +71,7 @@ copyright: false
   <div class="my-4 text-center text-md">Ready to turn your vision into reality? Let’s discuss how I can help you achieve your goals.
   </div>
   <a href="mailto:jiwan.cse@gmail.com" size="large" color="deeppink" class="flex justify-content-center text-center no-underline"> 
-    <Button label="Let's work together" icon="pi pi-envelope" severity="info" />
+    <Button label="Let's work together" icon="pi pi-envelope" severity="info" raised rounded />
   </a>
   <div class="flex flex-row surface-card justify-content-end flex-wrap gap-4 p-3 px-6 -mx-4 -mb-4 mt-4">
     <a
