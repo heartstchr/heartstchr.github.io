@@ -23,7 +23,7 @@ footer: '<div class="card surface-100 text-600">
   </div>'
 ---
 
-<div class="flex flex-column gap-4">
+<div class="flex flex-column gap-4 my-6">
     <div>I take immense pride in delivering innovative and impactful projects across diverse domains. Each project is a testament to my dedication to excellence and unwavering commitment to client satisfaction, ensuring every solution is both functional and transformative.</div>
     <div>Here, you’ll find a showcase of some of my featured projects, highlighting my expertise and passion for creating meaningful digital experiences. These projects reflect my ability to turn ideas into reality, tailored to meet each client’s unique needs.</div>
     <div>If you’re searching for a professional who can bring your vision to life with precision and creativity, you’ve come to the right place. Let’s build something extraordinary together!</div>
@@ -34,35 +34,35 @@ footer: '<div class="card surface-100 text-600">
     </div>
 </div>
 
-<div class="grid mt-4">
-<div class="vp-feature-item col-12 shadow-1" v-for= "(project, index) in projects">
-  <div class="surface-card flex md:flex-row flex-column" itemscope itemtype="https://schema.org/SoftwareApplication">
-    <div class="md:col-6 col-12">
-        <div class="text-4xl font-bold mt-4">
-            <div itemprop="name">{{project.name}}</div> 
-            <div class="text-xs mt-2" itemprop="operatingSystem">{{project.software}}</div>
+<div class="grid my-6">
+    <div class="vp-feature-item col-12 shadow-1 p-4" v-for= "(project, index) in projects">
+        <div>
+            <div itemprop="name" class="text-4xl font-bold">{{project.name}}</div> 
+            <div class="text-xl mt-2" itemprop="operatingSystem">{{project.software}}</div>
         </div>
-        <div class="my-4 text-xl">{{project.description}}</div>
-        <div class="flex grid mt-4 p-2">
-            <div v-for= "(part, i) in project.skills" class="mr-2 mb-2"> <Tag>{{part}}</Tag></div>
+        <div class="surface-card flex md:flex-row flex-column" itemscope itemtype="https://schema.org/SoftwareApplication">
+            <div class="md:col-6 col-12">
+                <div class="my-4 text-xl">{{project.description}}</div>
+                <div class="flex grid mt-4 p-2">
+                    <div v-for= "(part, i) in project.skills" class="mr-2 mb-2"> <Tag>{{part}}</Tag></div>
+                </div>
+                <div class="flex flex-row justify-content-between align-items-center gap-2">
+                    <a v-if="project.link" :href="project.link" target="_blank" class="w-full flex flex-row no-underline mt-4">
+                        <Button label="Live Demo" icon="pi pi-angle-double-right" severity="help" />
+                    </a>
+                    <a v-if="project.codeLink" :href="project.codeLink" target="_blank" class="w-full flex flex-row no-underline mt-4">
+                        <Button label="Repo" icon="pi pi-github" severity="contrast" />
+                    </a>
+                </div>
+            </div>
+            <div class="md:col-6 col-12">
+                <link itemprop="applicationCategory" :href="project.schema" />
+                <div class="w-full flex flex-row">
+                    <Image :src="project.img" class="" :alt="project.altText" width="100%"/>
+                    <Image v-if="project.imgMobile" :src="project.imgMobile" class="" :alt="project.altText" width="100%"/>
+                </div>
+            </div>  
         </div>
-        <div class="flex flex-row justify-content-between align-items-center gap-2">
-            <a v-if="project.link" :href="project.link" target="_blank" class="w-full flex flex-row no-underline mt-4">
-                <Button label="Demo" icon="pi pi-angle-double-right" severity="help" />
-            </a>
-            <a v-if="project.codeLink" :href="project.codeLink" target="_blank" class="w-full flex flex-row no-underline mt-4">
-                <Button label="Repo" icon="pi pi-github" severity="contrast" />
-            </a>
-        </div>
-    </div>
-    <div class="md:col-6 col-12">
-        <link itemprop="applicationCategory" :href="project.schema" />
-        <div class="w-full flex flex-row">
-            <Image :src="project.img" class="" :alt="project.altText" width="100%"/>
-            <Image v-if="project.imgMobile" :src="project.imgMobile" class="" :alt="project.altText" width="100%"/>
-        </div>
-    </div>  
-  </div>
   </div>
 </div>
 

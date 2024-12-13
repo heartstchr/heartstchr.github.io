@@ -14,34 +14,31 @@ actions:
   - text: See my work 💡
     link: /projects/
 
-highlights:
-  - header: Delivering Results for Industry Leaders
-    features:
-      - title: Capgemini
-        icon: /img/home/capgemini2.png
-        details: Consulting and technology services
-        link: https://www.capgemini.com/
-
-      - title: CatchThatBus
-        icon: /img/home/catchthatbus.png
-        details: Leisure, Travel, and Tourism
-        link: https://www.catchthatbus.com/
-
-      - title: Upstox
-        icon: /img/home/upstox.jpeg
-        details: Online stock broker
-        link: https://www.upstox.com/
-
-      - title: Mobistreak
-        icon: /img/home/mobistreak.png
-        details: Marketing and advertising
-        link: https://www.mobistreak.com/
-
 editLink: false
 copyright: false
 ---
+
 <div class="hidden">Hi, I am Jiwan Ghosal Experienced full-stack developer specializing in scalable web, mobile, and software solutions. Let’s bring your vision to life.</div>
-<div class="flex flex-column gap-4">
+<div class="my-6">
+  <div class="text-center pb-4">
+    <div class="text-4xl font-bold">Delivering Results for Industry Leaders</div>
+  </div>
+  <div class="grid my-4">
+    <div class="md:col col-6 surface-card shadow-1 border-round-md p-2 m-2 text-900 vp-feature-item" v-for="org in orgs" :key="org.title">
+      <a :href="org.link" class="text-600 no-underline flex flex-column">
+        <div class="text-2xl font-bold"><img :src="org.icon" alt="Avatar" width="30px" class="mr-2"/><span>{{org.title}}</span></div>
+        <div class="text-l">{{org.details}}</div>
+      </a>
+    </div>
+  </div>
+  <div class="my-4">
+    <a href="https://github.com/heartstchr?tab=repositories" target="_blank" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4 external-link-icon"> 
+      <Button label="My live projects" icon="pi pi-github" severity="primary" raised rounded/>
+    </a>
+  </div>
+</div>
+
+<div class="flex flex-column">
   <div class="text-xl">
     I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development —
     <ul>
@@ -74,7 +71,7 @@ copyright: false
 
 <!-- Testimonials -->
 <div class="my-6">
-  <div class="text-center">
+  <div class="text-center pb-4">
     <div class="text-4xl font-bold">What Customers Are Saying</div>
     <div class="my-4 text-xl">I value every client as a strategic partner. Here’s what they’ve shared about their experience working with me.</div>
   </div>
@@ -104,7 +101,7 @@ copyright: false
 
 <!-- FAQ -->
 <div v-if="questions" class="my-6">
-  <div class="text-center">
+  <div class="text-center pb-4">
     <div class="text-4xl font-bold">Frequently Asked Questions</div>
   </div>
   <div class="grid md:mx-8 my-4 overflow-hidden border-round-2xl" :style="getImage()">
@@ -128,7 +125,7 @@ copyright: false
 
 <!-- Contact Me -->
 <div class="surface-100 border-round-md text-900 vp-feature-item" id="contact">
-  <div class="text-center">
+  <div class="text-center pb-4">
     <div class="text-4xl font-bold">Contact Me</div>
     <div class="my-4 text-md">Let's work together!</div>
   </div>
@@ -160,21 +157,34 @@ copyright: false
     { label: 'Facebook', icon: 'pi pi-facebook', url: 'https://www.facebook.com/profile.php?id=100004925264462' },
     { label: 'Instagram', icon: 'pi pi-instagram', url: 'https://www.instagram.com/jiwan_ghosal/' },
     { label: 'youtube', icon: 'pi pi-youtube', url: 'https://www.youtube.com/@stackseekers' },
-  ]
-/*
-  const services = ref([
-    { name: 'Custom Web Development', code: 'C' },
-    { name: 'E-commerce Solutions', code: 'D' },
-    { name: 'API Development and Integration', code: 'DE' },
-    { name: 'Figma to Web', code: 'M' },
-    { name: 'Mobile App Development', code: 'M' },
-    { name: 'CICD', code: 'M' },
-    { name: 'Hosting', code: 'M' },
-    { name: 'Doamin', code: 'M' },
-    { name: 'Maintenance and Support', code: 'M' },
-    { name: 'Consulting and Technical Advisory', code: 'M' },
-    { name: 'Others', code: 'M' },
-  ]);*/
+  ];
+
+const orgs= [
+  {
+    "title": "Capgemini",
+    "icon": "/img/home/capgemini2.png",
+    "details": "Consulting and technology services",
+    "link": "https://www.capgemini.com/"
+  },
+  {
+    "title": "CatchThatBus",
+    "icon": "/img/home/catchthatbus.png",
+    "details": "Leisure, Travel, and Tourism",
+    "link": "https://www.catchthatbus.com/"
+  },
+  {
+    "title": "Upstox",
+    "icon": "/img/home/upstox.jpeg",
+    "details": "Online stock broker",
+    "link": "https://www.upstox.com/"
+  },
+  {
+    "title": "Mobistreak",
+    "icon": "/img/home/mobistreak.png",
+    "details": "Marketing and advertising",
+    "link": "https://www.mobistreak.com/"
+  }
+]
 
   const skills = [
     {

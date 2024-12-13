@@ -31,7 +31,7 @@ copyright: false
 </div>
 <!-- Skills -->
 <div class="my-6" id="stack">
-  <div class="text-center">
+  <div class="text-center pb-4">
     <div class="text-4xl font-bold">Stack</div>
     <div class="my-4 text-xl">Some of the software and technologies I use on a daily basis.</div>
   </div>
@@ -58,14 +58,14 @@ copyright: false
 </div>
 
 <div class="pt-8 text-900">
-  <div class="text-center">
+  <div class="text-center pb-4">
     <div class="text-4xl font-bold">A Little More About Me</div>
     <div class="my-4 text-md">When I’m not coding, I enjoy creating tech tutorials for my YouTube channel Stack Seekers, exploring the latest in mobile technology, and traveling to discover new cultures and ideas.</div>
   </div>
 </div>
 
 <div class="pt-4 surface-100 shadow-1 vp-feature-item border-round-md text-900">
-  <div class="text-center">
+  <div class="text-center pb-4">
     <div class="my-4 text-md">Let’s Collaborate!</div>
   </div>
   <div class="my-4 text-center text-md">Ready to turn your vision into reality? Let’s discuss how I can help you achieve your goals.

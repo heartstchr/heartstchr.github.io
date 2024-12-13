@@ -7,7 +7,7 @@ editLink: false
 copyright: false
 ---
 
-<div class="flex flex-column gap-4">
+<div class="flex flex-column gap-4 my-6">
   <div>I’m your ultimate partner for all things development and hosting, offering a comprehensive range of services to bring your digital vision to life. With a deep understanding of modern technologies and trends, I aim to provide solutions that are not only functional but also innovative and future-ready.
   </div>
 
@@ -24,7 +24,7 @@ copyright: false
     </div>
 </div>
 
-<div class="grid mt-4">
+<div class="grid my-4">
   <div class="surface-card shadow-1 m-2 p-4 col-12 border-round-2xl vp-feature-item" itemscope itemtype="https://schema.org/SoftwareApplication" v-for= "(service, index) in services" :id="service.code">
     <div class="text-4xl font-bold mb-4">
         <span itemprop="name">{{service.name}}</span>
