@@ -42,13 +42,14 @@ copyright: false
         <div v-for="(subheading, subKey) in category.subheadings" :key="subKey" class="p-4">
           <div class="text-xl">{{ subheading.title }}</div>
           <div class="p-1">
-            <Tag
-              v-for="tech in subheading.technologies"
-              :key="tech.name"
-              :value="tech.name"
-              :icon="getIcon(tech.logoUrl)"
-              class="m-1 p-1"
-            />
+            <Tag style="border: 2px solid var(--border-color); background: transparent; color: var(--text-color)" v-for="tech in subheading.technologies" :key="tech.name"
+              :value="tech.name" class="m-1">
+              <div class="flex items-center gap-2 px-1">
+                  <img v-if="tech.logoUrl" :src="tech.logoUrl" style="width: 30px" />
+                  <i v-else class="pi pi-cog" style="font-size: 1rem"></i>
+                  <span class="text-base">{{tech.name}}</span>
+              </div>
+            </Tag>
           </div>
         </div>
       </div>
@@ -94,43 +95,43 @@ copyright: false
       frameworks_and_libraries: {
         title: "Frameworks and Libraries",
         technologies: [
-          { name: "React", logoUrl: "https://example.com/logos/react-logo.png" },
+          { name: "React", logoUrl: "/img/home/reactjs.png" },
           { name: "Vue.js", logoUrl: "/img/home/vuejs.png" },
         ]
       },
       styling: {
         title: "Styling Tools",
         technologies: [
-          { name: "Tailwind CSS", logoUrl: "https://example.com/logos/tailwindcss-logo.png" },
-          { name: "PrimeFlex", logoUrl: "https://example.com/logos/tailwindcss-logo.png" },
-          { name: "Bootstrap", logoUrl: "https://example.com/logos/bootstrap-logo.png" },
-          { name: "Material-UI", logoUrl: "https://example.com/logos/bootstrap-logo.png" },
-          { name: "Ant Design", logoUrl: "https://example.com/logos/bootstrap-logo.png" },
+          { name: "Tailwind CSS", logoUrl: "" },
+          { name: "PrimeFlex", logoUrl: "" },
+          { name: "Bootstrap", logoUrl: "" },
+          { name: "Material-UI", logoUrl: "" },
+          { name: "Ant Design", logoUrl: "" },
         ]
       },
       stateManagement: {
         title: "State Management",
         technologies: [
-          { name: "Pinia", logoUrl: "https://example.com/logos/tailwindcss-logo.png" },
-          { name: "Redux", logoUrl: "https://example.com/logos/tailwindcss-logo.png" },
-          { name: "vuex", logoUrl: "https://example.com/logos/tailwindcss-logo.png" },
+          { name: "Pinia", logoUrl: "" },
+          { name: "Redux", logoUrl: "" },
+          { name: "vuex", logoUrl: "" },
         ]
       },
       buildTools: {
         title: "Build Tools",
         technologies: [
-          { name: "Vite", logoUrl: "https://example.com/logos/tailwindcss-logo.png" },
-          { name: "Rollup", logoUrl: "https://example.com/logos/tailwindcss-logo.png" },
-          { name: "Webpack", logoUrl: "https://example.com/logos/tailwindcss-logo.png" },
+          { name: "Vite", logoUrl: "" },
+          { name: "Rollup", logoUrl: "" },
+          { name: "Webpack", logoUrl: "" },
         ]
       },
       testing: {
         title: "Testing",
         technologies: [
-          { name: "Jest", logoUrl: "https://example.com/logos/tailwindcss-logo.png" },
-          { name: "Testcafe", logoUrl: "https://example.com/logos/tailwindcss-logo.png" },
-          { name: "Playwrite", logoUrl: "https://example.com/logos/tailwindcss-logo.png" },
-          { name: "Lighthouse", logoUrl: "https://example.com/logos/tailwindcss-logo.png" },
+          { name: "Jest", logoUrl: "" },
+          { name: "Testcafe", logoUrl: "" },
+          { name: "Playwrite", logoUrl: "" },
+          { name: "Lighthouse", logoUrl: "" },
         ]
       }
     }
@@ -141,16 +142,16 @@ copyright: false
       languages_and_frameworks: {
         title: "Languages and Frameworks",
         technologies: [
-          { name: "Node.js", logoUrl: "https://example.com/logos/nodejs-logo.png" },
-          { name: "Express.js", logoUrl: "https://example.com/logos/django-logo.png" },
+          { name: "Node.js", logoUrl: "/img/home/nodejs.png" },
+          { name: "Express.js", logoUrl: "" },
         ]
       },
       microservices_and_apis: {
         title: "APIs",
         technologies: [
-          { name: "RESTful API", logoUrl: "https://example.com/logos/expressjs-logo.png" },
-          { name: "Web Socket", logoUrl: "https://example.com/logos/flask-logo.png" },
-          { name: "GraphQL", logoUrl: "https://example.com/logos/flask-logo.png" }
+          { name: "RESTful API", logoUrl: "" },
+          { name: "Web Socket", logoUrl: "" },
+          { name: "GraphQL", logoUrl: "" }
         ]
       }
     }
@@ -161,13 +162,13 @@ copyright: false
       languages_and_frameworks: {
         title: "",
         technologies: [
-          { name: "MySQL", logoUrl: "https://example.com/logos/nodejs-logo.png" },
-          { name: "PostgreSQL", logoUrl: "https://example.com/logos/django-logo.png" },
-          { name: "MS SQL Server", logoUrl: "https://example.com/logos/django-logo.png" },
-          { name: "DynamoDB", logoUrl: "https://example.com/logos/django-logo.png" },
-          { name: "Firebase Firestore", logoUrl: "https://example.com/logos/django-logo.png" },
-          { name: "Prisma", logoUrl: "https://example.com/logos/django-logo.png" },
-          { name: "MongoDB", logoUrl: "https://example.com/logos/django-logo.png" },
+          { name: "MySQL", logoUrl: "" },
+          { name: "PostgreSQL", logoUrl: "" },
+          { name: "MS SQL Server", logoUrl: "" },
+          { name: "DynamoDB", logoUrl: "" },
+          { name: "Firebase Firestore", logoUrl: "" },
+          { name: "Prisma", logoUrl: "" },
+          { name: "MongoDB", logoUrl: "/img/home/mongodb.png" },
         ]
       },
     }
@@ -178,20 +179,20 @@ copyright: false
       web_hosting: {
         title: "Web Hosting",
         technologies: [
-          { name: "Vercel", logoUrl: "https://example.com/logos/nodejs-logo.png" },
-          { name: "Netlify", logoUrl: "https://example.com/logos/django-logo.png" },
-          { name: "Heroku", logoUrl: "https://example.com/logos/django-logo.png" },
-          { name: "Azure", logoUrl: "https://example.com/logos/django-logo.png" },
-          { name: "AWS", logoUrl: "https://example.com/logos/django-logo.png" },
+          { name: "Vercel", logoUrl: "" },
+          { name: "Netlify", logoUrl: "" },
+          { name: "Heroku", logoUrl: "" },
+          { name: "Azure", logoUrl: "" },
+          { name: "AWS", logoUrl: "" },
         ]
       },
       CI_CD: {
         title: "CI/CD",
         technologies: [
-          { name: "Github Action", logoUrl: "https://example.com/logos/nodejs-logo.png" },
-          { name: "Azure Devops", logoUrl: "https://example.com/logos/django-logo.png" },
-          { name: "GitLab CI/CD", logoUrl: "https://example.com/logos/django-logo.png" },
-          { name: "Jenkins", logoUrl: "https://example.com/logos/django-logo.png" },
+          { name: "Github Action", logoUrl: "" },
+          { name: "Azure Devops", logoUrl: "" },
+          { name: "GitLab CI/CD", logoUrl: "" },
+          { name: "Jenkins", logoUrl: "" },
         ]
       },
     }
@@ -202,39 +203,39 @@ copyright: false
       version_control: {
         title: "Version control",
         technologies: [
-          { name: "GitHub", logoUrl: "https://example.com/logos/nodejs-logo.png" },
-          { name: "GitLab", logoUrl: "https://example.com/logos/django-logo.png" },
-          { name: "Bitbucket", logoUrl: "https://example.com/logos/django-logo.png" },
-          { name: "Azure Devops", logoUrl: "https://example.com/logos/django-logo.png" },
+          { name: "GitHub", logoUrl: "" },
+          { name: "GitLab", logoUrl: "" },
+          { name: "Bitbucket", logoUrl: "" },
+          { name: "Azure Devops", logoUrl: "" },
         ]
       },
       package_manager: {
         title: "Package managers",
         technologies: [
-          { name: "npm", logoUrl: "https://example.com/logos/nodejs-logo.png" },
-          { name: "yarn", logoUrl: "https://example.com/logos/django-logo.png" },
-          { name: "pnpm", logoUrl: "https://example.com/logos/django-logo.png" },
-          { name: "bun", logoUrl: "https://example.com/logos/django-logo.png" },
+          { name: "npm", logoUrl: "" },
+          { name: "yarn", logoUrl: "" },
+          { name: "pnpm", logoUrl: "" },
+          { name: "bun", logoUrl: "" },
         ]
       },
       code_quality: {
         title: "Code Quality",
         technologies: [
-          { name: "ESLint", logoUrl: "https://example.com/logos/nodejs-logo.png" },
-          { name: "Prettier", logoUrl: "https://example.com/logos/django-logo.png" },
-          { name: "SonarQube", logoUrl: "https://example.com/logos/django-logo.png" },
-          { name: "Fortify", logoUrl: "https://example.com/logos/django-logo.png" },
-          { name: "Nexus", logoUrl: "https://example.com/logos/django-logo.png" },
+          { name: "ESLint", logoUrl: "" },
+          { name: "Prettier", logoUrl: "" },
+          { name: "SonarQube", logoUrl: "" },
+          { name: "Fortify", logoUrl: "" },
+          { name: "Nexus", logoUrl: "" },
         ]
       },
       collaboration: {
         title: "Collaboration",
         technologies: [
-          { name: "Jira", logoUrl: "https://example.com/logos/nodejs-logo.png" },
-          { name: "Trello", logoUrl: "https://example.com/logos/django-logo.png" },
-          { name: "Azure Boards", logoUrl: "https://example.com/logos/django-logo.png" },
-          { name: "Slack", logoUrl: "https://example.com/logos/django-logo.png" },
-          { name: "Teams", logoUrl: "https://example.com/logos/django-logo.png" },
+          { name: "Jira", logoUrl: "" },
+          { name: "Trello", logoUrl: "" },
+          { name: "Azure Boards", logoUrl: "" },
+          { name: "Slack", logoUrl: "" },
+          { name: "Teams", logoUrl: "" },
         ]
       },
     }
