@@ -48,7 +48,7 @@ footer: '<div class="card surface-100 text-600">
                 </div>
                 <div class="flex flex-row justify-content-between align-items-center gap-2">
                     <a v-if="project.link" :href="project.link" target="_blank" class="w-full flex flex-row no-underline mt-4">
-                        <Button label="Live Demo" icon="pi pi-angle-double-right" severity="help" raised rounded/>
+                        <Button label="Live Demo" icon="pi pi-angle-double-right" severity="help" raised rounded />
                     </a>
                     <a v-if="project.codeLink" :href="project.codeLink" target="_blank" class="w-full flex flex-row no-underline mt-4">
                         <Button label="Repo" icon="pi pi-github" severity="contrast" raised rounded />

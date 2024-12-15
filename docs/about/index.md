@@ -10,8 +10,12 @@ copyright: false
     <div class="my-4 text-md"> I am a multifaceted freelance professional.</div>
     <div class="my-4 text-md"> Diverse skill set and a passion for continuous exploration and creativity.</div>
     <div class="my-4 text-md">
-    With extensive experience in full-stack development, I excels in both backend and frontend technologies, making significant contributions to various projects within the tech industry.</div> <div class="my-4 text-md">
+    With extensive experience in full-stack development, I excels in both backend and frontend technologies, making significant contributions to various projects within the tech industry.</div>
+    <div class="my-4 text-md">
     My expertise spans all stages of agile software development, from planning and implementation to testing, monitoring, and delivery.</div>
+    <div class="my-4 text-md">
+    You might know me as <span class="my-4 font-italic">heartstchr/Jiwanghosal</span> on various platforms.</div>
+
   </div>
   <div class="md:col-6 col-12 h-30rem overflow-hidden">
     <Image :src="`/img/about/about_jiwanghosal.jpg`" width="100%"/>

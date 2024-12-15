@@ -18,7 +18,6 @@ editLink: false
 copyright: false
 ---
 
-<div class="hidden">Hi, I am Jiwan Ghosal Experienced full-stack developer specializing in scalable web, mobile, and software solutions. Let’s bring your vision to life.</div>
 <div class="my-6">
   <div class="text-center pb-4">
     <div class="text-4xl font-bold">Delivering Results for Industry Leaders</div>
@@ -40,7 +39,7 @@ copyright: false
 
 <div class="flex flex-column">
   <div class="text-xl">
-    I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development —
+    I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development
     <ul>
       <li>Planning</li>
       <li>Implementation</li>
@@ -254,19 +253,19 @@ const orgs= [
 
   const stackLogos = [
     {
-      link: '/img/home/vuejs.png',
+      link: '/img/stacks/vuejs.png',
       title: 'VueJs',
     },
     {
-      link: '/img/home/reactjs.png',
+      link: '/img/stacks/reactjs.png',
       title: 'ReactJS',
     },
     {
-      link: '/img/home/nodejs.png',
+      link: '/img/stacks/nodejs.png',
       title: 'NodeJs',
     },
     {
-      link: '/img/home/mongodb.png',
+      link: '/img/stacks/mongodb.png',
       title: 'MongoDb',
     }
   ]
