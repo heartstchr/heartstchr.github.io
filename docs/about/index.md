@@ -99,8 +99,8 @@ copyright: false
       frameworks_and_libraries: {
         title: "Frameworks and Libraries",
         technologies: [
-          { name: "React", logoUrl: "/img/home/reactjs.png" },
-          { name: "Vue.js", logoUrl: "/img/home/vuejs.png" },
+          { name: "React", logoUrl: "/img/stacks/reactjs.png" },
+          { name: "Vue.js", logoUrl: "/img/stacks/vuejs.png" },
         ]
       },
       styling: {
@@ -146,7 +146,7 @@ copyright: false
       languages_and_frameworks: {
         title: "Languages and Frameworks",
         technologies: [
-          { name: "Node.js", logoUrl: "/img/home/nodejs.png" },
+          { name: "Node.js", logoUrl: "/img/stacks/nodejs.png" },
           { name: "Express.js", logoUrl: "" },
         ]
       },
@@ -172,7 +172,7 @@ copyright: false
           { name: "DynamoDB", logoUrl: "" },
           { name: "Firebase Firestore", logoUrl: "" },
           { name: "Prisma", logoUrl: "" },
-          { name: "MongoDB", logoUrl: "/img/home/mongodb.png" },
+          { name: "MongoDB", logoUrl: "/img/stacks/mongodb.png" },
         ]
       },
     }

@@ -38,13 +38,18 @@ footer: '<div class="card surface-100 text-600">
     <div class="vp-feature-item col-12 shadow-1 p-4" v-for= "(project, index) in projects">
         <div>
             <div itemprop="name" class="text-4xl font-bold">{{project.name}}</div> 
-            <div class="text-xl mt-2" itemprop="operatingSystem">{{project.software}}</div>
+            <div class="text-xl mt-2" itemprop="operatingSystem">{{project.software}} <span class="text-sm mt-2" >({{project.year}})</span></div>
         </div>
         <div class="surface-card flex md:flex-row flex-column" itemscope itemtype="https://schema.org/SoftwareApplication">
             <div class="md:col-6 col-12">
                 <div class="my-4 text-xl">{{project.description}}</div>
                 <div class="flex grid mt-4 p-2">
-                    <div v-for= "(part, i) in project.skills" class="mr-2 mb-2"> <Tag>{{part}}</Tag></div>
+                    <Tag style="border: 2px solid var(--border-color); background: transparent; color: var(--text-color)" v-for="part in project.skills" :key="part" :value="part" class="m-1">
+                        <div class="flex items-center gap-2 px-1">
+                            <i class="pi pi-cog" style="font-size: 1rem"></i>
+                            <span class="text-base">{{part}}</span>
+                        </div>
+                    </Tag>
                 </div>
                 <div class="flex flex-row justify-content-between align-items-center gap-2">
                     <a v-if="project.link" :href="project.link" target="_blank" class="w-full flex flex-row no-underline mt-4">
@@ -72,7 +77,13 @@ const projects= [
         name: "Partner Dashboard Upstox",
         description: "Open a sub-broker account with Upstox.",
         skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS"],
-        software: "Browser",
+        software: "Web",
+        features: [
+            {
+                name:'Feature'
+            }
+        ],
+        year: "2017",
         schema: "https://schema.org/BusinessApplication",
         link: "https://upstox.com/sub-broker/",
         img: "/img/projects/partnerUpstox.png",
@@ -82,7 +93,13 @@ const projects= [
         name: "Open Demat Account for Upstox",
         description: "Open a Demat Account Online: Demat Account Opening at Upstox",
         skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS","Digital Ocean"],
-        software: "Browser",
+        software: "Web",
+        features: [
+            {
+                name:'Feature'
+            }
+        ],
+        year: "2018",
         schema: "https://schema.org/BusinessApplication",
         link: "https://upstox.com/open-demat-account/",
         img: "/img/projects/openDemat.png",
@@ -92,7 +109,13 @@ const projects= [
         name: "Catch That Bus",
         description: "Book Malaysia and Singapore bus tickets online.",
         skills: ["Javascript", "ES6", "VueJs", "Vuex","Vite","Axios","API integration", "Responsive", "ExpressJS", "MongoDB", "git", "EC2",  "eslint", "prettier"],
-        software: "Browser",
+        software: "Web",
+        features: [
+            {
+                name:'Feature'
+            }
+        ],
+        year: "2019",
         schema: "https://schema.org/DeveloperApplication",
         link: "https://m.catchthatbus.com",
         img: "/img/projects/catchthatbus.gif",
@@ -102,7 +125,13 @@ const projects= [
         name: "Trokka Attraction",
         description: "Book Attractions and Tours for Your Next Holiday",
         skills: ["Javascript", "ES6", "VueJs", "Vuex","Axios","API integration", "Responsive", "ExpressJS", "MongoDB", "git", "EC2"],
-        software: "Browser",
+        software: "Web",
+        features: [
+            {
+                name:'Feature'
+            }
+        ],
+        year: "2019",
         schema: "https://schema.org/DeveloperApplication",
         link: "https://m.trokka.com/attraction",
         img: "/img/projects/trokka.gif",
@@ -112,7 +141,13 @@ const projects= [
         name: "CallMatrix",
         description: "Call Intelligence, Marketing, and Analytics Platform",
         skills: ["NodeJS", "MongoDB", "MSSQL", "HapiJS","Digital Ocean"],
-        software: "Browser",
+        software: "Web",
+        features: [
+            {
+                name:'Feature'
+            }
+        ],
+        year: "2015",
         schema: "https://schema.org/BusinessApplication",
         link: "http://app.callmatrix.io/#/signup",
         img: "/img/projects/callmatrix.png",
@@ -122,7 +157,13 @@ const projects= [
         name: "Recipes",
         description: "Recipes: Social Network",
         skills: ["Javascript", "ES6", "Vue3", "Pinia","Vite","Axios","Express", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
-        software: "Browser",
+        software: "Web",
+        features: [
+            {
+                name:'Feature'
+            }
+        ],
+        year: "2020",
         schema: "https://schema.org/DeveloperApplication",
         link: "http://recipes-client.s3-website.ap-south-1.amazonaws.com/",
         codeLink: "https://github.com/heartstchr/recipe",
@@ -133,7 +174,13 @@ const projects= [
         name: "Quatar Airways widget",
         description: "Book flights to destinations around the world with Qatar Airways and fly on board an award-winning airline. Enjoy special fares, collect Avios, and more.",
         skills: ["Javascript", "ES6", "Vue3","Landingi", "Pinia","Vite","Axios","Express", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
-        software: "Browser",
+        software: "Web",
+        features: [
+            {
+                name:'Feature'
+            }
+        ],
+        year: "2021",
         schema: "https://schema.org/DeveloperApplication",
         link: "https://www.qatarairways.com/en-us/homepage.html",
         img: "/img/projects/quatar.png",
@@ -143,7 +190,13 @@ const projects= [
         name: "Tv maze",
         description: "TVmaze: Add TV information to your website or app.",
         skills: ["Javascript", "ES6", "VueJs", "Vuex","Vite","Axios","API integration", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
-        software: "Browser",
+        software: "Web",
+        features: [
+            {
+                name:'Feature'
+            }
+        ],
+        year: "2020",
         schema: "https://schema.org/DeveloperApplication",
         link: "https://heartstchr.github.io/tvmaze/",
         codeLink: "https://github.com/heartstchr/tvshows",
@@ -153,7 +206,8 @@ const projects= [
     {
         name: "Command Line Dictionary",
         description: "CLI for Dictionary",
-        software: "TERMINAL",
+        software: "Terminal",
+        year: "2020",
         skills: ["inquirer", "commander", "plop", "eslint", "prettier"],
         schema: "https://schema.org/DeveloperApplication",
         codeLink: "https://github.com/heartstchr/dic",
@@ -164,7 +218,13 @@ const projects= [
         name: "Stock Market",
         description: "Consuming socket data and plotting a real-time D3 graph",
         skills: ["D3JS", "AngularJS", "NodeJS"],
-        software: "Browser",
+        software: "Web",
+        features: [
+            {
+                name:'Feature'
+            }
+        ],
+        year: "2016",
         schema: "https://schema.org/BusinessApplication",
         codeLink: "https://github.com/heartstchr/StockMarket",
         img: "/img/projects/stocks.png",
@@ -183,7 +243,13 @@ const projects= [
     {
         name: "klang Sentral",
         description: "Book Malaysia and Singapore Bus Ticket Online",
-        software: "Browser",
+        software: "Web",
+        features: [
+            {
+                name:'Feature'
+            }
+        ],
+        year: "2019",
         skills: ["NodeJS", "PHP"],
         schema: "https://schema.org/DeveloperApplication",
         link: "https://klangsentral.com/#/",
