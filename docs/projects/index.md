@@ -37,7 +37,7 @@ footer: '<div class="card surface-100 text-600">
     <div class="vp-feature-item col-12 shadow-1 p-4" v-for= "(project, index) in projects">
         <div>
             <div itemprop="name" class="text-4xl font-bold">{{project.name}}</div> 
-            <div class="text-xl mt-2" itemprop="operatingSystem">{{project.software}} <span class="text-sm mt-2" >({{project.year}})</span></div>
+            <div class="text-xl mt-2" itemprop="operatingSystem">{{project.software}} <span class="text-sm mt-2" >({{project.year}})</span><span class="text-sm mt-2" > - {{project.org}}</span></div>
         </div>
         <div class="surface-card flex md:flex-row flex-column" itemscope itemtype="https://schema.org/SoftwareApplication">
             <div class="md:col-6 col-12">
@@ -101,161 +101,6 @@ const responsiveOptions = ref([
 ]);
 const projects= [
     {
-        name: "Quatar Airways widget",
-        description: "Book flights to destinations around the world with Qatar Airways and fly on board an award-winning airline. Enjoy special fares, collect Avios, and more.",
-        skills: ["Javascript", "ES6", "Vue3","Landingi", "Pinia","Vite","Axios","Express", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
-        software: "Web",
-        features: [
-            {
-                name:'Widget for Flight Booking'
-            },
-            {
-                name:'Widget for Flight + Hotel Booking'
-            },
-            {
-                name:'Widget for Transfer Booking'
-            },
-            {
-                name:'Use widget with any CMS Platform like Landingi'
-            }
-        ],
-        year: "2021",
-        schema: "https://schema.org/DeveloperApplication",
-        link: "https://www.qatarairways.com/en-us/homepage.html",
-        images: [
-            {
-                    itemImageSrc: '/img/projects/quatar/placeholder.png',
-                    thumbnailImageSrc: '/img/projects/quatar/placeholder.png',
-                    alt: 'Quatar Airways',
-                    title: 'Quatar Airways'
-                },
-                {
-                    itemImageSrc: '/img/projects/quatar/quatar.png',
-                    thumbnailImageSrc: '/img/projects/quatar/quatar.png',
-                    alt: 'Quatar Airways',
-                    title: 'Quatar Airways'
-                },
-                {
-                    itemImageSrc: '/img/projects/quatar/qutar_airways.png',
-                    thumbnailImageSrc: '/img/projects/quatar/qutar_airways.png',
-                    alt: 'Quatar Airways',
-                    title: 'Quatar Airways'
-                },
-                {
-                    itemImageSrc: '/img/projects/quatar/thumbnail.png',
-                    thumbnailImageSrc: '/img/projects/quatar/thumbnail.png',
-                    alt: 'Quatar Airways',
-                    title: 'Quatar Airways'
-                },
-            ],
-    },
-    {
-        name: "Recipes",
-        description: "Recipes: Social Network",
-        skills: ["Javascript", "ES6", "Vue3", "Pinia","Vite","Axios","Express", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
-        software: "Web",
-        features: [
-            {
-                name:'Authentication with Incognigo pool'
-            },
-            {
-                name:'Create and Share recipes with friends'
-            },
-            {
-                name:'Search recipes'
-            },
-            {
-                name:'List and share your recipes direction or ingradients'
-            },
-            {
-                name:'Rate and review for recipe'
-            },
-        ],
-        year: "2020",
-        schema: "https://schema.org/DeveloperApplication",
-        link: "http://recipes-client.s3-website.ap-south-1.amazonaws.com/",
-        codeLink: "https://github.com/heartstchr/recipe",
-        images: [
-                {
-                    itemImageSrc: '/img/projects/recipe/recipe.gif',
-                    thumbnailImageSrc: '/img/projects/recipe/recipe.gif',
-                    alt: 'Recipes - Social Network | Recipes',
-                    title: 'Recipes - Social Network | Recipes'
-                },
-                {
-                    itemImageSrc: '/img/projects/recipe/recipe-mobile.gif',
-                    thumbnailImageSrc: '/img/projects/recipe/recipe-mobile.gif',
-                    alt: 'Recipes - Social Network | Recipes',
-                    title: 'Recipes - Social Network | Recipes'
-                },
-            ],
-    },
-    {
-        name: "Tv maze",
-        description: "TVmaze: Add TV information to your website or app.",
-        skills: ["Javascript", "ES6", "VueJs", "Vuex","Vite","Axios","API integration", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
-        software: "Web",
-        features: [
-            {
-                name:'Popular Tv shows sorted based on rating'
-            },
-            {
-                name:'Tv shows based on genre'
-            },
-            {
-                name:'Search Tv shows'
-            },
-            {
-                name:'Details Tv shows'
-            },
-            {
-                name:'Episodes, cast and crew of a Tv shows'
-            },
-        ],
-        year: "2020",
-        schema: "https://schema.org/DeveloperApplication",
-        link: "https://heartstchr.github.io/tvmaze/",
-        codeLink: "https://github.com/heartstchr/tvshows",
-        images: [
-                {
-                    itemImageSrc: '/img/projects/tvmaze/tvmaze-home.png',
-                    thumbnailImageSrc: '/img/projects/tvmaze/tvmaze-home.png',
-                    alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
-                    title: 'TVmaze - Add TV information to your website or app. | Tv maze'
-                },
-                {
-                    itemImageSrc: '/img/projects/tvmaze/search.png',
-                    thumbnailImageSrc: '/img/projects/tvmaze/search.png',
-                    alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
-                    title: 'TVmaze - Add TV information to your website or app. | Tv maze'
-                },
-                {
-                    itemImageSrc: '/img/projects/tvmaze/season.png',
-                    thumbnailImageSrc: '/img/projects/tvmaze/season.png',
-                    alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
-                    title: 'TVmaze - Add TV information to your website or app. | Tv maze'
-                },
-                {
-                    itemImageSrc: '/img/projects/tvmaze/cast.png',
-                    thumbnailImageSrc: '/img/projects/tvmaze/cast.png',
-                    alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
-                    title: 'TVmaze - Add TV information to your website or app. | Tv maze'
-                },
-                {
-                    itemImageSrc: '/img/projects/tvmaze/tvmaze.gif',
-                    thumbnailImageSrc: '/img/projects/tvmaze/tvmaze.gif',
-                    alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
-                    title: 'TVmaze - Add TV information to your website or app. | Tv maze'
-                },
-                {
-                    itemImageSrc: '/img/projects/tvmaze/tvmaze.png',
-                    thumbnailImageSrc: '/img/projects/tvmaze/tvmaze.png',
-                    alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
-                    title: 'TVmaze - Add TV information to your website or app. | Tv maze'
-                },
-            ],
-    },
-    {
         name: "Trokka Attraction",
         description: "Book Attractions and Tours for Your Next Holiday",
         skills: ["Javascript", "ES6", "VueJs", "Vuex","Axios","API integration", "Responsive", "ExpressJS", "MongoDB", "git", "EC2"],
@@ -283,6 +128,7 @@ const projects= [
                 name:'Custome CMS Backend system to add, update, delete tours and attractions'
             },
         ],
+        org: "Catch That Bus",
         year: "2019",
         schema: "https://schema.org/DeveloperApplication",
         link: "https://m.trokka.com/attraction",
@@ -338,6 +184,7 @@ const projects= [
                 name:'Bus orboarding sytem for admin and bus operator'
             },
         ],
+        org: "Catch That Bus",
         year: "2019",
         schema: "https://schema.org/DeveloperApplication",
         link: "https://m.catchthatbus.com",
@@ -388,6 +235,7 @@ const projects= [
                 name:'Earning report based on the customer trade'
             },
         ],
+        org: "Upstox",
         year: "2018",
         schema: "https://schema.org/BusinessApplication",
         link: "https://upstox.com/sub-broker/",
@@ -449,6 +297,7 @@ const projects= [
                 name:'Report based on the flow of lead'
             },
         ],
+        org: "Upstox",
         year: "2017",
         schema: "https://schema.org/BusinessApplication",
         link: "https://upstox.com/open-demat-account/",
@@ -495,6 +344,7 @@ const projects= [
                 name:'User autherisation based on role'
             },
         ],
+        org: "Mobistreak",
         year: "2015",
         schema: "https://schema.org/BusinessApplication",
         link: "https://callmatrix.io/",
@@ -506,6 +356,164 @@ const projects= [
                     title: 'Title 1'
                 },
             ],
+    },
+    {
+        name: "Quatar Airways widget",
+        description: "Book flights to destinations around the world with Qatar Airways and fly on board an award-winning airline. Enjoy special fares, collect Avios, and more.",
+        skills: ["Javascript", "ES6", "Vue3","Landingi", "Pinia","Vite","Axios","Express", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
+        software: "Web",
+        features: [
+            {
+                name:'Widget for Flight Booking'
+            },
+            {
+                name:'Widget for Flight + Hotel Booking'
+            },
+            {
+                name:'Widget for Transfer Booking'
+            },
+            {
+                name:'Use widget with any CMS Platform like Landingi'
+            }
+        ],
+        org: "TUI",
+        year: "2021",
+        schema: "https://schema.org/DeveloperApplication",
+        link: "https://www.qatarairways.com/en-us/homepage.html",
+        images: [
+            {
+                    itemImageSrc: '/img/projects/quatar/placeholder.png',
+                    thumbnailImageSrc: '/img/projects/quatar/placeholder.png',
+                    alt: 'Quatar Airways',
+                    title: 'Quatar Airways'
+                },
+                {
+                    itemImageSrc: '/img/projects/quatar/quatar.png',
+                    thumbnailImageSrc: '/img/projects/quatar/quatar.png',
+                    alt: 'Quatar Airways',
+                    title: 'Quatar Airways'
+                },
+                {
+                    itemImageSrc: '/img/projects/quatar/qutar_airways.png',
+                    thumbnailImageSrc: '/img/projects/quatar/qutar_airways.png',
+                    alt: 'Quatar Airways',
+                    title: 'Quatar Airways'
+                },
+                {
+                    itemImageSrc: '/img/projects/quatar/thumbnail.png',
+                    thumbnailImageSrc: '/img/projects/quatar/thumbnail.png',
+                    alt: 'Quatar Airways',
+                    title: 'Quatar Airways'
+                },
+            ],
+    },
+    {
+        name: "Recipes",
+        description: "Recipes: Social Network",
+        skills: ["Javascript", "ES6", "Vue3", "Pinia","Vite","Axios","Express", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
+        software: "Web",
+        features: [
+            {
+                name:'Authentication with Incognigo pool'
+            },
+            {
+                name:'Create and Share recipes with friends'
+            },
+            {
+                name:'Search recipes'
+            },
+            {
+                name:'List and share your recipes direction or ingradients'
+            },
+            {
+                name:'Rate and review for recipe'
+            },
+        ],
+        org: "Freelance",
+        year: "2020",
+        schema: "https://schema.org/DeveloperApplication",
+        link: "http://recipes-client.s3-website.ap-south-1.amazonaws.com/",
+        codeLink: "https://github.com/heartstchr/recipe",
+        images: [
+                {
+                    itemImageSrc: '/img/projects/recipe/recipe.gif',
+                    thumbnailImageSrc: '/img/projects/recipe/recipe.gif',
+                    alt: 'Recipes - Social Network | Recipes',
+                    title: 'Recipes - Social Network | Recipes'
+                },
+                {
+                    itemImageSrc: '/img/projects/recipe/recipe-mobile.gif',
+                    thumbnailImageSrc: '/img/projects/recipe/recipe-mobile.gif',
+                    alt: 'Recipes - Social Network | Recipes',
+                    title: 'Recipes - Social Network | Recipes'
+                },
+            ],
+    },
+    {
+        name: "Tv maze",
+        description: "TVmaze: Add TV information to your website or app.",
+        skills: ["Javascript", "ES6", "VueJs", "Vuex","Vite","Axios","API integration", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
+        software: "Web",
+        features: [
+            {
+                name:'Popular Tv shows sorted based on rating'
+            },
+            {
+                name:'Tv shows based on genre'
+            },
+            {
+                name:'Search Tv shows'
+            },
+            {
+                name:'Details Tv shows'
+            },
+            {
+                name:'Episodes, cast and crew of a Tv shows'
+            },
+        ],
+        org: "Freelance",
+        year: "2020",
+        schema: "https://schema.org/DeveloperApplication",
+        link: "https://heartstchr.github.io/tvmaze/",
+        codeLink: "https://github.com/heartstchr/tvshows",
+        images: [
+            {
+                itemImageSrc: '/img/projects/tvmaze/tvmaze-home.png',
+                thumbnailImageSrc: '/img/projects/tvmaze/tvmaze-home.png',
+                alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
+                title: 'TVmaze - Add TV information to your website or app. | Tv maze'
+            },
+            {
+                itemImageSrc: '/img/projects/tvmaze/search.png',
+                thumbnailImageSrc: '/img/projects/tvmaze/search.png',
+                alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
+                title: 'TVmaze - Add TV information to your website or app. | Tv maze'
+            },
+            {
+                itemImageSrc: '/img/projects/tvmaze/season.png',
+                thumbnailImageSrc: '/img/projects/tvmaze/season.png',
+                alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
+                title: 'TVmaze - Add TV information to your website or app. | Tv maze'
+            },
+            {
+                itemImageSrc: '/img/projects/tvmaze/cast.png',
+                thumbnailImageSrc: '/img/projects/tvmaze/cast.png',
+                alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
+                title: 'TVmaze - Add TV information to your website or app. | Tv maze'
+            },
+            {
+                itemImageSrc: '/img/projects/tvmaze/tvmaze.gif',
+                thumbnailImageSrc: '/img/projects/tvmaze/tvmaze.gif',
+                alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
+                title: 'TVmaze - Add TV information to your website or app. | Tv maze'
+            },
+            {
+                itemImageSrc: '/img/projects/tvmaze/tvmaze.png',
+                thumbnailImageSrc: '/img/projects/tvmaze/tvmaze.png',
+                alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
+                title: 'TVmaze - Add TV information to your website or app. | Tv maze'
+            },
+        ],
     },
     {
         name: "Command Line Dictionary",
@@ -531,6 +539,7 @@ const projects= [
                 name:'Play word game'
             },
         ],
+        org: "Freelance",
         year: "2020",
         skills: ["Inquirer", "Commander", "Plop", "Eslint", "Prettier"],
         schema: "https://schema.org/DeveloperApplication",
@@ -557,6 +566,7 @@ const projects= [
                 name:'Show history of a unit in charts'
             },
         ],
+        org: "Freelance",
         year: "2016",
         schema: "https://schema.org/BusinessApplication",
         codeLink: "https://github.com/heartstchr/StockMarket",
