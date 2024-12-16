@@ -99,11 +99,16 @@ const responsiveOptions = ref([
         numVisible: 1
     }
 ]);
+//todo: show in tabs
+const tabs = ref([
+    { title: 'Organisation', content: 'Organisation Projects', value: '0', children:[] },
+    { title: 'Freelance', content: 'Freelance Projects', value: '1', children:[] },
+]);
 const projects= [
     {
         name: "Trokka Attraction",
         description: "Book Attractions and Tours for Your Next Holiday",
-        skills: ["Javascript", "ES6", "VueJs", "Vuex","Axios","API integration", "Responsive", "ExpressJS", "MongoDB", "git", "EC2"],
+        skills: ["Javascript", "ES6", "VueJs", "Vuex","Axios","API integration",   "ExpressJS", "MongoDB", "Git", "EC2"],
         software: "Web",
         features: [
             {
@@ -144,7 +149,7 @@ const projects= [
     {
         name: "Catch That Bus",
         description: "Book Malaysia and Singapore bus tickets online.",
-        skills: ["Javascript", "ES6", "VueJs", "Vuex","Vite","Axios", "Cordova", "API integration", "Responsive", "ExpressJS", "MongoDB", "git", "EC2",  "eslint", "prettier"],
+        skills: ["Javascript", "ES6", "VueJs", "Vuex","Vite","Axios", "Cordova", "API integration",   "ExpressJS", "MongoDB", "Git", "EC2",  "Eslint", "Prettier"],
         software: "Web / IOS APP",
         features: [
             {
@@ -360,7 +365,7 @@ const projects= [
     {
         name: "Quatar Airways widget",
         description: "Book flights to destinations around the world with Qatar Airways and fly on board an award-winning airline. Enjoy special fares, collect Avios, and more.",
-        skills: ["Javascript", "ES6", "Vue3","Landingi", "Pinia","Vite","Axios","Express", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
+        skills: ["Javascript", "ES6", "Vue3","Landingi", "Pinia","Vite","Axios","Express",   "API integration", "MongoDB", "Git", "EC2", "Eslint", "Prettier"],
         software: "Web",
         features: [
             {
@@ -410,7 +415,7 @@ const projects= [
     {
         name: "Recipes",
         description: "Recipes: Social Network",
-        skills: ["Javascript", "ES6", "Vue3", "Pinia","Vite","Axios","Express", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
+        skills: ["Javascript", "ES6", "Vue3", "Pinia","Vite","Axios","Express",   "API integration", "MongoDB", "Git", "EC2", "Eslint", "Prettier"],
         software: "Web",
         features: [
             {
@@ -452,7 +457,7 @@ const projects= [
     {
         name: "Tv maze",
         description: "TVmaze: Add TV information to your website or app.",
-        skills: ["Javascript", "ES6", "VueJs", "Vuex","Vite","Axios","API integration", "Responsive", "API integration", "MongoDB", "git", "EC2", "eslint", "prettier"],
+        skills: ["Javascript", "ES6", "VueJs", "Vuex","Vite","Axios","API integration", "MongoDB", "Git", "EC2", "Eslint", "Prettier"],
         software: "Web",
         features: [
             {
