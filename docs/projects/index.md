@@ -393,8 +393,32 @@ const projects= [
         link: "https://upstox.com/sub-broker/",
         images: [
                 {
-                    itemImageSrc: '/img/projects/partnerUpstox.png',
-                    thumbnailImageSrc: '/img/projects/partnerUpstox.png',
+                    itemImageSrc: '/img/projects/partnerUpstox/partnerUpstox.png',
+                    thumbnailImageSrc: '/img/projects/partnerUpstox/partnerUpstox.png',
+                    alt: 'Open a sub-broker account with Upstox.',
+                    title: 'Open a sub-broker account with Upstox.'
+                },
+                {
+                    itemImageSrc: '/img/projects/partnerUpstox/dashboard.png',
+                    thumbnailImageSrc: '/img/projects/partnerUpstox/dashboard.png',
+                    alt: 'Open a sub-broker account with Upstox.',
+                    title: 'Open a sub-broker account with Upstox.'
+                },
+                {
+                    itemImageSrc: '/img/projects/partnerUpstox/leads.png',
+                    thumbnailImageSrc: '/img/projects/partnerUpstox/leads.png',
+                    alt: 'Open a sub-broker account with Upstox.',
+                    title: 'Open a sub-broker account with Upstox.'
+                },
+                {
+                    itemImageSrc: '/img/projects/partnerUpstox/customer.png',
+                    thumbnailImageSrc: '/img/projects/partnerUpstox/customer.png',
+                    alt: 'Open a sub-broker account with Upstox.',
+                    title: 'Open a sub-broker account with Upstox.'
+                },
+                {
+                    itemImageSrc: '/img/projects/partnerUpstox/earning.png',
+                    thumbnailImageSrc: '/img/projects/partnerUpstox/earning.png',
                     alt: 'Open a sub-broker account with Upstox.',
                     title: 'Open a sub-broker account with Upstox.'
                 },
