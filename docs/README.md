@@ -23,7 +23,7 @@ copyright: false
     <div class="text-4xl font-bold">Delivering Results for Industry Leaders</div>
   </div>
   <div class="grid my-4">
-    <div class="md:col col-6 surface-card shadow-1 border-round-md p-2 m-2 text-900 vp-feature-item" v-for="org in orgs" :key="org.title">
+    <div class="md:col col-12 surface-card shadow-1 border-round-md p-2 m-2 text-900 vp-feature-item" v-for="org in orgs" :key="org.title">
       <a :href="org.link" class="text-600 no-underline flex flex-column">
         <div class="text-2xl font-bold"><img :src="org.icon" alt="Avatar" width="30px" class="mr-2"/><span>{{org.title}}</span></div>
         <div class="text-l">{{org.details}}</div>

@@ -24,12 +24,11 @@ footer: '<div class="card surface-100 text-600">
 ---
 
 <div class="flex flex-column gap-4 my-6">
-    <div>I take immense pride in delivering innovative and impactful projects across diverse domains. Each project is a testament to my dedication to excellence and unwavering commitment to client satisfaction, ensuring every solution is both functional and transformative.</div>
     <div>Here, you’ll find a showcase of some of my featured projects, highlighting my expertise and passion for creating meaningful digital experiences. These projects reflect my ability to turn ideas into reality, tailored to meet each client’s unique needs.</div>
-    <div>If you’re searching for a professional who can bring your vision to life with precision and creativity, you’ve come to the right place. Let’s build something extraordinary together!</div>
+    <div>If you’re searching for a professional who can bring your vision to life with precision and creativity, you’ve come to the right place.</div>
     <div>
         <a href="https://cal.com/stackseekers" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
-            <Button label="Schedule Meeting" icon="pi pi-calendar-clock" severity="primary" raised rounded />
+            <Button label="Let’s build something extraordinary together!" icon="pi pi-calendar-clock" severity="primary" raised rounded />
         </a>
     </div>
 </div>
@@ -43,35 +42,63 @@ footer: '<div class="card surface-100 text-600">
         <div class="surface-card flex md:flex-row flex-column" itemscope itemtype="https://schema.org/SoftwareApplication">
             <div class="md:col-6 col-12">
                 <div class="my-2 text-xl">{{project.description}}</div>
-                <div class="flex grid mt-4 p-2">
-                    <Tag style="border: 2px solid var(--border-color); background: transparent; color: var(--text-color)" v-for="part in project.skills" :key="part" :value="part" class="m-1">
-                        <div class="flex items-center gap-2 px-1">
-                            <i class="pi pi-cog" style="font-size: 1rem"></i>
-                            <span class="text-base">{{part}}</span>
-                        </div>
-                    </Tag>
-                </div>
-                <div class="flex flex-row justify-content-between align-items-center gap-2">
-                    <a v-if="project.link" :href="project.link" target="_blank" class="w-full flex flex-row no-underline mt-4">
-                        <Button label="Live Demo" icon="pi pi-angle-double-right" severity="help" raised rounded />
-                    </a>
-                    <a v-if="project.codeLink" :href="project.codeLink" target="_blank" class="w-full flex flex-row no-underline mt-4">
-                        <Button label="Repo" icon="pi pi-github" severity="contrast" raised rounded />
-                    </a>
+                <div class="flex flex-column mt-4 p-2" v-if="project.features">
+                    <div class="my-2 text-l">Features</div>
+                    <ul class="my-2 text-sm" v-for="feature in project.features">
+                        <li>{{feature.name}}</li>
+                    </ul>
                 </div>
             </div>
             <div class="md:col-6 col-12">
                 <link itemprop="applicationCategory" :href="project.schema" />
-                <div class="w-full flex flex-row">
-                    <Image :src="project.img" class="" :alt="project.altText" width="100%"/>
-                    <Image v-if="project.imgMobile" :src="project.imgMobile" class="" :alt="project.altText" width="100%"/>
+                <div class="card" v-if="project.images">
+                    <Galleria :value="project.images" :responsiveOptions="responsiveOptions" :numVisible="5" :circular="true" :showItemNavigators="true" :showThumbnails="false">
+                        <template #item="slotProps">
+                            <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
+                        </template>
+                        <template #thumbnail="slotProps">
+                            <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="display: block" />
+                        </template>
+                    </Galleria>
                 </div>
             </div>  
+        </div>
+        <div class="flex flex-column mt-4 p-2">
+            <div class="my-2 text-l">Stack Used</div>
+            <div class="flex grid mt-4 p-2">
+                <Tag style="border: 2px solid var(--border-color); background: transparent; color: var(--text-color)" v-for="part in project.skills" :key="part" :value="part" class="m-1">
+                    <div class="flex items-center gap-2 px-1">
+                        <i class="pi pi-cog" style="font-size: 1rem"></i>
+                        <span class="text-base">{{part}}</span>
+                    </div>
+                </Tag>
+            </div>
+            <div class="flex flex-row justify-content-between align-items-center gap-2">
+                <a v-if="project.link" :href="project.link" target="_blank" class="w-full flex flex-row no-underline mt-4">
+                    <Button label="Live Demo" icon="pi pi-angle-double-right" severity="help" raised rounded />
+                </a>
+                <a v-if="project.codeLink" :href="project.codeLink" target="_blank" class="w-full flex flex-row no-underline mt-4">
+                    <Button label="Repo" icon="pi pi-github" severity="contrast" raised rounded />
+                </a>
+            </div>
         </div>
   </div>
 </div>
 
 <script setup lang="ts">
+import { ref } from "vue";
+
+const images = ref();
+const responsiveOptions = ref([
+    {
+        breakpoint: '1300px',
+        numVisible: 4
+    },
+    {
+        breakpoint: '575px',
+        numVisible: 1
+    }
+]);
 const projects= [
     {
         name: "Quatar Airways widget",
@@ -80,14 +107,47 @@ const projects= [
         software: "Web",
         features: [
             {
-                name:'Feature'
+                name:'Widget for Flight Booking'
+            },
+            {
+                name:'Widget for Flight + Hotel Booking'
+            },
+            {
+                name:'Widget for Transfer Booking'
+            },
+            {
+                name:'Use widget with any CMS Platform like Landingi'
             }
         ],
         year: "2021",
         schema: "https://schema.org/DeveloperApplication",
         link: "https://www.qatarairways.com/en-us/homepage.html",
-        img: "/img/projects/quatar.png",
-        altText: "Quatar Airways"
+        images: [
+            {
+                    itemImageSrc: '/img/projects/quatar/placeholder.png',
+                    thumbnailImageSrc: '/img/projects/quatar/placeholder.png',
+                    alt: 'Quatar Airways',
+                    title: 'Quatar Airways'
+                },
+                {
+                    itemImageSrc: '/img/projects/quatar/quatar.png',
+                    thumbnailImageSrc: '/img/projects/quatar/quatar.png',
+                    alt: 'Quatar Airways',
+                    title: 'Quatar Airways'
+                },
+                {
+                    itemImageSrc: '/img/projects/quatar/qutar_airways.png',
+                    thumbnailImageSrc: '/img/projects/quatar/qutar_airways.png',
+                    alt: 'Quatar Airways',
+                    title: 'Quatar Airways'
+                },
+                {
+                    itemImageSrc: '/img/projects/quatar/thumbnail.png',
+                    thumbnailImageSrc: '/img/projects/quatar/thumbnail.png',
+                    alt: 'Quatar Airways',
+                    title: 'Quatar Airways'
+                },
+            ],
     },
     {
         name: "Recipes",
@@ -96,15 +156,39 @@ const projects= [
         software: "Web",
         features: [
             {
-                name:'Feature'
-            }
+                name:'Authentication with Incognigo pool'
+            },
+            {
+                name:'Create and Share recipes with friends'
+            },
+            {
+                name:'Search recipes'
+            },
+            {
+                name:'List and share your recipes direction or ingradients'
+            },
+            {
+                name:'Rate and review for recipe'
+            },
         ],
         year: "2020",
         schema: "https://schema.org/DeveloperApplication",
         link: "http://recipes-client.s3-website.ap-south-1.amazonaws.com/",
         codeLink: "https://github.com/heartstchr/recipe",
-        img: "/img/projects/recepie.gif",
-        altText: "Recipes - Social Network | Recipes"
+        images: [
+                {
+                    itemImageSrc: '/img/projects/recipe/recipe.gif',
+                    thumbnailImageSrc: '/img/projects/recipe/recipe.gif',
+                    alt: 'Recipes - Social Network | Recipes',
+                    title: 'Recipes - Social Network | Recipes'
+                },
+                {
+                    itemImageSrc: '/img/projects/recipe/recipe-mobile.gif',
+                    thumbnailImageSrc: '/img/projects/recipe/recipe-mobile.gif',
+                    alt: 'Recipes - Social Network | Recipes',
+                    title: 'Recipes - Social Network | Recipes'
+                },
+            ],
     },
     {
         name: "Tv maze",
@@ -113,31 +197,63 @@ const projects= [
         software: "Web",
         features: [
             {
-                name:'Feature'
-            }
+                name:'Popular Tv shows sorted based on rating'
+            },
+            {
+                name:'Tv shows based on genre'
+            },
+            {
+                name:'Search Tv shows'
+            },
+            {
+                name:'Details Tv shows'
+            },
+            {
+                name:'Episodes, cast and crew of a Tv shows'
+            },
         ],
         year: "2020",
         schema: "https://schema.org/DeveloperApplication",
         link: "https://heartstchr.github.io/tvmaze/",
         codeLink: "https://github.com/heartstchr/tvshows",
-        img: "/img/projects/tvmaze.gif",
-        altText: "TVmaze - Add TV information to your website or app. | Tv maze"
-    },
-    {
-        name: "Catch That Bus",
-        description: "Book Malaysia and Singapore bus tickets online.",
-        skills: ["Javascript", "ES6", "VueJs", "Vuex","Vite","Axios","API integration", "Responsive", "ExpressJS", "MongoDB", "git", "EC2",  "eslint", "prettier"],
-        software: "Web",
-        features: [
-            {
-                name:'Feature'
-            }
-        ],
-        year: "2019",
-        schema: "https://schema.org/DeveloperApplication",
-        link: "https://m.catchthatbus.com",
-        img: "/img/projects/catchthatbus.gif",
-        altText: "Book Malaysia and Singapore bus tickets online. | CatchThatBus"
+        images: [
+                {
+                    itemImageSrc: '/img/projects/tvmaze/tvmaze-home.png',
+                    thumbnailImageSrc: '/img/projects/tvmaze/tvmaze-home.png',
+                    alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
+                    title: 'TVmaze - Add TV information to your website or app. | Tv maze'
+                },
+                {
+                    itemImageSrc: '/img/projects/tvmaze/search.png',
+                    thumbnailImageSrc: '/img/projects/tvmaze/search.png',
+                    alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
+                    title: 'TVmaze - Add TV information to your website or app. | Tv maze'
+                },
+                {
+                    itemImageSrc: '/img/projects/tvmaze/season.png',
+                    thumbnailImageSrc: '/img/projects/tvmaze/season.png',
+                    alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
+                    title: 'TVmaze - Add TV information to your website or app. | Tv maze'
+                },
+                {
+                    itemImageSrc: '/img/projects/tvmaze/cast.png',
+                    thumbnailImageSrc: '/img/projects/tvmaze/cast.png',
+                    alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
+                    title: 'TVmaze - Add TV information to your website or app. | Tv maze'
+                },
+                {
+                    itemImageSrc: '/img/projects/tvmaze/tvmaze.gif',
+                    thumbnailImageSrc: '/img/projects/tvmaze/tvmaze.gif',
+                    alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
+                    title: 'TVmaze - Add TV information to your website or app. | Tv maze'
+                },
+                {
+                    itemImageSrc: '/img/projects/tvmaze/tvmaze.png',
+                    thumbnailImageSrc: '/img/projects/tvmaze/tvmaze.png',
+                    alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
+                    title: 'TVmaze - Add TV information to your website or app. | Tv maze'
+                },
+            ],
     },
     {
         name: "Trokka Attraction",
@@ -146,14 +262,100 @@ const projects= [
         software: "Web",
         features: [
             {
-                name:'Feature'
-            }
+                name:'Show Tours and Attraction of Malaysia'
+            },
+            {
+                name:'Popular activities based on rating and demand'
+            },
+            {
+                name:'Activities and details based on location'
+            },
+            {
+                name:'Book and share attractions for other people'
+            },
+            {
+                name:'Discount system based on promo code'
+            },
+            {
+                name:'Paymnet system using Boost wallet and other payment methods'
+            },
+            {
+                name:'Custome CMS Backend system to add, update, delete tours and attractions'
+            },
         ],
         year: "2019",
         schema: "https://schema.org/DeveloperApplication",
         link: "https://m.trokka.com/attraction",
-        img: "/img/projects/trokka.gif",
-        altText: "Trokka.com | Book Attractions and Tours for Your Next Holiday"
+        images: [
+                {
+                    itemImageSrc: '/img/projects/trokka.gif',
+                    thumbnailImageSrc: '/img/projects/trokka.gif',
+                    alt: 'Trokka.com | Book Attractions and Tours for Your Next Holiday',
+                    title: 'Trokka.com | Book Attractions and Tours for Your Next Holiday'
+                },
+            ],
+    },
+    {
+        name: "Catch That Bus",
+        description: "Book Malaysia and Singapore bus tickets online.",
+        skills: ["Javascript", "ES6", "VueJs", "Vuex","Vite","Axios", "Cordova", "API integration", "Responsive", "ExpressJS", "MongoDB", "git", "EC2",  "eslint", "prettier"],
+        software: "Web / IOS APP",
+        features: [
+            {
+                name:'Search for bus by chosing from destination and to destination in Malaysia for dates'
+            },
+            {
+                name:'Sort and filter on available buses'
+            },
+            {
+                name:'Seat visualization of a bus'
+            },
+            {
+                name:'Booking system to handel concurent request'
+            },
+            {
+                name:'Discount system based on cupon code',
+            },
+            {
+                name:'Insurnce integration for travelers',
+            },
+            {
+                name:'Payment system usign wallet and cards',
+            },
+            {
+                name:'Webview for Boost wallet',
+            },
+            {
+                name:'Multiple language support'
+            },
+            {
+                name:'Multiple Currency support'
+            },
+            {
+                name:'Bus Booked history'
+            },
+            {
+                name:'Bus orboarding sytem for admin and bus operator'
+            },
+        ],
+        year: "2019",
+        schema: "https://schema.org/DeveloperApplication",
+        link: "https://m.catchthatbus.com",
+        iosLink: "https://apps.apple.com/my/app/catchthatbus/id1025824078",
+        images: [
+                {
+                    itemImageSrc: '/img/projects/catchthatbus.gif',
+                    thumbnailImageSrc: '/img/projects/catchthatbus.gif',
+                    alt: 'Book Malaysia and Singapore bus tickets online. | CatchThatBus',
+                    title: 'Book Malaysia and Singapore bus tickets online. | CatchThatBus'
+                },
+                {
+                    itemImageSrc: 'https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/ad/b9/3b/adb93b8f-08b6-ac23-8f9e-906f7b2529c2/pr_source.png/230x0w.png',
+                    thumbnailImageSrc: 'https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/ad/b9/3b/adb93b8f-08b6-ac23-8f9e-906f7b2529c2/pr_source.png/230x0w.png',
+                    alt: 'IOS app for booking Malaysia and Singapore bus tickets online | CatchThatBus',
+                    title: 'Title 1'
+                },
+            ],
     },
     {
         name: "Partner Dashboard Upstox",
@@ -162,14 +364,41 @@ const projects= [
         software: "Web",
         features: [
             {
-                name:'Feature'
-            }
+                name:'Refer and earn program'
+            },
+            {
+                name:'Track lead refered'
+            },
+            {
+                name:'Ambasador program'
+            },
+            {
+                name:'Royalty program'
+            },
+            {
+                name:'Track customer refered'
+            },
+            {
+                name:'Dashboard to show earning based on the program'
+            },
+            {
+                name:'Search by name and UCC'
+            },
+            {
+                name:'Earning report based on the customer trade'
+            },
         ],
         year: "2018",
         schema: "https://schema.org/BusinessApplication",
         link: "https://upstox.com/sub-broker/",
-        img: "/img/projects/partnerUpstox.png",
-        altText: "Open a sub-broker account with Upstox."
+        images: [
+                {
+                    itemImageSrc: '/img/projects/partnerUpstox.png',
+                    thumbnailImageSrc: '/img/projects/partnerUpstox.png',
+                    alt: 'Open a sub-broker account with Upstox.',
+                    title: 'Open a sub-broker account with Upstox.'
+                },
+            ],
     },
     {
         name: "Open Demat Account for Upstox",
@@ -178,16 +407,36 @@ const projects= [
         software: "Web",
         features: [
             {
-                name:'Feature'
-            }
+                name:'Open Demat account with document upload'
+            },
+            {
+                name:'Pan, Aadhar, IPV, and canceled check verification'
+            },
+            {
+                name:'Lead to CRM system'
+            },
+            {
+                name:'Scrutiny of lead'
+            },
+            {
+                name:'Upload details to NSE, BSE, and MCX'
+            },
+            {
+                name:'Report based on the flow of lead'
+            },
         ],
         year: "2017",
         schema: "https://schema.org/BusinessApplication",
         link: "https://upstox.com/open-demat-account/",
-        img: "/img/projects/openDemat.png",
-        altText: "Open a Demat Account Online: Demat Account Opening at Upstox"
+        images: [
+                {
+                    itemImageSrc: '/img/projects/openDemat.png',
+                    thumbnailImageSrc: '/img/projects/openDemat.png',
+                    alt: 'Open a Demat Account Online: Demat Account Opening at Upstox',
+                    title: 'Open a Demat Account Online: Demat Account Opening at Upstox'
+                },
+            ],
     },
-    
     {
         name: "CallMatrix",
         description: "Call Intelligence, Marketing, and Analytics Platform",
@@ -195,25 +444,81 @@ const projects= [
         software: "Web",
         features: [
             {
-                name:'Feature'
-            }
+                name:'Create campaign for call'
+            },
+            {
+                name:'Create bundel of campaigns for call'
+            },
+            {
+                name:'Buy local & toll-free numbers'
+            },
+            {
+                name:'Call Recording and Off Hour Call Handling'
+            },
+            {
+                name:'Funnel to redirect the call based on the multi level IVR'
+            },
+            {
+                name:'Report of bundel, CDR, and offer based on hour, week and geo location'
+            },
+            {
+                name:'Dashboard to get bird eye view'
+            },
+            {
+                name:'Google Adwords API integration'
+            },
+            {
+                name:'User autherisation based on role'
+            },
         ],
         year: "2015",
         schema: "https://schema.org/BusinessApplication",
-        link: "http://app.callmatrix.io/#/signup",
-        img: "/img/projects/callmatrix.png",
-        altText: "CallMatrix - Call Intelligence, Marketing, and Analytics Platform"
+        link: "https://callmatrix.io/",
+        images: [
+                {
+                    itemImageSrc: '/img/projects/callmatrix.png',
+                    thumbnailImageSrc: '/img/projects/callmatrix.png',
+                    alt: 'CallMatrix - Call Intelligence, Marketing, and Analytics Platform',
+                    title: 'Title 1'
+                },
+            ],
     },
     {
         name: "Command Line Dictionary",
         description: "CLI for Dictionary",
         software: "Terminal",
+        features: [
+            {
+                name:'Create help command for available commands'
+            },
+            {
+                name:'Defination of a word'
+            },
+            {
+                name:'Synonyms and antonyms of a word'
+            },
+            {
+                name:'Get example sentence from a word'
+            },
+            {
+                name:'Get word of the day'
+            },
+            {
+                name:'Play word game'
+            },
+        ],
         year: "2020",
         skills: ["Inquirer", "Commander", "Plop", "Eslint", "Prettier"],
         schema: "https://schema.org/DeveloperApplication",
         codeLink: "https://github.com/heartstchr/dic",
-        img: "/img/projects/dictionary.png",
-        altText: "CLI for Dictionary"
+        images: [
+                {
+                    itemImageSrc: '/img/projects/dictionary.png',
+                    thumbnailImageSrc: '/img/projects/dictionary.png',
+                    alt: 'CLI for Dictionary',
+                    title: 'Title 1'
+                },
+            ],
     },
     {
         name: "Stock Market",
@@ -222,24 +527,23 @@ const projects= [
         software: "Web",
         features: [
             {
-                name:'Feature'
-            }
+                name:'Show realtime charts of a unit'
+            },
+            {
+                name:'Show history of a unit in charts'
+            },
         ],
         year: "2016",
         schema: "https://schema.org/BusinessApplication",
         codeLink: "https://github.com/heartstchr/StockMarket",
-        img: "/img/projects/stocks.png",
-        altText: "Consuming socket data and plotting a real-time D3 graph"
+        images: [
+                {
+                    itemImageSrc: '/img/projects/stocks.png',
+                    thumbnailImageSrc: '/img/projects/stocks.png',
+                    alt: 'Consuming socket data and plotting a real-time D3 graph',
+                    title: 'Title 1'
+                },
+            ],
     },
-    {
-        name: "Catch That Bus APP",
-        description: "IOS app for booking Malaysia and Singapore bus tickets online",
-        skills: ["Cordova", "Javascript", "ES6", "VueJs", "Vuex","Axios","API integration", "Responsive", "ExpressJS", "MongoDB", "git","eslint", "prettier"],
-        software: "IOS APP",
-        schema: "https://schema.org/DeveloperApplication",
-        link: "https://apps.apple.com/my/app/catchthatbus/id1025824078",
-        img: "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/ad/b9/3b/adb93b8f-08b6-ac23-8f9e-906f7b2529c2/pr_source.png/230x0w.png",
-        altText: "IOS app for booking Malaysia and Singapore bus tickets online | CatchThatBus"
-    }
 ]
 </script>
