@@ -30,11 +30,34 @@ copyright: false
       </a>
     </div>
   </div>
-  <div class="my-4">
-    <a href="https://github.com/heartstchr?tab=repositories" target="_blank" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4 external-link-icon"> 
-      <Button label="My live projects" icon="pi pi-github" severity="primary" raised rounded/>
-    </a>
+</div>
+
+<div class="my-6">
+  <div class="text-center pb-4">
+    <div class="text-4xl font-bold">Featured Projects</div>
   </div>
+  <div class="card">
+      <Carousel :value="projects" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions">
+          <template #item="slotProps">
+              <div class="border border-surface-200 shadow-1 border-round-md dark:border-surface-700 rounded m-2 p-4 text-center">
+                  <div class="mb-4">
+                      <div class="relative mx-auto h-10rem overflow-hidden">
+                          <img :src="slotProps.data.images[0].itemImageSrc" :alt="slotProps.data.images[0].alt" class="w-full rounded"/>
+                      </div>
+                  </div>
+                  <div class="mb-4 text-l font-medium text-center">
+                    {{ slotProps.data.name }}
+                  </div>
+              </div>
+          </template>
+      </Carousel>
+  </div>
+</div>
+
+<div class="my-6">
+    <a href="https://github.com/heartstchr?tab=repositories" target="_blank" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4 external-link-icon"> 
+      <Button label="Open source projects" icon="pi pi-github" severity="primary" raised rounded/>
+    </a>
 </div>
 
 <div class="flex flex-column">
@@ -150,6 +173,290 @@ copyright: false
 </div>
 
 <script setup lang="ts">
+import { ref } from "vue";
+
+const projects = ref([
+  {
+        name: "Trokka Attraction",
+        description: "Book Attractions and Tours for Your Next Holiday",
+        skills: ["Javascript", "ES6", "VueJs", "Vuex","Axios","API integration",   "ExpressJS", "MongoDB", "Git", "EC2"],
+        software: "Web",
+        features: [
+            {
+                name:'Show Tours and Attraction of Malaysia'
+            },
+            {
+                name:'Popular activities based on rating and demand'
+            },
+            {
+                name:'Activities and details based on location'
+            },
+            {
+                name:'Book and share attractions for other people'
+            },
+            {
+                name:'Discount system based on promo code'
+            },
+            {
+                name:'Paymnet system using Boost wallet and other payment methods'
+            },
+            {
+                name:'Custome CMS Backend system to add, update, delete tours and attractions'
+            },
+        ],
+        org: "Catch That Bus",
+        year: "2019",
+        schema: "https://schema.org/DeveloperApplication",
+        link: "https://m.trokka.com/attraction",
+        images: [
+                {
+                    itemImageSrc: '/img/projects/trokka.gif',
+                    thumbnailImageSrc: '/img/projects/trokka.gif',
+                    alt: 'Trokka.com | Book Attractions and Tours for Your Next Holiday',
+                    title: 'Trokka.com | Book Attractions and Tours for Your Next Holiday'
+                },
+            ],
+    },
+    {
+        name: "Catch That Bus",
+        description: "Book Malaysia and Singapore bus tickets online.",
+        skills: ["Javascript", "ES6", "VueJs", "Vuex","Vite","Axios", "Cordova", "API integration",   "ExpressJS", "MongoDB", "Git", "EC2",  "Eslint", "Prettier"],
+        software: "Web / IOS APP",
+        features: [
+            {
+                name:'Search for bus by chosing from destination and to destination in Malaysia for dates'
+            },
+            {
+                name:'Sort and filter on available buses'
+            },
+            {
+                name:'Seat visualization of a bus'
+            },
+            {
+                name:'Booking system to handel concurent request'
+            },
+            {
+                name:'Discount system based on cupon code',
+            },
+            {
+                name:'Insurnce integration for travelers',
+            },
+            {
+                name:'Payment system usign wallet and cards',
+            },
+            {
+                name:'Webview for Boost wallet',
+            },
+            {
+                name:'Multiple language support'
+            },
+            {
+                name:'Multiple Currency support'
+            },
+            {
+                name:'Bus Booked history'
+            },
+            {
+                name:'Bus orboarding sytem for admin and bus operator'
+            },
+        ],
+        org: "Catch That Bus",
+        year: "2019",
+        schema: "https://schema.org/DeveloperApplication",
+        link: "https://m.catchthatbus.com",
+        iosLink: "https://apps.apple.com/my/app/catchthatbus/id1025824078",
+        images: [
+                {
+                    itemImageSrc: '/img/projects/catchthatbus.gif',
+                    thumbnailImageSrc: '/img/projects/catchthatbus.gif',
+                    alt: 'Book Malaysia and Singapore bus tickets online. | CatchThatBus',
+                    title: 'Book Malaysia and Singapore bus tickets online. | CatchThatBus'
+                },
+                {
+                    itemImageSrc: 'https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/ad/b9/3b/adb93b8f-08b6-ac23-8f9e-906f7b2529c2/pr_source.png/230x0w.png',
+                    thumbnailImageSrc: 'https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/ad/b9/3b/adb93b8f-08b6-ac23-8f9e-906f7b2529c2/pr_source.png/230x0w.png',
+                    alt: 'IOS app for booking Malaysia and Singapore bus tickets online | CatchThatBus',
+                    title: 'Title 1'
+                },
+            ],
+    },
+    {
+        name: "Partner Dashboard Upstox",
+        description: "Open a sub-broker account with Upstox.",
+        skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS"],
+        software: "Web",
+        features: [
+            {
+                name:'Refer and earn program'
+            },
+            {
+                name:'Track lead refered'
+            },
+            {
+                name:'Ambasador program'
+            },
+            {
+                name:'Royalty program'
+            },
+            {
+                name:'Track customer refered'
+            },
+            {
+                name:'Dashboard to show earning based on the program'
+            },
+            {
+                name:'Search by name and UCC'
+            },
+            {
+                name:'Earning report based on the customer trade'
+            },
+        ],
+        org: "Upstox",
+        year: "2018",
+        schema: "https://schema.org/BusinessApplication",
+        link: "https://upstox.com/sub-broker/",
+        images: [
+                {
+                    itemImageSrc: '/img/projects/partnerUpstox/partnerUpstox.png',
+                    thumbnailImageSrc: '/img/projects/partnerUpstox/partnerUpstox.png',
+                    alt: 'Open a sub-broker account with Upstox.',
+                    title: 'Open a sub-broker account with Upstox.'
+                },
+                {
+                    itemImageSrc: '/img/projects/partnerUpstox/dashboard.png',
+                    thumbnailImageSrc: '/img/projects/partnerUpstox/dashboard.png',
+                    alt: 'Open a sub-broker account with Upstox.',
+                    title: 'Open a sub-broker account with Upstox.'
+                },
+                {
+                    itemImageSrc: '/img/projects/partnerUpstox/leads.png',
+                    thumbnailImageSrc: '/img/projects/partnerUpstox/leads.png',
+                    alt: 'Open a sub-broker account with Upstox.',
+                    title: 'Open a sub-broker account with Upstox.'
+                },
+                {
+                    itemImageSrc: '/img/projects/partnerUpstox/customer.png',
+                    thumbnailImageSrc: '/img/projects/partnerUpstox/customer.png',
+                    alt: 'Open a sub-broker account with Upstox.',
+                    title: 'Open a sub-broker account with Upstox.'
+                },
+                {
+                    itemImageSrc: '/img/projects/partnerUpstox/earning.png',
+                    thumbnailImageSrc: '/img/projects/partnerUpstox/earning.png',
+                    alt: 'Open a sub-broker account with Upstox.',
+                    title: 'Open a sub-broker account with Upstox.'
+                },
+            ],
+    },
+    {
+        name: "Open Demat Account for Upstox",
+        description: "Open a Demat Account Online: Demat Account Opening at Upstox",
+        skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS","Digital Ocean"],
+        software: "Web",
+        features: [
+            {
+                name:'Open Demat account with document upload'
+            },
+            {
+                name:'Pan, Aadhar, IPV, and canceled check verification'
+            },
+            {
+                name:'Lead to CRM system'
+            },
+            {
+                name:'Scrutiny of lead'
+            },
+            {
+                name:'Upload details to NSE, BSE, and MCX'
+            },
+            {
+                name:'Report based on the flow of lead'
+            },
+        ],
+        org: "Upstox",
+        year: "2017",
+        schema: "https://schema.org/BusinessApplication",
+        link: "https://upstox.com/open-demat-account/",
+        images: [
+                {
+                    itemImageSrc: '/img/projects/openDemat.png',
+                    thumbnailImageSrc: '/img/projects/openDemat.png',
+                    alt: 'Open a Demat Account Online: Demat Account Opening at Upstox',
+                    title: 'Open a Demat Account Online: Demat Account Opening at Upstox'
+                },
+            ],
+    },
+    {
+        name: "CallMatrix",
+        description: "Call Intelligence, Marketing, and Analytics Platform",
+        skills: ["NodeJS", "MongoDB", "MSSQL", "HapiJS","Digital Ocean"],
+        software: "Web",
+        features: [
+            {
+                name:'Create campaign for call'
+            },
+            {
+                name:'Create bundel of campaigns for call'
+            },
+            {
+                name:'Buy local & toll-free numbers'
+            },
+            {
+                name:'Call Recording and Off Hour Call Handling'
+            },
+            {
+                name:'Funnel to redirect the call based on the multi level IVR'
+            },
+            {
+                name:'Report of bundel, CDR, and offer based on hour, week and geo location'
+            },
+            {
+                name:'Dashboard to get bird eye view'
+            },
+            {
+                name:'Google Adwords API integration'
+            },
+            {
+                name:'User autherisation based on role'
+            },
+        ],
+        org: "Mobistreak",
+        year: "2015",
+        schema: "https://schema.org/BusinessApplication",
+        link: "https://callmatrix.io/",
+        images: [
+                {
+                    itemImageSrc: '/img/projects/callmatrix.png',
+                    thumbnailImageSrc: '/img/projects/callmatrix.png',
+                    alt: 'CallMatrix - Call Intelligence, Marketing, and Analytics Platform',
+                    title: 'Title 1'
+                },
+            ],
+    },
+]);
+const responsiveOptions = ref([
+    {
+        breakpoint: '1400px',
+        numVisible: 2,
+        numScroll: 1
+    },
+    {
+        breakpoint: '1199px',
+        numVisible: 3,
+        numScroll: 1
+    },
+    {
+        breakpoint: '767px',
+        numVisible: 2,
+        numScroll: 1
+    },
+    {
+        breakpoint: '575px',
+        numVisible: 1,
+        numScroll: 1
+    }
+]);
+
   const social= [
     { label: 'linkedin', icon: 'pi pi-linkedin', url: 'https://www.linkedin.com/in/jiwanghosal/' },
     { label: 'stackoverflow', icon: 'pi pi-chart-bar', url: 'https://stackoverflow.com/users/10376224/stchr?tab=profile' },

@@ -34,7 +34,7 @@ footer: '<div class="card surface-100 text-600">
 </div>
 
 <div class="grid my-6">
-    <div class="vp-feature-item col-12 shadow-1 p-4" v-for= "(project, index) in projects">
+    <div class="vp-feature-item col-12 shadow-1 p-4" v-for= "(project, index) in projects" :id="project.name">
         <div>
             <div itemprop="name" class="text-4xl font-bold">{{project.name}}</div> 
             <div class="text-xl mt-2" itemprop="operatingSystem">{{project.software}} <span class="text-sm mt-2" >({{project.year}})</span><span class="text-sm mt-2" > - {{project.org}}</span></div>
