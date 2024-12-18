@@ -126,7 +126,7 @@ copyright: false
   <div class="text-center pb-4">
     <div class="text-4xl font-bold">Frequently Asked Questions</div>
   </div>
-  <div class="grid md:mx-8 my-4 overflow-hidden border-round-2xl" :style="getImage()">
+  <div class="grid md:mx-2 my-4 overflow-hidden border-round-2xl" :style="getImage()">
     <div class="md:col-8 col-12">
       <div class="surface-100 p-2 border-round-2xl text-900 flex flex-column gap-2 vp-feature-item">
         <div v-for="question in questions" :key="question.id" class="my-2">
@@ -176,7 +176,161 @@ copyright: false
 import { ref } from "vue";
 
 const projects = ref([
-  {
+    {
+        name: "Partner Dashboard Upstox",
+        description: "Open a sub-broker account with Upstox.",
+        skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS"],
+        software: "Web",
+        features: [
+            {
+                name:'Refer and earn program'
+            },
+            {
+                name:'Track lead refered'
+            },
+            {
+                name:'Ambasador program'
+            },
+            {
+                name:'Royalty program'
+            },
+            {
+                name:'Track customer refered'
+            },
+            {
+                name:'Dashboard to show earning based on the program'
+            },
+            {
+                name:'Search by name and UCC'
+            },
+            {
+                name:'Earning report based on the customer trade'
+            },
+        ],
+        org: "Upstox",
+        year: "2018",
+        schema: "https://schema.org/BusinessApplication",
+        link: "https://upstox.com/sub-broker/",
+        images: [
+          {
+              itemImageSrc: '/img/projects/partnerUpstox/dashboard.png',
+              thumbnailImageSrc: '/img/projects/partnerUpstox/dashboard.png',
+              alt: 'Open a sub-broker account with Upstox.',
+              title: 'Open a sub-broker account with Upstox.'
+          },
+          {
+              itemImageSrc: '/img/projects/partnerUpstox/partnerUpstox.png',
+              thumbnailImageSrc: '/img/projects/partnerUpstox/partnerUpstox.png',
+              alt: 'Open a sub-broker account with Upstox.',
+              title: 'Open a sub-broker account with Upstox.'
+          },
+          
+          {
+              itemImageSrc: '/img/projects/partnerUpstox/leads.png',
+              thumbnailImageSrc: '/img/projects/partnerUpstox/leads.png',
+              alt: 'Open a sub-broker account with Upstox.',
+              title: 'Open a sub-broker account with Upstox.'
+          },
+          {
+              itemImageSrc: '/img/projects/partnerUpstox/customer.png',
+              thumbnailImageSrc: '/img/projects/partnerUpstox/customer.png',
+              alt: 'Open a sub-broker account with Upstox.',
+              title: 'Open a sub-broker account with Upstox.'
+          },
+          {
+              itemImageSrc: '/img/projects/partnerUpstox/earning.png',
+              thumbnailImageSrc: '/img/projects/partnerUpstox/earning.png',
+              alt: 'Open a sub-broker account with Upstox.',
+              title: 'Open a sub-broker account with Upstox.'
+          },
+        ],
+    },
+    {
+        name: "Open Demat Account for Upstox",
+        description: "Open a Demat Account Online: Demat Account Opening at Upstox",
+        skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS","Digital Ocean"],
+        software: "Web",
+        features: [
+            {
+                name:'Open Demat account with document upload'
+            },
+            {
+                name:'Pan, Aadhar, IPV, and canceled check verification'
+            },
+            {
+                name:'Lead to CRM system'
+            },
+            {
+                name:'Scrutiny of lead'
+            },
+            {
+                name:'Upload details to NSE, BSE, and MCX'
+            },
+            {
+                name:'Report based on the flow of lead'
+            },
+        ],
+        org: "Upstox",
+        year: "2017",
+        schema: "https://schema.org/BusinessApplication",
+        link: "https://upstox.com/open-demat-account/",
+        images: [
+                {
+                    itemImageSrc: '/img/projects/openDemat.png',
+                    thumbnailImageSrc: '/img/projects/openDemat.png',
+                    alt: 'Open a Demat Account Online: Demat Account Opening at Upstox',
+                    title: 'Open a Demat Account Online: Demat Account Opening at Upstox'
+                },
+            ],
+    },
+    {
+        name: "CallMatrix",
+        description: "Call Intelligence, Marketing, and Analytics Platform",
+        skills: ["NodeJS", "MongoDB", "MSSQL", "HapiJS","Digital Ocean"],
+        software: "Web",
+        features: [
+            {
+                name:'Create campaign for call'
+            },
+            {
+                name:'Create bundel of campaigns for call'
+            },
+            {
+                name:'Buy local & toll-free numbers'
+            },
+            {
+                name:'Call Recording and Off Hour Call Handling'
+            },
+            {
+                name:'Funnel to redirect the call based on the multi level IVR'
+            },
+            {
+                name:'Report of bundel, CDR, and offer based on hour, week and geo location'
+            },
+            {
+                name:'Dashboard to get bird eye view'
+            },
+            {
+                name:'Google Adwords API integration'
+            },
+            {
+                name:'User autherisation based on role'
+            },
+        ],
+        org: "Mobistreak",
+        year: "2015",
+        schema: "https://schema.org/BusinessApplication",
+        link: "https://callmatrix.io/",
+        images: [
+                {
+                    itemImageSrc: '/img/projects/callmatrix.png',
+                    thumbnailImageSrc: '/img/projects/callmatrix.png',
+                    alt: 'CallMatrix - Call Intelligence, Marketing, and Analytics Platform',
+                    title: 'Title 1'
+                },
+            ],
+    },
+    {
         name: "Trokka Attraction",
         description: "Book Attractions and Tours for Your Next Holiday",
         skills: ["Javascript", "ES6", "VueJs", "Vuex","Axios","API integration",   "ExpressJS", "MongoDB", "Git", "EC2"],
@@ -276,159 +430,6 @@ const projects = ref([
                     itemImageSrc: 'https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/ad/b9/3b/adb93b8f-08b6-ac23-8f9e-906f7b2529c2/pr_source.png/230x0w.png',
                     thumbnailImageSrc: 'https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/ad/b9/3b/adb93b8f-08b6-ac23-8f9e-906f7b2529c2/pr_source.png/230x0w.png',
                     alt: 'IOS app for booking Malaysia and Singapore bus tickets online | CatchThatBus',
-                    title: 'Title 1'
-                },
-            ],
-    },
-    {
-        name: "Partner Dashboard Upstox",
-        description: "Open a sub-broker account with Upstox.",
-        skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS"],
-        software: "Web",
-        features: [
-            {
-                name:'Refer and earn program'
-            },
-            {
-                name:'Track lead refered'
-            },
-            {
-                name:'Ambasador program'
-            },
-            {
-                name:'Royalty program'
-            },
-            {
-                name:'Track customer refered'
-            },
-            {
-                name:'Dashboard to show earning based on the program'
-            },
-            {
-                name:'Search by name and UCC'
-            },
-            {
-                name:'Earning report based on the customer trade'
-            },
-        ],
-        org: "Upstox",
-        year: "2018",
-        schema: "https://schema.org/BusinessApplication",
-        link: "https://upstox.com/sub-broker/",
-        images: [
-                {
-                    itemImageSrc: '/img/projects/partnerUpstox/partnerUpstox.png',
-                    thumbnailImageSrc: '/img/projects/partnerUpstox/partnerUpstox.png',
-                    alt: 'Open a sub-broker account with Upstox.',
-                    title: 'Open a sub-broker account with Upstox.'
-                },
-                {
-                    itemImageSrc: '/img/projects/partnerUpstox/dashboard.png',
-                    thumbnailImageSrc: '/img/projects/partnerUpstox/dashboard.png',
-                    alt: 'Open a sub-broker account with Upstox.',
-                    title: 'Open a sub-broker account with Upstox.'
-                },
-                {
-                    itemImageSrc: '/img/projects/partnerUpstox/leads.png',
-                    thumbnailImageSrc: '/img/projects/partnerUpstox/leads.png',
-                    alt: 'Open a sub-broker account with Upstox.',
-                    title: 'Open a sub-broker account with Upstox.'
-                },
-                {
-                    itemImageSrc: '/img/projects/partnerUpstox/customer.png',
-                    thumbnailImageSrc: '/img/projects/partnerUpstox/customer.png',
-                    alt: 'Open a sub-broker account with Upstox.',
-                    title: 'Open a sub-broker account with Upstox.'
-                },
-                {
-                    itemImageSrc: '/img/projects/partnerUpstox/earning.png',
-                    thumbnailImageSrc: '/img/projects/partnerUpstox/earning.png',
-                    alt: 'Open a sub-broker account with Upstox.',
-                    title: 'Open a sub-broker account with Upstox.'
-                },
-            ],
-    },
-    {
-        name: "Open Demat Account for Upstox",
-        description: "Open a Demat Account Online: Demat Account Opening at Upstox",
-        skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS","Digital Ocean"],
-        software: "Web",
-        features: [
-            {
-                name:'Open Demat account with document upload'
-            },
-            {
-                name:'Pan, Aadhar, IPV, and canceled check verification'
-            },
-            {
-                name:'Lead to CRM system'
-            },
-            {
-                name:'Scrutiny of lead'
-            },
-            {
-                name:'Upload details to NSE, BSE, and MCX'
-            },
-            {
-                name:'Report based on the flow of lead'
-            },
-        ],
-        org: "Upstox",
-        year: "2017",
-        schema: "https://schema.org/BusinessApplication",
-        link: "https://upstox.com/open-demat-account/",
-        images: [
-                {
-                    itemImageSrc: '/img/projects/openDemat.png',
-                    thumbnailImageSrc: '/img/projects/openDemat.png',
-                    alt: 'Open a Demat Account Online: Demat Account Opening at Upstox',
-                    title: 'Open a Demat Account Online: Demat Account Opening at Upstox'
-                },
-            ],
-    },
-    {
-        name: "CallMatrix",
-        description: "Call Intelligence, Marketing, and Analytics Platform",
-        skills: ["NodeJS", "MongoDB", "MSSQL", "HapiJS","Digital Ocean"],
-        software: "Web",
-        features: [
-            {
-                name:'Create campaign for call'
-            },
-            {
-                name:'Create bundel of campaigns for call'
-            },
-            {
-                name:'Buy local & toll-free numbers'
-            },
-            {
-                name:'Call Recording and Off Hour Call Handling'
-            },
-            {
-                name:'Funnel to redirect the call based on the multi level IVR'
-            },
-            {
-                name:'Report of bundel, CDR, and offer based on hour, week and geo location'
-            },
-            {
-                name:'Dashboard to get bird eye view'
-            },
-            {
-                name:'Google Adwords API integration'
-            },
-            {
-                name:'User autherisation based on role'
-            },
-        ],
-        org: "Mobistreak",
-        year: "2015",
-        schema: "https://schema.org/BusinessApplication",
-        link: "https://callmatrix.io/",
-        images: [
-                {
-                    itemImageSrc: '/img/projects/callmatrix.png',
-                    thumbnailImageSrc: '/img/projects/callmatrix.png',
-                    alt: 'CallMatrix - Call Intelligence, Marketing, and Analytics Platform',
                     title: 'Title 1'
                 },
             ],
