@@ -103,7 +103,7 @@ copyright: false
   <div class="card relative">
     <Carousel :value="testimonials" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions">
         <template #item="slotProps">
-          <div class="card shadow-1 border-round-md p-4 m-4 vp-feature-item">
+          <div class="card shadow-1 border-round-md p-4 m-2 vp-feature-item">
             <div class="font-italic mb-8">
               <div class="text-md" ><span class="font-bold text-4xl">"</span> {{ slotProps.data.message }}</div>
             </div>
@@ -182,7 +182,7 @@ import { ref } from "vue";
 
 const projects = ref([
     {
-        name: "Partner Dashboard Upstox",
+        name: " Upstox: Partner Dashboard",
         description: "Open a sub-broker account with Upstox.",
         skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS"],
         software: "Web",
@@ -251,7 +251,7 @@ const projects = ref([
         ],
     },
     {
-        name: "Open Demat Account for Upstox",
+        name: "Upstox: Open Demat Account",
         description: "Open a Demat Account Online: Demat Account Opening at Upstox",
         skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS","Digital Ocean"],
         software: "Web",
@@ -289,7 +289,7 @@ const projects = ref([
             ],
     },
     {
-        name: "CallMatrix",
+        name: "Call Matrix",
         description: "Call Intelligence, Marketing, and Analytics Platform",
         skills: ["NodeJS", "MongoDB", "MSSQL", "HapiJS","Digital Ocean"],
         software: "Web",
