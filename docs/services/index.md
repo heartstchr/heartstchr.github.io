@@ -25,7 +25,7 @@ copyright: false
 </div>
 
 <div class="grid my-6" v-for= "(service, index) in services" :id="service.code">
-  <div class="surface-card shadow-1 m-2 p-4 col-12 border-round-2xl vp-feature-item" itemscope itemtype="https://schema.org/SoftwareApplication">
+  <div class="shadow-1 m-2 p-4 col-12 border-round-2xl vp-feature-item" itemscope itemtype="https://schema.org/SoftwareApplication">
     <div class="text-4xl font-bold mb-4">
         <span itemprop="name">{{service.name}}</span>
     </div>

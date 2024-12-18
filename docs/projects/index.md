@@ -5,22 +5,6 @@ order: 2
 lastUpdated: false
 editLink: false
 copyright: false
-footer: '<div class="card surface-100 text-600">
-  <div class="flex flex-wrap">
-  <div class="w-full">
-  <div class="gap-2">
-  <div class="card flex md:flex-row flex-column justify-content-between flex-grow-1 my-4 align-item-center gap-4">
-  <div class="flex flex-row justify-content-between align-items-center gap-2 m-auto">Copyright © 2022</div>
-  <div class="flex md:flex-row flex-column justify-content-between align-items-center gap-4">
-  <a href="/projects/" class="text-600"> Projects </a>
-  <a href="/services/" class="text-600"> Services </a>
-  <a href="/about/" class="text-600"> About </a>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>'
 ---
 
 <div class="flex flex-column gap-4 my-6">
@@ -39,7 +23,7 @@ footer: '<div class="card surface-100 text-600">
             <div itemprop="name" class="text-4xl font-bold">{{project.name}}</div> 
             <div class="text-xl mt-2" itemprop="operatingSystem">{{project.software}} <span class="text-sm mt-2" >({{project.year}})</span><span class="text-sm mt-2" > - {{project.org}}</span></div>
         </div>
-        <div class="surface-card flex md:flex-row flex-column" itemscope itemtype="https://schema.org/SoftwareApplication">
+        <div class="flex md:flex-row flex-column" itemscope itemtype="https://schema.org/SoftwareApplication">
             <div class="md:col-6 col-12">
                 <div class="my-2 text-xl">{{project.description}}</div>
                 <div class="flex flex-column mt-4 p-2" v-if="project.features">

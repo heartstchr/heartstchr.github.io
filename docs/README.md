@@ -4,14 +4,14 @@ icon: pi pi-home
 title: Home
 heroImage: /img/jiwan.png
 heroText: Hi, I am Jiwan Ghosal
-tagline: Experienced full-stack developer specializing in scalable web, mobile, and software solutions. Let’s bring your vision to life.
+tagline: Experienced full-stack developer specializing in scalable web, mobile, and software solutions.
 containerClass: fancy-container
 actions:
-  - text: Schedule Meeting
+  - text: Let’s bring your vision to life
     icon: pi pi-calendar-clock
     link: https://cal.com/stackseekers
     type: primary
-  - text: See my work 💡
+  - text: See my work 🚀
     link: /projects/
 
 editLink: false
@@ -23,8 +23,8 @@ copyright: false
     <div class="text-4xl font-bold">Delivering Results for Industry Leaders</div>
   </div>
   <div class="grid my-4">
-    <div class="md:col col-12 surface-card shadow-1 border-round-md p-2 m-2 text-900 vp-feature-item" v-for="org in orgs" :key="org.title">
-      <a :href="org.link" class="text-600 no-underline flex flex-column">
+    <div class="md:col col-12 shadow-1 border-round-md p-2 m-2 vp-feature-item" v-for="org in orgs" :key="org.title">
+      <a :href="org.link" class="no-underline flex flex-column">
         <div class="text-2xl font-bold"><img :src="org.icon" alt="Avatar" width="30px" class="mr-2"/><span>{{org.title}}</span></div>
         <div class="text-l">{{org.details}}</div>
       </a>
@@ -36,21 +36,21 @@ copyright: false
   <div class="text-center pb-4">
     <div class="text-4xl font-bold">Featured Projects</div>
   </div>
-  <div class="card">
-      <Carousel :value="projects" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions">
-          <template #item="slotProps">
-              <div class="border border-surface-200 shadow-1 border-round-md dark:border-surface-700 rounded m-2 p-4 text-center">
-                  <div class="mb-4">
-                      <div class="relative mx-auto h-10rem overflow-hidden">
-                          <img :src="slotProps.data.images[0].itemImageSrc" :alt="slotProps.data.images[0].alt" class="w-full rounded"/>
-                      </div>
-                  </div>
-                  <div class="mb-4 text-l font-medium text-center">
-                    {{ slotProps.data.name }}
-                  </div>
-              </div>
-          </template>
-      </Carousel>
+  <div class="card relative">
+    <Carousel :value="projects" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions">
+        <template #item="slotProps">
+            <div class="border border-surface-200 shadow-1 border-round-md rounded m-2 text-center">
+                <div class="mb-2 image-box">
+                    <div class="relative mx-auto w-13rem h-10rem overflow-hidden">
+                        <img :src="slotProps.data.images[0].itemImageSrc" :alt="slotProps.data.images[0].alt" class="w-full rounded"/>
+                    </div>
+                </div>
+                <a :href="slotProps.data.link" class="mb-4 text-l font-medium text-center">
+                  {{ slotProps.data.name }}
+                </a>
+            </div>
+        </template>
+    </Carousel>
   </div>
 </div>
 
@@ -60,7 +60,10 @@ copyright: false
     </a>
 </div>
 
-<div class="flex flex-column">
+<div class="my-6 flex flex-column">
+  <div class="text-center pb-4">
+    <div class="text-4xl font-bold">Why me?</div>
+  </div>
   <div class="text-xl">
     I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development
     <ul>
@@ -79,14 +82,14 @@ copyright: false
   <div class="grid mt-4">
     <div class="md:col col-6 text-center" v-for="stackLogo in stackLogos" :key="stackLogo.title">
       <i :class="stackLogo.icon" class="m-auto text-400 pl-3" style="font-size: 5rem"></i>
-      <img :src="stackLogo.link" alt="Avatar" width="100px" />
+      <Image :src="stackLogo.link" alt="Avatar" width="100px" />
     </div>
   </div>
 </div>
 <div class="my-4">
   <div class="grid my-4">
     <div class="col-12">
-      <img src="/img/home/JiwanGhosalMicrosoftAz900.png" alt="Jiwan Ghosal Microsoft Az900" />
+      <Image src="/img/home/JiwanGhosalMicrosoftAz900.png" alt="Jiwan Ghosal Microsoft Az900" />
     </div>
   </div>
 </div>
@@ -97,27 +100,29 @@ copyright: false
     <div class="text-4xl font-bold">What Customers Are Saying</div>
     <div class="my-4 text-xl">I value every client as a strategic partner. Here’s what they’ve shared about their experience working with me.</div>
   </div>
-  <div class="my-4 text-center text-md overflow-x-scroll ">
-    <div class="flex flex-row align-items-center">
-      <div class="md:col-6 col-12 surface-card shadow-1 border-round-md p-2 m-2 text-900 vp-feature-item" v-for="(testimonial, index) in testimonials" :key="index">
-        <div class="font-italic mb-8">
-          <div class="text-md" ><span class="font-bold text-4xl">"</span> {{ testimonial.message }}</div>
-        </div>
-        <div class="flex align-items-center">
-          <img :src="testimonial.avatar" alt="Avatar" class="border-circle" width="50px" />
-          <a :href="testimonial.link" target="_blank">
-            <div class="flex flex-column align-items-start ml-2">
-              <div>{{ testimonial.name }}</div>
-              <div>{{ testimonial.designation }}</div>
-              <div>
-                <img :alt="testimonial.name" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" :class="`flag flag-${testimonial.code.toLowerCase()} mr-2`" style="width: 18px" />
-                {{ testimonial.location }}
-              </div>
+  <div class="card relative">
+    <Carousel :value="testimonials" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions">
+        <template #item="slotProps">
+          <div class="card shadow-1 border-round-md p-4 m-4 vp-feature-item">
+            <div class="font-italic mb-8">
+              <div class="text-md" ><span class="font-bold text-4xl">"</span> {{ slotProps.data.message }}</div>
             </div>
-          </a>
-        </div>
-      </div>
-    </div>
+            <div class="flex align-items-center">
+              <img :src="slotProps.data.avatar" alt="Avatar" class="border-circle" width="50px" />
+              <a :href="slotProps.data.link" target="_blank">
+                <div class="flex flex-column align-items-start ml-2">
+                  <div>{{ slotProps.data.name }}</div>
+                  <div>{{ slotProps.data.designation }}</div>
+                  <div>
+                    <img :alt="slotProps.data.name" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" :class="`flag flag-${slotProps.data.code.toLowerCase()} mr-2`" style="width: 18px" />
+                    {{ slotProps.data.location }}
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </template>
+    </Carousel>
   </div>
 </div>
 
@@ -128,7 +133,7 @@ copyright: false
   </div>
   <div class="grid md:mx-2 my-4 overflow-hidden border-round-2xl" :style="getImage()">
     <div class="md:col-8 col-12">
-      <div class="surface-100 p-2 border-round-2xl text-900 flex flex-column gap-2 vp-feature-item">
+      <div class="surface-0 p-2 border-round-2xl text-900 flex flex-column gap-2 vp-feature-item">
         <div v-for="question in questions" :key="question.id" class="my-2">
           <div class="flex flex-column my-1 gap-2">
             <div class="font-medium text-xl">Q: {{ question.question }}</div>
@@ -146,7 +151,7 @@ copyright: false
 </div>
 
 <!-- Contact Me -->
-<div class="surface-100 border-round-md text-900 vp-feature-item" id="contact">
+<div class="border-round-md vp-feature-item" id="contact">
   <div class="text-center pb-4">
     <div class="text-4xl font-bold">Contact Me</div>
     <div class="my-4 text-md">Let's work together!</div>
@@ -165,7 +170,7 @@ copyright: false
       :key="socialIndex"
       :href="socialElement.url"
       target="_blank"
-      class="flex flex-row text-600 gap-2"
+      class="flex flex-row gap-2"
       >
       <i :class="socialElement.icon" style="font-size: 1rem"></i>
       </a>
@@ -438,12 +443,12 @@ const projects = ref([
 const responsiveOptions = ref([
     {
         breakpoint: '1400px',
-        numVisible: 2,
+        numVisible: 3,
         numScroll: 1
     },
     {
         breakpoint: '1199px',
-        numVisible: 3,
+        numVisible: 2,
         numScroll: 1
     },
     {
@@ -460,10 +465,9 @@ const responsiveOptions = ref([
 
   const social= [
     { label: 'linkedin', icon: 'pi pi-linkedin', url: 'https://www.linkedin.com/in/jiwanghosal/' },
-    { label: 'stackoverflow', icon: 'pi pi-chart-bar', url: 'https://stackoverflow.com/users/10376224/stchr?tab=profile' },
-    { label: 'Facebook', icon: 'pi pi-facebook', url: 'https://www.facebook.com/profile.php?id=100004925264462' },
-    { label: 'Instagram', icon: 'pi pi-instagram', url: 'https://www.instagram.com/jiwan_ghosal/' },
     { label: 'youtube', icon: 'pi pi-youtube', url: 'https://www.youtube.com/@stackseekers' },
+    { label: 'stackoverflow', icon: 'pi pi-chart-bar', url: 'https://stackoverflow.com/users/10376224/stchr?tab=profile' },
+    { label: 'Instagram', icon: 'pi pi-instagram', url: 'https://www.instagram.com/jiwan_ghosal/' },
   ];
 
 const orgs= [

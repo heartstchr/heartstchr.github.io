@@ -17,17 +17,17 @@ copyright: false
     You might know me as <span class="my-4 font-italic">heartstchr/Jiwanghosal</span> on various platforms.</div>
 
   </div>
-  <div class="md:col-6 col-12 h-30rem overflow-hidden">
-    <Image :src="`/img/about/about_jiwanghosal.jpg`" width="100%"/>
+  <div class="md:col-6 col-12 h-30rem overflow-hidden image-box">
+    <Image :src="`/img/about/about_jiwanghosal.jpg`" width="100%" />
   </div>
 </div>
 
 <div class="my-6 flex md:flex-row flex-column ">
-  <div class="md:col-6 col-12 h-25rem overflow-hidden">
+  <div class="md:col-6 col-12 h-25rem overflow-hidden image-box">
     <Image :src="`/img/about/vue_amsterdam.jpg`" width="100%"/>
   </div>
   <div class="md:col-6 col-12">
-    <div class="text-4xl font-bold">I Simplify The Steps For You</div>
+    <div class="my-4 text-4xl font-bold">I Simplify The Steps For You</div>
     <div class="my-4 text-md">My mission is to make the whole process much easier and understandable for you</div>
     <div class="my-4 text-md">I simplify the steps to launching a digital application minus the lingo and hype so you can get on with living the life you envisioned.</div>
     <div class="my-4 text-md">You'll finally gain the clarity and confidence you need.</div>
@@ -41,7 +41,7 @@ copyright: false
   </div>
   <div class="flex flex-wrap gap-2">
     <div v-for="(category, key) in technologies" :key="key" class="flex md:col-12">
-      <div class="gap-1 surface-card shadow-1 border-round-md text-900 vp-feature-item">
+      <div class="gap-1 shadow-1 border-round-md vp-feature-item">
         <div class="text-2xl font-bold">{{ category.title }}</div>
         <div v-for="(subheading, subKey) in category.subheadings" :key="subKey" class="p-4">
           <div class="text-xl">{{ subheading.title }}</div>
@@ -61,29 +61,29 @@ copyright: false
   </div>
 </div>
 
-<div class="pt-8 text-900">
+<div class="my-6">
   <div class="text-center pb-4">
     <div class="text-4xl font-bold">A Little More About Me</div>
     <div class="my-4 text-md">When I’m not coding, I enjoy creating tech tutorials for my YouTube channel Stack Seekers, exploring the latest in mobile technology, and traveling to discover new cultures and ideas.</div>
   </div>
 </div>
 
-<div class="pt-4 surface-100 shadow-1 vp-feature-item border-round-md text-900">
+<div class="my-6 shadow-1 vp-feature-item border-round-md">
   <div class="text-center pb-4">
-    <div class="my-4 text-md">Let’s Collaborate!</div>
+    <div class="my-4 text-2xl font-bold">Let’s Collaborate!</div>
   </div>
   <div class="my-4 text-center text-md">Ready to turn your vision into reality? Let’s discuss how I can help you achieve your goals.
   </div>
   <a href="mailto:jiwan.cse@gmail.com" size="large" color="deeppink" class="flex justify-content-center text-center no-underline"> 
-    <Button label="Let's work together" icon="pi pi-envelope" severity="info" raised rounded />
+    <Button label="Let's work together" icon="pi pi-envelope" severity="primary" raised rounded />
   </a>
-  <div class="flex flex-row surface-card justify-content-end flex-wrap gap-4 p-3 px-6 -mx-4 -mb-4 mt-4">
+  <div class="flex flex-row justify-content-end flex-wrap gap-4 p-3 px-6 -mx-4 -mb-4 mt-4">
     <a
       v-for="(socialElement, socialIndex) in social"
       :key="socialIndex"
       :href="socialElement.url"
       target="_blank"
-      class="flex flex-row text-600 gap-2"
+      class="flex flex-row gap-2"
       >
       <i :class="socialElement.icon" style="font-size: 1rem"></i>
       </a>
@@ -253,8 +253,8 @@ const getIcon = (logoUrl) => {
   
   const social= [
     { label: 'linkedin', icon: 'pi pi-linkedin', url: 'https://www.linkedin.com/in/jiwanghosal/' },
+    { label: 'youtube', icon: 'pi pi-youtube', url: 'https://www.youtube.com/@stackseekers' },
     { label: 'stackoverflow', icon: 'pi pi-chart-bar', url: 'https://stackoverflow.com/users/10376224/stchr?tab=profile' },
     { label: 'Instagram', icon: 'pi pi-instagram', url: 'https://www.instagram.com/jiwan_ghosal/' },
-    { label: 'youtube', icon: 'pi pi-youtube', url: 'https://www.youtube.com/@stackseekers' },
   ]
 </script>
