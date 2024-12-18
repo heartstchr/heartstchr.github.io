@@ -39,13 +39,13 @@ copyright: false
   <div class="card relative">
     <Carousel :value="projects" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions">
         <template #item="slotProps">
-            <div class="border border-surface-200 shadow-1 border-round-md rounded m-2 text-center">
+            <div class="border border-surface-200 shadow-1 border-round-md rounded m-2 p-2 text-center">
                 <div class="mb-2 image-box">
                     <div class="relative mx-auto w-13rem h-10rem overflow-hidden">
                         <img :src="slotProps.data.images[0].itemImageSrc" :alt="slotProps.data.images[0].alt" class="w-full rounded"/>
                     </div>
                 </div>
-                <a :href="slotProps.data.link" class="mb-4 text-l font-medium text-center">
+                <a :href="slotProps.data.link" class="mb-4 text-l pt-4 font-medium text-center no-underline">
                   {{ slotProps.data.name }}
                 </a>
             </div>
@@ -109,7 +109,7 @@ copyright: false
             </div>
             <div class="flex align-items-center">
               <img :src="slotProps.data.avatar" alt="Avatar" class="border-circle" width="50px" />
-              <a :href="slotProps.data.link" target="_blank">
+              <a :href="slotProps.data.link" target="_blank" class="no-underline">
                 <div class="flex flex-column align-items-start ml-2">
                   <div>{{ slotProps.data.name }}</div>
                   <div>{{ slotProps.data.designation }}</div>
