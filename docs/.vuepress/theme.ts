@@ -26,6 +26,9 @@ export default hopeTheme({
         <a href="/projects/" class=""> Projects </a>
         <a href="/services/" class=""> Services </a>
         <a href="/about/" class=""> About </a>
+        <div>
+          <Image src="/img/home/JiwanGhosalMicrosoftAz900.png" alt="Jiwan Ghosal Microsoft Az900" width="200"/>
+        </div>
         </div>
         </div>
         </div>

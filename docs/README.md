@@ -18,12 +18,18 @@ editLink: false
 copyright: false
 ---
 
+<div class="hidden">
+  <div class="text-4xl font-bold">Scaling Startups, Elevating Industry Giants</div>
+  <div class="my-4 text-xl">I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development</div>
+</div>
+
 <div class="my-6">
   <div class="text-center pb-4">
     <div class="text-4xl font-bold">Scaling Startups, Elevating Industry Giants</div>
+    <div class="my-4 text-xl">I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development</div>
   </div>
-  <div class="grid my-4">
-    <div class="md:col col-12 shadow-1 border-round-md p-2 m-2 vp-feature-item" v-for="org in orgs" :key="org.title">
+  <div class="my-4 flex flex-column md:flex-row justify-content-center">
+    <div class="md:col col-12 border-round-md p-2 m-2 vp-feature-item flex align-items-center justify-content-center" v-for="org in orgs" :key="org.title">
       <div class="no-underline flex flex-column justify-content-center flex-wrap">
         <div class="mr-2 flex align-items-center justify-content-center">
           <img :src="org.icon" alt="Avatar" width="80px"/>
@@ -39,62 +45,28 @@ copyright: false
   <div class="text-center pb-4">
   </div>
   <div class="card relative">
-    <Carousel :value="projects" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions">
+    <Carousel :value="projects" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" class="flex">
         <template #item="slotProps">
-            <div class="border border-surface-200 shadow-1 border-round-md rounded m-2 p-2 text-center">
-                <div class="mb-2 image-box">
-                    <div class="relative mx-auto w-13rem h-10rem overflow-hidden">
+            <div class="border border-surface-200 shadow-1 border-round-md rounded m-2 p-2 flex flex-column align-self-center align-items-center justify-content-center" >
+                <div class="mb-2 image-box" v-if=slotProps.data.images[0]>
+                    <div class="relative mx-auto w-13rem h-10rem overflow-hidden" >
                         <img :src="slotProps.data.images[0].itemImageSrc" :alt="slotProps.data.images[0].alt" class="w-full rounded"/>
                     </div>
                 </div>
-                <a :href="slotProps.data.link" class="mb-4 text-l pt-4 font-medium text-center no-underline">
+                <a :href="slotProps.data.link" class="text-l p-2 font-medium text-center no-underline">
                   {{ slotProps.data.name }}
                 </a>
             </div>
         </template>
     </Carousel>
   </div>
-</div>
-
-<div class="my-6">
-    <a href="https://github.com/heartstchr?tab=repositories" target="_blank" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4 external-link-icon"> 
-      <Button label="Projects" icon="pi pi-github" severity="primary" raised rounded/>
-    </a>
-</div>
-
-<div class="my-6 flex flex-column">
   <div class="text-center pb-4">
-    <div class="text-4xl font-bold">Why me?</div>
-  </div>
-  <div class="text-xl">
-    I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development
-    <ul>
-      <li>Planning</li>
-      <li>Implementation</li>
-      <li>Automated Testing</li>
-      <li>Monitoring</li>
-      <li>Continuous Integration and Delivery</li>
-    </ul>
+    <a href="/projects/" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
+      <Button label="See All Projects" icon="pi pi-angle-double-right" severity="secondary" raised rounded iconPos="right"/>
+    </a>
   </div>
 </div>
-<div class="my-4">
-  <div class="text-xl">
-    I'm a full-stack developer with extensive experience in the JavaScript, VueJS, ReactJS and NodeJS ecosystems, as well as expertise in the Azure cloud platform.
-  </div>
-  <div class="grid mt-4">
-    <div class="md:col col-6 text-center" v-for="stackLogo in stackLogos" :key="stackLogo.title">
-      <i :class="stackLogo.icon" class="m-auto text-400 pl-3" style="font-size: 5rem"></i>
-      <Image :src="stackLogo.link" alt="Avatar" width="100px" />
-    </div>
-  </div>
-</div>
-<div class="my-4">
-  <div class="grid my-4">
-    <div class="col-12">
-      <Image src="/img/home/JiwanGhosalMicrosoftAz900.png" alt="Jiwan Ghosal Microsoft Az900" />
-    </div>
-  </div>
-</div>
+
 
 <!-- Testimonials -->
 <div class="my-6">
@@ -104,7 +76,7 @@ copyright: false
   </div>
   <div class="card relative" @mouseenter="pauseAutoPlay"
     @mouseleave="resumeAutoPlay">
-    <Carousel :value="testimonials" :numVisible="3" :numScroll="1"  ref="carousel" :responsiveOptions="responsiveCustomerOptions" circular :page="currentPage"
+    <Carousel :value="testimonials" :numVisible="1" :numScroll="1"  ref="carousel" :responsiveOptions="responsiveCustomerOptions" circular :page="currentPage"
       @page="onPageChange">
         <template #item="slotProps">
           <div class="card shadow-1 border-round-md p-4 md:mx-8 vp-feature-item">
@@ -128,6 +100,29 @@ copyright: false
     </Carousel>
   </div>
 </div>
+
+<div class="my-6 flex flex-column">
+  <div class="text-center pb-4">
+    <div class="text-4xl font-bold">Why me?</div>
+  </div>
+</div>
+<div class="my-4">
+  <div class="text-xl">
+    I'm a full-stack developer with extensive experience in the JavaScript, VueJS, ReactJS and NodeJS ecosystems, as well as expertise in the Azure cloud platform.
+  </div>
+  <div class="grid mt-4">
+    <div class="md:col col-6 text-center" v-for="stackLogo in stackLogos" :key="stackLogo.title">
+      <i :class="stackLogo.icon" class="m-auto text-400 pl-3" style="font-size: 5rem"></i>
+      <Image :src="stackLogo.link" alt="Avatar" width="100px" />
+    </div>
+  </div>
+  <div class="text-center pb-4">
+    <a href="/about/#stack" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
+      <Button label="See All Stacks" icon="pi pi-angle-double-right" severity="secondary" raised rounded iconPos="right"/>
+    </a>
+  </div>
+</div>
+
 
 <!-- FAQ -->
 <div v-if="questions" class="my-6">
@@ -374,7 +369,7 @@ const projects = ref([
         org: "Catch That Bus",
         year: "2019",
         schema: "https://schema.org/DeveloperApplication",
-        link: "https://m.trokka.com/attraction",
+        link: "/projects/#Trokka Attraction",
         images: [
                 {
                     itemImageSrc: '/img/projects/trokka.gif',
@@ -447,11 +442,16 @@ const projects = ref([
                 },
             ],
     },
+    {
+      name: "See All",
+      images: [],
+      link:"/projects/"
+    }
 ]);
 const responsiveOptions = ref([
     {
         breakpoint: '1400px',
-        numVisible: 3,
+        numVisible: 4,
         numScroll: 1
     },
     {
@@ -484,7 +484,7 @@ const responsiveCustomerOptions = ref([
     },
     {
         breakpoint: '767px',
-        numVisible: 2,
+        numVisible: 1,
         numScroll: 1
     },
     {
