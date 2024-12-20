@@ -20,21 +20,23 @@ copyright: false
 
 <div class="my-6">
   <div class="text-center pb-4">
-    <div class="text-4xl font-bold">Delivering Results for Industry Leaders</div>
+    <div class="text-4xl font-bold">Scaling Startups, Elevating Industry Giants</div>
   </div>
   <div class="grid my-4">
     <div class="md:col col-12 shadow-1 border-round-md p-2 m-2 vp-feature-item" v-for="org in orgs" :key="org.title">
-      <a :href="org.link" class="no-underline flex flex-column">
-        <div class="text-2xl font-bold"><img :src="org.icon" alt="Avatar" width="30px" class="mr-2"/><span>{{org.title}}</span></div>
-        <div class="text-l">{{org.details}}</div>
-      </a>
+      <div class="no-underline flex flex-column justify-content-center flex-wrap">
+        <div class="mr-2 flex align-items-center justify-content-center">
+          <img :src="org.icon" alt="Avatar" width="80px"/>
+        </div>
+        <div class="text-2xl font-bold flex align-items-center justify-content-center"><span>{{org.title}}</span></div>
+        <div class="text-xs flex align-items-center justify-content-center">{{org.details}}</div>
+      </div>
     </div>
   </div>
 </div>
 
 <div class="my-6">
   <div class="text-center pb-4">
-    <div class="text-4xl font-bold">Featured Projects</div>
   </div>
   <div class="card relative">
     <Carousel :value="projects" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions">
@@ -56,7 +58,7 @@ copyright: false
 
 <div class="my-6">
     <a href="https://github.com/heartstchr?tab=repositories" target="_blank" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4 external-link-icon"> 
-      <Button label="Open source projects" icon="pi pi-github" severity="primary" raised rounded/>
+      <Button label="Projects" icon="pi pi-github" severity="primary" raised rounded/>
     </a>
 </div>
 
@@ -100,10 +102,12 @@ copyright: false
     <div class="text-4xl font-bold">What Customers Are Saying</div>
     <div class="my-4 text-xl">I value every client as a strategic partner. Here’s what they’ve shared about their experience working with me.</div>
   </div>
-  <div class="card relative">
-    <Carousel :value="testimonials" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions">
+  <div class="card relative" @mouseenter="pauseAutoPlay"
+    @mouseleave="resumeAutoPlay">
+    <Carousel :value="testimonials" :numVisible="3" :numScroll="1"  ref="carousel" :responsiveOptions="responsiveCustomerOptions" circular :page="currentPage"
+      @page="onPageChange">
         <template #item="slotProps">
-          <div class="card shadow-1 border-round-md p-4 m-2 vp-feature-item">
+          <div class="card shadow-1 border-round-md p-4 md:mx-8 vp-feature-item">
             <div class="font-italic mb-8">
               <div class="text-md" ><span class="font-bold text-4xl">"</span> {{ slotProps.data.message }}</div>
             </div>
@@ -112,7 +116,6 @@ copyright: false
               <a :href="slotProps.data.link" target="_blank" class="no-underline">
                 <div class="flex flex-column align-items-start ml-2">
                   <div>{{ slotProps.data.name }}</div>
-                  <div>{{ slotProps.data.designation }}</div>
                   <div>
                     <img :alt="slotProps.data.name" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" :class="`flag flag-${slotProps.data.code.toLowerCase()} mr-2`" style="width: 18px" />
                     {{ slotProps.data.location }}
@@ -178,7 +181,12 @@ copyright: false
 </div>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
+
+// Current page and autoplay interval
+const currentPage = ref(0);
+const autoplayInterval = 5000;
+let autoplayTimer = null;
 
 const projects = ref([
     {
@@ -463,6 +471,29 @@ const responsiveOptions = ref([
     }
 ]);
 
+const responsiveCustomerOptions = ref([
+    {
+        breakpoint: '1400px',
+        numVisible: 1,
+        numScroll: 1
+    },
+    {
+        breakpoint: '1199px',
+        numVisible: 1,
+        numScroll: 1
+    },
+    {
+        breakpoint: '767px',
+        numVisible: 2,
+        numScroll: 1
+    },
+    {
+        breakpoint: '575px',
+        numVisible: 1,
+        numScroll: 1
+    }
+]);
+
   const social= [
     { label: 'linkedin', icon: 'pi pi-linkedin', url: 'https://www.linkedin.com/in/jiwanghosal/' },
     { label: 'youtube', icon: 'pi pi-youtube', url: 'https://www.youtube.com/@stackseekers' },
@@ -583,7 +614,7 @@ const orgs= [
   ]
 
 
-  const testimonials = [
+  const testimonials = ref([
     {
       name: 'Harris Malik',
       designation: 'Senior Product Manager at 8x8',
@@ -620,6 +651,37 @@ const orgs= [
       location: 'The Netherlands',
       code: 'nl'
     }
-  ];
+  ]);
 
+// Function to start autoplay
+const startAutoPlay = () => {
+  autoplayTimer = setInterval(() => {
+    currentPage.value = (currentPage.value + 1) % testimonials.value.length;
+  }, autoplayInterval);
+};
+
+// Function to pause autoplay
+const pauseAutoPlay = () => {
+  clearInterval(autoplayTimer);
+};
+
+// Function to resume autoplay
+const resumeAutoPlay = () => {
+  startAutoPlay(autoplayTimer);
+};
+
+// Handle page change when user interacts with the carousel
+const onPageChange = (newPage) => {
+  currentPage.value = newPage;
+};
+
+// Start autoplay when the component mounts
+onMounted(() => {
+  startAutoPlay();
+});
+
+// Clear the autoplay timer when the component unmounts
+onBeforeUnmount(() => {
+  pauseAutoPlay();
+});
 </script>
