@@ -20,7 +20,7 @@ copyright: false
 
 <div class="hidden">
   <div class="text-4xl font-bold">Scaling Startups, Elevating Industry Giants</div>
-  <div class="my-4 text-xl">I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development</div>
+  <div class="my-4 text-xl">Experienced full-stack developer specializing in scalable web, mobile, and software solutions.</div>
 </div>
 
 <div class="my-6">
@@ -62,7 +62,19 @@ copyright: false
   </div>
   <div class="text-center pb-4">
     <a href="/projects/" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
-      <Button label="See All Projects" icon="pi pi-angle-double-right" severity="secondary" raised rounded iconPos="right"/>
+      <div class="p-flex p-ai-center">
+        <div
+          class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button"
+        >
+          <span class="mr-6">See all projects</span>
+          <!-- Add circular element -->
+          <div class="absolute right-0 mr-5">
+            <div class="circle pb-2 my-2 mx-2"></div>
+            <div class="circle pt-2 my-2 mx-2"></div>
+          </div>
+          <i class="pi pi-angle-double-right" style="font-size: 1rem;"></i>
+        </div>
+      </div>
     </a>
   </div>
 </div>

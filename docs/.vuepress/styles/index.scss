@@ -92,3 +92,20 @@
 .p-carousel .p-carousel-indicators .p-carousel-indicator button {
     display: none;
 }
+
+.custom-button {
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: none;
+}
+
+.circle {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    /* Adjust to match the desired color */
+    border-radius: 50%;
+}
