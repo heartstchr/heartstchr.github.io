@@ -130,7 +130,19 @@ copyright: false
   </div>
   <div class="text-center pb-4">
     <a href="/about/#stack" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
-      <Button label="See All Stacks" icon="pi pi-angle-double-right" severity="secondary" raised rounded iconPos="right"/>
+      <div class="p-flex p-ai-center">
+        <div
+          class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button"
+        >
+          <span class="mr-6">See all stacks used</span>
+          <!-- Add circular element -->
+          <div class="absolute right-0 mr-5">
+            <div class="circle pb-2 my-2 mx-2"></div>
+            <div class="circle pt-2 my-2 mx-2"></div>
+          </div>
+          <i class="pi pi-angle-double-right" style="font-size: 1rem;"></i>
+        </div>
+      </div>
     </a>
   </div>
 </div>

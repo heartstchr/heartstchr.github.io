@@ -17,36 +17,39 @@ copyright: false
     </div>
 </div>
 
-<div class="grid my-6">
-    <div class="vp-feature-item col-12 shadow-1 p-4" v-for= "(project, index) in projects" :id="project.name">
-        <div>
-            <div itemprop="name" class="text-4xl font-bold">{{project.name}}</div> 
-            <div class="text-xl mt-2" itemprop="operatingSystem">{{project.software}} <span class="text-sm mt-2" >({{project.year}})</span><span class="text-sm mt-2" > - {{project.org}}</span></div>
-        </div>
-        <div class="flex md:flex-row flex-column" itemscope itemtype="https://schema.org/SoftwareApplication">
-            <div class="md:col-6 col-12">
-                <div class="my-2 text-xl">{{project.description}}</div>
-                <div class="flex flex-column mt-4 p-2" v-if="project.features">
-                    <div class="my-2 text-l">Features</div>
-                    <ul class="my-2 text-sm" v-for="feature in project.features">
-                        <li>{{feature.name}}</li>
-                    </ul>
-                </div>
+<div class="grid my-6 gap-8">
+    <div class="vp-feature-item col-12 shadow-1 m-0" v-for= "(project, index) in projects" :id="project.name">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#10b981" fill-opacity="0.1" d="M0,320L40,288C80,256,160,192,240,176C320,160,400,192,480,202.7C560,213,640,203,720,192C800,181,880,171,960,181.3C1040,192,1120,224,1200,218.7C1280,213,1360,171,1400,149.3L1440,128L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+        <div class="px-4">
+            <div>
+                <div itemprop="name" class="text-4xl font-bold">{{project.name}}</div> 
+                <div class="text-xl mt-2" itemprop="operatingSystem">{{project.software}} <span class="text-sm mt-2" >({{project.year}})</span><span class="text-sm mt-2" > - {{project.org}}</span></div>
             </div>
-            <div class="md:col-6 col-12">
-                <link itemprop="applicationCategory" :href="project.schema" />
-                <div class="card" v-if="project.images">
-                    <Galleria :value="project.images" :responsiveOptions="responsiveOptions" :numVisible="5" :circular="true" :showItemNavigators="true" :showThumbnails="false">
-                        <template #item="slotProps">
-                            <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
-                        </template>
-                        <template #thumbnail="slotProps">
-                            <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="display: block" />
-                        </template>
-                    </Galleria>
+            <div class="flex md:flex-row flex-column" itemscope itemtype="https://schema.org/SoftwareApplication">
+                <div class="md:col-6 col-12">
+                    <div class="my-2 text-xl">{{project.description}}</div>
+                    <div class="flex flex-column mt-4 p-2" v-if="project.features">
+                        <div class="my-2 text-l">Features</div>
+                        <ul class="my-2 text-sm" v-for="feature in project.features">
+                            <li>{{feature.name}}</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>  
-        </div>
+                <div class="md:col-6 col-12">
+                    <link itemprop="applicationCategory" :href="project.schema" />
+                    <div class="card" v-if="project.images">
+                        <Galleria :value="project.images" :responsiveOptions="responsiveOptions" :numVisible="5" :circular="true" :showItemNavigators="true" :showThumbnails="false">
+                            <template #item="slotProps">
+                                <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
+                            </template>
+                            <template #thumbnail="slotProps">
+                                <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="display: block" />
+                            </template>
+                        </Galleria>
+                    </div>
+                </div>  
+            </div>
+        </diV>
         <div class="flex flex-column mt-4 p-2">
             <div class="my-2 text-l">Stack Used</div>
             <div class="flex grid mt-4 p-2">
