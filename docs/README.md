@@ -153,11 +153,11 @@ copyright: false
   <div class="text-center pb-4">
     <div class="text-4xl font-bold">Frequently Asked Questions</div>
   </div>
-  <div class="grid md:mx-2 my-4 overflow-hidden border-round-2xl" :style="getImage()">
-    <div class="md:col-8 col-12">
-      <div class="surface-0 p-2 border-round-2xl text-900 flex flex-column gap-2 vp-feature-item">
+  <div class="grid overflow-hidden border-round-2xl">
+    <div class="col-12 ">
+      <div class="border-round-2xl flex flex-column gap-2 p-2">
         <div v-for="question in questions" :key="question.id" class="my-2">
-          <div class="flex flex-column my-1 gap-2">
+          <div class="flex flex-column m-1 gap-2">
             <div class="font-medium text-xl">Q: {{ question.question }}</div>
             <div class="text-md"><span class="font-medium text-xl">A:</span> {{ question.answer }}</div>
           </div>
