@@ -22,7 +22,7 @@ export default hopeTheme({
         <div class="w-full">
         <div class="gap-2">
         <div class="flex md:flex-row flex-column justify-content-between flex-grow-1 my-4 align-item-center gap-4">
-        <div class="flex flex-row justify-content-between align-items-center gap-2 m-auto">© 2022 Stack Seekers</div>
+        <div class="flex flex-row justify-content-between align-items-center gap-2 m-auto">© 2024 Stack Seekers</div>
         <div class="flex md:flex-row flex-column justify-content-between align-items-center gap-4">
         <a href="/projects/"> Projects </a>
         <a href="/services/"> Services </a>
