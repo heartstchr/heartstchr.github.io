@@ -67,6 +67,12 @@
 .p-button-secondary{
     border: 0 !important;
 }
+.p-accordionheader, .p-accordionpanel, .p-accordioncontent-content{
+    background: var(--bg-color) !important;
+    border-color: var(--p-green-800) !important;
+    color: var(--text-color) !important;
+}
+
 
 .custom-button {
     border-radius: 50px;

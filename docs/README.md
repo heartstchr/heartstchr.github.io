@@ -26,7 +26,7 @@ copyright: false
 <div class="my-6">
   <div class="text-center pb-4">
     <div class="text-4xl font-bold">Scaling Startups</div>
-    <div class="text-4xl font-bold">Elevating Industry Giants</div>
+    <a class="text-4xl font-bold no-underline">Elevating Industry Giants</a>
     <div class="my-4 text-xl">I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development</div>
   </div>
   <div class="my-4 flex flex-column md:flex-row justify-content-center">
@@ -84,7 +84,7 @@ copyright: false
 <div class="my-6">
   <div class="text-center pb-4">
     <div class="text-4xl font-bold">Trusted by</div>
-    <div class="text-4xl font-bold text-primary">World Wide</div>
+    <a class="text-4xl font-bold no-underline">World Wide</a>
     <div class="my-4 text-xl">I value every client as a strategic partner. Here’s what they’ve shared about their experience working with me.</div>
   </div>
   <div class="card relative" @mouseenter="pauseAutoPlay"
@@ -149,19 +149,41 @@ copyright: false
 </div>
 
 <!-- FAQ -->
-<div v-if="questions" class="my-6">
+<div class="my-6">
   <div class="text-center pb-4">
-    <div class="text-4xl font-bold">Frequently Asked Questions</div>
+    <div class="text-4xl font-bold">Frequently Asked <a class="no-underline">Questions</a></div>
   </div>
   <div class="grid overflow-hidden border-round-2xl">
     <div class="col-12 ">
       <div class="border-round-2xl flex flex-column gap-2 p-2">
-        <div v-for="question in questions" :key="question.id" class="my-2">
-          <div class="flex flex-column m-1 gap-2">
-            <div class="font-medium text-xl">Q: {{ question.question }}</div>
-            <div class="text-md"><span class="font-medium text-xl"></span> {{ question.answer }}</div>
-          </div>
-        </div>
+          <Accordion :activeIndex="0">
+            <AccordionTab header="Q: How can I start a project with you?">
+                <p class="m-0">
+                    You can start by <a href="https://cal.com/stackseekers" class="no-underline">scheduling a meeting</a> with me. I’ll connect with you promptly to discuss your requirements and plan the next steps.
+                </p>
+            </AccordionTab>
+            <AccordionTab header="Q: What services do you provide?">
+                <p class="m-0">
+                    I offer a variety of services tailored to your needs, including 
+                    <a href="services/#ConsultingAndTechnicalAdvisory" class="no-underline">Custom Web Development</a>, 
+                    <a href="services/#E-commerceSolutions" class="no-underline">E-commerce Solutions</a>, 
+                    <a href="services/#APIDevelopmentAndIntegration" class="no-underline">API Development and Integration </a>, 
+                    <a href="services/#FigmatoWeb" class="no-underline">Figma to Web Conversion</a>, and 
+                    <a href="services/#hosting" class="no-underline">Hosting & Deployment</a>. 
+                    <div class="mt-2">Let’s find the best solution for your project!</div>
+                </p>
+            </AccordionTab>
+            <AccordionTab header="Q: What does the project process look like?">
+                <p class="m-0">
+                  <div>It’s simple and straightforward:</div>
+                  <Timeline :value="events" align="alternate" class="w-full md:w-80">
+                      <template #content="slotProps">
+                          {{ slotProps.item.status }}
+                      </template>
+                  </Timeline>
+                </p>
+            </AccordionTab>
+        </Accordion>
         <div class="my-4">
           <a href="https://cal.com/stackseekers" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
             <Button label="Discuss Your Project" icon="pi pi-calendar-clock" severity="primary" raised rounded/>
@@ -185,7 +207,7 @@ copyright: false
     </div>
     <div class="my-4">
       <a href="mailto:jiwan.cse@gmail.com" size="large" color="deeppink" class="flex justify-content-center text-center no-underline"> 
-        <Button label="Hire Now" icon="pi pi-briefcase" severity="primary" raised rounded />
+        <Button label="Let's collaborate Now" icon="pi pi-briefcase" severity="primary" raised rounded />
       </a>
     </div>
     <div class="flex flex-row justify-content-end flex-wrap gap-4 mx-6">
@@ -211,6 +233,12 @@ const currentPage = ref(0);
 const autoplayInterval = 5000;
 let autoplayTimer = null;
 
+const events = ref([
+    { status: 'We start with understanding your requirements', date: '15/10/2020 10:30', icon: 'pi pi-shopping-cart', color: '#9C27B0'},
+    { status: 'Set a clear timeline', date: '15/10/2020 14:00', icon: 'pi pi-cog', color: '#673AB7' },
+    { status: 'I handle the development phase', date: '15/10/2020 16:15', icon: 'pi pi-shopping-cart', color: '#FF9800' },
+    { status: 'Deliver your project with ongoing support to ensure success', date: '16/10/2020 10:00', icon: 'pi pi-check', color: '#607D8B' }
+]);
 const projects = ref([
     {
         name: "Upstox: Open Demat Account",
@@ -570,28 +598,6 @@ const orgs= [
       value: ["Jest","Testcafe","Lighthouse","Playwright"],
     }
   ];
-
-  const questions = [
-    {
-      id: 1,
-      question: "How can I start a project with you?",
-      answer: "You can start by scheduling a meeting with me. I’ll connect with you promptly to discuss your requirements and plan the next steps."
-    },
-    {
-      id: 2,
-      question: "What services do you provide?",
-      answer: "I offer a variety of services tailored to your needs, including Custom Web Development, E-commerce Solutions, API Development and Integration, Figma to Web Conversion, and Hosting & Deployment. Let’s find the best solution for your project!"
-    },
-    {
-      id: 3,
-      question: "What does the project process look like?",
-      answer: `It’s simple and straightforward:
-      1) We start with understanding your requirements, 
-      2) Set a clear timeline, 
-      3) I handle the development phase, and 4) Deliver your project with ongoing support to ensure success.`
-    }
-  ];
-
 
   const getImage = () =>`background-image: url('/img/home/faq.jpeg');  background-repeat: no-repeat; background-size: cover;`
 
