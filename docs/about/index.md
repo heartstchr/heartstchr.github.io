@@ -37,21 +37,25 @@ copyright: false
     <div class="text-4xl font-bold">Stack</div>
     <div class="my-4 text-xl">Some of the software and technologies I use on a daily basis.</div>
   </div>
-  <div class="flex flex-wrap gap-2">
-    <div v-for="(category, key) in technologies" :key="key" class="flex md:col-12">
-      <div class="gap-1 shadow-1 border-round-md vp-feature-item">
-        <div class="text-2xl font-bold">{{ category.title }}</div>
-        <div v-for="(subheading, subKey) in category.subheadings" :key="subKey" class="p-4">
-          <div class="text-xl">{{ subheading.title }}</div>
-          <div class="p-1">
-            <Tag style="border: 2px solid var(--border-color); background: transparent; color: var(--text-color)" v-for="tech in subheading.technologies" :key="tech.name"
-              :value="tech.name" class="m-1">
-              <div class="flex items-center gap-2 px-1">
-                  <img v-if="tech.logoUrl" :src="tech.logoUrl" style="width: 30px" />
-                  <i v-else class="pi pi-cog" style="font-size: 1rem"></i>
-                  <span class="text-base">{{tech.name}}</span>
-              </div>
-            </Tag>
+  <div class="flex flex-wrap md:gap-4 gap-2">
+    <div v-for="(category, key) in technologies" :key="key" class='grid md:col-6' 
+    :class="[{ 'md:col-12' : key === 'otherTools' }]">
+      <div class="shadow-1 border-round-md vp-feature-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 50 1440 320"><path fill="#10b981" fill-opacity="0.1" d="M0,128L40,144C80,160,160,192,240,192C320,192,400,160,480,160C560,160,640,192,720,176C800,160,880,96,960,80C1040,64,1120,96,1200,144C1280,192,1360,256,1400,288L1440,320L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+        <div class="px-2 gap-2">
+          <div class="text-2xl font-bold">{{ category.title }}</div>
+          <div v-for="(subheading, subKey) in category.subheadings" :key="subKey" class="p-2">
+            <div class="text-xl m-2">{{ subheading.title }}</div>
+            <div class="p-1">
+              <Tag style="border: 2px solid var(--border-color); background: transparent; color: var(--text-color)" v-for="tech in subheading.technologies" :key="tech.name"
+                :value="tech.name" class="m-1">
+                <div class="flex items-center gap-2 px-1">
+                    <img v-if="tech.logoUrl" :src="tech.logoUrl" style="width: 20px;" />
+                    <i v-else class="pi pi-cog" style="font-size: 1rem"></i>
+                    <span class="text-base">{{tech.name}}</span>
+                </div>
+              </Tag>
+            </div>
           </div>
         </div>
       </div>
@@ -102,7 +106,13 @@ copyright: false
         title: "Frameworks and Libraries",
         technologies: [
           { name: "React", logoUrl: "/img/stacks/reactjs.png" },
+          { name: "Next.js", logoUrl: "/img/stacks/nextjs.svg" },
           { name: "Vue.js", logoUrl: "/img/stacks/vuejs.png" },
+          { name: "Nuxt.js", logoUrl: "/img/stacks/nuxt.svg" },
+          { name: "Ant Design", logoUrl: "" },
+          { name: "Primevue", logoUrl: "" },
+          { name: "Shadcn", logoUrl: "" },
+          { name: "Quasar", logoUrl: "" },
         ]
       },
       styling: {

@@ -25,7 +25,8 @@ copyright: false
 
 <div class="my-6">
   <div class="text-center pb-4">
-    <div class="text-4xl font-bold">Scaling Startups, Elevating Industry Giants</div>
+    <div class="text-4xl font-bold">Scaling Startups</div>
+    <div class="text-4xl font-bold">Elevating Industry Giants</div>
     <div class="my-4 text-xl">I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development</div>
   </div>
   <div class="my-4 flex flex-column md:flex-row justify-content-center">
@@ -79,11 +80,11 @@ copyright: false
   </div>
 </div>
 
-
 <!-- Testimonials -->
 <div class="my-6">
   <div class="text-center pb-4">
-    <div class="text-4xl font-bold">What Customers Are Saying</div>
+    <div class="text-4xl font-bold">Trusted by</div>
+    <div class="text-4xl font-bold text-primary">World Wide</div>
     <div class="my-4 text-xl">I value every client as a strategic partner. Here’s what they’ve shared about their experience working with me.</div>
   </div>
   <div class="card relative" @mouseenter="pauseAutoPlay"
@@ -147,7 +148,6 @@ copyright: false
   </div>
 </div>
 
-
 <!-- FAQ -->
 <div v-if="questions" class="my-6">
   <div class="text-center pb-4">
@@ -200,7 +200,7 @@ copyright: false
         </a>
     </div>
   </div>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="60 0 1440 300"><path fill="#10b981" fill-opacity="0.1" d="M0,128L40,144C80,160,160,192,240,192C320,192,400,160,480,160C560,160,640,192,720,176C800,160,880,96,960,80C1040,64,1120,96,1200,144C1280,192,1360,256,1400,288L1440,320L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#10b981" fill-opacity="0.1" d="M0,128L40,144C80,160,160,192,240,192C320,192,400,160,480,160C560,160,640,192,720,176C800,160,880,96,960,80C1040,64,1120,96,1200,144C1280,192,1360,256,1400,288L1440,320L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
 </div>
 
 <script setup lang="ts">
