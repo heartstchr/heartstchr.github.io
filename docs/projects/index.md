@@ -50,7 +50,7 @@ copyright: false
                 </div>  
             </div>
         </diV>
-        <div class="flex flex-column mt-4 p-2">
+        <div class="flex flex-column mt-4 p-4">
             <div class="my-2 text-l">Stack Used</div>
             <div class="flex grid mt-4 p-2">
                 <Tag style="border: 2px solid var(--border-color); background: transparent; color: var(--text-color)" v-for="part in project.skills" :key="part" :value="part" class="m-1">
@@ -62,10 +62,10 @@ copyright: false
             </div>
             <div class="flex flex-row justify-content-between align-items-center gap-2">
                 <a v-if="project.link" :href="project.link" target="_blank" class="w-full flex flex-row no-underline mt-4">
-                    <Button label="Live Demo" icon="pi pi-angle-double-right" severity="help" raised rounded />
+                    <Button label="Live Demo" icon="pi pi-angle-double-right" severity="primary" raised rounded />
                 </a>
                 <a v-if="project.codeLink" :href="project.codeLink" target="_blank" class="w-full flex flex-row no-underline mt-4">
-                    <Button label="Repo" icon="pi pi-github" severity="contrast" raised rounded />
+                    <Button label="Repo" icon="pi pi-github" severity="secondary" raised rounded />
                 </a>
             </div>
         </div>
