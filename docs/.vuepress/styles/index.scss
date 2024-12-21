@@ -1,92 +1,134 @@
 // place your custom styles here
-@import 'primeflex/primeflex.css';
+@import "primeflex/primeflex.css";
 
 .feature .icon {
-    width: 50px;
+  width: 50px;
 }
-.col-md-3{
-    width: fit-content;
+.col-md-3 {
+  width: fit-content;
 }
-.vp-hero-image{
-    border-radius: 48% 52% 100% 0% / 54% 54% 46% 46%;
+.vp-hero-image {
+  border-radius: 48% 52% 100% 0% / 54% 54% 46% 46%;
 }
-.vp-hero-info-wrapper{
-    background-image: url('/img/home/back.svg');
-    background-repeat: no-repeat;
+.vp-hero-info-wrapper {
+  background-image: url("/img/home/back.svg");
+  background-repeat: no-repeat;
 }
-.vp-hero-info-wrapper, .vp-feature-wrapper{
-    padding: 4.5rem 0;
+.vp-hero-info-wrapper,
+.vp-feature-wrapper {
+  padding: 4.5rem 0;
 }
-.vp-feature-header{
-    margin:0;
+.vp-feature-header {
+  margin: 0;
 }
-.vp-feature{
-    padding: 0 1.5rem;
+.vp-feature {
+  padding: 0 1.5rem;
 }
-.vp-features{
-    margin: 1.5rem 0;
-}
-
-#contact,.vp-feature-item {
-    padding:0;
-    margin:0;
-    border: 1px solid var(--p-green-800);
-}
-.vp-footer-wrapper{
-    background-color: var(--surface-100) !important;
+.vp-features {
+  margin: 1.5rem 0;
 }
 
-.vp-footer{
-    margin: 3rem 1rem;
+#contact,
+.vp-feature-item {
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--p-green-800);
+}
+.vp-footer-wrapper {
+  background-color: var(--surface-100) !important;
 }
 
-.vp-article-title span{
-    background-color: #669eff;
-    padding: 4px;
-    border-radius: 4px;
+.vp-footer {
+  margin: 3rem 1rem;
+}
+
+.vp-article-title span {
+  background-color: #669eff;
+  padding: 4px;
+  border-radius: 4px;
 }
 
 .vp-sidebar {
-    padding-inline-start: revert;
+  padding-inline-start: revert;
 }
 
-.vp-blogger-info, .vp-page-meta{
-    display: none;
+.vp-blogger-info,
+.vp-page-meta {
+  display: none;
 }
 
-
-.p-image img{
- border-radius:53% 47% 86% 14% / 54% 65% 35% 46%;
- padding:4px;
+.p-image img {
+  border-radius: 53% 47% 86% 14% / 54% 65% 35% 46%;
+  padding: 4px;
 }
 
-.p-carousel-indicator-list{
-    display: none !important;
+.p-carousel-indicator-list {
+  display: none !important;
 }
 
-.p-button-secondary{
-    border: 0 !important;
+.p-button-secondary {
+  border: 0 !important;
 }
-.p-accordionheader, .p-accordionpanel, .p-accordioncontent-content{
-    background: var(--bg-color) !important;
-    border-color: var(--p-green-800) !important;
-    color: var(--text-color) !important;
+.p-accordionheader,
+.p-accordionpanel,
+.p-accordioncontent-content,
+.p-tabview-tablist,
+.p-tabview-panels,
+.p-tabview-tab-header,
+.p-tabview-tablist-item {
+  background: var(--bg-color) !important;
+  border-color: var(--p-green-800) !important;
+  color: var(--text-color) !important;
 }
-
 
 .custom-button {
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    border: none;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border: none;
 }
 
 .circle {
-    width: 24px;
-    height: 24px;
-    background-color: var(--bg-color);
-    /* Adjust to match the desired color */
-    border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background-color: var(--bg-color);
+  /* Adjust to match the desired color */
+  border-radius: 50%;
+}
+
+/* Style for horizontal tabs container */
+.horizontal-tabs .p-tabview-nav {
+  display: flex;
+  /* Use flexbox for tabs */
+  flex-direction: row;
+  /* Align tabs horizontally */
+  margin-bottom: 1rem;
+  /* Add space below the tabs */
+}
+
+/* Style for individual tab headers */
+.horizontal-tabs .p-tabview-nav li {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Highlight active tab */
+.horizontal-tabs .p-tabview-nav li.p-highlight {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Style for the tab content */
+.horizontal-tabs .p-tabview-panel {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
 }

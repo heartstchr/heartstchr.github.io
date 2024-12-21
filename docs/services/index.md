@@ -23,6 +23,7 @@ copyright: false
         </a>
     </div>
 </div>
+
 <div class="flex flex-wrap md:gap-4 gap-2">
     <div class="grid my-6 md:col-6 p-0" :class="[{ 'md:col-12' : (index === services.length-1 || index === 0 || index === 5) }]" v-for= "(service, index) in services" :id="service.code">
         <div class="shadow-1 col-12 border-round-2xl vp-feature-item p-0" itemscope itemtype="https://schema.org/SoftwareApplication">
