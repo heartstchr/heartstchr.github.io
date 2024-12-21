@@ -47,7 +47,7 @@ copyright: false
   <div class="card relative">
     <Carousel :value="projects" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" class="flex">
         <template #item="slotProps">
-            <div class="border border-surface-200 shadow-1 border-round-md rounded m-2 p-2 flex flex-column align-self-center align-items-center justify-content-center" >
+            <div class="border border-surface-200 shadow-1 border-round-md rounded md:m-2 md:p-2 flex flex-column align-self-center align-items-center justify-content-center" >
                 <div class="mb-2 image-box" v-if=slotProps.data.images[0]>
                     <div class="relative mx-auto w-13rem h-10rem overflow-hidden" >
                         <img :src="slotProps.data.images[0].itemImageSrc" :alt="slotProps.data.images[0].alt" class="w-full rounded"/>
@@ -159,7 +159,7 @@ copyright: false
         <div v-for="question in questions" :key="question.id" class="my-2">
           <div class="flex flex-column m-1 gap-2">
             <div class="font-medium text-xl">Q: {{ question.question }}</div>
-            <div class="text-md"><span class="font-medium text-xl">A:</span> {{ question.answer }}</div>
+            <div class="text-md"><span class="font-medium text-xl"></span> {{ question.answer }}</div>
           </div>
         </div>
         <div class="my-4">
@@ -209,75 +209,6 @@ let autoplayTimer = null;
 
 const projects = ref([
     {
-        name: " Upstox: Partner Dashboard",
-        description: "Open a sub-broker account with Upstox.",
-        skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS"],
-        software: "Web",
-        features: [
-            {
-                name:'Refer and earn program'
-            },
-            {
-                name:'Track lead refered'
-            },
-            {
-                name:'Ambasador program'
-            },
-            {
-                name:'Royalty program'
-            },
-            {
-                name:'Track customer refered'
-            },
-            {
-                name:'Dashboard to show earning based on the program'
-            },
-            {
-                name:'Search by name and UCC'
-            },
-            {
-                name:'Earning report based on the customer trade'
-            },
-        ],
-        org: "Upstox",
-        year: "2018",
-        schema: "https://schema.org/BusinessApplication",
-        link: "https://upstox.com/sub-broker/",
-        images: [
-          {
-              itemImageSrc: '/img/projects/partnerUpstox/dashboard.png',
-              thumbnailImageSrc: '/img/projects/partnerUpstox/dashboard.png',
-              alt: 'Open a sub-broker account with Upstox.',
-              title: 'Open a sub-broker account with Upstox.'
-          },
-          {
-              itemImageSrc: '/img/projects/partnerUpstox/partnerUpstox.png',
-              thumbnailImageSrc: '/img/projects/partnerUpstox/partnerUpstox.png',
-              alt: 'Open a sub-broker account with Upstox.',
-              title: 'Open a sub-broker account with Upstox.'
-          },
-          
-          {
-              itemImageSrc: '/img/projects/partnerUpstox/leads.png',
-              thumbnailImageSrc: '/img/projects/partnerUpstox/leads.png',
-              alt: 'Open a sub-broker account with Upstox.',
-              title: 'Open a sub-broker account with Upstox.'
-          },
-          {
-              itemImageSrc: '/img/projects/partnerUpstox/customer.png',
-              thumbnailImageSrc: '/img/projects/partnerUpstox/customer.png',
-              alt: 'Open a sub-broker account with Upstox.',
-              title: 'Open a sub-broker account with Upstox.'
-          },
-          {
-              itemImageSrc: '/img/projects/partnerUpstox/earning.png',
-              thumbnailImageSrc: '/img/projects/partnerUpstox/earning.png',
-              alt: 'Open a sub-broker account with Upstox.',
-              title: 'Open a sub-broker account with Upstox.'
-          },
-        ],
-    },
-    {
         name: "Upstox: Open Demat Account",
         description: "Open a Demat Account Online: Demat Account Opening at Upstox",
         skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS","Digital Ocean"],
@@ -315,6 +246,48 @@ const projects = ref([
                 },
             ],
     },
+    {
+        name: "Trokka Attraction",
+        description: "Book Attractions and Tours for Your Next Holiday",
+        skills: ["Javascript", "ES6", "VueJs", "Vuex","Axios","API integration",   "ExpressJS", "MongoDB", "Git", "EC2"],
+        software: "Web",
+        features: [
+            {
+                name:'Show Tours and Attraction of Malaysia'
+            },
+            {
+                name:'Popular activities based on rating and demand'
+            },
+            {
+                name:'Activities and details based on location'
+            },
+            {
+                name:'Book and share attractions for other people'
+            },
+            {
+                name:'Discount system based on promo code'
+            },
+            {
+                name:'Paymnet system using Boost wallet and other payment methods'
+            },
+            {
+                name:'Custome CMS Backend system to add, update, delete tours and attractions'
+            },
+        ],
+        org: "Catch That Bus",
+        year: "2019",
+        schema: "https://schema.org/DeveloperApplication",
+        link: "/projects/#Trokka Attraction",
+        images: [
+                {
+                    itemImageSrc: '/img/projects/trokka.gif',
+                    thumbnailImageSrc: '/img/projects/trokka.gif',
+                    alt: 'Trokka.com | Book Attractions and Tours for Your Next Holiday',
+                    title: 'Trokka.com | Book Attractions and Tours for Your Next Holiday'
+                },
+            ],
+    },
+    
     {
         name: "Call Matrix",
         description: "Call Intelligence, Marketing, and Analytics Platform",
@@ -359,47 +332,6 @@ const projects = ref([
                     thumbnailImageSrc: '/img/projects/callmatrix.png',
                     alt: 'CallMatrix - Call Intelligence, Marketing, and Analytics Platform',
                     title: 'Title 1'
-                },
-            ],
-    },
-    {
-        name: "Trokka Attraction",
-        description: "Book Attractions and Tours for Your Next Holiday",
-        skills: ["Javascript", "ES6", "VueJs", "Vuex","Axios","API integration",   "ExpressJS", "MongoDB", "Git", "EC2"],
-        software: "Web",
-        features: [
-            {
-                name:'Show Tours and Attraction of Malaysia'
-            },
-            {
-                name:'Popular activities based on rating and demand'
-            },
-            {
-                name:'Activities and details based on location'
-            },
-            {
-                name:'Book and share attractions for other people'
-            },
-            {
-                name:'Discount system based on promo code'
-            },
-            {
-                name:'Paymnet system using Boost wallet and other payment methods'
-            },
-            {
-                name:'Custome CMS Backend system to add, update, delete tours and attractions'
-            },
-        ],
-        org: "Catch That Bus",
-        year: "2019",
-        schema: "https://schema.org/DeveloperApplication",
-        link: "/projects/#Trokka Attraction",
-        images: [
-                {
-                    itemImageSrc: '/img/projects/trokka.gif',
-                    thumbnailImageSrc: '/img/projects/trokka.gif',
-                    alt: 'Trokka.com | Book Attractions and Tours for Your Next Holiday',
-                    title: 'Trokka.com | Book Attractions and Tours for Your Next Holiday'
                 },
             ],
     },
@@ -467,10 +399,74 @@ const projects = ref([
             ],
     },
     {
-      name: "See All",
-      images: [],
-      link:"/projects/"
-    }
+        name: "Upstox: Partner Dashboard",
+        description: "Open a sub-broker account with Upstox.",
+        skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS"],
+        software: "Web",
+        features: [
+            {
+                name:'Refer and earn program'
+            },
+            {
+                name:'Track lead refered'
+            },
+            {
+                name:'Ambasador program'
+            },
+            {
+                name:'Royalty program'
+            },
+            {
+                name:'Track customer refered'
+            },
+            {
+                name:'Dashboard to show earning based on the program'
+            },
+            {
+                name:'Search by name and UCC'
+            },
+            {
+                name:'Earning report based on the customer trade'
+            },
+        ],
+        org: "Upstox",
+        year: "2018",
+        schema: "https://schema.org/BusinessApplication",
+        link: "https://upstox.com/sub-broker/",
+        images: [
+          {
+              itemImageSrc: '/img/projects/partnerUpstox/dashboard.png',
+              thumbnailImageSrc: '/img/projects/partnerUpstox/dashboard.png',
+              alt: 'Open a sub-broker account with Upstox.',
+              title: 'Open a sub-broker account with Upstox.'
+          },
+          {
+              itemImageSrc: '/img/projects/partnerUpstox/partnerUpstox.png',
+              thumbnailImageSrc: '/img/projects/partnerUpstox/partnerUpstox.png',
+              alt: 'Open a sub-broker account with Upstox.',
+              title: 'Open a sub-broker account with Upstox.'
+          },
+          
+          {
+              itemImageSrc: '/img/projects/partnerUpstox/leads.png',
+              thumbnailImageSrc: '/img/projects/partnerUpstox/leads.png',
+              alt: 'Open a sub-broker account with Upstox.',
+              title: 'Open a sub-broker account with Upstox.'
+          },
+          {
+              itemImageSrc: '/img/projects/partnerUpstox/customer.png',
+              thumbnailImageSrc: '/img/projects/partnerUpstox/customer.png',
+              alt: 'Open a sub-broker account with Upstox.',
+              title: 'Open a sub-broker account with Upstox.'
+          },
+          {
+              itemImageSrc: '/img/projects/partnerUpstox/earning.png',
+              thumbnailImageSrc: '/img/projects/partnerUpstox/earning.png',
+              alt: 'Open a sub-broker account with Upstox.',
+              title: 'Open a sub-broker account with Upstox.'
+          },
+        ],
+    },
 ]);
 const responsiveOptions = ref([
     {

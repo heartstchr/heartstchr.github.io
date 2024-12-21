@@ -20,8 +20,9 @@
     "vuepress-theme-hope": "2.0.0-rc.38"
   },
   "dependencies": {
+    "@primevue/themes": "^4.2.5",
     "primeflex": "^3.3.1",
     "primeicons": "^7.0.0",
-    "primevue": "^3.52.0"
+    "primevue": "^4.2.5"
   }
 }
