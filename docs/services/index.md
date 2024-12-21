@@ -44,6 +44,32 @@ copyright: false
     </div>
 </div>
 
+<!-- Contact Me -->
+<div class="border-round-md vp-feature-item" id="contact">
+  <div class="text-center pb-4">
+    <div class="my-4 text-md">Let's work together!</div>
+  </div>
+  <div class="my-4 text-center text-xl">
+    Ready to turn your vision into reality? Let’s discuss how I can help you achieve your goals.
+  </div>
+  <div class="my-4">
+    <a href="mailto:jiwan.cse@gmail.com" size="large" color="deeppink" class="flex justify-content-center text-center no-underline"> 
+      <Button label="Hire Now" icon="pi pi-briefcase" severity="primary" raised rounded />
+    </a>
+  </div>
+  <div class="flex flex-row justify-content-end flex-wrap gap-4 mx-6">
+    <a
+      v-for="(socialElement, socialIndex) in social"
+      :key="socialIndex"
+      :href="socialElement.url"
+      target="_blank"
+      class="flex flex-row gap-2"
+      >
+      <i :class="socialElement.icon" style="font-size: 1rem"></i>
+      </a>
+  </div>
+</div>
+
 <script setup lang="ts">
 const services = [
     {
