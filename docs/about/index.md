@@ -11,7 +11,7 @@ copyright: false
     <div class="md:col-6 col-12">
       <div class="my-4 text-md"> Diverse skill set and a passion for continuous exploration and creativity.</div>
       <div class="my-4 text-md">
-      With extensive experience in full-stack development, I excels in both backend and frontend technologies, making significant contributions to various projects within the tech industry.</div>
+      With extensive experience in full-stack development, I excels in both <a href="#Frontend Technologies" class="no-underline">frontend technologies</a> and <a href="#Backend Technologies" class="no-underline">backend</a>, making significant contributions to various <a href="/projects/" class="no-underline">projects</a> within the tech industry.</div>
       <div class="my-4 text-md">
       My expertise spans all stages of agile software development, from planning and implementation to testing, monitoring, and delivery.</div>
       <div class="my-4 text-md">
@@ -39,7 +39,7 @@ copyright: false
   </div>
   <div class="flex flex-wrap gap-4">
     <div v-for="(category, key) in technologies" :key="key" class='grid md:col-6' 
-    :class="[{ 'md:col-12' : key === 'otherTools' }]">
+    :class="[{ 'md:col-12' : key === 'otherTools' }]" :id="category.title">
       <div class="shadow-1 border-round-md vp-feature-item">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 50 1440 320"><path fill="#10b981" fill-opacity="0.1" d="M0,128L40,144C80,160,160,192,240,192C320,192,400,160,480,160C560,160,640,192,720,176C800,160,880,96,960,80C1040,64,1120,96,1200,144C1280,192,1360,256,1400,288L1440,320L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
         <div class="px-2 gap-2">
@@ -63,18 +63,38 @@ copyright: false
   </div>
 </div>
 
-<div class="my-6">
+<!-- Certificate -->
+<div class="my-6" id="stack">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 60 1440 320"><path fill="#10b981" fill-opacity="0.1" d="M0,128L40,144C80,160,160,192,240,192C320,192,400,160,480,160C560,160,640,192,720,176C800,160,880,96,960,80C1040,64,1120,96,1200,144C1280,192,1360,256,1400,288L1440,320L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
   <div class="text-center pb-4">
-    <div class="text-4xl font-bold">A Little More About Me</div>
-    <div class="my-4 text-md">When I’m not coding, I enjoy creating tech tutorials for my YouTube channel Stack Seekers, exploring the latest in mobile technology, and <a href="https://www.youtube.com/@JiwanGhosal" target="_blank" class="no-underline">traveling</a> to discover new cultures and ideas.</div>
+    <div class="text-4xl font-bold">Certificate of Achievement</div>
   </div>
+  <div class="flex flex-wrap gap-4 p-4">
+      <Galleria :value="certificate.images" :responsiveOptions="responsiveOptions" :numVisible="5" :circular="true" :showItemNavigators="true" :showThumbnails="false">
+          <template #item="slotProps">
+              <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
+          </template>
+          <template #thumbnail="slotProps">
+              <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="display: block" />
+          </template>
+      </Galleria>
+      <img src="/img/about/JiwanGhosalMicrosoftAz900.png" width="100%" />
+  </div>
+</div>
+
+<div class="my-6">
+  
 </div>
 
 <!-- Contact Me -->
 <div class="border-round-md vp-feature-item" id="contact">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 60 1440 320"><path fill="#10b981" fill-opacity="0.1" d="M0,128L40,144C80,160,160,192,240,192C320,192,400,160,480,160C560,160,640,192,720,176C800,160,880,96,960,80C1040,64,1120,96,1200,144C1280,192,1360,256,1400,288L1440,320L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
   <div>
-    <div class="text-center pb-4">
+    <div class="text-center px-4">
+      <div class="text-4xl font-bold">A Little More About Me</div>
+      <div class="my-4 text-md">When I’m not coding, I enjoy creating tech tutorials for my YouTube channel <a href="https://www.youtube.com/@stackseekers" target="_blank" class="no-underline">Stack Seekers</a>, exploring the latest in mobile technology, and <a href="https://www.youtube.com/@JiwanGhosal" target="_blank" class="no-underline">traveling</a> to discover new cultures and ideas.</div>
+    </div>
+    <div class="text-center py-4">
       <div class="my-4 text-md">Let's work together!</div>
     </div>
     <div class="mx-4 text-center text-xl">
@@ -82,7 +102,7 @@ copyright: false
     </div>
     <div class="my-4">
       <a href="mailto:jiwan.cse@gmail.com" size="large" color="deeppink" class="flex justify-content-center text-center no-underline"> 
-        <Button label="Hire Now!" icon="pi pi-briefcase" severity="primary" raised rounded />
+        <Button label="Make It Happen!" icon="pi pi-briefcase" severity="primary" raised rounded />
       </a>
     </div>
     <div class="flex flex-row justify-content-end flex-wrap gap-4 mx-6">
@@ -101,7 +121,47 @@ copyright: false
 </div>
 
 <script setup lanf="ts">
-  
+  import { ref } from "vue";
+  const certificate = ref([
+    {
+        name: "certificate",
+        images: [
+                {
+                    itemImageSrc: '/img/about/JiwanGhosalMicrosoftAz900.png',
+                    thumbnailImageSrc: '/img/about/JiwanGhosalMicrosoftAz900.png',
+                    alt: 'Jiwan Ghosal Microsoft Az900',
+                    title: 'Jiwan Ghosal Microsoft Az900'
+                },
+                {
+                    itemImageSrc: '/img/about/connectedManager.png',
+                    thumbnailImageSrc: '/img/about/connectedManager.png',
+                    alt: 'Connected Manager',
+                    title: 'Connected Manager'
+                },
+            ],
+    }])
+  const responsiveOptions = ref([
+    {
+        breakpoint: '1400px',
+        numVisible: 1,
+        numScroll: 1
+    },
+    {
+        breakpoint: '1199px',
+        numVisible: 1,
+        numScroll: 1
+    },
+    {
+        breakpoint: '767px',
+        numVisible: 1,
+        numScroll: 1
+    },
+    {
+        breakpoint: '575px',
+        numVisible: 1,
+        numScroll: 1
+    }
+]);
   const technologies = {
   frontend: {
     title: "Frontend Technologies",

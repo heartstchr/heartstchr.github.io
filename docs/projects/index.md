@@ -12,7 +12,7 @@ copyright: false
     <div>If you’re searching for a professional who can bring your vision to life with precision and creativity, you’ve come to the right place.</div>
     <div>
         <a href="https://cal.com/stackseekers" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
-            <Button label="Let’s build something extraordinary together!" icon="pi pi-calendar-clock" severity="primary" raised rounded />
+            <Button label="Build Your Vision with Us!" icon="pi pi-calendar-clock" severity="primary" raised rounded />
         </a>
     </div>
 </div>

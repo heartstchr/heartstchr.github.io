@@ -19,7 +19,7 @@ copyright: false
   My focus is always on delivering high-quality, personalized solutions. By understanding your specific needs and goals, I create digital experiences that truly resonate with your target audience. Let’s explore the many ways I can help you succeed in the digital space.</div>
   <div>
         <a href="https://cal.com/stackseekers" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
-            <Button label="Schedule Meeting" icon="pi pi-calendar-clock" severity="primary" raised rounded />
+            <Button label="Book Your Free Consultation!" icon="pi pi-calendar-clock" severity="primary" raised rounded />
         </a>
     </div>
 </div>
@@ -32,11 +32,11 @@ copyright: false
                     <span itemprop="name">{{service.name}}</span>
                 </div>
                 <Image v-if="service.code" :src="`/img/service/${service.code}.jpeg`" class="" :alt="service.name" width="100%"/>
-                <div class="mt-4 flex flex-column gap-2">
+                <div class="my-4 flex flex-column gap-2">
                     <link itemprop="applicationCategory" :href="service.schema" />
                     <div itemprop="name">{{service.description}}</div>
                     <a href="mailto:jiwan.cse@gmail.com" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
-                    <Button label="Hire Now" icon="pi pi-briefcase" severity="primary" raised rounded />
+                    <Button label="Book Now!" icon="pi pi-briefcase" severity="primary" raised rounded />
                     </a>
                 </div>
             </div>
@@ -56,7 +56,7 @@ copyright: false
     </div>
     <div class="my-4">
       <a href="mailto:jiwan.cse@gmail.com" size="large" color="deeppink" class="flex justify-content-center text-center no-underline"> 
-        <Button label="Tell Us What You Need – We’ll Handle the Rest!" icon="pi pi-briefcase" severity="primary" raised rounded />
+        <Button label="Tell Us Your Needs!" icon="pi pi-briefcase" severity="primary" raised rounded />
       </a>
     </div>
     <div class="flex flex-row justify-content-end flex-wrap gap-4 mx-6">
