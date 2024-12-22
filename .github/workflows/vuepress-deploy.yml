@@ -19,10 +19,10 @@ jobs:
           # if your docs needs submodules, uncomment the following line
           # submodules: true
       - name: Print secrets
-        run: echo "${{secrets}}"
+        run: echo "${{secrets.VITE_YOUTUBE_API_KEY}}"
 
       - name: Print env
-        run: echo "${{env}}"
+        run: echo "${{env.VITE_YOUTUBE_CHANNEL_ID}}"
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
@@ -44,6 +44,8 @@ jobs:
       - name: Build Docs
         env:
           NODE_OPTIONS: --max_old_space_size=8192
+          VITE_YOUTUBE_API_KEY: ${{secrets.VITE_YOUTUBE_API_KEY}}
+          VITE_YOUTUBE_CHANNEL_ID: ${{secrets.VITE_YOUTUBE_CHANNEL_ID}}
         run: |-
           pnpm run docs:build
           > docs/.vuepress/dist/.nojekyll
