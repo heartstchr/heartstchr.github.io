@@ -18,8 +18,11 @@ jobs:
           fetch-depth: 0
           # if your docs needs submodules, uncomment the following line
           # submodules: true
-      - name: Print API and chanelID
-        run: echo " My API_KEY is ${{secrets}} and ${{env}} "
+      - name: Print secrets
+        run: echo "${{secrets}}"
+
+      - name: Print env
+        run: echo "${{env}}"
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
