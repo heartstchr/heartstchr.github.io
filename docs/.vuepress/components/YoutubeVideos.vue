@@ -1,5 +1,9 @@
 <template>
-    <div v-if="videos.length === 0">Loading videos...</div>
+    <div v-if="videos.length === 0">
+        <a href="https://www.youtube.com/@stackseekers" target="_blank">
+            <Button label="Watch on youtube" icon="pi pi-youtube" iconPos="left" class="w-full" raised rounded />
+        </a>
+    </div>
     <div v-else class="flex flex-row flex-wrap md:gap-4 gap-1">
         <div v-for="video in videos" :key="video.id.videoId" class="grid my-6 md:col-6 p-0">
             <Card class="shadow-1 vp-feature-item m-1">
@@ -13,7 +17,8 @@
                 <template #footer>
                     <div class="flex gap-3 m-1 align-content-end">
                         <a :href="'https://www.youtube.com/watch?v=' + video.id" target="_blank">
-                            <Button label="Watch on youtube" icon="pi pi-youtube" iconPos="left" class="w-full" raised rounded/>
+                            <Button label="Watch on youtube" icon="pi pi-youtube" iconPos="left" class="w-full" raised
+                                rounded />
                         </a>
                     </div>
                 </template>
