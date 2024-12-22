@@ -19,14 +19,14 @@ copyright: false
 ---
 
 <div class="hidden">
-  <div class="text-4xl font-bold">Scaling Startups, Elevating Industry Giants</div>
+  <div class="text-4xl font-bold">Scaling startups, Elevating Industry Giants</div>
   <div class="my-4 text-xl">Experienced full-stack developer specializing in scalable web, mobile, and software solutions.</div>
 </div>
 
 <div class="my-6">
   <div class="text-center pb-4">
-    <div class="text-4xl font-bold">Scaling Startups</div>
-    <a class="text-4xl font-bold no-underline">Elevating Industry Giants</a>
+    <div class="text-4xl font-bold">Scaling startups</div>
+    <a class="text-4xl font-bold no-underline">Elevating industry giants</a>
     <div class="my-4 text-xl">I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development</div>
   </div>
   <div class="my-4 flex flex-column md:flex-row justify-content-center">
@@ -151,7 +151,7 @@ copyright: false
 <!-- FAQ -->
 <div class="my-6">
   <div class="text-center pb-4">
-    <div class="text-4xl font-bold">Frequently Asked <a class="no-underline">Questions</a></div>
+    <div class="text-4xl font-bold">Frequently asked <a class="no-underline">questions</a></div>
   </div>
   <div class="grid overflow-hidden border-round-2xl">
     <div class="col-12 ">
@@ -186,7 +186,7 @@ copyright: false
         </Accordion>
         <div class="my-4">
           <a href="https://cal.com/stackseekers" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
-            <Button label="Discuss Your Project" icon="pi pi-calendar-clock" severity="primary" raised rounded/>
+            <Button label="Discuss your project" icon="pi pi-calendar-clock" severity="primary" raised rounded/>
           </a>
         </div>
       </div>
@@ -199,7 +199,7 @@ copyright: false
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 60 1440 260"><path fill="#10b981" fill-opacity="0.1" d="M0,128L40,144C80,160,160,192,240,192C320,192,400,160,480,160C560,160,640,192,720,176C800,160,880,96,960,80C1040,64,1120,96,1200,144C1280,192,1360,256,1400,288L1440,320L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
   <div>
     <div class="text-center pb-4">
-      <div class="text-4xl font-bold">Contact Me</div>
+      <div class="text-4xl font-bold">Contact me</div>
       <div class="my-4 text-md">Let's work together!</div>
     </div>
     <div class="mx-4 text-center text-xl">
@@ -207,7 +207,7 @@ copyright: false
     </div>
     <div class="my-4">
       <a href="mailto:jiwan.cse@gmail.com" size="large" color="deeppink" class="flex justify-content-center text-center no-underline"> 
-        <Button label="Let's collaborate Now" icon="pi pi-briefcase" severity="primary" raised rounded />
+        <Button label="Let's collaborate now!" icon="pi pi-briefcase" severity="primary" raised rounded />
       </a>
     </div>
     <div class="flex flex-row justify-content-end flex-wrap gap-4 mx-6">
@@ -563,7 +563,7 @@ const orgs= [
   {
     "title": "CatchThatBus",
     "icon": "/img/home/catchthatbus.png",
-    "details": "Leisure, Travel, and Tourism",
+    "details": "Leisure, travel, and tourism",
     "link": "https://www.catchthatbus.com/"
   },
   {

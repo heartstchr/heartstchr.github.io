@@ -18,6 +18,8 @@ jobs:
           fetch-depth: 0
           # if your docs needs submodules, uncomment the following line
           # submodules: true
+      - name: Print API and chanelID
+        run: echo " My API_KEY is ${{secrets.VITE_YOUTUBE_API_KEY}} and ${{secrets.VITE_YOUTUBE_CHANNEL_ID}} "
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
