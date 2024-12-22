@@ -25,7 +25,7 @@ copyright: false
 
 <div class="my-6 flex md:flex-row flex-column ">
   <div class="col-12">
-    <div class="my-4 text-4xl font-bold">I Simplify The Steps For You</div>
+    <div class="my-4 text-4xl font-bold">I will simplify the steps for you</div>
     <div class="my-4 text-md">My mission is to make the whole process much easier and understandable for you</div>
     <div class="my-4 text-md">I simplify the steps to launching a digital application minus the lingo and hype so you can get on with living the life you envisioned.</div>
     <div class="my-4 text-md">You'll finally gain the clarity and confidence you need.</div>

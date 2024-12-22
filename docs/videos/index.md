@@ -1,5 +1,5 @@
 ---
-title: Latest YouTube Videos
+title: Latest youtube videos
 order: 4
 editLink: false
 copyright: false
