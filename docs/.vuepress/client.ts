@@ -5,9 +5,9 @@ import Aura from "@primevue/themes/aura";
 import "primeicons/primeicons.css"; // icons
 import "primeflex/primeflex.css";
 import "./styles/flags.css";
+import YouTubeVideos from "./components/YoutubeVideos.vue";
 
 const MyPreset = updatePreset(Aura, {});
-
 export default defineClientConfig({
   enhance({ app }) {
     app.use(PrimeVue, {
@@ -15,5 +15,6 @@ export default defineClientConfig({
         preset: Aura,
       },
     });
+    app.component("YouTubeVideos", YouTubeVideos);
   },
 });

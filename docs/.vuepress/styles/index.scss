@@ -75,12 +75,14 @@
 .p-tabview-tablist,
 .p-tabview-panels,
 .p-tabview-tab-header,
-.p-tabview-tablist-item {
+.p-tabview-tablist-item, .p-card, .p-card-body {
   background: var(--bg-color) !important;
   border-color: var(--p-green-800) !important;
   color: var(--text-color) !important;
 }
-
+.p-card-body {
+  margin-bottom:1rem;
+}
 .custom-button {
   border-radius: 50px;
   display: flex;

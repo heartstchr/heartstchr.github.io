@@ -78,6 +78,6 @@ export const enNavbar = navbar([
   {
     text: "Videos",
     icon: "pi pi-youtube",
-    link: "https://www.youtube.com/@stackseekers",
+    link: "videos/",
   },
 ]);

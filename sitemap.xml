@@ -5,50 +5,28 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>https://heartstchr.github.io/</loc>
-  <lastmod>2020-04-13T11:19:58+00:00</lastmod>
+  <loc>https://stackseekers.com/</loc>
+  <lastmod>2024-12-21T13:48:07+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://heartstchr.github.io/blog/</loc>
-  <lastmod>2020-04-16T05:33:37+00:00</lastmod>
+  <loc>https://stackseekers.com/projects/</loc>
+  <lastmod>2024-12-21T13:48:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://heartstchr.github.io/blog/posts/ganga-aarti-in-har-ki-pauri-haridwar-uttarakhand.html</loc>
-  <lastmod>2020-04-16T05:33:37+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://stackseekers.com/services/</loc>
+  <lastmod>2024-12-21T13:48:07+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://heartstchr.github.io/blog/posts/Beauty-of-earth-Dirang-Arunachal-Pradesh-India.html</loc>
-  <lastmod>2020-04-16T05:33:37+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://stackseekers.com/about/</loc>
+  <lastmod>2024-12-21T13:48:07+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://heartstchr.github.io/blog/posts/Hayuliang-Arunachal-Pradesh-India-copy.html</loc>
-  <lastmod>2020-04-16T05:33:37+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://stackseekers.com/videos/</loc>
+  <lastmod>2024-12-21T13:48:07+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
-<url>
-  <loc>https://heartstchr.github.io/blog/posts/Road-and-River-to-Arunachal-Pradesh-India-copy.html</loc>
-  <lastmod>2020-04-16T05:33:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://heartstchr.github.io/blog/posts/material-design.html</loc>
-  <lastmod>2020-04-16T05:33:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://heartstchr.github.io/blog/posts/git-basic.html</loc>
-  <lastmod>2020-04-16T05:33:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://heartstchr.github.io/blog/posts/jekyll-up-and-running.html</loc>
-  <lastmod>2020-04-16T05:33:37+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
 </urlset>
