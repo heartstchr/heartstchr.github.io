@@ -16,29 +16,10 @@ export const enSidebar = sidebar({
       link: "services/",
     },
     { text: "About", icon: "pi pi-user", link: "/about/" },
-    // {
-    //   text: "Graphics",
-    //   icon: "creative",
-    //   prefix: "graphics/",
-    //   link: "graphics/",
-    //   children: [
-    //     {
-    //       text: "Banner",
-    //       link: "banner/",
-    //     },
-    //     {
-    //       text: "Logos",
-    //       link: "logos/",
-    //     },
-    //     {
-    //       text: "Paintings",
-    //       link: "paintings/",
-    //     },
-    //     {
-    //       text: "Vcard",
-    //       link: "vcard/",
-    //     },
-    //   ],
-    // },
+    {
+      text: "Videos",
+      icon: "pi pi-youtube",
+      link: "videos/",
+    },
   ],
 });
