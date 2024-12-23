@@ -33,7 +33,7 @@ copyright: false
     <div class="md:col col-12 border-round-md p-2 m-2 vp-feature-item flex align-items-center justify-content-center" v-for="org in orgs" :key="org.title">
       <div class="no-underline flex flex-column justify-content-center flex-wrap">
         <div class="mr-2 flex align-items-center justify-content-center">
-          <img :src="org.icon" alt="Avatar" width="80px"/>
+          <img :src="org.icon" alt="Avatar" width="80px" class="border-round-md"/>
         </div>
         <div class="text-2xl font-bold flex align-items-center justify-content-center"><span>{{org.title}}</span></div>
         <div class="text-xs flex align-items-center justify-content-center">{{org.details}}</div>
@@ -117,8 +117,25 @@ copyright: false
 <div class="my-6 flex flex-column">
   <div class="text-center pb-4">
     <div class="text-4xl font-bold">Why me?</div>
+    <div class="my-4 text-xl">Here’s why I’m the right choice for your project</div>
+  </div>
+  <div class="flex flex-wrap">
+    <div class="md:col-6 col-12 md:p-4" v-for="why in whyme" :key="why.title">  
+      <Fieldset class="vp-feature-item">
+        <template #legend>
+            <div class="flex items-center pl-2">
+                <Avatar :image="`/img/home/${why.id}.svg`" shape="circle" />
+                <span class="font-bold p-2">{{why.title}}</span>
+            </div>
+        </template>
+        <p class="m-0 pt-4">
+          {{why.description}}
+        </p>
+      </Fieldset>
+    </div>
   </div>
 </div>
+
 <div class="my-4">
   <div class="text-xl">
     I'm a full-stack developer with extensive experience in the JavaScript, VueJS, ReactJS and NodeJS ecosystems, as well as expertise in the Azure cloud platform.
@@ -135,7 +152,7 @@ copyright: false
         <div
           class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button"
         >
-          <span class="mr-6">See all stacks used</span>
+          <span class="mr-6">See all stacks</span>
           <!-- Add circular element -->
           <div class="absolute right-0 mr-5">
             <div class="circle pb-2 my-2 mx-2"></div>
@@ -682,6 +699,29 @@ const orgs= [
       code: 'nl'
     }
   ]);
+
+  const whyme =[
+    {
+      id: "proven_expertise",
+      title: "10+ Years of Proven Expertise",
+      description: "Over a decade of delivering impactful projects, consistently providing innovative solutions that drive tangible results and add measurable value for clients across industries."
+    },
+    {
+      id: "client_centric_approach",
+      title: "Client-Centric Approach",
+      description: "Focused on understanding your unique needs, I offer tailored solutions that align with your business goals, ensuring seamless collaboration and delivering the most effective value."
+    },
+    {
+      id: "wide_range_of_experience",
+      title: "20+ Clients Across Industries",
+      description: "With experience working with over 20 clients from diverse sectors, I bring versatile expertise, quickly adapting to challenges and offering solutions suited to each industry’s demands."
+    },
+    {
+      id: "commitment_to_quality_code",
+      title: "Commitment to Quality Code",
+      description: "I ensure all code is clean, scalable, and efficient by using industry-standard tools such as ESLint, Prettier, SonarQube, and Jest, delivering high-performance, maintainable, and reliable solutions."
+    }
+  ]
 
 // Function to start autoplay
 const startAutoPlay = () => {
