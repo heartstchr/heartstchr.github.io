@@ -9,16 +9,16 @@ export const enNavbar = navbar([
     link: "/services/",
     children: [
       {
-        text: "Consulting",
-        link: "services/#ConsultingAndTechnicalAdvisory",
-      },
-      {
         text: "Figma to web",
         link: "services/#FigmatoWeb",
       },
       {
         text: "E-commerce",
         link: "services/#E-commerceSolutions",
+      },
+      {
+        text: "Consulting",
+        link: "services/#ConsultingAndTechnicalAdvisory",
       },
       {
         text: "Web Development",
@@ -29,20 +29,12 @@ export const enNavbar = navbar([
         link: "services/#APIDevelopmentAndIntegration",
       },
       {
-        text: "Mobile App",
-        link: "services/#mobileAppDevelopment",
-      },
-      {
         text: "CICD",
         link: "services/#cicd",
       },
       {
         text: "Hosting",
         link: "services/#hosting",
-      },
-      {
-        text: "Domain",
-        link: "services/#domain",
       },
     ],
   },
