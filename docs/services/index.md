@@ -114,19 +114,19 @@ const services = [
             "I specialize in creating RESTful APIs, enabling seamless communication between systems and enhancing your software's functionality."]
     },
     {
+        name: "Hosting",
+        code: "hosting",
+        descriptions:[ 
+            "I offer comprehensive hosting services to ensure your applications run smoothly, securely, and efficiently. From setting up cloud infrastructure on AWS, or Azure to configuring and maintaining web servers, databases, and load balancers, I provide end-to-end solutions tailored to your needs.",
+            "My expertise in containerization with Docker and orchestration with Kubernetes ensures scalable and resilient deployments. With a focus on uptime, security, and performance, I deliver hosting solutions that enable your business to thrive in the digital landscape."]
+    },
+    {
         name: "CICD",
         code: "cicd",
         descriptions:[ 
             "I specialize in designing and optimizing CI/CD pipelines to streamline your software delivery process. Utilizing tools like Jenkins, GitLab CI, I automate builds, tests, and deployments for faster, more reliable releases.",
             "My expertise in scripting and Infrastructure as Code (IaC) enhances efficiency and scalability, allowing your development team to focus on innovation. Whether you're starting from scratch or refining existing workflows, I deliver tailored solutions that boost productivity and quality in your software projects."]
     },
-    {
-        name: "Hosting",
-        code: "hosting",
-        descriptions:[ 
-            "I offer comprehensive hosting services to ensure your applications run smoothly, securely, and efficiently. From setting up cloud infrastructure on AWS, or Azure to configuring and maintaining web servers, databases, and load balancers, I provide end-to-end solutions tailored to your needs.",
-            "My expertise in containerization with Docker and orchestration with Kubernetes ensures scalable and resilient deployments. With a focus on uptime, security, and performance, I deliver hosting solutions that enable your business to thrive in the digital landscape."]
-    }
 ]
 
 const social= [
