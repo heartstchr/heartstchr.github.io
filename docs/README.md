@@ -258,7 +258,7 @@ const events = ref([
 ]);
 const projects = ref([
     {
-        name: "Upstox: Open Demat Account",
+        name: "Upstox: Demat Account",
         description: "Open a Demat Account Online: Demat Account Opening at Upstox",
         skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS","Digital Ocean"],
         software: "Web",
