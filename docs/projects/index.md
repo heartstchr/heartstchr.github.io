@@ -442,7 +442,7 @@ const projects= [
 
 const freelance = [
     {
-        name: "Quatar Airways widget",
+        name: "Qatar Airways widget",
         description: "Book flights to destinations around the world with Qatar Airways and fly on board an award-winning airline. Enjoy special fares, collect Avios, and more.",
         skills: ["Javascript", "ES6", "Vue3","Landingi", "Pinia","Vite","Axios","Express",   "API integration", "MongoDB", "Git", "EC2", "Eslint", "Prettier"],
         software: "Web",
