@@ -176,9 +176,17 @@
   padding: 0 !important; /* Add padding to the content */
 }
 .p-tabview-vertical .p-tabview-tab-header{
-  padding: 1rem 0;
+  padding: 1rem 1.5rem 1rem .5rem;
   margin-bottom: 4px;
+  border-radius: 4px;
+  box-shadow: var(--p-button-raised-shadow);
+  background: var(--p-button-secondary-background)
 }
 .p-tabview-vertical .p-tabview-tablist-item {
   border-radius: 16px;
+  background: var(--p-button-secondary-background)
+}
+
+.p-tabview-vertical .p-tabview-panels {
+  padding: 0 ;
 }
