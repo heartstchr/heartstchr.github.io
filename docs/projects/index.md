@@ -28,7 +28,7 @@ copyright: false
                         <div>
                             <div itemprop="name" class="text-4xl font-bold">{{project.name}}</div> 
                             <div class="text-xl mt-2" itemprop="operatingSystem">
-                                {{project.software}} <span class="text-sm mt-2" >({{project.year}})</span><span class="text-sm mt-2" > - {{project.org}}</span>
+                                {{project.software}} <span class="text-sm mt-2 font-italic" >({{project.year}})</span><span class="text-sm mt-2" > - {{project.org}}</span> <span class="text-sm mt-2 font-italic" > - {{project.domain}}</span>
                             </div>
                         </div>
                         <div class="flex md:flex-row flex-column" itemscope itemtype="https://schema.org/SoftwareApplication">
@@ -85,7 +85,7 @@ copyright: false
                     <div class="px-4">
                         <div>
                             <div itemprop="name" class="text-4xl font-bold">{{project.name}}</div> 
-                            <div class="text-xl mt-2" itemprop="operatingSystem">{{project.software}} <span class="text-sm mt-2" >({{project.year}})</span><span class="text-sm mt-2" > - {{project.org}}</span></div>
+                            <div class="text-xl mt-2" itemprop="operatingSystem">{{project.software}} <span class="text-sm mt-2" >({{project.year}})</span><span class="text-sm mt-2" > - {{project.domain}}</span></div>
                         </div>
                         <div class="flex md:flex-row flex-column" itemscope itemtype="https://schema.org/SoftwareApplication">
                             <div class="md:col-6 col-12">
@@ -183,6 +183,7 @@ const projects= [
         ],
         org: "Catch That Bus",
         year: "2019",
+        domain: "Leisure, travel, and tourism",
         schema: "https://schema.org/DeveloperApplication",
         // link: "https://m.trokka.com/attraction",
         images: [
@@ -239,6 +240,7 @@ const projects= [
         ],
         org: "Catch That Bus",
         year: "2019",
+        domain: "Leisure, travel, and tourism",
         schema: "https://schema.org/DeveloperApplication",
         // link: "https://m.catchthatbus.com",
         iosLink: "https://apps.apple.com/my/app/catchthatbus/id1025824078",
@@ -290,6 +292,7 @@ const projects= [
         ],
         org: "Upstox",
         year: "2018",
+        domain: "Fintech",
         schema: "https://schema.org/BusinessApplication",
         link: "https://upstox.com/sub-broker/",
         images: [
@@ -352,6 +355,7 @@ const projects= [
         ],
         org: "Upstox",
         year: "2017",
+        domain: "Fintech",
         schema: "https://schema.org/BusinessApplication",
         link: "https://upstox.com/open-demat-account/",
         images: [
@@ -399,6 +403,7 @@ const projects= [
         ],
         org: "Mobistreak",
         year: "2015",
+        domain: "Digital Marketing",
         schema: "https://schema.org/BusinessApplication",
         link: "https://callmatrix.io/",
         images: [
@@ -434,6 +439,7 @@ const freelance = [
         ],
         org: "TUI",
         year: "2021",
+        domain: "Leisure, travel, and tourism",
         schema: "https://schema.org/DeveloperApplication",
         link: "https://www.qatarairways.com/en-us/homepage.html",
         images: [
@@ -487,6 +493,7 @@ const freelance = [
         ],
         org: "Freelance",
         year: "2020",
+        domain: "Food Blogging",
         schema: "https://schema.org/DeveloperApplication",
         link: "http://recipes-client.s3-website.ap-south-1.amazonaws.com/",
         codeLink: "https://github.com/heartstchr/recipe",
@@ -529,6 +536,7 @@ const freelance = [
         ],
         org: "Freelance",
         year: "2020",
+        domain: "Entertainment",
         schema: "https://schema.org/DeveloperApplication",
         link: "https://heartstchr.github.io/tvmaze/",
         codeLink: "https://github.com/heartstchr/tvshows",
@@ -597,6 +605,7 @@ const freelance = [
         ],
         org: "Freelance",
         year: "2020",
+        domain: "Ed Tech",
         skills: ["Inquirer", "Commander", "Plop", "Eslint", "Prettier"],
         schema: "https://schema.org/DeveloperApplication",
         codeLink: "https://github.com/heartstchr/dic",
@@ -624,6 +633,7 @@ const freelance = [
         ],
         org: "Freelance",
         year: "2016",
+        domain: "Fintech",
         schema: "https://schema.org/BusinessApplication",
         codeLink: "https://github.com/heartstchr/StockMarket",
         images: [
