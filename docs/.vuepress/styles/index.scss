@@ -156,6 +156,7 @@
 .p-tabview-vertical .p-tabview-tablist{
   display: flex;
   flex-direction: column !important;
+  border: 0;
 }
 .p-tabview-vertical .p-tabview-nav {
   /* Arrange tabs vertically */
