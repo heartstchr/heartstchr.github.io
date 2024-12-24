@@ -11,7 +11,7 @@ copyright: false
     <div class="md:col-6 col-12">
       <div class="my-4 text-md"> Diverse skill set and a passion for continuous exploration and creativity.</div>
       <div class="my-4 text-md">
-      With extensive experience in full-stack development, I excels in both <a href="#Frontend Technologies" class="no-underline">frontend technologies</a> and <a href="#Backend Technologies" class="no-underline">backend</a>, making significant contributions to various <a href="/projects/" class="no-underline">projects</a> within the tech industry.</div>
+      With extensive experience in full-stack development, I excel in both <a href="#Frontend Technologies" class="no-underline">frontend technologies</a> and <a href="#Backend Technologies" class="no-underline">backend</a>, making significant contributions to various <a href="/projects/" class="no-underline">projects</a> within the tech industry.</div>
       <div class="my-4 text-md">
       My expertise spans all stages of agile software development, from planning and implementation to testing, monitoring, and delivery.</div>
       <div class="my-4 text-md">
