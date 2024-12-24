@@ -1,5 +1,5 @@
 ---
-title: Projects
+title: My Projects
 icon: discover
 order: 2
 lastUpdated: false
@@ -7,7 +7,7 @@ editLink: false
 copyright: false
 ---
 
-<div class="flex flex-column gap-4 my-6">
+<div class="flex flex-column gap-4 my-6 line-height-4">
     <div>Here, you’ll find a showcase of some of my featured projects, highlighting my expertise and passion for creating meaningful digital experiences. These projects reflect my ability to turn ideas into reality, tailored to meet each client’s unique needs.</div>
     <div>If you’re searching for a professional who can bring your vision to life with precision and creativity, you’ve come to the right place.</div>
     <div>
@@ -28,16 +28,16 @@ copyright: false
                         <div>
                             <div itemprop="name" class="text-4xl font-bold">{{project.name}}</div> 
                             <div class="text-xl mt-2" itemprop="operatingSystem">
-                                {{project.software}} <span class="text-sm mt-2 font-italic" >({{project.year}})</span><span class="text-sm mt-2" > - {{project.org}}</span> <span class="text-sm mt-2 font-italic" > - {{project.domain}}</span>
+                                {{project.software}} <span class="text-sm mt-2" > - {{project.org}}</span> <span class="text-sm mt-2 font-italic" > - {{project.domain}}</span> <a class="text-sm mt-2 font-italic no-underline" >({{project.year}})</a>
                             </div>
                         </div>
                         <div class="flex md:flex-row flex-column" itemscope itemtype="https://schema.org/SoftwareApplication">
                             <div class="md:col-6 col-12">
-                                <div class="my-2 text-xl">{{project.description}}</div>
+                                <div class="my-2 text-xl line-height-3">{{project.description}}</div>
                                 <div class="flex flex-column mt-4 p-2" v-if="project.features">
                                     <div class="my-2 text-l">Features</div>
                                     <ul class="my-2 text-sm" v-for="feature in project.features">
-                                        <li>{{feature.name}}</li>
+                                        <li class="line-height-3">{{feature.name}}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -57,8 +57,8 @@ copyright: false
                         </div>
                     </diV>
                     <div class="flex flex-column mt-4 p-4">
-                        <div class="my-2 text-l">Stack Used</div>
-                        <div class="flex grid mt-4 p-2">
+                        <div class="mt-2 text-l">Stack Used</div>
+                        <div class="flex grid mt-4 px-2">
                             <Tag style="border: 2px solid var(--border-color); background: transparent; color: var(--text-color)" v-for="part in project.skills" :key="part" :value="part" class="m-1">
                                 <div class="flex items-center gap-2 px-1">
                                     <i class="pi pi-cog" style="font-size: 1rem"></i>
@@ -85,10 +85,13 @@ copyright: false
                     <div class="px-4">
                         <div>
                             <div itemprop="name" class="text-4xl font-bold">{{project.name}}</div> 
-                            <div class="text-xl mt-2" itemprop="operatingSystem">{{project.software}} <span class="text-sm mt-2" >({{project.year}})</span><span class="text-sm mt-2" > - {{project.domain}}</span></div>
+                            <div class="text-xl mt-2" itemprop="operatingSystem">
+                            {{project.software}} 
+                            <span class="text-sm mt-2" > - {{project.domain}}</span> <a class="text-sm mt-2 font-italic no-underline" >({{project.year}})</a>
+                            </div>
                         </div>
                         <div class="flex md:flex-row flex-column" itemscope itemtype="https://schema.org/SoftwareApplication">
-                            <div class="md:col-6 col-12">
+                            <div class="md:col-6 col-12 line-height-3">
                                 <div class="my-2 text-xl">{{project.description}}</div>
                                 <div class="flex flex-column mt-4 p-2" v-if="project.features">
                                     <div class="my-2 text-l">Features</div>
@@ -113,8 +116,8 @@ copyright: false
                         </div>
                     </diV>
                     <div class="flex flex-column mt-4 p-4">
-                        <div class="my-2 text-l">Stack Used</div>
-                        <div class="flex grid mt-4 p-2">
+                        <div class="myt-2 text-l">Stack Used</div>
+                        <div class="flex grid mt-4 px-2">
                             <Tag style="border: 2px solid var(--border-color); background: transparent; color: var(--text-color)" v-for="part in project.skills" :key="part" :value="part" class="m-1">
                                 <div class="flex items-center gap-2 px-1">
                                     <i class="pi pi-cog" style="font-size: 1rem"></i>

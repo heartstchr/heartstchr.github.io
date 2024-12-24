@@ -27,7 +27,7 @@ copyright: false
   <div class="text-center pb-4">
     <div class="text-4xl font-bold">Scaling startups</div>
     <a class="text-4xl font-bold no-underline">Elevating industry giants</a>
-    <div class="my-4 text-xl">I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development</div>
+    <div class="my-4 text-xl line-height-2">I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development</div>
   </div>
   <div class="my-4 flex flex-column md:flex-row justify-content-center gap-2">
     <div class="md:col col-12 border-round-md md:p-2 md:m-2 vp-feature-item flex align-items-center justify-content-center" v-for="org in orgs" :key="org.title">
@@ -36,7 +36,7 @@ copyright: false
           <img :src="org.icon" alt="Avatar" width="80px" class="border-round-md"/>
         </div>
         <div class="text-2xl font-bold flex align-items-center justify-content-center"><span>{{org.title}}</span></div>
-        <div class="text-xs flex align-items-center justify-content-center">{{org.details}}</div>
+        <div class="text-xs flex align-items-center justify-content-center line-height-2">{{org.details}}</div>
       </div>
     </div>
   </div>
@@ -85,7 +85,7 @@ copyright: false
   <div class="text-center pb-4">
     <div class="text-4xl font-bold">Trusted by</div>
     <a class="text-4xl font-bold no-underline">World Wide</a>
-    <div class="my-4 text-xl">I value every client as a strategic partner. Here’s what they’ve shared about their experience working with me.</div>
+    <div class="my-4 text-xl line-height-2">I value every client as a strategic partner. Here’s what they’ve shared about their experience working with me.</div>
   </div>
   <div class="card relative md:mx-0 -mx-4" @mouseenter="pauseAutoPlay"
     @mouseleave="resumeAutoPlay">
@@ -94,7 +94,7 @@ copyright: false
         <template #item="slotProps">
           <div class="card shadow-1 border-round-md p-4 md:mx-8 vp-feature-item">
             <div class="font-italic mb-8">
-              <div class="text-md" ><span class="font-bold text-4xl">"</span> {{ slotProps.data.message }}</div>
+              <div class="text-md line-height-3" ><span class="font-bold text-4xl">"</span> {{ slotProps.data.message }}</div>
             </div>
             <div class="flex align-items-center">
               <img :src="slotProps.data.avatar" alt="Avatar" class="border-circle" width="50px" />
@@ -117,7 +117,7 @@ copyright: false
 <div class="my-6 flex flex-column">
   <div class="text-center pb-4">
     <div class="text-4xl font-bold">Why me?</div>
-    <div class="my-4 text-xl">Here’s why I’m the right choice for your project</div>
+    <div class="my-4 text-xl line-height-2">Here’s why I’m the right choice for your project</div>
   </div>
   <div class="flex flex-wrap">
     <div class="md:col-6 col-12 md:p-4" v-for="why in whyme" :key="why.title">  
@@ -125,7 +125,7 @@ copyright: false
         <template #legend>
             <div class="flex items-center pl-2">
                 <Avatar :image="`/img/home/${why.id}.svg`" shape="circle" />
-                <span class="font-bold p-2">{{why.title}}</span>
+                <span class="font-bold p-2 line-height-2">{{why.title}}</span>
             </div>
         </template>
         <p class="m-0 pt-4">
@@ -137,7 +137,7 @@ copyright: false
 </div>
 
 <div class="my-4">
-  <div class="text-xl text-center md:text-left">
+  <div class="text-xl text-center md:text-left line-height-3">
     I'm a full-stack developer with extensive experience in the JavaScript, VueJS, ReactJS and NodeJS ecosystems, as well as expertise in the Azure cloud platform.
   </div>
   <div class="grid mt-4">
@@ -168,7 +168,7 @@ copyright: false
 <!-- FAQ -->
 <div class="my-6">
   <div class="text-center pb-4">
-    <div class="text-4xl font-bold">Frequently asked <a class="no-underline">questions</a></div>
+    <div class="text-4xl font-bold line-height-2">Frequently asked <a class="no-underline">questions</a></div>
   </div>
   <div class="grid overflow-hidden border-round-2xl">
     <div class="col-12 ">
@@ -180,7 +180,7 @@ copyright: false
                 </p>
             </AccordionTab>
             <AccordionTab header="Q: What services do you provide?">
-                <p class="m-0">
+                <p class="m-0 ">
                     I offer a variety of services tailored to your needs, including 
                     <a href="services/#ConsultingAndTechnicalAdvisory" class="no-underline">Custom Web Development</a>, 
                     <a href="services/#E-commerceSolutions" class="no-underline">E-commerce Solutions</a>, 
@@ -219,7 +219,7 @@ copyright: false
       <div class="text-4xl font-bold">Contact me</div>
       <div class="my-4 text-md">Let's work together!</div>
     </div>
-    <div class="mx-4 text-center text-xl">
+    <div class="mx-4 text-center text-xl line-height-3">
       I'm always excited to tackle new challenges and bring ideas to life. If you’re searching for a committed full-stack developer to make your vision a reality, don’t hesitate to get in touch - I’d love to collaborate!
     </div>
     <div class="my-4">
