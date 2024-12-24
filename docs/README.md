@@ -29,8 +29,8 @@ copyright: false
     <a class="text-4xl font-bold no-underline">Elevating industry giants</a>
     <div class="my-4 text-xl">I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development</div>
   </div>
-  <div class="my-4 flex flex-column md:flex-row justify-content-center">
-    <div class="md:col col-12 border-round-md p-2 m-2 vp-feature-item flex align-items-center justify-content-center" v-for="org in orgs" :key="org.title">
+  <div class="my-4 flex flex-column md:flex-row justify-content-center gap-2">
+    <div class="md:col col-12 border-round-md md:p-2 md:m-2 vp-feature-item flex align-items-center justify-content-center" v-for="org in orgs" :key="org.title">
       <div class="no-underline flex flex-column justify-content-center flex-wrap">
         <div class="mr-2 flex align-items-center justify-content-center">
           <img :src="org.icon" alt="Avatar" width="80px" class="border-round-md"/>
@@ -87,7 +87,7 @@ copyright: false
     <a class="text-4xl font-bold no-underline">World Wide</a>
     <div class="my-4 text-xl">I value every client as a strategic partner. Here’s what they’ve shared about their experience working with me.</div>
   </div>
-  <div class="card relative" @mouseenter="pauseAutoPlay"
+  <div class="card relative md:mx-0 -mx-4" @mouseenter="pauseAutoPlay"
     @mouseleave="resumeAutoPlay">
     <Carousel :value="testimonials" :numVisible="1" :numScroll="1"  ref="carousel" :responsiveOptions="responsiveCustomerOptions" circular :page="currentPage"
       @page="onPageChange">
@@ -137,7 +137,7 @@ copyright: false
 </div>
 
 <div class="my-4">
-  <div class="text-xl">
+  <div class="text-xl text-center md:text-left">
     I'm a full-stack developer with extensive experience in the JavaScript, VueJS, ReactJS and NodeJS ecosystems, as well as expertise in the Azure cloud platform.
   </div>
   <div class="grid mt-4">
@@ -172,7 +172,7 @@ copyright: false
   </div>
   <div class="grid overflow-hidden border-round-2xl">
     <div class="col-12 ">
-      <div class="border-round-2xl flex flex-column gap-2 p-2">
+      <div class="border-round-2xl flex flex-column gap-2 md:p-2">
           <Accordion :activeIndex="0">
             <AccordionTab header="Q: How can I start a project with you?">
                 <p class="m-0">

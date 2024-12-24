@@ -15,7 +15,7 @@ export default hopeTheme({
   locales: {
     "/": {
       navbar: enNavbar,
-      sidebar: enSidebar,
+      sidebar: false,
       footer: `
       <div>
         <div class="flex flex-wrap">
