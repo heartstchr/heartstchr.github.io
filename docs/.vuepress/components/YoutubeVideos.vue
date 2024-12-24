@@ -10,7 +10,9 @@
                 <template #header>
                     <img :src="video.thumbnail" :alt="video.title" class="w-full border-round-md" />
                 </template>
-                <template #title>{{ video.title }}</template>
+                <template #title>
+                    <!-- <div class="line-height-3">{{ video.title }}</div> -->
+                </template>
                 <template #subtitle>{{ video.publishedAt }}</template>
                 <template #content>
                 </template>

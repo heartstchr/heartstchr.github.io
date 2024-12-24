@@ -5,9 +5,9 @@ editLink: false
 copyright: false
 ---
 
-<div class="my-6">
+<div class="my-6 ">
   <div class="text-4xl font-bold"> I am a freelance professional.</div>
-  <div class="flex md:flex-row flex-column flex-column-reverse md:align-items-start ">
+  <div class="flex md:flex-row flex-column flex-column-reverse md:align-items-start line-height-3">
     <div class="md:col-6 col-12">
       <div class="my-4 text-md"> Diverse skill set and a passion for continuous exploration and creativity.</div>
       <div class="my-4 text-md">
@@ -24,7 +24,7 @@ copyright: false
 </div>
 
 <div class="my-6 flex md:flex-row flex-column ">
-  <div class="col-12">
+  <div class="col-12 line-height-3">
     <div class="my-4 text-4xl font-bold">I will simplify the steps for you</div>
     <div class="my-4 text-md">My mission is to make the whole process much easier and understandable for you</div>
     <div class="my-4 text-md">I simplify the steps to launching a digital application minus the lingo and hype so you can get on with living the life you envisioned.</div>
@@ -35,7 +35,7 @@ copyright: false
 <div class="my-6" id="stack">
   <div class="text-center pb-4">
     <div class="text-4xl font-bold">Stack</div>
-    <div class="my-4 text-xl">Some of the software and technologies I use on a daily basis.</div>
+    <div class="my-4 text-xl line-height-3">Some of the software and technologies I use on a daily basis.</div>
   </div>
   <div class="flex flex-wrap gap-4">
     <div v-for="(category, key) in technologies" :key="key" class='grid md:col-6' 
@@ -92,12 +92,12 @@ copyright: false
   <div>
     <div class="text-center px-4">
       <div class="text-4xl font-bold">A Little More About Me</div>
-      <div class="my-4 text-md">When I’m not coding, I enjoy creating tech tutorials for my YouTube channel <a href="https://www.youtube.com/@stackseekers" target="_blank" class="no-underline">Stack Seekers</a>, exploring the latest in mobile technology, and <a href="https://www.youtube.com/@JiwanGhosal" target="_blank" class="no-underline">traveling</a> to discover new cultures and ideas.</div>
+      <div class="my-4 text-md line-height-3">When I’m not coding, I enjoy creating tech tutorials for my YouTube channel <a href="https://www.youtube.com/@stackseekers" target="_blank" class="no-underline">Stack Seekers</a>, exploring the latest in mobile technology, and <a href="https://www.youtube.com/@JiwanGhosal" target="_blank" class="no-underline">traveling</a> to discover new cultures and ideas.</div>
     </div>
     <div class="text-center py-4">
       <div class="my-4 text-md">Let's work together!</div>
     </div>
-    <div class="mx-4 text-center text-xl">
+    <div class="mx-4 text-center text-xl line-height-3">
       Ready to turn your vision into reality? Let’s discuss how I can help you achieve your goals.
     </div>
     <div class="my-4">

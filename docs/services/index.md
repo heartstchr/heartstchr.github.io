@@ -1,5 +1,5 @@
 ---
-title: Services
+title: My Services
 icon: code
 order: 3
 lastUpdated: false
@@ -7,16 +7,16 @@ editLink: false
 copyright: false
 ---
 
-<div class="flex flex-column gap-4 my-6">
+<div class="flex flex-column gap-4 mt-6 line-height-3">
   <div>I’m your ultimate partner for all things development and hosting, offering a comprehensive range of services to bring your digital vision to life. With a deep understanding of modern technologies and trends, I aim to provide solutions that are not only functional but also innovative and future-ready.
   </div>
 
   <div>
-  Whether you’re looking for a custom-built website that stands out, a seamless mobile application to engage your audience, or reliable hosting and deployment services to ensure everything runs smoothly, I’ve got you covered. Each service is designed with your unique requirements in mind to deliver the best results.
+    Each service is designed with your unique requirements in mind to deliver the best results.
   </div>
 
   <div>
-  My focus is always on delivering high-quality, personalized solutions. By understanding your specific needs and goals, I create digital experiences that truly resonate with your target audience. Let’s explore the many ways I can help you succeed in the digital space.</div>
+  My focus is always on delivering high-quality, personalized solutions. Let’s explore the many ways I can help you succeed in the digital space.</div>
   <div>
         <!-- <a href="https://cal.com/stackseekers" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
             <Button label="Book Your Free Consultation!" icon="pi pi-calendar-clock" severity="primary" raised rounded />
@@ -35,7 +35,7 @@ copyright: false
                       <span itemprop="name">{{service.name}}</span>
                   </div>
                   <Image v-if="service.code" :src="`/img/service/${service.code}.jpeg`" class="" :alt="service.name" width="100%"/>
-                  <div class="my-4 flex flex-column gap-2">
+                  <div class="my-4 flex flex-column gap-2 line-height-3">
                       <link itemprop="applicationCategory" :href="service.schema" />
                       <div itemprop="name" v-for= "(description, index) in service.descriptions" >    {{description}}
                       </div>
@@ -55,7 +55,7 @@ copyright: false
                     <span itemprop="name">{{service.name}}</span>
                 </div>
                 <Image v-if="service.code" :src="`/img/service/${service.code}.jpeg`" class="" :alt="service.name" width="100%"/>
-                <div class="my-4 flex flex-column gap-2">
+                <div class="my-4 flex flex-column gap-2 line-height-3">
                     <link itemprop="applicationCategory" :href="service.schema" />
                     <div itemprop="name" v-for= "(description, index) in service.descriptions" >    {{description}}
                     </div>
