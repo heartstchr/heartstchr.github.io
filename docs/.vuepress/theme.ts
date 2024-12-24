@@ -1,6 +1,6 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import { enNavbar } from "./navbar/index.js";
-import { enSidebar } from "./sidebar/index.js";
+// import { enSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
   hostname: "https://heartstchr.github.io/",
@@ -11,6 +11,7 @@ export default hopeTheme({
   logo: "/img/logojg.svg",
   repo: "heartstchr",
   docsDir: "/src",
+  darkmode: "auto",
   pageInfo: [],
   locales: {
     "/": {
