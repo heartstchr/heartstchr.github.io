@@ -36,9 +36,6 @@ export default hopeTheme({
         </div>
         </div>`,
       displayFooter: true,
-      metaLocales: {
-        editLink: "Edit this page on GitHub",
-      },
     },
   },
   encrypt: {
