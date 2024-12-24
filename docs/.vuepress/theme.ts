@@ -28,6 +28,7 @@ export default hopeTheme({
         <a href="/services/"> Services </a>
         <a href="/about/"> About </a>
         <a href="/videos/"> Videos </a>
+        <a href="/#contact"> Contact </a>
         </div>
         </div>
         </div>
