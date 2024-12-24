@@ -76,8 +76,8 @@
   padding: 4px;
 }
 
-.p-carousel-indicator-list {
-  display: none !important;
+.p-carousel-indicator-list, .p-tabview-ink-bar{
+  display: none !important;//vp-outlook-wrapper
 }
 
 .p-button-secondary {
@@ -147,4 +147,37 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #f9f9f9;
+}
+
+/* Customizing the vertical TabView */
+.p-tabview-vertical {
+  display: flex;
+}
+.p-tabview-vertical .p-tabview-tablist{
+  display: flex;
+  flex-direction: column !important;
+}
+.p-tabview-vertical .p-tabview-nav {
+  /* Arrange tabs vertically */
+  width: 200px; /* Set a fixed width for the tab headers */
+  border-right: 1px solid #ccc; /* Separate tabs from the content */
+}
+
+.p-tabview-vertical .p-tabview-panel{
+ padding:0 !important;
+}
+.p-tabview-vertical .p-tabview-nav-link {
+  justify-content: flex-start; /* Align text and icons properly */
+  padding: 1rem;
+}
+
+.p-tabview-vertical .p-tabview-panel {
+  padding: 0 !important; /* Add padding to the content */
+}
+.p-tabview-vertical .p-tabview-tab-header{
+  padding: 1rem 0;
+  margin-bottom: 4px;
+}
+.p-tabview-vertical .p-tabview-tablist-item {
+  border-radius: 16px;
 }

@@ -21,13 +21,15 @@ copyright: false
 <div class="p-d-flex p-flex-column p-mr-3">
     <TabView class="vertical-tabs">
         <TabPanel header="Org Projects">
-                <div class="grid my-6 gap-8">
-                    <div class="vp-feature-item col-12 shadow-1 m-0 p-0" v-for= "(project, index) in projects" :id="project.name">
+            <div class="grid my-6 gap-8">
+                <div class="vp-feature-item col-12 shadow-1 m-0 p-0" v-for= "(project, index) in projects" :id="project.name">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 120 1440 200"><path fill="#10b981" fill-opacity="0.1" d="M0,320L40,288C80,256,160,192,240,176C320,160,400,192,480,202.7C560,213,640,203,720,192C800,181,880,171,960,181.3C1040,192,1120,224,1200,218.7C1280,213,1360,171,1400,149.3L1440,128L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
                     <div class="px-4">
                         <div>
                             <div itemprop="name" class="text-4xl font-bold">{{project.name}}</div> 
-                            <div class="text-xl mt-2" itemprop="operatingSystem">{{project.software}} <span class="text-sm mt-2" >({{project.year}})</span><span class="text-sm mt-2" > - {{project.org}}</span></div>
+                            <div class="text-xl mt-2" itemprop="operatingSystem">
+                                {{project.software}} <span class="text-sm mt-2" >({{project.year}})</span><span class="text-sm mt-2" > - {{project.org}}</span>
+                            </div>
                         </div>
                         <div class="flex md:flex-row flex-column" itemscope itemtype="https://schema.org/SoftwareApplication">
                             <div class="md:col-6 col-12">
@@ -146,7 +148,7 @@ copyright: false
       Ready to turn your vision into reality? Let’s discuss how I can help you achieve your goals.
     </div>
     <div class="my-4">
-      <a href="mailto:jiwan.cse@gmail.com" size="large" color="deeppink" class="flex justify-content-center text-center no-underline"> 
+      <a href="mailto:jiwan.cse@gmail.com?subject=Inquiry%20for%20the%20projects" size="large" color="deeppink" class="flex justify-content-center text-center no-underline"> 
         <Button label="Hire Now!" icon="pi pi-briefcase" severity="primary" raised rounded />
       </a>
     </div>
@@ -212,7 +214,7 @@ const projects= [
         org: "Catch That Bus",
         year: "2019",
         schema: "https://schema.org/DeveloperApplication",
-        link: "https://m.trokka.com/attraction",
+        // link: "https://m.trokka.com/attraction",
         images: [
                 {
                     itemImageSrc: '/img/projects/trokka.gif',
@@ -268,7 +270,7 @@ const projects= [
         org: "Catch That Bus",
         year: "2019",
         schema: "https://schema.org/DeveloperApplication",
-        link: "https://m.catchthatbus.com",
+        // link: "https://m.catchthatbus.com",
         iosLink: "https://apps.apple.com/my/app/catchthatbus/id1025824078",
         images: [
                 {
