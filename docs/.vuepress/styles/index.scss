@@ -197,3 +197,6 @@
 .p-galleria-items {
   max-height: 30rem !important;
 }
+.hide-navbar .vp-navbar.auto-hide {
+    transform: none;
+}
