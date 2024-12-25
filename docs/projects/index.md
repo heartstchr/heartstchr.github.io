@@ -459,12 +459,6 @@ const freelance = [
                     title: 'Quatar Airways'
                 },
                 {
-                    itemImageSrc: '/img/projects/quatar/quatar.png',
-                    thumbnailImageSrc: '/img/projects/quatar/quatar.png',
-                    alt: 'Quatar Airways',
-                    title: 'Quatar Airways'
-                },
-                {
                     itemImageSrc: '/img/projects/quatar/qutar_airways.png',
                     thumbnailImageSrc: '/img/projects/quatar/qutar_airways.png',
                     alt: 'Quatar Airways',
@@ -473,6 +467,12 @@ const freelance = [
                 {
                     itemImageSrc: '/img/projects/quatar/thumbnail.png',
                     thumbnailImageSrc: '/img/projects/quatar/thumbnail.png',
+                    alt: 'Quatar Airways',
+                    title: 'Quatar Airways'
+                },
+                {
+                    itemImageSrc: '/img/projects/quatar/quatar.png',
+                    thumbnailImageSrc: '/img/projects/quatar/quatar.png',
                     alt: 'Quatar Airways',
                     title: 'Quatar Airways'
                 },
