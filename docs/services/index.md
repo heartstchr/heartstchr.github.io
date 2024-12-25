@@ -25,7 +25,7 @@ copyright: false
 </div>
 
 <div class="flex flex-wrap md:gap-4 gap-2">
-    <TabView class="p-tabview-vertical md:flex hidden">
+    <TabView class="p-tabview-vertical md:flex hidden" :activeIndex="activeTabIndex" @tab-change="onTabChange">
       <!-- Tab Panels -->
       <TabPanel :header="`${service.name}`" leftIcon="pi pi-home" v-for= "(service, index) in services" :id="service.code">
         <div class="shadow-1 col-12 border-round-2xl vp-feature-item p-0 overflow-hidden" itemscope itemtype="https://schema.org/SoftwareApplication">
@@ -69,6 +69,12 @@ copyright: false
 </div>
 
 <script setup lang="ts">
+import { ref, watch, onMounted, nextTick } from "vue";
+import { useRouter, useRoute } from "vue-router";
+
+const router = useRouter();
+const route = useRoute();
+
 const services = [
     {
         name: "Figma to Web",
@@ -120,4 +126,28 @@ const services = [
             "My expertise in scripting and Infrastructure as Code (IaC) enhances efficiency and scalability, allowing your development team to focus on innovation. Whether you're starting from scratch or refining existing workflows, I deliver tailored solutions that boost productivity and quality in your software projects."]
     },
 ]
+
+// Map service codes to indices
+const serviceMapping = services.reduce((acc, service, index) => {
+  acc[`#${service.code}`] = index;
+  return acc;
+}, {});
+
+const activeTabIndex = ref(serviceMapping[route.params.serviceCode] || 0);
+
+// Watch for route changes to update the active tab
+watch(
+  () => route.hash,
+  (newServiceCode) => {
+    activeTabIndex.value = serviceMapping[newServiceCode] ?? 0;
+  },
+  { immediate: true }
+);
+// Handle tab change event to update the route
+const onTabChange = (event) => {
+  const service = services[event.index];
+  if (service) {
+    router.push(`/services/#${service.code}`);
+  }
+};
 </script>
