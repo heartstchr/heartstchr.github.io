@@ -24,15 +24,15 @@ copyright: false
             <div class="grid my-6 gap-8">
                 <div class="vp-feature-item col-12 shadow-1 m-0 p-0" v-for= "(project, index) in projects" :id="project.name">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 120 1440 200"><path fill="#10b981" fill-opacity="0.1" d="M0,320L40,288C80,256,160,192,240,176C320,160,400,192,480,202.7C560,213,640,203,720,192C800,181,880,171,960,181.3C1040,192,1120,224,1200,218.7C1280,213,1360,171,1400,149.3L1440,128L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
-                    <div class="px-4">
-                        <div>
+                    <div>
+                        <div class="px-4">
                             <div itemprop="name" class="text-4xl font-bold">{{project.name}}</div> 
                             <div class="text-xl mt-2" itemprop="operatingSystem">
                                 {{project.software}} <span class="text-sm mt-2" > - {{project.org}}</span> <span class="text-sm mt-2 font-italic" > - {{project.domain}}</span> <a class="text-sm mt-2 font-italic no-underline" >({{project.year}})</a>
                             </div>
                         </div>
                         <div class="flex md:flex-row flex-column" itemscope itemtype="https://schema.org/SoftwareApplication">
-                            <div class="md:col-6 col-12">
+                            <div class="md:col-6 col-12 px-4">
                                 <div class="my-2 text-xl line-height-3">{{project.description}}</div>
                                 <div class="flex flex-column mt-4 p-2" v-if="project.features">
                                     <div class="my-2 text-l">Features</div>
@@ -43,15 +43,20 @@ copyright: false
                             </div>
                             <div class="md:col-6 col-12">
                                 <link itemprop="applicationCategory" :href="project.schema" />
-                                <div class="card" v-if="project.images">
-                                    <Galleria :value="project.images" :responsiveOptions="responsiveOptions" :numVisible="5" :circular="true" :showItemNavigators="true" :showThumbnails="false">
-                                        <template #item="slotProps">
-                                            <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
-                                        </template>
-                                        <template #thumbnail="slotProps">
-                                            <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="display: block" />
-                                        </template>
-                                    </Galleria>
+                                <div v-if="project.images">
+                                    <div class="card" v-if="project.images.length != 1">
+                                        <Galleria :value="project.images" :responsiveOptions="responsiveOptions" :numVisible="5" :circular="true" :showItemNavigators="true" :showThumbnails="false">
+                                            <template #item="slotProps">
+                                                <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
+                                            </template>
+                                            <template #thumbnail="slotProps">
+                                                <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="display: block" />
+                                            </template>
+                                        </Galleria>
+                                    </div>
+                                    <div class="card" v-else>
+                                        <img :src="project.images[0].itemImageSrc" :alt="project.images[0].alt" style="width: 100%; display: block" />
+                                    </div>
                                 </div>
                             </div>  
                         </div>
@@ -82,16 +87,16 @@ copyright: false
             <div class="grid my-6 gap-8">
                     <div class="vp-feature-item col-12 shadow-1 m-0 p-0" v-for= "(project, index) in freelance" :id="project.name">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 120 1440 200"><path fill="#10b981" fill-opacity="0.1" d="M0,320L40,288C80,256,160,192,240,176C320,160,400,192,480,202.7C560,213,640,203,720,192C800,181,880,171,960,181.3C1040,192,1120,224,1200,218.7C1280,213,1360,171,1400,149.3L1440,128L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
-                    <div class="px-4">
-                        <div>
+                    <div>
+                        <div class="px-4">
                             <div itemprop="name" class="text-4xl font-bold">{{project.name}}</div> 
                             <div class="text-xl mt-2" itemprop="operatingSystem">
-                            {{project.software}} 
-                            <span class="text-sm mt-2" > - {{project.domain}}</span> <a class="text-sm mt-2 font-italic no-underline" >({{project.year}})</a>
+                                {{project.software}} 
+                                <span class="text-sm mt-2" > - {{project.domain}}</span> <a class="text-sm mt-2 font-italic no-underline" >({{project.year}})</a>
                             </div>
                         </div>
                         <div class="flex md:flex-row flex-column" itemscope itemtype="https://schema.org/SoftwareApplication">
-                            <div class="md:col-6 col-12 line-height-3">
+                            <div class="md:col-6 col-12 line-height-3 px-4">
                                 <div class="my-2 text-xl">{{project.description}}</div>
                                 <div class="flex flex-column mt-4 p-2" v-if="project.features">
                                     <div class="my-2 text-l">Features</div>
@@ -102,15 +107,20 @@ copyright: false
                             </div>
                             <div class="md:col-6 col-12">
                                 <link itemprop="applicationCategory" :href="project.schema" />
-                                <div class="card" v-if="project.images">
-                                    <Galleria :value="project.images" :responsiveOptions="responsiveOptions" :numVisible="5" :circular="true" :showItemNavigators="true" :showThumbnails="false">
-                                        <template #item="slotProps">
-                                            <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
-                                        </template>
-                                        <template #thumbnail="slotProps">
-                                            <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="display: block" />
-                                        </template>
-                                    </Galleria>
+                                <div v-if="project.images">
+                                    <div class="card" v-if="project.images.length != 1">
+                                        <Galleria :value="project.images" :responsiveOptions="responsiveOptions" :numVisible="5" :circular="true" :showItemNavigators="true" :showThumbnails="false">
+                                            <template #item="slotProps">
+                                                <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
+                                            </template>
+                                            <template #thumbnail="slotProps">
+                                                <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="display: block" />
+                                            </template>
+                                        </Galleria>
+                                    </div>
+                                    <div class="card" v-else>
+                                        <img :src="project.images[0].itemImageSrc" :alt="project.images[0].alt" style="width: 100%; display: block" />
+                                    </div>
                                 </div>
                             </div>  
                         </div>
@@ -508,14 +518,92 @@ const freelance = [
         codeLink: "https://github.com/heartstchr/recipe",
         images: [
                 {
-                    itemImageSrc: '/img/projects/recipe/recipe.gif',
-                    thumbnailImageSrc: '/img/projects/recipe/recipe.gif',
+                    itemImageSrc: '/img/projects/recipe/login.png',
+                    thumbnailImageSrc: '/img/projects/recipe/login.png',
                     alt: 'Recipes - Social Network | Recipes',
                     title: 'Recipes - Social Network | Recipes'
                 },
                 {
-                    itemImageSrc: '/img/projects/recipe/recipe-mobile.gif',
-                    thumbnailImageSrc: '/img/projects/recipe/recipe-mobile.gif',
+                    itemImageSrc: '/img/projects/recipe/register.png',
+                    thumbnailImageSrc: '/img/projects/recipe/register.png',
+                    alt: 'Recipes - Social Network | Recipes',
+                    title: 'Recipes - Social Network | Recipes'
+                },
+                {
+                    itemImageSrc: '/img/projects/recipe/home.png',
+                    thumbnailImageSrc: '/img/projects/recipe/home.png',
+                    alt: 'Recipes - Social Network | Recipes',
+                    title: 'Recipes - Social Network | Recipes'
+                },
+                {
+                    itemImageSrc: '/img/projects/recipe/direction.png',
+                    thumbnailImageSrc: '/img/projects/recipe/direction.png',
+                    alt: 'Recipes - Social Network | Recipes',
+                    title: 'Recipes - Social Network | Recipes'
+                },
+                {
+                    itemImageSrc: '/img/projects/recipe/ingredients.png',
+                    thumbnailImageSrc: '/img/projects/recipe/ingredients.png',
+                    alt: 'Recipes - Social Network | Recipes',
+                    title: 'Recipes - Social Network | Recipes'
+                },
+                {
+                    itemImageSrc: '/img/projects/recipe/addrecipe.png',
+                    thumbnailImageSrc: '/img/projects/recipe/addrecipe.png',
+                    alt: 'Recipes - Social Network | Recipes',
+                    title: 'Recipes - Social Network | Recipes'
+                },
+                {
+                    itemImageSrc: '/img/projects/recipe/addsteps.png',
+                    thumbnailImageSrc: '/img/projects/recipe/addsteps.png',
+                    alt: 'Recipes - Social Network | Recipes',
+                    title: 'Recipes - Social Network | Recipes'
+                },
+                {
+                    itemImageSrc: '/img/projects/recipe/search.png',
+                    thumbnailImageSrc: '/img/projects/recipe/search.png',
+                    alt: 'Recipes - Social Network | Recipes',
+                    title: 'Recipes - Social Network | Recipes'
+                },
+                {
+                    itemImageSrc: '/img/projects/recipe/share.png',
+                    thumbnailImageSrc: '/img/projects/recipe/share.png',
+                    alt: 'Recipes - Social Network | Recipes',
+                    title: 'Recipes - Social Network | Recipes'
+                },
+                {
+                    itemImageSrc: '/img/projects/recipe/mobile-home.png',
+                    thumbnailImageSrc: '/img/projects/recipe/mobile-home.png',
+                    alt: 'Recipes - Social Network | Recipes',
+                    title: 'Recipes - Social Network | Recipes'
+                },
+                {
+                    itemImageSrc: '/img/projects/recipe/mobile-add-recipe.png',
+                    thumbnailImageSrc: '/img/projects/recipe/mobile-add-recipe.png',
+                    alt: 'Recipes - Social Network | Recipes',
+                    title: 'Recipes - Social Network | Recipes'
+                },
+                {
+                    itemImageSrc: '/img/projects/recipe/mobile-menu-left.png',
+                    thumbnailImageSrc: '/img/projects/recipe/mobile-menu-left.png',
+                    alt: 'Recipes - Social Network | Recipes',
+                    title: 'Recipes - Social Network | Recipes'
+                },
+                {
+                    itemImageSrc: '/img/projects/recipe/mobile-profile.png',
+                    thumbnailImageSrc: '/img/projects/recipe/mobile-profile.png',
+                    alt: 'Recipes - Social Network | Recipes',
+                    title: 'Recipes - Social Network | Recipes'
+                },
+                {
+                    itemImageSrc: '/img/projects/recipe/mobile-profile2.png',
+                    thumbnailImageSrc: '/img/projects/recipe/mobile-profile2.png',
+                    alt: 'Recipes - Social Network | Recipes',
+                    title: 'Recipes - Social Network | Recipes'
+                },
+                {
+                    itemImageSrc: '/img/projects/recipe/mobileshare.png',
+                    thumbnailImageSrc: '/img/projects/recipe/mobileshare.png',
                     alt: 'Recipes - Social Network | Recipes',
                     title: 'Recipes - Social Network | Recipes'
                 },

@@ -1,4 +1,8 @@
 // place your custom styles here
+:root{
+  --p-galleria-nav-button-size: 2rem !important;
+  --p-galleria-nav-icon-size:1rem !important;
+}
 #app{
   background-image: url(/img/pattern.png);
   background-blend-mode:  hard-light, multiply;
@@ -89,7 +93,7 @@
 .p-tabview-tablist,
 .p-tabview-panels,
 .p-tabview-tab-header,
-.p-tabview-tablist-item, .p-card, .p-card-body, .p-fieldset, .p-fieldset-legend {
+.p-tabview-tablist-item, .p-card, .p-card-body, .p-fieldset, .p-fieldset-legend, .p-galleria-nav-button {
   background: var(--bg-color) !important;
   border-color: var(--p-green-800) !important;
   color: var(--text-color) !important;
@@ -189,4 +193,7 @@
 
 .p-tabview-vertical .p-tabview-panels {
   padding: 0 ;
+}
+.p-galleria-items {
+  max-height: 30rem !important;
 }
