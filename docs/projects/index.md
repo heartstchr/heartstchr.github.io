@@ -411,8 +411,14 @@ const projects= [
         link: "https://callmatrix.io/",
         images: [
                 {
-                    itemImageSrc: '/img/projects/callmatrix.png',
-                    thumbnailImageSrc: '/img/projects/callmatrix.png',
+                    itemImageSrc: '/img/projects/callmatrix/callmatrix.png',
+                    thumbnailImageSrc: '/img/projects/callmatrix/callmatrix.png',
+                    alt: 'CallMatrix - Call Intelligence, Marketing, and Analytics Platform',
+                    title: 'Title 1'
+                },
+                {
+                    itemImageSrc: '/img/projects/callmatrix/mobistreak.png',
+                    thumbnailImageSrc: '/img/projects/callmatrix/mobistreak.png',
                     alt: 'CallMatrix - Call Intelligence, Marketing, and Analytics Platform',
                     title: 'Title 1'
                 },
