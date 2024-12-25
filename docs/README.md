@@ -143,7 +143,7 @@ copyright: false
   <div class="grid mt-4">
     <div class="md:col col-6 text-center" v-for="stackLogo in stackLogos" :key="stackLogo.title">
       <i :class="stackLogo.icon" class="m-auto text-400 pl-3" style="font-size: 5rem"></i>
-      <Image :src="stackLogo.link" alt="Avatar" width="100px" />
+      <img :src="stackLogo.link" alt="Avatar" width="100px" />
     </div>
   </div>
   <div class="text-center pb-4">
