@@ -450,7 +450,7 @@ const freelance = [
         year: "2021",
         domain: "Leisure, travel, and tourism",
         schema: "https://schema.org/DeveloperApplication",
-        link: "https://book.holidays.qatarairways.com/",
+        link: "https://holidays.qatarairways.com/en-in/avios",
         images: [
             {
                     itemImageSrc: '/img/projects/quatar/placeholder.png',
