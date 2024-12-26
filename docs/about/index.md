@@ -31,6 +31,21 @@ copyright: false
     <div class="my-4 text-md">You'll finally gain the clarity and confidence you need.</div>
   </div>
 </div>
+<div class="my-6 flex md:flex-row flex-column ">
+  <div class="col-12 line-height-3">
+    <div class="my-4 text-4xl font-bold">Highlights of My Journey</div>
+    <div class="my-4 text-2xl text-md">Participant at the JS world conference, Amsterdam. </div>
+    <div class="col-12 overflow-hidden image-box">
+      <Image :src="`/img/about/amsterdamConference.jpg`" width="100%" />
+    </div>
+    <div class="my-4 text-md">In 2023, I had the privilege of participating in the renowned JS world conference Amsterdam, where I contributed to discussions on cutting-edge technologies, VueJs, Pinia, including micro-frontends and modern application architectures.</div>
+    <div class="my-4 text-2xl text-md">Participant at NSE Future Tech Hackathon, India.</div>
+    <div class="col-12 overflow-hidden image-box">
+      <Image :src="`/img/about/nseHackathon.png`" width="100%" />
+    </div>
+    <div class="my-4 text-md">At NSE Hackathon, our team reached the top 7 finalists, showcasing innovative problem-solving skills and pushing the boundaries of creative technology development.</div>
+  </div>
+</div>
 <!-- Skills -->
 <div class="my-6" id="stack">
   <div class="text-center pb-4">
