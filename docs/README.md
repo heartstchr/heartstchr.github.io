@@ -175,12 +175,12 @@ copyright: false
       <div class="border-round-2xl flex flex-column gap-2 md:p-2">
           <Accordion :activeIndex="0">
             <AccordionTab header="Q: How can I start a project with you?">
-                <p class="m-0">
+                <p class="mx-3">
                     You can start by <a href="https://cal.com/stackseekers" class="no-underline">scheduling a meeting</a> with me. I’ll connect with you promptly to discuss your requirements and plan the next steps.
                 </p>
             </AccordionTab>
             <AccordionTab header="Q: What services do you provide?">
-                <p class="m-0 ">
+                <p class="mx-3 ">
                     I offer a variety of services tailored to your needs, including 
                     <a href="services/#ConsultingAndTechnicalAdvisory" class="no-underline">Custom Web Development</a>, 
                     <a href="services/#E-commerceSolutions" class="no-underline">E-commerce Solutions</a>, 
@@ -191,7 +191,7 @@ copyright: false
                 </p>
             </AccordionTab>
             <AccordionTab header="Q: What does the project process look like?">
-                <p class="m-0">
+                <p class="mx-3">
                   <div>It’s simple and straightforward: </div>
                   <Timeline :value="events"  class="w-full md:w-80">
                       <template #content="slotProps">
