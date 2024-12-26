@@ -26,6 +26,9 @@ dependencies:
   vite:
     specifier: ^6.0.5
     version: 6.0.5(@types/node@20.14.2)
+  vue-router:
+    specifier: ^4.5.0
+    version: 4.5.0(vue@3.4.27)
 
 devDependencies:
   '@types/node':
@@ -2759,6 +2762,9 @@ packages:
     resolution: {integrity: sha512-0MiMsFma/HqA6g3KLKn+AGpL1kgKhFWszC9U29NfpWK5LE7bjeXxySWJrOJ77hBz+TBrBQ7o4QJqbPbqbs8rJw==}
     dev: true
 
+  /@vue/devtools-api@6.6.4:
+    resolution: {integrity: sha512-sGhTPMuXqZ1rVOk32RylztWkfXTRhuS7vgAKv0zjqk8gbsHkJ7xfFf+jbySxt7tWObEJwyKaHMikV/WGDiQm8g==}
+
   /@vue/reactivity@3.4.27:
     resolution: {integrity: sha512-kK0g4NknW6JX2yySLpsm2jlunZJl2/RJGZ0H9ddHdfBVHcNzxmQ0sS0b09ipmBoQpY8JM2KmUw+a6sO8Zo+zIA==}
     dependencies:
@@ -2804,7 +2810,7 @@ packages:
       rollup: 4.18.0
       vite: 5.2.13(@types/node@20.14.2)
       vue: 3.4.27(typescript@5.4.5)
-      vue-router: 4.3.2(vue@3.4.27)
+      vue-router: 4.5.0(vue@3.4.27)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -2841,7 +2847,7 @@ packages:
       '@vue/devtools-api': 6.6.3
       '@vuepress/shared': 2.0.0-rc.9
       vue: 3.4.27(typescript@5.4.5)
-      vue-router: 4.3.2(vue@3.4.27)
+      vue-router: 4.5.0(vue@3.4.27)
     transitivePeerDependencies:
       - typescript
     dev: true
@@ -6038,14 +6044,13 @@ packages:
       vue: 3.4.27(typescript@5.4.5)
     dev: true
 
-  /vue-router@4.3.2(vue@3.4.27):
-    resolution: {integrity: sha512-hKQJ1vDAZ5LVkKEnHhmm1f9pMiWIBNGF5AwU67PdH7TyXCj/a4hTccuUuYCAMgJK6rO/NVYtQIEN3yL8CECa7Q==}
+  /vue-router@4.5.0(vue@3.4.27):
+    resolution: {integrity: sha512-HDuk+PuH5monfNuY+ct49mNmkCRK4xJAV9Ts4z9UFc4rzdDnxQLyCMGGc8pKhZhHTVzfanpNwB/lwqevcBwI4w==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
-      '@vue/devtools-api': 6.6.3
+      '@vue/devtools-api': 6.6.4
       vue: 3.4.27(typescript@5.4.5)
-    dev: true
 
   /vue@3.4.27(typescript@5.4.5):
     resolution: {integrity: sha512-8s/56uK6r01r1icG/aEOHqyMVxd1bkYcSe9j8HcKtr/xTOFWvnzIVTehNW+5Yt89f+DLBe4A569pnZLS5HzAMA==}
