@@ -192,7 +192,7 @@ copyright: false
             </AccordionTab>
             <AccordionTab header="Q: What does the project process look like?">
                 <p class="m-0">
-                  <div>It’s simple and straightforward:</div>
+                  <div>It’s simple and straightforward: </div>
                   <Timeline :value="events" align="alternate" class="w-full md:w-80">
                       <template #content="slotProps">
                           {{ slotProps.item.status }}
