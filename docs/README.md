@@ -377,8 +377,8 @@ const projects = ref([
         link: "https://callmatrix.io/",
         images: [
                 {
-                    itemImageSrc: '/img/projects/callmatrix.png',
-                    thumbnailImageSrc: '/img/projects/callmatrix.png',
+                    itemImageSrc: '/img/projects/callmatrix/callmatrix.png',
+                    thumbnailImageSrc: '/img/projects/callmatrix/callmatrix.png',
                     alt: 'CallMatrix - Call Intelligence, Marketing, and Analytics Platform',
                     title: 'Title 1'
                 },
