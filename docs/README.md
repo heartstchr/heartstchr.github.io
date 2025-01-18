@@ -1,13 +1,13 @@
 ---
 home: true
 icon: pi pi-home
-title: Home
+title: Freelance developer
 heroImage: /img/jiwan.png
 heroText: Hi, I am Jiwan Ghosal
 tagline: Experienced full-stack developer specializing in scalable web, mobile, and software solutions.
 containerClass: fancy-container
 actions:
-  - text: Let’s bring your vision to life
+  - text: Let’s discuss
     icon: pi pi-calendar-clock
     link: https://cal.com/stackseekers
     type: primary
@@ -20,7 +20,7 @@ copyright: false
 
 <div class="hidden">
   <div class="text-4xl font-bold">Scaling startups, Elevating Industry Giants</div>
-  <div class="my-4 text-xl">Experienced full-stack developer specializing in scalable web, mobile, and software solutions.</div>
+  <div class="my-4 text-xl">Experienced freelance full-stack developer specializing in scalable web, mobile, and software solutions.</div>
 </div>
 
 <div class="my-6">
@@ -32,11 +32,11 @@ copyright: false
   <div class="my-4 flex flex-column md:flex-row justify-content-center gap-2">
     <div class="md:col col-12 border-round-md md:p-2 md:m-2 vp-feature-item flex align-items-center justify-content-center" v-for="org in orgs" :key="org.title">
       <div class="no-underline flex flex-column justify-content-center flex-wrap">
-        <div class="mr-2 flex align-items-center justify-content-center">
+        <div class="mb-2 flex align-items-center justify-content-center">
           <img :src="org.icon" alt="Avatar" width="80px" class="border-round-md"/>
         </div>
-        <div class="text-2xl font-bold flex align-items-center justify-content-center"><span>{{org.title}}</span></div>
-        <div class="text-xs flex align-items-center justify-content-center line-height-2">{{org.details}}</div>
+        <div class="text-2xl font-bold flex align-items-center justify-content-center"><span class="line-height-3">{{org.title}}</span></div>
+        <div class="text-xs flex align-items-center justify-content-center line-height-2 text-center">{{org.details}}</div>
       </div>
     </div>
   </div>
@@ -143,7 +143,7 @@ copyright: false
   <div class="grid mt-4">
     <div class="md:col col-6 text-center" v-for="stackLogo in stackLogos" :key="stackLogo.title">
       <i :class="stackLogo.icon" class="m-auto text-400 pl-3" style="font-size: 5rem"></i>
-      <img :src="stackLogo.link" alt="Avatar" width="100px" />
+      <img  height="50" :src="stackLogo.link" alt="Avatar"/>
     </div>
   </div>
   <div class="text-center pb-4">
@@ -227,7 +227,7 @@ copyright: false
         <Button label="Let's collaborate now!" icon="pi pi-briefcase" severity="primary" raised rounded />
       </a>
     </div>
-    <div class="flex flex-row justify-content-end flex-wrap gap-4 mx-6">
+    <div class="flex flex-row justify-content-end flex-wrap gap-4 mx-6 ">
       <a
         v-for="(socialElement, socialIndex) in social"
         :key="socialIndex"
@@ -239,7 +239,7 @@ copyright: false
         </a>
     </div>
   </div>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 60 1440 220"><path fill="#10b981" fill-opacity="0.1" d="M0,128L40,144C80,160,160,192,240,192C320,192,400,160,480,160C560,160,640,192,720,176C800,160,880,96,960,80C1040,64,1120,96,1200,144C1280,192,1360,256,1400,288L1440,320L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 60 1440 220" class="-mb-1"><path fill="#10b981" fill-opacity="0.1" d="M0,128L40,144C80,160,160,192,240,192C320,192,400,160,480,160C560,160,640,192,720,176C800,160,880,96,960,80C1040,64,1120,96,1200,144C1280,192,1360,256,1400,288L1440,320L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
 </div>
 
 <script setup lang="ts">
@@ -643,19 +643,27 @@ const orgs= [
 
   const stackLogos = [
     {
-      link: '/img/stacks/vuejs.png',
-      title: 'VueJs',
+      link: 'https://cdn.simpleicons.org/javascript?viewbox=auto',
+      title: 'Javascript',
     },
     {
-      link: '/img/stacks/reactjs.png',
+      link: 'https://cdn.simpleicons.org/typescript?viewbox=auto',
+      title: 'Typescript',
+    },
+    {
+      link: 'https://cdn.simpleicons.org/vuedotjs?viewbox=auto',
+      title: 'vuejs',
+    },
+    {
+      link: 'https://cdn.simpleicons.org/react?viewbox=auto',
       title: 'ReactJS',
     },
     {
-      link: '/img/stacks/nodejs.png',
+      link: 'https://cdn.simpleicons.org/nodedotjs?viewbox=auto',
       title: 'NodeJs',
     },
     {
-      link: '/img/stacks/mongodb.png',
+      link: 'https://cdn.simpleicons.org/mongodb?viewbox=auto',
       title: 'MongoDb',
     }
   ]

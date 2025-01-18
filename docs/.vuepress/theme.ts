@@ -47,6 +47,7 @@ export default hopeTheme({
   },
   blog: {},
   plugins: {
+    seo: true,
     blog: true,
     comment: {},
     // Disable features you don’t want here

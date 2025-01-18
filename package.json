@@ -1,7 +1,7 @@
 {
-  "name": "Jiwan ghosal",
+  "name": "jiwanghosal",
   "version": "2.0.0",
-  "description": "A portfolio of Jiwan ghosal",
+  "description": "Experienced full-stack freelance developer specializing in scalable web, mobile, and software solutions",
   "type": "module",
   "scripts": {
     "docs:build": "vuepress build docs --clean-cache",
@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@primevue/themes": "^4.2.5",
+    "@vuepress/plugin-seo": "2.0.0-rc.3",
     "axios": "^1.7.9",
     "googleapis": "^144.0.0",
     "primeflex": "^3.3.1",
