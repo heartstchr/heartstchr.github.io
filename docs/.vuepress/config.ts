@@ -9,8 +9,9 @@ const mode = process.env.NODE_ENV || "development";
 process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
 
 export default defineUserConfig({
-  title: "Jiwan Ghosal",
-  description: "A portfolio site with PrimeVue",
+  title: "Freelancer Jiwan Ghosal",
+  description:
+    "Experienced full-stack freelance developer specializing in scalable web, mobile, and software solutions",
   bundler: viteBundler({
     viteOptions: {
       plugins: [
@@ -34,6 +35,10 @@ export default defineUserConfig({
     },
   },
   head: [
+    ["link", { rel: "dns-prefetch", href: "stackseekers.com" }],
+    ["link", { rel: "dns-prefetch", href: "heartstchr.github.io" }],
+    ["link", { rel: "dns-prefetch", href: "youtube.com" }],
+    ["link", { rel: "dns-prefetch", href: "github.com" }],
     [
       "script",
       {
