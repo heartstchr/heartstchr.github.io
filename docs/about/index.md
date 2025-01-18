@@ -299,7 +299,7 @@ copyright: false
       version_control: {
         title: "Version control",
         technologies: [
-          { name: "GitHub", logoUrl: "https://cdn.simpleicons.org/github" },
+          { name: "GitHub", logoUrl: "https://cdn.simpleicons.org/github/black/white" },
           { name: "GitLab", logoUrl: "https://cdn.simpleicons.org/gitlab" },
           { name: "Bitbucket", logoUrl: "https://cdn.simpleicons.org/bitbucket" },
           { name: "Azure Devops", logoUrl: "https://cdn.simpleicons.org/" },
