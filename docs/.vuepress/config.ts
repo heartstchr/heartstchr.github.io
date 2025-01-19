@@ -39,6 +39,8 @@ export default defineUserConfig({
     ["link", { rel: "dns-prefetch", href: "heartstchr.github.io" }],
     ["link", { rel: "dns-prefetch", href: "youtube.com" }],
     ["link", { rel: "dns-prefetch", href: "github.com" }],
+    ["link", { rel: "dns-prefetch", href: "cdn.simpleicons.org" }],
+    ["link", { rel: "dns-prefetch", href: "googletagmanager.com" }],
     [
       "script",
       {

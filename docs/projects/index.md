@@ -1,5 +1,6 @@
 ---
-title: My Projects
+title: Stack Seekers Projects
+description: Organisation and freelance projects, highlighting my expertise for creating meaningful digital experiences.
 icon: discover
 order: 2
 lastUpdated: false
@@ -8,7 +9,7 @@ copyright: false
 ---
 
 <div class="flex flex-column gap-4 my-6 line-height-4">
-    <div>Here, you’ll find a showcase of some of my featured projects, highlighting my expertise and passion for creating meaningful digital experiences. These projects reflect my ability to turn ideas into reality, tailored to meet each client’s unique needs.</div>
+    <div>Here, you’ll find a showcase of some of my organisation and freelance projects, highlighting my expertise for creating meaningful digital experiences. These projects reflect my ability to turn ideas into reality, tailored to meet each client’s unique needs.</div>
     <div>If you’re searching for a professional who can bring your vision to life with precision and creativity, you’ve come to the right place.</div>
     <div>
         <a href="https://cal.com/stackseekers" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 

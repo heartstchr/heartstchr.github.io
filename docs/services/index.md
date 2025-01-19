@@ -1,5 +1,6 @@
 ---
-title: My Services
+title: Stack Seekers Services
+description: Services tailored to your needs, including Custom Web Development, E-commerce Solutions, API Development and Integration , Figma to Web Conversion, and Hosting & Deployment.
 icon: code
 order: 3
 lastUpdated: false

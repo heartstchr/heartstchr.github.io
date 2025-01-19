@@ -2,9 +2,10 @@
 home: true
 icon: pi pi-home
 title: Freelance developer
+description: Freelance Vue.Js developer, React.Js developer and  Node.Js developer specializing in scalable web, mobile, and software solutions using 𝙈𝙀𝙍𝙉 and 𝙈𝙀𝙑𝙉 (Mongo, Express, ReactJs/VueJS, NextJs, NuxtJs, NodeJS).
 heroImage: /img/jiwan.png
 heroText: Hi, I am Jiwan Ghosal
-tagline: Experienced full-stack developer specializing in scalable web, mobile, and software solutions.
+tagline: Experienced freelance full-stack developer specializing in scalable web, mobile, and software solutions using MERN and MEVN.
 containerClass: fancy-container
 actions:
   - text: Let’s discuss
@@ -22,7 +23,6 @@ copyright: false
   <div class="text-4xl font-bold">Scaling startups, Elevating Industry Giants</div>
   <div class="my-4 text-xl">Experienced freelance full-stack developer specializing in scalable web, mobile, and software solutions.</div>
 </div>
-
 <div class="my-6">
   <div class="text-center pb-4">
     <div class="text-4xl font-bold">Scaling startups</div>
@@ -41,7 +41,34 @@ copyright: false
     </div>
   </div>
 </div>
-
+<div class="my-6">
+  <div class="text-xl text-center md:text-left line-height-3">
+    I'm a full-stack developer with extensive experience in the JavaScript, VueJS, ReactJS and NodeJS ecosystems, as well as expertise in the Azure cloud platform.
+  </div>
+  <div class="grid mt-4">
+    <div class="md:col col-6 text-center" v-for="stackLogo in stackLogos" :key="stackLogo.title">
+      <i :class="stackLogo.icon" class="m-auto text-400 pl-3" style="font-size: 5rem"></i>
+      <img  height="50" :src="stackLogo.link" alt="Avatar"/>
+    </div>
+  </div>
+  <div class="text-center pb-4">
+    <a href="/about/#stack" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
+      <div class="p-flex p-ai-center">
+        <div
+          class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button"
+        >
+          <span class="mr-6">See all stacks</span>
+          <!-- Add circular element -->
+          <div class="absolute right-0 mr-5">
+            <div class="circle pb-2 my-2 mx-2"></div>
+            <div class="circle pt-2 my-2 mx-2"></div>
+          </div>
+          <i class="pi pi-angle-double-right" style="font-size: 1rem;"></i>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
 <div class="my-6">
   <div class="text-center pb-4">
   </div>
@@ -133,35 +160,6 @@ copyright: false
         </p>
       </Fieldset>
     </div>
-  </div>
-</div>
-
-<div class="my-4">
-  <div class="text-xl text-center md:text-left line-height-3">
-    I'm a full-stack developer with extensive experience in the JavaScript, VueJS, ReactJS and NodeJS ecosystems, as well as expertise in the Azure cloud platform.
-  </div>
-  <div class="grid mt-4">
-    <div class="md:col col-6 text-center" v-for="stackLogo in stackLogos" :key="stackLogo.title">
-      <i :class="stackLogo.icon" class="m-auto text-400 pl-3" style="font-size: 5rem"></i>
-      <img  height="50" :src="stackLogo.link" alt="Avatar"/>
-    </div>
-  </div>
-  <div class="text-center pb-4">
-    <a href="/about/#stack" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
-      <div class="p-flex p-ai-center">
-        <div
-          class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button"
-        >
-          <span class="mr-6">See all stacks</span>
-          <!-- Add circular element -->
-          <div class="absolute right-0 mr-5">
-            <div class="circle pb-2 my-2 mx-2"></div>
-            <div class="circle pt-2 my-2 mx-2"></div>
-          </div>
-          <i class="pi pi-angle-double-right" style="font-size: 1rem;"></i>
-        </div>
-      </div>
-    </a>
   </div>
 </div>
 
