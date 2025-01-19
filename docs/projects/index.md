@@ -1,6 +1,6 @@
 ---
-title: Stack Seekers Projects
-description: Organisation and freelance projects, highlighting my expertise for creating meaningful digital experiences.
+title: Web development projects
+description: Freelance projects in custom web and app development, including booking platforms, dashboards, and analytics tools. Built with React, Node.js, and modern tech stacks.
 icon: discover
 order: 2
 lastUpdated: false

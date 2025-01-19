@@ -1,11 +1,11 @@
 ---
 home: true
 icon: pi pi-home
-title: Freelance developer
-description: Freelance Vue.Js developer, React.Js developer and  Node.Js developer specializing in scalable web, mobile, and software solutions using 𝙈𝙀𝙍𝙉 and 𝙈𝙀𝙑𝙉 (Mongo, Express, ReactJs/VueJS, NextJs, NuxtJs, NodeJS).
+title: Full-Stack Web Consultant
+description: Full-Stack Consultant for Hire, specializing in custom websites and web applications using JavaScript, React.js, Next.js, Node.js, and more. Expert Vue.js, React.js, and Node.js developer delivering scalable web, mobile, and software solutions with 𝙈𝙀𝙍𝙉 and 𝙈𝙀𝙑𝙉 stacks (MongoDB, Express, React/Vue, Next/Nuxt, Node.js).
 heroImage: /img/jiwan.png
 heroText: Hi, I am Jiwan Ghosal
-tagline: Experienced freelance full-stack developer specializing in scalable web, mobile, and software solutions using MERN and MEVN.
+tagline: Experienced full-stack consultant specializing in scalable web, mobile, and software solutions using MERN and MEVN.
 containerClass: fancy-container
 actions:
   - text: Let’s discuss
@@ -20,8 +20,8 @@ copyright: false
 ---
 
 <div class="hidden">
-  <div class="text-4xl font-bold">Scaling startups, Elevating Industry Giants</div>
-  <div class="my-4 text-xl">Experienced freelance full-stack developer specializing in scalable web, mobile, and software solutions.</div>
+  <div class="text-4xl font-bold">Full Stack Web App Consultant | Jiwan Ghosal</div>
+  <div class="my-4 text-xl">I'm a full stack developer specializing in building web applications using JavaScript, Vue, React and Node.js</div>
 </div>
 <div class="my-6">
   <div class="text-center pb-4">
@@ -214,7 +214,7 @@ copyright: false
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 60 1440 260"><path fill="#10b981" fill-opacity="0.1" d="M0,128L40,144C80,160,160,192,240,192C320,192,400,160,480,160C560,160,640,192,720,176C800,160,880,96,960,80C1040,64,1120,96,1200,144C1280,192,1360,256,1400,288L1440,320L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
   <div>
     <div class="text-center pb-4">
-      <div class="text-4xl font-bold">Contact me</div>
+      <div class="text-4xl font-bold">NEED A FULL STACK WEB DEVELOPER?</div>
       <div class="my-4 text-md">Let's work together!</div>
     </div>
     <div class="mx-4 text-center text-xl line-height-3">

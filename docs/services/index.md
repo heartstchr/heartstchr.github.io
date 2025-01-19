@@ -1,6 +1,6 @@
 ---
-title: Stack Seekers Services
-description: Services tailored to your needs, including Custom Web Development, E-commerce Solutions, API Development and Integration , Figma to Web Conversion, and Hosting & Deployment.
+title: Full-Stack web solutions for hire 
+description: Custom Web Development freelancer for hire, E-commerce Solutions freelancer for hire, API Development and Integration freelancer for hire , Figma to Web Conversion freelancer for hire, and Hosting & Deployment freelancer for hire.
 icon: code
 order: 3
 lastUpdated: false
