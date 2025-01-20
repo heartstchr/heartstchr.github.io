@@ -3,7 +3,7 @@ home: true
 icon: pi pi-home
 title: Full-Stack Web Consultant
 description: Full-Stack Consultant for Hire, specializing in custom websites and web applications using JavaScript, React.js, Next.js, Node.js, and more. Expert Vue.js, React.js, and Node.js developer delivering scalable web, mobile, and software solutions with 𝙈𝙀𝙍𝙉 and 𝙈𝙀𝙑𝙉 stacks (MongoDB, Express, React/Vue, Next/Nuxt, Node.js).
-heroImage: /img/jiwan.png
+heroImage: /img/jiwanghosal2.jpg
 heroText: Hi, I am Jiwan Ghosal
 tagline: Experienced full-stack consultant specializing in scalable web, mobile, and software solutions using MERN and MEVN.
 containerClass: fancy-container
