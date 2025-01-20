@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@primevue/themes": "^4.2.5",
+    "@vuepress/plugin-blog": "2.0.0-rc.73",
     "@vuepress/plugin-seo": "2.0.0-rc.3",
     "axios": "^1.7.9",
     "googleapis": "^144.0.0",

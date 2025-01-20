@@ -44,4 +44,9 @@ export const enNavbar = navbar([
     icon: "pi pi-youtube",
     link: "videos/",
   },
+  {
+    text: "Blog",
+    icon: "pi pi-youtube",
+    link: "blog/",
+  },
 ]);

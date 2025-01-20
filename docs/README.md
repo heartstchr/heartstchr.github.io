@@ -12,8 +12,6 @@ actions:
     icon: pi pi-calendar-clock
     link: https://cal.com/stackseekers
     type: primary
-  - text: See my work 🚀
-    link: /projects/
 
 editLink: false
 copyright: false

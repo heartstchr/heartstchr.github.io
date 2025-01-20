@@ -48,40 +48,8 @@ export default hopeTheme({
   blog: {},
   plugins: {
     seo: true,
-    blog: true,
+    blog: false,
     comment: {},
-    // Disable features you don’t want here
-    mdEnhance: {
-      align: true,
-      attrs: true,
-      codetabs: true,
-      demo: true,
-      gfm: true,
-      figure: true,
-      include: true,
-      mark: true,
-      playground: {
-        presets: ["ts", "vue"],
-      },
-      stylize: [
-        {
-          matcher: "Recommended",
-          replacer: ({ tag }) => {
-            if (tag === "em")
-              return {
-                tag: "Badge",
-                attrs: { type: "tip" },
-                content: "Recommended",
-              };
-          },
-        },
-      ],
-      sub: true,
-      sup: true,
-      tabs: true,
-      vPre: true,
-      vuePlayground: true,
-    },
     pwa: {
       favicon: "/favicon.ico",
       cacheHTML: true,
