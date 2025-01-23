@@ -1,6 +1,6 @@
 ---
-title: Full-Stack web solutions for hire 
-description: Custom Web Development freelancer for hire, E-commerce Solutions freelancer for hire, API Development and Integration freelancer for hire , Figma to Web Conversion freelancer for hire, and Hosting & Deployment freelancer for hire.
+title: Full-stack web solutions for hire 
+description: Custom web development freelancer for hire, E-commerce Solutions freelancer for hire, API development and Integration freelancer for hire , Figma to Web Conversion freelancer for hire, and Hosting & Deployment freelancer for hire.
 icon: code
 order: 3
 lastUpdated: false

@@ -1,0 +1,306 @@
+[
+    {
+        "_id": "678f331aacff73860b3c36f2",
+        "user": {
+            "_id": "678f31faacff73860b3c36f0",
+            "email": "jiwan.cse+1@gmail.com",
+            "username": null,
+            "full_name": "jiwan ghosal",
+            "phone_number": "48723879234",
+            "date_of_birth": null,
+            "address": {
+                "_id": null,
+                "street": "Don't mind for test",
+                "city": "Don't mind for test",
+                "state": "AK",
+                "postal_code": "99500",
+                "country": "USA"
+            },
+            "image_meta_data": null,
+            "terms_of_service_agreed": true,
+            "account_creation_date": "2025-01-15T20:54:05.108",
+            "roles": [
+                "vendor"
+            ]
+        },
+        "parent_vendor": {
+            "id": "678f31fbacff73860b3c36f1",
+            "collection": "vendor"
+        },
+        "package_name": "test",
+        "package_description": "Don't mind for test",
+        "event_type": [
+            {
+                "_id": "6494dbda937e7153beb8110d",
+                "is_active": true,
+                "created_at": "2024-10-03T00:48:48.664",
+                "updated_at": "2024-10-03T00:48:48.664",
+                "name": "Reunion",
+                "slug": "reunion",
+                "category": "life",
+                "image": "https://cdn-dev-vendors.eventsinminutes.com/ad62044d-6f67-49f7-b462-95632af904c8.webp",
+                "icon": "https://cdn-dev-vendors.eventsinminutes.com/a6546660-1985-4e04-807b-3b8ad516ea28.svg",
+                "description": "Experience unforgettable Reunion Party Events, tailored to unite friends, family, and colleagues in a special celebration. Expertly planned to blend nostalgia with new joys in beautiful settings, our events feature gourmet dining, dance floors, and personalized mementos. Enjoy stress-free moments of reconnection and create lasting memories. Choose us for an extraordinary celebration that deepens bonds and is remembered forever.",
+                "is_ui_enabled": false
+            },
+            {
+                "_id": "6494dbda937e7153beb81109",
+                "is_active": true,
+                "created_at": "2024-10-03T00:48:48.664",
+                "updated_at": "2024-10-03T00:48:48.664",
+                "name": "Anniversary",
+                "slug": "anniversary",
+                "category": "life",
+                "image": "https://storage.googleapis.com/eventsinminutes_vendor_images/b8228ab0-81fe-4248-819f-fde3a6f24fee.webp",
+                "icon": "https://cdn-dev-vendors.eventsinminutes.com/04e17b2e-c37a-4ee5-85ca-b88d96de36f6.svg",
+                "description": "Celebrate every milestone of your love with our Bespoke Anniversary Events, designed to capture the essence of your journey. From your first to your golden anniversary, our events in stunning venues offer the ideal setting for reflection and future dreams. Enjoy romantic dinners, music, and personalized details, all crafted to tell your love story. Our meticulous attention ensures you immerse in the magic, creating cherished new memories. Choose our Anniversary Events for an enchanting, unforgettable celebration of your enduring commitment, making each milestone a timeless treasure.",
+                "is_ui_enabled": false
+            },
+            {
+                "_id": "6494dbda937e7153beb8110b",
+                "is_active": true,
+                "created_at": "2024-10-03T00:48:48.664",
+                "updated_at": "2024-10-03T00:48:48.664",
+                "name": "Retirement",
+                "slug": "retirement-party",
+                "category": "life",
+                "image": "https://storage.googleapis.com/eventsinminutes_vendor_images/01939b6d-5876-4e8a-a43d-f2ddb5f25331.webp",
+                "icon": "https://cdn-dev-vendors.eventsinminutes.com/742c0f32-45ab-49c2-982e-870b4bde4079.svg",
+                "description": "Celebrate a milestone career with our Signature Retirement Party Events, designed for elegance and joy. Our sophisticated ambiance honors the retiree's legacy, with laughter, nostalgia, and tributes. Enjoy fine dining, live music, and personalized details in a seamless celebration. Opt for our events to honor the past and embrace new beginnings, cherishing moments with loved ones.",
+                "is_ui_enabled": false
+            }
+        ],
+        "image_meta_data": [
+            {
+                "_id": "678f3394acff73860b3c36f4",
+                "image_url": "https://cdn-prod-vendors.eventsinminutes.com/92d95285-1782-436b-9700-4da287aaf1e2_large.webp",
+                "image_urls": {
+                    "original": "https://cdn-prod-vendors.eventsinminutes.com/blob",
+                    "thumbnail": "https://cdn-prod-vendors.eventsinminutes.com/92d95285-1782-436b-9700-4da287aaf1e2_thumbnail.webp",
+                    "feature": "https://cdn-prod-vendors.eventsinminutes.com/92d95285-1782-436b-9700-4da287aaf1e2_feature.webp",
+                    "medium": "https://cdn-prod-vendors.eventsinminutes.com/92d95285-1782-436b-9700-4da287aaf1e2_medium.webp",
+                    "large": "https://cdn-prod-vendors.eventsinminutes.com/92d95285-1782-436b-9700-4da287aaf1e2_large.webp"
+                },
+                "image_hash": "285a7c164b2ea81e2ef5c956ae521706121490451ab2c4ca3fcb6a0cca08e0f6",
+                "uploader_id": "678f31faacff73860b3c36f0",
+                "created_time": "2025-01-21T05:41:40.863",
+                "file_name": "blob",
+                "file_size": 745,
+                "content_type": "image/png",
+                "tags": [],
+                "description": ""
+            },
+            {
+                "_id": "678f3395acff73860b3c36f6",
+                "image_url": "https://cdn-prod-vendors.eventsinminutes.com/0e471155-ead8-4198-9a27-1eb701029bf7_large.webp",
+                "image_urls": {
+                    "original": "https://cdn-prod-vendors.eventsinminutes.com/blob",
+                    "thumbnail": "https://cdn-prod-vendors.eventsinminutes.com/0e471155-ead8-4198-9a27-1eb701029bf7_thumbnail.webp",
+                    "feature": "https://cdn-prod-vendors.eventsinminutes.com/0e471155-ead8-4198-9a27-1eb701029bf7_feature.webp",
+                    "medium": "https://cdn-prod-vendors.eventsinminutes.com/0e471155-ead8-4198-9a27-1eb701029bf7_medium.webp",
+                    "large": "https://cdn-prod-vendors.eventsinminutes.com/0e471155-ead8-4198-9a27-1eb701029bf7_large.webp"
+                },
+                "image_hash": "272077e6653f1688bb2d1e6941b9caae8a210cfd2706f3645b781cfb5fae94cd",
+                "uploader_id": "678f31faacff73860b3c36f0",
+                "created_time": "2025-01-21T05:41:41.28",
+                "file_name": "blob",
+                "file_size": 861,
+                "content_type": "image/png",
+                "tags": [],
+                "description": ""
+            },
+            {
+                "_id": "678f3395acff73860b3c36f7",
+                "image_url": "https://cdn-prod-vendors.eventsinminutes.com/7ea572e3-915c-4664-a8fa-808bae9d26f5_large.webp",
+                "image_urls": {
+                    "original": "https://cdn-prod-vendors.eventsinminutes.com/blob",
+                    "thumbnail": "https://cdn-prod-vendors.eventsinminutes.com/7ea572e3-915c-4664-a8fa-808bae9d26f5_thumbnail.webp",
+                    "feature": "https://cdn-prod-vendors.eventsinminutes.com/7ea572e3-915c-4664-a8fa-808bae9d26f5_feature.webp",
+                    "medium": "https://cdn-prod-vendors.eventsinminutes.com/7ea572e3-915c-4664-a8fa-808bae9d26f5_medium.webp",
+                    "large": "https://cdn-prod-vendors.eventsinminutes.com/7ea572e3-915c-4664-a8fa-808bae9d26f5_large.webp"
+                },
+                "image_hash": "9556a9f6d1ab2831a6830b525c7e57e3b9b6ebef3a6e83bcf65b3000c52ab1a2",
+                "uploader_id": "678f31faacff73860b3c36f0",
+                "created_time": "2025-01-21T05:41:41.506",
+                "file_name": "blob",
+                "file_size": 707,
+                "content_type": "image/png",
+                "tags": [],
+                "description": ""
+            },
+            {
+                "_id": "678f3394acff73860b3c36f3",
+                "image_url": "https://cdn-prod-vendors.eventsinminutes.com/f8dfc9a2-c778-4c61-92ec-2ae9df27e744_large.webp",
+                "image_urls": {
+                    "original": "https://cdn-prod-vendors.eventsinminutes.com/blob",
+                    "thumbnail": "https://cdn-prod-vendors.eventsinminutes.com/f8dfc9a2-c778-4c61-92ec-2ae9df27e744_thumbnail.webp",
+                    "feature": "https://cdn-prod-vendors.eventsinminutes.com/f8dfc9a2-c778-4c61-92ec-2ae9df27e744_feature.webp",
+                    "medium": "https://cdn-prod-vendors.eventsinminutes.com/f8dfc9a2-c778-4c61-92ec-2ae9df27e744_medium.webp",
+                    "large": "https://cdn-prod-vendors.eventsinminutes.com/f8dfc9a2-c778-4c61-92ec-2ae9df27e744_large.webp"
+                },
+                "image_hash": "32a88277d52d84d2c4b7fef19a338d254e95c29db49ae40d6df045b01292d5c7",
+                "uploader_id": "678f31faacff73860b3c36f0",
+                "created_time": "2025-01-21T05:41:40.461",
+                "file_name": "blob",
+                "file_size": 685,
+                "content_type": "image/png",
+                "tags": [],
+                "description": ""
+            },
+            {
+                "_id": "678f3395acff73860b3c36f5",
+                "image_url": "https://cdn-prod-vendors.eventsinminutes.com/943be2c7-6841-4396-9e09-95b993289e05_large.webp",
+                "image_urls": {
+                    "original": "https://cdn-prod-vendors.eventsinminutes.com/blob",
+                    "thumbnail": "https://cdn-prod-vendors.eventsinminutes.com/943be2c7-6841-4396-9e09-95b993289e05_thumbnail.webp",
+                    "feature": "https://cdn-prod-vendors.eventsinminutes.com/943be2c7-6841-4396-9e09-95b993289e05_feature.webp",
+                    "medium": "https://cdn-prod-vendors.eventsinminutes.com/943be2c7-6841-4396-9e09-95b993289e05_medium.webp",
+                    "large": "https://cdn-prod-vendors.eventsinminutes.com/943be2c7-6841-4396-9e09-95b993289e05_large.webp"
+                },
+                "image_hash": "7d5645aa60cc58dc0c7aff9dd790880f3a91f025835498e2acfc19e99b300f50",
+                "uploader_id": "678f31faacff73860b3c36f0",
+                "created_time": "2025-01-21T05:41:41.134",
+                "file_name": "blob",
+                "file_size": 699,
+                "content_type": "image/png",
+                "tags": [],
+                "description": ""
+            }
+        ],
+        "featured_image_meta_data": {
+            "_id": "678f3394acff73860b3c36f4",
+            "image_url": "https://cdn-prod-vendors.eventsinminutes.com/92d95285-1782-436b-9700-4da287aaf1e2_large.webp",
+            "image_urls": {
+                "original": "https://cdn-prod-vendors.eventsinminutes.com/blob",
+                "thumbnail": "https://cdn-prod-vendors.eventsinminutes.com/92d95285-1782-436b-9700-4da287aaf1e2_thumbnail.webp",
+                "feature": "https://cdn-prod-vendors.eventsinminutes.com/92d95285-1782-436b-9700-4da287aaf1e2_feature.webp",
+                "medium": "https://cdn-prod-vendors.eventsinminutes.com/92d95285-1782-436b-9700-4da287aaf1e2_medium.webp",
+                "large": "https://cdn-prod-vendors.eventsinminutes.com/92d95285-1782-436b-9700-4da287aaf1e2_large.webp"
+            },
+            "image_hash": "285a7c164b2ea81e2ef5c956ae521706121490451ab2c4ca3fcb6a0cca08e0f6",
+            "uploader_id": "678f31faacff73860b3c36f0",
+            "created_time": "2025-01-21T05:41:40.863",
+            "file_name": "blob",
+            "file_size": 745,
+            "content_type": "image/png",
+            "tags": [],
+            "description": ""
+        },
+        "unavailable_times": [],
+        "unavailable_dates": [],
+        "availability_time_span": null,
+        "weekly_availability": [],
+        "services": [
+            "670eaf2e8e6d5c8ea41f30d5",
+            "670eaf2f8e6d5c8ea41f30e2",
+            "670eaf2f8e6d5c8ea41f30e3",
+            "670eaf318e6d5c8ea41f30f2"
+        ],
+        "package_tier": null,
+        "vendors": [],
+        "legal_info": "",
+        "max_number_of_attendees": 80,
+        "min_number_of_attendees": 40,
+        "package_serving_address": {
+            "street": "test",
+            "unit": "",
+            "city": "Alameda",
+            "state": "AK",
+            "zip_code": "99550",
+            "country": "USA"
+        },
+        "package_serving_radius": 0.0,
+        "status": "DRAFT",
+        "slugs": [
+            "test-alameda"
+        ],
+        "is_virtual": false,
+        "is_instant_booking": false,
+        "availability_setting": {
+            "weekly_schedule": [
+                {
+                    "day": "Sunday",
+                    "is_open": false,
+                    "start_end_time": []
+                },
+                {
+                    "day": "Monday",
+                    "is_open": true,
+                    "start_end_time": [
+                        {
+                            "start_time": "00:00",
+                            "end_time": "23:30",
+                            "is_full_day": true
+                        }
+                    ]
+                },
+                {
+                    "day": "Tuesday",
+                    "is_open": true,
+                    "start_end_time": [
+                        {
+                            "start_time": "00:00",
+                            "end_time": "23:30",
+                            "is_full_day": true
+                        }
+                    ]
+                },
+                {
+                    "day": "Wednesday",
+                    "is_open": true,
+                    "start_end_time": [
+                        {
+                            "start_time": "00:00",
+                            "end_time": "23:30",
+                            "is_full_day": true
+                        }
+                    ]
+                },
+                {
+                    "day": "Thursday",
+                    "is_open": true,
+                    "start_end_time": [
+                        {
+                            "start_time": "22:00",
+                            "end_time": "23:30",
+                            "is_full_day": false
+                        }
+                    ]
+                },
+                {
+                    "day": "Friday",
+                    "is_open": false,
+                    "start_end_time": []
+                },
+                {
+                    "day": "Saturday",
+                    "is_open": false,
+                    "start_end_time": []
+                }
+            ],
+            "availability_window": 12,
+            "preparation_time": 1,
+            "advance_notice": 1,
+            "block_out_dates": [
+                "2025-01-22",
+                "2025-01-25",
+                "2025-01-24",
+                "2025-01-23",
+                "2025-01-26",
+                "2025-01-27"
+            ]
+        },
+        "duration": 3.0,
+        "pricing_formation": null,
+        "event_location_type": "Vendor Venue",
+        "event_location_address": null,
+        "customer_location_info": [
+            {
+                "location": "",
+                "radius_of_operation": null,
+                "lat": "",
+                "lon": ""
+            }
+        ]
+    }
+]

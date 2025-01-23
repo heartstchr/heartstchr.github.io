@@ -1,14 +1,14 @@
 ---
 home: true
 icon: pi pi-home
-title: Full-Stack Web Consultant
-description: Full-Stack Consultant for Hire, specializing in custom websites and web applications using JavaScript, React.js, Next.js, Node.js, and more. Expert Vue.js, React.js, and Node.js developer delivering scalable web, mobile, and software solutions with 𝙈𝙀𝙍𝙉 and 𝙈𝙀𝙑𝙉 stacks (MongoDB, Express, React/Vue, Next/Nuxt, Node.js).
+title: Full-stack web consultant
+description: Full-stack consultant for hire, specializing in custom websites and web applications using JavaScript, React.js, Next.js, Node.js, and more. Expert Vue.js, React.js, and Node.js developer delivering scalable web, mobile, and software solutions with 𝙈𝙀𝙍𝙉 and 𝙈𝙀𝙑𝙉 stacks (MongoDB, Express, React/Vue, Next/Nuxt, Node.js).
 heroImage: /img/jiwanghosal2.jpg
 heroText: Hi, I am Jiwan Ghosal
-tagline: Experienced full-stack consultant specializing in scalable web, mobile, and software solutions using MERN and MEVN.
+tagline: Full-stack consultant specializing in scalable web, mobile, and software solutions using MERN and MEVN stacks. Let’s bring your ideas to life—connect with me today!
 containerClass: fancy-container
 actions:
-  - text: Let’s discuss
+  - text: Book free consultation
     icon: pi pi-calendar-clock
     link: https://cal.com/stackseekers
     type: primary
@@ -125,9 +125,12 @@ copyright: false
               <img :src="slotProps.data.avatar" alt="Avatar" class="border-circle" width="50px" />
               <a :href="slotProps.data.link" target="_blank" class="no-underline">
                 <div class="flex flex-column align-items-start ml-2">
-                  <div>{{ slotProps.data.name }}</div>
                   <div>
-                    <img :alt="slotProps.data.name" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" :class="`flag flag-${slotProps.data.code.toLowerCase()} mr-2`" style="width: 18px" />
+                    <i class="pi pi-linkedin mr-1 text-blue-700" style="font-size: 1rem"></i>
+                    {{ slotProps.data.name }} 
+                  </div>
+                  <div>
+                    <img :alt="slotProps.data.name" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" :class="`flag flag-${slotProps.data.code.toLowerCase()} mr-1`" style="width: 18px" />
                     {{ slotProps.data.location }}
                   </div>
                 </div>
