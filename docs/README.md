@@ -25,7 +25,7 @@ copyright: false
   <div class="text-center pb-4">
     <div class="text-4xl font-bold">Scaling startups</div>
     <a class="text-4xl font-bold no-underline">Elevating industry giants</a>
-    <div class="my-4 text-xl line-height-2">I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development</div>
+    <div class="my-4 text-xl line-height-2">I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development.</div>
   </div>
   <div class="my-4 flex flex-column md:flex-row justify-content-center gap-2">
     <div class="md:col col-12 border-round-md md:p-2 md:m-2 vp-feature-item flex align-items-center justify-content-center" v-for="org in orgs" :key="org.title">
