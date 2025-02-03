@@ -191,11 +191,20 @@ copyright: false
             </AccordionTab>
             <AccordionTab header="Q: What does the project process look like?">
                 <p class="mx-3">
-                  <div>It’s simple and straightforward: </div>
-                  <Timeline :value="events"  class="w-full md:w-80">
-                      <template #content="slotProps">
-                          {{ slotProps.item.status }}
-                      </template>
+                  <div>It’s simple and straightforward </div>
+                  <Timeline :value="events" align="left"
+                      :pt="{
+                        eventOpposite: { style: { padding: 0, flex: 0 } },
+                        marker: { style: { backgroundColor: '#FFA500' } },
+                        connector: { style: { backgroundColor: '#FFA500' } },
+                        content: { style: { padding: '4px, 2px' } }
+                      }">
+                    <template #opposite="slotProps">
+                      <small class="p-text-secondary"></small>
+                    </template>
+                    <template #content="slotProps">
+                      {{ slotProps.item.status }}
+                    </template>
                   </Timeline>
                 </p>
             </AccordionTab>
