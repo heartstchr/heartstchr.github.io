@@ -191,7 +191,7 @@ copyright: false
             </AccordionTab>
             <AccordionTab header="Q: What does the project process look like?">
                 <p class="mx-3">
-                  <div>It’s simple and straightforward </div>
+                  <div class="my-4">It’s simple and straightforward </div>
                   <Timeline :value="events" align="left"
                       :pt="{
                         eventOpposite: { style: { padding: 0, flex: 0 } },
