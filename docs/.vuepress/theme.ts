@@ -45,14 +45,13 @@ export default hopeTheme({
       "/zh/demo/encrypt.html": ["1234"],
     },
   },
-  blog: {},
   plugins: {
     seo: true,
     blog: false,
     comment: {},
     pwa: {
       favicon: "/favicon.ico",
-      cacheHTML: true,
+      cacheHTML: false,
       appendBase: true,
       apple: {
         icon: "/assets/icon/apple-icon-152.png",
