@@ -192,13 +192,22 @@ copyright: false
             <AccordionTab header="Q: What does the project process look like?">
                 <div class="mx-3">
                   <div class="my-4">It’s simple and straightforward: </div>
-                  <ul class="flex flex-column gap-4">
-                    <li class="ml-2">We start with understanding your requirements</li>
-                    <li class="ml-2">Set a clear timeline</li>
-                    <li class="ml-2">I handle the development phase</li>
-                    <li class="ml-2">Deliver your project with ongoing support to ensure success</li>
-                  </ul>
+                  <Timeline :value="events" align="left"
+                      :pt="{
+                        eventOpposite: { style: { padding: 0, flex: 0 } },
+                        marker: { style: { backgroundColor: '#FFA500' } },
+                        connector: { style: { backgroundColor: '#FFA500' } },
+                        content: { style: { padding: '4px, 2px' } }
+                      }">
+                    <template #opposite="slotProps">
+                      <small class="p-text-secondary"></small>
+                    </template>
+                    <template #content="slotProps">
+                      {{ slotProps.item.status }}
+                    </template>
+                  </Timeline>
                 </div>
+                <div></div>
             </AccordionTab>
         </Accordion>
         <div class="my-4">
@@ -256,7 +265,6 @@ const events = ref([
     { status: 'I handle the development phase', date: '15/10/2020 16:15', icon: 'pi pi-shopping-cart', color: '#FF9800' },
     { status: 'Deliver your project with ongoing support to ensure success', date: '16/10/2020 10:00', icon: 'pi pi-check', color: '#607D8B' }
 ]);
-
 const projects = ref([
     {
         name: "Upstox: Demat Account",
