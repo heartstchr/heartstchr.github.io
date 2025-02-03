@@ -4,8 +4,8 @@
   "description": "Experienced full-stack freelance developer specializing in scalable web, mobile, and software solutions",
   "type": "module",
   "scripts": {
-    "docs:build": "vuepress build docs --clean-cache",
-    "docs:clean-dev": "vuepress dev docs --clean-cache",
+    "docs:build": "vuepress build docs --no-cache",
+    "docs:clean-dev": "vuepress dev docs --no-cache",
     "docs:dev": "vuepress dev docs"
   },
   "devDependencies": {
