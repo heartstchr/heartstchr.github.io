@@ -183,16 +183,16 @@ const projects= [
                 name:'Activities and details based on location'
             },
             {
-                name:'Book and share attractions for other people'
+                name:'Book and share attractions with other people'
             },
             {
                 name:'Discount system based on promo code'
             },
             {
-                name:'Paymnet system using Boost wallet and other payment methods'
+                name:'Payment system using Boost wallet and other payment methods'
             },
             {
-                name:'Custome CMS Backend system to add, update, delete tours and attractions'
+                name:'Custom CMS backend system to add, update, and delete tours and attractions'
             },
         ],
         org: "Catch That Bus",
@@ -216,7 +216,7 @@ const projects= [
         software: "Web / IOS APP",
         features: [
             {
-                name:'Search for bus by chosing from destination and to destination in Malaysia for dates'
+                name:'Search for a bus by choosing from the destination and to the destination in Malaysia for dates.'
             },
             {
                 name:'Sort and filter on available buses'
@@ -225,16 +225,16 @@ const projects= [
                 name:'Seat visualization of a bus'
             },
             {
-                name:'Booking system to handel concurent request'
+                name:'Booking system to handle concurrent requests'
             },
             {
-                name:'Discount system based on cupon code',
+                name:'Discount system based on coupon code',
             },
             {
-                name:'Insurnce integration for travelers',
+                name:'Insurance integration for travellers',
             },
             {
-                name:'Payment system usign wallet and cards',
+                name:'Payment system using wallets and cards',
             },
             {
                 name:'Webview for Boost wallet',
@@ -249,7 +249,7 @@ const projects= [
                 name:'Bus Booked history'
             },
             {
-                name:'Bus orboarding sytem for admin and bus operator'
+                name:'Bus onboarding system for admin and bus operator'
             },
         ],
         org: "Catch That Bus",
@@ -283,19 +283,19 @@ const projects= [
                 name:'Refer and earn program'
             },
             {
-                name:'Track lead refered'
+                name:'Track lead referred'
             },
             {
-                name:'Ambasador program'
+                name:'Ambassador program'
             },
             {
                 name:'Royalty program'
             },
             {
-                name:'Track customer refered'
+                name:'Track customer referred'
             },
             {
-                name:'Dashboard to show earning based on the program'
+                name:'Dashboard to show earnings based on the program'
             },
             {
                 name:'Search by name and UCC'
@@ -349,10 +349,10 @@ const projects= [
         software: "Web",
         features: [
             {
-                name:'Open Demat account with document upload'
+                name:'Open a Demat account with document upload.'
             },
             {
-                name:'Pan, Aadhar, IPV, and canceled check verification'
+                name:'PAN, Aadhar, IPV, and cancelled check verification'
             },
             {
                 name:'Lead to CRM system'
@@ -388,31 +388,31 @@ const projects= [
         software: "Web",
         features: [
             {
-                name:'Create campaign for call'
+                name:'Create a campaign for the call'
             },
             {
-                name:'Create bundel of campaigns for call'
+                name:'Create a bundle of campaigns for the call'
             },
             {
                 name:'Buy local & toll-free numbers'
             },
             {
-                name:'Call Recording and Off Hour Call Handling'
+                name:'Call Recording and Off-Hour Call Handling'
             },
             {
-                name:'Funnel to redirect the call based on the multi level IVR'
+                name:'Funnel to redirect the call based on the multi-level IVR'
             },
             {
-                name:'Report of bundel, CDR, and offer based on hour, week and geo location'
+                name:'Report of bundle, CDR, and offer based on hour, week, and geolocation'
             },
             {
-                name:'Dashboard to get bird eye view'
+                name:'Dashboard to get a birds-eye view'
             },
             {
-                name:'Google Adwords API integration'
+                name:'Google AdWords API integration'
             },
             {
-                name:'User autherisation based on role'
+                name:'User authorization based on role'
             },
         ],
         org: "Mobistreak",
