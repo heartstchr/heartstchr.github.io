@@ -311,32 +311,32 @@ const projects= [
         link: "https://upstox.com/sub-broker/",
         images: [
                 {
-                    itemImageSrc: '/img/projects/partnerUpstox/partnerUpstox.png',
-                    thumbnailImageSrc: '/img/projects/partnerUpstox/partnerUpstox.png',
+                    itemImageSrc: '/img/projects/partnerUpstox/partnerUpstox.webp',
+                    thumbnailImageSrc: '/img/projects/partnerUpstox/partnerUpstox.webp',
                     alt: 'Open a sub-broker account with Upstox.',
                     title: 'Open a sub-broker account with Upstox.'
                 },
                 {
-                    itemImageSrc: '/img/projects/partnerUpstox/dashboard.png',
-                    thumbnailImageSrc: '/img/projects/partnerUpstox/dashboard.png',
+                    itemImageSrc: '/img/projects/partnerUpstox/dashboard.webp',
+                    thumbnailImageSrc: '/img/projects/partnerUpstox/dashboard.webp',
                     alt: 'Open a sub-broker account with Upstox.',
                     title: 'Open a sub-broker account with Upstox.'
                 },
                 {
-                    itemImageSrc: '/img/projects/partnerUpstox/leads.png',
-                    thumbnailImageSrc: '/img/projects/partnerUpstox/leads.png',
+                    itemImageSrc: '/img/projects/partnerUpstox/leads.webp',
+                    thumbnailImageSrc: '/img/projects/partnerUpstox/leads.webp',
                     alt: 'Open a sub-broker account with Upstox.',
                     title: 'Open a sub-broker account with Upstox.'
                 },
                 {
-                    itemImageSrc: '/img/projects/partnerUpstox/customer.png',
-                    thumbnailImageSrc: '/img/projects/partnerUpstox/customer.png',
+                    itemImageSrc: '/img/projects/partnerUpstox/customer.webp',
+                    thumbnailImageSrc: '/img/projects/partnerUpstox/customer.webp',
                     alt: 'Open a sub-broker account with Upstox.',
                     title: 'Open a sub-broker account with Upstox.'
                 },
                 {
-                    itemImageSrc: '/img/projects/partnerUpstox/earning.png',
-                    thumbnailImageSrc: '/img/projects/partnerUpstox/earning.png',
+                    itemImageSrc: '/img/projects/partnerUpstox/earning.webp',
+                    thumbnailImageSrc: '/img/projects/partnerUpstox/earning.webp',
                     alt: 'Open a sub-broker account with Upstox.',
                     title: 'Open a sub-broker account with Upstox.'
                 },
@@ -374,8 +374,8 @@ const projects= [
         link: "https://upstox.com/open-demat-account/",
         images: [
                 {
-                    itemImageSrc: '/img/projects/openDemat.png',
-                    thumbnailImageSrc: '/img/projects/openDemat.png',
+                    itemImageSrc: '/img/projects/openDemat.webp',
+                    thumbnailImageSrc: '/img/projects/openDemat.webp',
                     alt: 'Open a Demat Account Online: Demat Account Opening at Upstox',
                     title: 'Open a Demat Account Online: Demat Account Opening at Upstox'
                 },
@@ -422,14 +422,14 @@ const projects= [
         link: "https://callmatrix.io/",
         images: [
                 {
-                    itemImageSrc: '/img/projects/callmatrix/callmatrix.png',
-                    thumbnailImageSrc: '/img/projects/callmatrix/callmatrix.png',
+                    itemImageSrc: '/img/projects/callmatrix/callmatrix.webp',
+                    thumbnailImageSrc: '/img/projects/callmatrix/callmatrix.webp',
                     alt: 'CallMatrix - Call Intelligence, Marketing, and Analytics Platform',
                     title: 'Title 1'
                 },
                 {
-                    itemImageSrc: '/img/projects/callmatrix/mobistreak.png',
-                    thumbnailImageSrc: '/img/projects/callmatrix/mobistreak.png',
+                    itemImageSrc: '/img/projects/callmatrix/mobistreak.webp',
+                    thumbnailImageSrc: '/img/projects/callmatrix/mobistreak.webp',
                     alt: 'CallMatrix - Call Intelligence, Marketing, and Analytics Platform',
                     title: 'Title 1'
                 },
@@ -464,26 +464,26 @@ const freelance = [
         link: "https://holidays.qatarairways.com/en-in/avios",
         images: [
             {
-                    itemImageSrc: '/img/projects/quatar/placeholder.png',
-                    thumbnailImageSrc: '/img/projects/quatar/placeholder.png',
+                    itemImageSrc: '/img/projects/quatar/placeholder.webp',
+                    thumbnailImageSrc: '/img/projects/quatar/placeholder.webp',
                     alt: 'Quatar Airways',
                     title: 'Quatar Airways'
                 },
                 {
-                    itemImageSrc: '/img/projects/quatar/qutar_airways.png',
-                    thumbnailImageSrc: '/img/projects/quatar/qutar_airways.png',
+                    itemImageSrc: '/img/projects/quatar/qutar_airways.webp',
+                    thumbnailImageSrc: '/img/projects/quatar/qutar_airways.webp',
                     alt: 'Quatar Airways',
                     title: 'Quatar Airways'
                 },
                 {
-                    itemImageSrc: '/img/projects/quatar/thumbnail.png',
-                    thumbnailImageSrc: '/img/projects/quatar/thumbnail.png',
+                    itemImageSrc: '/img/projects/quatar/thumbnail.webp',
+                    thumbnailImageSrc: '/img/projects/quatar/thumbnail.webp',
                     alt: 'Quatar Airways',
                     title: 'Quatar Airways'
                 },
                 {
-                    itemImageSrc: '/img/projects/quatar/quatar.png',
-                    thumbnailImageSrc: '/img/projects/quatar/quatar.png',
+                    itemImageSrc: '/img/projects/quatar/quatar.webp',
+                    thumbnailImageSrc: '/img/projects/quatar/quatar.webp',
                     alt: 'Quatar Airways',
                     title: 'Quatar Airways'
                 },
@@ -519,92 +519,92 @@ const freelance = [
         codeLink: "https://github.com/heartstchr/recipe",
         images: [
                 {
-                    itemImageSrc: '/img/projects/recipe/login.png',
-                    thumbnailImageSrc: '/img/projects/recipe/login.png',
+                    itemImageSrc: '/img/projects/recipe/login.webp',
+                    thumbnailImageSrc: '/img/projects/recipe/login.webp',
                     alt: 'Recipes - Social Network | Recipes',
                     title: 'Recipes - Social Network | Recipes'
                 },
                 {
-                    itemImageSrc: '/img/projects/recipe/register.png',
-                    thumbnailImageSrc: '/img/projects/recipe/register.png',
+                    itemImageSrc: '/img/projects/recipe/register.webp',
+                    thumbnailImageSrc: '/img/projects/recipe/register.webp',
                     alt: 'Recipes - Social Network | Recipes',
                     title: 'Recipes - Social Network | Recipes'
                 },
                 {
-                    itemImageSrc: '/img/projects/recipe/home.png',
-                    thumbnailImageSrc: '/img/projects/recipe/home.png',
+                    itemImageSrc: '/img/projects/recipe/home.webp',
+                    thumbnailImageSrc: '/img/projects/recipe/home.webp',
                     alt: 'Recipes - Social Network | Recipes',
                     title: 'Recipes - Social Network | Recipes'
                 },
                 {
-                    itemImageSrc: '/img/projects/recipe/direction.png',
-                    thumbnailImageSrc: '/img/projects/recipe/direction.png',
+                    itemImageSrc: '/img/projects/recipe/direction.webp',
+                    thumbnailImageSrc: '/img/projects/recipe/direction.webp',
                     alt: 'Recipes - Social Network | Recipes',
                     title: 'Recipes - Social Network | Recipes'
                 },
                 {
-                    itemImageSrc: '/img/projects/recipe/ingredients.png',
-                    thumbnailImageSrc: '/img/projects/recipe/ingredients.png',
+                    itemImageSrc: '/img/projects/recipe/ingredients.webp',
+                    thumbnailImageSrc: '/img/projects/recipe/ingredients.webp',
                     alt: 'Recipes - Social Network | Recipes',
                     title: 'Recipes - Social Network | Recipes'
                 },
                 {
-                    itemImageSrc: '/img/projects/recipe/addrecipe.png',
-                    thumbnailImageSrc: '/img/projects/recipe/addrecipe.png',
+                    itemImageSrc: '/img/projects/recipe/addrecipe.webp',
+                    thumbnailImageSrc: '/img/projects/recipe/addrecipe.webp',
                     alt: 'Recipes - Social Network | Recipes',
                     title: 'Recipes - Social Network | Recipes'
                 },
                 {
-                    itemImageSrc: '/img/projects/recipe/addsteps.png',
-                    thumbnailImageSrc: '/img/projects/recipe/addsteps.png',
+                    itemImageSrc: '/img/projects/recipe/addsteps.webp',
+                    thumbnailImageSrc: '/img/projects/recipe/addsteps.webp',
                     alt: 'Recipes - Social Network | Recipes',
                     title: 'Recipes - Social Network | Recipes'
                 },
                 {
-                    itemImageSrc: '/img/projects/recipe/search.png',
-                    thumbnailImageSrc: '/img/projects/recipe/search.png',
+                    itemImageSrc: '/img/projects/recipe/search.webp',
+                    thumbnailImageSrc: '/img/projects/recipe/search.webp',
                     alt: 'Recipes - Social Network | Recipes',
                     title: 'Recipes - Social Network | Recipes'
                 },
                 {
-                    itemImageSrc: '/img/projects/recipe/share.png',
-                    thumbnailImageSrc: '/img/projects/recipe/share.png',
+                    itemImageSrc: '/img/projects/recipe/share.webp',
+                    thumbnailImageSrc: '/img/projects/recipe/share.webp',
                     alt: 'Recipes - Social Network | Recipes',
                     title: 'Recipes - Social Network | Recipes'
                 },
                 {
-                    itemImageSrc: '/img/projects/recipe/mobile-home.png',
-                    thumbnailImageSrc: '/img/projects/recipe/mobile-home.png',
+                    itemImageSrc: '/img/projects/recipe/mobile-home.webp',
+                    thumbnailImageSrc: '/img/projects/recipe/mobile-home.webp',
                     alt: 'Recipes - Social Network | Recipes',
                     title: 'Recipes - Social Network | Recipes'
                 },
                 {
-                    itemImageSrc: '/img/projects/recipe/mobile-add-recipe.png',
-                    thumbnailImageSrc: '/img/projects/recipe/mobile-add-recipe.png',
+                    itemImageSrc: '/img/projects/recipe/mobile-add-recipe.webp',
+                    thumbnailImageSrc: '/img/projects/recipe/mobile-add-recipe.webp',
                     alt: 'Recipes - Social Network | Recipes',
                     title: 'Recipes - Social Network | Recipes'
                 },
                 {
-                    itemImageSrc: '/img/projects/recipe/mobile-menu-left.png',
-                    thumbnailImageSrc: '/img/projects/recipe/mobile-menu-left.png',
+                    itemImageSrc: '/img/projects/recipe/mobile-menu-left.webp',
+                    thumbnailImageSrc: '/img/projects/recipe/mobile-menu-left.webp',
                     alt: 'Recipes - Social Network | Recipes',
                     title: 'Recipes - Social Network | Recipes'
                 },
                 {
-                    itemImageSrc: '/img/projects/recipe/mobile-profile.png',
-                    thumbnailImageSrc: '/img/projects/recipe/mobile-profile.png',
+                    itemImageSrc: '/img/projects/recipe/mobile-profile.webp',
+                    thumbnailImageSrc: '/img/projects/recipe/mobile-profile.webp',
                     alt: 'Recipes - Social Network | Recipes',
                     title: 'Recipes - Social Network | Recipes'
                 },
                 {
-                    itemImageSrc: '/img/projects/recipe/mobile-profile2.png',
-                    thumbnailImageSrc: '/img/projects/recipe/mobile-profile2.png',
+                    itemImageSrc: '/img/projects/recipe/mobile-profile2.webp',
+                    thumbnailImageSrc: '/img/projects/recipe/mobile-profile2.webp',
                     alt: 'Recipes - Social Network | Recipes',
                     title: 'Recipes - Social Network | Recipes'
                 },
                 {
-                    itemImageSrc: '/img/projects/recipe/mobileshare.png',
-                    thumbnailImageSrc: '/img/projects/recipe/mobileshare.png',
+                    itemImageSrc: '/img/projects/recipe/mobileshare.webp',
+                    thumbnailImageSrc: '/img/projects/recipe/mobileshare.webp',
                     alt: 'Recipes - Social Network | Recipes',
                     title: 'Recipes - Social Network | Recipes'
                 },
@@ -640,26 +640,26 @@ const freelance = [
         codeLink: "https://github.com/heartstchr/tvshows",
         images: [
             {
-                itemImageSrc: '/img/projects/tvmaze/tvmaze-home.png',
-                thumbnailImageSrc: '/img/projects/tvmaze/tvmaze-home.png',
+                itemImageSrc: '/img/projects/tvmaze/tvmaze-home.webp',
+                thumbnailImageSrc: '/img/projects/tvmaze/tvmaze-home.webp',
                 alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
                 title: 'TVmaze - Add TV information to your website or app. | Tv maze'
             },
             {
-                itemImageSrc: '/img/projects/tvmaze/search.png',
-                thumbnailImageSrc: '/img/projects/tvmaze/search.png',
+                itemImageSrc: '/img/projects/tvmaze/search.webp',
+                thumbnailImageSrc: '/img/projects/tvmaze/search.webp',
                 alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
                 title: 'TVmaze - Add TV information to your website or app. | Tv maze'
             },
             {
-                itemImageSrc: '/img/projects/tvmaze/season.png',
-                thumbnailImageSrc: '/img/projects/tvmaze/season.png',
+                itemImageSrc: '/img/projects/tvmaze/season.webp',
+                thumbnailImageSrc: '/img/projects/tvmaze/season.webp',
                 alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
                 title: 'TVmaze - Add TV information to your website or app. | Tv maze'
             },
             {
-                itemImageSrc: '/img/projects/tvmaze/cast.png',
-                thumbnailImageSrc: '/img/projects/tvmaze/cast.png',
+                itemImageSrc: '/img/projects/tvmaze/cast.webp',
+                thumbnailImageSrc: '/img/projects/tvmaze/cast.webp',
                 alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
                 title: 'TVmaze - Add TV information to your website or app. | Tv maze'
             },
@@ -670,8 +670,8 @@ const freelance = [
                 title: 'TVmaze - Add TV information to your website or app. | Tv maze'
             },
             {
-                itemImageSrc: '/img/projects/tvmaze/tvmaze.png',
-                thumbnailImageSrc: '/img/projects/tvmaze/tvmaze.png',
+                itemImageSrc: '/img/projects/tvmaze/tvmaze.webp',
+                thumbnailImageSrc: '/img/projects/tvmaze/tvmaze.webp',
                 alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
                 title: 'TVmaze - Add TV information to your website or app. | Tv maze'
             },
@@ -709,8 +709,8 @@ const freelance = [
         codeLink: "https://github.com/heartstchr/dic",
         images: [
                 {
-                    itemImageSrc: '/img/projects/dictionary.png',
-                    thumbnailImageSrc: '/img/projects/dictionary.png',
+                    itemImageSrc: '/img/projects/dictionary.webp',
+                    thumbnailImageSrc: '/img/projects/dictionary.webp',
                     alt: 'CLI for Dictionary',
                     title: 'Title 1'
                 },
@@ -736,8 +736,8 @@ const freelance = [
         codeLink: "https://github.com/heartstchr/StockMarket",
         images: [
                 {
-                    itemImageSrc: '/img/projects/stocks.png',
-                    thumbnailImageSrc: '/img/projects/stocks.png',
+                    itemImageSrc: '/img/projects/stocks.webp',
+                    thumbnailImageSrc: '/img/projects/stocks.webp',
                     alt: 'Consuming socket data and plotting a real-time D3 graph',
                     title: 'Title 1'
                 },

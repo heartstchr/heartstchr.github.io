@@ -35,7 +35,7 @@ copyright: false
                   <div class="text-4xl font-bold mb-4">
                       <span itemprop="name">{{service.name}}</span>
                   </div>
-                  <Image v-if="service.code" :src="`/img/service/${service.code}.jpeg`" class="" :alt="service.name" width="100%"/>
+                  <Image v-if="service.code" :src="`/img/service/${service.code}.webp`" class="" :alt="service.name" width="100%"/>
                   <div class="my-4 flex flex-column gap-2 line-height-3">
                       <link itemprop="applicationCategory" :href="service.schema" />
                       <div itemprop="name" v-for= "(description, index) in service.descriptions" >    {{description}}
@@ -55,7 +55,7 @@ copyright: false
                 <div class="text-4xl font-bold mb-4">
                     <span itemprop="name">{{service.name}}</span>
                 </div>
-                <Image v-if="service.code" :src="`/img/service/${service.code}.jpeg`" class="" :alt="service.name" width="100%"/>
+                <Image v-if="service.code" :src="`/img/service/${service.code}.webp`" class="" :alt="service.name" width="100%"/>
                 <div class="my-4 flex flex-column gap-2 line-height-3">
                     <link itemprop="applicationCategory" :href="service.schema" />
                     <div itemprop="name" v-for= "(description, index) in service.descriptions" >    {{description}}

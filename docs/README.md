@@ -3,7 +3,7 @@ home: true
 icon: pi pi-home
 title: Full-stack web consultant
 description: Full-stack consultant for hire, specializing in custom websites and web applications using JavaScript, React.js, Next.js, Node.js, and more. Expert Vue.js, React.js, and Node.js developer delivering scalable web, mobile, and software solutions with 𝙈𝙀𝙍𝙉 and 𝙈𝙀𝙑𝙉 stacks (MongoDB, Express, React/Vue, Next/Nuxt, Node.js).
-heroImage: /img/jiwanghosal2.jpg
+heroImage: /img/home/jiwanghosal.webp
 heroText: Hi, I am Jiwan Ghosal
 tagline: Full-stack consultant specializing in scalable web, mobile, and software solutions using MERN and MEVN stacks. Let’s bring your ideas to life—connect with me today!
 containerClass: fancy-container
@@ -297,8 +297,8 @@ const projects = ref([
         link: "https://upstox.com/open-demat-account/",
         images: [
                 {
-                    itemImageSrc: '/img/projects/openDemat.png',
-                    thumbnailImageSrc: '/img/projects/openDemat.png',
+                    itemImageSrc: '/img/projects/openDemat.webp',
+                    thumbnailImageSrc: '/img/projects/openDemat.webp',
                     alt: 'Open a Demat Account Online: Demat Account Opening at Upstox',
                     title: 'Open a Demat Account Online: Demat Account Opening at Upstox'
                 },
@@ -386,8 +386,8 @@ const projects = ref([
         link: "https://callmatrix.io/",
         images: [
                 {
-                    itemImageSrc: '/img/projects/callmatrix/callmatrix.png',
-                    thumbnailImageSrc: '/img/projects/callmatrix/callmatrix.png',
+                    itemImageSrc: '/img/projects/callmatrix/callmatrix.webp',
+                    thumbnailImageSrc: '/img/projects/callmatrix/callmatrix.webp',
                     alt: 'CallMatrix - Call Intelligence, Marketing, and Analytics Platform',
                     title: 'Title 1'
                 },
@@ -493,33 +493,33 @@ const projects = ref([
         link: "https://upstox.com/sub-broker/",
         images: [
           {
-              itemImageSrc: '/img/projects/partnerUpstox/dashboard.png',
-              thumbnailImageSrc: '/img/projects/partnerUpstox/dashboard.png',
+              itemImageSrc: '/img/projects/partnerUpstox/dashboard.webp',
+              thumbnailImageSrc: '/img/projects/partnerUpstox/dashboard.webp',
               alt: 'Open a sub-broker account with Upstox.',
               title: 'Open a sub-broker account with Upstox.'
           },
           {
-              itemImageSrc: '/img/projects/partnerUpstox/partnerUpstox.png',
-              thumbnailImageSrc: '/img/projects/partnerUpstox/partnerUpstox.png',
+              itemImageSrc: '/img/projects/partnerUpstox/partnerUpstox.webp',
+              thumbnailImageSrc: '/img/projects/partnerUpstox/partnerUpstox.webp',
               alt: 'Open a sub-broker account with Upstox.',
               title: 'Open a sub-broker account with Upstox.'
           },
           
           {
-              itemImageSrc: '/img/projects/partnerUpstox/leads.png',
-              thumbnailImageSrc: '/img/projects/partnerUpstox/leads.png',
+              itemImageSrc: '/img/projects/partnerUpstox/leads.webp',
+              thumbnailImageSrc: '/img/projects/partnerUpstox/leads.webp',
               alt: 'Open a sub-broker account with Upstox.',
               title: 'Open a sub-broker account with Upstox.'
           },
           {
-              itemImageSrc: '/img/projects/partnerUpstox/customer.png',
-              thumbnailImageSrc: '/img/projects/partnerUpstox/customer.png',
+              itemImageSrc: '/img/projects/partnerUpstox/customer.webp',
+              thumbnailImageSrc: '/img/projects/partnerUpstox/customer.webp',
               alt: 'Open a sub-broker account with Upstox.',
               title: 'Open a sub-broker account with Upstox.'
           },
           {
-              itemImageSrc: '/img/projects/partnerUpstox/earning.png',
-              thumbnailImageSrc: '/img/projects/partnerUpstox/earning.png',
+              itemImageSrc: '/img/projects/partnerUpstox/earning.webp',
+              thumbnailImageSrc: '/img/projects/partnerUpstox/earning.webp',
               alt: 'Open a sub-broker account with Upstox.',
               title: 'Open a sub-broker account with Upstox.'
           },
@@ -582,25 +582,25 @@ const responsiveCustomerOptions = ref([
 const orgs= [
   {
     "title": "Capgemini",
-    "icon": "/img/home/capgemini2.png",
+    "icon": "/img/home/capgemini.webp",
     "details": "Consulting and technology services",
     "link": "https://www.capgemini.com/"
   },
   {
     "title": "CatchThatBus",
-    "icon": "/img/home/catchthatbus.png",
+    "icon": "/img/home/catchthatbus.webp",
     "details": "Leisure, travel, and tourism",
     "link": "https://www.catchthatbus.com/"
   },
   {
     "title": "Upstox",
-    "icon": "/img/home/upstox.jpeg",
+    "icon": "/img/home/upstox.webp",
     "details": "Online stock broker",
     "link": "https://www.upstox.com/"
   },
   {
     "title": "Mobistreak",
-    "icon": "/img/home/mobistreak.png",
+    "icon": "/img/home/mobistreak.webp",
     "details": "Marketing and advertising",
     "link": "https://www.mobistreak.com/"
   }
@@ -625,7 +625,7 @@ const orgs= [
     }
   ];
 
-  const getImage = () =>`background-image: url('/img/home/faq.jpeg');  background-repeat: no-repeat; background-size: cover;`
+  const getImage = () =>`background-image: url('/img/home/faq.webp');  background-repeat: no-repeat; background-size: cover;`
 
   const features = [
     {

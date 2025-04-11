@@ -1,6 +1,6 @@
 ---
 title: Full-stack web app developer
-description: Full-stack developer for hire, specialising in development of custom websites, Figma to web, and web applications in JavaScript, React.js, Next.js, Node.js, & more.
+description: Full-stack developer for hire, specializing in development of custom websites, Figma to web, and web applications in JavaScript, React.js, Next.js, Node.js, & more.
 order: 4
 editLink: false
 copyright: false
@@ -19,7 +19,7 @@ copyright: false
       You might know me as <span class="my-4 font-italic">heartstchr/Jiwanghosal</span> on various platforms.</div>
     </div>
     <div class="md:col-6 col-12 h-30rem overflow-hidden image-box">
-      <Image :src="`/img/about/about_jiwanghosal.jpg`" width="100%" />
+      <Image :src="`/img/about/about_jiwanghosal.webp`" width="100%" />
     </div>
   </div>
 </div>
@@ -38,12 +38,12 @@ copyright: false
     <div>
       <div class="my-4 text-2xl text-md">Participant at the JS world conference, Amsterdam. </div>
       <div class="col-12 overflow-hidden image-box">
-        <Image :src="`/img/about/amsterdamConference.jpg`" width="100%" />
+        <Image :src="`/img/about/amsterdamConference.webp`" width="100%" />
       </div>
       <div class="my-4 text-md">In 2023, I had the privilege of participating in the renowned JS world conference Amsterdam, where I contributed to discussions on cutting-edge technologies, VueJs, Pinia, including micro-frontends and modern application architectures.</div>
       <div class="my-4 text-2xl text-md">Participant at NSE Future Tech Hackathon, India.</div>
       <div class="col-12 overflow-hidden image-box">
-        <Image :src="`/img/about/nseHackathon.png`" width="100%" />
+        <Image :src="`/img/about/nseHackathon.webp`" width="100%" />
       </div>
       <div class="my-4 text-md">At NSE Hackathon, our team reached the top 7 finalists, showcasing innovative problem-solving skills and pushing the boundaries of creative technology development.</div>
     </div>
@@ -96,7 +96,7 @@ copyright: false
               <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="display: block" />
           </template>
       </Galleria>
-      <img src="/img/about/JiwanGhosalMicrosoftAz900.png" width="100%" />
+      <img src="/img/about/JiwanGhosalMicrosoftAz900.webp" width="100%" />
   </div>
 </div>
 
@@ -145,14 +145,14 @@ copyright: false
         name: "certificate",
         images: [
                 {
-                    itemImageSrc: '/img/about/JiwanGhosalMicrosoftAz900.png',
-                    thumbnailImageSrc: '/img/about/JiwanGhosalMicrosoftAz900.png',
+                    itemImageSrc: '/img/about/JiwanGhosalMicrosoftAz900.webp',
+                    thumbnailImageSrc: '/img/about/JiwanGhosalMicrosoftAz900.webp',
                     alt: 'Jiwan Ghosal Microsoft Az900',
                     title: 'Jiwan Ghosal Microsoft Az900'
                 },
                 {
-                    itemImageSrc: '/img/about/connectedManager.png',
-                    thumbnailImageSrc: '/img/about/connectedManager.png',
+                    itemImageSrc: '/img/about/connectedManager.webp',
+                    thumbnailImageSrc: '/img/about/connectedManager.webp',
                     alt: 'Connected Manager',
                     title: 'Connected Manager'
                 },

@@ -4,7 +4,7 @@
   --p-galleria-nav-icon-size:1rem !important;
 }
 #app{
-  background-image: url(/img/pattern.png);
+  background-image: url(/img/pattern.webp);
   background-blend-mode:  hard-light, multiply;
   background-position: top;
   background-repeat: no-repeat;
@@ -27,6 +27,10 @@
 }
 .vp-hero-image {
   border-radius: 65% 35% 48% 52% / 78% 53% 47% 22%;
+}
+.vp-hero-infos{
+  min-height: 316px;
+  transition: none;
 }
 .vp-hero-info-wrapper {
   background-image: url("/img/home/back.svg");
