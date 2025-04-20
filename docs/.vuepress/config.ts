@@ -3,6 +3,7 @@ import { loadEnv } from "vite";
 import { viteBundler } from '@vuepress/bundler-vite'
 import Components from 'unplugin-vue-components/vite';
 import { PrimeVueResolver } from 'unplugin-vue-components/resolvers';
+import { path } from "vuepress/utils";
 import theme from "./theme.js";
 
 const mode = process.env.NODE_ENV || "development";
@@ -32,6 +33,8 @@ export default defineUserConfig({
       title: "Jiwan Ghosal",
       description:
         "Senior Full Stack Developer - Graphic Artist - UI/UX Designer",
+      logo: "/img/logojg.svg",
+      logoAlt: "Stack Seekers Logo – Web Development Experts",
     },
   },
   head: [
@@ -41,7 +44,16 @@ export default defineUserConfig({
     ["link", { rel: "dns-prefetch", href: "github.com" }],
     ["link", { rel: "dns-prefetch", href: "cdn.simpleicons.org" }],
     ["link", { rel: "dns-prefetch", href: "googletagmanager.com" }],
-    ["link", { rel: "preload",as:"image", href: "pattern.webp", type:"image/webp", fetchpriority:"high" }],
+    [
+      "link",
+      {
+        rel: "preload",
+        as: "image",
+        href: "pattern.webp",
+        type: "image/webp",
+        fetchpriority: "high",
+      },
+    ],
     [
       "script",
       {
@@ -62,6 +74,14 @@ export default defineUserConfig({
     ],
   ],
   theme,
+  alias: {
+    // Here you can redirect aliases to your own components
+    // For example, here we change the theme's home page component to HomePage.vue under user .vuepress/components
+    "@theme-hope/modules/navbar/components/NavbarBrand": path.resolve(
+      __dirname,
+      "./components/NavbarBrand.vue"
+    ),
+  },
   shouldPrefetch: true,
   define: {
     __VITE_YOUTUBE_API_KEY__: process.env.VITE_YOUTUBE_API_KEY,
