@@ -39,23 +39,6 @@ copyright: false
       <h3 class="hidden">{{stackLogo.title}}</h3>
     </div>
   </div>
-  <div class="text-center pb-4">
-    <a href="/about/#stack" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
-      <div class="p-flex p-ai-center">
-        <div
-          class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button"
-        >
-          <span class="mr-6">See all stacks</span>
-          <!-- Add circular element -->
-          <div class="absolute right-0 mr-5">
-            <div class="circle pb-2 my-2 mx-2"></div>
-            <div class="circle pt-2 my-2 mx-2"></div>
-          </div>
-          <i class="pi pi-angle-double-right" alt="arrow" style="font-size: 1rem;"></i>
-        </div>
-      </div>
-    </a>
-  </div>
 </div>
 <div class="my-6">
   <div class="text-center pb-4">
@@ -72,7 +55,22 @@ copyright: false
       </a>
     </div>
   </div>
-  <div class="text-center pb-4">
+  <div class="text-center pb-4 grid justify-content-center gap-4">
+    <a href="/about/#stack" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
+      <div class="p-flex p-ai-center">
+        <div
+          class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button"
+        >
+          <span class="mr-6">See all stacks</span>
+          <!-- Add circular element -->
+          <div class="absolute right-0 mr-5">
+            <div class="circle pb-2 my-2 mx-2"></div>
+            <div class="circle pt-2 my-2 mx-2"></div>
+          </div>
+          <i class="pi pi-angle-double-right" alt="arrow" style="font-size: 1rem;"></i>
+        </div>
+      </div>
+    </a>
     <a href="/web-development-projects/" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
       <div class="p-flex p-ai-center">
         <div
@@ -381,49 +379,49 @@ const projects = ref([
                 },
             ],
     },
-    {
-        name: "Upstox: Partner Dashboard",
-        description: "Open a sub-broker account with Upstox.",
-        skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS"],
-        software: "Web",
-        org: "Upstox",
-        year: "2018",
-        schema: "https://schema.org/BusinessApplication",
-        link: "https://upstox.com/sub-broker/",
-        images: [
-          {
-              itemImageSrc: '/img/projects/partnerUpstox/dashboard.webp',
-              thumbnailImageSrc: '/img/projects/partnerUpstox/dashboard.webp',
-              alt: 'Open a sub-broker account with Upstox.',
-              title: 'Open a sub-broker account with Upstox.'
-          },
-          {
-              itemImageSrc: '/img/projects/partnerUpstox/partnerUpstox.webp',
-              thumbnailImageSrc: '/img/projects/partnerUpstox/partnerUpstox.webp',
-              alt: 'Open a sub-broker account with Upstox.',
-              title: 'Open a sub-broker account with Upstox.'
-          },
+    // {
+    //     name: "Upstox: Partner Dashboard",
+    //     description: "Open a sub-broker account with Upstox.",
+    //     skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS"],
+    //     software: "Web",
+    //     org: "Upstox",
+    //     year: "2018",
+    //     schema: "https://schema.org/BusinessApplication",
+    //     link: "https://upstox.com/sub-broker/",
+    //     images: [
+    //       {
+    //           itemImageSrc: '/img/projects/partnerUpstox/dashboard.webp',
+    //           thumbnailImageSrc: '/img/projects/partnerUpstox/dashboard.webp',
+    //           alt: 'Open a sub-broker account with Upstox.',
+    //           title: 'Open a sub-broker account with Upstox.'
+    //       },
+    //       {
+    //           itemImageSrc: '/img/projects/partnerUpstox/partnerUpstox.webp',
+    //           thumbnailImageSrc: '/img/projects/partnerUpstox/partnerUpstox.webp',
+    //           alt: 'Open a sub-broker account with Upstox.',
+    //           title: 'Open a sub-broker account with Upstox.'
+    //       },
           
-          {
-              itemImageSrc: '/img/projects/partnerUpstox/leads.webp',
-              thumbnailImageSrc: '/img/projects/partnerUpstox/leads.webp',
-              alt: 'Open a sub-broker account with Upstox.',
-              title: 'Open a sub-broker account with Upstox.'
-          },
-          {
-              itemImageSrc: '/img/projects/partnerUpstox/customer.webp',
-              thumbnailImageSrc: '/img/projects/partnerUpstox/customer.webp',
-              alt: 'Open a sub-broker account with Upstox.',
-              title: 'Open a sub-broker account with Upstox.'
-          },
-          {
-              itemImageSrc: '/img/projects/partnerUpstox/earning.webp',
-              thumbnailImageSrc: '/img/projects/partnerUpstox/earning.webp',
-              alt: 'Open a sub-broker account with Upstox.',
-              title: 'Open a sub-broker account with Upstox.'
-          },
-        ],
-    },
+    //       {
+    //           itemImageSrc: '/img/projects/partnerUpstox/leads.webp',
+    //           thumbnailImageSrc: '/img/projects/partnerUpstox/leads.webp',
+    //           alt: 'Open a sub-broker account with Upstox.',
+    //           title: 'Open a sub-broker account with Upstox.'
+    //       },
+    //       {
+    //           itemImageSrc: '/img/projects/partnerUpstox/customer.webp',
+    //           thumbnailImageSrc: '/img/projects/partnerUpstox/customer.webp',
+    //           alt: 'Open a sub-broker account with Upstox.',
+    //           title: 'Open a sub-broker account with Upstox.'
+    //       },
+    //       {
+    //           itemImageSrc: '/img/projects/partnerUpstox/earning.webp',
+    //           thumbnailImageSrc: '/img/projects/partnerUpstox/earning.webp',
+    //           alt: 'Open a sub-broker account with Upstox.',
+    //           title: 'Open a sub-broker account with Upstox.'
+    //       },
+    //     ],
+    // },
 ]);
 const responsiveOptions = ref([
     {
