@@ -60,21 +60,17 @@ copyright: false
 <div class="my-6">
   <div class="text-center pb-4">
   </div>
-  <div class="card relative">
-    <Carousel :value="projects" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" class="flex">
-        <template #item="slotProps">
-            <div class="border border-surface-200 shadow-1 border-round-md rounded md:m-2 md:p-2 flex flex-column align-self-center align-items-center justify-content-center" >
-                <div class="mb-2 image-box" v-if=slotProps.data.images[0]>
-                    <div class="relative mx-auto w-13rem h-10rem overflow-hidden" >
-                        <img :src="slotProps.data.images[0].itemImageSrc" :alt="slotProps.data.images[0].alt" class="w-full rounded" width="208px" height="auto"/>
-                    </div>
-                </div>
-                <a :href="slotProps.data.link" class="text-l p-2 font-medium text-center no-underline">
-                  {{ slotProps.data.name }}
-                </a>
-            </div>
-        </template>
-    </Carousel>
+  <div class="gallery">
+    <div
+      v-for="(img, index) in projects"
+      :key="index"
+      class="gallery-item"
+    >
+      <a :href="img.link" target="_blank" class="text-l p-2 font-medium text-center no-underline">
+        <img :src="img.images[0].itemImageSrc":alt="img.images[0].alt" />
+        <h3 class="p-0 mt-4">{{ img.name }}</h3>
+      </a>
+    </div>
   </div>
   <div class="text-center pb-4">
     <a href="/web-development-projects/" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
@@ -292,7 +288,7 @@ copyright: false
 </div>
 
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import { ref, onMounted, onBeforeUnmount, computed } from "vue";
 
 // Current page and autoplay interval
 const currentPage = ref(0);
@@ -311,26 +307,6 @@ const projects = ref([
         description: "Open a Demat Account Online: Demat Account Opening at Upstox",
         skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS","Digital Ocean"],
         software: "Web",
-        features: [
-            {
-                name:'Open Demat account with document upload'
-            },
-            {
-                name:'Pan, Aadhar, IPV, and canceled check verification'
-            },
-            {
-                name:'Lead to CRM system'
-            },
-            {
-                name:'Scrutiny of lead'
-            },
-            {
-                name:'Upload details to NSE, BSE, and MCX'
-            },
-            {
-                name:'Report based on the flow of lead'
-            },
-        ],
         org: "Upstox",
         year: "2017",
         schema: "https://schema.org/BusinessApplication",
@@ -349,29 +325,6 @@ const projects = ref([
         description: "Book Attractions and Tours for Your Next Holiday",
         skills: ["Javascript", "ES6", "VueJs", "Vuex","Axios","API integration",   "ExpressJS", "MongoDB", "Git", "EC2"],
         software: "Web",
-        features: [
-            {
-                name:'Show Tours and Attraction of Malaysia'
-            },
-            {
-                name:'Popular activities based on rating and demand'
-            },
-            {
-                name:'Activities and details based on location'
-            },
-            {
-                name:'Book and share attractions for other people'
-            },
-            {
-                name:'Discount system based on promo code'
-            },
-            {
-                name:'Paymnet system using Boost wallet and other payment methods'
-            },
-            {
-                name:'Custome CMS Backend system to add, update, delete tours and attractions'
-            },
-        ],
         org: "Catch That Bus",
         year: "2019",
         schema: "https://schema.org/DeveloperApplication",
@@ -385,97 +338,11 @@ const projects = ref([
                 },
             ],
     },
-    
-    {
-        name: "Call Matrix",
-        description: "Call Intelligence, Marketing, and Analytics Platform",
-        skills: ["NodeJS", "MongoDB", "MSSQL", "HapiJS","Digital Ocean"],
-        software: "Web",
-        features: [
-            {
-                name:'Create campaign for call'
-            },
-            {
-                name:'Create bundel of campaigns for call'
-            },
-            {
-                name:'Buy local & toll-free numbers'
-            },
-            {
-                name:'Call Recording and Off Hour Call Handling'
-            },
-            {
-                name:'Funnel to redirect the call based on the multi level IVR'
-            },
-            {
-                name:'Report of bundel, CDR, and offer based on hour, week and geo location'
-            },
-            {
-                name:'Dashboard to get bird eye view'
-            },
-            {
-                name:'Google Adwords API integration'
-            },
-            {
-                name:'User autherisation based on role'
-            },
-        ],
-        org: "Mobistreak",
-        year: "2015",
-        schema: "https://schema.org/BusinessApplication",
-        link: "https://callmatrix.io/",
-        images: [
-                {
-                    itemImageSrc: '/img/projects/callmatrix/callmatrix.webp',
-                    thumbnailImageSrc: '/img/projects/callmatrix/callmatrix.webp',
-                    alt: 'CallMatrix - Call Intelligence, Marketing, and Analytics Platform',
-                    title: 'Title 1'
-                },
-            ],
-    },
     {
         name: "Catch That Bus",
         description: "Book Malaysia and Singapore bus tickets online.",
         skills: ["Javascript", "ES6", "VueJs", "Vuex","Vite","Axios", "Cordova", "API integration",   "ExpressJS", "MongoDB", "Git", "EC2",  "Eslint", "Prettier"],
         software: "Web / IOS APP",
-        features: [
-            {
-                name:'Search for bus by chosing from destination and to destination in Malaysia for dates'
-            },
-            {
-                name:'Sort and filter on available buses'
-            },
-            {
-                name:'Seat visualization of a bus'
-            },
-            {
-                name:'Booking system to handel concurent request'
-            },
-            {
-                name:'Discount system based on cupon code',
-            },
-            {
-                name:'Insurnce integration for travelers',
-            },
-            {
-                name:'Payment system usign wallet and cards',
-            },
-            {
-                name:'Webview for Boost wallet',
-            },
-            {
-                name:'Multiple language support'
-            },
-            {
-                name:'Multiple Currency support'
-            },
-            {
-                name:'Bus Booked history'
-            },
-            {
-                name:'Bus orboarding sytem for admin and bus operator'
-            },
-        ],
         org: "Catch That Bus",
         year: "2019",
         schema: "https://schema.org/DeveloperApplication",
@@ -497,36 +364,28 @@ const projects = ref([
             ],
     },
     {
+        name: "Call Matrix",
+        description: "Call Intelligence, Marketing, and Analytics Platform",
+        skills: ["NodeJS", "MongoDB", "MSSQL", "HapiJS","Digital Ocean"],
+        software: "Web",
+        org: "Mobistreak",
+        year: "2015",
+        schema: "https://schema.org/BusinessApplication",
+        link: "https://callmatrix.io/",
+        images: [
+                {
+                    itemImageSrc: '/img/projects/callmatrix/callmatrix.webp',
+                    thumbnailImageSrc: '/img/projects/callmatrix/callmatrix.webp',
+                    alt: 'CallMatrix - Call Intelligence, Marketing, and Analytics Platform',
+                    title: 'Title 1'
+                },
+            ],
+    },
+    {
         name: "Upstox: Partner Dashboard",
         description: "Open a sub-broker account with Upstox.",
         skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS"],
         software: "Web",
-        features: [
-            {
-                name:'Refer and earn program'
-            },
-            {
-                name:'Track lead refered'
-            },
-            {
-                name:'Ambasador program'
-            },
-            {
-                name:'Royalty program'
-            },
-            {
-                name:'Track customer refered'
-            },
-            {
-                name:'Dashboard to show earning based on the program'
-            },
-            {
-                name:'Search by name and UCC'
-            },
-            {
-                name:'Earning report based on the customer trade'
-            },
-        ],
         org: "Upstox",
         year: "2018",
         schema: "https://schema.org/BusinessApplication",
