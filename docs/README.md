@@ -68,7 +68,7 @@ copyright: false
     >
       <a :href="img.link" target="_blank" class="text-l p-2 font-medium text-center no-underline">
         <img :src="img.images[0].itemImageSrc":alt="img.images[0].alt" />
-        <h3 class="p-0 mt-4">{{ img.name }}</h3>
+        <h3 class="p-0 mt-4">{{ img.name }} <i class="pi pi-external-link ml-1 text-blue-700" style="font-size: 1rem"></i></h3>
       </a>
     </div>
   </div>
