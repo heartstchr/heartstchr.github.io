@@ -41,7 +41,7 @@ copyright: false
                       <link itemprop="applicationCategory" :href="service.schema" />
                       <div itemprop="name" v-for= "(description, index) in service.descriptions" >    {{description}}
                       </div>
-                      <a :href="`mailto:jiwan.cse@gmail.com?subject=Inquiry : ${service.name} Services`" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
+                      <a :href="`mailto:jiwan.cse@gmail.com?subject=Inquiry : ${service.name} Services`" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4" aria-label="Send an Email"> 
                       <Button label="Book Now!" icon="pi pi-briefcase" severity="primary" raised rounded />
                       </a>
                   </div>
@@ -61,7 +61,7 @@ copyright: false
                     <link itemprop="applicationCategory" :href="service.schema" />
                     <div itemprop="name" v-for= "(description, index) in service.descriptions" >    {{description}}
                     </div>
-                    <a :href="`mailto:jiwan.cse@gmail.com?subject=Inquiry : ${service.name} Services`" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
+                    <a :href="`mailto:jiwan.cse@gmail.com?subject=Inquiry : ${service.name} Services`" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4" aria-label="Send an Email"> 
                     <Button label="Book Now!" icon="pi pi-briefcase" severity="primary" raised rounded />
                     </a>
                 </div>

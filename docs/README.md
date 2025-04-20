@@ -49,8 +49,8 @@ copyright: false
       :key="index"
       class="gallery-item"
     >
-      <a :href="img.link" target="_blank" class="text-l p-2 font-medium text-center no-underline">
-        <img :src="img.images[0].itemImageSrc":alt="img.images[0].alt" loading="eager" fetchpriority="high" />
+      <a :href="img.link" target="_blank" class="text-l p-2 font-medium text-center no-underline" :aria-label="img.name">
+        <img :src="img.images[0].itemImageSrc" :alt="img.images[0].alt" loading="eager" fetchpriority="high" />
         <h3 class="p-0 mt-4">{{ img.name }} <i class="pi pi-external-link ml-1 text-blue-700" style="font-size: 1rem"></i></h3>
       </a>
     </div>
@@ -207,18 +207,18 @@ copyright: false
             <AccordionTab header="Q: How can I start a project with you?">
                 <h3 class="m-0 p-0 hidden">How can I start a project with you?</h3>
                 <p class="mx-3">
-                    You can start by <a href="https://cal.com/stackseekers" class="no-underline">scheduling a meeting</a> with me. I’ll connect with you promptly to discuss your requirements and plan the next steps.
+                    You can start by <a href="https://cal.com/stackseekers" class="no-underline" aria-label="schedule a meeting">scheduling a meeting</a> with me. I’ll connect with you promptly to discuss your requirements and plan the next steps.
                 </p>
             </AccordionTab>
             <AccordionTab header="Q: What services do you provide?">
                 <h3 class="m-0 p-0 hidden">What services do you provide?</h3>
                 <p class="mx-3 ">
                     I offer a variety of services tailored to your needs, including 
-                    <a href="web-development-services/#ConsultingAndTechnicalAdvisory" class="no-underline">Custom Web Development</a>, 
-                    <a href="web-development-services/#E-commerceSolutions" class="no-underline">E-commerce Solutions</a>, 
-                    <a href="web-development-services/#APIDevelopmentAndIntegration" class="no-underline">API Development and Integration </a>, 
-                    <a href="web-development-services/#FigmatoWeb" class="no-underline">Figma to Web Conversion</a>, and 
-                    <a href="web-development-services/#hosting" class="no-underline">Hosting & Deployment</a>. 
+                    <a href="web-development-services/#ConsultingAndTechnicalAdvisory" class="no-underline" aria-label="Custom Web Development">Custom Web Development</a>, 
+                    <a href="web-development-services/#E-commerceSolutions" class="no-underline" aria-label="E-commerce Solutions">E-commerce Solutions</a>, 
+                    <a href="web-development-services/#APIDevelopmentAndIntegration" class="no-underline" aria-label="API Development and Integration">API Development and Integration </a>, 
+                    <a href="web-development-services/#FigmatoWeb" class="no-underline" aria-label="Figma to Web Conversion">Figma to Web Conversion</a>, and 
+                    <a href="web-development-services/#hosting" class="no-underline" aria-label="Hosting & Deployment">Hosting & Deployment</a>. 
                     <div class="mt-2">Let’s find the best solution for your project!</div>
                 </p>
             </AccordionTab>
@@ -245,7 +245,7 @@ copyright: false
             </AccordionTab>
         </Accordion>
         <div class="my-4">
-          <a href="https://cal.com/stackseekers" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
+          <a href="https://cal.com/stackseekers" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4" aria-label="scheduling a meeting"> 
             <Button label="Discuss your project" icon="pi pi-calendar-clock" severity="primary" raised rounded/>
           </a>
         </div>
@@ -268,7 +268,7 @@ copyright: false
       I'm always excited to tackle new challenges and bring ideas to life. If you’re searching for a committed full-stack developer to make your vision a reality, don’t hesitate to get in touch - I’d love to collaborate!
     </div>
     <div class="my-4">
-      <a href="mailto:jiwan.cse@gmail.com?subject=Inquiry:%20collaborate%20now" size="large" color="deeppink" class="flex justify-content-center text-center no-underline"> 
+      <a href="mailto:jiwan.cse@gmail.com?subject=Inquiry:%20collaborate%20now" size="large" color="deeppink" class="flex justify-content-center text-center no-underline" aria-label="Send an Email"> 
         <Button label="Let's collaborate now!" icon="pi pi-briefcase" severity="primary" raised rounded />
       </a>
     </div>
@@ -279,6 +279,7 @@ copyright: false
         :href="socialElement.url"
         target="_blank"
         class="flex flex-row gap-2"
+        :aria-label="socialElement.name"
         >
         <i :class="socialElement.icon" :aria-label="socialElement.label" style="font-size: 1rem"></i>
       </a>
