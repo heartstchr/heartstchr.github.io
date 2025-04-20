@@ -1,5 +1,6 @@
 ---
 title: Latest youtube videos
+icon: pi pi-video
 order: 4
 editLink: false
 copyright: false

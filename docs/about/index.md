@@ -1,6 +1,7 @@
 ---
 title: Full-stack web app developer
 description: Full-stack developer for hire, specializing in development of custom websites, Figma to web, and web applications in JavaScript, React.js, Next.js, Node.js, & more.
+icon: pi pi-user
 order: 4
 editLink: false
 copyright: false
