@@ -202,8 +202,8 @@ const projects= [
         // link: "https://m.trokka.com/attraction",
         images: [
                 {
-                    itemImageSrc: '/img/projects/trokka.gif',
-                    thumbnailImageSrc: '/img/projects/trokka.gif',
+                    itemImageSrc: '/img/projects/trokka.webp',
+                    thumbnailImageSrc: '/img/projects/trokka.webp',
                     alt: 'Trokka.com | Book Attractions and Tours for Your Next Holiday',
                     title: 'Trokka.com | Book Attractions and Tours for Your Next Holiday'
                 },
@@ -260,8 +260,8 @@ const projects= [
         iosLink: "https://apps.apple.com/my/app/catchthatbus/id1025824078",
         images: [
                 {
-                    itemImageSrc: '/img/projects/catchthatbus.gif',
-                    thumbnailImageSrc: '/img/projects/catchthatbus.gif',
+                    itemImageSrc: '/img/projects/catchthatbus.webp',
+                    thumbnailImageSrc: '/img/projects/catchthatbus.webp',
                     alt: 'Book Malaysia and Singapore bus tickets online. | CatchThatBus',
                     title: 'Book Malaysia and Singapore bus tickets online. | CatchThatBus'
                 },
@@ -660,12 +660,6 @@ const freelance = [
             {
                 itemImageSrc: '/img/projects/tvmaze/cast.webp',
                 thumbnailImageSrc: '/img/projects/tvmaze/cast.webp',
-                alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
-                title: 'TVmaze - Add TV information to your website or app. | Tv maze'
-            },
-            {
-                itemImageSrc: '/img/projects/tvmaze/tvmaze.gif',
-                thumbnailImageSrc: '/img/projects/tvmaze/tvmaze.gif',
                 alt: 'TVmaze - Add TV information to your website or app. | Tv maze',
                 title: 'TVmaze - Add TV information to your website or app. | Tv maze'
             },

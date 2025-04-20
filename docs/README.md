@@ -338,8 +338,8 @@ const projects = ref([
         link: "/projects/#Trokka Attraction",
         images: [
                 {
-                    itemImageSrc: '/img/projects/trokka.gif',
-                    thumbnailImageSrc: '/img/projects/trokka.gif',
+                    itemImageSrc: '/img/projects/trokka.webp',
+                    thumbnailImageSrc: '/img/projects/trokka.webp',
                     alt: 'Trokka.com | Book Attractions and Tours for Your Next Holiday',
                     title: 'Trokka.com | Book Attractions and Tours for Your Next Holiday'
                 },
@@ -443,8 +443,8 @@ const projects = ref([
         iosLink: "https://apps.apple.com/my/app/catchthatbus/id1025824078",
         images: [
                 {
-                    itemImageSrc: '/img/projects/catchthatbus.gif',
-                    thumbnailImageSrc: '/img/projects/catchthatbus.gif',
+                    itemImageSrc: '/img/projects/catchthatbus.webp',
+                    thumbnailImageSrc: '/img/projects/catchthatbus.webp',
                     alt: 'Book Malaysia and Singapore bus tickets online. | CatchThatBus',
                     title: 'Book Malaysia and Singapore bus tickets online. | CatchThatBus'
                 },
