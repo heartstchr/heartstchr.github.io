@@ -10,7 +10,6 @@ import { computed } from "vue";
 import { useSiteData } from "@vuepress/client"; // Site data access (e.g., site title)
 
 const site = useSiteData();  // Access site data (including site title)
-console.log('site', site.value)
 const themeConfig = site.value.locales["/"];  // Access themeConfig directly
 
 const logo = computed(() => themeConfig.logo);  // Access logo from themeConfig
