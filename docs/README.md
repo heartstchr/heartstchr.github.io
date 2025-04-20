@@ -35,7 +35,7 @@ copyright: false
   <div class="grid mt-4">
     <div class="md:col col-6 text-center" v-for="stackLogo in stackLogos" :key="stackLogo.title">
       <i :class="stackLogo.icon" class="m-auto text-400 pl-3" style="font-size: 5rem"></i>
-      <img  height="50" :src="stackLogo.link" :alt="stackLogo.title"/>
+      <img width="50px" height="50px" :src="stackLogo.link" :alt="stackLogo.title"/>
       <h3 class="hidden">{{stackLogo.title}}</h3>
     </div>
   </div>
@@ -51,7 +51,7 @@ copyright: false
             <div class="circle pb-2 my-2 mx-2"></div>
             <div class="circle pt-2 my-2 mx-2"></div>
           </div>
-          <i class="pi pi-angle-double-right" style="font-size: 1rem;"></i>
+          <i class="pi pi-angle-double-right" alt="arrow" style="font-size: 1rem;"></i>
         </div>
       </div>
     </a>
@@ -66,7 +66,7 @@ copyright: false
             <div class="border border-surface-200 shadow-1 border-round-md rounded md:m-2 md:p-2 flex flex-column align-self-center align-items-center justify-content-center" >
                 <div class="mb-2 image-box" v-if=slotProps.data.images[0]>
                     <div class="relative mx-auto w-13rem h-10rem overflow-hidden" >
-                        <img :src="slotProps.data.images[0].itemImageSrc" :alt="slotProps.data.images[0].alt" class="w-full rounded"/>
+                        <img :src="slotProps.data.images[0].itemImageSrc" :alt="slotProps.data.images[0].alt" class="w-full rounded" width="208px" height="auto"/>
                     </div>
                 </div>
                 <a :href="slotProps.data.link" class="text-l p-2 font-medium text-center no-underline">
@@ -114,15 +114,15 @@ copyright: false
               <div class="text-md line-height-3" ><span class="font-bold text-4xl">"</span> {{ slotProps.data.message }}</div>
             </div>
             <div class="flex align-items-center">
-              <img :src="slotProps.data.avatar" alt="Avatar" class="border-circle" width="50px" />
+              <img :src="slotProps.data.avatar" :alt="slotProps.data.name" class="border-circle" width="50px" height="50px" />
               <a :href="slotProps.data.link" target="_blank" class="no-underline">
-                <h3 class="flex flex-column align-items-start ml-2">
+                <h3 class="flex flex-column align-items-start ml-2 p-0 m-0">
                   <div>
                     <i class="pi pi-linkedin mr-1 text-blue-700" style="font-size: 1rem"></i>
                     {{ slotProps.data.name }}, 
                   </div>
                   <div>
-                    <img :alt="slotProps.data.name" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" :class="`flag flag-${slotProps.data.code.toLowerCase()} mr-1`" style="width: 18px" />
+                    <img :alt="slotProps.data.location" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" :class="`flag flag-${slotProps.data.code.toLowerCase()} mr-1`" style="width: 18px" />
                     {{ slotProps.data.location }}
                   </div>
                 </h3>
@@ -131,6 +131,26 @@ copyright: false
           </div>
         </template>
     </Carousel>
+  </div>
+  <div class="text-center pb-4">
+    <a href="https://www.linkedin.com/in/jiwanghosal/details/recommendations/" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
+      <div class="p-flex p-ai-center">
+        <div
+          class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button"
+        >
+          <span class="mr-6">
+            <i class="pi pi-linkedin" aria-label="LinkedIn Testimonials" style="font-size: 1rem"></i>
+            LinkedIn Testimonials
+          </span>
+          <!-- Add circular element -->
+          <div class="absolute right-0 mr-5">
+            <div class="circle pb-2 my-2 mx-2"></div>
+            <div class="circle pt-2 my-2 mx-2"></div>
+          </div>
+          <i class="pi pi-angle-double-right" style="font-size: 1rem;"></i>
+        </div>
+      </div>
+    </a>
   </div>
 </div>
 
@@ -146,7 +166,7 @@ copyright: false
       <Fieldset class="vp-feature-item">
         <template #legend>
             <h3 class="flex items-center pl-2 m-0 p-0">
-                <Avatar :image="`/img/home/${why.id}.svg`" shape="circle" />
+                <Avatar :image="`/img/home/${why.id}.svg`" :aria-label="why.title" shape="square" size="normal"/>
                 <span class="font-bold p-2 line-height-2">{{why.title}}</span>
             </h3>
         </template>
@@ -169,7 +189,7 @@ copyright: false
     <div class="md:col col-12 border-round-md md:p-2 md:m-2 vp-feature-item flex align-items-center justify-content-center" v-for="org in orgs" :key="org.title">
       <div class="no-underline flex flex-column justify-content-center flex-wrap">
         <div class="mb-2 flex align-items-center justify-content-center">
-          <img :src="org.icon" alt="Avatar" width="80px" class="border-round-md"/>
+          <img :src="org.icon" :alt="org.title" width="80px" height="80px" class="border-round-md"/>
         </div>
         <h3 class="text-2xl font-bold flex align-items-center justify-content-center p-0 m-0"><span class="line-height-3">{{org.title}}</span></h3>
         <div class="text-xs flex align-items-center justify-content-center line-height-2 text-center">{{org.details}}</div>
@@ -264,8 +284,8 @@ copyright: false
         target="_blank"
         class="flex flex-row gap-2"
         >
-        <i :class="socialElement.icon" style="font-size: 1rem"></i>
-        </a>
+        <i :class="socialElement.icon" :aria-label="socialElement.label" style="font-size: 1rem"></i>
+      </a>
     </div>
   </div>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 60 1440 220" class="-mb-1"><path fill="#10b981" fill-opacity="0.1" d="M0,128L40,144C80,160,160,192,240,192C320,192,400,160,480,160C560,160,640,192,720,176C800,160,880,96,960,80C1040,64,1120,96,1200,144C1280,192,1360,256,1400,288L1440,320L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
@@ -703,7 +723,7 @@ const orgs= [
       name: 'Harris Malik',
       designation: 'Senior Product Manager at 8x8',
       message: 'Jiwan is one of the most valuable people I have ever met. He is smart, professional, and never fails to surprise us with creative solutions to difficult problems. Jiwan\'s personality and skills would be a great asset to any company. Highly recommended.',
-      avatar: 'https://media.licdn.com/dms/image/v2/D5603AQG8ooyo97JCoA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1682841547783?e=1738195200&v=beta&t=JARoSOLbmEvkdoSPUN0KudV6as1XSLEzxngLUDb9S6c',
+      avatar: 'https://media.licdn.com/dms/image/v2/D5603AQG8ooyo97JCoA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1682841547783?e=1750896000&v=beta&t=RV2vZM-PEHtTdtboor0V4y6H-KGoUu7-DuJiiET_buU',
       link: 'https://www.linkedin.com/in/harrismalik04/',
       location: 'Malaysia',
       code: 'my'
@@ -712,7 +732,7 @@ const orgs= [
       name: 'Jurgen Sweere',
       designation: 'Front End Expert at ABN Amro',
       message: 'Jiwan never stopped amazing me. He brings a lot of front-end knowledge to the table and is able to quickly learn anything new. Jiwan is a great colleague to have!',
-      avatar: 'https://media.licdn.com/dms/image/v2/C5603AQGLWlLKfqFZgw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1516235161685?e=1738195200&v=beta&t=UF337AJukgtr4CHB2h-M-Azrt31Y24z3Q2lRBTiIk_c',
+      avatar: 'https://media.licdn.com/dms/image/v2/C5603AQGLWlLKfqFZgw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1516235161685?e=1750896000&v=beta&t=29wMeVltwAWsPCr9QHNhRJZWz1LZaEgES0iwjE2A4oc',
       link: 'https://www.linkedin.com/in/jurgensweere',
       location: 'The Netherlands',
       code: 'nl'
@@ -721,7 +741,7 @@ const orgs= [
       name: 'Shyam Kumar',
       designation: 'Senior Product Manager at Angel One',
       message: 'I always found Jiwan to be a very dependable and hardworking colleague. Many times he went above and beyond to meet the product requirements; it might be either working overtime to release the project on time or working with other teams to get the production issue fixed. He was always the go-to person on the team.',
-      avatar: 'https://media.licdn.com/dms/image/v2/D5603AQHZpSlK7j89uA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1698672442801?e=1738195200&v=beta&t=lXm4yDQlyLnGzUFtfzqjDGEgBzttasSc03uUb5s0ZVc',
+      avatar: 'https://media.licdn.com/dms/image/v2/D5603AQHZpSlK7j89uA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1698672442801?e=1750896000&v=beta&t=lscT5fFmahvoGSWRzV4hN-r2YM58ddKTki5HdOziiuI',
       link: 'https://www.linkedin.com/in/shyam-kumar-k/',
       location: 'India',
       code: 'in'
@@ -730,7 +750,7 @@ const orgs= [
       name: 'Erkan Ateşli',
       designation: 'Chapter Lead at ABN AMRO Bank N.V.',
       message: 'In our connection with Jiwan at ABN AMRO, I noticed that he has a lot of knowledge in his field of expertise. He can transfer his knowledge easily to others. With his strong analytics skills, he can handle complex questions as usual. Jiwan is a brave colleague I’ve met, and we had a lot of fun during the India visit and especially at the party. ',
-      avatar: 'https://media.licdn.com/dms/image/v2/C4E03AQFg4Oh_B9JEeQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1621625662967?e=1738195200&v=beta&t=Pe3O7c2KVXVkPPfb7cs06mLOgmvBHxUufz1hWnUDVCI',
+      avatar: 'https://media.licdn.com/dms/image/v2/C4E03AQFg4Oh_B9JEeQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1621625662967?e=1750896000&v=beta&t=9KwLZLloVo4ianxK3csxIjlMY0_G0Ez7nKYvgPVVssE',
       link: 'https://www.linkedin.com/in/erkanatesli',
       location: 'The Netherlands',
       code: 'nl'
