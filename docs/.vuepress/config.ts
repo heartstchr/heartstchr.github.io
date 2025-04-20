@@ -41,6 +41,7 @@ export default defineUserConfig({
     ["link", { rel: "dns-prefetch", href: "github.com" }],
     ["link", { rel: "dns-prefetch", href: "cdn.simpleicons.org" }],
     ["link", { rel: "dns-prefetch", href: "googletagmanager.com" }],
+    ["link", { rel: "preload",as:"image", href: "pattern.webp", type:"image/webp", fetchpriority:"high" }],
     [
       "script",
       {

@@ -103,6 +103,7 @@ copyright: false
                           :src="slotProps.item.itemImageSrc"
                           :alt="slotProps.item.alt"
                           style="width: 100%; display: block"
+                          loading="eager" fetchpriority="high"
                         />
                       </template>
                       <template #thumbnail="slotProps">
@@ -110,6 +111,7 @@ copyright: false
                           :src="slotProps.item.thumbnailImageSrc"
                           :alt="slotProps.item.alt"
                           style="display: block"
+                          loading="eager" fetchpriority="high"
                         />
                       </template>
                     </Galleria>
@@ -119,6 +121,7 @@ copyright: false
                       :src="project.images[0].itemImageSrc"
                       :alt="project.images[0].alt"
                       style="width: 100%; display: block"
+                      loading="eager" fetchpriority="high"
                     />
                   </div>
                 </div>
@@ -240,6 +243,7 @@ copyright: false
                           :src="slotProps.item.itemImageSrc"
                           :alt="slotProps.item.alt"
                           style="width: 100%; display: block"
+                          loading="eager" fetchpriority="high"
                         />
                       </template>
                       <template #thumbnail="slotProps">
@@ -247,6 +251,7 @@ copyright: false
                           :src="slotProps.item.thumbnailImageSrc"
                           :alt="slotProps.item.alt"
                           style="display: block"
+                          loading="eager" fetchpriority="high"
                         />
                       </template>
                     </Galleria>
@@ -256,6 +261,7 @@ copyright: false
                       :src="project.images[0].itemImageSrc"
                       :alt="project.images[0].alt"
                       style="width: 100%; display: block"
+                      loading="eager" fetchpriority="high"
                     />
                   </div>
                 </div>

@@ -8,7 +8,8 @@
         <div v-for="video in videos" :key="video.id.videoId" class="grid my-6 md:col-6 p-0">
             <Card class="shadow-1 vp-feature-item m-1">
                 <template #header>
-                    <img :src="video.thumbnail" :alt="video.title" class="w-full border-round-md" />
+                    <img :src="video.thumbnail" :alt="video.title" class="w-full border-round-md" loading="eager"
+                        fetchpriority="high" />
                 </template>
                 <template #title>
                     <!-- <div class="line-height-3">{{ video.title }}</div> -->

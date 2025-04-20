@@ -69,7 +69,7 @@ copyright: false
               <Tag style="border: 2px solid var(--border-color); background: transparent; color: var(--text-color)" v-for="tech in subheading.technologies" :key="tech.name"
                 :value="tech.name" class="m-1">
                 <div class="flex items-center gap-2 px-1">
-                    <img v-if="tech.logoUrl" :src="tech.logoUrl" style="width: 20px;" />
+                    <img v-if="tech.logoUrl" :src="tech.logoUrl" style="width: 20px;" loading="eager" fetchpriority="high"/>
                     <i v-else class="pi pi-cog" style="font-size: 1rem"></i>
                     <h4 class="text-base p-0 m-0">{{tech.name}}</h4>
                 </div>
@@ -91,13 +91,13 @@ copyright: false
   <div class="flex flex-wrap gap-4 p-4">
       <Galleria :value="certificate.images" :responsiveOptions="responsiveOptions" :numVisible="5" :circular="true" :showItemNavigators="true" :showThumbnails="false">
           <template #item="slotProps">
-              <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
+              <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" loading="eager" fetchpriority="high" />
           </template>
           <template #thumbnail="slotProps">
-              <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="display: block" />
+              <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="display: block" loading="eager" fetchpriority="high"/>
           </template>
       </Galleria>
-      <img src="/img/about/JiwanGhosalMicrosoftAz900.webp" width="100%" />
+      <img src="/img/about/JiwanGhosalMicrosoftAz900.webp" width="100%" loading="eager" fetchpriority="high"/>
   </div>
 </div>
 

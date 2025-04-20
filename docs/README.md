@@ -35,7 +35,7 @@ copyright: false
   <div class="grid mt-4">
     <div class="md:col col-6 text-center" v-for="stackLogo in stackLogos" :key="stackLogo.title">
       <i :class="stackLogo.icon" class="m-auto text-400 pl-3" style="font-size: 5rem"></i>
-      <img width="50px" height="50px" :src="stackLogo.link" :alt="stackLogo.title"/>
+      <img width="50px" height="50px" :src="stackLogo.link" :alt="stackLogo.title" loading="eager" fetchpriority="high"/>
       <h3 class="hidden">{{stackLogo.title}}</h3>
     </div>
   </div>
@@ -50,7 +50,7 @@ copyright: false
       class="gallery-item"
     >
       <a :href="img.link" target="_blank" class="text-l p-2 font-medium text-center no-underline">
-        <img :src="img.images[0].itemImageSrc":alt="img.images[0].alt" />
+        <img :src="img.images[0].itemImageSrc":alt="img.images[0].alt" loading="eager" fetchpriority="high" />
         <h3 class="p-0 mt-4">{{ img.name }} <i class="pi pi-external-link ml-1 text-blue-700" style="font-size: 1rem"></i></h3>
       </a>
     </div>
@@ -108,7 +108,7 @@ copyright: false
               <div class="text-md line-height-3" ><span class="font-bold text-4xl">"</span> {{ slotProps.data.message }}</div>
             </div>
             <div class="flex align-items-center">
-              <img :src="slotProps.data.avatar" :alt="slotProps.data.name" class="border-circle" width="50px" height="50px" />
+              <img :src="slotProps.data.avatar" :alt="slotProps.data.name" loading="eager" fetchpriority="high" class="border-circle" width="50px" height="50px" />
               <a :href="slotProps.data.link" target="_blank" class="no-underline">
                 <h3 class="flex flex-column align-items-start ml-2 p-0 m-0">
                   <div>
@@ -116,7 +116,7 @@ copyright: false
                     {{ slotProps.data.name }}, 
                   </div>
                   <div>
-                    <img :alt="slotProps.data.location" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" :class="`flag flag-${slotProps.data.code.toLowerCase()} mr-1`" style="width: 18px" />
+                    <img :alt="slotProps.data.location" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" loading="eager" fetchpriority="high" :class="`flag flag-${slotProps.data.code.toLowerCase()} mr-1`" style="width: 18px" />
                     {{ slotProps.data.location }}
                   </div>
                 </h3>
@@ -183,7 +183,7 @@ copyright: false
     <div class="md:col-2 col-5 border-round-md md:p-2 md:m-2 vp-feature-item flex align-items-center justify-content-center" v-for="org in orgs" :key="org.title">
       <div class="no-underline flex flex-column justify-content-center flex-wrap">
         <div class="mb-2 flex align-items-center justify-content-center h-4rem">
-          <img :src="org.icon" :alt="org.title" width="40px" height="40px" class="border-round-md"/>
+          <img :src="org.icon" :alt="org.title" width="40px" height="40px" class="border-round-md" loading="eager" fetchpriority="high"/>
         </div>
         <div class="h-5rem">
           <h3 class="text-base md:text-xl font-bold flex align-items-center justify-content-center p-0 m-0 text-center line-height-3">{{org.title}}</h3>
