@@ -36,6 +36,9 @@ h2{
   );
   animation: spin 1s linear infinite;
 }
+.vp-hero-action.primary, .p-button-primary{
+  color:black !important;
+}
 .vp-action-link {
   background: var(--bg-color);
   margin: 1px !important;
