@@ -207,7 +207,7 @@ copyright: false
             <AccordionTab header="Q: How can I start a project with you?">
                 <h3 class="m-0 p-0 hidden">How can I start a project with you?</h3>
                 <p class="mx-3">
-                    You can start by <a href="https://cal.com/stackseekers" class="no-underline" aria-label="schedule a meeting">scheduling a meeting</a> with me. I’ll connect with you promptly to discuss your requirements and plan the next steps.
+                    You can start by <a href="https://cal.com/stackseekers" class="no-underline text-xl" aria-label="schedule a meeting">scheduling a meeting</a> with me. I’ll connect with you promptly to discuss your requirements and plan the next steps.
                 </p>
             </AccordionTab>
             <AccordionTab header="Q: What services do you provide?">
