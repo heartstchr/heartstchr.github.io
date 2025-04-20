@@ -1,6 +1,6 @@
 ---
-title: Full-stack web solutions for hire 
-description: Custom web development freelancer for hire, E-commerce Solutions freelancer for hire, API development and Integration freelancer for hire , Figma to Web Conversion freelancer for hire, and Hosting & Deployment freelancer for hire.
+title: Custom Web Design & Development Services for Businesses
+description: Stack Seekers provides end-to-end web development services for businesses of all sizes. Our solutions include front-end and back-end development, CMS integration, API development, and performance optimization — all aligned to support your growth and digital transformation goals.
 icon: code
 order: 3
 lastUpdated: false
@@ -148,7 +148,7 @@ watch(
 const onTabChange = (event) => {
   const service = services[event.index];
   if (service) {
-    router.push(`/services/#${service.code}`);
+    router.push(`/web-development-services/#${service.code}`);
   }
 };
 </script>

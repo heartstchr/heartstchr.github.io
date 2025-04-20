@@ -5,39 +5,43 @@ export const enNavbar = navbar([
   {
     text: "Services",
     icon: "pi pi-code",
-    link: "/services/",
+    link: "/web-development-services/",
     children: [
       {
         text: "Figma to web",
-        link: "services/#FigmatoWeb",
+        link: "web-development-services/#FigmatoWeb",
       },
       {
         text: "E-commerce",
-        link: "services/#E-commerceSolutions",
+        link: "web-development-services/#E-commerceSolutions",
       },
       {
         text: "Consulting",
-        link: "services/#ConsultingAndTechnicalAdvisory",
+        link: "web-development-services/#ConsultingAndTechnicalAdvisory",
       },
       {
         text: "Web Development",
-        link: "services/#CustomWebDevelopment",
+        link: "web-development-services/#CustomWebDevelopment",
       },
       {
         text: "API Developement",
-        link: "services/#APIDevelopmentAndIntegration",
+        link: "web-development-services/#APIDevelopmentAndIntegration",
       },
       {
         text: "CICD",
-        link: "services/#cicd",
+        link: "web-development-services/#cicd",
       },
       {
         text: "Hosting",
-        link: "services/#hosting",
+        link: "web-development-services/#hosting",
       },
     ],
   },
-  { text: "Projects", icon: "pi pi-briefcase", link: "/projects/" },
+  {
+    text: "Projects",
+    icon: "pi pi-briefcase",
+    link: "/web-development-projects/",
+  },
   { text: "About", icon: "pi pi-user", link: "/about/" },
   {
     text: "Videos",

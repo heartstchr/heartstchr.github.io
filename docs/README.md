@@ -1,8 +1,8 @@
 ---
 home: true
 icon: pi pi-home
-title: Full-stack web consultant
-description: Full-stack consultant for hire, specializing in custom websites and web applications using JavaScript, React.js, Next.js, Node.js, and more. Expert Vue.js, React.js, and Node.js developer delivering scalable web, mobile, and software solutions with 𝙈𝙀𝙍𝙉 and 𝙈𝙀𝙑𝙉 stacks (MongoDB, Express, React/Vue, Next/Nuxt, Node.js).
+title: Custom Web & App Development Services
+description: Stack Seekers is a full-stack web development agency helping startups and businesses build modern, high-performance websites and web applications. From idea to launch, we turn your vision into powerful digital solutions. Expert Vue.js, React.js, and Node.js developer delivering scalable web, mobile, and software solutions with 𝙈𝙀𝙍𝙉 and 𝙈𝙀𝙑𝙉 stacks (MongoDB, Express, React/Vue, Next/Nuxt, Node.js).
 heroImage: /img/home/jiwanghosal.webp
 heroText: Hi, I am Jiwan Ghosal
 tagline: Full-stack consultant specializing in scalable web, mobile, and software solutions using MERN and MEVN stacks. Let’s bring your ideas to life—connect with me today!
@@ -18,35 +18,25 @@ copyright: false
 ---
 
 <div class="hidden">
-  <div class="text-4xl font-bold">Full Stack Web App Consultant | Jiwan Ghosal</div>
-  <div class="my-4 text-xl">I'm a full stack developer specializing in building web applications using JavaScript, Vue, React and Node.js</div>
+  <h2 class="text-4xl font-bold">Empowering Digital Growth Through Custom Web Development | Jiwan Ghosal</h2>
+  <h3 class="my-4 text-xl">I'm a full stack developer specializing in building web applications using JavaScript, Vue, React and Node.js</h3>
 </div>
+
 <div class="my-6">
   <div class="text-center pb-4">
-    <div class="text-4xl font-bold">Scaling startups</div>
-    <a class="text-4xl font-bold no-underline">Elevating industry giants</a>
-    <div class="my-4 text-xl line-height-2">I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development.</div>
-  </div>
-  <div class="my-4 flex flex-column md:flex-row justify-content-center gap-2">
-    <div class="md:col col-12 border-round-md md:p-2 md:m-2 vp-feature-item flex align-items-center justify-content-center" v-for="org in orgs" :key="org.title">
-      <div class="no-underline flex flex-column justify-content-center flex-wrap">
-        <div class="mb-2 flex align-items-center justify-content-center">
-          <img :src="org.icon" alt="Avatar" width="80px" class="border-round-md"/>
-        </div>
-        <div class="text-2xl font-bold flex align-items-center justify-content-center"><span class="line-height-3">{{org.title}}</span></div>
-        <div class="text-xs flex align-items-center justify-content-center line-height-2 text-center">{{org.details}}</div>
-      </div>
+    <h2>
+      <div class="text-4xl font-bold">Scalable Solutions for</div>
+      <a class="text-4xl font-bold no-underline">Startups, Enterprises & Agencies</a>
+    </h2>
+    <div class="text-xl text-center md:text-left line-height-3">
+      I'm a full-stack developer with extensive experience in the JavaScript, VueJS, ReactJS and NodeJS ecosystems, as well as expertise in the Azure cloud platform.
     </div>
-  </div>
-</div>
-<div class="my-6">
-  <div class="text-xl text-center md:text-left line-height-3">
-    I'm a full-stack developer with extensive experience in the JavaScript, VueJS, ReactJS and NodeJS ecosystems, as well as expertise in the Azure cloud platform.
-  </div>
+  </div>  
   <div class="grid mt-4">
     <div class="md:col col-6 text-center" v-for="stackLogo in stackLogos" :key="stackLogo.title">
       <i :class="stackLogo.icon" class="m-auto text-400 pl-3" style="font-size: 5rem"></i>
-      <img  height="50" :src="stackLogo.link" alt="Avatar"/>
+      <img  height="50" :src="stackLogo.link" :alt="stackLogo.title"/>
+      <h3 class="hidden">{{stackLogo.title}}</h3>
     </div>
   </div>
   <div class="text-center pb-4">
@@ -87,7 +77,7 @@ copyright: false
     </Carousel>
   </div>
   <div class="text-center pb-4">
-    <a href="/projects/" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
+    <a href="/web-development-projects/" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
       <div class="p-flex p-ai-center">
         <div
           class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button"
@@ -108,8 +98,10 @@ copyright: false
 <!-- Testimonials -->
 <div class="my-6">
   <div class="text-center pb-4">
-    <div class="text-4xl font-bold">Trusted by</div>
-    <a class="text-4xl font-bold no-underline">World Wide</a>
+    <h2>
+      <div class="text-4xl font-bold">Trusted by</div>
+      <a class="text-4xl font-bold no-underline">World Wide</a>
+    </h2>
     <div class="my-4 text-xl line-height-2">I value every client as a strategic partner. Here’s what they’ve shared about their experience working with me.</div>
   </div>
   <div class="card relative md:mx-0 -mx-4" @mouseenter="pauseAutoPlay"
@@ -124,16 +116,16 @@ copyright: false
             <div class="flex align-items-center">
               <img :src="slotProps.data.avatar" alt="Avatar" class="border-circle" width="50px" />
               <a :href="slotProps.data.link" target="_blank" class="no-underline">
-                <div class="flex flex-column align-items-start ml-2">
+                <h3 class="flex flex-column align-items-start ml-2">
                   <div>
                     <i class="pi pi-linkedin mr-1 text-blue-700" style="font-size: 1rem"></i>
-                    {{ slotProps.data.name }} 
+                    {{ slotProps.data.name }}, 
                   </div>
                   <div>
                     <img :alt="slotProps.data.name" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" :class="`flag flag-${slotProps.data.code.toLowerCase()} mr-1`" style="width: 18px" />
                     {{ slotProps.data.location }}
                   </div>
-                </div>
+                </h3>
               </a>
             </div>
           </div>
@@ -144,17 +136,19 @@ copyright: false
 
 <div class="my-6 flex flex-column">
   <div class="text-center pb-4">
-    <div class="text-4xl font-bold">Why me?</div>
+    <h2>
+      <div class="text-4xl font-bold">Why me?</div>
+    </h2>
     <div class="my-4 text-xl line-height-2">Here’s why I’m the right choice for your project</div>
   </div>
   <div class="flex flex-wrap">
     <div class="md:col-6 col-12 md:p-4" v-for="why in whyme" :key="why.title">  
       <Fieldset class="vp-feature-item">
         <template #legend>
-            <div class="flex items-center pl-2">
+            <h3 class="flex items-center pl-2 m-0 p-0">
                 <Avatar :image="`/img/home/${why.id}.svg`" shape="circle" />
                 <span class="font-bold p-2 line-height-2">{{why.title}}</span>
-            </div>
+            </h3>
         </template>
         <p class="m-0 pt-4">
           {{why.description}}
@@ -163,33 +157,57 @@ copyright: false
     </div>
   </div>
 </div>
-
+<div class="my-6">
+  <div class="text-center pb-4">
+    <h2>
+      <div class="text-4xl font-bold">Scaling startups</div>
+      <a class="text-4xl font-bold no-underline">Elevating industry giants</a>
+    </h2>
+    <div class="my-4 text-xl line-height-2">I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development.</div>
+  </div>
+  <div class="my-4 flex flex-column md:flex-row justify-content-center gap-2">
+    <div class="md:col col-12 border-round-md md:p-2 md:m-2 vp-feature-item flex align-items-center justify-content-center" v-for="org in orgs" :key="org.title">
+      <div class="no-underline flex flex-column justify-content-center flex-wrap">
+        <div class="mb-2 flex align-items-center justify-content-center">
+          <img :src="org.icon" alt="Avatar" width="80px" class="border-round-md"/>
+        </div>
+        <h3 class="text-2xl font-bold flex align-items-center justify-content-center p-0 m-0"><span class="line-height-3">{{org.title}}</span></h3>
+        <div class="text-xs flex align-items-center justify-content-center line-height-2 text-center">{{org.details}}</div>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- FAQ -->
 <div class="my-6">
   <div class="text-center pb-4">
-    <div class="text-4xl font-bold line-height-2">Frequently asked <a class="no-underline">questions</a></div>
+    <h2>
+      <div class="text-4xl font-bold line-height-2">Frequently asked <a class="no-underline">questions</a></div>
+    </h2>
   </div>
   <div class="grid overflow-hidden border-round-2xl">
     <div class="col-12 ">
       <div class="border-round-2xl flex flex-column gap-2 md:p-2">
           <Accordion :activeIndex="0">
             <AccordionTab header="Q: How can I start a project with you?">
+                <h3 class="m-0 p-0 hidden">How can I start a project with you?</h3>
                 <p class="mx-3">
                     You can start by <a href="https://cal.com/stackseekers" class="no-underline">scheduling a meeting</a> with me. I’ll connect with you promptly to discuss your requirements and plan the next steps.
                 </p>
             </AccordionTab>
             <AccordionTab header="Q: What services do you provide?">
+                <h3 class="m-0 p-0 hidden">What services do you provide?</h3>
                 <p class="mx-3 ">
                     I offer a variety of services tailored to your needs, including 
-                    <a href="services/#ConsultingAndTechnicalAdvisory" class="no-underline">Custom Web Development</a>, 
-                    <a href="services/#E-commerceSolutions" class="no-underline">E-commerce Solutions</a>, 
-                    <a href="services/#APIDevelopmentAndIntegration" class="no-underline">API Development and Integration </a>, 
-                    <a href="services/#FigmatoWeb" class="no-underline">Figma to Web Conversion</a>, and 
-                    <a href="services/#hosting" class="no-underline">Hosting & Deployment</a>. 
+                    <a href="web-development-services/#ConsultingAndTechnicalAdvisory" class="no-underline">Custom Web Development</a>, 
+                    <a href="web-development-services/#E-commerceSolutions" class="no-underline">E-commerce Solutions</a>, 
+                    <a href="web-development-services/#APIDevelopmentAndIntegration" class="no-underline">API Development and Integration </a>, 
+                    <a href="web-development-services/#FigmatoWeb" class="no-underline">Figma to Web Conversion</a>, and 
+                    <a href="web-development-services/#hosting" class="no-underline">Hosting & Deployment</a>. 
                     <div class="mt-2">Let’s find the best solution for your project!</div>
                 </p>
             </AccordionTab>
             <AccordionTab header="Q: What does the project process look like?">
+                <h3 class="m-0 p-0 hidden">What does the project process look like?</h3>
                 <div class="mx-3">
                   <div class="my-4">It’s simple and straightforward: </div>
                   <Timeline :value="events" align="left"
@@ -225,7 +243,9 @@ copyright: false
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 60 1440 260"><path fill="#10b981" fill-opacity="0.1" d="M0,128L40,144C80,160,160,192,240,192C320,192,400,160,480,160C560,160,640,192,720,176C800,160,880,96,960,80C1040,64,1120,96,1200,144C1280,192,1360,256,1400,288L1440,320L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
   <div>
     <div class="text-center pb-4">
-      <div class="text-4xl font-bold">NEED A FULL STACK WEB DEVELOPER?</div>
+      <h3>
+        <div class="text-4xl font-bold">NEED A FULL STACK WEB DEVELOPER?</div>
+      </h3>
       <div class="my-4 text-md">Let's work together!</div>
     </div>
     <div class="mx-4 text-center text-xl line-height-3">

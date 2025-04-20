@@ -1,6 +1,6 @@
 ---
-title: Web development projects
-description: Freelance projects in custom web and app development, including booking platforms, dashboards, and analytics tools. Built with React, Node.js, and modern tech stacks.
+title: Web Development Portfolio
+description: Explore real-world web development projects crafted by Stack Seekers. From scalable SaaS apps to stunning websites, see how we build digital experiences that drive results. Freelance projects in custom web and app development, including booking platforms, dashboards, and analytics tools. Built with React, Node.js, and modern tech stacks.
 icon: discover
 order: 2
 lastUpdated: false
