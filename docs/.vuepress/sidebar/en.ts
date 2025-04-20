@@ -19,7 +19,7 @@ export const enSidebar = sidebar({
     {
       text: "Videos",
       icon: "pi pi-youtube",
-      link: "videos/",
+      link: "stackseekers-tv/",
     },
   ],
 });

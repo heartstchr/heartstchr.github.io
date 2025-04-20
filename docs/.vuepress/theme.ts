@@ -28,7 +28,7 @@ export default hopeTheme({
                   <a href="/web-development-projects/"> Projects </a>
                   <a href="/web-development-services/"> Services </a>
                   <a href="/about/"> About </a>
-                  <a href="/videos/"> Videos </a>
+                  <a href="/stackseekers-tv/"> Videos </a>
                   <a href="/#contact"> Contact </a>
                   </div>
                 </div>
