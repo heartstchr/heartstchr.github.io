@@ -17,11 +17,6 @@ editLink: false
 copyright: false
 ---
 
-<div class="hidden">
-  <h2 class="text-4xl font-bold">Empowering Digital Growth Through Custom Web Development | Jiwan Ghosal</h2>
-  <h3 class="my-4 text-xl">I'm a full stack developer specializing in building web applications using JavaScript, Vue, React and Node.js</h3>
-</div>
-
 <div class="my-6">
   <div class="text-center pb-4">
     <h2>
