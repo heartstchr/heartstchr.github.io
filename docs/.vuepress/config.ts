@@ -38,6 +38,15 @@ export default defineUserConfig({
     },
   },
   head: [
+    [
+      "meta",
+      {
+        "http-equiv": "Cache-Control",
+        content: "no-cache, no-store, must-revalidate",
+      },
+    ],
+    ["meta", { "http-equiv": "Pragma", content: "no-cache" }],
+    ["meta", { "http-equiv": "Expires", content: "0" }],
     ["link", { rel: "dns-prefetch", href: "//stackseekers.com" }],
     ["link", { rel: "dns-prefetch", href: "//heartstchr.github.io" }],
     ["link", { rel: "dns-prefetch", href: "//youtube.com" }],
@@ -65,24 +74,7 @@ export default defineUserConfig({
         fetchpriority: "high",
       },
     ],
-    [
-      "script",
-      {
-        src: "https://www.googletagmanager.com/gtag/js?id=G-L6P0G1Y09S",
-        async: true,
-      },
-    ],
-    [
-      "script",
-      {},
-      `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-  
-      gtag('config', 'G-L6P0G1Y09S');
-  `,
-    ],
+    ["script", { src: "/ga-loader.js" }],
   ],
   theme,
   alias: {
