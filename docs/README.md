@@ -25,8 +25,7 @@ copyright: false
 <div class="my-6">
   <div class="text-center pb-4">
     <h2>
-      <div class="text-4xl font-bold">Scalable Solutions for</div>
-      <a class="text-4xl font-bold no-underline">Startups, Enterprises & Agencies</a>
+      <div class="text-4xl font-bold">Scalable Solutions for <div class="text-4xl font-bold bg-primary">Startups, Enterprises & Agencies</div></div>
     </h2>
     <div class="text-xl text-center md:text-left line-height-3">
       I'm a full-stack developer with extensive experience in the JavaScript, VueJS, ReactJS and NodeJS ecosystems, as well as expertise in the Azure cloud platform.
@@ -93,8 +92,7 @@ copyright: false
 <div class="my-6">
   <div class="text-center pb-4">
     <h2>
-      <div class="text-4xl font-bold">Trusted by</div>
-      <a class="text-4xl font-bold no-underline">World Wide</a>
+      <div class="text-4xl font-bold">Trusted by <div class="text-4xl font-bold bg-primary">World Wide</div></div>
     </h2>
     <div class="my-4 text-xl line-height-2">I value every client as a strategic partner. Here’s what they’ve shared about their experience working with me.</div>
   </div>
@@ -151,7 +149,7 @@ copyright: false
 <div class="my-6 flex flex-column">
   <div class="text-center pb-4">
     <h2>
-      <div class="text-4xl font-bold">Why me?</div>
+      <div class="text-4xl font-bold">Why <span class="bg-primary">me?</span></div>
     </h2>
     <div class="my-4 text-xl line-height-2">Here’s why I’m the right choice for your project</div>
   </div>
@@ -159,8 +157,15 @@ copyright: false
     <div class="md:col-6 col-12 md:p-4" v-for="why in whyme" :key="why.title">  
       <Fieldset class="vp-feature-item">
         <template #legend>
-            <h3 class="flex items-center pl-2 m-0 p-0">
-                <Avatar :image="`/img/home/${why.id}.svg`" :aria-label="why.title" shape="square" size="normal"/>
+            <h3 class="flex align-items-center pl-2 m-0 p-0">
+                <img
+                  :src="`/img/home/${why.id}.svg`"
+                  class="p-avatar p-avatar-circle"
+                  loading="lazy"
+                  :alt="`${why.title} icon`"
+                  width="24px"
+                  height=24px
+                />
                 <span class="font-bold p-2 line-height-2">{{why.title}}</span>
             </h3>
         </template>
@@ -174,8 +179,7 @@ copyright: false
 <div class="my-6">
   <div class="text-center pb-4">
     <h2>
-      <div class="text-4xl font-bold">Scaling startups</div>
-      <a class="text-4xl font-bold no-underline">Elevating industry giants</a>
+      <div class="text-4xl font-bold">Scaling startups <div class="text-4xl font-bold bg-primary">Elevating industry giants</div></div>
     </h2>
     <div class="my-4 text-xl line-height-2">I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development.</div>
   </div>
@@ -197,7 +201,7 @@ copyright: false
 <div class="my-6">
   <div class="text-center pb-4">
     <h2>
-      <div class="text-4xl font-bold line-height-2">Frequently asked <a class="no-underline">questions</a></div>
+      <div class="text-4xl font-bold line-height-2">Frequently asked <span class="bg-primary">questions</span></div>
     </h2>
   </div>
   <div class="grid overflow-hidden border-round-2xl">
@@ -295,6 +299,10 @@ import { ref, onMounted, onBeforeUnmount, computed } from "vue";
 const currentPage = ref(0);
 const autoplayInterval = 5000;
 let autoplayTimer = null;
+const visible = ref(false)
+const onVisible = () => {
+  visible.value = true
+}
 
 const events = ref([
     { status: 'We start with understanding your requirements', date: '15/10/2020 10:30', icon: 'pi pi-shopping-cart', color: '#9C27B0'},

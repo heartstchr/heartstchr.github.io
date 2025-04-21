@@ -38,12 +38,13 @@ export default defineUserConfig({
     },
   },
   head: [
-    ["link", { rel: "dns-prefetch", href: "stackseekers.com" }],
-    ["link", { rel: "dns-prefetch", href: "heartstchr.github.io" }],
-    ["link", { rel: "dns-prefetch", href: "youtube.com" }],
-    ["link", { rel: "dns-prefetch", href: "github.com" }],
-    ["link", { rel: "dns-prefetch", href: "cdn.simpleicons.org" }],
-    ["link", { rel: "dns-prefetch", href: "googletagmanager.com" }],
+    ["link", { rel: "dns-prefetch", href: "//stackseekers.com" }],
+    ["link", { rel: "dns-prefetch", href: "//heartstchr.github.io" }],
+    ["link", { rel: "dns-prefetch", href: "//youtube.com" }],
+    ["link", { rel: "dns-prefetch", href: "//github.com" }],
+    ["link", { rel: "dns-prefetch", href: "//cdn.simpleicons.org" }],
+    ["link", { rel: "dns-prefetch", href: "//googletagmanager.com" }],
+    ["link", { rel: "dns-prefetch", href: "//media.licdn.com" }],
     [
       "link",
       {
