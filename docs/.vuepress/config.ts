@@ -56,6 +56,16 @@ export default defineUserConfig({
       },
     ],
     [
+      "link",
+      {
+        rel: "preload",
+        as: "image",
+        href: "/img/home/jiwanghosal.webp",
+        type: "image/webp",
+        fetchpriority: "high",
+      },
+    ],
+    [
       "script",
       {
         src: "https://www.googletagmanager.com/gtag/js?id=G-L6P0G1Y09S",
