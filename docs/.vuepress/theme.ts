@@ -1,6 +1,5 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import { enNavbar } from "./navbar/index.js";
-// import { enSidebar } from "./sidebar/index.js";
 
 export default hopeTheme(
   {
@@ -13,10 +12,10 @@ export default hopeTheme(
     docsDir: "/src",
     darkmode: "auto",
     pageInfo: [],
+    sidebar: false,
     locales: {
       "/": {
         navbar: enNavbar,
-        sidebar: false,
         footer: `
       <div>
         <div class="flex flex-wrap">
