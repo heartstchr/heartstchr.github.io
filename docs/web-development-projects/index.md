@@ -1,7 +1,6 @@
 ---
 title: Web Development Portfolio
 description: Explore real-world web development projects crafted by Stack Seekers. From scalable SaaS apps to stunning websites, see how we build digital experiences that drive results. Freelance projects in custom web and app development, including booking platforms, dashboards, and analytics tools. Built with React, Node.js, and modern tech stacks.
-icon: pi pi-briefcase
 order: 2
 lastUpdated: false
 editLink: false
@@ -157,7 +156,7 @@ copyright: false
                 target="_blank"
                 class="w-full flex flex-row no-underline mt-4"
               >
-                <button
+                <Button
                   label="Live Demo"
                   icon="pi pi-angle-double-right"
                   severity="primary"
@@ -171,7 +170,7 @@ copyright: false
                 target="_blank"
                 class="w-full flex flex-row no-underline mt-4"
               >
-                <button
+                <Button
                   label="Repo"
                   icon="pi pi-github"
                   severity="secondary"
@@ -297,7 +296,7 @@ copyright: false
                 target="_blank"
                 class="w-full flex flex-row no-underline mt-4"
               >
-                <button
+                <Button
                   label="Demo"
                   icon="pi pi-angle-double-right"
                   severity="primary"
@@ -311,7 +310,7 @@ copyright: false
                 target="_blank"
                 class="w-full flex flex-row no-underline mt-4"
               >
-                <button
+                <Button
                   label="Repo"
                   icon="pi pi-github"
                   severity="secondary"

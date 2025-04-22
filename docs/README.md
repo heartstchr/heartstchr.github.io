@@ -1,6 +1,5 @@
 ---
 home: true
-icon: pi pi-home
 title: Web Developer
 description: Stack Seekers is a full-stack web development agency helping startups and businesses build modern, high-performance websites and web applications. From idea to launch, we turn your vision into powerful digital solutions. Expert Vue.js, React.js, and Node.js developer delivering scalable web, mobile, and software solutions with 𝙈𝙀𝙍𝙉 and 𝙈𝙀𝙑𝙉 stacks (MongoDB, Express, React/Vue, Next/Nuxt, Node.js).
 heroImage: /img/home/jiwanghosal.webp
@@ -9,7 +8,6 @@ tagline: Full-stack consultant specializing in scalable web, mobile, and softwar
 containerClass: fancy-container
 actions:
   - text: Book free consultation
-    icon: pi pi-calendar-clock
     link: https://cal.com/stackseekers
     type: primary
 
@@ -211,7 +209,7 @@ copyright: false
             </AccordionTab>
             <AccordionTab header="Q: What services do you provide?">
                 <h3 class="m-0 p-0 hidden">What services do you provide?</h3>
-                <p class="mx-3 ">
+                <div class="mx-3 ">
                     I offer a variety of services tailored to your needs, including 
                     <a href="web-development-services/#ConsultingAndTechnicalAdvisory" class="no-underline" aria-label="Custom Web Development">Custom Web Development</a>, 
                     <a href="web-development-services/#E-commerceSolutions" class="no-underline" aria-label="E-commerce Solutions">E-commerce Solutions</a>, 
@@ -219,7 +217,7 @@ copyright: false
                     <a href="web-development-services/#FigmatoWeb" class="no-underline" aria-label="Figma to Web Conversion">Figma to Web Conversion</a>, and 
                     <a href="web-development-services/#hosting" class="no-underline" aria-label="Hosting & Deployment">Hosting & Deployment</a>. 
                     <div class="mt-2">Let’s find the best solution for your project!</div>
-                </p>
+                </div>
             </AccordionTab>
             <AccordionTab header="Q: What does the project process look like?">
                 <h3 class="m-0 p-0 hidden">What does the project process look like?</h3>

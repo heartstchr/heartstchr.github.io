@@ -1,8 +1,10 @@
 <template>
-    <RouterLink :to="logoLink" class="navbar-logo" aria-label="Home">
-        <img v-if="logo" class="vp-nav-logo" :src="logo" :alt="logoAlt" />
-        <span v-else class="site-name">{{ siteTitle }}</span>
-    </RouterLink>
+    <ClientOnly>
+        <RouterLink :to="logoLink" class="navbar-logo" aria-label="Home">
+            <img v-if="logo" class="vp-nav-logo" :src="logo" :alt="logoAlt" />
+            <span v-else class="site-name">{{ siteTitle }}</span>
+        </RouterLink>
+    </ClientOnly>
 </template>
 
 <script setup lang="ts">

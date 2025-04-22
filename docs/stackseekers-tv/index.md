@@ -1,7 +1,6 @@
 ---
 title: Dev Tutorials, Web Projects & Tech Videos
 description: Watch web development tutorials, app walkthroughs, and project demos by Stack Seekers. Learn how we build full-stack solutions, explore our tech insights, and follow our creative journey.
-icon: pi pi-video
 order: 4
 editLink: false
 copyright: false

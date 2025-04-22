@@ -1,7 +1,6 @@
 ---
 title: Custom Web Design & Development Services for Businesses
 description: Stack Seekers provides end-to-end web development services for businesses of all sizes. Our solutions include front-end and back-end development, CMS integration, API development, and performance optimization — all aligned to support your growth and digital transformation goals.
-icon: pi pi-code
 order: 3
 lastUpdated: false
 editLink: false
@@ -18,11 +17,6 @@ copyright: false
 
   <div>
   My focus is always on delivering high-quality, personalized solutions. Let’s explore the many ways I can help you succeed in the digital space.</div>
-  <div>
-        <!-- <a href="https://cal.com/stackseekers" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
-            <Button label="Book Your Free Consultation!" icon="pi pi-calendar-clock" severity="primary" raised rounded />
-        </a> -->
-    </div>
 </div>
 
 <div class="flex flex-wrap md:gap-4 gap-2">
