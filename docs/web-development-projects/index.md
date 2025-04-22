@@ -39,7 +39,6 @@ copyright: false
 <div class="p-d-flex p-flex-column p-mr-3">
   <TabView class="vertical-tabs">
     <TabPanel header="Freelance Projects">
-      <h2 itemprop="name" class="hidden">Freelance Projects</h2>
       <div class="grid my-6 gap-8">
         <div
           class="vp-feature-item col-12 shadow-1 m-0 p-0"
@@ -55,9 +54,9 @@ copyright: false
           </svg>
           <div>
             <div class="px-4">
-              <h3 itemprop="name" class="text-4xl font-bold p-0 m-0">
+              <h2 itemprop="name" class="text-4xl font-bold p-0 m-0">
                 {{project.name}}
-              </h3>
+              </h2>
               <div class="text-xl mt-2" itemprop="operatingSystem">
                 {{project.software}}
                 <span class="text-sm mt-2"> - {{project.domain}}</span>
@@ -179,7 +178,6 @@ copyright: false
       </div>
     </TabPanel>
     <TabPanel header="Org Projects">
-        <h2 itemprop="name" class="hidden">Organization Projects</h2>
         <div class="grid my-6 gap-8">
         <div
           class="vp-feature-item col-12 shadow-1 m-0 p-0"
@@ -195,9 +193,9 @@ copyright: false
           </svg>
           <div>
             <div class="px-4">
-              <h3 itemprop="name" class="text-4xl font-bold p-0 m-0">
+              <h2 itemprop="name" class="text-4xl font-bold p-0 m-0">
                 {{project.name}}
-              </h3>
+              </h2>
               <div class="text-xl mt-2" itemprop="operatingSystem">
                 {{project.software}}
                 <span class="text-sm mt-2"> - {{project.org}}</span>
