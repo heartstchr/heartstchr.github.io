@@ -41,8 +41,8 @@ copyright: false
       <div class="col-12 overflow-hidden image-box">
         <Image :src="`/img/about/amsterdamConference.webp`" width="100%" />
       </div>
-      <div class="my-4 text-md">In 2023, I had the privilege of participating in the renowned JS world conference Amsterdam, where I contributed to discussions on cutting-edge technologies, VueJs, Pinia, including micro-frontends and modern application architectures.</div>
-      <h3 class="my-4 text-2xl text-md">Participant at NSE Future Tech Hackathon, India.</h3>
+      <div class="my-4 text-md">In 2023, I had the privilege of participating in the renowned JS world conference Amsterdam, where I contributed to discussions on cutting-edge technologies, VueJs, Pinia, including micro-frontend and modern application architectures.</div>
+      <h3 class="my-4 text-2xl text-md">Participant at NSE Future Tech hackathon, India.</h3>
       <div class="col-12 overflow-hidden image-box">
         <Image :src="`/img/about/nseHackathon.webp`" width="100%" />
       </div>
@@ -139,7 +139,7 @@ copyright: false
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="-mb-2"><path fill="#10b981" fill-opacity="0.1" d="M0,128L40,144C80,160,160,192,240,192C320,192,400,160,480,160C560,160,640,192,720,176C800,160,880,96,960,80C1040,64,1120,96,1200,144C1280,192,1360,256,1400,288L1440,320L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
 </div>
 
-<script setup lanf="ts">
+<script setup lang="ts">
   import { ref } from "vue";
   const certificate = ref([
     {
@@ -228,7 +228,7 @@ copyright: false
         technologies: [
           { name: "Jest", logoUrl: "https://cdn.simpleicons.org/jest" },
           { name: "Testcafe", logoUrl: "https://cdn.simpleicons.org/testcafe" },
-          { name: "Playwrite", logoUrl: "https://cdn.simpleicons.org/playwright" },
+          { name: "Playwright", logoUrl: "https://cdn.simpleicons.org/playwright" },
           { name: "Lighthouse", logoUrl: "https://cdn.simpleicons.org/lighthouse" },
         ]
       }
@@ -321,7 +321,7 @@ copyright: false
         technologies: [
           { name: "ESLint", logoUrl: "https://cdn.simpleicons.org/eslint" },
           { name: "Prettier", logoUrl: "https://cdn.simpleicons.org/prettier" },
-          { name: "SonarQube", logoUrl: "https://cdn.simpleicons.org/sonarqube" },
+          { name: "Sonarqube", logoUrl: "https://cdn.simpleicons.org/sonarqube" },
         ]
       },
       collaboration: {
@@ -343,9 +343,9 @@ const getIcon = (logoUrl) => {
 };
   
   const social= [
-    { label: 'linkedin', icon: 'pi pi-linkedin', url: 'https://www.linkedin.com/in/jiwanghosal/' },
-    { label: 'youtube', icon: 'pi pi-youtube', url: 'https://www.youtube.com/@stackseekers' },
-    { label: 'stackoverflow', icon: 'pi pi-chart-bar', url: 'https://stackoverflow.com/users/10376224/stchr?tab=profile' },
+    { label: 'Linkedin', icon: 'pi pi-linkedin', url: 'https://www.linkedin.com/in/jiwanghosal/' },
+    { label: 'Youtube', icon: 'pi pi-youtube', url: 'https://www.youtube.com/@stackseekers' },
+    { label: 'Stack Overflow', icon: 'pi pi-chart-bar', url: 'https://stackoverflow.com/users/10376224/stchr?tab=profile' },
     { label: 'Instagram', icon: 'pi pi-instagram', url: 'https://www.instagram.com/jiwan_ghosal/' },
   ]
 </script>
