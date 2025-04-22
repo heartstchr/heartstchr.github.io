@@ -96,6 +96,10 @@ copyright: false
                       :circular="true"
                       :showItemNavigators="true"
                       :showThumbnails="false"
+                      :pt="{
+                        previousButton: { 'aria-label': 'Previous image' },
+                        nextButton: { 'aria-label': 'Next image' }
+                      }"
                     >
                       <template #item="slotProps">
                         <img

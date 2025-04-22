@@ -88,7 +88,10 @@ copyright: false
     <h2 class="text-4xl font-bold">Certificate of Achievement</h2>
   </div>
   <div class="flex flex-wrap gap-4 p-4">
-      <Galleria :value="certificate.images" :responsiveOptions="responsiveOptions" :numVisible="5" :circular="true" :showItemNavigators="true" :showThumbnails="false">
+      <Galleria :value="certificate.images" :responsiveOptions="responsiveOptions" :numVisible="5" :circular="true" :showItemNavigators="true" :showThumbnails="false" :pt="{
+                        prevButton: { 'aria-label': 'Previous image' },
+                        nextButton: { 'aria-label': 'Next image' }
+                      }">
           <template #item="slotProps">
               <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" loading="eager" fetchpriority="high" />
           </template>
