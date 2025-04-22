@@ -97,7 +97,7 @@ copyright: false
                       :showItemNavigators="true"
                       :showThumbnails="false"
                       :pt="{
-                        previousButton: { 'aria-label': 'Previous image' },
+                        prevButton: { 'aria-label': 'Previous image' },
                         nextButton: { 'aria-label': 'Next image' }
                       }"
                     >
