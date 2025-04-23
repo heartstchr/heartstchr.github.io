@@ -91,8 +91,8 @@ copyright: false
                       :showItemNavigators="true"
                       :showThumbnails="false"
                       :pt="{
-                        prevButton: { 'aria-label': 'Previous image' },
-                        nextButton: { 'aria-label': 'Next image' }
+                        prevButton: { 'aria-label': 'Previous screen of project' },
+                        nextButton: { 'aria-label': 'Next screen of project' }
                       }"
                     >
                       <template #item="slotProps">
@@ -239,8 +239,8 @@ copyright: false
                       :showItemNavigators="true"
                       :showThumbnails="false"
                       :pt="{
-                        prevButton: { 'aria-label': 'Previous image' },
-                        nextButton: { 'aria-label': 'Next image' }
+                        prevButton: { 'aria-label': 'Previous screen of project' },
+                        nextButton: { 'aria-label': 'Next screen of project' }
                       }"
                     >
                       <template #item="slotProps">
@@ -410,16 +410,13 @@ copyright: false
         "ES6",
         "VueJs",
         "Vuex",
-        "Vite",
         "Axios",
         "Cordova",
         "API integration",
         "ExpressJS",
         "MongoDB",
         "Git",
-        "EC2",
-        "Eslint",
-        "Prettier",
+        "EC2"
       ],
       software: "Web / IOS APP",
       features: [
