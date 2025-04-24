@@ -700,6 +700,48 @@ copyright: false
           itemImageSrc: "/img/home/projects/momentum_incident_management.webp",
           alt: "Incident Management",
         },
+        {
+          itemImageSrc: "/img/projects/momentum/swagger.webp",
+          alt: "Incident Management swagger api docs",
+        },
+        {
+          itemImageSrc: "/img/projects/momentum/expanded_incident.webp",
+          alt: "Incident Management expanded incident",
+        },
+        {
+          itemImageSrc: "/img/projects/momentum/sorting_searching.webp",
+          alt: "Incident Management sorting searching",
+        },{
+          itemImageSrc: "/img/projects/momentum/download_incidents.webp",
+          alt: "Incident Management download incidents",
+        },{
+          itemImageSrc: "/img/projects/momentum/incident_notes_task.webp",
+          alt: "Incident Management incident notes,task",
+        },
+        {
+          itemImageSrc: "/img/projects/momentum/edit_notes.webp",
+          alt: "Incident Management edit notes",
+        },
+        {
+          itemImageSrc: "/img/projects/momentum/view_notes.webp",
+          alt: "Incident Management view notes",
+        },
+        {
+          itemImageSrc: "/img/projects/momentum/edit_task.webp",
+          alt: "Incident Management edit task",
+        },
+        {
+          itemImageSrc: "/img/projects/momentum/edit_incident.webp",
+          alt: "Incident Management edit incident",
+        },
+        {
+          itemImageSrc: "/img/projects/momentum/login.webp",
+          alt: "Incident Management Login",
+        },
+        {
+          itemImageSrc: "/img/projects/momentum/register.webp",
+          alt: "Incident Management register",
+        },
       ],
     },
     {
