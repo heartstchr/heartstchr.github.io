@@ -832,6 +832,7 @@ copyright: false
         "ES6",
         "Vue3",
         "Pinia",
+        "Quasar",
         "Vite",
         "Axios",
         "Express",
