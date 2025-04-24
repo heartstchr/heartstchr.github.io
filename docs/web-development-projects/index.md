@@ -827,79 +827,54 @@ copyright: false
       codeLink: "https://github.com/heartstchr/recipe",
       images: [
         {
+          itemImageSrc: "/img/home/projects/Recipe.webp",
+          alt: "Recipes - Login page | Recipes",
+        },
+        {
           itemImageSrc: "/img/projects/recipe/login.webp",
-          alt: "Recipes - Social Network | Recipes",
+          alt: "Recipes - Login page | Recipes",
         },
         {
           itemImageSrc: "/img/projects/recipe/register.webp",
-          alt: "Recipes - Social Network | Recipes",
+          alt: "Recipes - Register page | Recipes",
         },
         {
           itemImageSrc: "/img/projects/recipe/home.webp",
-          alt: "Recipes - Social Network | Recipes",
+          alt: "Recipes - Home page | Recipes",
         },
         {
           itemImageSrc: "/img/projects/recipe/direction.webp",
-          alt: "Recipes - Social Network | Recipes",
+          alt: "Recipes - Directions page | Recipes",
         },
         {
           itemImageSrc: "/img/projects/recipe/ingredients.webp",
-          alt: "Recipes - Social Network | Recipes",
+          alt: "Recipes - Ingredients page | Recipes",
         },
         {
           itemImageSrc: "/img/projects/recipe/addrecipe.webp",
-          alt: "Recipes - Social Network | Recipes",
-        },
-        {
-          itemImageSrc: "/img/projects/recipe/addsteps.webp",
-          alt: "Recipes - Social Network | Recipes",
+          alt: "Recipes - Add Recipe page | Recipes",
         },
         {
           itemImageSrc: "/img/projects/recipe/search.webp",
-          alt: "Recipes - Social Network | Recipes",
+          alt: "Recipes - Search page | Recipes",
         },
         {
           itemImageSrc: "/img/projects/recipe/share.webp",
-          alt: "Recipes - Social Network | Recipes",
-        },
-        {
-          itemImageSrc: "/img/projects/recipe/mobile-home.webp",
-          alt: "Recipes - Social Network | Recipes",
-        },
-        {
-          itemImageSrc: "/img/projects/recipe/mobile-add-recipe.webp",
-          alt: "Recipes - Social Network | Recipes",
-        },
-        {
-          itemImageSrc: "/img/projects/recipe/mobile-menu-left.webp",
-          alt: "Recipes - Social Network | Recipes",
-        },
-        {
-          itemImageSrc: "/img/projects/recipe/mobile-profile.webp",
-          alt: "Recipes - Social Network | Recipes",
-        },
-        {
-          itemImageSrc: "/img/projects/recipe/mobile-profile2.webp",
-          alt: "Recipes - Social Network | Recipes",
-        },
-        {
-          itemImageSrc: "/img/projects/recipe/mobileshare.webp",
-          alt: "Recipes - Social Network | Recipes",
+          alt: "Recipes - Share screen | Recipes",
         },
       ],
     },
     {
-      name: "Tv maze",
+      name: "Tv Maze",
       description: "TVmaze: Add TV information to your website or app.",
       skills: [
         "Javascript",
         "ES6",
         "VueJs",
         "Vuex",
-        "Vite",
+        "Quasar",
         "Axios",
         "API integration",
-        "MongoDB",
         "Git",
         "EC2",
         "Eslint",
@@ -931,24 +906,28 @@ copyright: false
       codeLink: "https://github.com/heartstchr/tvshows",
       images: [
         {
-          itemImageSrc: "/img/projects/tvmaze/tvmaze-home.webp",
-          alt: "TVmaze - Add TV information to your website or app. | Tv maze",
+          itemImageSrc: "/img/home/projects/tvmaze.webp",
+          alt: "TVmaze - Home page. | Tv maze",
+        },
+        {
+          itemImageSrc: "/img/projects/tvmaze/home.webp",
+          alt: "TVmaze - Home page. | Tv maze",
         },
         {
           itemImageSrc: "/img/projects/tvmaze/search.webp",
-          alt: "TVmaze - Add TV information to your website or app. | Tv maze",
+          alt: "TVmaze - . Search page| Tv maze",
         },
         {
-          itemImageSrc: "/img/projects/tvmaze/season.webp",
-          alt: "TVmaze - Add TV information to your website or app. | Tv maze",
+          itemImageSrc: "/img/projects/tvmaze/episodes.webp",
+          alt: "TVmaze - Episodes tab. | Tv maze",
         },
         {
           itemImageSrc: "/img/projects/tvmaze/cast.webp",
-          alt: "TVmaze - Add TV information to your website or app. | Tv maze",
+          alt: "TVmaze - Cast tab. | Tv maze",
         },
         {
-          itemImageSrc: "/img/projects/tvmaze/tvmaze.webp",
-          alt: "TVmaze - Add TV information to your website or app. | Tv maze",
+          itemImageSrc: "/img/projects/tvmaze/genres.webp",
+          alt: "TVmaze - Genres. | Tv maze",
         },
       ],
     },

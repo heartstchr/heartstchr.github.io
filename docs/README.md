@@ -334,9 +334,7 @@ copyright: false
       images: [
         {
           itemImageSrc: "/img/home/projects/sr22.webp",
-          thumbnailImageSrc: "/img/home/projects/sr22.webp",
           alt: "SR-22 insurance Now",
-          title: "SR-22 insurance Now",
         },
       ],
     },
@@ -349,9 +347,7 @@ copyright: false
       images: [
         {
           itemImageSrc: "/img/home/projects/tech_create.webp",
-          thumbnailImageSrc: "/img/home/projects/tech_create.webp",
           alt: "landing page for tech",
-          title: "landing page for tech",
         },
       ],
     },
@@ -364,9 +360,7 @@ copyright: false
       images: [
         {
           itemImageSrc: "/img/projects/trokka.webp",
-          thumbnailImageSrc: "/img/projects/trokka.webp",
           alt: "Trokka.com | Book Attractions and Tours for Your Next Holiday",
-          title: "Trokka.com | Book Attractions and Tours for Your Next Holiday",
         },
       ],
     },
@@ -379,9 +373,20 @@ copyright: false
       images: [
         {
           itemImageSrc: "/img/projects/openDemat.webp",
-          thumbnailImageSrc: "/img/projects/openDemat.webp",
           alt: "Open a Demat Account Online: Demat Account Opening at Upstox",
-          title: "Open a Demat Account Online: Demat Account Opening at Upstox",
+        },
+      ],
+    },
+    {
+      name: "Catch That Bus",
+      description: "Book Malaysia and Singapore bus tickets online.",
+      software: "Web / IOS APP",
+      schema: "https://schema.org/DeveloperApplication",
+      link: "web-development-projects/#Catch That Bus",
+      images: [
+        {
+          itemImageSrc: "/img/projects/catchthatbus.webp",
+          alt: "Book Malaysia and Singapore bus tickets online. | CatchThatBus",
         },
       ],
     },
@@ -395,25 +400,21 @@ copyright: false
       images: [
         {
           itemImageSrc: "/img/home/projects/momentum_incident_management.webp",
-          thumbnailImageSrc:
-            "/img/home/projects/momentum_incident_management.webp",
           alt: "Incident Management",
-          title: "Incident Management",
         },
       ],
     },
     {
-      name: "Catch That Bus",
-      description: "Book Malaysia and Singapore bus tickets online.",
-      software: "Web / IOS APP",
-      schema: "https://schema.org/DeveloperApplication",
-      link: "web-development-projects/#Catch That Bus",
+      name: "Frontend of Tv Maze API",
+      description:
+        "TV Show and web series database. Create personalized schedules. Episode guide, cast, crew and character information. Recaps, reviews, episode trailers, celebrity photos and TV API.",
+      software: "Web",
+      schema: "https://schema.org/BusinessApplication",
+      link: "web-development-projects/#Tv Maze",
       images: [
         {
-          itemImageSrc: "/img/projects/catchthatbus.webp",
-          thumbnailImageSrc: "/img/projects/catchthatbus.webp",
-          alt: "Book Malaysia and Singapore bus tickets online. | CatchThatBus",
-          title: "Book Malaysia and Singapore bus tickets online. | CatchThatBus",
+          itemImageSrc: "/img/home/projects/tvmaze.webp",
+          alt: "Frontend of Tv Maze API",
         },
       ],
     },
@@ -426,9 +427,20 @@ copyright: false
       images: [
         {
           itemImageSrc: "/img/projects/callmatrix/callmatrix.webp",
-          thumbnailImageSrc: "/img/projects/callmatrix/callmatrix.webp",
           alt: "CallMatrix - Call Intelligence, Marketing, and Analytics Platform",
-          title: "Title 1",
+        },
+      ],
+    },
+    {
+      name: "Recipes",
+      description: "Recipes: Social Network",
+      software: "Web",
+      schema: "https://schema.org/DeveloperApplication",
+      link: "web-development-projects/#Recipes",
+      images: [
+        {
+          itemImageSrc: "/img/home/projects/Recipe.webp",
+          alt: "Recipes - Social Network | Recipes",
         },
       ],
     },
