@@ -102,14 +102,6 @@ copyright: false
                           loading="eager" fetchpriority="high"
                         />
                       </template>
-                      <template #thumbnail="slotProps">
-                        <img
-                          :src="slotProps.item.thumbnailImageSrc"
-                          :alt="slotProps.item.alt"
-                          style="display: block"
-                          loading="eager" fetchpriority="high"
-                        />
-                      </template>
                     </Galleria>
                   </div>
                   <div class="card" v-else>
@@ -248,14 +240,6 @@ copyright: false
                         loading="eager" fetchpriority="high"
                       />
                     </template>
-                    <template #thumbnail="slotProps">
-                      <img
-                        :src="slotProps.item.thumbnailImageSrc"
-                        :alt="slotProps.item.alt"
-                        style="display: block"
-                        loading="eager" fetchpriority="high"
-                      />
-                    </template>
                   </Galleria>
                 </div>
                 <div class="card" v-else>
@@ -390,10 +374,7 @@ copyright: false
       images: [
         {
           itemImageSrc: "/img/projects/trokka.webp",
-          thumbnailImageSrc: "/img/projects/trokka.webp",
           alt: "Trokka.com | Book Attractions and Tours for Your Next Holiday",
-          title:
-            "Trokka.com | Book Attractions and Tours for Your Next Holiday",
         },
       ],
     },
@@ -461,18 +442,12 @@ copyright: false
       images: [
         {
           itemImageSrc: "/img/projects/catchthatbus.webp",
-          thumbnailImageSrc: "/img/projects/catchthatbus.webp",
           alt: "Book Malaysia and Singapore bus tickets online. | CatchThatBus",
-          title:
-            "Book Malaysia and Singapore bus tickets online. | CatchThatBus",
         },
         {
           itemImageSrc:
             "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/ad/b9/3b/adb93b8f-08b6-ac23-8f9e-906f7b2529c2/pr_source.png/230x0w.png",
-          thumbnailImageSrc:
-            "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/ad/b9/3b/adb93b8f-08b6-ac23-8f9e-906f7b2529c2/pr_source.png/230x0w.png",
           alt: "IOS app for booking Malaysia and Singapore bus tickets online | CatchThatBus",
-          title: "Title 1",
         },
       ],
     },
@@ -515,33 +490,23 @@ copyright: false
       images: [
         {
           itemImageSrc: "/img/projects/partnerUpstox/partnerUpstox.webp",
-          thumbnailImageSrc: "/img/projects/partnerUpstox/partnerUpstox.webp",
           alt: "Open a sub-broker account with Upstox.",
-          title: "Open a sub-broker account with Upstox.",
         },
         {
           itemImageSrc: "/img/projects/partnerUpstox/dashboard.webp",
-          thumbnailImageSrc: "/img/projects/partnerUpstox/dashboard.webp",
           alt: "Open a sub-broker account with Upstox.",
-          title: "Open a sub-broker account with Upstox.",
         },
         {
           itemImageSrc: "/img/projects/partnerUpstox/leads.webp",
-          thumbnailImageSrc: "/img/projects/partnerUpstox/leads.webp",
           alt: "Open a sub-broker account with Upstox.",
-          title: "Open a sub-broker account with Upstox.",
         },
         {
           itemImageSrc: "/img/projects/partnerUpstox/customer.webp",
-          thumbnailImageSrc: "/img/projects/partnerUpstox/customer.webp",
           alt: "Open a sub-broker account with Upstox.",
-          title: "Open a sub-broker account with Upstox.",
         },
         {
           itemImageSrc: "/img/projects/partnerUpstox/earning.webp",
-          thumbnailImageSrc: "/img/projects/partnerUpstox/earning.webp",
           alt: "Open a sub-broker account with Upstox.",
-          title: "Open a sub-broker account with Upstox.",
         },
       ],
     },
@@ -579,9 +544,7 @@ copyright: false
       images: [
         {
           itemImageSrc: "/img/projects/openDemat.webp",
-          thumbnailImageSrc: "/img/projects/openDemat.webp",
           alt: "Open a Demat Account Online: Demat Account Opening at Upstox",
-          title: "Open a Demat Account Online: Demat Account Opening at Upstox",
         },
       ],
     },
@@ -627,21 +590,140 @@ copyright: false
       images: [
         {
           itemImageSrc: "/img/projects/callmatrix/callmatrix.webp",
-          thumbnailImageSrc: "/img/projects/callmatrix/callmatrix.webp",
           alt: "CallMatrix - Call Intelligence, Marketing, and Analytics Platform",
-          title: "Title 1",
         },
         {
           itemImageSrc: "/img/projects/callmatrix/mobistreak.webp",
-          thumbnailImageSrc: "/img/projects/callmatrix/mobistreak.webp",
           alt: "CallMatrix - Call Intelligence, Marketing, and Analytics Platform",
-          title: "Title 1",
         },
       ],
     },
   ];
 
   const freelance = [
+    {
+      name: "SR-22 insurance Now",
+      skills: ["Next.Js", "React.Js","NodeJS", "JSON", "API", "Digital Ocean", "Lighthouse","SEO"],
+      description:
+        "Need a Cheap SR-22 Insurance? Compare & save on SR22 Insurance from top providers.",
+      software: "Web",
+      org: "Mobistreak",
+      year: "2025",
+      domain: "Digital Marketing",
+      schema: "https://schema.org/BusinessApplication",
+      link: "https://sr22insurancenow.com/",
+      features: [
+        {name:"Campaign owners need fast, dynamic, and conversion-focused websites to maximize ROI from ad campaigns.",},
+        {
+          name: "Dynamic Landing Pages: Generated from a flexible JSON structure for quick deployment.",
+        },
+        {
+          name: "Click-to-Call Ads: Location-based phone numbers to boost conversions.",
+        },
+        {
+          name: "Auto-Complete Location Input: Enhances user experience and reduces friction.",
+        },
+        {
+          name: "WebP Image Optimization: Ensures lightning-fast load speeds.",
+        },
+        {
+          name: "Google Analytics Integration: Tracks performance for data-driven decisions.",
+        },
+        {
+          name: "Custom Components: Built from scratch for full flexibility and scalability.",
+        },
+        {
+          name: "Mobile Optimization & Accessibility: Ensures seamless experiences for all users.",
+        },
+        {name:"Dynamic Content: JSON-driven landing pages tailored for campaigns.",},
+        {name:"Performance Optimization: WebP images and lazy loading for faster pages.",},
+        {name:"SEO & Analytics: Designed to convert traffic into leads while tracking every interaction.",},
+      ],
+      images: [
+        {
+          itemImageSrc: "/img/home/projects/sr22.webp",
+          alt: "SR-22 insurance Now",
+        },
+        {
+          itemImageSrc: "/img/projects/sr22/why_need_sr22.webp",
+          alt: "why need sr22 insurance Now",
+        },
+        {
+          itemImageSrc: "/img/projects/sr22/how_to_get_sr22.webp",
+          alt: "how to get sr22 insurance Now",
+        },
+        {
+          itemImageSrc: "/img/projects/sr22/landing_page.webp",
+          alt: "Landing page sr22 insurance Now",
+        },
+        {
+          itemImageSrc: "/img/projects/sr22/states_map.webp",
+          alt: "states map sr22 insurance Now",
+        },
+        {
+          itemImageSrc: "/img/projects/sr22/sr22_city.webp",
+          alt: "sr22 city list",
+        },
+        {
+          itemImageSrc: "/img/projects/sr22/auto_complete_zip_code.webp",
+          alt: "auto complete zip code sr22 insurance Now",
+        },
+        {
+          itemImageSrc: "/img/projects/sr22/render_json.webp",
+          alt: "JSON reader for sr22 insurance Now",
+        },
+      ],
+    },
+    {
+      name: "Momentum Incident Management",
+      description:
+        "A structured process for identifying, analyzing, and resolving incidents that disrupt an organization's operations",
+      skills: ["Vue3", "PrimeVue","vite","Pinia", "vee-validate","Tailwind", "Node.Js", "Express.Js", "Swagger.Js","MongoDB","vercel"],
+      software: "Web",
+      org: "Momentum",
+      year: "2025",
+      domain: "IT Service",
+      schema: "https://schema.org/BusinessApplication",
+      link: "https://momentum-chi-brown.vercel.app/",
+      features:[
+        {name :"No More Clunky UI – Nested tables & column-based filtering (text, date, select) make incident tracking effortless.",},
+        {name :"Nested CRUD for Incidents & Tasks – Create, update, and manage tasks seamlessly, with an option to add notes.",},
+        {name :"Choose & Create CIs – Define and manage configuration items with ease.",},
+        {name :"Automate with Swagger APIs – Ready for CI/CD pipelines, making integrations a breeze.",},
+        {name :"Seamless Deployment – Frontend & backend deployed on Vercel for high performance.",},
+        {name :"MongoDB Seeding – Easily set up initial data for a smooth start.",},
+        {name :"Swagger Documentation – Well-documented APIs for easy collaboration and scaling.",},
+        {name :"No Costly Subscriptions – A powerful alternative to expensive service management platforms",},
+      ],
+      images: [
+        {
+          itemImageSrc: "/img/home/projects/momentum_incident_management.webp",
+          alt: "Incident Management",
+        },
+      ],
+    },
+    {
+      name: "Tech Create",
+      description: "A landing page for tech ",
+      skills: ["Vue3", "PrimeVue","CSS3", "vercel"],
+      software: "Web",
+      org: "LV",
+      year: "2025",
+      domain: "IT Service",
+      schema: "https://schema.org/BusinessApplication",
+      link: "https://techcreate.vercel.app/",
+      features:[
+        {name:"Responsive Design: Seamless experience across devices.",},
+        {name:"Component-Based Architecture: Efficient and scalable codebase.",},
+        {name:"Modern UI/UX: Clean aesthetics with intuitive navigation",},
+      ],
+      images: [
+        {
+          itemImageSrc: "/img/home/projects/tech_create.webp",
+          alt: "landing page for tech",
+        },
+      ],
+    },
     {
       name: "Qatar Airways widget",
       description:
@@ -685,27 +767,19 @@ copyright: false
       images: [
         {
           itemImageSrc: "/img/projects/quatar/placeholder.webp",
-          thumbnailImageSrc: "/img/projects/quatar/placeholder.webp",
           alt: "Quatar Airways",
-          title: "Quatar Airways",
         },
         {
           itemImageSrc: "/img/projects/quatar/qutar_airways.webp",
-          thumbnailImageSrc: "/img/projects/quatar/qutar_airways.webp",
           alt: "Quatar Airways",
-          title: "Quatar Airways",
         },
         {
           itemImageSrc: "/img/projects/quatar/thumbnail.webp",
-          thumbnailImageSrc: "/img/projects/quatar/thumbnail.webp",
           alt: "Quatar Airways",
-          title: "Quatar Airways",
         },
         {
           itemImageSrc: "/img/projects/quatar/quatar.webp",
-          thumbnailImageSrc: "/img/projects/quatar/quatar.webp",
           alt: "Quatar Airways",
-          title: "Quatar Airways",
         },
       ],
     },
@@ -754,93 +828,63 @@ copyright: false
       images: [
         {
           itemImageSrc: "/img/projects/recipe/login.webp",
-          thumbnailImageSrc: "/img/projects/recipe/login.webp",
           alt: "Recipes - Social Network | Recipes",
-          title: "Recipes - Social Network | Recipes",
         },
         {
           itemImageSrc: "/img/projects/recipe/register.webp",
-          thumbnailImageSrc: "/img/projects/recipe/register.webp",
           alt: "Recipes - Social Network | Recipes",
-          title: "Recipes - Social Network | Recipes",
         },
         {
           itemImageSrc: "/img/projects/recipe/home.webp",
-          thumbnailImageSrc: "/img/projects/recipe/home.webp",
           alt: "Recipes - Social Network | Recipes",
-          title: "Recipes - Social Network | Recipes",
         },
         {
           itemImageSrc: "/img/projects/recipe/direction.webp",
-          thumbnailImageSrc: "/img/projects/recipe/direction.webp",
           alt: "Recipes - Social Network | Recipes",
-          title: "Recipes - Social Network | Recipes",
         },
         {
           itemImageSrc: "/img/projects/recipe/ingredients.webp",
-          thumbnailImageSrc: "/img/projects/recipe/ingredients.webp",
           alt: "Recipes - Social Network | Recipes",
-          title: "Recipes - Social Network | Recipes",
         },
         {
           itemImageSrc: "/img/projects/recipe/addrecipe.webp",
-          thumbnailImageSrc: "/img/projects/recipe/addrecipe.webp",
           alt: "Recipes - Social Network | Recipes",
-          title: "Recipes - Social Network | Recipes",
         },
         {
           itemImageSrc: "/img/projects/recipe/addsteps.webp",
-          thumbnailImageSrc: "/img/projects/recipe/addsteps.webp",
           alt: "Recipes - Social Network | Recipes",
-          title: "Recipes - Social Network | Recipes",
         },
         {
           itemImageSrc: "/img/projects/recipe/search.webp",
-          thumbnailImageSrc: "/img/projects/recipe/search.webp",
           alt: "Recipes - Social Network | Recipes",
-          title: "Recipes - Social Network | Recipes",
         },
         {
           itemImageSrc: "/img/projects/recipe/share.webp",
-          thumbnailImageSrc: "/img/projects/recipe/share.webp",
           alt: "Recipes - Social Network | Recipes",
-          title: "Recipes - Social Network | Recipes",
         },
         {
           itemImageSrc: "/img/projects/recipe/mobile-home.webp",
-          thumbnailImageSrc: "/img/projects/recipe/mobile-home.webp",
           alt: "Recipes - Social Network | Recipes",
-          title: "Recipes - Social Network | Recipes",
         },
         {
           itemImageSrc: "/img/projects/recipe/mobile-add-recipe.webp",
-          thumbnailImageSrc: "/img/projects/recipe/mobile-add-recipe.webp",
           alt: "Recipes - Social Network | Recipes",
-          title: "Recipes - Social Network | Recipes",
         },
         {
           itemImageSrc: "/img/projects/recipe/mobile-menu-left.webp",
-          thumbnailImageSrc: "/img/projects/recipe/mobile-menu-left.webp",
           alt: "Recipes - Social Network | Recipes",
-          title: "Recipes - Social Network | Recipes",
         },
         {
           itemImageSrc: "/img/projects/recipe/mobile-profile.webp",
-          thumbnailImageSrc: "/img/projects/recipe/mobile-profile.webp",
           alt: "Recipes - Social Network | Recipes",
-          title: "Recipes - Social Network | Recipes",
         },
         {
           itemImageSrc: "/img/projects/recipe/mobile-profile2.webp",
-          thumbnailImageSrc: "/img/projects/recipe/mobile-profile2.webp",
           alt: "Recipes - Social Network | Recipes",
-          title: "Recipes - Social Network | Recipes",
         },
         {
           itemImageSrc: "/img/projects/recipe/mobileshare.webp",
-          thumbnailImageSrc: "/img/projects/recipe/mobileshare.webp",
           alt: "Recipes - Social Network | Recipes",
-          title: "Recipes - Social Network | Recipes",
         },
       ],
     },
@@ -888,38 +932,23 @@ copyright: false
       images: [
         {
           itemImageSrc: "/img/projects/tvmaze/tvmaze-home.webp",
-          thumbnailImageSrc: "/img/projects/tvmaze/tvmaze-home.webp",
           alt: "TVmaze - Add TV information to your website or app. | Tv maze",
-          title:
-            "TVmaze - Add TV information to your website or app. | Tv maze",
         },
         {
           itemImageSrc: "/img/projects/tvmaze/search.webp",
-          thumbnailImageSrc: "/img/projects/tvmaze/search.webp",
           alt: "TVmaze - Add TV information to your website or app. | Tv maze",
-          title:
-            "TVmaze - Add TV information to your website or app. | Tv maze",
         },
         {
           itemImageSrc: "/img/projects/tvmaze/season.webp",
-          thumbnailImageSrc: "/img/projects/tvmaze/season.webp",
           alt: "TVmaze - Add TV information to your website or app. | Tv maze",
-          title:
-            "TVmaze - Add TV information to your website or app. | Tv maze",
         },
         {
           itemImageSrc: "/img/projects/tvmaze/cast.webp",
-          thumbnailImageSrc: "/img/projects/tvmaze/cast.webp",
           alt: "TVmaze - Add TV information to your website or app. | Tv maze",
-          title:
-            "TVmaze - Add TV information to your website or app. | Tv maze",
         },
         {
           itemImageSrc: "/img/projects/tvmaze/tvmaze.webp",
-          thumbnailImageSrc: "/img/projects/tvmaze/tvmaze.webp",
           alt: "TVmaze - Add TV information to your website or app. | Tv maze",
-          title:
-            "TVmaze - Add TV information to your website or app. | Tv maze",
         },
       ],
     },
@@ -956,9 +985,7 @@ copyright: false
       images: [
         {
           itemImageSrc: "/img/projects/dictionary.webp",
-          thumbnailImageSrc: "/img/projects/dictionary.webp",
           alt: "CLI for Dictionary",
-          title: "Title 1",
         },
       ],
     },
@@ -983,9 +1010,7 @@ copyright: false
       images: [
         {
           itemImageSrc: "/img/projects/stocks.webp",
-          thumbnailImageSrc: "/img/projects/stocks.webp",
           alt: "Consuming socket data and plotting a real-time D3 graph",
-          title: "Title 1",
         },
       ],
     },

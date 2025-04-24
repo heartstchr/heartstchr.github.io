@@ -286,371 +286,457 @@ copyright: false
 </div>
 
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount, computed } from "vue";
+  import { ref, onMounted, onBeforeUnmount, computed } from "vue";
 
-// Current page and autoplay interval
-const currentPage = ref(0);
-const autoplayInterval = 5000;
-let autoplayTimer = null;
-const visible = ref(false)
-const onVisible = () => {
-  visible.value = true
-}
+  // Current page and autoplay interval
+  const currentPage = ref(0);
+  const autoplayInterval = 5000;
+  let autoplayTimer = null;
+  const visible = ref(false);
+  const onVisible = () => {
+    visible.value = true;
+  };
 
-const events = ref([
-    { status: 'We start with understanding your requirements', date: '15/10/2020 10:30', icon: 'pi pi-shopping-cart', color: '#9C27B0'},
-    { status: 'Set a clear timeline', date: '15/10/2020 14:00', icon: 'pi pi-cog', color: '#673AB7' },
-    { status: 'I handle the development phase', date: '15/10/2020 16:15', icon: 'pi pi-shopping-cart', color: '#FF9800' },
-    { status: 'Deliver your project with ongoing support to ensure success', date: '16/10/2020 10:00', icon: 'pi pi-check', color: '#607D8B' }
-]);
-const projects = ref([
+  const events = ref([
     {
-        name: "Upstox: Demat Account",
-        description: "Open a Demat Account Online: Demat Account Opening at Upstox",
-        software: "Web",
-        schema: "https://schema.org/BusinessApplication",
-        link: "web-development-projects/#Open Demat Account for Upstox",
-        images: [
-                {
-                    itemImageSrc: '/img/projects/openDemat.webp',
-                    thumbnailImageSrc: '/img/projects/openDemat.webp',
-                    alt: 'Open a Demat Account Online: Demat Account Opening at Upstox',
-                    title: 'Open a Demat Account Online: Demat Account Opening at Upstox'
-                },
-            ],
+      status: "We start with understanding your requirements",
+      date: "15/10/2020 10:30",
+      icon: "pi pi-shopping-cart",
+      color: "#9C27B0",
     },
     {
-        name: "Trokka Attraction",
-        description: "Book Attractions and Tours for Your Next Holiday",
-        software: "Web",
-        schema: "https://schema.org/DeveloperApplication",
-        link: "web-development-projects/#Trokka Attraction",
-        images: [
-                {
-                    itemImageSrc: '/img/projects/trokka.webp',
-                    thumbnailImageSrc: '/img/projects/trokka.webp',
-                    alt: 'Trokka.com | Book Attractions and Tours for Your Next Holiday',
-                    title: 'Trokka.com | Book Attractions and Tours for Your Next Holiday'
-                },
-            ],
+      status: "Set a clear timeline",
+      date: "15/10/2020 14:00",
+      icon: "pi pi-cog",
+      color: "#673AB7",
     },
     {
-        name: "Catch That Bus",
-        description: "Book Malaysia and Singapore bus tickets online.",
-        software: "Web / IOS APP",
-        schema: "https://schema.org/DeveloperApplication",
-        link: "web-development-projects/#Catch That Bus",
-        images: [
-                {
-                    itemImageSrc: '/img/projects/catchthatbus.webp',
-                    thumbnailImageSrc: '/img/projects/catchthatbus.webp',
-                    alt: 'Book Malaysia and Singapore bus tickets online. | CatchThatBus',
-                    title: 'Book Malaysia and Singapore bus tickets online. | CatchThatBus'
-                }
-            ],
+      status: "I handle the development phase",
+      date: "15/10/2020 16:15",
+      icon: "pi pi-shopping-cart",
+      color: "#FF9800",
     },
     {
-        name: "Call Matrix",
-        description: "Call Intelligence, Marketing, and Analytics Platform",
-        software: "Web",
-        schema: "https://schema.org/BusinessApplication",
-        link: "web-development-projects/#Call Matrix",
-        images: [
-                {
-                    itemImageSrc: '/img/projects/callmatrix/callmatrix.webp',
-                    thumbnailImageSrc: '/img/projects/callmatrix/callmatrix.webp',
-                    alt: 'CallMatrix - Call Intelligence, Marketing, and Analytics Platform',
-                    title: 'Title 1'
-                },
-            ],
+      status: "Deliver your project with ongoing support to ensure success",
+      date: "16/10/2020 10:00",
+      icon: "pi pi-check",
+      color: "#607D8B",
     },
-    // {
-    //     name: "Upstox: Partner Dashboard",
-    //     description: "Open a sub-broker account with Upstox.",
-    //     skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS"],
-    //     software: "Web",
-    //     org: "Upstox",
-    //     year: "2018",
-    //     schema: "https://schema.org/BusinessApplication",
-    //     link: "https://upstox.com/sub-broker/",
-    //     images: [
-    //       {
-    //           itemImageSrc: '/img/projects/partnerUpstox/dashboard.webp',
-    //           thumbnailImageSrc: '/img/projects/partnerUpstox/dashboard.webp',
-    //           alt: 'Open a sub-broker account with Upstox.',
-    //           title: 'Open a sub-broker account with Upstox.'
-    //       },
-    //       {
-    //           itemImageSrc: '/img/projects/partnerUpstox/partnerUpstox.webp',
-    //           thumbnailImageSrc: '/img/projects/partnerUpstox/partnerUpstox.webp',
-    //           alt: 'Open a sub-broker account with Upstox.',
-    //           title: 'Open a sub-broker account with Upstox.'
-    //       },
-          
-    //       {
-    //           itemImageSrc: '/img/projects/partnerUpstox/leads.webp',
-    //           thumbnailImageSrc: '/img/projects/partnerUpstox/leads.webp',
-    //           alt: 'Open a sub-broker account with Upstox.',
-    //           title: 'Open a sub-broker account with Upstox.'
-    //       },
-    //       {
-    //           itemImageSrc: '/img/projects/partnerUpstox/customer.webp',
-    //           thumbnailImageSrc: '/img/projects/partnerUpstox/customer.webp',
-    //           alt: 'Open a sub-broker account with Upstox.',
-    //           title: 'Open a sub-broker account with Upstox.'
-    //       },
-    //       {
-    //           itemImageSrc: '/img/projects/partnerUpstox/earning.webp',
-    //           thumbnailImageSrc: '/img/projects/partnerUpstox/earning.webp',
-    //           alt: 'Open a sub-broker account with Upstox.',
-    //           title: 'Open a sub-broker account with Upstox.'
-    //       },
-    //     ],
-    // },
-]);
-const responsiveOptions = ref([
+  ]);
+  const projects = ref([
     {
-        breakpoint: '1400px',
-        numVisible: 4,
-        numScroll: 1
+      name: "SR-22 insurance Now",
+      description:
+        "Need a Cheap SR-22 Insurance? Compare & save on SR22 Insurance from top providers.",
+      software: "Web",
+      schema: "https://schema.org/BusinessApplication",
+      link: "web-development-projects/#SR-22 insurance Now",
+      images: [
+        {
+          itemImageSrc: "/img/home/projects/sr22.webp",
+          thumbnailImageSrc: "/img/home/projects/sr22.webp",
+          alt: "SR-22 insurance Now",
+          title: "SR-22 insurance Now",
+        },
+      ],
     },
     {
-        breakpoint: '1199px',
-        numVisible: 2,
-        numScroll: 1
+      name: "Tech Create",
+      description: "A landing page for tech ",
+      software: "Web",
+      schema: "https://schema.org/BusinessApplication",
+      link: "web-development-projects/#Tech Create",
+      images: [
+        {
+          itemImageSrc: "/img/home/projects/tech_create.webp",
+          thumbnailImageSrc: "/img/home/projects/tech_create.webp",
+          alt: "landing page for tech",
+          title: "landing page for tech",
+        },
+      ],
     },
     {
-        breakpoint: '767px',
-        numVisible: 2,
-        numScroll: 1
+      name: "Trokka Attraction",
+      description: "Book Attractions and Tours for Your Next Holiday",
+      software: "Web",
+      schema: "https://schema.org/DeveloperApplication",
+      link: "web-development-projects/#Trokka Attraction",
+      images: [
+        {
+          itemImageSrc: "/img/projects/trokka.webp",
+          thumbnailImageSrc: "/img/projects/trokka.webp",
+          alt: "Trokka.com | Book Attractions and Tours for Your Next Holiday",
+          title: "Trokka.com | Book Attractions and Tours for Your Next Holiday",
+        },
+      ],
     },
     {
-        breakpoint: '575px',
-        numVisible: 1,
-        numScroll: 1
-    }
-]);
+      name: "Upstox: Demat Account",
+      description: "Open a Demat Account Online: Demat Account Opening at Upstox",
+      software: "Web",
+      schema: "https://schema.org/BusinessApplication",
+      link: "web-development-projects/#Open Demat Account for Upstox",
+      images: [
+        {
+          itemImageSrc: "/img/projects/openDemat.webp",
+          thumbnailImageSrc: "/img/projects/openDemat.webp",
+          alt: "Open a Demat Account Online: Demat Account Opening at Upstox",
+          title: "Open a Demat Account Online: Demat Account Opening at Upstox",
+        },
+      ],
+    },
+    {
+      name: "Momentum Incident Management",
+      description:
+        "A structured process for identifying, analyzing, and resolving incidents that disrupt an organization's operations",
+      software: "Web",
+      schema: "https://schema.org/BusinessApplication",
+      link: "web-development-projects/#Momentum Incident Management",
+      images: [
+        {
+          itemImageSrc: "/img/home/projects/momentum_incident_management.webp",
+          thumbnailImageSrc:
+            "/img/home/projects/momentum_incident_management.webp",
+          alt: "Incident Management",
+          title: "Incident Management",
+        },
+      ],
+    },
+    {
+      name: "Catch That Bus",
+      description: "Book Malaysia and Singapore bus tickets online.",
+      software: "Web / IOS APP",
+      schema: "https://schema.org/DeveloperApplication",
+      link: "web-development-projects/#Catch That Bus",
+      images: [
+        {
+          itemImageSrc: "/img/projects/catchthatbus.webp",
+          thumbnailImageSrc: "/img/projects/catchthatbus.webp",
+          alt: "Book Malaysia and Singapore bus tickets online. | CatchThatBus",
+          title: "Book Malaysia and Singapore bus tickets online. | CatchThatBus",
+        },
+      ],
+    },
+    {
+      name: "Call Matrix",
+      description: "Call Intelligence, Marketing, and Analytics Platform",
+      software: "Web",
+      schema: "https://schema.org/BusinessApplication",
+      link: "web-development-projects/#Call Matrix",
+      images: [
+        {
+          itemImageSrc: "/img/projects/callmatrix/callmatrix.webp",
+          thumbnailImageSrc: "/img/projects/callmatrix/callmatrix.webp",
+          alt: "CallMatrix - Call Intelligence, Marketing, and Analytics Platform",
+          title: "Title 1",
+        },
+      ],
+    },
+  ]);
 
-const responsiveCustomerOptions = ref([
+  const responsiveOptions = ref([
     {
-        breakpoint: '1400px',
-        numVisible: 1,
-        numScroll: 1
+      breakpoint: "1400px",
+      numVisible: 4,
+      numScroll: 1,
     },
     {
-        breakpoint: '1199px',
-        numVisible: 1,
-        numScroll: 1
+      breakpoint: "1199px",
+      numVisible: 2,
+      numScroll: 1,
     },
     {
-        breakpoint: '767px',
-        numVisible: 1,
-        numScroll: 1
+      breakpoint: "767px",
+      numVisible: 2,
+      numScroll: 1,
     },
     {
-        breakpoint: '575px',
-        numVisible: 1,
-        numScroll: 1
-    }
-]);
+      breakpoint: "575px",
+      numVisible: 1,
+      numScroll: 1,
+    },
+  ]);
 
-  const social= [
-    { label: 'linkedin', icon: 'pi pi-linkedin', url: 'https://www.linkedin.com/in/jiwanghosal/' },
-    { label: 'youtube', icon: 'pi pi-youtube', url: 'https://www.youtube.com/@stackseekers' },
-    { label: 'stackoverflow', icon: 'pi pi-chart-bar', url: 'https://stackoverflow.com/users/10376224/stchr?tab=profile' },
-    { label: 'Instagram', icon: 'pi pi-instagram', url: 'https://www.instagram.com/jiwan_ghosal/' },
+  const responsiveCustomerOptions = ref([
+    {
+      breakpoint: "1400px",
+      numVisible: 1,
+      numScroll: 1,
+    },
+    {
+      breakpoint: "1199px",
+      numVisible: 1,
+      numScroll: 1,
+    },
+    {
+      breakpoint: "767px",
+      numVisible: 1,
+      numScroll: 1,
+    },
+    {
+      breakpoint: "575px",
+      numVisible: 1,
+      numScroll: 1,
+    },
+  ]);
+
+  const social = [
+    {
+      label: "linkedin",
+      icon: "pi pi-linkedin",
+      url: "https://www.linkedin.com/in/jiwanghosal/",
+    },
+    {
+      label: "youtube",
+      icon: "pi pi-youtube",
+      url: "https://www.youtube.com/@stackseekers",
+    },
+    {
+      label: "stackoverflow",
+      icon: "pi pi-chart-bar",
+      url: "https://stackoverflow.com/users/10376224/stchr?tab=profile",
+    },
+    {
+      label: "Instagram",
+      icon: "pi pi-instagram",
+      url: "https://www.instagram.com/jiwan_ghosal/",
+    },
   ];
 
-const orgs= [
-  {
-    "title": "Capgemini",
-    "icon": "/img/home/capgemini.webp",
-    "details": "Consulting and technology services",
-    "link": "https://www.capgemini.com/"
-  },
-  {
-    "title": "Catch That Bus",
-    "icon": "/img/home/catchthatbus.webp",
-    "details": "Leisure, travel, and tourism",
-    "link": "https://www.catchthatbus.com/"
-  },
-  {
-    "title": "Upstox",
-    "icon": "/img/home/upstox.webp",
-    "details": "Online stock broker",
-    "link": "https://www.upstox.com/"
-  },
-  {
-    "title": "Mobistreak",
-    "icon": "/img/home/mobistreak.webp",
-    "details": "Marketing and advertising",
-    "link": "https://www.mobistreak.com/"
-  }
-]
+  const orgs = [
+    {
+      title: "Capgemini",
+      icon: "/img/home/capgemini.webp",
+      details: "Consulting and technology services",
+      link: "https://www.capgemini.com/",
+    },
+    {
+      title: "Catch That Bus",
+      icon: "/img/home/catchthatbus.webp",
+      details: "Leisure, travel, and tourism",
+      link: "https://www.catchthatbus.com/",
+    },
+    {
+      title: "Upstox",
+      icon: "/img/home/upstox.webp",
+      details: "Online stock broker",
+      link: "https://www.upstox.com/",
+    },
+    {
+      title: "Mobistreak",
+      icon: "/img/home/mobistreak.webp",
+      details: "Marketing and advertising",
+      link: "https://www.mobistreak.com/",
+    },
+  ];
 
   const skills = [
     {
       name: "Front end",
-      value: ["VueJS", "Vue3", "Nuxt", "ReactJS", "Vite", "Pinia","Axios", "Vuepress", "Storybook", "Lit","HTML5","CSS3","JavaScript(ES6)", "TypeScript"]
+      value: [
+        "VueJS",
+        "Vue3",
+        "Nuxt",
+        "ReactJS",
+        "Vite",
+        "Pinia",
+        "Axios",
+        "Vuepress",
+        "Storybook",
+        "Lit",
+        "HTML5",
+        "CSS3",
+        "JavaScript(ES6)",
+        "TypeScript",
+      ],
     },
     {
       name: "Back end",
-      value: ["ExpressJS","NodeJS","MYSQL","MSSQL","PLSQL","MongoDB","DynamoDB"],
+      value: [
+        "ExpressJS",
+        "NodeJS",
+        "MYSQL",
+        "MSSQL",
+        "PLSQL",
+        "MongoDB",
+        "DynamoDB",
+      ],
     },
     {
       name: "Hosting & Deployment",
-      value: ["Git","CICD","Ansible", "YAML", "Docker","Kibana","Azure", "AWS"],
+      value: [
+        "Git",
+        "CICD",
+        "Ansible",
+        "YAML",
+        "Docker",
+        "Kibana",
+        "Azure",
+        "AWS",
+      ],
     },
     {
       name: "Automation Testing",
-      value: ["Jest","Testcafe","Lighthouse","Playwright"],
-    }
+      value: ["Jest", "Testcafe", "Lighthouse", "Playwright"],
+    },
   ];
 
-  const getImage = () =>`background-image: url('/img/home/faq.webp');  background-repeat: no-repeat; background-size: cover;`
+  const getImage = () =>
+    `background-image: url('/img/home/faq.webp');  background-repeat: no-repeat; background-size: cover;`;
 
   const features = [
     {
-      icon: 'pi pi-tag',
-      title: 'No minimum order',
-      description: 'Try our service without any hassle.'
+      icon: "pi pi-tag",
+      title: "No minimum order",
+      description: "Try our service without any hassle.",
     },
     {
-      icon: 'pi pi-bolt',
-      title: 'Fast Delivery',
-      description: 'I have got you covered.'
+      icon: "pi pi-bolt",
+      title: "Fast Delivery",
+      description: "I have got you covered.",
     },
     {
-      icon: 'pi pi-calendar-clock',
-      title: 'Support',
-      description: 'I am here to help!'
+      icon: "pi pi-calendar-clock",
+      title: "Support",
+      description: "I am here to help!",
     },
     {
-      icon: 'pi pi-eye',
-      title: 'Free Demo',
-      description: 'Free demo biweekly to update progress.'
-    }
-  ]
+      icon: "pi pi-eye",
+      title: "Free Demo",
+      description: "Free demo biweekly to update progress.",
+    },
+  ];
 
   const stackLogos = [
     {
-      link: 'https://cdn.simpleicons.org/javascript?viewbox=auto',
-      title: 'Javascript',
+      link: "https://cdn.simpleicons.org/javascript?viewbox=auto",
+      title: "Javascript",
     },
     {
-      link: 'https://cdn.simpleicons.org/typescript?viewbox=auto',
-      title: 'Typescript',
+      link: "https://cdn.simpleicons.org/typescript?viewbox=auto",
+      title: "Typescript",
     },
     {
-      link: 'https://cdn.simpleicons.org/vuedotjs?viewbox=auto',
-      title: 'vuejs',
+      link: "https://cdn.simpleicons.org/vuedotjs?viewbox=auto",
+      title: "vuejs",
     },
     {
-      link: 'https://cdn.simpleicons.org/react?viewbox=auto',
-      title: 'ReactJS',
+      link: "https://cdn.simpleicons.org/react?viewbox=auto",
+      title: "ReactJS",
     },
     {
-      link: 'https://cdn.simpleicons.org/nodedotjs?viewbox=auto',
-      title: 'NodeJs',
+      link: "https://cdn.simpleicons.org/nodedotjs?viewbox=auto",
+      title: "NodeJs",
     },
     {
-      link: 'https://cdn.simpleicons.org/mongodb?viewbox=auto',
-      title: 'MongoDb',
-    }
-  ]
-
+      link: "https://cdn.simpleicons.org/mongodb?viewbox=auto",
+      title: "MongoDb",
+    },
+  ];
 
   const testimonials = ref([
     {
-      name: 'Harris Malik',
-      designation: 'Senior Product Manager at 8x8',
-      message: 'Jiwan is one of the most valuable people I have ever met. He is smart, professional, and never fails to surprise us with creative solutions to difficult problems. Jiwan\'s personality and skills would be a great asset to any company. Highly recommended.',
-      avatar: 'https://media.licdn.com/dms/image/v2/D5603AQG8ooyo97JCoA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1682841547783?e=1750896000&v=beta&t=RV2vZM-PEHtTdtboor0V4y6H-KGoUu7-DuJiiET_buU',
-      link: 'https://www.linkedin.com/in/harrismalik04/',
-      location: 'Malaysia',
-      code: 'my'
+      name: "Harris Malik",
+      designation: "Senior Product Manager at 8x8",
+      message:
+        "Jiwan is one of the most valuable people I have ever met. He is smart, professional, and never fails to surprise us with creative solutions to difficult problems. Jiwan's personality and skills would be a great asset to any company. Highly recommended.",
+      avatar:
+        "https://media.licdn.com/dms/image/v2/D5603AQG8ooyo97JCoA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1682841547783?e=1750896000&v=beta&t=RV2vZM-PEHtTdtboor0V4y6H-KGoUu7-DuJiiET_buU",
+      link: "https://www.linkedin.com/in/harrismalik04/",
+      location: "Malaysia",
+      code: "my",
     },
     {
-      name: 'Jurgen Sweere',
-      designation: 'Front End Expert at ABN Amro',
-      message: 'Jiwan never stopped amazing me. He brings a lot of front-end knowledge to the table and is able to quickly learn anything new. Jiwan is a great colleague to have!',
-      avatar: 'https://media.licdn.com/dms/image/v2/C5603AQGLWlLKfqFZgw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1516235161685?e=1750896000&v=beta&t=29wMeVltwAWsPCr9QHNhRJZWz1LZaEgES0iwjE2A4oc',
-      link: 'https://www.linkedin.com/in/jurgensweere',
-      location: 'The Netherlands',
-      code: 'nl'
+      name: "Jurgen Sweere",
+      designation: "Front End Expert at ABN Amro",
+      message:
+        "Jiwan never stopped amazing me. He brings a lot of front-end knowledge to the table and is able to quickly learn anything new. Jiwan is a great colleague to have!",
+      avatar:
+        "https://media.licdn.com/dms/image/v2/C5603AQGLWlLKfqFZgw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1516235161685?e=1750896000&v=beta&t=29wMeVltwAWsPCr9QHNhRJZWz1LZaEgES0iwjE2A4oc",
+      link: "https://www.linkedin.com/in/jurgensweere",
+      location: "The Netherlands",
+      code: "nl",
     },
     {
-      name: 'Shyam Kumar',
-      designation: 'Senior Product Manager at Angel One',
-      message: 'I always found Jiwan to be a very dependable and hardworking colleague. Many times he went above and beyond to meet the product requirements; it might be either working overtime to release the project on time or working with other teams to get the production issue fixed. He was always the go-to person on the team.',
-      avatar: 'https://media.licdn.com/dms/image/v2/D5603AQHZpSlK7j89uA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1698672442801?e=1750896000&v=beta&t=lscT5fFmahvoGSWRzV4hN-r2YM58ddKTki5HdOziiuI',
-      link: 'https://www.linkedin.com/in/shyam-kumar-k/',
-      location: 'India',
-      code: 'in'
+      name: "Shyam Kumar",
+      designation: "Senior Product Manager at Angel One",
+      message:
+        "I always found Jiwan to be a very dependable and hardworking colleague. Many times he went above and beyond to meet the product requirements; it might be either working overtime to release the project on time or working with other teams to get the production issue fixed. He was always the go-to person on the team.",
+      avatar:
+        "https://media.licdn.com/dms/image/v2/D5603AQHZpSlK7j89uA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1698672442801?e=1750896000&v=beta&t=lscT5fFmahvoGSWRzV4hN-r2YM58ddKTki5HdOziiuI",
+      link: "https://www.linkedin.com/in/shyam-kumar-k/",
+      location: "India",
+      code: "in",
     },
     {
-      name: 'Erkan Ateşli',
-      designation: 'Chapter Lead at ABN AMRO Bank N.V.',
-      message: 'In our connection with Jiwan at ABN AMRO, I noticed that he has a lot of knowledge in his field of expertise. He can transfer his knowledge easily to others. With his strong analytics skills, he can handle complex questions as usual. Jiwan is a brave colleague I’ve met, and we had a lot of fun during the India visit and especially at the party. ',
-      avatar: 'https://media.licdn.com/dms/image/v2/C4E03AQFg4Oh_B9JEeQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1621625662967?e=1750896000&v=beta&t=9KwLZLloVo4ianxK3csxIjlMY0_G0Ez7nKYvgPVVssE',
-      link: 'https://www.linkedin.com/in/erkanatesli',
-      location: 'The Netherlands',
-      code: 'nl'
-    }
+      name: "Erkan Ateşli",
+      designation: "Chapter Lead at ABN AMRO Bank N.V.",
+      message:
+        "In our connection with Jiwan at ABN AMRO, I noticed that he has a lot of knowledge in his field of expertise. He can transfer his knowledge easily to others. With his strong analytics skills, he can handle complex questions as usual. Jiwan is a brave colleague I’ve met, and we had a lot of fun during the India visit and especially at the party. ",
+      avatar:
+        "https://media.licdn.com/dms/image/v2/C4E03AQFg4Oh_B9JEeQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1621625662967?e=1750896000&v=beta&t=9KwLZLloVo4ianxK3csxIjlMY0_G0Ez7nKYvgPVVssE",
+      link: "https://www.linkedin.com/in/erkanatesli",
+      location: "The Netherlands",
+      code: "nl",
+    },
   ]);
 
-  const whyme =[
+  const whyme = [
     {
       id: "proven_expertise",
       title: "10+ Years of Proven Expertise",
-      description: "Over a decade of delivering impactful projects, consistently providing innovative solutions that drive tangible results and add measurable value for clients across industries."
+      description:
+        "Over a decade of delivering impactful projects, consistently providing innovative solutions that drive tangible results and add measurable value for clients across industries.",
     },
     {
       id: "client_centric_approach",
       title: "Client-Centric Approach",
-      description: "Focused on understanding your unique needs, I offer tailored solutions that align with your business goals, ensuring seamless collaboration and delivering the most effective value."
+      description:
+        "Focused on understanding your unique needs, I offer tailored solutions that align with your business goals, ensuring seamless collaboration and delivering the most effective value.",
     },
     {
       id: "wide_range_of_experience",
       title: "20+ Clients Across Industries",
-      description: "With experience working with over 20 clients from diverse sectors, I bring versatile expertise, quickly adapting to challenges and offering solutions suited to each industry’s demands."
+      description:
+        "With experience working with over 20 clients from diverse sectors, I bring versatile expertise, quickly adapting to challenges and offering solutions suited to each industry’s demands.",
     },
     {
       id: "commitment_to_quality_code",
       title: "Commitment to Quality Code",
-      description: "I ensure all code is clean, scalable, and efficient by using industry-standard tools such as ESLint, Prettier, SonarQube, and Jest, delivering high-performance, maintainable, and reliable solutions."
-    }
-  ]
+      description:
+        "I ensure all code is clean, scalable, and efficient by using industry-standard tools such as ESLint, Prettier, SonarQube, and Jest, delivering high-performance, maintainable, and reliable solutions.",
+    },
+  ];
 
-// Function to start autoplay
-const startAutoPlay = () => {
-  autoplayTimer = setInterval(() => {
-    currentPage.value = (currentPage.value + 1) % testimonials.value.length;
-  }, autoplayInterval);
-};
+  // Function to start autoplay
+  const startAutoPlay = () => {
+    autoplayTimer = setInterval(() => {
+      currentPage.value = (currentPage.value + 1) % testimonials.value.length;
+    }, autoplayInterval);
+  };
 
-// Function to pause autoplay
-const pauseAutoPlay = () => {
-  clearInterval(autoplayTimer);
-};
+  // Function to pause autoplay
+  const pauseAutoPlay = () => {
+    clearInterval(autoplayTimer);
+  };
 
-// Function to resume autoplay
-const resumeAutoPlay = () => {
-  startAutoPlay(autoplayTimer);
-};
+  // Function to resume autoplay
+  const resumeAutoPlay = () => {
+    startAutoPlay(autoplayTimer);
+  };
 
-// Handle page change when user interacts with the carousel
-const onPageChange = (newPage) => {
-  currentPage.value = newPage;
-};
+  // Handle page change when user interacts with the carousel
+  const onPageChange = (newPage) => {
+    currentPage.value = newPage;
+  };
 
-// Start autoplay when the component mounts
-onMounted(() => {
-  startAutoPlay();
-});
+  // Start autoplay when the component mounts
+  onMounted(() => {
+    startAutoPlay();
+  });
 
-// Clear the autoplay timer when the component unmounts
-onBeforeUnmount(() => {
-  pauseAutoPlay();
-});
+  // Clear the autoplay timer when the component unmounts
+  onBeforeUnmount(() => {
+    pauseAutoPlay();
+  });
 </script>
