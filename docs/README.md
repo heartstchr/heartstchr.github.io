@@ -41,9 +41,9 @@ copyright: false
       :key="index"
       class="gallery-item"
     >
-      <a :href="img.link" target="_blank" class="text-l p-2 font-medium text-center no-underline" :aria-label="img.name">
+      <a :href="img.link" class="text-l p-2 font-medium text-center no-underline" :aria-label="img.name">
         <img :src="img.images[0].itemImageSrc" :alt="img.images[0].alt" loading="eager" fetchpriority="high" />
-        <h3 class="p-0 mt-4">{{ img.name }} <i class="pi pi-external-link ml-1 text-blue-700" style="font-size: 1rem"></i></h3>
+        <h3 class="p-0 mt-4">{{ img.name }}</h3>
       </a>
     </div>
   </div>
@@ -307,12 +307,9 @@ const projects = ref([
     {
         name: "Upstox: Demat Account",
         description: "Open a Demat Account Online: Demat Account Opening at Upstox",
-        skills: ["AngularJS", "MongoDB", "MSSQL", "LoopbackJS","Digital Ocean"],
         software: "Web",
-        org: "Upstox",
-        year: "2017",
         schema: "https://schema.org/BusinessApplication",
-        link: "https://upstox.com/open-demat-account/",
+        link: "web-development-projects/#Open Demat Account for Upstox",
         images: [
                 {
                     itemImageSrc: '/img/projects/openDemat.webp',
@@ -325,12 +322,9 @@ const projects = ref([
     {
         name: "Trokka Attraction",
         description: "Book Attractions and Tours for Your Next Holiday",
-        skills: ["Javascript", "ES6", "VueJs", "Vuex","Axios","API integration",   "ExpressJS", "MongoDB", "Git", "EC2"],
         software: "Web",
-        org: "Catch That Bus",
-        year: "2019",
         schema: "https://schema.org/DeveloperApplication",
-        link: "/projects/#Trokka Attraction",
+        link: "web-development-projects/#Trokka Attraction",
         images: [
                 {
                     itemImageSrc: '/img/projects/trokka.webp',
@@ -343,37 +337,24 @@ const projects = ref([
     {
         name: "Catch That Bus",
         description: "Book Malaysia and Singapore bus tickets online.",
-        skills: ["Javascript", "ES6", "VueJs", "Vuex","Vite","Axios", "Cordova", "API integration",   "ExpressJS", "MongoDB", "Git", "EC2",  "Eslint", "Prettier"],
         software: "Web / IOS APP",
-        org: "Catch That Bus",
-        year: "2019",
         schema: "https://schema.org/DeveloperApplication",
-        link: "https://m.catchthatbus.com",
-        iosLink: "https://apps.apple.com/my/app/catchthatbus/id1025824078",
+        link: "web-development-projects/#Catch That Bus",
         images: [
                 {
                     itemImageSrc: '/img/projects/catchthatbus.webp',
                     thumbnailImageSrc: '/img/projects/catchthatbus.webp',
                     alt: 'Book Malaysia and Singapore bus tickets online. | CatchThatBus',
                     title: 'Book Malaysia and Singapore bus tickets online. | CatchThatBus'
-                },
-                {
-                    itemImageSrc: 'https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/ad/b9/3b/adb93b8f-08b6-ac23-8f9e-906f7b2529c2/pr_source.png/230x0w.png',
-                    thumbnailImageSrc: 'https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/ad/b9/3b/adb93b8f-08b6-ac23-8f9e-906f7b2529c2/pr_source.png/230x0w.png',
-                    alt: 'IOS app for booking Malaysia and Singapore bus tickets online | CatchThatBus',
-                    title: 'Title 1'
-                },
+                }
             ],
     },
     {
         name: "Call Matrix",
         description: "Call Intelligence, Marketing, and Analytics Platform",
-        skills: ["NodeJS", "MongoDB", "MSSQL", "HapiJS","Digital Ocean"],
         software: "Web",
-        org: "Mobistreak",
-        year: "2015",
         schema: "https://schema.org/BusinessApplication",
-        link: "https://callmatrix.io/",
+        link: "web-development-projects/#Call Matrix",
         images: [
                 {
                     itemImageSrc: '/img/projects/callmatrix/callmatrix.webp',

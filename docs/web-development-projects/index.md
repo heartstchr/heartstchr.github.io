@@ -6,6 +6,7 @@ lastUpdated: false
 editLink: false
 copyright: false
 ---
+
 <div class="flex flex-column gap-4 my-6 line-height-4">
   <div>
     Here, you’ll find a showcase of some of my organisation and freelance
@@ -37,8 +38,6 @@ copyright: false
 
 <!-- Vertical Tabs Navigation -->
 <div class="p-d-flex p-flex-column p-mr-3">
-  <TabView class="vertical-tabs">
-    <TabPanel header="Freelance Projects">
       <div class="grid my-6 gap-8">
         <div
           class="vp-feature-item col-12 shadow-1 m-0 p-0"
@@ -54,7 +53,7 @@ copyright: false
           </svg>
           <div>
             <div class="px-4">
-              <h2 itemprop="name" class="text-4xl font-bold p-0 m-0">
+              <h2 itemprop="name" class="text-4xl font-bold p-0 m-0" :id="project.name">
                 {{project.name}}
               </h2>
               <div class="text-xl mt-2" itemprop="operatingSystem">
@@ -180,156 +179,152 @@ copyright: false
           </div>
         </div>
       </div>
-    </TabPanel>
-    <TabPanel header="Org Projects">
-        <div class="grid my-6 gap-8">
-        <div
-          class="vp-feature-item col-12 shadow-1 m-0 p-0"
-          v-for="(project, index) in projects"
-          :id="project.name"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 120 1440 200">
-            <path
-              fill="#10b981"
-              fill-opacity="0.1"
-              d="M0,320L40,288C80,256,160,192,240,176C320,160,400,192,480,202.7C560,213,640,203,720,192C800,181,880,171,960,181.3C1040,192,1120,224,1200,218.7C1280,213,1360,171,1400,149.3L1440,128L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"
-            ></path>
-          </svg>
-          <div>
-            <div class="px-4">
-              <h2 itemprop="name" class="text-4xl font-bold p-0 m-0">
-                {{project.name}}
-              </h2>
-              <div class="text-xl mt-2" itemprop="operatingSystem">
-                {{project.software}}
-                <span class="text-sm mt-2"> - {{project.org}}</span>
-                <span class="text-sm mt-2 font-italic">
-                  - {{project.domain}}</span
-                >
-                <a class="text-sm mt-2 font-italic no-underline"
-                  >({{project.year}})</a
-                >
-              </div>
-            </div>
-            <div
-              class="flex md:flex-row flex-column"
-              itemscope
-              itemtype="https://schema.org/SoftwareApplication"
-            >
-              <div class="md:col-6 col-12 px-4">
-                <div class="my-2 text-xl line-height-3">
-                  {{project.description}}
-                </div>
-                <div class="flex flex-column mt-4 p-2" v-if="project.features">
-                  <div class="my-2 text-l">Features</div>
-                  <ul class="my-2 text-sm" v-for="feature in project.features">
-                    <li class="line-height-3">{{feature.name}}</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="md:col-6 col-12">
-                <link itemprop="applicationCategory" :href="project.schema" />
-                <div v-if="project.images">
-                  <div class="card" v-if="project.images.length != 1">
-                    <Galleria
-                      :value="project.images"
-                      :responsiveOptions="responsiveOptions"
-                      :numVisible="5"
-                      :circular="true"
-                      :showItemNavigators="true"
-                      :showThumbnails="false"
-                      :pt="{
-                        prevButton: { 'aria-label': 'Previous screen of project' },
-                        nextButton: { 'aria-label': 'Next screen of project' }
-                      }"
-                    >
-                      <template #item="slotProps">
-                        <img
-                          :src="slotProps.item.itemImageSrc"
-                          :alt="slotProps.item.alt"
-                          style="width: 100%; display: block"
-                          loading="eager" fetchpriority="high"
-                        />
-                      </template>
-                      <template #thumbnail="slotProps">
-                        <img
-                          :src="slotProps.item.thumbnailImageSrc"
-                          :alt="slotProps.item.alt"
-                          style="display: block"
-                          loading="eager" fetchpriority="high"
-                        />
-                      </template>
-                    </Galleria>
-                  </div>
-                  <div class="card" v-else>
-                    <img
-                      :src="project.images[0].itemImageSrc"
-                      :alt="project.images[0].alt"
-                      style="width: 100%; display: block"
-                      loading="eager" fetchpriority="high"
-                    />
-                  </div>
-                </div>
-              </div>
+      <div class="grid my-6 gap-8">
+      <div
+        class="vp-feature-item col-12 shadow-1 m-0 p-0"
+        v-for="(project, index) in projects"
+        :id="project.name"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 120 1440 200">
+          <path
+            fill="#10b981"
+            fill-opacity="0.1"
+            d="M0,320L40,288C80,256,160,192,240,176C320,160,400,192,480,202.7C560,213,640,203,720,192C800,181,880,171,960,181.3C1040,192,1120,224,1200,218.7C1280,213,1360,171,1400,149.3L1440,128L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"
+          ></path>
+        </svg>
+        <div>
+          <div class="px-4">
+            <h2 itemprop="name" class="text-4xl font-bold p-0 m-0">
+              {{project.name}}
+            </h2>
+            <div class="text-xl mt-2" itemprop="operatingSystem">
+              {{project.software}}
+              <span class="text-sm mt-2"> - {{project.org}}</span>
+              <span class="text-sm mt-2 font-italic">
+                - {{project.domain}}</span
+              >
+              <a class="text-sm mt-2 font-italic no-underline"
+                >({{project.year}})</a
+              >
             </div>
           </div>
-          <div class="flex flex-column mt-4 p-4">
-            <div class="mt-2 text-l">Stack Used</div>
-            <div class="flex grid mt-4 px-2">
-              <Tag
-                style="
-                  border: 2px solid var(--border-color);
-                  background: transparent;
-                  color: var(--text-color);
-                "
-                v-for="part in project.skills"
-                :key="part"
-                :value="part"
-                class="m-1"
-              >
-                <div class="flex items-center gap-2 px-1">
-                  <i class="pi pi-cog" style="font-size: 1rem"></i>
-                  <span class="text-base">{{part}}</span>
-                </div>
-              </Tag>
+          <div
+            class="flex md:flex-row flex-column"
+            itemscope
+            itemtype="https://schema.org/SoftwareApplication"
+          >
+            <div class="md:col-6 col-12 px-4">
+              <div class="my-2 text-xl line-height-3">
+                {{project.description}}
+              </div>
+              <div class="flex flex-column mt-4 p-2" v-if="project.features">
+                <div class="my-2 text-l">Features</div>
+                <ul class="my-2 text-sm" v-for="feature in project.features">
+                  <li class="line-height-3">{{feature.name}}</li>
+                </ul>
+              </div>
             </div>
-            <div
-              class="flex flex-row justify-content-between align-items-center gap-2"
-            >
-              <a
-                v-if="project.link"
-                :href="project.link"
-                target="_blank"
-                class="w-full flex flex-row no-underline mt-4"
-              >
-                <Button
-                  label="Live Demo"
-                  icon="pi pi-angle-double-right"
-                  severity="primary"
-                  raised
-                  rounded
-                />
-              </a>
-              <a
-                v-if="project.codeLink"
-                :href="project.codeLink"
-                target="_blank"
-                class="w-full flex flex-row no-underline mt-4"
-              >
-                <Button
-                  label="Repo"
-                  icon="pi pi-github"
-                  severity="secondary"
-                  raised
-                  rounded
-                />
-              </a>
+            <div class="md:col-6 col-12">
+              <link itemprop="applicationCategory" :href="project.schema" />
+              <div v-if="project.images">
+                <div class="card" v-if="project.images.length != 1">
+                  <Galleria
+                    :value="project.images"
+                    :responsiveOptions="responsiveOptions"
+                    :numVisible="5"
+                    :circular="true"
+                    :showItemNavigators="true"
+                    :showThumbnails="false"
+                    :pt="{
+                      prevButton: { 'aria-label': 'Previous screen of project' },
+                      nextButton: { 'aria-label': 'Next screen of project' }
+                    }"
+                  >
+                    <template #item="slotProps">
+                      <img
+                        :src="slotProps.item.itemImageSrc"
+                        :alt="slotProps.item.alt"
+                        style="width: 100%; display: block"
+                        loading="eager" fetchpriority="high"
+                      />
+                    </template>
+                    <template #thumbnail="slotProps">
+                      <img
+                        :src="slotProps.item.thumbnailImageSrc"
+                        :alt="slotProps.item.alt"
+                        style="display: block"
+                        loading="eager" fetchpriority="high"
+                      />
+                    </template>
+                  </Galleria>
+                </div>
+                <div class="card" v-else>
+                  <img
+                    :src="project.images[0].itemImageSrc"
+                    :alt="project.images[0].alt"
+                    style="width: 100%; display: block"
+                    loading="eager" fetchpriority="high"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <div class="flex flex-column mt-4 p-4">
+          <div class="mt-2 text-l">Stack Used</div>
+          <div class="flex grid mt-4 px-2">
+            <Tag
+              style="
+                border: 2px solid var(--border-color);
+                background: transparent;
+                color: var(--text-color);
+              "
+              v-for="part in project.skills"
+              :key="part"
+              :value="part"
+              class="m-1"
+            >
+              <div class="flex items-center gap-2 px-1">
+                <i class="pi pi-cog" style="font-size: 1rem"></i>
+                <span class="text-base">{{part}}</span>
+              </div>
+            </Tag>
+          </div>
+          <div
+            class="flex flex-row justify-content-between align-items-center gap-2"
+          >
+            <a
+              v-if="project.link"
+              :href="project.link"
+              target="_blank"
+              class="w-full flex flex-row no-underline mt-4"
+            >
+              <Button
+                label="Live Demo"
+                icon="pi pi-angle-double-right"
+                severity="primary"
+                raised
+                rounded
+              />
+            </a>
+            <a
+              v-if="project.codeLink"
+              :href="project.codeLink"
+              target="_blank"
+              class="w-full flex flex-row no-underline mt-4"
+            >
+              <Button
+                label="Repo"
+                icon="pi pi-github"
+                severity="secondary"
+                raised
+                rounded
+              />
+            </a>
+          </div>
+        </div>
       </div>
-    </TabPanel>
-  </TabView>
+    </div>
 </div>
 
 <script setup lang="ts">
@@ -591,7 +586,7 @@ copyright: false
       ],
     },
     {
-      name: "CallMatrix",
+      name: "Call Matrix",
       description: "Call Intelligence, Marketing, and Analytics Platform",
       skills: ["NodeJS", "MongoDB", "MSSQL", "HapiJS", "Digital Ocean"],
       software: "Web",
