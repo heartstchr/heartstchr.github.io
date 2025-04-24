@@ -214,7 +214,7 @@ copyright: false
                     <a href="web-development-services/#ConsultingAndTechnicalAdvisory" class="no-underline" aria-label="Custom Web Development">Custom Web Development</a>, 
                     <a href="web-development-services/#E-commerceSolutions" class="no-underline" aria-label="E-commerce Solutions">E-commerce Solutions</a>, 
                     <a href="web-development-services/#APIDevelopmentAndIntegration" class="no-underline" aria-label="API Development and Integration">API Development and Integration </a>, 
-                    <a href="web-development-services/#FigmatoWeb" class="no-underline" aria-label="Figma to Web Conversion">Figma to Web Conversion</a>, and 
+                    <a href="web-development-services/#FigmaToWeb" class="no-underline" aria-label="Figma to Web Conversion">Figma to Web Conversion</a>, and 
                     <a href="web-development-services/#hosting" class="no-underline" aria-label="Hosting & Deployment">Hosting & Deployment</a>. 
                     <div class="mt-2">Let’s find the best solution for your project!</div>
                 </div>

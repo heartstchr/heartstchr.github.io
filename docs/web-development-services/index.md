@@ -74,7 +74,7 @@ const route = useRoute();
 const services = [
     {
         name: "Figma to Web",
-        code: "FigmatoWeb",
+        code: "FigmaToWeb",
         descriptions: [
             "Turn your Figma designs into fully functional, dynamic websites with my expertise. Leveraging the power of VueJS, ReactJS, and their robust ecosystems, I create innovative websites tailored precisely to your requirements.",
             "My solutions are fully customizable and reusable, ensuring they align perfectly with your vision, while remaining exceptionally lightweight for optimal performance."]

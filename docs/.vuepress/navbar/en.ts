@@ -9,7 +9,7 @@ export const enNavbar = navbar([
     children: [
       {
         text: "Figma to web",
-        link: "web-development-services/#FigmatoWeb",
+        link: "web-development-services/#FigmaToWeb",
       },
       {
         text: "E-commerce",
