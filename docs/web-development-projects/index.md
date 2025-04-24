@@ -175,7 +175,6 @@ copyright: false
       <div
         class="vp-feature-item col-12 shadow-1 m-0 p-0"
         v-for="(project, index) in projects"
-        :id="project.name"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 120 1440 200">
           <path
@@ -186,7 +185,7 @@ copyright: false
         </svg>
         <div>
           <div class="px-4">
-            <h2 itemprop="name" class="text-4xl font-bold p-0 m-0">
+            <h2 itemprop="name" class="text-4xl font-bold p-0 m-0" :id="project.name">
               {{project.name}}
             </h2>
             <div class="text-xl mt-2" itemprop="operatingSystem">
