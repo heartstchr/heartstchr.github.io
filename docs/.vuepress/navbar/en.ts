@@ -29,7 +29,7 @@ export const enNavbar = navbar([
         link: "web-development-services/#custom-web-development",
       },
       {
-        text: "API Developement",
+        text: "API Development",
         link: "web-development-services/#API-development-and-integration",
       },
       {
