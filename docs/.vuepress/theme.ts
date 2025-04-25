@@ -39,6 +39,9 @@ export default hopeTheme(
     plugins: {
       seo: true,
       blog: false,
+      git: {
+        contributors: false, // Disable contributors list
+      },
       pwa: {
         favicon: "/favicon.ico",
         cacheHTML: false,

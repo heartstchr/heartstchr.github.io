@@ -18,7 +18,7 @@ export default defineUserConfig({
       plugins: [
         Components({
           resolvers: [PrimeVueResolver()],
-        }),
+        })
       ],
       ssr: {
         noExternal: ["primevue"],
