@@ -248,6 +248,14 @@ copyright: false
           alt: "SR-22 insurance Now",
         },
         {
+          itemImageSrc: "/img/projects/sr22/desktop_web_performance.webp",
+          alt: "Desktop web performance",
+        },
+        {
+          itemImageSrc: "/img/projects/sr22/mobile_web_performance.webp",
+          alt: "Mobile web performance",
+        },
+        {
           itemImageSrc: "/img/projects/sr22/why_need_sr22.webp",
           alt: "why need sr22 insurance Now",
         },
