@@ -30,7 +30,7 @@ export const enNavbar = navbar([
       },
       {
         text: "API Developement",
-        link: "web-development-services/#api-development-and-integration",
+        link: "web-development-services/#API-development-and-integration",
       },
       {
         text: "CICD",

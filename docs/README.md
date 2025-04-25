@@ -196,7 +196,7 @@ copyright: false
                     I offer a variety of services tailored to your needs, including 
                     <a href="web-development-services/#consulting-and-technical-advisory" class="no-underline" aria-label="Custom Web Development">Custom Web Development</a>, 
                     <a href="web-development-services/#e-commerce-solutions" class="no-underline" aria-label="E-commerce Solutions">E-commerce Solutions</a>, 
-                    <a href="web-development-services/#api-development-and-integration" class="no-underline" aria-label="API Development and Integration">API Development and Integration </a>, 
+                    <a href="web-development-services/#API-development-and-integration" class="no-underline" aria-label="API Development and Integration">API Development and Integration </a>, 
                     <a href="web-development-services/#figma-to-web" class="no-underline" aria-label="Figma to Web Conversion">Figma to Web Conversion</a>, and 
                     <a href="web-development-services/#hosting" class="no-underline" aria-label="Hosting & Deployment">Hosting & Deployment</a>. 
                     <div class="mt-2">Let’s find the best solution for your project!</div>
