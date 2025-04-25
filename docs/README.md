@@ -3,7 +3,7 @@ home: true
 title: Web Developer
 description: Stack Seekers is a full-stack web development agency helping startups and businesses build modern, high-performance websites and web applications. From idea to launch, we turn your vision into powerful digital solutions. Expert Vue.js, React.js, and Node.js developer delivering scalable web, mobile, and software solutions with 𝙈𝙀𝙍𝙉 and 𝙈𝙀𝙑𝙉 stacks (MongoDB, Express, React/Vue, Next/Nuxt, Node.js).
 heroImage: /img/home/jiwanghosal.webp
-heroText: Hi, I am Jiwan Ghosal
+heroText: Hi, Stack Seekers
 tagline: Full-stack consultant specializing in scalable web, mobile, and software solutions using MERN and MEVN stacks. Let’s bring your ideas to life, connect with me today!
 containerClass: fancy-container
 actions:
@@ -17,16 +17,12 @@ copyright: false
 
 <div class="mb-6">
   <div class="text-center pb-4">
-    <h2>
-      <div class="text-4xl font-bold">Scalable Solutions for <div class="text-4xl font-bold bg-primary">Startups, Enterprises & Agencies</div></div>
-    </h2>
-    <div class="text-xl text-center md:text-left line-height-3">
-      I'm a full-stack developer with extensive experience in the JavaScript, VueJS, ReactJS and NodeJS ecosystems, as well as expertise in the Azure cloud platform.
-    </div>
+    <div class="text-4xl font-bold"><h2>Scalable Solutions for <div class="text-4xl font-bold bg-primary">Startups, Enterprises & Agencies</div></h2></div>
+    <div class="text-xl md:text-center line-height-3"> I am Jiwan Ghosal. A full-stack developer with extensive experience in the JavaScript, VueJS, ReactJS and NodeJS ecosystems, as well as expertise in the Azure cloud platform.</div>
   </div>  
   <div class="grid justify-content-center my-4">
-    <div class="flex gap-2 px-1" v-for="stackLogo in stackLogos" :key="stackLogo.title">
-      <img width="30px" height="30px" :src="`https://cdn.simpleicons.org/${stackLogo.link}`" :alt="stackLogo.title" loading="eager" fetchpriority="high"/>
+    <div class="flex gap-2 px-2" v-for="stackLogo in stackLogos" :key="stackLogo.title">
+      <img width="38px" height="38px" :src="`https://cdn.simpleicons.org/${stackLogo.link}`" :alt="stackLogo.title" loading="eager" fetchpriority="high"/>
       <h3 class="hidden">{{stackLogo.title}}</h3>
     </div>
   </div>
@@ -79,9 +75,7 @@ copyright: false
 <!-- Testimonials -->
 <div class="my-6">
   <div class="text-center pb-4">
-    <h2>
-      <div class="text-4xl font-bold">Trusted by <div class="text-4xl font-bold bg-primary">World Wide</div></div>
-    </h2>
+    <div class="text-4xl font-bold"><h2>Trusted by <div class="text-4xl font-bold bg-primary">World Wide</div></h2></div>
     <div class="my-4 text-xl line-height-2">I value every client as a strategic partner. Here’s what they’ve shared about their experience working with me.</div>
   </div>
   <div class="card relative md:mx-0 -mx-4" @mouseenter="pauseAutoPlay"
@@ -136,9 +130,7 @@ copyright: false
 
 <div class="my-6 flex flex-column">
   <div class="text-center pb-4">
-    <h2>
-      <div class="text-4xl font-bold">Why <span class="bg-primary">me?</span></div>
-    </h2>
+    <div class="text-4xl font-bold"><h2>Why <span class="bg-primary">me?</span></h2></div>
     <div class="my-4 text-xl line-height-2">Here’s why I’m the right choice for your project</div>
   </div>
   <div class="flex flex-wrap">
@@ -166,9 +158,7 @@ copyright: false
 </div>
 <div class="my-6">
   <div class="text-center pb-4">
-    <h2>
-      <div class="text-4xl font-bold">Scaling startups <div class="text-4xl font-bold bg-primary">Elevating industry giants</div></div>
-    </h2>
+    <div class="text-4xl font-bold"><h2>Scaling startups <div class="text-4xl font-bold bg-primary">Elevating industry giants</div></h2></div>
     <div class="my-4 text-xl line-height-2">I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development.</div>
   </div>
   <div class="my-4 grid md:flex-row justify-content-center gap-2">
@@ -188,9 +178,7 @@ copyright: false
 <!-- FAQ -->
 <div class="my-6">
   <div class="text-center pb-4">
-    <h2>
-      <div class="text-4xl font-bold line-height-2">Frequently asked <span class="bg-primary">questions</span></div>
-    </h2>
+    <div class="text-4xl font-bold line-height-2"><h2>Frequently asked <span class="bg-primary">questions</span></h2></div>
   </div>
   <div class="grid overflow-hidden border-round-2xl">
     <div class="col-12 ">
