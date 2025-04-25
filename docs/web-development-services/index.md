@@ -8,11 +8,11 @@ copyright: false
 ---
 
 <div class="flex flex-column gap-4 mt-6 line-height-3">
-  <div>Hey! I’m your helper for awesome development and hosting services, fixing the pain of making your digital dreams real. With the best technologies, I build custom, future-proof solutions to ease your worries. Let’s make something great!</div>
+  <div>Hello! I’m your expert for development and hosting services, resolving the challenges of realizing your digital vision. Leveraging advanced technologies, I deliver tailored solutions to eliminate stress. Let’s create something remarkable.</div>
 
-  <div>Every project gets my full care, giving you perfect results to stop goal mismatches. My services mix style and function to boost your online presence easily. Ready?</div>
+  <div>Each project receives dedicated attention, ensuring precise results to address misaligned objectives. My services combine functionality and appeal to enhance your online presence. Ready to proceed?</div>
 
-  <div>Click below to email me and end the digital world stress. Your ideas should shine let’s do it!</div>
+  <div>Click below to email me and overcome digital world obstacles. Your vision deserves excellence. let’s achieve it.</div>
 </div>
 
 <div class="flex flex-wrap md:gap-4 gap-2">
