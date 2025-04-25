@@ -1,5 +1,5 @@
 ---
-title: Custom Web Design & Development Services for Businesses
+title: Custom Web Development Services
 description: Stack Seekers provides end-to-end web development services for businesses of all sizes. Our solutions include front-end and back-end development, CMS integration, API development, and performance optimization — all aligned to support your growth and digital transformation goals.
 order: 3
 lastUpdated: false
@@ -7,7 +7,7 @@ editLink: false
 copyright: false
 ---
 
-<div class="flex flex-column gap-4 mt-6 line-height-3">
+<div class="flex flex-column gap-4 mt-4 line-height-3">
   <div>Hello! I’m your expert for development and hosting services, resolving the challenges of realizing your digital vision. Leveraging advanced technologies, I deliver tailored solutions to eliminate stress. Let’s create something remarkable.</div>
 
   <div>Each project receives dedicated attention, ensuring precise results to address misaligned objectives. My services combine functionality and appeal to enhance your online presence. Ready to proceed?</div>
