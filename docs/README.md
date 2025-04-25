@@ -26,15 +26,15 @@ copyright: false
       <h3 class="hidden">{{stackLogo.title}}</h3>
     </div>
   </div>
-  <div class="gallery">
+  <div class="gallery gap-2">
     <div
       v-for="(img, index) in projects"
       :key="index"
-      class="gallery-item"
+      class="gallery-item mb-2"
     >
-      <a :href="img.link" class="text-l p-2 font-medium text-center no-underline" :aria-label="img.name">
+      <a :href="img.link" class="text-l gap-2 font-medium text-center no-underline" :aria-label="img.name">
         <img :src="img.images[0].itemImageSrc" :alt="img.images[0].alt" loading="eager" fetchpriority="high" />
-        <h3 class="p-0 mt-4">{{ img.name }}</h3>
+        <h3 class="p-0 mt-2">{{ img.name }}</h3>
       </a>
     </div>
   </div>
