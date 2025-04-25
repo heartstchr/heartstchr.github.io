@@ -98,7 +98,7 @@ const services = [
     },
     {
         name: "API",
-        code: "API-development-and-integration",
+        code: "api-development-and-integration",
         descriptions:[ 
             "Need to integrate third-party services or develop custom APIs for your application? ",
             "I specialize in creating RESTful APIs, enabling seamless communication between systems and enhancing your software's functionality."]
