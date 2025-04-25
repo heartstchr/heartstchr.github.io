@@ -85,7 +85,7 @@ copyright: false
                   >
                     <div class="flex items-center gap-2 px-1">
                         <img v-if="part" :src="`https://cdn.simpleicons.org/${part}`" :alt="part" style="width: 28px;" loading="lazy" fetchpriority="high"/>
-                        <h4 class="text-base p-0 m-0 hidden">{{part}}</h4>
+                        <h3 class="text-base p-0 m-0 hidden">{{part}}</h3>
                     </div>
                   </Tag>
                   <Tag
@@ -224,10 +224,10 @@ copyright: false
           name: "Click-to-Call Ads: Location-based phone numbers to boost conversions.",
         },
         {
-          name: "Auto-Complete Location Input: Enhances user experience and reduces friction.",
+          name: "Auto-Complete Google Place API: Enhances user experience and reduces friction.",
         },
         {
-          name: "WebP Image Optimization: Ensures lightning-fast load speeds.",
+          name: "Image Optimization: Ensures lightning-fast load speeds.",
         },
         {
           name: "Google Analytics Integration: Tracks performance for data-driven decisions.",
