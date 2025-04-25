@@ -21,7 +21,7 @@ copyright: false
     <div class="text-xl md:text-center line-height-3"> I am Jiwan Ghosal. A full-stack developer with extensive experience in the JavaScript, VueJS, ReactJS and NodeJS ecosystems, as well as expertise in the Azure cloud platform.</div>
   </div>  
   <div class="grid justify-content-center my-4">
-    <div class="flex gap-2 px-2" v-for="stackLogo in stackLogos" :key="stackLogo.title">
+    <div class="flex gap-2 p-2" v-for="stackLogo in stackLogos" :key="stackLogo.title">
       <img width="38px" height="38px" :src="`https://cdn.simpleicons.org/${stackLogo.link}`" :alt="stackLogo.title" loading="eager" fetchpriority="high"/>
       <h3 class="hidden">{{stackLogo.title}}</h3>
     </div>
