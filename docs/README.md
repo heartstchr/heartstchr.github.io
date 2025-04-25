@@ -26,11 +26,11 @@ copyright: false
       <h3 class="hidden">{{stackLogo.title}}</h3>
     </div>
   </div>
-  <div class="gallery gap-2">
+  <div class="gallery gap-4">
     <div
       v-for="(img, index) in projects"
       :key="index"
-      class="gallery-item mb-2"
+      class="gallery-item mb-4"
     >
       <a :href="img.link" class="text-l gap-2 font-medium text-center no-underline" :aria-label="img.name">
         <img :src="img.images[0].itemImageSrc" :alt="img.images[0].alt" loading="eager" fetchpriority="high" />
@@ -604,28 +604,40 @@ copyright: false
 
   const stackLogos = [
     {
-      link: "javascript?viewbox=auto",
+      link: "html5",
+      title: "html5",
+    },
+    {
+      link: "javascript",
       title: "Javascript",
     },
     {
-      link: "typescript?viewbox=auto",
-      title: "Typescript",
-    },
-    {
-      link: "vuedotjs?viewbox=auto",
+      link: "vuedotjs",
       title: "vuejs",
     },
     {
-      link: "react?viewbox=auto",
+      link: "react",
       title: "ReactJS",
     },
     {
-      link: "nodedotjs?viewbox=auto",
+      link: "nodedotjs",
       title: "NodeJs",
     },
     {
-      link: "mongodb?viewbox=auto",
+      link: "tailwindcss",
+      title: "tailwindcss",
+    },
+    {
+      link: "typescript",
+      title: "Typescript",
+    },
+    {
+      link: "mongodb",
       title: "MongoDb",
+    },
+    {
+      link: "lighthouse",
+      title: "lighthouse",
     },
   ];
 
