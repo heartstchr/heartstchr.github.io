@@ -66,9 +66,7 @@ copyright: false
                 <div class="text-xl mt-2" itemprop="operatingSystem">
                   {{project.software}}
                   <span class="text-sm mt-2"> - {{project.domain}}</span>
-                  <a class="text-sm mt-2 font-italic no-underline"
-                    >({{project.year}})</a
-                  >
+                  <a class="text-sm mt-2 font-italic no-underline">({{project.year}})</a>
                 </div>
                 <div class="my-2 text-xl">{{project.description}}</div>
                 <div class="flex grid mt-4 px-2">
@@ -103,6 +101,38 @@ copyright: false
                         <h4 class="text-base p-0 m-0">{{part}}</h4>
                     </div>
                   </Tag>
+                </div>
+                <div
+                  class="flex flex-row justify-content-between align-items-center gap-2"
+                >
+                  <a
+                    v-if="project.link"
+                    :href="project.link"
+                    target="_blank"
+                    class="w-full flex flex-row no-underline my-4"
+                  >
+                    <Button
+                      label="Demo"
+                      icon="pi pi-angle-double-right"
+                      severity="primary"
+                      raised
+                      rounded
+                    />
+                  </a>
+                  <a
+                    v-if="project.codeLink"
+                    :href="project.codeLink"
+                    target="_blank"
+                    class="w-full flex flex-row no-underline my-4"
+                  >
+                    <Button
+                      label="Repo"
+                      icon="pi pi-github"
+                      severity="secondary"
+                      raised
+                      rounded
+                    />
+                  </a>
                 </div>
               </div>
               <div class="md:col-6 col-12">
@@ -152,38 +182,6 @@ copyright: false
                   <h4 class="m-2 text-sm">{{feature.name}}</h4>
                 </li>
               </ul>
-            </div>
-            <div
-              class="flex flex-row justify-content-between align-items-center gap-2"
-            >
-              <a
-                v-if="project.link"
-                :href="project.link"
-                target="_blank"
-                class="w-full flex flex-row no-underline my-4"
-              >
-                <Button
-                  label="Demo"
-                  icon="pi pi-angle-double-right"
-                  severity="primary"
-                  raised
-                  rounded
-                />
-              </a>
-              <a
-                v-if="project.codeLink"
-                :href="project.codeLink"
-                target="_blank"
-                class="w-full flex flex-row no-underline my-4"
-              >
-                <Button
-                  label="Repo"
-                  icon="pi pi-github"
-                  severity="secondary"
-                  raised
-                  rounded
-                />
-              </a>
             </div>
           </div>
         </div>
