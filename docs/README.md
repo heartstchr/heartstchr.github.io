@@ -15,7 +15,7 @@ editLink: false
 copyright: false
 ---
 
-<div class="my-6">
+<div class="mb-6">
   <div class="text-center pb-4">
     <h2>
       <div class="text-4xl font-bold">Scalable Solutions for <div class="text-4xl font-bold bg-primary">Startups, Enterprises & Agencies</div></div>
@@ -24,16 +24,11 @@ copyright: false
       I'm a full-stack developer with extensive experience in the JavaScript, VueJS, ReactJS and NodeJS ecosystems, as well as expertise in the Azure cloud platform.
     </div>
   </div>  
-  <div class="grid mt-4">
-    <div class="md:col col-6 text-center" v-for="stackLogo in stackLogos" :key="stackLogo.title">
-      <i :class="stackLogo.icon" class="m-auto text-400 pl-3" style="font-size: 5rem"></i>
-      <img width="50px" height="50px" :src="stackLogo.link" :alt="stackLogo.title" loading="eager" fetchpriority="high"/>
+  <div class="grid justify-content-center my-4">
+    <div class="flex gap-2 px-1" v-for="stackLogo in stackLogos" :key="stackLogo.title">
+      <img width="30px" height="30px" :src="`https://cdn.simpleicons.org/${stackLogo.link}`" :alt="stackLogo.title" loading="eager" fetchpriority="high"/>
       <h3 class="hidden">{{stackLogo.title}}</h3>
     </div>
-  </div>
-</div>
-<div class="my-6">
-  <div class="text-center pb-4">
   </div>
   <div class="gallery">
     <div
@@ -621,27 +616,27 @@ copyright: false
 
   const stackLogos = [
     {
-      link: "https://cdn.simpleicons.org/javascript?viewbox=auto",
+      link: "javascript?viewbox=auto",
       title: "Javascript",
     },
     {
-      link: "https://cdn.simpleicons.org/typescript?viewbox=auto",
+      link: "typescript?viewbox=auto",
       title: "Typescript",
     },
     {
-      link: "https://cdn.simpleicons.org/vuedotjs?viewbox=auto",
+      link: "vuedotjs?viewbox=auto",
       title: "vuejs",
     },
     {
-      link: "https://cdn.simpleicons.org/react?viewbox=auto",
+      link: "react?viewbox=auto",
       title: "ReactJS",
     },
     {
-      link: "https://cdn.simpleicons.org/nodedotjs?viewbox=auto",
+      link: "nodedotjs?viewbox=auto",
       title: "NodeJs",
     },
     {
-      link: "https://cdn.simpleicons.org/mongodb?viewbox=auto",
+      link: "mongodb?viewbox=auto",
       title: "MongoDb",
     },
   ];
