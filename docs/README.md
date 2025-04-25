@@ -325,7 +325,7 @@ copyright: false
   ]);
   const projects = ref([
     {
-      name: "SR-22 insurance Now",
+      name: "SR-22 Insurance Now",
       description:
         "Need a Cheap SR-22 Insurance? Compare & save on SR22 Insurance from top providers.",
       software: "Web",
@@ -334,7 +334,7 @@ copyright: false
       images: [
         {
           itemImageSrc: "/img/home/projects/sr22.webp",
-          alt: "SR-22 insurance Now",
+          alt: "SR-22 Insurance Now",
         },
       ],
     },

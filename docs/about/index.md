@@ -53,7 +53,7 @@ copyright: false
 <div class="my-6" id="stack">
   <div class="text-center pb-4">
     <h2 class="text-4xl font-bold">Stack</h2>
-    <div class="my-4 text-xl line-height-3">Some of the software and technologies I use on a daily basis.</div>
+    <div class="my-4 text-xl line-height-3">Technologies and development tools I regularly use for building modern, high-performance web applications.</div>
   </div>
   <div class="flex flex-wrap gap-4">
     <div v-for="(category, key) in technologies" :key="key" class='grid md:col-6' 
@@ -68,7 +68,7 @@ copyright: false
               <Tag style="border: 2px solid var(--border-color); background: transparent; color: var(--text-color)" v-for="tech in subheading.technologies" :key="tech.name"
                 :value="tech.name" class="m-1">
                 <div class="flex items-center gap-2 px-1">
-                    <img v-if="tech.logoUrl" :src="tech.logoUrl" style="width: 20px;" loading="eager" fetchpriority="high"/>
+                    <img v-if="tech.logoUrl" :src="`https://cdn.simpleicons.org/${tech.logoUrl}`" style="width: 20px;" loading="eager" fetchpriority="high"/>
                     <i v-else class="pi pi-cog" style="font-size: 1rem"></i>
                     <h4 class="text-base p-0 m-0">{{tech.name}}</h4>
                 </div>
@@ -89,9 +89,9 @@ copyright: false
   </div>
   <div class="flex flex-wrap gap-4 p-4">
       <Galleria :value="certificate.images" :responsiveOptions="responsiveOptions" :numVisible="5" :circular="true" :showItemNavigators="true" :showThumbnails="false" :pt="{
-                        prevButton: { 'aria-label': 'Previous image' },
-                        nextButton: { 'aria-label': 'Next image' }
-                      }">
+        prevButton: { 'aria-label': 'Previous image' },
+        nextButton: { 'aria-label': 'Next image' }
+      }">
           <template #item="slotProps">
               <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" loading="eager" fetchpriority="high" />
           </template>
@@ -190,48 +190,48 @@ copyright: false
       frameworks_and_libraries: {
         title: "Frameworks and Libraries",
         technologies: [
-          { name: "React", logoUrl: "https://cdn.simpleicons.org/react" },
-          { name: "Next.js", logoUrl: "https://cdn.simpleicons.org/nextdotjs/black/white" },
-          { name: "Vue.js", logoUrl: "https://cdn.simpleicons.org/vuedotjs" },
-          { name: "Nuxt.js", logoUrl: "https://cdn.simpleicons.org/nuxt" },
-          { name: "Ant Design", logoUrl: "https://cdn.simpleicons.org/antdesign" },
-          { name: "Primevue", logoUrl: "https://cdn.simpleicons.org/primevue" },
-          { name: "Shadcn", logoUrl: "https://cdn.simpleicons.org/shadcnui/black/white" },
-          { name: "Quasar", logoUrl: "https://cdn.simpleicons.org/quasar/black/white" },
+          { name: "React", logoUrl: "react" },
+          { name: "Next.js", logoUrl: "nextdotjs/black/white" },
+          { name: "Vue.js", logoUrl: "vuedotjs" },
+          { name: "Nuxt.js", logoUrl: "nuxt" },
+          { name: "Ant Design", logoUrl: "antdesign" },
+          { name: "Primevue", logoUrl: "primevue" },
+          { name: "Shadcn", logoUrl: "shadcnui/black/white" },
+          { name: "Quasar", logoUrl: "quasar/black/white" },
         ]
       },
       styling: {
         title: "Styling Tools",
         technologies: [
-          { name: "Tailwind CSS", logoUrl: "https://cdn.simpleicons.org/tailwindcss" },
-          { name: "PrimeFlex", logoUrl: "https://cdn.simpleicons.org/primefaces" },
-          { name: "Bootstrap", logoUrl: "https://cdn.simpleicons.org/bootstrap" },
-          { name: "Material-UI", logoUrl: "https://cdn.simpleicons.org/mui" },
+          { name: "Tailwind CSS", logoUrl: "tailwindcss" },
+          { name: "PrimeFlex", logoUrl: "primefaces" },
+          { name: "Bootstrap", logoUrl: "bootstrap" },
+          { name: "Material-UI", logoUrl: "mui" },
         ]
       },
       stateManagement: {
         title: "State Management",
         technologies: [
-          { name: "Pinia", logoUrl: "https://cdn.simpleicons.org/" },
-          { name: "Redux", logoUrl: "https://cdn.simpleicons.org/" },
-          { name: "vuex", logoUrl: "https://cdn.simpleicons.org/" },
+          { name: "Pinia", logoUrl: "" },
+          { name: "Redux", logoUrl: "" },
+          { name: "vuex", logoUrl: "" },
         ]
       },
       buildTools: {
         title: "Build Tools",
         technologies: [
-          { name: "Vite", logoUrl: "https://cdn.simpleicons.org/vite" },
-          { name: "Rollup", logoUrl: "https://cdn.simpleicons.org/rollupdotjs" },
-          { name: "Webpack", logoUrl: "https://cdn.simpleicons.org/webpack" },
+          { name: "Vite", logoUrl: "vite" },
+          { name: "Rollup", logoUrl: "rollupdotjs" },
+          { name: "Webpack", logoUrl: "webpack" },
         ]
       },
       testing: {
         title: "Testing",
         technologies: [
-          { name: "Jest", logoUrl: "https://cdn.simpleicons.org/jest" },
-          { name: "Testcafe", logoUrl: "https://cdn.simpleicons.org/testcafe" },
-          { name: "Playwright", logoUrl: "https://cdn.simpleicons.org/playwright" },
-          { name: "Lighthouse", logoUrl: "https://cdn.simpleicons.org/lighthouse" },
+          { name: "Jest", logoUrl: "jest" },
+          { name: "Testcafe", logoUrl: "testcafe" },
+          { name: "Playwright", logoUrl: "" },
+          { name: "Lighthouse", logoUrl: "lighthouse" },
         ]
       }
     }
@@ -242,16 +242,16 @@ copyright: false
       languages_and_frameworks: {
         title: "Languages and Frameworks",
         technologies: [
-          { name: "Node.js", logoUrl: "https://cdn.simpleicons.org/nodedotjs" },
-          { name: "Express.js", logoUrl: "https://cdn.simpleicons.org/express/black/white" },
+          { name: "Node.js", logoUrl: "nodedotjs" },
+          { name: "Express.js", logoUrl: "express/black/white" },
         ]
       },
       microservices_and_apis: {
         title: "APIs",
         technologies: [
-          { name: "RESTful API", logoUrl: "https://cdn.simpleicons.org/swagger" },
-          { name: "Web Socket", logoUrl: "https://cdn.simpleicons.org/socketdotio/black/white" },
-          { name: "GraphQL", logoUrl: "https://cdn.simpleicons.org/graphql" }
+          { name: "RESTful API", logoUrl: "swagger" },
+          { name: "Web Socket", logoUrl: "socketdotio/black/white" },
+          { name: "GraphQL", logoUrl: "graphql" }
         ]
       }
     }
@@ -262,12 +262,12 @@ copyright: false
       languages_and_frameworks: {
         title: "",
         technologies: [
-          { name: "MySQL", logoUrl: "https://cdn.simpleicons.org/mysql" },
-          { name: "PostgreSQL", logoUrl: "https://cdn.simpleicons.org/postgresql" },
-          { name: "DynamoDB", logoUrl: "https://cdn.simpleicons.org/amazondynamodb" },
-          { name: "Firebase", logoUrl: "https://cdn.simpleicons.org/firebase" },
-          { name: "Prisma", logoUrl: "https://cdn.simpleicons.org/prisma" },
-          { name: "MongoDB", logoUrl: "https://cdn.simpleicons.org/mongodb" },
+          { name: "MySQL", logoUrl: "mysql" },
+          { name: "PostgreSQL", logoUrl: "postgresql" },
+          { name: "DynamoDB", logoUrl: "amazondynamodb" },
+          { name: "Firebase", logoUrl: "firebase" },
+          { name: "Prisma", logoUrl: "prisma" },
+          { name: "MongoDB", logoUrl: "mongodb" },
         ]
       },
     }
@@ -278,21 +278,21 @@ copyright: false
       web_hosting: {
         title: "Web Hosting",
         technologies: [
-          { name: "Vercel", logoUrl: "https://cdn.simpleicons.org/vercel/black/white" },
-          { name: "Netlify", logoUrl: "https://cdn.simpleicons.org/netlify" },
-          { name: "Heroku", logoUrl: "https://cdn.simpleicons.org/heroku" },
-          { name: "Github pages", logoUrl: "https://cdn.simpleicons.org/githubpages/black/white" },
-          { name: "Azure", logoUrl: "https://cdn.simpleicons.org/" },
-          { name: "AWS", logoUrl: "https://cdn.simpleicons.org/awslambda" },
+          { name: "Vercel", logoUrl: "vercel/black/white" },
+          { name: "Netlify", logoUrl: "netlify" },
+          { name: "Heroku", logoUrl: "heroku" },
+          { name: "Github pages", logoUrl: "githubpages/black/white" },
+          { name: "Azure", logoUrl: "" },
+          { name: "AWS", logoUrl: "awslambda" },
         ]
       },
       CI_CD: {
         title: "CI/CD",
         technologies: [
-          { name: "Github Action", logoUrl: "https://cdn.simpleicons.org/githubactions" },
-          { name: "Azure Devops", logoUrl: "https://cdn.simpleicons.org/" },
-          { name: "GitLab CI/CD", logoUrl: "https://cdn.simpleicons.org/gitlab" },
-          { name: "Jenkins", logoUrl: "https://cdn.simpleicons.org/jenkins" },
+          { name: "Github Action", logoUrl: "githubactions" },
+          { name: "Azure Devops", logoUrl: "" },
+          { name: "GitLab CI/CD", logoUrl: "gitlab" },
+          { name: "Jenkins", logoUrl: "jenkins" },
         ]
       },
     }
@@ -303,36 +303,36 @@ copyright: false
       version_control: {
         title: "Version control",
         technologies: [
-          { name: "GitHub", logoUrl: "https://cdn.simpleicons.org/github/black/white" },
-          { name: "GitLab", logoUrl: "https://cdn.simpleicons.org/gitlab" },
-          { name: "Bitbucket", logoUrl: "https://cdn.simpleicons.org/bitbucket" },
-          { name: "Azure Devops", logoUrl: "https://cdn.simpleicons.org/" },
+          { name: "GitHub", logoUrl: "github/black/white" },
+          { name: "GitLab", logoUrl: "gitlab" },
+          { name: "Bitbucket", logoUrl: "bitbucket" },
+          { name: "Azure Devops", logoUrl: "" },
         ]
       },
       package_manager: {
         title: "Package managers",
         technologies: [
-          { name: "npm", logoUrl: "https://cdn.simpleicons.org/npm" },
-          { name: "yarn", logoUrl: "https://cdn.simpleicons.org/yarn" },
-          { name: "pnpm", logoUrl: "https://cdn.simpleicons.org/pnpm" },
-          { name: "bun", logoUrl: "https://cdn.simpleicons.org/bun/black/white" },
+          { name: "npm", logoUrl: "npm" },
+          { name: "yarn", logoUrl: "yarn" },
+          { name: "pnpm", logoUrl: "pnpm" },
+          { name: "bun", logoUrl: "bun/black/white" },
         ]
       },
       code_quality: {
         title: "Code Quality",
         technologies: [
-          { name: "ESLint", logoUrl: "https://cdn.simpleicons.org/eslint" },
-          { name: "Prettier", logoUrl: "https://cdn.simpleicons.org/prettier" },
-          { name: "Sonarqube", logoUrl: "https://cdn.simpleicons.org/sonarqube" },
+          { name: "ESLint", logoUrl: "eslint" },
+          { name: "Prettier", logoUrl: "prettier" },
+          { name: "Sonarqube", logoUrl: "sonarqube" },
         ]
       },
       collaboration: {
         title: "Collaboration",
         technologies: [
-          { name: "Jira", logoUrl: "https://cdn.simpleicons.org/jira" },
-          { name: "Trello", logoUrl: "https://cdn.simpleicons.org/trello" },
-          { name: "Slack", logoUrl: "https://cdn.simpleicons.org/slack" },
-          { name: "Teams", logoUrl: "https://cdn.simpleicons.org/team" },
+          { name: "Jira", logoUrl: "jira" },
+          { name: "Trello", logoUrl: "trello" },
+          { name: "Slack", logoUrl: "slack" },
+          { name: "Teams", logoUrl: "team" },
         ]
       },
     }
