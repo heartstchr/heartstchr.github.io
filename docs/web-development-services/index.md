@@ -8,15 +8,11 @@ copyright: false
 ---
 
 <div class="flex flex-column gap-4 mt-6 line-height-3">
-  <div>I’m your ultimate partner for all things development and hosting, offering a comprehensive range of services to bring your digital vision to life. With a deep understanding of modern technologies and trends, I aim to provide solutions that are not only functional but also innovative and future-ready.
-  </div>
+  <div>Hey! I’m your helper for awesome development and hosting services, fixing the pain of making your digital dreams real. With the best technologies, I build custom, future-proof solutions to ease your worries. Let’s make something great!</div>
 
-  <div>
-    Each service is designed with your unique requirements in mind to deliver the best results.
-  </div>
+  <div>Every project gets my full care, giving you perfect results to stop goal mismatches. My services mix style and function to boost your online presence easily. Ready?</div>
 
-  <div>
-  My focus is always on delivering high-quality, personalized solutions. Let’s explore the many ways I can help you succeed in the digital space.</div>
+  <div>Click below to email me and end the digital world stress. Your ideas should shine let’s do it!</div>
 </div>
 
 <div class="flex flex-wrap md:gap-4 gap-2">

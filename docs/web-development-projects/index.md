@@ -9,14 +9,10 @@ copyright: false
 
 <div class="flex flex-column gap-4 my-6 line-height-4">
   <div>
-    Here, you’ll find a showcase of some of my organization and freelance
-    projects, highlighting my expertise for creating meaningful digital
-    experiences. These projects reflect my ability to turn ideas into reality,
-    tailored to meet each client’s unique needs.
+    Explore a curated selection of my freelance and organizational web development projects. These works highlight my expertise in building modern, scalable, and user-focused digital solutions.
   </div>
   <div>
-    If you’re searching for a professional who can bring your vision to life
-    with precision and creativity, you’ve come to the right place.
+    Each project is thoughtfully crafted to transform client ideas into functional, high-impact experiences tailored to specific business goals.
   </div>
   <div>
     <a
