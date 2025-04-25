@@ -34,7 +34,7 @@ copyright: false
     >
       <a :href="img.link" class="text-l gap-2 font-medium text-center no-underline" :aria-label="img.name">
         <img :src="img.images[0].itemImageSrc" :alt="img.images[0].alt" loading="eager" fetchpriority="high" />
-        <h3 class="p-0 mt-2">{{ img.name }}</h3>
+        <h3 class="p-0 m-2">{{ img.name }}</h3>
       </a>
     </div>
   </div>
@@ -348,7 +348,7 @@ copyright: false
       ],
     },
     {
-      name: "Upstox: Demat Account",
+      name: "Demat Account Open",
       description: "Open a Demat Account Online: Demat Account Opening at Upstox",
       software: "Web",
       schema: "https://schema.org/BusinessApplication",
