@@ -9,7 +9,7 @@ copyright: false
 
 <div class="flex flex-column gap-4 my-6 line-height-4">
   <div>
-    Here, you’ll find a showcase of some of my organisation and freelance
+    Here, you’ll find a showcase of some of my organization and freelance
     projects, highlighting my expertise for creating meaningful digital
     experiences. These projects reflect my ability to turn ideas into reality,
     tailored to meet each client’s unique needs.
@@ -84,7 +84,7 @@ copyright: false
                     class="m-1"
                   >
                     <div class="flex items-center gap-2 px-1">
-                        <img v-if="part" :src="`https://cdn.simpleicons.org/${part}`" :alt="part" style="width: 40px;" loading="lazy" fetchpriority="high"/>
+                        <img v-if="part" :src="`https://cdn.simpleicons.org/${part}`" :alt="part" style="width: 28px;" loading="lazy" fetchpriority="high"/>
                         <h4 class="text-base p-0 m-0 hidden">{{part}}</h4>
                     </div>
                   </Tag>
@@ -146,8 +146,11 @@ copyright: false
           <div class="flex flex-column px-4">
             <div class="flex flex-column mt-4 p-2" v-if="project.features">
               <h3 class="my-2 text-l">Features</h3>
-              <ul class="my-2 text-sm" v-for="feature in project.features">
-                <li><h4 class="m-0 text-sm">{{feature.name}}</h4></li>
+              <ul class="my-2 ml-3 text-sm">
+                <li v-for="feature in project.features" class="flex flex-row align-content-center">
+                  <i class="pi pi-verified m-2 bg-primary" alt="arrow" style="font-size: 1rem;"></i>
+                  <h4 class="m-2 text-sm">{{feature.name}}</h4>
+                </li>
               </ul>
             </div>
             <div
@@ -348,6 +351,29 @@ copyright: false
       ],
     },
     {
+      name: "Tech Create",
+      description: "A landing page for tech ",
+      stack: ["Vuedotjs", "PrimeVue","CSS3", "vercel/black/white", "Eslint",
+        "Prettier","github/black/white"],
+      software: "Web",
+      org: "LV",
+      year: "2025",
+      domain: "IT Service",
+      schema: "https://schema.org/BusinessApplication",
+      link: "https://techcreate.vercel.app/",
+      features:[
+        {name:"Responsive Design: Seamless experience across devices.",},
+        {name:"Component-Based Architecture: Efficient and scalable codebase.",},
+        {name:"Modern UI/UX: Clean aesthetics with intuitive navigation",},
+      ],
+      images: [
+        {
+          itemImageSrc: "/img/home/projects/tech_create.webp",
+          alt: "landing page for tech",
+        },
+      ],
+    },
+    {
       name: "Qatar Airways widget",
       description:
         "Book flights to destinations around the world with Qatar Airways and fly on board an award-winning airline. Enjoy special fares, collect Avios, and more.",
@@ -401,29 +427,6 @@ copyright: false
         {
           itemImageSrc: "/img/projects/quatar/quatar.webp",
           alt: "Quatar Airways",
-        },
-      ],
-    },
-    {
-      name: "Tech Create",
-      description: "A landing page for tech ",
-      stack: ["Vuedotjs", "PrimeVue","CSS3", "vercel/black/white", "Eslint",
-        "Prettier","github/black/white"],
-      software: "Web",
-      org: "LV",
-      year: "2025",
-      domain: "IT Service",
-      schema: "https://schema.org/BusinessApplication",
-      link: "https://techcreate.vercel.app/",
-      features:[
-        {name:"Responsive Design: Seamless experience across devices.",},
-        {name:"Component-Based Architecture: Efficient and scalable codebase.",},
-        {name:"Modern UI/UX: Clean aesthetics with intuitive navigation",},
-      ],
-      images: [
-        {
-          itemImageSrc: "/img/home/projects/tech_create.webp",
-          alt: "landing page for tech",
         },
       ],
     },
