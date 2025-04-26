@@ -1,6 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import { loadEnv } from "vite";
-import { viteBundler } from '@vuepress/bundler-vite'
+import { viteBundler } from '@vuepress/bundler-vite';
 import Components from 'unplugin-vue-components/vite';
 import { PrimeVueResolver } from 'unplugin-vue-components/resolvers';
 import { path } from "vuepress/utils";
@@ -18,13 +18,6 @@ export default defineUserConfig({
       plugins: [
         Components({
           resolvers: [PrimeVueResolver()],
-        }),
-        visualizer({
-          open: true, // automatically open the report in browser
-          filename: "bundle-visualizer.html", // report output filename
-          gzipSize: true,
-          brotliSize: true,
-          template: "treemap",
         }),
       ],
       ssr: {

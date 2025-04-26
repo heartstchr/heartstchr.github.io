@@ -1,4 +1,4 @@
-import { defineClientConfig } from "@vuepress/client";
+import { defineClientConfig } from "vuepress/client";
 import PrimeVue from "primevue/config";
 import { updatePreset } from "@primevue/themes";
 import Aura from "@primevue/themes/aura";

@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import { useSiteData } from "@vuepress/client"; // Site data access (e.g., site title)
+import { useSiteData } from "vuepress/client"; // Site data access (e.g., site title)
 
 const site = useSiteData();  // Access site data (including site title)
 const themeConfig = site.value.locales["/"];  // Access themeConfig directly
