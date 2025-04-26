@@ -18,7 +18,14 @@ export default defineUserConfig({
       plugins: [
         Components({
           resolvers: [PrimeVueResolver()],
-        })
+        }),
+        visualizer({
+          open: true, // automatically open the report in browser
+          filename: "bundle-visualizer.html", // report output filename
+          gzipSize: true,
+          brotliSize: true,
+          template: "treemap",
+        }),
       ],
       ssr: {
         noExternal: ["primevue"],

@@ -3,7 +3,7 @@ import { enNavbar } from "./navbar/index.js";
 
 export default hopeTheme(
   {
-    hostname: "https://heartstchr.github.io/",
+    hostname: "https://stackseekers.com/",
     author: {
       name: "Jiwan Ghosal",
       url: "http://heartstchr.github.io/",

@@ -322,19 +322,6 @@ copyright: false
       ],
     },
     {
-      name: "Tech Create",
-      description: "A landing page for tech ",
-      software: "Web",
-      schema: "https://schema.org/BusinessApplication",
-      link: "web-development-projects/#Tech Create",
-      images: [
-        {
-          itemImageSrc: "/img/home/projects/tech_create.webp",
-          alt: "landing page for tech",
-        },
-      ],
-    },
-    {
       name: "Trokka Attraction",
       description: "Book Attractions and Tours for Your Next Holiday",
       software: "Web",
@@ -344,32 +331,6 @@ copyright: false
         {
           itemImageSrc: "/img/projects/trokka.webp",
           alt: "Trokka.com | Book Attractions and Tours for Your Next Holiday",
-        },
-      ],
-    },
-    {
-      name: "Demat Account Open",
-      description: "Open a Demat Account Online: Demat Account Opening at Upstox",
-      software: "Web",
-      schema: "https://schema.org/BusinessApplication",
-      link: "web-development-projects/#Open Demat Account for Upstox",
-      images: [
-        {
-          itemImageSrc: "/img/projects/openDemat.webp",
-          alt: "Open a Demat Account Online: Demat Account Opening at Upstox",
-        },
-      ],
-    },
-    {
-      name: "Catch That Bus",
-      description: "Book Malaysia and Singapore bus tickets online.",
-      software: "Web / IOS APP",
-      schema: "https://schema.org/DeveloperApplication",
-      link: "web-development-projects/#Catch That Bus",
-      images: [
-        {
-          itemImageSrc: "/img/projects/catchthatbus.webp",
-          alt: "Book Malaysia and Singapore bus tickets online. | CatchThatBus",
         },
       ],
     },
@@ -388,6 +349,19 @@ copyright: false
       ],
     },
     {
+      name: "Catch That Bus",
+      description: "Book Malaysia and Singapore bus tickets online.",
+      software: "Web / IOS APP",
+      schema: "https://schema.org/DeveloperApplication",
+      link: "web-development-projects/#Catch That Bus",
+      images: [
+        {
+          itemImageSrc: "/img/projects/catchthatbus.webp",
+          alt: "Book Malaysia and Singapore bus tickets online. | CatchThatBus",
+        },
+      ],
+    },
+    {
       name: "Frontend of Tv Maze API",
       description:
         "TV Show and web series database. Create personalized schedules. Episode guide, cast, crew and character information. Recaps, reviews, episode trailers, celebrity photos and TV API.",
@@ -401,6 +375,32 @@ copyright: false
         },
       ],
     },
+    {
+      name: "Tech Create",
+      description: "A landing page for tech ",
+      software: "Web",
+      schema: "https://schema.org/BusinessApplication",
+      link: "web-development-projects/#Tech Create",
+      images: [
+        {
+          itemImageSrc: "/img/home/projects/tech_create.webp",
+          alt: "landing page for tech",
+        },
+      ],
+    },
+    {
+      name: "Demat Account Open",
+      description: "Open a Demat Account Online: Demat Account Opening at Upstox",
+      software: "Web",
+      schema: "https://schema.org/BusinessApplication",
+      link: "web-development-projects/#Open Demat Account for Upstox",
+      images: [
+        {
+          itemImageSrc: "/img/projects/openDemat.webp",
+          alt: "Open a Demat Account Online: Demat Account Opening at Upstox",
+        },
+      ],
+    },  
     {
       name: "Call Matrix",
       description: "Call Intelligence, Marketing, and Analytics Platform",

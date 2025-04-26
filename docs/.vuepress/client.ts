@@ -7,7 +7,6 @@ import "primeflex/primeflex.css";
 import "./styles/flags.css";
 import YouTubeVideos from "./components/YoutubeVideos.vue";
 
-const MyPreset = updatePreset(Aura, {});
 export default defineClientConfig({
   enhance({ app }) {
     app.use(PrimeVue, {
