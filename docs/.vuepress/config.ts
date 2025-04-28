@@ -84,6 +84,7 @@ export default defineUserConfig({
       __dirname,
       "./components/NavbarBrand.vue"
     ),
+    "@data": path.resolve(__dirname, "./data"),
   },
   shouldPrefetch: true,
   define: {
