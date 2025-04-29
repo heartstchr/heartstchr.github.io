@@ -251,3 +251,11 @@ fieldset {
     padding: .5rem;
   }
 }
+@media only screen and (min-width: 1440px) {
+    .theme-container.no-sidebar.has-toc .vp-page {
+      padding-inline-end: 0;
+    }
+}
+[vp-content]:not(.custom) {
+  padding: 2rem 0;
+}

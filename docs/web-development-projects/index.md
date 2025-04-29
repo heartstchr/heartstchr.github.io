@@ -52,7 +52,7 @@ copyright: false
               <h2 itemprop="name" class="text-4xl font-bold p-0 m-0" :id="project.name">
                 {{project.name}}
               </h2>
-              <div class="text-sm mt-2" itemprop="operatingSystem">
+              <div class="text-xs mt-2" itemprop="operatingSystem">
                 {{project.software}}
                 <span class="mt-2"> - {{project.domain}} </span>
                 <a class="mt-2 font-italic no-underline"> ({{project.year}})</a>
@@ -65,6 +65,7 @@ copyright: false
             >
               <div class="md:col-6 col-12  px-4">
                 <div class="my-2 text-l line-height-3">{{project.description}}</div>
+                <h3 class="hidden">Stack used</h3>
                 <div class="flex grid mt-4 px-2">
                   <Tag
                     style="
@@ -78,8 +79,8 @@ copyright: false
                     class="m-1"
                   >
                     <div class="flex items-center gap-2 px-1">
-                        <img v-if="part" :src="`https://cdn.simpleicons.org/${part}`" :alt="part" style="width: 28px;" loading="lazy" fetchpriority="high"/>
-                        <h3 class="text-base p-0 m-0 hidden">{{part}}</h3>
+                        <img v-if="part" :src="`https://cdn.simpleicons.org/${part}`" :alt="part" :title="part"  style="width: 28px;" loading="lazy" fetchpriority="high"/>
+                        <h4 class="text-base p-0 m-0 hidden">{{part}}</h4>
                     </div>
                   </Tag>
                   <Tag
@@ -170,14 +171,19 @@ copyright: false
             </div>
           </div>
           <div class="flex flex-column px-4">
-            <div class="flex flex-column p-2" v-if="project.features">
-              <h3 class="my-2 text-l">Features</h3>
-              <ul class="my-2 ml-3 text-sm">
-                <li v-for="feature in project.features" class="flex flex-row align-content-center line-height-3">
-                  <i class="pi pi-verified m-2 bg-primary" alt="arrow" style="font-size: 1rem;"></i>
-                  <h4 class="m-2 text-sm">{{feature.text}}</h4>
-                </li>
-              </ul>
+            <div class="flex flex-column p-2" v-if="project.features">         
+              <Accordion
+              >
+                  <AccordionTab header="Features">
+                      <h3 class="my-2 text-l hidden">Features</h3>
+                      <ul class="my-2 ml-3 text-sm">
+                        <li v-for="feature in project.features" class="flex flex-row align-content-center line-height-3">
+                          <i class="pi pi-verified m-2 bg-primary" alt="arrow" style="font-size: 1rem;"></i>
+                          <h4 class="m-2 text-sm">{{feature.text}}</h4>
+                        </li>
+                      </ul>
+                  </AccordionTab>
+              </Accordion>
             </div>
           </div>
         </div>

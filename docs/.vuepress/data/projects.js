@@ -236,6 +236,176 @@ export const freelance = [
     ],
   },
   {
+    name: "Yit Plus",
+    description:
+      "YIT Plus is a modern digital service helping you to monitor data related to your home and apartment association.",
+    software: "Web",
+    org: "YIT",
+    year: "2025",
+    domain: "Housing company",
+    schema: "https://schema.org/DeveloperApplication",
+    link: "https://plus.yitgroup.com/",
+    stack: [
+      "Javascript",
+      "Vuedotjs",
+      "Axios",
+      "Express/black/white",
+      "nodedotjs",
+      "MongoDB",
+      "mysql",
+      "Git",
+      "mailgun",
+      "kentico",
+      "amazonec2",
+      "Eslint",
+      "Prettier",
+    ],
+    otherSkills: ["Pinia", "API integration", "tinymce"],
+    images: [
+      {
+        itemImageSrc: "/img/home/projects/YIT_plus.webp",
+        alt: "Yit plus - Login page | Yit plus",
+      },
+      {
+        itemImageSrc: "/img/projects/yitplus/login.webp",
+        alt: "Yit plus - Login page | Yit plus",
+      },
+      {
+        itemImageSrc: "/img/projects/yitplus/home.webp",
+        alt: "Yit plus - Home page | Yit plus",
+      },
+      {
+        itemImageSrc: "/img/projects/yitplus/discussion_board.webp",
+        alt: "Yit plus - Directions page | Yit plus",
+      },
+      {
+        itemImageSrc: "/img/projects/yitplus/document.webp",
+        alt: "Yit plus - document page | Yit plus",
+      },
+      {
+        itemImageSrc: "/img/projects/yitplus/one_year_warranty.webp",
+        alt: "Yit plus - One year warranty page | Yit plus",
+      },
+      {
+        itemImageSrc: "/img/projects/yitplus/service_lounge.webp",
+        alt: "Yit plus - Service lounge page | Yit plus",
+      },
+      {
+        itemImageSrc: "/img/projects/yitplus/service_request.webp",
+        alt: "Yit plus - Service request category | Yit plus",
+      },
+      {
+        itemImageSrc: "/img/projects/yitplus/service_request_category.webp",
+        alt: "Yit plus - Service request category | Yit plus",
+      },
+      {
+        itemImageSrc: "/img/projects/yitplus/admin.webp",
+        alt: "Yit plus - Admin page | Yit plus",
+      },
+    ],
+  },
+  {
+    name: "Finding The Spots",
+    description:
+      "Say goodbye to the chaos of location scouting host, book, and create in our spaces effortlessly.",
+    software: "Web",
+    org: "FTS",
+    year: "2024",
+    domain: "Leisure, travel, and tourism",
+    schema: "https://schema.org/DeveloperApplication",
+    link: "https://findingthespots.com/",
+    stack: [
+      "Javascript",
+      "Vuedotjs",
+      "vite",
+      "Axios",
+      "Express/black/white",
+      "jsonwebtokens/black/white",
+      "stripe",
+      "nodedotjs",
+      "MongoDB",
+      "Git",
+      "github/black/white",
+      "Eslint",
+      "Prettier",
+    ],
+    otherSkills: ["Pinia", "API integration"],
+    images: [
+      {
+        itemImageSrc: "/img/home/projects/fts.webp",
+        alt: "Cover screen for application page",
+      },
+    ],
+    features: [
+      { text: "Secure user registration, login, and logout functionality." },
+      {
+        text: "Role-based access for general users, property owners, and admins.",
+      },
+      { text: "Search for properties/spots by type, country, city, and time." },
+      {
+        text: "Advanced filters to refine search results based on user preferences.",
+      },
+      {
+        text: "Detailed property pages with full image galleries and spot information.",
+      },
+      {
+        text: "Booking request system with date, time, and duration selection.",
+      },
+      {
+        text: "Free cancellation within 24 hours with redirection to spot listings.",
+      },
+      {
+        text: "Seamless and secure payment processing via Stripe for confirmed bookings.",
+      },
+      {
+        text: "Email notifications for booking and payment confirmations (users & owners).",
+      },
+      { text: "Property owners can list new spots with images and details." },
+      { text: "Admin verification process for new spot submissions." },
+      {
+        text: "Responsive, mobile-friendly interface for seamless access across devices.",
+      },
+      {
+        text: "Integrated APIs for authentication, spot listing, booking, search, and payments.",
+      },
+      {
+        text: "Scalable backend architecture to support future growth and features.",
+      },
+    ],
+  },
+  {
+    name: "IBRebuild for ABN AMRO BANK N.V.",
+    description:
+      "ABN AMRO Bank N.V. is a Dutch bank with headquarters in Amsterdam. The internet banking (IB) application for the bank customers which is migrating from old Angular JS to Vue.js integrated with Microsoft Azure cloud services as IBRebuild.",
+    software: "Web",
+    org: "YIT",
+    year: "2022",
+    domain: "Banking",
+    schema: "https://schema.org/DeveloperApplication",
+    link: "https://www.abnamro.nl/en/personal/index.html",
+    stack: [
+      "Javascript",
+      "Angular/black/white",
+      "Vuedotjs",
+      "Axios",
+      "webpack",
+      "lit",
+      "bitbucket",
+      "npm",
+      "nodedotjs",
+      "Git",
+      "Eslint",
+      "Prettier",
+    ],
+    otherSkills: ["Pinia", "API integration"],
+    images: [
+      {
+        itemImageSrc: "/img/home/projects/ABN_Amro.webp",
+        alt: "Cover screen for application page",
+      },
+    ],
+  },
+  {
     name: "Qatar Airways widget",
     description:
       "Book flights to destinations around the world with Qatar Airways and fly on board an award-winning airline. Enjoy special fares, collect Avios, and more.",
@@ -370,75 +540,6 @@ export const freelance = [
       {
         itemImageSrc: "/img/projects/recipe/share.webp",
         alt: "Recipes - Share screen | Recipes",
-      },
-    ],
-  },
-  {
-    name: "Yit Plus",
-    description:
-      "YIT Plus is a modern digital service helping you to monitor data related to your home and apartment association.",
-    software: "Web",
-    org: "YIT",
-    year: "2025",
-    domain: "Housing company",
-    schema: "https://schema.org/DeveloperApplication",
-    link: "https://plus.yitgroup.com/",
-    stack: [
-      "Javascript",
-      "Vuedotjs",
-      "Axios",
-      "Express/black/white",
-      "nodedotjs",
-      "MongoDB",
-      "mysql",
-      "Git",
-      "mailgun",
-      "kentico",
-      "amazonec2",
-      "Eslint",
-      "Prettier",
-    ],
-    otherSkills: ["Pinia", "API integration", "tinymce"],
-    images: [
-      {
-        itemImageSrc: "/img/home/projects/YIT_plus.webp",
-        alt: "Yit plus - Login page | Yit plus",
-      },
-      {
-        itemImageSrc: "/img/projects/yitplus/login.webp",
-        alt: "Yit plus - Login page | Yit plus",
-      },
-      {
-        itemImageSrc: "/img/projects/yitplus/home.webp",
-        alt: "Yit plus - Home page | Yit plus",
-      },
-      {
-        itemImageSrc: "/img/projects/yitplus/discussion_board.webp",
-        alt: "Yit plus - Directions page | Yit plus",
-      },
-      {
-        itemImageSrc: "/img/projects/yitplus/document.webp",
-        alt: "Yit plus - document page | Yit plus",
-      },
-      {
-        itemImageSrc: "/img/projects/yitplus/one_year_warranty.webp",
-        alt: "Yit plus - One year warranty page | Yit plus",
-      },
-      {
-        itemImageSrc: "/img/projects/yitplus/service_lounge.webp",
-        alt: "Yit plus - Service lounge page | Yit plus",
-      },
-      {
-        itemImageSrc: "/img/projects/yitplus/service_request.webp",
-        alt: "Yit plus - Service request category | Yit plus",
-      },
-      {
-        itemImageSrc: "/img/projects/yitplus/service_request_category.webp",
-        alt: "Yit plus - Service request category | Yit plus",
-      },
-      {
-        itemImageSrc: "/img/projects/yitplus/admin.webp",
-        alt: "Yit plus - Admin page | Yit plus",
       },
     ],
   },
