@@ -179,7 +179,7 @@ copyright: false
                       <ul class="my-2 ml-3 text-sm">
                         <li v-for="feature in project.features" class="flex flex-row align-content-center line-height-3">
                           <i class="pi pi-verified m-2 bg-primary" alt="arrow" style="font-size: 1rem;"></i>
-                          <h4 class="m-2 text-sm">{{feature.text}}</h4>
+                          <h4 class="m-2 text-sm" v-html="sanitizedHtml(feature.text)"></h4>
                         </li>
                       </ul>
                   </AccordionTab>
@@ -193,6 +193,7 @@ copyright: false
 <script setup lang="ts">
   import { ref } from "vue";
   import { freelance } from "@data/projects.js";
+  import { sanitizedHtml } from "@utils"
   const images = ref();
   const responsiveOptions = ref([
     {

@@ -71,19 +71,11 @@ copyright: false
 import { ref, watch,computed, onMounted, nextTick } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { services } from "@data/services.js";
-import DOMPurify from 'dompurify'
+import { sanitizedHtml } from "@utils"
 
 const router = useRouter();
 const route = useRoute();
 
-const sanitizedHtml = (htmlContent: string) => {
-  const sanitized =  DOMPurify.sanitize(htmlContent, {
-    ALLOWED_TAGS: ["p", "strong", "ul", "li", "a"],
-    ALLOWED_ATTR: ["href", "target"],
-  });
-  console.log("Sanitized HTML:", sanitized);
-  return sanitized;
-};
 // Map service codes to indices
 const serviceMapping = services.reduce((acc, service, index) => {
   acc[`#${service.code}`] = index;

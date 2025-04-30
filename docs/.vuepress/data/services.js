@@ -22,7 +22,7 @@ export const services = [
     icon: "googlemeet",
     code: "consulting-and-technical-advisory",
     descriptions: [
-      "Whether you're just starting your project or facing technical challenges, I'm here to provide expert guidance and support.",
+      "Whether you're just starting your project or facing technical challenges, I'm here to provide <a href='https://cal.com/stackseekers' target='_blank'> expert guidance and support</a>.",
       " I offer consulting services to help you make informed decisions and overcome any obstacles along the way.",
     ],
   },
@@ -32,7 +32,7 @@ export const services = [
     code: "custom-web-development",
     descriptions: [
       "I design responsive and visually stunning custom web application optimized for performance and user experience.",
-      "Whether you need a simple landing page or a complex web application, I have the expertise to bring your vision to life.",
+      "Whether you need a simple landing page or a <a href='/web-development-projects/#Yit Plus'>complex web application</a>, I have the expertise to bring your vision to life.",
     ],
   },
   {
@@ -40,7 +40,7 @@ export const services = [
     icon: "postman",
     code: "API-development-and-integration",
     descriptions: [
-      "Need to integrate third-party services or develop custom APIs for your application? ",
+      "Need to integrate third-party services or <a href='/web-development-projects/#Momentum Incident Management'>develop custom APIs </a> for your application? ",
       "I specialize in creating RESTful APIs, enabling seamless communication between systems and enhancing your software's functionality.",
     ],
   },
