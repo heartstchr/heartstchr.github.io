@@ -31,7 +31,8 @@ copyright: false
                   <Image v-if="service.code" :src="`/img/service/${service.code}.webp`" class="" :alt="service.name" width="100%"/>
                   <div class="my-4 flex flex-column gap-2 line-height-3">
                       <link itemprop="applicationCategory" :href="service.schema" />
-                      <div itemprop="name" v-for= "(description, index) in service.descriptions" >    {{description}}
+                      <div itemprop="name" v-for= "(description, index) in service.descriptions" >
+                        <div v-html="sanitizedHtml(description)"></div>
                       </div>
                       <a :href="`mailto:jiwan.cse@gmail.com?subject=Inquiry : ${service.name} Services`" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4" aria-label="Send an Email"> 
                       <Button label="Book Now!" icon="pi pi-briefcase" severity="primary" raised rounded />
@@ -54,7 +55,8 @@ copyright: false
               <Image v-if="service.code" :src="`/img/service/${service.code}.webp`" class="" :alt="service.name" width="100%"/>
               <div class="my-4 flex flex-column gap-2 line-height-3">
                   <link itemprop="applicationCategory" :href="service.schema" />
-                  <div itemprop="name" v-for= "(description, index) in service.descriptions" >    {{description}}
+                  <div itemprop="name" v-for= "(description, index) in service.descriptions" >
+                    <div v-html="sanitizedHtml(description)"></div>
                   </div>
                   <a :href="`mailto:jiwan.cse@gmail.com?subject=Inquiry : ${service.name} Services`" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4" aria-label="Send an Email"> 
                   <Button label="Book Now!" icon="pi pi-briefcase" severity="primary" raised rounded />
@@ -66,14 +68,22 @@ copyright: false
 </div>
 
 <script setup lang="ts">
-import { ref, watch, onMounted, nextTick } from "vue";
+import { ref, watch,computed, onMounted, nextTick } from "vue";
 import { useRouter, useRoute } from "vue-router";
-  import { services } from "@data/services.js";
+import { services } from "@data/services.js";
+import DOMPurify from 'dompurify'
 
 const router = useRouter();
 const route = useRoute();
 
-
+const sanitizedHtml = (htmlContent: string) => {
+  const sanitized =  DOMPurify.sanitize(htmlContent, {
+    ALLOWED_TAGS: ["p", "strong", "ul", "li", "a"],
+    ALLOWED_ATTR: ["href", "target"],
+  });
+  console.log("Sanitized HTML:", sanitized);
+  return sanitized;
+};
 // Map service codes to indices
 const serviceMapping = services.reduce((acc, service, index) => {
   acc[`#${service.code}`] = index;

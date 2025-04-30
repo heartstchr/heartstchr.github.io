@@ -4,7 +4,7 @@ export const services = [
     icon: "figma",
     code: "figma-to-web",
     descriptions: [
-      "Turn your Figma designs into fully functional, dynamic websites with my expertise. Leveraging the power of VueJS, ReactJS, and their robust ecosystems, I create innovative websites tailored precisely to your requirements.",
+      `Turn your Figma designs into fully functional, dynamic websites with my expertise. Leveraging the power of VueJS, ReactJS, and their robust ecosystems, I create <a href='/web-development-projects/#SR-22 Insurance Now'> innovative websites</a> tailored precisely to your requirements.`,
       "My solutions are fully customizable and reusable, ensuring they align perfectly with your vision, while remaining exceptionally lightweight for optimal performance.",
     ],
   },
@@ -13,7 +13,7 @@ export const services = [
     icon: "shopify",
     code: "e-commerce-solutions",
     descriptions: [
-      "I specialize in building robust e-commerce platforms that empower businesses to sell their products and services online effortlessly.",
+      "I specialize in building robust <a href='/web-development-projects/#Finding The Spots'> e-commerce platforms </a> that empower businesses to sell their products and services online effortlessly.",
       "My solutions are scalable, secure, and packed with advanced features to drive sales and boost customer satisfaction.",
     ],
   },
