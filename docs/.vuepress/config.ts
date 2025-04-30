@@ -86,7 +86,7 @@ export default defineUserConfig({
     ),
     "@data": path.resolve(__dirname, "./data"),
   },
-  shouldPrefetch: true,
+  shouldPrefetch: false,
   define: {
     __VITE_YOUTUBE_API_KEY__: process.env.VITE_YOUTUBE_API_KEY,
     __VITE_YOUTUBE_CHANNEL_ID__: process.env.VITE_YOUTUBE_CHANNEL_ID,

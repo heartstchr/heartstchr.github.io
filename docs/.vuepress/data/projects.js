@@ -204,107 +204,6 @@ export const freelance = [
     ],
   },
   {
-    name: "Tech Create",
-    description: "A landing page for tech ",
-    software: "Web",
-    org: "LV",
-    year: "2025",
-    domain: "IT Service",
-    schema: "https://schema.org/BusinessApplication",
-    link: "https://techcreate.vercel.app/",
-    stack: [
-      "Vuedotjs",
-      "PrimeVue",
-      "CSS3",
-      "vercel/black/white",
-      "Eslint",
-      "Prettier",
-      "github/black/white",
-    ],
-    features: [
-      { text: "Responsive Design: Seamless experience across devices." },
-      {
-        text: "Component-Based Architecture: Efficient and scalable codebase.",
-      },
-      { text: "Modern UI/UX: Clean aesthetics with intuitive navigation" },
-    ],
-    images: [
-      {
-        itemImageSrc: "/img/home/projects/tech_create.webp",
-        alt: "landing page for tech",
-      },
-    ],
-  },
-  {
-    name: "Yit Plus",
-    description:
-      "YIT Plus is a modern digital service helping you to monitor data related to your home and apartment association.",
-    software: "Web",
-    org: "YIT",
-    year: "2025",
-    domain: "Housing company",
-    schema: "https://schema.org/DeveloperApplication",
-    link: "https://plus.yitgroup.com/",
-    stack: [
-      "Javascript",
-      "Vuedotjs",
-      "Axios",
-      "Express/black/white",
-      "nodedotjs",
-      "MongoDB",
-      "mysql",
-      "Git",
-      "mailgun",
-      "kentico",
-      "amazonec2",
-      "Eslint",
-      "Prettier",
-    ],
-    otherSkills: ["Pinia", "API integration", "tinymce"],
-    images: [
-      {
-        itemImageSrc: "/img/home/projects/YIT_plus.webp",
-        alt: "Yit plus - Login page | Yit plus",
-      },
-      {
-        itemImageSrc: "/img/projects/yitplus/login.webp",
-        alt: "Yit plus - Login page | Yit plus",
-      },
-      {
-        itemImageSrc: "/img/projects/yitplus/home.webp",
-        alt: "Yit plus - Home page | Yit plus",
-      },
-      {
-        itemImageSrc: "/img/projects/yitplus/discussion_board.webp",
-        alt: "Yit plus - Directions page | Yit plus",
-      },
-      {
-        itemImageSrc: "/img/projects/yitplus/document.webp",
-        alt: "Yit plus - document page | Yit plus",
-      },
-      {
-        itemImageSrc: "/img/projects/yitplus/one_year_warranty.webp",
-        alt: "Yit plus - One year warranty page | Yit plus",
-      },
-      {
-        itemImageSrc: "/img/projects/yitplus/service_lounge.webp",
-        alt: "Yit plus - Service lounge page | Yit plus",
-      },
-      {
-        itemImageSrc: "/img/projects/yitplus/service_request.webp",
-        alt: "Yit plus - Service request category | Yit plus",
-      },
-      {
-        itemImageSrc: "/img/projects/yitplus/service_request_category.webp",
-        alt: "Yit plus - Service request category | Yit plus",
-      },
-      {
-        itemImageSrc: "/img/projects/yitplus/admin.webp",
-        alt: "Yit plus - Admin page | Yit plus",
-      },
-    ],
-  },
-  {
     name: "Finding The Spots",
     description:
       "Say goodbye to the chaos of location scouting host, book, and create in our spaces effortlessly.",
@@ -402,6 +301,108 @@ export const freelance = [
       {
         itemImageSrc: "/img/home/projects/ABN_Amro.webp",
         alt: "Cover screen for application page",
+      },
+    ],
+  },
+  {
+    name: "Tech Create",
+    description:
+      "A landing page for digital solutions through innovative software development.",
+    software: "Web",
+    org: "LV",
+    year: "2025",
+    domain: "IT Service",
+    schema: "https://schema.org/BusinessApplication",
+    link: "https://techcreate.vercel.app/",
+    stack: [
+      "Vuedotjs",
+      "PrimeVue",
+      "CSS3",
+      "vercel/black/white",
+      "Eslint",
+      "Prettier",
+      "github/black/white",
+    ],
+    features: [
+      { text: "Responsive Design: Seamless experience across devices." },
+      {
+        text: "Component-Based Architecture: Efficient and scalable codebase.",
+      },
+      { text: "Modern UI/UX: Clean aesthetics with intuitive navigation" },
+    ],
+    images: [
+      {
+        itemImageSrc: "/img/home/projects/tech_create.webp",
+        alt: "landing page for tech",
+      },
+    ],
+  },
+  {
+    name: "Yit Plus",
+    description:
+      "YIT Plus is a modern digital service helping you to monitor data related to your home and apartment association.",
+    software: "Web",
+    org: "YIT",
+    year: "2025",
+    domain: "Housing company",
+    schema: "https://schema.org/DeveloperApplication",
+    link: "https://plus.yitgroup.com/",
+    stack: [
+      "Javascript",
+      "Vuedotjs",
+      "Axios",
+      "Express/black/white",
+      "nodedotjs",
+      "MongoDB",
+      "mysql",
+      "Git",
+      "mailgun",
+      "kentico",
+      "amazonec2",
+      "Eslint",
+      "Prettier",
+    ],
+    otherSkills: ["Pinia", "API integration", "tinymce"],
+    images: [
+      {
+        itemImageSrc: "/img/home/projects/YIT_plus.webp",
+        alt: "Yit plus - Login page | Yit plus",
+      },
+      {
+        itemImageSrc: "/img/projects/yitplus/login.webp",
+        alt: "Yit plus - Login page | Yit plus",
+      },
+      {
+        itemImageSrc: "/img/projects/yitplus/home.webp",
+        alt: "Yit plus - Home page | Yit plus",
+      },
+      {
+        itemImageSrc: "/img/projects/yitplus/discussion_board.webp",
+        alt: "Yit plus - Directions page | Yit plus",
+      },
+      {
+        itemImageSrc: "/img/projects/yitplus/document.webp",
+        alt: "Yit plus - document page | Yit plus",
+      },
+      {
+        itemImageSrc: "/img/projects/yitplus/one_year_warranty.webp",
+        alt: "Yit plus - One year warranty page | Yit plus",
+      },
+      {
+        itemImageSrc: "/img/projects/yitplus/service_lounge.webp",
+        alt: "Yit plus - Service lounge page | Yit plus",
+      },
+      {
+        itemImageSrc: "/img/projects/yitplus/service_request.webp",
+        alt: "Yit plus - Service request category | Yit plus",
+      },
+      {
+        itemImageSrc: "/img/projects/yitplus/service_request_category.webp",
+        alt: "Yit plus - Service request category | Yit plus",
+      },
+      {
+        itemImageSrc: "/img/projects/yitplus/admin.webp",
+        alt: "Yit plus - Admin page | Yit plus",
       },
     ],
   },
