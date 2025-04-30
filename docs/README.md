@@ -92,10 +92,10 @@ copyright: false
               <a :href="slotProps.data.link" target="_blank" class="no-underline">
                 <h3 class="flex flex-column align-items-start ml-2 p-0 m-0">
                   <div>
-                    <i class="pi pi-linkedin mr-1 text-blue-700" style="font-size: 1rem"></i>
+                    <i class="pi pi-linkedin mr-1 text-blue-700" style="font-size: 1rem;"></i>
                     {{ slotProps.data.name }}, 
                   </div>
-                  <div>
+                  <div class="text-sm">
                     <img :alt="slotProps.data.location" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" loading="eager" fetchpriority="high" :class="`flag flag-${slotProps.data.code.toLowerCase()} mr-1`" style="width: 18px" />
                     {{ slotProps.data.location }}
                   </div>
@@ -113,7 +113,7 @@ copyright: false
           class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button"
         >
           <span class="mr-6">
-            <i class="pi pi-linkedin" aria-label="LinkedIn Testimonials" style="font-size: 1rem"></i>
+            <i class="pi pi-linkedin" aria-label="LinkedIn Testimonials" style="font-size: 1rem; color:#0a66c2;"></i>
             LinkedIn Testimonials
           </span>
           <!-- Add circular element -->
