@@ -32,16 +32,25 @@ export const services = [
     code: "custom-web-development",
     descriptions: [
       "I design responsive and visually stunning custom web application optimized for performance and user experience.",
-      "Whether you need a simple landing page or a <a href='/web-development-projects/#Yit Plus'>complex web application</a>, I have the expertise to bring your vision to life.",
+      "Whether you need a simple landing page or a <a href='/web-development-projects/#IBRebuild for ABN AMRO BANK N.V.'>complex web application</a>, I have the expertise to bring your vision to life.",
     ],
   },
   {
     name: "API",
-    icon: "postman",
+    icon: "swagger",
     code: "API-development-and-integration",
     descriptions: [
       "Need to integrate third-party services or <a href='https://momentum-chi-brown.vercel.app/api-docs/' target='_blank'>develop custom APIs </a> for your application? ",
       "I specialize in creating RESTful APIs, enabling seamless communication between systems and enhancing your software's functionality.",
+    ],
+  },
+  {
+    name: "CICD",
+    icon: "yaml",
+    code: "ci-cd",
+    descriptions: [
+      "I specialize in designing and optimizing CI/CD pipelines to streamline your software delivery process. Utilizing tools like Jenkins, GitLab CI, <a href='https://github.com/heartstchr/heartstchr.github.io/actions/workflows/vuepress-deploy.yml' target='_blank'>Github Actions</a> I automate builds, tests, and deployments for faster, more reliable releases.",
+      "My expertise in scripting and Infrastructure as Code (IaC) enhances efficiency and scalability, allowing your development team to focus on innovation. Whether you're starting from scratch or refining existing workflows, I deliver tailored solutions that boost productivity and quality in your software projects.",
     ],
   },
   {
@@ -51,15 +60,6 @@ export const services = [
     descriptions: [
       "I offer comprehensive hosting services to ensure your applications run smoothly, securely, and efficiently. From setting up cloud infrastructure on AWS, or Azure to configuring and maintaining web servers, databases, and load balancers, I provide end-to-end solutions tailored to your needs.",
       "My expertise in containerization with Docker and orchestration with Kubernetes ensures scalable and resilient deployments. With a focus on uptime, security, and performance, I deliver hosting solutions that enable your business to thrive in the digital landscape.",
-    ],
-  },
-  {
-    name: "CICD",
-    icon: "yaml",
-    code: "ci-cd",
-    descriptions: [
-      "I specialize in designing and optimizing CI/CD pipelines to streamline your software delivery process. Utilizing tools like Jenkins, GitLab CI, I automate builds, tests, and deployments for faster, more reliable releases.",
-      "My expertise in scripting and Infrastructure as Code (IaC) enhances efficiency and scalability, allowing your development team to focus on innovation. Whether you're starting from scratch or refining existing workflows, I deliver tailored solutions that boost productivity and quality in your software projects.",
     ],
   },
 ];
