@@ -40,7 +40,7 @@ export const services = [
     icon: "postman",
     code: "API-development-and-integration",
     descriptions: [
-      "Need to integrate third-party services or <a href='/web-development-projects/#Momentum Incident Management'>develop custom APIs </a> for your application? ",
+      "Need to integrate third-party services or <a href='https://momentum-chi-brown.vercel.app/api-docs/' target='_blank'>develop custom APIs </a> for your application? ",
       "I specialize in creating RESTful APIs, enabling seamless communication between systems and enhancing your software's functionality.",
     ],
   },

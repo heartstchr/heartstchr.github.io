@@ -352,7 +352,7 @@ copyright: false
   // Function to start autoplay
   const startAutoPlay = () => {
     autoplayTimer = setInterval(() => {
-      currentPage.value = (currentPage.value + 1) % testimonials.value.length;
+      currentPage.value = (currentPage.value + 1) % testimonials.length;
     }, autoplayInterval);
   };
 

@@ -146,7 +146,7 @@ export const freelance = [
         text: "MongoDB Seeding – Easily set up initial data for a smooth start.",
       },
       {
-        text: "Swagger Documentation – <a href='https://momentum-chi-brown.vercel.app/api/status' target='_blank'>Well-documented APIs</a> for easy collaboration and scaling.",
+        text: "Swagger Documentation – <a href='https://momentum-chi-brown.vercel.app/api-docs' target='_blank'>Well-documented APIs</a> for easy collaboration and scaling.",
       },
       {
         text: "No Costly Subscriptions – A powerful alternative to expensive service management platforms",
