@@ -26,7 +26,6 @@
     "@vuepress/plugin-git": "2.0.0-rc.0",
     "@vuepress/plugin-seo": "2.0.0-rc.96",
     "axios": "^1.8.4",
-    "dompurify": "^3.2.5",
     "googleapis": "^144.0.0",
     "jsdom": "^26.1.0",
     "primeflex": "^3.3.1",
