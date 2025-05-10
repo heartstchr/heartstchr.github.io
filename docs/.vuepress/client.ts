@@ -6,6 +6,7 @@ import "primeicons/primeicons.css"; // icons
 import "primeflex/primeflex.css";
 import "./styles/flags.css";
 import YouTubeVideos from "./components/YoutubeVideos.vue";
+import Svg from "./components/Svg.vue";
 
 export default defineClientConfig({
   enhance({ app }) {
@@ -15,5 +16,6 @@ export default defineClientConfig({
       },
     });
     app.component("YouTubeVideos", YouTubeVideos);
+    app.component("Svg", Svg);
   },
 });

@@ -1,3 +1,5 @@
+import { toKebabCase } from "@utils";
+
 export const freelance = [
   {
     name: "SR-22 Insurance Now",
@@ -803,7 +805,7 @@ export const freelance = [
     ],
   },
   {
-    name: "Open Demat Account for Upstox",
+    name: "Demat Account Open",
     description: "Open a Demat Account Online: Demat Account Opening at Upstox",
     stack: [
       "Angular/black/white",
@@ -985,11 +987,10 @@ export const freelance = [
   },
 ];
 
-export const projects = [
+const baseProjects = [
   {
     name: "SR-22 Insurance Now",
     schema: "https://schema.org/BusinessApplication",
-    link: "web-development-projects/#SR-22 insurance Now",
     images: [
       {
         itemImageSrc: "/img/home/projects/sr22.webp",
@@ -1000,7 +1001,6 @@ export const projects = [
   {
     name: "Trokka Attraction",
     schema: "https://schema.org/DeveloperApplication",
-    link: "web-development-projects/#Trokka Attraction",
     images: [
       {
         itemImageSrc: "/img/projects/trokka.webp",
@@ -1011,7 +1011,6 @@ export const projects = [
   {
     name: "Momentum Incident Management",
     schema: "https://schema.org/BusinessApplication",
-    link: "web-development-projects/#Momentum Incident Management",
     images: [
       {
         itemImageSrc: "/img/home/projects/momentum_incident_management.webp",
@@ -1022,7 +1021,6 @@ export const projects = [
   {
     name: "Catch That Bus",
     schema: "https://schema.org/DeveloperApplication",
-    link: "web-development-projects/#Catch That Bus",
     images: [
       {
         itemImageSrc: "/img/projects/catchthatbus.webp",
@@ -1033,7 +1031,6 @@ export const projects = [
   {
     name: "Frontend of Tv Maze API",
     schema: "https://schema.org/BusinessApplication",
-    link: "web-development-projects/#Tv Maze",
     images: [
       {
         itemImageSrc: "/img/home/projects/tvmaze.webp",
@@ -1044,7 +1041,6 @@ export const projects = [
   {
     name: "Tech Create",
     schema: "https://schema.org/BusinessApplication",
-    link: "web-development-projects/#Tech Create",
     images: [
       {
         itemImageSrc: "/img/home/projects/tech_create.webp",
@@ -1055,7 +1051,6 @@ export const projects = [
   {
     name: "Demat Account Open",
     schema: "https://schema.org/BusinessApplication",
-    link: "web-development-projects/#Open Demat Account for Upstox",
     images: [
       {
         itemImageSrc: "/img/projects/openDemat.webp",
@@ -1066,7 +1061,6 @@ export const projects = [
   {
     name: "Call Matrix",
     schema: "https://schema.org/BusinessApplication",
-    link: "web-development-projects/#Call Matrix",
     images: [
       {
         itemImageSrc: "/img/projects/callmatrix/callmatrix.webp",
@@ -1077,7 +1071,6 @@ export const projects = [
   {
     name: "Recipes",
     schema: "https://schema.org/DeveloperApplication",
-    link: "web-development-projects/#Recipes",
     images: [
       {
         itemImageSrc: "/img/home/projects/Recipe.webp",
@@ -1086,3 +1079,8 @@ export const projects = [
     ],
   },
 ];
+
+export const projects = baseProjects.map((project) => ({
+  ...project,
+  link: `web-development-projects/#${toKebabCase(project.name)}`,
+}));

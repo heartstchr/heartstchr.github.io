@@ -31,13 +31,6 @@ copyright: false
   </div>
 </div>
 
-<script setup lanf="ts">
-  import { ref, onMounted } from 'vue';
-
-  const social= [
-    { label: 'LinkedIn', icon: 'pi pi-linkedin', url: 'https://www.linkedin.com/in/jiwanghosal/' },
-    { label: 'Youtube', icon: 'pi pi-youtube', url: 'https://www.youtube.com/@stackseekers' },
-    { label: 'Stackoverflow', icon: 'pi pi-chart-bar', url: 'https://stackoverflow.com/users/10376224/stchr?tab=profile' },
-    { label: 'Instagram', icon: 'pi pi-instagram', url: 'https://www.instagram.com/jiwan_ghosal/' },
-  ]
+<script setup lang="ts">
+  import { social } from "@data/social.js";
 </script>
