@@ -4,6 +4,9 @@
   --p-galleria-nav-icon-size: 1rem !important;
   --primary-color-text: var(--theme-color);
 }
+body {
+  font-family: 'Inter', sans-serif;
+}
 h2{
   padding-bottom: 1rem;
   border:0;

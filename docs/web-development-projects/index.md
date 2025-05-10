@@ -32,14 +32,9 @@ copyright: false
   </div>
 </div>
 
-<!-- Vertical Tabs Navigation -->
 <div class="p-d-flex p-flex-column p-mr-3">
   <div class="grid my-6 gap-8">
-    <div
-      class="vp-feature-item col-12 shadow-1 m-0 p-0"
-      v-for="(project, index) in freelance"
-      :id="project.name"
-    >
+    <div class="vp-feature-item col-12 shadow-1 m-0 p-0" v-for="(project, index) in freelance" :id="project.name">
       <Svg :id="toKebabCase(project.name)"/>
       <div>
         <div class="px-4">

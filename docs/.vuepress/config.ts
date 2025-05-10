@@ -47,6 +47,13 @@ export default defineUserConfig({
     ],
     ["meta", { "http-equiv": "Pragma", content: "no-cache" }],
     ["meta", { "http-equiv": "Expires", content: "0" }],
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter&display=swap",
+      },
+    ],
     ["link", { rel: "dns-prefetch", href: "//stackseekers.com" }],
     ["link", { rel: "dns-prefetch", href: "//heartstchr.github.io" }],
     ["link", { rel: "dns-prefetch", href: "//youtube.com" }],
