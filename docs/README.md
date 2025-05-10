@@ -23,7 +23,7 @@ copyright: false
   <div class="grid justify-content-center my-4">
     <div class="flex gap-2 p-2" v-for="stackLogo in stackLogos" :key="stackLogo.title">
       <img width="38px" height="38px" :src="`https://cdn.simpleicons.org/${stackLogo.link}`" :alt="stackLogo.title" loading="eager" fetchpriority="high"/>
-      <h3 class="hidden">{{stackLogo.title}}</h3>
+      <h3 class="sr-only">{{stackLogo.title}}</h3>
     </div>
   </div>
   <div class="gallery gap-4">
@@ -185,13 +185,13 @@ copyright: false
       <div class="border-round-2xl flex flex-column gap-2 md:p-2">
           <Accordion :activeIndex="0">
             <AccordionTab header="Q: How can I start a project with you?">
-                <h3 class="m-0 p-0 hidden">How can I start a project with you?</h3>
+                <h3 class="m-0 p-0 sr-only">How can I start a project with you?</h3>
                 <p class="mx-3">
                     You can start by <a href="https://cal.com/stackseekers" class="no-underline text-xl" aria-label="schedule a meeting">scheduling a meeting</a> with me. I’ll connect with you promptly to discuss your requirements and plan the next steps.
                 </p>
             </AccordionTab>
             <AccordionTab header="Q: What services do you provide?">
-                <h3 class="m-0 p-0 hidden">What services do you provide?</h3>
+                <h3 class="m-0 p-0 sr-only">What services do you provide?</h3>
                 <div class="mx-3 ">
                     I offer a variety of services tailored to your needs, including 
                     <a href="web-development-services/#consulting-and-technical-advisory" class="no-underline text-xl" aria-label="Custom Web Development">Custom Web Development</a>, 
@@ -203,7 +203,7 @@ copyright: false
                 </div>
             </AccordionTab>
             <AccordionTab header="Q: What does the project process look like?">
-                <h3 class="m-0 p-0 hidden">What does the project process look like?</h3>
+                <h3 class="m-0 p-0 sr-only">What does the project process look like?</h3>
                 <div class="mx-3">
                   <div class="my-4">It’s simple and straightforward: </div>
                   <Timeline :value="events" align="left"

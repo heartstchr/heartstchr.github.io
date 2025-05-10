@@ -24,7 +24,7 @@ copyright: false
         target="_blank"
         class="flex flex-row gap-2"
         >
-        <h3 class="hidden m-0 p-0">{{socialElement.label}} </h3>
+        <h3 class="sr-only m-0 p-0">{{socialElement.label}} </h3>
         <i :class="socialElement.icon" style="font-size: 1rem"></i>
         </a>
     </div>

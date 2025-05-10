@@ -54,7 +54,7 @@ copyright: false
         >
           <div class="md:col-6 col-12  px-4">
             <div class="my-2 text-l line-height-3">{{project.description}}</div>
-            <h3 class="hidden">Stack used</h3>
+            <h3 class="sr-only">Stack used</h3>
             <div class="flex grid mt-4 px-2">
               <Tag
                 style="
@@ -69,7 +69,7 @@ copyright: false
               >
                 <div class="flex items-center gap-2 px-1">
                     <img v-if="part" :src="`https://cdn.simpleicons.org/${part}`" :alt="part" :title="part"  style="width: 28px;" loading="lazy" fetchpriority="high"/>
-                    <h4 class="text-base p-0 m-0 hidden">{{part}}</h4>
+                    <h4 class="text-base p-0 m-0 sr-only">{{part}}</h4>
                 </div>
               </Tag>
               <Tag
@@ -88,38 +88,6 @@ copyright: false
                 </div>
               </Tag>
             </div>
-            <div
-              class="flex flex-row justify-content-between align-items-center gap-2"
-            >
-              <a
-                v-if="project.link"
-                :href="project.link"
-                target="_blank"
-                class="w-full flex flex-row no-underline my-4"
-              >
-                <Button
-                  label="Demo"
-                  icon="pi pi-angle-double-right"
-                  severity="primary"
-                  raised
-                  rounded
-                />
-              </a>
-              <a
-                v-if="project.codeLink"
-                :href="project.codeLink"
-                target="_blank"
-                class="w-full flex flex-row no-underline my-4"
-              >
-                <Button
-                  label="Repo"
-                  icon="pi pi-github"
-                  severity="secondary"
-                  raised
-                  rounded
-                />
-              </a>
-            </div>
           </div>
           <div class="md:col-6 col-12 px-4 pt-4">
             <link itemprop="applicationCategory" :href="project.schema" />
@@ -131,7 +99,7 @@ copyright: false
                   :numVisible="5"
                   :circular="true"
                   :showItemNavigators="true"
-                  :showThumbnails="false"
+                  :showThumbnails="true"
                   :pt="{
                     prevButton: { 'aria-label': 'Previous screen of project' },
                     nextButton: { 'aria-label': 'Next screen of project' }
@@ -145,6 +113,9 @@ copyright: false
                       loading="eager" fetchpriority="high"
                     />
                   </template>
+                  <template #thumbnail="slotProps">
+                    <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" />
+                  </template>
                 </Galleria>
               </div>
               <div class="card" v-else>
@@ -155,16 +126,66 @@ copyright: false
                   loading="eager" fetchpriority="high"
                 />
               </div>
+              <div
+                class="flex flex-row justify-content-center align-items-center gap-2 my-4"
+              >
+                <a
+                  v-if="project.contact"
+                  :href="`${project.contact} ${project.name}`"
+                  target="_blank"
+                  class="flex flex-row no-underline"
+                >
+                  <Button
+                    label="Get Custom Code"
+                    icon="pi pi-inbox"
+                    severity="secondary"
+                    raised
+                    rounded
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="flex flex-column px-4">
+        <div
+          class="flex flex-row justify-content-between align-items-center gap-2 my-4"
+        >
+          <a
+            v-if="project.link"
+            :href="project.link"
+            target="_blank"
+            class="flex flex-row no-underline"
+          >
+            <Button
+              label="Live Demo"
+              icon="pi pi-angle-double-right"
+              severity="primary"
+              raised
+              rounded
+            />
+          </a>
+          <a
+            v-if="project.codeLink"
+            :href="project.codeLink"
+            target="_blank"
+            class="flex flex-row no-underline"
+          >
+            <Button
+              label="Get Started"
+              icon="pi pi-github"
+              severity="secondary"
+              raised
+              rounded
+            />
+          </a>
+        </div>
         <div class="flex flex-column p-2" v-if="project.features">         
           <Accordion
           >
               <AccordionTab header="Features">
-                  <h3 class="my-2 text-l hidden">Features</h3>
+                  <h3 class="my-2 text-l sr-only">Features</h3>
                   <ul class="my-2 ml-3 text-sm">
                     <li v-for="feature in project.features" class="flex flex-row align-content-center line-height-3">
                       <i class="pi pi-verified m-2 bg-primary" alt="arrow" style="font-size: 1rem;"></i>

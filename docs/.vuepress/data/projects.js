@@ -11,6 +11,7 @@ export const freelance = [
     domain: "Digital Marketing",
     schema: "https://schema.org/BusinessApplication",
     link: "https://sr22insurancenow.com/",
+    contact: "mailto:jiwan.cse@gmail.com?subject=Inquiry : ",
     features: [
       {
         text: "Campaign owners need fast, dynamic, and conversion-focused websites to maximize ROI from ad campaigns.",
@@ -112,6 +113,8 @@ export const freelance = [
     domain: "IT Service",
     schema: "https://schema.org/BusinessApplication",
     link: "https://momentum-chi-brown.vercel.app/",
+    contact:
+      "https://wa.me/917026217029?text=Hi%20there%2C%20I'm%20interested%20in%20a%20custom%20code%20solution%20for%20",
     stack: [
       "vuedotjs",
       "PrimeVue",
@@ -215,6 +218,8 @@ export const freelance = [
     domain: "Leisure, travel, and tourism",
     schema: "https://schema.org/DeveloperApplication",
     link: "https://findingthespots.com/",
+    contact:
+      "https://wa.me/917026217029?text=Hi%20there%2C%20I'm%20interested%20in%20a%20custom%20code%20solution%20for%20",
     stack: [
       "Javascript",
       "Vuedotjs",
@@ -316,6 +321,8 @@ export const freelance = [
     domain: "IT Service",
     schema: "https://schema.org/BusinessApplication",
     link: "https://techcreate.vercel.app/",
+    contact:
+      "https://wa.me/917026217029?text=Hi%20there%2C%20I'm%20interested%20in%20a%20custom%20code%20solution%20for%",
     stack: [
       "Vuedotjs",
       "PrimeVue",

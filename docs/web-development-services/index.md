@@ -20,7 +20,7 @@ copyright: false
       <!-- Tab Panels -->
       <TabPanel :header="`${service.name}`" leftIcon="pi pi-home" v-for= "(service, index) in services" :id="service.code">
         <div class="shadow-1 col-12 border-round-2xl vp-feature-item p-0 overflow-hidden" itemscope itemtype="https://schema.org/SoftwareApplication">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#10b981" fill-opacity="0.1" d="M0,320L40,288C80,256,160,192,240,176C320,160,400,192,480,202.7C560,213,640,203,720,192C800,181,880,171,960,181.3C1040,192,1120,224,1200,218.7C1280,213,1360,171,1400,149.3L1440,128L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+              <Svg/>
               <div class="px-4 m-2">
                   <div class="text-4xl font-bold mb-4">
                     <h2 itemprop="name" class="text-4xl">
