@@ -554,7 +554,7 @@ export const freelance = [
     ],
   },
   {
-    name: "Tv Maze",
+    name: "Frontend of Tv Maze API",
     description: "TVmaze: Add TV information to your website or app.",
     software: "Web",
     org: "Freelance",
