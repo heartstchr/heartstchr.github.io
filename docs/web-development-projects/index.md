@@ -127,13 +127,13 @@ copyright: false
                 />
               </div>
               <div
-                class="flex flex-row justify-content-center align-items-center gap-2 my-4"
+                class="flex flex-column justify-content-center align-items-center gap-2 my-4 w-full max-w-96"
               >
                 <a
                   v-if="project.contact"
                   :href="`${project.contact} ${project.name}`"
                   target="_blank"
-                  class="flex flex-row no-underline"
+                  class="flex flex-row no-underline w-full"
                 >
                   <Button
                     label="Get Custom Code"
@@ -141,6 +141,37 @@ copyright: false
                     severity="secondary"
                     raised
                     rounded
+                    class="w-full"
+                  />
+                </a>
+                <a
+                  v-if="project.link"
+                  :href="project.link"
+                  target="_blank"
+                  class="flex flex-row no-underline w-full"
+                >
+                  <Button
+                    label="Live Demo"
+                    icon="pi pi-angle-double-right"
+                    severity="primary"
+                    raised
+                    rounded
+                    class="w-full"
+                  />
+                </a>
+                <a
+                  v-if="project.codeLink"
+                  :href="project.codeLink"
+                  target="_blank"
+                  class="flex flex-row no-underline w-full"
+                >
+                  <Button
+                    label="Get Started"
+                    icon="pi pi-github"
+                    severity="secondary"
+                    raised
+                    rounded
+                    class="w-full"
                   />
                 </a>
               </div>
@@ -149,38 +180,6 @@ copyright: false
         </div>
       </div>
       <div class="flex flex-column px-4">
-        <div
-          class="flex flex-row justify-content-between align-items-center gap-2 my-4"
-        >
-          <a
-            v-if="project.link"
-            :href="project.link"
-            target="_blank"
-            class="flex flex-row no-underline"
-          >
-            <Button
-              label="Live Demo"
-              icon="pi pi-angle-double-right"
-              severity="primary"
-              raised
-              rounded
-            />
-          </a>
-          <a
-            v-if="project.codeLink"
-            :href="project.codeLink"
-            target="_blank"
-            class="flex flex-row no-underline"
-          >
-            <Button
-              label="Get Started"
-              icon="pi pi-github"
-              severity="secondary"
-              raised
-              rounded
-            />
-          </a>
-        </div>
         <div class="flex flex-column p-2" v-if="project.features">         
           <Accordion
           >
