@@ -1,4 +1,4 @@
-import { toKebabCase } from "@utils";
+import { toKebabCase } from "../utils/index.js";
 
 export const freelance = [
   {
@@ -555,7 +555,7 @@ export const freelance = [
   },
   {
     name: "Frontend of Tv Maze API",
-    description: "TVmaze: Add TV information to your website or app.",
+    description: "TVmaze- Add TV information to your website or app.",
     software: "Web",
     org: "Freelance",
     year: "2020",
@@ -813,7 +813,7 @@ export const freelance = [
   },
   {
     name: "Demat Account Open",
-    description: "Open a Demat Account Online: Demat Account Opening at Upstox",
+    description: "Open a Demat Account Online at Upstox",
     stack: [
       "Angular/black/white",
       "MongoDB",

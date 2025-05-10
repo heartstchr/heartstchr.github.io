@@ -91,6 +91,10 @@ export default defineUserConfig({
       __dirname,
       "./components/NavbarBrand.vue"
     ),
+    "@theme-hope/modules/navbar/components/Sidebar": path.resolve(
+      __dirname,
+      "./components/Sidebar.vue"
+    ),
     "@data": path.resolve(__dirname, "./data"),
     "@utils": path.resolve(__dirname, "./utils"),
   },

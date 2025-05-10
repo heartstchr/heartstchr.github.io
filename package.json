@@ -4,6 +4,7 @@
   "description": "Experienced full-stack freelance developer specializing in scalable web, mobile, and software solutions",
   "type": "module",
   "scripts": {
+    "prebuild": "node docs/.vuepress/generate-project-pages.js",
     "docs:build": "vuepress build docs --clean-cache",
     "docs:clean-dev": "vuepress dev docs --clean-cache",
     "docs:dev": "vuepress dev docs",

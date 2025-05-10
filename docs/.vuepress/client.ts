@@ -7,6 +7,9 @@ import "primeflex/primeflex.css";
 import "./styles/flags.css";
 import YouTubeVideos from "./components/YoutubeVideos.vue";
 import Svg from "./components/Svg.vue";
+import ProjectDetail from "./components/ProjectDetail.vue";
+import ProjectPage from "./components/ProjectPage.vue";
+import ProjectCard from "./components/ProjectCard.vue";
 
 export default defineClientConfig({
   enhance({ app }) {
@@ -17,5 +20,8 @@ export default defineClientConfig({
     });
     app.component("YouTubeVideos", YouTubeVideos);
     app.component("Svg", Svg);
+    app.component("ProjectDetail", ProjectDetail);
+    app.component("ProjectPage", ProjectPage);
+    app.component("ProjectCard", ProjectCard);
   },
 });
