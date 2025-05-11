@@ -1,4 +1,4 @@
-name: Deploy Docs
+name: Deploy Stackseekers.com
 
 on:
   push:
@@ -16,13 +16,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          # if your docs needs submodules, uncomment the following line
-          # submodules: true
-      - name: Print VITE_YOUTUBE_API_KEY
-        run: echo "${{secrets.VITE_YOUTUBE_API_KEY}}"
-
-      - name: Print VITE_YOUTUBE_CHANNEL_ID
-        run: echo "${{secrets.VITE_YOUTUBE_CHANNEL_ID}}"
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
@@ -55,3 +48,4 @@ jobs:
           # Deploy Docs
           branch: gh-pages
           folder: docs/.vuepress/dist
+          clean: true
