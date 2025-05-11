@@ -38,6 +38,9 @@ export default hopeTheme(
     },
     plugins: {
       seo: true,
+      sitemap: {
+        changefreq: "hourly",
+      },
       blog: false,
       git: {
         contributors: false, // Disable contributors list

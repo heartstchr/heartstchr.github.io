@@ -10,6 +10,9 @@ import Svg from "./components/Svg.vue";
 import ProjectDetail from "./components/ProjectDetail.vue";
 import ProjectPage from "./components/ProjectPage.vue";
 import ProjectCard from "./components/ProjectCard.vue";
+import Stacks from "./components/Stacks.vue";
+import Features from "./components/Features.vue";
+import CardHeader from "./components/CardHeader.vue";
 
 export default defineClientConfig({
   enhance({ app }) {
@@ -23,5 +26,8 @@ export default defineClientConfig({
     app.component("ProjectDetail", ProjectDetail);
     app.component("ProjectPage", ProjectPage);
     app.component("ProjectCard", ProjectCard);
+    app.component("Stacks", Stacks);
+    app.component("Features", Features);
+    app.component("CardHeader", CardHeader);
   },
 });

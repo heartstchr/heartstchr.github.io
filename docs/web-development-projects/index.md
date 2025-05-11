@@ -37,24 +37,12 @@ copyright: false
       v-for="(project, index) in freelance"
       :key="index"
       :project="project"
+      :showHeader=true
     />
   </div>
 </div>
 
 <script setup lang="ts">
-  import { ref } from "vue";
   import { freelance } from "@data/projects.js";
   import { toKebabCase } from "@utils";
-  const images = ref();
-  const responsiveOptions = ref([
-    {
-      breakpoint: "1300px",
-      numVisible: 4,
-    },
-    {
-      breakpoint: "575px",
-      numVisible: 1,
-    },
-  ]);
-  
 </script>

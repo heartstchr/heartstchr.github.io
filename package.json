@@ -5,10 +5,9 @@
   "type": "module",
   "scripts": {
     "prebuild": "node docs/.vuepress/generate-project-pages.js",
-    "docs:build": "vuepress build docs --clean-cache",
-    "docs:clean-dev": "vuepress dev docs --clean-cache",
-    "docs:dev": "vuepress dev docs",
-    "docs:run": "http-server docs/.vuepress/dist "
+    "build": "vuepress build docs --clean-cache",
+    "dev": "vuepress dev docs --clean-cache",
+    "start": "http-server docs/.vuepress/dist "
   },
   "devDependencies": {
     "@types/node": "^20.17.30",

@@ -102,5 +102,5 @@ export default defineUserConfig({
   define: {
     __VITE_YOUTUBE_API_KEY__: process.env.VITE_YOUTUBE_API_KEY,
     __VITE_YOUTUBE_CHANNEL_ID__: process.env.VITE_YOUTUBE_CHANNEL_ID,
-  },
+  }
 });

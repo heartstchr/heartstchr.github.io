@@ -33,19 +33,18 @@ jobs:
         run: |
           pnpm install --frozen-lockfile
 
-      - name: Build Docs
+      - name: Build Web
         env:
           NODE_OPTIONS: --max_old_space_size=8192
           VITE_YOUTUBE_API_KEY: ${{secrets.VITE_YOUTUBE_API_KEY}}
           VITE_YOUTUBE_CHANNEL_ID: ${{secrets.VITE_YOUTUBE_CHANNEL_ID}}
         run: |-
-          pnpm run docs:build
+          pnpm run build
           > docs/.vuepress/dist/.nojekyll
 
-      - name: Deploy Docs
+      - name: Deploy web
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          # Deploy Docs
           branch: gh-pages
           folder: docs/.vuepress/dist
           clean: true
