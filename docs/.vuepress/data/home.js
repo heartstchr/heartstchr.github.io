@@ -96,7 +96,6 @@ export const testimonials = [
     code: "nl",
   },
 ];
-
 export const whyme = [
   {
     id: "proven_expertise",
@@ -123,3 +122,42 @@ export const whyme = [
       "I ensure all code is clean, scalable, and efficient by using industry-standard tools such as ESLint, Prettier, SonarQube, and Jest, delivering high-performance, maintainable, and reliable solutions.",
   },
 ];
+export const stackLogos = [
+  {
+    link: "html5",
+    title: "html5",
+  },
+  {
+    link: "javascript",
+    title: "Javascript",
+  },
+  {
+    link: "vuedotjs",
+    title: "vuejs",
+  },
+  {
+    link: "react",
+    title: "ReactJS",
+  },
+  {
+    link: "nodedotjs",
+    title: "NodeJs",
+  },
+  {
+    link: "tailwindcss",
+    title: "tailwindcss",
+  },
+  {
+    link: "typescript",
+    title: "Typescript",
+  },
+  {
+    link: "mongodb",
+    title: "MongoDb",
+  },
+  {
+    link: "lighthouse",
+    title: "lighthouse",
+  },
+];
+

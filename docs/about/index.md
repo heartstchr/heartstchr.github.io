@@ -122,7 +122,7 @@ copyright: false
       Ready to turn your vision into reality? Let’s discuss how I can help you achieve your goals.
     </h3>
     <div class="my-4">
-      <a href="mailto:jiwan.cse@gmail.com?subject=Make%20it%20for%20me" size="large" color="deeppink" class="flex justify-content-center text-center no-underline" aria-label="Send an Email"> 
+      <a href="mailto:jiwan.cse@gmail.com?subject=Make%20it%20for%20me" size="large" class="flex justify-content-center text-center no-underline" aria-label="Send an Email"> 
         <Button label="Make It Happen!" icon="pi pi-briefcase" severity="primary" raised rounded />
       </a>
     </div>

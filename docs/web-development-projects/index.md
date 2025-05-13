@@ -18,7 +18,6 @@ copyright: false
     <a
       href="https://cal.com/stackseekers"
       size="large"
-      color="deeppink"
       class="flex justify-content-center text-center no-underline mt-4"
     >
       <Button

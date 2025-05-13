@@ -19,7 +19,7 @@ copyright: false
     <TabView class="p-tabview-vertical md:flex hidden" :activeIndex="activeTabIndex" @tab-change="onTabChange">
       <!-- Tab Panels -->
       <TabPanel :header="`${service.name}`" leftIcon="pi pi-home" v-for= "(service, index) in services" :id="service.code">
-        <div class="shadow-1 col-12 border-round-2xl vp-feature-item p-0 overflow-hidden" itemscope itemtype="https://schema.org/SoftwareApplication">
+        <div class="shadow-1 col-12 border-round-md vp-feature-item p-0 overflow-hidden" itemscope itemtype="https://schema.org/SoftwareApplication">
               <Svg/>
               <div class="px-4 m-2">
                   <div class="text-4xl font-bold mb-4">
@@ -34,7 +34,7 @@ copyright: false
                       <div itemprop="name" v-for= "(description, index) in service.descriptions" >
                         <div v-html="description"></div>
                       </div>
-                      <a :href="`mailto:jiwan.cse@gmail.com?subject=Inquiry : ${service.name} Services`" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4" aria-label="Send an Email"> 
+                      <a :href="`mailto:jiwan.cse@gmail.com?subject=Inquiry : ${service.name} Services`" size="large" class="flex justify-content-center text-center no-underline mt-4" aria-label="Send an Email"> 
                       <Button label="Book Now!" icon="pi pi-briefcase" severity="primary" raised rounded />
                       </a>
                   </div>
@@ -43,7 +43,7 @@ copyright: false
       </TabPanel>
     </TabView>
   <div class="grid my-6 md:col-6 p-0 md:hidden flex" :class="[{ 'md:col-12' : (index === services.length-1 || index === 0 || index === 3) }]" v-for= "(service, index) in services" :id="service.code">
-      <div class="shadow-1 col-12 border-round-2xl vp-feature-item p-0 overflow-hidden" itemscope itemtype="https://schema.org/SoftwareApplication">
+      <div class="shadow-1 col-12 border-round-md vp-feature-item p-0 overflow-hidden" itemscope itemtype="https://schema.org/SoftwareApplication">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#10b981" fill-opacity="0.1" d="M0,320L40,288C80,256,160,192,240,176C320,160,400,192,480,202.7C560,213,640,203,720,192C800,181,880,171,960,181.3C1040,192,1120,224,1200,218.7C1280,213,1360,171,1400,149.3L1440,128L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
           <div class="px-4 m-2">
               <div class="text-4xl font-bold mb-4">
@@ -58,7 +58,7 @@ copyright: false
                   <div itemprop="name" v-for= "(description, index) in service.descriptions" >
                     <div v-html="description"></div>
                   </div>
-                  <a :href="`mailto:jiwan.cse@gmail.com?subject=Inquiry : ${service.name} Services`" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4" aria-label="Send an Email"> 
+                  <a :href="`mailto:jiwan.cse@gmail.com?subject=Inquiry : ${service.name} Services`" size="large" class="flex justify-content-center text-center no-underline mt-4" aria-label="Send an Email"> 
                   <Button label="Book Now!" icon="pi pi-briefcase" severity="primary" raised rounded />
                   </a>
               </div>

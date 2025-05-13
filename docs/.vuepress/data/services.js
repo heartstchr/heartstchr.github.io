@@ -4,7 +4,7 @@ export const services = [
     icon: "figma",
     code: "figma-to-web",
     descriptions: [
-      `Turn your Figma designs into fully functional, dynamic websites with my expertise. Leveraging the power of VueJS, ReactJS, and their robust ecosystems, I create <a href='/web-development-projects/#sr-22-insurance-now'> innovative websites</a> tailored precisely to your requirements.`,
+      `Turn your Figma designs into fully functional, dynamic websites with my expertise. Leveraging the power of VueJS, ReactJS, and their robust ecosystems, I create <a href='/web-development-projects/sr-22-insurance-now/'> innovative websites</a> tailored precisely to your requirements.`,
       "My solutions are fully customizable and reusable, ensuring they align perfectly with your vision, while remaining exceptionally lightweight for optimal performance.",
     ],
   },
@@ -13,7 +13,7 @@ export const services = [
     icon: "shopify",
     code: "e-commerce-solutions",
     descriptions: [
-      "I specialize in building robust <a href='/web-development-projects/#finding-the-spots'> e-commerce platforms </a> that empower businesses to sell their products and services online effortlessly.",
+      "I specialize in building robust <a href='/web-development-projects/finding-the-spots/'> e-commerce platforms </a> that empower businesses to sell their products and services online effortlessly.",
       "My solutions are scalable, secure, and packed with advanced features to drive sales and boost customer satisfaction.",
     ],
   },
@@ -32,7 +32,7 @@ export const services = [
     code: "custom-web-development",
     descriptions: [
       "I design responsive and visually stunning custom web application optimized for performance and user experience.",
-      "Whether you need a simple landing page or a <a href='/web-development-projects/#ibrebuild-for-abn-amro-bank-n-v'>complex web application</a>, I have the expertise to bring your vision to life.",
+      "Whether you need a simple landing page or a <a href='/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/'>complex web application</a>, I have the expertise to bring your vision to life.",
     ],
   },
   {

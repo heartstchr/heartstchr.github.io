@@ -1069,5 +1069,5 @@ const baseProjects = [
 
 export const projects = baseProjects.map((project) => ({
   ...project,
-  link: `web-development-projects/#${toKebabCase(project.name)}`,
+  link: `web-development-projects/${toKebabCase(project.name)}/`,
 }));

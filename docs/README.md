@@ -39,7 +39,7 @@ copyright: false
     </div>
   </div>
   <div class="text-center pb-4 grid justify-content-center gap-4">
-    <a href="/about/#stack" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
+    <a href="/about/#stack" size="large" class="flex justify-content-center text-center no-underline mt-4"> 
       <div class="p-flex p-ai-center">
         <div
           class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button"
@@ -54,7 +54,7 @@ copyright: false
         </div>
       </div>
     </a>
-    <a href="/web-development-projects/" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
+    <a href="/web-development-projects/" size="large" class="flex justify-content-center text-center no-underline mt-4"> 
       <div class="p-flex p-ai-center">
         <div
           class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button"
@@ -107,7 +107,7 @@ copyright: false
     </Carousel>
   </div>
   <div class="text-center pb-4">
-    <a href="https://www.linkedin.com/in/jiwanghosal/details/recommendations/" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4"> 
+    <a href="https://www.linkedin.com/in/jiwanghosal/details/recommendations/" size="large" class="flex justify-content-center text-center no-underline mt-4"> 
       <div class="p-flex p-ai-center">
         <div
           class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button"
@@ -180,52 +180,49 @@ copyright: false
   <div class="text-center pb-4">
     <div class="text-4xl font-bold line-height-2"><h2>Frequently asked <span class="bg-primary">questions</span></h2></div>
   </div>
-  <div class="grid overflow-hidden border-round-2xl">
+  <div class="grid overflow-hidden border-round-md">
     <div class="col-12 ">
-      <div class="border-round-2xl flex flex-column gap-2 md:p-2">
-          <Accordion :activeIndex="0">
-            <AccordionTab header="Q: How can I start a project with you?">
-                <h3 class="m-0 p-0 sr-only">How can I start a project with you?</h3>
-                <p class="mx-3">
-                    You can start by <a href="https://cal.com/stackseekers" class="no-underline text-xl" aria-label="schedule a meeting">scheduling a meeting</a> with me. I’ll connect with you promptly to discuss your requirements and plan the next steps.
-                </p>
-            </AccordionTab>
-            <AccordionTab header="Q: What services do you provide?">
-                <h3 class="m-0 p-0 sr-only">What services do you provide?</h3>
-                <div class="mx-3 ">
-                    I offer a variety of services tailored to your needs, including 
-                    <a href="web-development-services/#consulting-and-technical-advisory" class="no-underline text-xl" aria-label="Custom Web Development">Custom Web Development</a>, 
-                    <a href="web-development-services/#e-commerce-solutions" class="no-underline text-xl" aria-label="E-commerce Solutions">E-commerce Solutions</a>, 
-                    <a href="web-development-services/#API-development-and-integration" class="no-underline text-xl" aria-label="API Development and Integration">API Development and Integration </a>, 
-                    <a href="web-development-services/#figma-to-web" class="no-underline text-xl" aria-label="Figma to Web Conversion">Figma to Web Conversion</a>, and 
-                    <a href="web-development-services/#hosting" class="no-underline text-xl" aria-label="Hosting & Deployment">Hosting & Deployment</a>. 
-                    <div class="mt-2">Let’s find the best solution for your project!</div>
-                </div>
-            </AccordionTab>
-            <AccordionTab header="Q: What does the project process look like?">
-                <h3 class="m-0 p-0 sr-only">What does the project process look like?</h3>
-                <div class="mx-3">
-                  <div class="my-4">It’s simple and straightforward: </div>
-                  <Timeline :value="events" align="left"
-                      :pt="{
-                        eventOpposite: { style: { padding: 0, flex: 0 } },
-                        marker: { style: { backgroundColor: '#FFA500' } },
-                        connector: { style: { backgroundColor: '#FFA500' } },
-                        content: { style: { padding: '4px, 2px' } }
-                      }">
-                    <template #opposite="slotProps">
-                      <small class="p-text-secondary"></small>
-                    </template>
-                    <template #content="slotProps">
-                      {{ slotProps.item.status }}
-                    </template>
-                  </Timeline>
-                </div>
-                <div></div>
-            </AccordionTab>
-        </Accordion>
+      <div class="border-round-md flex flex-column gap-2 md:p-2">
+        <div class="p-4 border-round-md border-1 border-primary">
+          <h3 class="m-0 p-0 font-bold">How can I start a project with you?</h3>
+          <p class="mx-3">
+              You can start by <a href="https://cal.com/stackseekers" class="no-underline text-xl" aria-label="schedule a meeting">scheduling a meeting</a> with me. I’ll connect with you promptly to discuss your requirements and plan the next steps.
+          </p>
+        </div>
+        <div class="p-4 border-round-md border-1 border-primary">
+          <h3 class="mt-0 p-0 font-bold">What services do you provide?</h3>
+          <div class="mx-3">
+            I offer a variety of services tailored to your needs, including 
+            <a href="web-development-services/consulting-and-technical-advisory/" class="no-underline text-xl" aria-label="Custom Web Development">Custom Web Development</a>, 
+            <a href="web-development-services/e-commerce-solutions/" class="no-underline text-xl" aria-label="E-commerce Solutions">E-commerce Solutions</a>, 
+            <a href="web-development-services/API-development-and-integration/" class="no-underline text-xl" aria-label="API Development and Integration">API Development and Integration </a>, 
+            <a href="web-development-services/figma-to-web/" class="no-underline text-xl" aria-label="Figma to Web Conversion">Figma to Web Conversion</a>, and 
+            <a href="web-development-services/hosting/" class="no-underline text-xl" aria-label="Hosting & Deployment">Hosting & Deployment</a>. 
+            <p class="mt-2">Let’s find the best solution for your project!</p>
+          </div>
+        </div>
+        <div class="p-4 border-round-md border-1 border-primary">
+          <h3 class="mt-0 p-0 font-bold">What does the project process look like?</h3>
+          <div class="mx-3">
+            <div class="my-4">It’s simple and straightforward: </div>
+            <Timeline :value="events" align="left"
+                :pt="{
+                  eventOpposite: { style: { padding: 0, flex: 0 } },
+                  marker: { style: { backgroundColor: '#FFA500' } },
+                  connector: { style: { backgroundColor: '#FFA500' } },
+                  content: { style: { padding: '4px, 2px' } }
+                }">
+              <template #opposite="slotProps">
+                <small class="p-text-secondary"></small>
+              </template>
+              <template #content="slotProps">
+                {{ slotProps.item.status }}
+              </template>
+            </Timeline>
+          </div>
+        </div>
         <div class="my-4">
-          <a href="https://cal.com/stackseekers" size="large" color="deeppink" class="flex justify-content-center text-center no-underline mt-4" aria-label="scheduling a meeting"> 
+          <a href="https://cal.com/stackseekers" size="large" class="flex justify-content-center text-center no-underline mt-4" aria-label="scheduling a meeting"> 
             <Button label="Discuss your project" icon="pi pi-calendar-clock" severity="primary" raised rounded/>
           </a>
         </div>
@@ -248,7 +245,7 @@ copyright: false
       I'm always excited to tackle new challenges and bring ideas to life. If you’re searching for a committed full-stack developer to make your vision a reality, don’t hesitate to get in touch - I’d love to collaborate!
     </div>
     <div class="my-4">
-      <a href="mailto:jiwan.cse@gmail.com?subject=Inquiry:%20collaborate%20now" size="large" color="deeppink" class="flex justify-content-center text-center no-underline" aria-label="Send an Email"> 
+      <a href="mailto:jiwan.cse@gmail.com?subject=Inquiry:%20collaborate%20now" size="large" class="flex justify-content-center text-center no-underline" aria-label="Send an Email"> 
         <Button label="Let's collaborate now!" icon="pi pi-briefcase" severity="primary" raised rounded />
       </a>
     </div>
@@ -272,7 +269,7 @@ copyright: false
   import { ref, onMounted, onBeforeUnmount, computed } from "vue";
   import { projects } from "@data/projects.js";
   import { social } from "@data/social.js";
-  import { events, orgs, testimonials , whyme} from "@data/home.js";
+  import { stackLogos, events, orgs, testimonials , whyme} from "@data/home.js";
   // Current page and autoplay interval
   const currentPage = ref(0);
   const autoplayInterval = 5000;
@@ -308,46 +305,6 @@ copyright: false
 
   const getImage = () =>
     `background-image: url('/img/home/faq.webp');  background-repeat: no-repeat; background-size: cover;`;
-
-  const stackLogos = [
-    {
-      link: "html5",
-      title: "html5",
-    },
-    {
-      link: "javascript",
-      title: "Javascript",
-    },
-    {
-      link: "vuedotjs",
-      title: "vuejs",
-    },
-    {
-      link: "react",
-      title: "ReactJS",
-    },
-    {
-      link: "nodedotjs",
-      title: "NodeJs",
-    },
-    {
-      link: "tailwindcss",
-      title: "tailwindcss",
-    },
-    {
-      link: "typescript",
-      title: "Typescript",
-    },
-    {
-      link: "mongodb",
-      title: "MongoDb",
-    },
-    {
-      link: "lighthouse",
-      title: "lighthouse",
-    },
-  ];
-
 
   // Function to start autoplay
   const startAutoPlay = () => {
