@@ -130,7 +130,7 @@ copyright: false
 
 <div class="my-6 flex flex-column">
   <div class="text-center pb-4">
-    <div class="text-4xl font-bold"><h2>Why choose<span class="bg-primary">me?</span></h2></div>
+    <div class="text-4xl font-bold"><h2>Why choose <span class="bg-primary">me?</span></h2></div>
     <div class="my-4 text-xl line-height-2">Here’s why I’m the right choice for your project</div>
   </div>
   <div class="flex flex-wrap">
