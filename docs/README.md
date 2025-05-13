@@ -240,7 +240,7 @@ copyright: false
   <div>
     <div class="text-center pb-4">
       <h3>
-        <div class="text-4xl font-bold">NEED A FULL STACK WEB DEVELOPER?</div>
+        <div class="text-4xl font-bold">Need a full-stack web developer?</div>
       </h3>
       <div class="my-4 text-md">Let's work together!</div>
     </div>

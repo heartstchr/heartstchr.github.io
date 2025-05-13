@@ -1036,26 +1036,6 @@ const baseProjects = [
     ],
   },
   {
-    name: "Frontend of Tv Maze API",
-    schema: "https://schema.org/BusinessApplication",
-    images: [
-      {
-        itemImageSrc: "/img/home/projects/tvmaze.webp",
-        alt: "Frontend of Tv Maze API",
-      },
-    ],
-  },
-  {
-    name: "Tech Create",
-    schema: "https://schema.org/BusinessApplication",
-    images: [
-      {
-        itemImageSrc: "/img/home/projects/tech_create.webp",
-        alt: "landing page for tech",
-      },
-    ],
-  },
-  {
     name: "Demat Account Open",
     schema: "https://schema.org/BusinessApplication",
     images: [
