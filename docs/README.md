@@ -4,7 +4,7 @@ title: Web Developer
 description: Stack Seekers is a full-stack web development agency helping startups and businesses build modern, high-performance websites and web applications. From idea to launch, we turn your vision into powerful digital solutions. Expert Vue.js, React.js, and Node.js developer delivering scalable web, mobile, and software solutions with 𝙈𝙀𝙍𝙉 and 𝙈𝙀𝙑𝙉 stacks (MongoDB, Express, React/Vue, Next/Nuxt, Node.js).
 heroImage: /img/home/jiwanghosal.webp
 heroText: Hi, Stack Seekers
-tagline: Full-stack consultant specializing in scalable web, mobile, and software solutions using MERN and MEVN stacks. Let’s bring your ideas to life, connect with me today!
+tagline: I'm a full-stack consultant specializing in scalable web, mobile, and software solutions built with the MERN and MEVN stacks. I help businesses turn ideas into powerful digital products. Let’s bring your ideas to life, connect with me today!
 containerClass: fancy-container
 actions:
   - text: Book free consultation
@@ -39,36 +39,16 @@ copyright: false
     </div>
   </div>
   <div class="text-center pb-4 grid justify-content-center gap-4">
-    <a href="/about/#stack" size="large" class="flex justify-content-center text-center no-underline mt-4"> 
-      <div class="p-flex p-ai-center">
-        <div
-          class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button"
-        >
-          <span class="mr-6">See all stacks</span>
-          <!-- Add circular element -->
-          <div class="absolute right-0 mr-5">
-            <div class="circle pb-2 my-2 mx-2"></div>
-            <div class="circle pt-2 my-2 mx-2"></div>
-          </div>
-          <i class="pi pi-angle-double-right" alt="arrow" style="font-size: 1rem;"></i>
-        </div>
-      </div>
-    </a>
-    <a href="/web-development-projects/" size="large" class="flex justify-content-center text-center no-underline mt-4"> 
-      <div class="p-flex p-ai-center">
-        <div
-          class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button"
-        >
-          <span class="mr-6">See all projects</span>
-          <!-- Add circular element -->
-          <div class="absolute right-0 mr-5">
-            <div class="circle pb-2 my-2 mx-2"></div>
-            <div class="circle pt-2 my-2 mx-2"></div>
-          </div>
-          <i class="pi pi-angle-double-right" style="font-size: 1rem;"></i>
-        </div>
-      </div>
-    </a>
+    <CustomButton href="/about/#stack" label="Explore Tech Stack">
+      <template #icon>
+        <Circles />
+      </template>
+    </CustomButton>
+    <CustomButton href="/web-development-projects/" label="Explore Projects">
+      <template #icon>
+        <Circles />
+      </template>
+    </CustomButton>
   </div>
 </div>
 
@@ -76,7 +56,7 @@ copyright: false
 <div class="my-6">
   <div class="text-center pb-4">
     <div class="text-4xl font-bold"><h2>Trusted by <div class="text-4xl font-bold bg-primary">World Wide</div></h2></div>
-    <div class="my-4 text-xl line-height-2">I value every client as a strategic partner. Here’s what they’ve shared about their experience working with me.</div>
+    <h3 class="my-4 text-xl line-height-2">Client Testimonials: See how partners describe their experience collaborating with me on innovative digital solutions.</h3>
   </div>
   <div class="card relative md:mx-0 -mx-4" @mouseenter="pauseAutoPlay"
     @mouseleave="resumeAutoPlay">
@@ -113,14 +93,10 @@ copyright: false
           class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button"
         >
           <span class="mr-6">
-            <i class="pi pi-linkedin" aria-label="LinkedIn Testimonials" style="font-size: 1rem; color:#0a66c2;"></i>
-            LinkedIn Testimonials
+            <i class="pi pi-linkedin" aria-label="View LinkedIn Reviews" style="font-size: 1rem; color:#0a66c2;"></i>
+            View LinkedIn Reviews
           </span>
-          <!-- Add circular element -->
-          <div class="absolute right-0 mr-5">
-            <div class="circle pb-2 my-2 mx-2"></div>
-            <div class="circle pt-2 my-2 mx-2"></div>
-          </div>
+          <Circles/>
           <i class="pi pi-angle-double-right" style="font-size: 1rem;"></i>
         </div>
       </div>
@@ -233,7 +209,7 @@ copyright: false
 
 <!-- Contact Me -->
 <div class="border-round-md vp-feature-item" id="contact">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 60 1440 260"><path fill="#10b981" fill-opacity="0.1" d="M0,128L40,144C80,160,160,192,240,192C320,192,400,160,480,160C560,160,640,192,720,176C800,160,880,96,960,80C1040,64,1120,96,1200,144C1280,192,1360,256,1400,288L1440,320L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+  <Svg />
   <div>
     <div class="text-center pb-4">
       <h3>
@@ -249,7 +225,7 @@ copyright: false
         <Button label="Let's collaborate now!" icon="pi pi-briefcase" severity="primary" raised rounded />
       </a>
     </div>
-    <div class="flex flex-row justify-content-end flex-wrap gap-4 mx-6 ">
+    <div class="flex flex-row justify-content-end flex-wrap gap-4 m-6 ">
       <a
         v-for="(socialElement, socialIndex) in social"
         :key="socialIndex"
@@ -262,7 +238,6 @@ copyright: false
       </a>
     </div>
   </div>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 60 1440 220" class="-mb-1"><path fill="#10b981" fill-opacity="0.1" d="M0,128L40,144C80,160,160,192,240,192C320,192,400,160,480,160C560,160,640,192,720,176C800,160,880,96,960,80C1040,64,1120,96,1200,144C1280,192,1360,256,1400,288L1440,320L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
 </div>
 
 <script setup lang="ts">
