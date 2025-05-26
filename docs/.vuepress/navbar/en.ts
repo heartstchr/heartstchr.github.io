@@ -43,7 +43,7 @@ export const enNavbar = navbar([
     ],
   },
   { text: "About", icon: "pi pi-user", link: "/about/" },
-  { text: "Blog", icon: "pi pi-user", link: "/blog/" },
+  { text: "Blog", icon: "pi pi-user", link: "/posts/" },
   {
     text: "Videos",
     icon: "pi pi-youtube",
