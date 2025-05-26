@@ -41,7 +41,7 @@ export default hopeTheme(
       sitemap: {
         changefreq: "hourly",
       },
-      blog: false,
+      blog: true,
       git: {
         contributors: false, // Disable contributors list
       },

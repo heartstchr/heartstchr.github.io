@@ -15,6 +15,7 @@ import ProjectCard from "./components/ProjectCard.vue";
 import Stacks from "./components/Stacks.vue";
 import Features from "./components/Features.vue";
 import CardHeader from "./components/CardHeader.vue";
+import BlogList from "./components/BlogList.vue";
 
 export default defineClientConfig({
   enhance({ app }) {
@@ -33,5 +34,6 @@ export default defineClientConfig({
     app.component("Stacks", Stacks);
     app.component("Features", Features);
     app.component("CardHeader", CardHeader);
+    app.component("BlogList", BlogList);
   },
 });

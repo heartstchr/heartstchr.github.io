@@ -199,7 +199,7 @@ copyright: false
         </div>
         <div class="my-4">
           <a href="https://cal.com/stackseekers" size="large" class="flex justify-content-center text-center no-underline mt-4" aria-label="scheduling a meeting"> 
-            <Button label="Discuss your project" icon="pi pi-calendar-clock" severity="primary" raised rounded/>
+            <Button label="Hire Me" icon="pi pi-calendar-clock" severity="primary" raised rounded/>
           </a>
         </div>
       </div>
