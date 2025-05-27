@@ -247,7 +247,7 @@ copyright: false
   import { stackLogos, events, orgs, testimonials , whyme} from "@data/home.js";
   // Current page and autoplay interval
   const currentPage = ref(0);
-  const autoplayInterval = 5000;
+  const autoplayInterval = 10000;
   let autoplayTimer = null;
   const visible = ref(false);
   const onVisible = () => {
