@@ -1,9 +1,10 @@
-<!-- filepath: /Users/stchr/Documents/all/repo/heartstchr.github.io vuepress/docs/.vuepress/components/BlogList.vue -->
 <template>
-    <ul class="blog-list flex flex-row">
-      <li v-for="item in items" :key="item.link" class="mb-6 col-6">
-        <div class="text-xs text-gray-500 mb-1">
-          <h3>
+  <ul class="blog-list flex flex-row flex-wrap">
+    <li v-for="item in items" :key="item.link" class="mb-6 md:col-6">
+      <div class="vp-feature-item col-12 shadow-1 m-0 p-0">
+        <Svg />
+        <div class="text-xs text-gray-500 mb-1 p-2">
+          <h3 class="mt-0">
             <a :href="item.link">{{ item.title }}</a>
           </h3>
           <div>
@@ -12,9 +13,10 @@
           </div>
           <p class="text-sm text-gray-700">{{ item.summary }}</p>
         </div>
-      </li>
-    </ul>
-  </template>
+      </div>
+    </li>
+  </ul>
+</template>
   
   <script setup>
   defineProps({

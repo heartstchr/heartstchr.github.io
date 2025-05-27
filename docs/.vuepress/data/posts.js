@@ -1,0 +1,23 @@
+export const posts = [
+  {
+    title: "How CSS Impacts Your Brain- 7 Ways to Optimize Web Design",
+    link: "/posts/how-css-impacts-your-brain-7-ways-to-optimize-web-design/",
+    date: "2024-05-27",
+    summary:
+      "Have you ever visited a website that felt chaotic—tiny fonts, clashing colors, or a cluttered layout that made your brain hurt? Poor design can overwhelm users, but with **CSS (Cascading Style Sheets)**, you can create a visually appealing, brain-friendly website that enhances user experience.",
+  },
+  {
+    title: "How to Make a Portfolio Website for Free in 2025 Using VuePress",
+    link: "/posts/how-to-make-a-portfolio-website-for-free-in-2025-using-vuepress/",
+    date: "2024-05-26",
+    summary:
+      "VuePress is a markdown-centered static site generator. You can write your content in Markdown, and then VuePress will help you generate a static site to host it. And host it on GitHub pages for free.How to create a free portfolio website template for an organisation or freelancer using Vuepress.",
+  },
+  {
+    title: "How to Transfer a GitHub Repository to an Organization",
+    link: "/posts/transfer-github-repository/",
+    date: "2024-05-26",
+    summary:
+      "As a developer or freelancer, managing your GitHub repositories efficiently is crucial for collaboration and organization. Transferring a repository to a GitHub organization allows you to centralize projects under a team or brand, streamline access, and maintain commit history.",
+  },
+];
