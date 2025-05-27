@@ -12,6 +12,8 @@ Have you ever visited a website that felt chaotic—tiny fonts, clashing colors,
 
 Watch this insightful video to dive deeper into how CSS can transform your web design: [YouTube Video on CSS and Web Design](https://www.youtube.com/watch?v=8rYCgrrbHqk)
 
+<YouTubePlayers videoId="8rYCgrrbHqk"/>
+
 ## 1. Typography: Make Text Easy on the Eyes
 
 Typography is the foundation of readability. The right font choices reduce eye strain and help users focus on your content. Here’s how CSS can enhance typography:
