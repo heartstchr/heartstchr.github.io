@@ -1,5 +1,12 @@
 export const posts = [
   {
+    title: "Vue 3 and Vuedevtools getting started",
+    link: "/posts/create-vue3-application/",
+    date: "2024-05-29",
+    summary:
+      "Build a Vue 3 app with ease using Vue CLI and debug it with Vue Devtools. This guide shows you how to set up, customize components, and use a reusable ComponentCard to showcase your work in a VuePress portfolio.",
+  },
+  {
     title: "How CSS Impacts Your Brain- 7 Ways to Optimize Web Design",
     link: "/posts/how-css-impacts-your-brain-7-ways-to-optimize-web-design/",
     date: "2024-05-27",
