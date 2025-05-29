@@ -7,11 +7,17 @@
           <h3 class="mt-0">
             <a :href="item.link">{{ item.title }}</a>
           </h3>
+          <p class="text-sm text-gray-700">{{ item.summary }}</p>
+        </div>
+        <div className="mb-1 px-2 flex flex-row items-center justify-content-between">
           <div>
             <i class="pi pi-calendar mr-2"></i>
             {{ new Date(item.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) }}
           </div>
-          <p class="text-sm text-gray-700">{{ item.summary }}</p>
+          <a :href="item.link"
+            className="text-sm">
+            Read More &rarr;
+          </a>
         </div>
       </div>
     </li>
