@@ -2,7 +2,7 @@ export const posts = [
   {
     title: "Automate Your Content: Turn YouTube Videos into Blogs with GEN-BLOG",
     link: "/posts/automate-content-youtube-to-blog-gen-blog/",
-    date: "2025-05-22",
+    date: "2025-06-05",
     summary: "Convert YouTube videos to SEO-friendly blog posts with GEN-BLOG, a Node.js tool using AI. Save time and enhance your content!"
   },
   {
