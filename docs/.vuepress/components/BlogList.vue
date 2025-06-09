@@ -3,7 +3,7 @@
     <!-- Row for the first two columns -->
     <div class="grid">
       <div class="whats-new mb-4 md:col-12">
-        <a class="border-2 border-black px-5 py-3 text-md text-black uppercase shadow-md">
+        <a :href="items[0].link" class="border-2 border-black px-5 py-3 text-md text-black uppercase shadow-md">
           What's New →
         </a>
       </div>
