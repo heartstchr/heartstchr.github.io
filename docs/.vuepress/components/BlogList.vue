@@ -9,6 +9,7 @@
           </h3>
           <p class="text-sm text-gray-700">{{ item.summary }}</p>
         </div>
+        <MetaContent :category="item.tags" />
         <div className="mb-1 px-2 flex flex-row items-center justify-content-between">
           <div>
             <i class="pi pi-calendar mr-2"></i>

@@ -6,7 +6,7 @@ category: [Tech, Web Development, Vue]
 tag: [VuePress, Vue3, Blog, Devtools]
 ---
 
-<MetaContent :date="$frontmatter.date" :category="$frontmatter.category"/>
+<MetaContent :date="$frontmatter.date" :category="$frontmatter.tag"/>
 
 Building a modern web application requires a framework that’s both powerful and developer-friendly. Vue 3, combined with Vue Devtools, offers an exceptional environment for creating dynamic, responsive, and scalable projects. In this tutorial, we’ll guide you through setting up a Vue 3 application using the Vue CLI, customizing its components, and debugging with Vue Devtools. Whether you’re a freelancer building a portfolio like Stack Seekers or a developer enhancing your workflow, this SEO-optimized guide provides 7 actionable steps to create a brain-friendly, efficient Vue 3 application.
 

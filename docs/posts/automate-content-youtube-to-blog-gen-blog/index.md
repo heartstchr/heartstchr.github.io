@@ -6,7 +6,7 @@ category: [Tech, Content, Blogging, Automation]
 tag: [YouTube, Blogging, AI, Node.js]
 ---
 
-<MetaContent :date="$frontmatter.date" :category="$frontmatter.category"/>
+<MetaContent :date="$frontmatter.date" :category="$frontmatter.tag"/>
 
 Are you tired of manually transcribing and formatting your YouTube videos into blog posts? Imagine a tool that does it all for you—saving time while boosting your online presence. Meet **GEN-BLOG**, a Node.js-powered solution I’ve built to transform YouTube transcripts into polished, SEO-friendly blog posts using Google’s Gemini AI model. In this post, I’ll walk you through how it works, its key features, and why it’s a must-have for content creators and developers. Plus, stick around for a link to see it in action!
 
