@@ -284,7 +284,7 @@ export const freelance = [
     description:
       "ABN AMRO Bank N.V. is a Dutch bank with headquarters in Amsterdam. The internet banking (IB) application for the bank customers which is migrating from old Angular JS to Vue.js integrated with Microsoft Azure cloud services as IBRebuild.",
     software: "Web",
-    org: "YIT",
+    org: "ABN Amro",
     year: "2022",
     domain: "Banking",
     schema: "https://schema.org/DeveloperApplication",
@@ -310,6 +310,53 @@ export const freelance = [
         alt: "Cover screen for application page",
       },
     ],
+  },
+  {
+    name: "Emerald Design System",
+    description: "Our innovative digital strategy emphasizes efficiency through a 'build once, deploy multiple times' approach. Utilizing the Emerald design system, we ensure a consistent and seamless user experience across platforms. Significant investments in this system, coupled with an expanded team, have enhanced productivity and scalability, delivering cohesive digital solutions for optimal user engagement.",
+    software: "Web",
+    org: "ABN Amro",
+    year: "2022",
+    domain: "Banking",
+    schema: "https://schema.org/SoftwareApplication",
+    stack: [
+        "JavaScript",
+        "Lit",
+        "Axios",
+        "Webpack",
+        "Bitbucket",
+        "npm",
+        "Node.js",
+        "Git",
+        "ESLint",
+        "Prettier",
+        "storybook",
+        "markdown/black/white",
+        "vitepress"
+    ],
+    features:[
+      { text: "Responsive Design: Seamless experience across devices." },
+      { text: "Component-Based Architecture: Efficient and scalable codebase." },
+      { text: "Modern UI/UX: Clean aesthetics with intuitive navigation." },
+      { text: "API Integration: Robust connectivity with external services using Axios." },
+      { text: "Modular Development: Leverages Webpack for optimized, modular builds." },
+      { text: "Code Quality Assurance: Enforced by ESLint and Prettier for consistent, error-free code." },
+      { text: "Version Control: Streamlined collaboration via Git and Bitbucket." }
+    ],
+    images: [
+        {
+            itemImageSrc: "/img/home/projects/ABN_Amro_design_system.webp",
+            alt: "Cover screen for Emerald Design System project page"
+        },
+        {
+          itemImageSrc: "/img/projects/abn/emerald_home.webp",
+          alt: "Emerald Design System Home Page",
+        },
+        {
+          itemImageSrc: "/img/projects/abn/emerald_storybook.webp",
+          alt: "Emerald Design System Storybook",
+        },
+    ]
   },
   {
     name: "Tech Create",
