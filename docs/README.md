@@ -87,7 +87,7 @@ copyright: false
     </Carousel>
   </div>
   <div class="grid justify-content-center my-4 md:flex hidden">
-    <div class="card md:mx-0 -mx-4 col-12 md:col-6" v-for="testimony in testimonials" :key="testimony.name">
+    <div class="card md:mx-0 -mx-4 col-12 md:col-3" v-for="testimony in testimonials" :key="testimony.name">
       <div class="card shadow-1 border-round-md m-2 p-2 vp-feature-item">
         <div class="font-italic mb-8">
           <div class="text-md line-height-3" ><span class="font-bold text-4xl">"</span> {{ testimony.message }}</div>
@@ -117,8 +117,8 @@ copyright: false
           class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button"
         >
           <span class="mr-6">
-            <i class="pi pi-linkedin" aria-label="View LinkedIn Reviews" style="font-size: 1rem; color:#0a66c2;"></i>
-            View LinkedIn Reviews
+            <i class="pi pi-linkedin mr-1" aria-label="View LinkedIn Reviews" style="font-size: 1rem; color:#0a66c2;"></i>
+             View Recommendations
           </span>
           <Circles/>
           <i class="pi pi-angle-double-right" style="font-size: 1rem;"></i>
