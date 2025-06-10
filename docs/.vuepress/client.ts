@@ -18,6 +18,7 @@ import Features from "./components/Features.vue";
 import CardHeader from "./components/CardHeader.vue";
 import BlogList from "./components/BlogList.vue";
 import MetaContent from "./components/MetaContent.vue";
+import Contact from "./components/Contact.vue";
 
 export default defineClientConfig({
   enhance({ app }) {
@@ -39,5 +40,6 @@ export default defineClientConfig({
     app.component("CardHeader", CardHeader);
     app.component("BlogList", BlogList);
     app.component("MetaContent", MetaContent);
+    app.component("Contact", Contact);
   },
 });

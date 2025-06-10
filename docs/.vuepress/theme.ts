@@ -25,7 +25,8 @@ export default hopeTheme(
                   <div class="flex flex-row justify-content-between align-items-center gap-4">
                     <a href="/web-development-projects/"> Projects </a>
                     <a href="/web-development-services/"> Services </a>
-                    <a href="/#contact"> Contact </a>
+                    <a href="/contact/"> Contact </a>
+                    <a href="/careers/"> Careers </a>
                   </div>
                   <div class="flex flex-row justify-content-between align-items-center gap-2 m-auto">© 2024 Stack Seekers</div>
                 </div>
