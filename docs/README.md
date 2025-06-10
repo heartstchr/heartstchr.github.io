@@ -58,7 +58,7 @@ copyright: false
     <div class="text-4xl font-bold"><h2>Trusted by <div class="text-4xl font-bold bg-primary">World Wide</div></h2></div>
     <h3 class="my-4 text-xl line-height-2">Client Testimonials: See how partners describe their experience collaborating with me on innovative digital solutions.</h3>
   </div>
-  <div class="card relative md:mx-0 -mx-4" @mouseenter="pauseAutoPlay"
+  <div class="card relative md:mx-0 -mx-4 md:hidden block" @mouseenter="pauseAutoPlay"
     @mouseleave="resumeAutoPlay">
     <Carousel :value="testimonials" :numVisible="1" :numScroll="1"  ref="carousel" :responsiveOptions="responsiveCustomerOptions" circular :page="currentPage"
       @page="onPageChange">
@@ -85,6 +85,30 @@ copyright: false
           </div>
         </template>
     </Carousel>
+  </div>
+  <div class="grid justify-content-center my-4 md:flex hidden">
+    <div class="card md:mx-0 -mx-4 col-12 md:col-6" v-for="testimony in testimonials" :key="testimony.name">
+      <div class="card shadow-1 border-round-md m-2 p-2 vp-feature-item">
+        <div class="font-italic mb-8">
+          <div class="text-md line-height-3" ><span class="font-bold text-4xl">"</span> {{ testimony.message }}</div>
+        </div>
+        <div class="flex align-items-center">
+          <img :src="testimony.avatar" :alt="testimony.name" loading="eager" fetchpriority="high" class="border-circle" width="50px" height="50px" />
+          <a :href="testimony.link" target="_blank" class="no-underline">
+            <h3 class="flex flex-column align-items-start ml-2 p-0 m-0">
+              <div>
+                <i class="pi pi-linkedin mr-1 text-blue-700" style="font-size: 1rem;"></i>
+                {{ testimony.name }}, 
+              </div>
+              <div class="text-sm">
+                <img :alt="testimony.location" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" loading="eager" fetchpriority="high" :class="`flag flag-${testimony.code.toLowerCase()} mr-1`" style="width: 18px" />
+                {{ testimony.location }}
+              </div>
+            </h3>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="text-center pb-4">
     <a href="https://www.linkedin.com/in/jiwanghosal/details/recommendations/" size="large" class="flex justify-content-center text-center no-underline mt-4"> 

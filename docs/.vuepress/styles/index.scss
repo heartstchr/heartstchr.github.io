@@ -251,6 +251,10 @@ fieldset {
   text-align: center;
 }
 
+.p-galleria-thumbnails-content {
+  height: 80px;
+}
+
 @media only screen and (max-width: 600px) {
   .gallery {
     column-count: 2;
