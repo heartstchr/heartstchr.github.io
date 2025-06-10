@@ -2,6 +2,85 @@ import { toKebabCase } from "../utils/index.js";
 
 export const freelance = [
   {
+    "name": "Appliance Repair Service Platform",
+    "description": "A modern, content-driven platform for connecting users with local appliance repair professionals and providing troubleshooting guides for major home appliances",
+    "software": "Web",
+    "org": "ApplianceRepairly",
+    "year": "2025",
+    domain: "Digital Marketing",
+    "schema": "https://schema.org/WebApplication",
+    "link": "https://appliancerepairly.com",
+    contact: "mailto:jiwan.cse@gmail.com?subject=Inquiry : ",
+    "stack": ["nextdotjs/black/white", "react", "nodedotjs", "json/black/white", "tailwindcss", "axios", "npm", "pm2", "digitalocean", "lighthouse", "bitbucket", "Eslint", "Prettier", "github/black/white"],
+    "otherSkills": ["SEO","Content Management","Accessibility", "Performance Optimization", "Responsive Design","API Integration"],
+    "features": [
+      {
+        "text": "Dynamic Appliance Support: Browse and get help for refrigerators, washers, dryers, dishwashers, ovens, microwaves, cooktops, and more."
+      },
+      {
+        "text": "Find Local Providers: Enter your ZIP code or select your state to view local repair listings."
+      },
+      {
+        "text": "Problem & Troubleshooting Guides: Step-by-step guides for common appliance issues, including DIY tips and when to call a pro."
+      },
+      {
+        "text": "SEO Optimized: Each page includes dynamic SEO metadata for better search engine visibility."
+      },
+      {
+        "text": "Reusable UI Components: Modular React components for listings, CTAs, features, and more."
+      },
+      {
+        "text": "Content Management: All appliance, problem, and troubleshooting content is managed centrally in JSON for easy updates."
+      }
+    ],
+    images: [
+      {
+        "itemImageSrc": "/img/projects/appliance-repair/home.webp",
+        "alt": "Home page image"
+      },
+      {
+        "itemImageSrc": "/img/projects/appliance-repair/performance-desktop.webp",
+        "alt": "Desktop performance image"
+      },
+      {
+        "itemImageSrc": "/img/projects/appliance-repair/performance-mobile.webp",
+        "alt": "Mobile performance image"
+      },
+      {
+        "itemImageSrc": "/img/projects/appliance-repair/services.webp",
+        "alt": "Services image"
+      },
+      {
+        "itemImageSrc": "/img/projects/appliance-repair/find-repair.webp",
+        "alt": "Find repair services image"
+      },
+      {
+        "itemImageSrc": "/img/projects/appliance-repair/contact.webp",
+        "alt": "Contact page image"
+      },
+      {
+        "itemImageSrc": "/img/projects/appliance-repair/refrigerator-troubleshoot.webp",
+        "alt": "Refrigerator troubleshooting image"
+      },
+      {
+        "itemImageSrc": "/img/projects/appliance-repair/refrigerator-problem.webp",
+        "alt": "Refrigerator problem image"
+      },
+      {
+        "itemImageSrc": "/img/projects/appliance-repair/refrigerator.webp",
+        "alt": "Refrigerator home page image"
+      },
+      {
+        "itemImageSrc": "/img/projects/appliance-repair/blog-post.webp",
+        "alt": "Blog post image"
+      },
+      {
+        "itemImageSrc": "/img/projects/appliance-repair/blog.webp",
+        "alt": "Blog section image"
+      }
+    ]
+  },
+  {
     name: "SR-22 Insurance Now",
     description:
       "Need a Cheap SR-22 Insurance? Compare & save on SR22 Insurance from top providers.",

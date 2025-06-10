@@ -56,7 +56,7 @@ defineProps({
                             </a>
                             <a v-if="project.contact" :href="`${project.contact} ${project.name}`" target="_blank"
                                 class="flex flex-row no-underline w-full">
-                                <Button label="Get Custom Code" icon="pi pi-inbox" severity="secondary" raised rounded
+                                <Button label="Get Custom Request" icon="pi pi-inbox" severity="secondary" raised rounded
                                     class="w-full" />
                             </a>
                             <a v-if="project.link" :href="project.link" target="_blank"

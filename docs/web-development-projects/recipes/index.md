@@ -53,7 +53,7 @@ project:
       <div class="flex md:flex-row flex-column justify-content-center align-items-center gap-2 my-4 w-full max-w-96">
         <a v-if="$frontmatter.project.contact" :href="`$frontmatter.project.contact $frontmatter.project.name`" target="_blank"
           class="flex flex-row no-underline w-full">
-          <Button label="Get Custom Code" icon="pi pi-inbox" severity="secondary" raised rounded class="w-full" />
+          <Button label="Get Custom Request" icon="pi pi-inbox" severity="secondary" raised rounded class="w-full" />
         </a>
         <a v-if="$frontmatter.project.link" :href="$frontmatter.project.link" target="_blank"
           class="flex flex-row no-underline w-full">
