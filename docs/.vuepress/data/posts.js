@@ -1,5 +1,13 @@
 export const posts = [
   {
+    title: "How to Delete Local Git Branches Not on Remote (Auto Cleanup Script Included)",
+    link: "/posts/delete-local-git-branches-not-on-remote/",
+    date: "2025-06-12",
+    summary: "Learn how to safely delete local Git branches no longer on remote with a cleanup script and tips for a cleaner Git workflow.",
+    category: "Git & Version Control",
+    tags: ["git", "version-control", "branch-management", "developer-tools", "productivity"]
+  },
+  {
     title: "Optimizing Web Images with WebP: A Comprehensive Guide",
     link: "/posts/optimizing-web-images-with-webp/",
     date: "2025-06-09",
