@@ -590,22 +590,23 @@ export const freelance = [
     ],
     images: [
       {
-        itemImageSrc: "/img/projects/quatar/placeholder.webp",
-        alt: "Quatar Airways",
+        itemImageSrc: "/img/projects/qatar/placeholder.webp",
+        alt: "Qatar Airways",
       },
       {
-        itemImageSrc: "/img/projects/quatar/qutar_airways.webp",
-        alt: "Quatar Airways",
+        itemImageSrc: "/img/projects/qatar/qatar-airways.webp",
+        alt: "Qatar Airways",
       },
       {
-        itemImageSrc: "/img/projects/quatar/thumbnail.webp",
-        alt: "Quatar Airways",
+        itemImageSrc: "/img/projects/qatar/thumbnail.webp",
+        alt: "Qatar Airways",
       },
       {
-        itemImageSrc: "/img/projects/quatar/quatar.webp",
-        alt: "Quatar Airways",
+        itemImageSrc: "/img/projects/qatar/qatar.webp",
+        alt: "Qatar Airways",
       },
     ],
+    details: "./details/qa.md",
   },
   {
     name: "Recipes",
