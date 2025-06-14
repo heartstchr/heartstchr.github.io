@@ -35,6 +35,10 @@ export const freelance = [
     ],
     images: [
       {
+        "itemImageSrc": "/img/home/projects/appliance_repair_cover.webp",
+        "alt": "Cover page image"
+      },
+      {
         "itemImageSrc": "/img/projects/appliance-repair/home.webp",
         "alt": "Home page image"
       },
