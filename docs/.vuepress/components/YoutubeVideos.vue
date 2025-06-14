@@ -12,7 +12,7 @@
                         fetchpriority="high" />
                 </template>
                 <template #title>
-                    <!-- <div class="line-height-3">{{ video.title }}</div> -->
+                    <div class=" text-xl line-height-3">{{ video.title }}</div>
                 </template>
                 <template #subtitle>{{ video.publishedAt }}</template>
                 <template #content>
