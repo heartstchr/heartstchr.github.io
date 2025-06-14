@@ -18,6 +18,7 @@ project:
   stack: ["Socket.io/black/white","d3","angular/black/white","NodedotJS","gulp","Eslint","Prettier","github/black/white"]
   images: [{"itemImageSrc":"/img/projects/stocks.webp","alt":"Consuming socket data and plotting a real-time D3 graph"}]
   features: [{"text":"Show realtime charts of a unit"},{"text":"Show history of a unit in charts"}]
+  details: ""
 ---
 <div>
   <div class="col-12">
@@ -77,6 +78,8 @@ project:
     </li>
   </ul>
 </div>
+
+
 
 <script setup>
 import { responsiveOptions } from "@data/responsive.js"

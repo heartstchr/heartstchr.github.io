@@ -18,6 +18,7 @@ project:
   stack: ["npm","Eslint","Prettier"]
   images: [{"itemImageSrc":"/img/projects/dictionary.webp","alt":"CLI for Dictionary"}]
   features: [{"text":"Create help command for available commands"},{"text":"Definition of a word"},{"text":"Synonyms and antonyms of a word"},{"text":"Get example sentence from a word"},{"text":"Get word of the day"},{"text":"Play word game"}]
+  details: ""
 ---
 <div>
   <div class="col-12">
@@ -77,6 +78,8 @@ project:
     </li>
   </ul>
 </div>
+
+
 
 <script setup>
 import { responsiveOptions } from "@data/responsive.js"

@@ -18,6 +18,7 @@ project:
   stack: ["Angular/black/white","MongoDB","mysql","loopback","npm","Eslint","Prettier","github/black/white"]
   images: [{"itemImageSrc":"/img/projects/openDemat.webp","alt":"Open a Demat Account Online: Demat Account Opening at Upstox"}]
   features: [{"text":"Open a Demat account with document upload."},{"text":"PAN, Aadhar, IPV, and cancelled check verification"},{"text":"Lead to CRM system"},{"text":"Scrutiny of lead"},{"text":"Upload details to NSE, BSE, and MCX"},{"text":"Report based on the flow of lead"}]
+  details: ""
 ---
 <div>
   <div class="col-12">
@@ -77,6 +78,8 @@ project:
     </li>
   </ul>
 </div>
+
+
 
 <script setup>
 import { responsiveOptions } from "@data/responsive.js"

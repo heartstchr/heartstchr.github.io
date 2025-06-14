@@ -18,6 +18,7 @@ project:
   stack: ["Javascript","Vuedotjs","Vite/black/white","Axios/black/white","Express/black/white","MongoDB","Git","amazonec2","Eslint","Prettier","github/black/white"]
   images: [{"itemImageSrc":"/img/projects/quatar/placeholder.webp","alt":"Quatar Airways"},{"itemImageSrc":"/img/projects/quatar/qutar_airways.webp","alt":"Quatar Airways"},{"itemImageSrc":"/img/projects/quatar/thumbnail.webp","alt":"Quatar Airways"},{"itemImageSrc":"/img/projects/quatar/quatar.webp","alt":"Quatar Airways"}]
   features: [{"text":"Widget for Flight Booking"},{"text":"Widget for Flight + Hotel Booking"},{"text":"Widget for Transfer Booking"},{"text":"Use widget with any CMS Platform like Landingi"}]
+  details: ""
 ---
 <div>
   <div class="col-12">
@@ -77,6 +78,8 @@ project:
     </li>
   </ul>
 </div>
+
+
 
 <script setup>
 import { responsiveOptions } from "@data/responsive.js"

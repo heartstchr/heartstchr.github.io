@@ -18,6 +18,7 @@ project:
   stack: ["JavaScript","Lit","Axios","Webpack","Bitbucket","npm","Node.js","Git","ESLint","Prettier","storybook","markdown/black/white","vitepress"]
   images: [{"itemImageSrc":"/img/home/projects/ABN_Amro_design_system.webp","alt":"Cover screen for Emerald Design System project page"},{"itemImageSrc":"/img/projects/abn/emerald_home.webp","alt":"Emerald Design System Home Page"},{"itemImageSrc":"/img/projects/abn/emerald_storybook.webp","alt":"Emerald Design System Storybook"}]
   features: [{"text":"Responsive Design: Seamless experience across devices."},{"text":"Component-Based Architecture: Efficient and scalable codebase."},{"text":"Modern UI/UX: Clean aesthetics with intuitive navigation."},{"text":"API Integration: Robust connectivity with external services using Axios."},{"text":"Modular Development: Leverages Webpack for optimized, modular builds."},{"text":"Code Quality Assurance: Enforced by ESLint and Prettier for consistent, error-free code."},{"text":"Version Control: Streamlined collaboration via Git and Bitbucket."}]
+  details: ""
 ---
 <div>
   <div class="col-12">
@@ -77,6 +78,8 @@ project:
     </li>
   </ul>
 </div>
+
+
 
 <script setup>
 import { responsiveOptions } from "@data/responsive.js"

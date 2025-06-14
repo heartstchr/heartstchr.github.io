@@ -78,7 +78,8 @@ export const freelance = [
         "itemImageSrc": "/img/projects/appliance-repair/blog.webp",
         "alt": "Blog section image"
       }
-    ]
+    ],
+    details: "./details/appliance-repair.md",
   },
   {
     name: "SR-22 Insurance Now",
@@ -181,6 +182,7 @@ export const freelance = [
         alt: "JSON reader for sr22 insurance Now",
       },
     ],
+    details: "./details/sr22.md",
   },
   {
     name: "Momentum Incident Management",
@@ -286,6 +288,7 @@ export const freelance = [
         alt: "Incident Management register",
       },
     ],
+    details: "./details/momentum.md",
   },
   {
     name: "Finding The Spots",
@@ -357,6 +360,7 @@ export const freelance = [
         text: "Scalable backend architecture to support future growth and features.",
       },
     ],
+    details: "./details/fts.md",
   },
   {
     name: "IBRebuild for ABN AMRO BANK N.V.",
@@ -471,6 +475,7 @@ export const freelance = [
         alt: "landing page for tech",
       },
     ],
+    details: "./details/tech-create.md",
   },
   {
     name: "Yit Plus",

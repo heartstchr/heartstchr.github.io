@@ -12,6 +12,7 @@ const __dirname = path.dirname(__filename);
 // Output directories
 const outProjectDir = path.resolve(__dirname, "../web-development-projects");
 const outServiceDir = path.resolve(__dirname, "../web-development-services");
+const detailsDir = path.resolve(__dirname, "./data/details");
 
 // Utility function to ensure a directory exists
 const ensureDirectoryExists = (dirPath) => {
@@ -20,8 +21,22 @@ const ensureDirectoryExists = (dirPath) => {
   }
 };
 
+// Utility function to read markdown content if it exists
+const readMarkdownContent = (detailsPath) => {
+  if (!detailsPath) return "";
+  const fullPath = path.resolve(detailsDir, path.basename(detailsPath));
+  try {
+    return fs.existsSync(fullPath) ? fs.readFileSync(fullPath, 'utf-8') : "";
+  } catch (error) {
+    console.error(`Error reading markdown file ${fullPath}:`, error);
+    return "";
+  }
+};
+
 // Template for project pages
-const projectTemplate = (project) => `---
+const projectTemplate = (project) => {
+  const markdownContent = readMarkdownContent(project.details);
+  return `---
 title: ${project.name}
 description: ${project.description}
 lastUpdated: false
@@ -41,6 +56,7 @@ project:
   stack: ${JSON.stringify(project.stack)}
   images: ${JSON.stringify(project.images)}
   features: ${JSON.stringify(project.features) || []}
+  details: ${JSON.stringify(markdownContent)}
 ---
 <div>
   <div class="col-12">
@@ -101,10 +117,12 @@ project:
   </ul>
 </div>
 
+${markdownContent}
+
 <script setup>
 import { responsiveOptions } from "@data/responsive.js"
-</script>
-`;
+</script>`;
+};
 
 // Template for service pages
 const serviceTemplate = (service) => `---

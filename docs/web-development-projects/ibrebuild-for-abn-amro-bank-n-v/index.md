@@ -18,6 +18,7 @@ project:
   stack: ["Javascript","Angular/black/white","Vuedotjs","Axios","webpack","lit","bitbucket","npm","nodedotjs","Git","Eslint","Prettier"]
   images: [{"itemImageSrc":"/img/home/projects/ABN_Amro.webp","alt":"Cover screen for application page"}]
   features: 
+  details: ""
 ---
 <div>
   <div class="col-12">
@@ -77,6 +78,8 @@ project:
     </li>
   </ul>
 </div>
+
+
 
 <script setup>
 import { responsiveOptions } from "@data/responsive.js"
