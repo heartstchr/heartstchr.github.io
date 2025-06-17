@@ -18,7 +18,7 @@ export const fetchChannelVideos = async () => {
         },
       }
     );
-
+    console.log(response.data)
     // Format publish time for each video
     const videos = response.data.items.map((video) => ({
       id: video.id.videoId,

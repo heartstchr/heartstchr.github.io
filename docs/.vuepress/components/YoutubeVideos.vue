@@ -5,7 +5,7 @@
         </a>
     </div>
     <div v-else class="flex flex-row flex-wrap md:gap-4 gap-1">
-        <div v-for="video in videos" :key="video.id.videoId" class="grid my-6 md:col-6 p-0">
+        <div v-for="video in videos" :key="video.id" class="grid my-6 md:col-6 p-0">
             <Card class="shadow-1 vp-feature-item m-1">
                 <template #header>
                     <img :src="video.thumbnail" :alt="video.title" class="w-full border-round-md" loading="eager"
