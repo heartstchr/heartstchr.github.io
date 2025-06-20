@@ -1,5 +1,13 @@
 export const posts = [
   {
+    title: "Micro Frontends: A Comprehensive Guide to Building Scalable Web Applications",
+    link: "/posts/micro-frontends-a-comprehensive-guide/",
+    date: "2024-02-29",
+    summary: "Discover how micro frontends revolutionize web development. Build scalable, maintainable apps with independent teams and diverse tech stacks. Learn the benefits!",
+    category: "Web Development",
+    tags: ["micro frontends", "web development", "frontend architecture", "scalability", "modularity", "javascript"]
+},
+  {
     title: "How to Delete Local Git Branches Not on Remote (Auto Cleanup Script Included)",
     link: "/posts/delete-local-git-branches-not-on-remote/",
     date: "2025-06-12",
