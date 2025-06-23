@@ -6,6 +6,7 @@ import "primeicons/primeicons.css"; // icons
 import "primeflex/primeflex.css";
 import "./styles/flags.css";
 import YouTubeVideos from "./components/YoutubeVideos.vue";
+import Podcast from "./components/Podcast.vue";
 import YouTubePlayers from "./components/YoutubePlayers.vue";
 import Svg from "./components/Svg.vue";
 import Circles from "./components/Circles.vue";
@@ -28,6 +29,7 @@ export default defineClientConfig({
       },
     });
     app.component("YouTubeVideos", YouTubeVideos);
+    app.component("Podcast", Podcast);
     app.component("YouTubePlayers", YouTubePlayers);
     app.component("Svg", Svg);
     app.component("Circles", Circles);

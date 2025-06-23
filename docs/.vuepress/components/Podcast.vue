@@ -4,17 +4,21 @@
             <Button label="Watch on youtube" icon="pi pi-youtube" iconPos="left" class="w-full" raised rounded />
         </a>
     </div>
-    <div v-else class="flex flex-row flex-wrap md:gap-4 gap-1">
-        <div v-for="video in videos" :key="video.id" class="grid my-6 md:col-6 p-0">
-            <Card class="shadow-1 vp-feature-item m-1">
+    <div v-else class="flex-row flex-wrap md:gap-4 w-full">
+        <div v-for="video in videos" :key="video.id" class="flex p-0 flex-row gap-1">
+            <Card class="shadow-1 vp-feature-item my-2 flex-row">
                 <template #header>
-                    <img :src="video.thumbnail" :alt="video.title" class="w-full border-round-md" loading="eager"
-                        fetchpriority="high" />
+                    <div class="flex-shrink m-3" style="width: 300px;">
+                        <img :src="video.thumbnail" :alt="video.title" class="w-full border-round-md" loading="eager"
+                            fetchpriority="high" />
+                    </div>
                 </template>
                 <template #title>
-                    <div class=" text-xl line-height-3">{{ video.title }}</div>
+                    <div class="text-xs line-height-3">{{ video.title }}</div>
                 </template>
-                <template #subtitle>{{ video.publishedAt }}</template>
+                <template #subtitle>
+                    <div class="text-xs line-height-3">{{ video.publishedAt }}</div>
+                </template>
                 <template #content>
                 </template>
                 <template #footer>
@@ -37,10 +41,16 @@ import { fetchAndSplitVideos } from '../services/youtubeService';
 const videos = ref([]);
 onMounted(async () => {
     try {
-        const { channelVideos, podcastVideos } = await fetchAndSplitVideos();
-        videos.value = channelVideos;
+        const { podcastVideos } = await fetchAndSplitVideos();
+        videos.value = podcastVideos;
     } catch (error) {
         console.error('Error loading videos:', error);
     }
 });
 </script>
+
+<style scoped>
+.image-container {
+    flex-shrink: 0;
+}
+</style>
