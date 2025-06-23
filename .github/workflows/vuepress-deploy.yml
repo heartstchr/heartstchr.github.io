@@ -38,6 +38,7 @@ jobs:
           NODE_OPTIONS: --max_old_space_size=8192
           VITE_YOUTUBE_API_KEY: ${{secrets.VITE_YOUTUBE_API_KEY}}
           VITE_YOUTUBE_CHANNEL_ID: ${{secrets.VITE_YOUTUBE_CHANNEL_ID}}
+          VITE_YOUTUBE_PLAYLIST_ID: ${{secrets.VITE_YOUTUBE_PLAYLIST_ID}}
         run: |-
           pnpm run build
           > docs/.vuepress/dist/.nojekyll

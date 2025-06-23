@@ -16,8 +16,6 @@ interface Video {
   publishedAt: string;
 }
 
-let videoCache: { channelVideos: Video[]; podcastVideos: Video[] } | null = null;
-
 const formatPublishTime = (dateTime: string): string => {
   const options: Intl.DateTimeFormatOptions = {
     year: 'numeric',
