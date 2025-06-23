@@ -6,6 +6,8 @@ editLink: false
 copyright: false
 ---
 
+Mission here is to unpack the tools, trends, and strategies that power the software world, so you can stay ahead of the curve. Whether you’re a developer, an engineer, or just tech-curious, we’ve got you covered with actionable insights.
+
 <div class="my-6">
   <Podcast />
 </div>
