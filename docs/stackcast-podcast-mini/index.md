@@ -1,6 +1,6 @@
 ---
 title: Podcast Mini
-description: Watch web development tutorials, app walkthroughs, and project demos by Stack Seekers. Learn how we build full-stack solutions, explore our tech insights, and follow our creative journey.
+description: Mission here is to unpack the tools, trends, and strategies that power the software world, so you can stay ahead of the curve. Whether you’re a developer, an engineer, or just tech-curious, we’ve got you covered with actionable insights.
 order: 5
 editLink: false
 copyright: false
