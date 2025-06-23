@@ -12,7 +12,7 @@ export const getPlaylistItems = async (
   const response = await apiClient.get("/playlistItems", {
     params: {
       key: apiKey,
-      playlistId,
+      playlistId: playlistId,
       part: "snippet,status",
       maxResults,
     },

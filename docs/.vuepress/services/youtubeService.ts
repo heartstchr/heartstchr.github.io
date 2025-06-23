@@ -56,9 +56,6 @@ async function getUploadsPlaylistId(): Promise<string> {
 }
 
 export const fetchAndSplitVideos = async (): Promise<{ channelVideos: Video[], podcastVideos: Video[] }> => {
-    if (videoCache) {
-        return videoCache;
-    }
 
     try {
         const uploadsPlaylistId = await getUploadsPlaylistId();
@@ -77,8 +74,7 @@ export const fetchAndSplitVideos = async (): Promise<{ channelVideos: Video[], p
         const podcastVideos = mapVideos(podcastVideoItems);
         const channelVideos = mapVideos(channelVideoItems);
 
-        videoCache = { channelVideos, podcastVideos };
-        return videoCache;
+        return { channelVideos, podcastVideos };
 
     } catch (error) {
         console.error("Failed to fetch and split YouTube videos:", error);
