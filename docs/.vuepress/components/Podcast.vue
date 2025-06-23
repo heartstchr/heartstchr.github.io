@@ -5,10 +5,10 @@
         </a>
     </div>
     <div v-else class="flex-row flex-wrap md:gap-4 w-full">
-        <div v-for="video in videos" :key="video.id" class="flex p-0 flex-row gap-1">
-            <Card class="shadow-1 vp-feature-item my-2 flex-row">
+        <div v-for="video in videos" :key="video.id" class="flex p-0 flex-column md:flex-row gap-1">
+            <Card class="shadow-1 vp-feature-item my-2 flex-column md:flex-row">
                 <template #header>
-                    <div class="flex-shrink m-3" style="width: 300px;">
+                    <div class="flex-shrink m-auto" style="width: 300px;">
                         <img :src="video.thumbnail" :alt="video.title" class="w-full border-round-md" loading="eager"
                             fetchpriority="high" />
                     </div>
@@ -17,7 +17,7 @@
                     <div class="text-xs line-height-3">{{ video.title }}</div>
                 </template>
                 <template #subtitle>
-                    <div class="text-xs line-height-3">{{ video.publishedAt }}</div>
+                    <!-- <div class="text-xs line-height-3">{{ video.publishedAt }}</div> -->
                 </template>
                 <template #content>
                 </template>

@@ -6,6 +6,8 @@ editLink: false
 copyright: false
 ---
 
+Watch web development tutorials, app walkthroughs, and project demos by Stack Seekers. Learn how we build full-stack solutions, explore our tech insights, and follow our creative journey.
+
 <div class="my-6">
   <YouTubeVideos />
 </div>
