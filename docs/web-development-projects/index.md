@@ -30,18 +30,40 @@ copyright: false
     </a>
   </div>
 </div>
+
 <div class="p-d-flex p-flex-column p-mr-3">
   <div class="grid my-6 gap-8">
     <ProjectCard
-      v-for="(project, index) in freelance"
+      v-for="(project, index) in paginatedProjects"
       :key="index"
       :project="project"
       :showHeader=true
     />
   </div>
+  
+  <Pagination 
+    :totalRecords="freelance.length" 
+    :rowsPerPage="1"
+    @page-change="onPageChange"
+  />
 </div>
 
 <script setup lang="ts">
   import { freelance } from "@data/projects.js";
   import { toKebabCase } from "@utils";
+  import { ref, computed } from 'vue';
+
+  const currentPage = ref(0);
+  const rowsPerPage = ref(1);
+
+  const paginatedProjects = computed(() => {
+    const start = currentPage.value * rowsPerPage.value;
+    const end = start + rowsPerPage.value;
+    return freelance.slice(start, end);
+  });
+
+  const onPageChange = (event) => {
+    currentPage.value = Math.floor(event.first / event.rows);
+    rowsPerPage.value = event.rows;
+  };
 </script>
