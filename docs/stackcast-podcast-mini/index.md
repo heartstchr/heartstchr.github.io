@@ -1,17 +1,16 @@
 ---
 title: Podcast Mini
-description: Mission here is to unpack the tools, trends, and strategies that power the software world, so you can stay ahead of the curve. Whether you’re a developer, an engineer, or just tech-curious, we’ve got you covered with actionable insights.
+description: Mission here is to unpack the tools, trends, and strategies that power the software world, so you can stay ahead of the curve. Whether you're a developer, an engineer, or just tech-curious, we've got you covered with actionable insights.
 order: 5
 editLink: false
 copyright: false
 ---
 
-Mission here is to unpack the tools, trends, and strategies that power the software world, so you can stay ahead of the curve. Whether you’re a developer, an engineer, or just tech-curious, we’ve got you covered with actionable insights.
+Mission here is to unpack the tools, trends, and strategies that power the software world, so you can stay ahead of the curve. Whether you're a developer, an engineer, or just tech-curious, we've got you covered with actionable insights.
 <div class="surface-ground text-white">
     <!-- Hero Section -->
     <section class="">
       <h1 class="text-4xl font-bold mb-2">Stack Cast 🎙️</h1>
-      <p class="text-xl mb-3">Conversations at the Code–Startup Crossroads.</p>
       <p class="mb-4">Tools, insights & frameworks for devs, indie hackers, and startup CTOs.</p>
     </section>
     <!-- Free Tools Section -->
@@ -53,31 +52,72 @@ Mission here is to unpack the tools, trends, and strategies that power the softw
     <section class="py-6">
       <h2 class="text-2xl font-semibold mb-4">🛠️ Built Something With Our Stuff?</h2>
       <p>Many listeners turn our insights into real apps, startups, or side-hustles. Want yours featured or reviewed?</p>
-      <Button label="Submit Your Project" icon="pi pi-send" class="mt-3 p-button-secondary" />
+      <div class="flex flex-column gap-3 mt-4">
+        <div class="flex flex-column gap-2">
+          <label for="github-repo" class="font-medium">GitHub Repository Link:</label>
+          <InputText 
+            id="github-repo" 
+            v-model="githubRepo" 
+            placeholder="https://github.com/username/repository"
+            class="w-full"
+            :class="{ 'p-invalid': showError }"
+          />
+          <small v-if="showError" class="text-red-500">Please enter a valid GitHub repository URL</small>
+        </div>
+        <Button 
+          label="Submit Your Project" 
+          icon="pi pi-send" 
+          class="p-button-secondary" 
+          @click="submitToWhatsApp"
+          :loading="isSubmitting"
+        />
+      </div>
     </section>
     <!-- Newsletter Signup -->
     <section class="py-6">
-      <h2 class="text-2xl font-semibold mb-4">📬 Join 1,000+ Tech Builders</h2>
-      <p>Get tools, podcast drops, and behind-the-scenes stories every week.</p>
-      <div class="flex flex-column md:flex-row gap-2 mt-3">
-        <InputText placeholder="Enter your email" class="p-inputtext-lg w-full md:w-3/4" />
-        <Button label="Subscribe" icon="pi pi-send" class="p-button-lg w-full md:w-1/4" />
+      <h2 class="text-2xl font-semibold mb-4">Join Tech Builders</h2>
+      <p>Get podcast drops.</p>
+      <div class="flex flex-column gap-3 mt-4">
+        <div class="flex flex-column gap-2">
+          <label for="email-signup" class="font-medium">Email Address:</label>
+          <InputText 
+            id="email-signup" 
+            v-model="emailSignup" 
+            placeholder="Enter your email"
+            class="w-full"
+            :class="{ 'p-invalid': showEmailError }"
+          />
+          <small v-if="showEmailError" class="text-red-500">Please enter a valid email address</small>
+        </div>
+        <Button 
+          label="Join Tech Builders" 
+          icon="pi pi-send" 
+          class="p-button-primary" 
+          @click="submitEmailToWhatsApp"
+          :loading="isEmailSubmitting"
+        />
       </div>
-    </section>
-    <!-- Testimonials -->
-    <section class="py-6">
-      <h2 class="text-2xl font-semibold mb-4">💬 From Listeners Like You</h2>
-      <p class="italic">“I got my first client using a pitch I heard here.” – Jaya R., Dev Freelancer</p>
-      <p class="italic mt-2">“Subscribed for the podcast, stayed for the tools.” – Tanvir A., SaaS Builder</p>
     </section>
     <!-- Final CTA -->
     <section class="py-6 text-center">
-      <h2 class="text-2xl font-bold mb-4">🧲 Not Hiring… But Open to Collaboration?</h2>
+      <h2 class="text-2xl font-bold mb-4">Not Hiring… But Open to Collaboration?</h2>
       <p>I help early-stage teams go from idea to MVP, and beyond. (Only when it's the right fit.)</p>
-      <div class="flex justify-center gap-2 flex-wrap mt-3">
-        <Button label="See What I Do" icon="pi pi-briefcase" class="p-button-rounded p-button-success" />
-        <Button label="Say Hi on LinkedIn" icon="pi pi-linkedin" class="p-button-rounded p-button-secondary" />
+      <div class="text-center pb-4">
+    <a href="https://www.linkedin.com/in/jiwanghosal/" size="large" class="flex justify-content-center text-center no-underline mt-4"> 
+      <div class="p-flex p-ai-center">
+        <div
+          class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button"
+        >
+          <span class="mr-6">
+            <i class="pi pi-linkedin mr-1" aria-label="View LinkedIn Reviews" style="font-size: 1rem; color:#0a66c2;"></i>
+             Say Hi on LinkedIn
+          </span>
+          <Circles/>
+          <i class="pi pi-angle-double-right" style="font-size: 1rem;"></i>
+        </div>
       </div>
+    </a>
+  </div>
     </section>
   </div>
 
@@ -108,4 +148,74 @@ Mission here is to unpack the tools, trends, and strategies that power the softw
 
 <script setup lang="ts">
   import { social } from "@data/social.js";
+  import { ref } from 'vue';
+
+  const githubRepo = ref('');
+  const showError = ref(false);
+  const isSubmitting = ref(false);
+  const emailSignup = ref('');
+  const showEmailError = ref(false);
+  const isEmailSubmitting = ref(false);
+
+  const submitToWhatsApp = () => {
+    // Validate GitHub URL
+    const githubUrlPattern = /^https:\/\/github\.com\/[a-zA-Z0-9-]+\/[a-zA-Z0-9-._]+$/;
+    
+    if (!githubRepo.value || !githubUrlPattern.test(githubRepo.value)) {
+      showError.value = true;
+      return;
+    }
+    
+    showError.value = false;
+    isSubmitting.value = true;
+    
+    const whatsappNumber = '+917026217029';
+    
+    // Create WhatsApp message
+    const message = `Hi! I built something using insights from StackCast Podcast. Here's my GitHub repository: ${githubRepo.value}`;
+    
+    // Encode the message for WhatsApp URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Create WhatsApp URL
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank');
+    
+    // Reset form
+    githubRepo.value = '';
+    isSubmitting.value = false;
+  };
+
+  const submitEmailToWhatsApp = () => {
+    // Validate email
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
+    if (!emailSignup.value || !emailPattern.test(emailSignup.value)) {
+      showEmailError.value = true;
+      return;
+    }
+    
+    showEmailError.value = false;
+    isEmailSubmitting.value = true;
+    
+    const whatsappNumber = '+917026217029';
+    
+    // Create WhatsApp message
+    const message = `Hi! I'm interested in joining Tech Builders. My email is: ${emailSignup.value}`;
+    
+    // Encode the message for WhatsApp URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Create WhatsApp URL
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank');
+    
+    // Reset form
+    emailSignup.value = '';
+    isEmailSubmitting.value = false;
+  };
 </script>
