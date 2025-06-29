@@ -17,7 +17,7 @@
                             </div>
                         </template>
                         <template #title>
-                            <div class="text-xs line-height-3">{{ video.title }}</div>
+                            <div class="text-sm line-height-3">{{ video.title }}</div>
                         </template>
                         <template #subtitle>
                             <!-- <div class="text-xs line-height-3">{{ video.publishedAt }}</div> -->
