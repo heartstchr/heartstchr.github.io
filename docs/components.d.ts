@@ -16,6 +16,7 @@ declare module 'vue' {
     Fieldset: typeof import('primevue/fieldset')['default']
     Galleria: typeof import('primevue/galleria')['default']
     Image: typeof import('primevue/image')['default']
+    InputText: typeof import('primevue/inputtext')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TabPanel: typeof import('primevue/tabpanel')['default']
