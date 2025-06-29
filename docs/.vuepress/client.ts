@@ -20,6 +20,7 @@ import CardHeader from "./components/CardHeader.vue";
 import BlogList from "./components/BlogList.vue";
 import MetaContent from "./components/MetaContent.vue";
 import Contact from "./components/Contact.vue";
+import Pagination from "./components/Pagination.vue";
 
 export default defineClientConfig({
   enhance({ app }) {
@@ -43,5 +44,6 @@ export default defineClientConfig({
     app.component("BlogList", BlogList);
     app.component("MetaContent", MetaContent);
     app.component("Contact", Contact);
+    app.component("Pagination", Pagination);
   },
 });
