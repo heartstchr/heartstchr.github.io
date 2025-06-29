@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import { ref, watch, computed } from 'vue';
+import { ref, watch, computed, nextTick } from 'vue';
 
 const props = defineProps({
     totalRecords: {
@@ -21,11 +21,11 @@ const props = defineProps({
     },
     rowsPerPage: {
         type: Number,
-        default: 6
+        default: 1
     },
     rowsPerPageOptions: {
         type: Array,
-        default: () => [3, 5, 10, 15]
+        default: () => [1, 3, 5, 10, 15]
     }
 });
 
@@ -39,10 +39,19 @@ const totalPages = computed(() => Math.ceil(props.totalRecords / rows.value));
 const onPageChange = (event) => {
     first.value = event.first;
     rows.value = event.rows;
+
+    // Prevent scrolling by maintaining scroll position
+    const currentScrollY = window.scrollY;
+
     emit('page-change', {
         first: event.first,
         rows: event.rows,
         page: Math.floor(event.first / event.rows) + 1
+    });
+
+    // Restore scroll position after the next tick to prevent jumping
+    nextTick(() => {
+        window.scrollTo(0, currentScrollY);
     });
 };
 
@@ -69,50 +78,17 @@ watch(() => props.rowsPerPage, (newValue) => {
     margin: 0 2px;
     min-width: 2.5rem;
     height: 2.5rem;
-    border: 1px solid var(--surface-border);
+    border: 1px solid var(--p-green-800);
     background: var(--surface-card);
-    color: var(--text-color);
+    color: var(--primary-color-text);
     transition: all 0.2s;
 }
-
+:deep(.p-paginator-page-selected){
+    background: var(--p-green-800) !important;
+    color: white !important;
+}
 :deep(.p-paginator .p-paginator-pages .p-paginator-page:hover) {
     background: var(--surface-hover);
-    border-color: var(--primary-color);
-}
-
-:deep(.p-paginator .p-paginator-pages .p-paginator-page.p-highlight) {
-    background: var(--primary-color);
-    border-color: var(--primary-color);
-    color: var(--primary-color-text);
-}
-
-:deep(.p-paginator .p-paginator-first),
-:deep(.p-paginator .p-paginator-prev),
-:deep(.p-paginator .p-paginator-next),
-:deep(.p-paginator .p-paginator-last) {
-    border-radius: 6px;
-    margin: 0 2px;
-    min-width: 2.5rem;
-    height: 2.5rem;
-    border: 1px solid var(--surface-border);
-    background: var(--surface-card);
-    color: var(--text-color);
-    transition: all 0.2s;
-}
-
-:deep(.p-paginator .p-paginator-first:hover),
-:deep(.p-paginator .p-paginator-prev:hover),
-:deep(.p-paginator .p-paginator-next:hover),
-:deep(.p-paginator .p-paginator-last:hover) {
-    background: var(--surface-hover);
-    border-color: var(--primary-color);
-}
-
-:deep(.p-paginator .p-paginator-first:disabled),
-:deep(.p-paginator .p-paginator-prev:disabled),
-:deep(.p-paginator .p-paginator-next:disabled),
-:deep(.p-paginator .p-paginator-last:disabled) {
-    opacity: 0.6;
-    cursor: not-allowed;
+    border-color: var(--theme-color);
 }
 </style>

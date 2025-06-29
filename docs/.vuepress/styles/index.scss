@@ -118,8 +118,8 @@ fieldset {
   border-color: var(--p-green-800) !important;
   color: var(--text-color) !important;
 }
-.p-card-body {
-  margin-bottom: 1rem;
+.p-paginator-content-start {
+    margin-inline-end: revert;
 }
 .custom-button {
   border-radius: 50px;

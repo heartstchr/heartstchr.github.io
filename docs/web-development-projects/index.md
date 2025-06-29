@@ -43,7 +43,7 @@ copyright: false
   
   <Pagination 
     :totalRecords="freelance.length" 
-    :rowsPerPage="3"
+    :rowsPerPage="1"
     @page-change="onPageChange"
   />
 </div>
@@ -54,7 +54,7 @@ copyright: false
   import { ref, computed } from 'vue';
 
   const currentPage = ref(0);
-  const rowsPerPage = ref(3);
+  const rowsPerPage = ref(1);
 
   const paginatedProjects = computed(() => {
     const start = currentPage.value * rowsPerPage.value;
