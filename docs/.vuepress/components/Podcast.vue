@@ -17,7 +17,7 @@
                             </div>
                         </template>
                         <template #title>
-                            <div class="text-sm line-height-3">{{ video.title }}</div>
+                            <div class="text-sm line-height-4">{{ video.title }}</div>
                         </template>
                         <template #subtitle>
                             <!-- <div class="text-xs line-height-3">{{ video.publishedAt }}</div> -->
@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <Pagination :totalRecords="videos.length" :rowsPerPage="5" @page-change="onPageChange" />
+        <Pagination :totalRecords="videos.length" :rowsPerPage="3" @page-change="onPageChange" />
     </div>
 </template>
 
@@ -45,7 +45,7 @@ import { fetchAndSplitVideos } from '../services/youtubeService';
 
 const videos = ref([]);
 const currentPage = ref(0);
-const rowsPerPage = ref(6);
+const rowsPerPage = ref(3);
 
 const paginatedVideos = computed(() => {
     const start = currentPage.value * rowsPerPage.value;
