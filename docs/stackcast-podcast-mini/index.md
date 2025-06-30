@@ -1,16 +1,58 @@
 ---
 title: Podcast Mini
-description: Mission here is to unpack the tools, trends, and strategies that power the software world, so you can stay ahead of the curve. Whether you’re a developer, an engineer, or just tech-curious, we’ve got you covered with actionable insights.
+description: Mission here is to unpack the tools, trends, and strategies that power the software world, so you can stay ahead of the curve. Whether you're a developer, an engineer, or just tech-curious, we've got you covered with actionable insights.
 order: 5
 editLink: false
 copyright: false
 ---
 
-Mission here is to unpack the tools, trends, and strategies that power the software world, so you can stay ahead of the curve. Whether you’re a developer, an engineer, or just tech-curious, we’ve got you covered with actionable insights.
-
-<div class="my-6">
-  <Podcast />
-</div>
+Mission here is to unpack the tools, trends, and strategies that power the software world, so you can stay ahead of the curve. Whether you're a developer, an engineer, or just tech-curious, we've got you covered with actionable insights.
+<div class="surface-ground text-white">
+    <!-- Hero Section -->
+    <section class="">
+      <h1 class="text-4xl font-bold mb-2">Stack Cast 🎙️</h1>
+      <p class="mb-4">Tools, insights & frameworks for devs, and startup CTOs.</p>
+    </section>
+    <section>
+      <h2 class="text-2xl font-semibold">Featured Episodes</h2>
+      <Podcast :showPagination="true"/>
+      <a href="https://www.youtube.com/playlist?list=PLGK9Y5ibwm0-diGJKA69TmIGUQBIStzNw" target="_blank" size="large" class="flex justify-content-center text-center no-underline mt-4"> 
+        <div class="p-flex p-ai-center">
+          <div
+            class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button"
+          >
+            <span class="mr-6">
+              <i class="pi pi-youtube mr-1" aria-label="View on Youtube" style="font-size: 1rem; color:#f03;"></i>
+              Browse All Episodes
+            </span>
+            <Circles/>
+            <i class="pi pi-angle-double-right" style="font-size: 1rem;"></i>
+          </div>
+        </div>
+      </a>
+    </section>
+    <!-- Final CTA -->
+    <section class="py-6 text-center">
+      <h2 class="text-2xl font-bold mb-4">Not Hiring… But Open to Collaboration?</h2>
+      <p>I help early-stage teams go from idea to MVP, and beyond. (Only when it's the right fit.)</p>
+      <div class="text-center pb-4">
+      <a href="https://www.linkedin.com/in/jiwanghosal/" size="large" class="flex justify-content-center text-center no-underline mt-4"> 
+        <div class="p-flex p-ai-center">
+          <div
+            class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button"
+          >
+            <span class="mr-6">
+              <i class="pi pi-linkedin mr-1" aria-label="View LinkedIn Reviews" style="font-size: 1rem; color:#0a66c2;"></i>
+              Say Hi on LinkedIn
+            </span>
+            <Circles/>
+            <i class="pi pi-angle-double-right" style="font-size: 1rem;"></i>
+          </div>
+        </div>
+      </a>
+  </div>
+    </section>
+  </div>
 
 <!-- Contact Me -->
 <div class="border-round-md vp-feature-item" id="contact">

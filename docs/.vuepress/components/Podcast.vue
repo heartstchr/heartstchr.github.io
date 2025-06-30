@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <Pagination :totalRecords="videos.length" :rowsPerPage="3" @page-change="onPageChange" />
+        <Pagination v-if="showPagination" :totalRecords="videos.length" :rowsPerPage="3" @page-change="onPageChange" />
     </div>
 </template>
 
@@ -43,11 +43,21 @@
 import { ref, onMounted, computed } from 'vue';
 import { fetchAndSplitVideos } from '../services/youtubeService';
 
+const props = defineProps({
+    showPagination: {
+        type: Boolean,
+        default: true
+    }
+});
+
 const videos = ref([]);
 const currentPage = ref(0);
 const rowsPerPage = ref(3);
 
 const paginatedVideos = computed(() => {
+    if (!props.showPagination) {
+        return videos.value; // Return all videos when pagination is disabled
+    }
     const start = currentPage.value * rowsPerPage.value;
     const end = start + rowsPerPage.value;
     return videos.value.slice(start, end);
