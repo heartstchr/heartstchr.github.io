@@ -1,8 +1,24 @@
 export const posts = [
   {
+    title: "Supercharge Your Growth AI Tools for Business You Need Now",
+    link: "/posts/ai-tools-for-business/",
+    date: "2025-07-02",
+    summary: "Discover top AI tools for business to boost productivity, streamline marketing, and enhance customer service. Unlock growth with our complete guide to business automation.",
+    category: "Business",
+    tags: ["AI", "Business", "Technology", "Productivity", "Marketing"]
+},
+{
+    title: "Unlock the Power of AI Prompt Engineering A Comprehensive Guide",
+    link: "/posts/unlock-the-power-of-ai-prompt-engineering/",
+    date: "2025-06-29",
+    summary: "Master the art of prompt engineering to get the most out of AI models. Learn techniques, best practices, and real-world examples to improve AI outcomes.",
+    category: "Artificial Intelligence",
+    tags: ["prompt engineering", "AI", "machine learning", "natural language processing", "large language models"]
+},
+  {
     title: "Micro Frontends: A Comprehensive Guide to Building Scalable Web Applications",
     link: "/posts/micro-frontends-a-comprehensive-guide/",
-    date: "2024-02-29",
+    date: "2025-06-20",
     summary: "Discover how micro frontends revolutionize web development. Build scalable, maintainable apps with independent teams and diverse tech stacks. Learn the benefits!",
     category: "Web Development",
     tags: ["micro frontends", "web development", "frontend architecture", "scalability", "modularity", "javascript"]

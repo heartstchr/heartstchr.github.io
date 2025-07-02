@@ -3,10 +3,10 @@ title: Optimizing Web Images with WebP - A Comprehensive Guide
 description: Learn how to optimize web images using WebP format for faster load times and better SEO. Step-by-step guide to convert images recursively with cwebp.
 date: 2025-06-09
 category: [Web Development, SEO, Performance Optimization]
-tag: [WebP, Image Optimization, SEO, Web Performance, cwebp]
+tags: [WebP, Image Optimization, SEO, Web Performance, cwebp]
 ---
 
-<MetaContent :date="$frontmatter.date" :category="$frontmatter.tag"/>
+<MetaContent :date="$frontmatter.date" :category="$frontmatter.tags"/>
 
 In today's digital landscape, website performance is critical for user satisfaction and search engine rankings. Images often account for the largest portion of a webpage's load time, making image optimization a top priority for developers and site owners. One of the most effective ways to optimize images is by using the WebP format, which offers superior compression and quality compared to traditional formats like JPG and PNG. This guide explores how to convert images to WebP recursively using the `cwebp` tool, ensuring faster load times and improved SEO.
 

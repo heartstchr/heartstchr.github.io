@@ -2,10 +2,10 @@
 title: How to Transfer a GitHub Repository to an Organization
 date: 2025-05-26
 category: [Tech]
-tag: [GitHub, Blog]
+tags: [GitHub, Blog]
 ---
 
-<MetaContent :date="$frontmatter.date" :category="$frontmatter.tag"/>
+<MetaContent :date="$frontmatter.date" :category="$frontmatter.tags"/>
 
 As a developer or freelancer, managing your GitHub repositories efficiently is crucial for collaboration and organization. Transferring a repository to a GitHub organization allows you to centralize projects under a team or brand, streamline access, and maintain commit history. In this guide, inspired by Jiwan Ghosal, we’ll walk you through the steps to transfer a GitHub repository to an organization using the GitHub interface, clone the transferred repository, and open it in Visual Studio Code (VS Code). This SEO-optimized tutorial is perfect for developers looking to manage their GitHub repositories effectively.
 

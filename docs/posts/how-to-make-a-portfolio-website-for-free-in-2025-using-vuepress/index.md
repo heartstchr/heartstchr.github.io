@@ -2,10 +2,10 @@
 title: How to Create a Stunning Freelancer Portfolio Website with VuePress
 date: 2025-05-22
 category: [Tech]
-tag: [VuePress, Blog]
+tags: [VuePress, Blog]
 ---
 
-<MetaContent :date="$frontmatter.date" :category="$frontmatter.tag"/>
+<MetaContent :date="$frontmatter.date" :category="$frontmatter.tags"/>
 
 Building a professional portfolio website is essential for freelancers to showcase their work and attract clients. VuePress, a static site generator powered by Vue.js, offers a simple yet powerful way to create a sleek, customizable, and SEO-friendly portfolio. This guide walks you through setting up a VuePress portfolio website, complete with a responsive design, multilingual support, and modern features like dark mode. Optimized for freelancers and stack seekers, this tutorial will help you create a portfolio that stands out.
 
