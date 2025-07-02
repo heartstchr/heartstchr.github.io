@@ -3,10 +3,10 @@ title: TypeScript - 5 Pro Tips to Cook Up Robust Code
 description: Learn 5 expert TypeScript tips to craft scalable code, from optional parameters to utility types and advanced tricks like loose autocomplete. Perfect for all developers!
 date: 2025-06-09
 category: [Programming]
-tag: [TypeScript, JavaScript, Web Development, Coding Tips]
+tags: [TypeScript, JavaScript, Web Development, Coding Tips]
 ---
 
-<MetaContent :date="$frontmatter.date" :category="$frontmatter.tag"/>
+<MetaContent :date="$frontmatter.date" :category="$frontmatter.tags"/>
 
 Think of TypeScript as a master chef’s kitchen, where JavaScript is the raw ingredients. With TypeScript’s type system, you can craft delicious, bug-free code that scales like a perfectly plated dish. Whether you’re a beginner tossing together your first app or a seasoned developer perfecting a complex recipe, these five TypeScript tips will elevate your skills. Let’s get cooking!
 

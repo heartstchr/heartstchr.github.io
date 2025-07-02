@@ -1,12 +1,12 @@
 ---
 title: A Comprehensive Guide to Building Scalable Web Applications, Micro Frontend.
 description: Learn how to use micro frontend to build scalable, maintainable, and independent web applications. Explore benefits, architectures, and implementation strategies.
-date: 2024-02-29
+date: 2025-06-20
 category: Web Development
 tags: [micro frontend, web development, frontend architecture, scalability, modularity, javascript, react, angular, vue]
 ---
 
-<MetaContent :date="$frontmatter.date" :category="$frontmatter.tag"/>
+<MetaContent :date="$frontmatter.date" :category="$frontmatter.tags"/>
 
 In today's rapidly evolving web development landscape, building and maintaining large, complex frontend applications can be a significant challenge.  Micro frontend offer a powerful solution by breaking down monolithic frontend into smaller, more manageable, and independently deployable pieces. This approach unlocks significant benefits in terms of scalability, team autonomy, and technology diversity. Let's dive into the world of micro frontend!
 

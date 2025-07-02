@@ -3,10 +3,10 @@ title: Deleting Local Git Branches Not on Remote Made Easy
 description: Discover how to safely delete local Git branches not in the remote repository with a simple script. Includes bonus tips, a video tutorial, and best practices for Git branch management.
 date: 2025-06-12
 category: Programming
-tag: [Git, Version Control, Developer Tools, Branch Management, Workflow Optimization]
+tags: [Git, Version Control, Developer Tools, Branch Management, Workflow Optimization]
 ---
 
-<MetaContent :date="$frontmatter.date" :category="$frontmatter.tag"/>
+<MetaContent :date="$frontmatter.date" :category="$frontmatter.tags"/>
 
 Maintaining a clean Git workspace is essential for developers, especially when collaborating on projects with multiple branches. Over time, local branches can accumulate, particularly when remote branches are merged or deleted. These stale branches clutter your repository, increase the risk of working on outdated code, and hinder productivity. In this guide, we’ll provide an improved Bash script to safely delete local Git branches that no longer exist on the remote. We’ll also share expert tips, a video tutorial, and best practices to streamline your Git workflow.
 
