@@ -87,19 +87,18 @@ copyright: false
   <div class="text-center pb-4">
     <h2 class="text-4xl font-bold">Certificate of Achievement</h2>
   </div>
-  <div class="flex flex-wrap gap-4 p-4">
-      <Galleria :value="certificate.images" :responsiveOptions="responsiveOptions" :numVisible="5" :circular="true" :showItemNavigators="true" :showThumbnails="false" :pt="{
-        prevButton: { 'aria-label': 'Previous image' },
-        nextButton: { 'aria-label': 'Next image' }
-      }">
-          <template #item="slotProps">
-              <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" loading="eager" fetchpriority="high" />
-          </template>
-          <template #thumbnail="slotProps">
-              <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="display: block" loading="eager" fetchpriority="high"/>
-          </template>
-      </Galleria>
-      <img src="/img/about/JiwanGhosalMicrosoftAz900.webp" width="100%" loading="eager" fetchpriority="high"/>
+  <div class="flex flex-column md:flex-row gap-4 p-4 align-items-center justify-content-center">
+    <template v-for="(cert, certIdx) in certificate" :key="certIdx">
+      <img
+        v-for="(img, idx) in cert.images"
+        :key="img.itemImageSrc"
+        :src="img.itemImageSrc"
+        :alt="img.alt"
+        width="50%"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </template>
   </div>
 </div>
 
@@ -155,11 +154,17 @@ copyright: false
                     title: 'Jiwan Ghosal Microsoft Az900'
                 },
                 {
+                    itemImageSrc: '/img/about/platformcon-2025-golden-path-labs.png',
+                    thumbnailImageSrc: '/img/about/platformcon-2025-golden-path-labs.png',
+                    alt: 'Platformcon 2025 golden path labs',
+                    title: 'Platformcon 2025 golden path labs'
+                },
+                {
                     itemImageSrc: '/img/about/connectedManager.webp',
                     thumbnailImageSrc: '/img/about/connectedManager.webp',
                     alt: 'Connected Manager',
                     title: 'Connected Manager'
-                },
+                }
             ],
     }])
   const responsiveOptions = ref([
