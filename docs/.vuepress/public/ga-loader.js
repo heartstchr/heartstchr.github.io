@@ -21,9 +21,36 @@
     }
     window.gtag = gtag;
 
-    // Configure GA4
-    gtag("js", new Date());
-    gtag("config", GA_MEASUREMENT_ID);
+    // Function to get cookie by name
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+    // Function to set a cookie
+    function setCookie(name, value, days) {
+      const expires = new Date(Date.now() + days*864e5).toUTCString();
+      document.cookie = `${name}=${value}; path=/; expires=${expires}`;
+    }
+
+    // Set cookie if ?dev=1 is in URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const isDevInUrl = urlParams.get('dev') === '1';
+    if (isDevInUrl) {
+      setCookie('traffic_type', 'internal', 365);
+    }
+
+    // Read cookie
+    const trafficType = getCookie('traffic_type') || 'external';
+
+    // GA4 init
+    gtag('js', new Date());
+
+    gtag('config', GA_MEASUREMENT_ID, {
+      'send_page_view': true,
+      'traffic_type': trafficType
+    });
   };
 
   const triggerOnce = () => {
