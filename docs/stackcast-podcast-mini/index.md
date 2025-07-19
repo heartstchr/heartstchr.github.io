@@ -1,18 +1,14 @@
 ---
-title: Podcast Mini
+title: Stack Cast 🎙️
 description: Mission here is to unpack the tools, trends, and strategies that power the software world, so you can stay ahead of the curve. Whether you're a developer, an engineer, or just tech-curious, we've got you covered with actionable insights.
 order: 5
 editLink: false
 copyright: false
 ---
 
-Mission here is to unpack the tools, trends, and strategies that power the software world, so you can stay ahead of the curve. Whether you're a developer, an engineer, or just tech-curious, we've got you covered with actionable insights.
-<div class="surface-ground text-white">
-    <!-- Hero Section -->
-    <section class="">
-      <h1 class="text-4xl font-bold mb-2">Stack Cast 🎙️</h1>
-      <p class="mb-4">Tools, insights & frameworks for devs, and startup CTOs.</p>
-    </section>
+<h2 class="text-2xl font-semibold">Your go-to mini podcast</h2>
+Mission here is to unpack the tools, trends, and strategies that power the software world, so you can stay ahead of the curve. Whether you're a developer, an engineer, or just tech-curious, we've got you covered with actionable insights.Tools, insights & frameworks for devs, and startup CTOs.
+<div class="surface-ground">
     <section>
       <h2 class="text-2xl font-semibold">Featured Episodes</h2>
       <Podcast :showPagination="true"/>
