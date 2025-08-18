@@ -102,10 +102,10 @@ export default defineUserConfig({
   },
   shouldPrefetch: false,
   define: {
-    __VITE_YOUTUBE_API_KEY__: process.env.VITE_YOUTUBE_API_KEY,
-    __VITE_YOUTUBE_CHANNEL_ID__: process.env.VITE_YOUTUBE_CHANNEL_ID,
-    __VITE_YOUTUBE_PLAYLIST_ID__: process.env.VITE_YOUTUBE_PLAYLIST_ID,
-    __VITE_NOTION_ENDPOINT__: process.env.VITE_NOTION_ENDPOINT,
-    __VITE_NOTION_DATABASE_ID__: process.env.VITE_NOTION_DATABASE_ID,
+    __VITE_YOUTUBE_API_KEY__: process.env.VITE_YOUTUBE_API_KEY || "",
+    __VITE_YOUTUBE_CHANNEL_ID__: process.env.VITE_YOUTUBE_CHANNEL_ID || "",
+    __VITE_YOUTUBE_PLAYLIST_ID__: process.env.VITE_YOUTUBE_PLAYLIST_ID || "",
+    __VITE_NOTION_ENDPOINT__: process.env.VITE_NOTION_ENDPOINT || "",
+    __VITE_NOTION_DATABASE_ID__: process.env.VITE_NOTION_DATABASE_ID || "",
   },
 });

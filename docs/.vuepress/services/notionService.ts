@@ -42,14 +42,25 @@ export interface NotionFileObject {
 const endpoint = __VITE_NOTION_ENDPOINT__;
 const databaseId = __VITE_NOTION_DATABASE_ID__;
 
-// Log configuration status
-if (endpoint) {
-  console.log("✅ Using proxy endpoint for Notion integration:", endpoint);
-  console.log("🌐 Client origin:", window.location.origin);
-} else {
-  console.error(
-    "❌ Notion integration not configured. Please set VITE_NOTION_ENDPOINT to your Vercel function URL."
-  );
+// Log configuration status only in browser environment
+if (typeof window !== "undefined") {
+  console.log("🔧 Environment check:");
+  console.log("  - VITE_NOTION_ENDPOINT:", __VITE_NOTION_ENDPOINT__);
+  console.log("  - VITE_NOTION_DATABASE_ID:", __VITE_NOTION_DATABASE_ID__);
+  console.log("  - endpoint variable:", endpoint);
+  console.log("  - databaseId variable:", databaseId);
+
+  if (endpoint) {
+    console.log("✅ Using proxy endpoint for Notion integration:", endpoint);
+    console.log("🌐 Client origin:", window.location.origin);
+  } else {
+    console.error(
+      "❌ Notion integration not configured. Please set VITE_NOTION_ENDPOINT to your github pages."
+    );
+    console.error(
+      "💡 Make sure you have a .env file with VITE_NOTION_ENDPOINT=https://stackseekers.vercel.app"
+    );
+  }
 }
 
 function buildNotionProperties(
@@ -113,6 +124,11 @@ function buildNotionProperties(
 export async function uploadFilesToNotion(
   files: File[]
 ): Promise<NotionFileObject[]> {
+  // Check if we're in browser environment
+  if (typeof window === "undefined") {
+    throw new Error("This function can only run in browser environment");
+  }
+
   if (!endpoint) throw new Error("Notion endpoint not configured");
   const MAX_FILE_SIZE = 5 * 1024 * 1024;
   // Support images and common document types
@@ -253,6 +269,12 @@ export async function fetchDatabaseSchemaOptions(): Promise<{
   serviceOptions: ServiceOption[];
   budgetOptions: ServiceOption[];
 }> {
+  // Check if we're in browser environment
+  if (typeof window === "undefined") {
+    console.warn("⚠️ This function can only run in browser environment");
+    return { serviceOptions: [], budgetOptions: [] };
+  }
+
   if (!endpoint) {
     console.error("❌ Notion proxy endpoint missing: VITE_NOTION_ENDPOINT");
     return { serviceOptions: [], budgetOptions: [] };
