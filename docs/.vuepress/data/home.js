@@ -1,26 +1,18 @@
 export const events = [
   {
-    status: "We start with understanding your requirements",
-    date: "15/10/2020 10:30",
-    icon: "pi pi-shopping-cart",
+    status: "Free strategy call (25 min)",
     color: "#9C27B0",
   },
   {
-    status: "Set a clear timeline",
-    date: "15/10/2020 14:00",
-    icon: "pi pi-cog",
+    status: "Scoping & estimate (48 hours)",
     color: "#673AB7",
   },
   {
-    status: "I handle the development phase",
-    date: "15/10/2020 16:15",
-    icon: "pi pi-shopping-cart",
+    status: "Build in bi-weekly sprints (demo every alternate Friday)",
     color: "#FF9800",
   },
   {
-    status: "Deliver your project with ongoing support to ensure success",
-    date: "16/10/2020 10:00",
-    icon: "pi pi-check",
+    status: "Launch & handover (+30 days support)",
     color: "#607D8B",
   },
 ];
@@ -55,7 +47,7 @@ export const testimonials = [
     name: "Harris Malik",
     designation: "Senior Product Manager at 8x8",
     message:
-      "Jiwan is one of the most valuable people I have ever met. He is smart, professional, and never fails to surprise us with creative solutions to difficult problems. Jiwan's personality and skills would be a great asset to any company. Highly recommended.",
+      "Jiwan is one of the most valuable people I have ever met. He is smart, professional, and never fails to surprise us with creative solutions to difficult problems. Highly recommended.",
     avatar:
       "https://media.licdn.com/dms/image/v2/D5603AQG8ooyo97JCoA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1682841547783?e=1750896000&v=beta&t=RV2vZM-PEHtTdtboor0V4y6H-KGoUu7-DuJiiET_buU",
     link: "https://www.linkedin.com/in/harrismalik04/",
@@ -77,7 +69,7 @@ export const testimonials = [
     name: "Shyam Kumar",
     designation: "Senior Product Manager at Angel One",
     message:
-      "I always found Jiwan to be a very dependable and hardworking colleague. Many times he went above and beyond to meet the product requirements; it might be either working overtime to release the project on time or working with other teams to get the production issue fixed. He was always the go-to person on the team.",
+      "I always found Jiwan to be a very dependable and hardworking colleague. Many times he went above and beyond to meet the product requirements. He was always the go-to person on the team.",
     avatar:
       "https://media.licdn.com/dms/image/v2/D5603AQHZpSlK7j89uA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1698672442801?e=1750896000&v=beta&t=lscT5fFmahvoGSWRzV4hN-r2YM58ddKTki5HdOziiuI",
     link: "https://www.linkedin.com/in/shyam-kumar-k/",
@@ -88,7 +80,7 @@ export const testimonials = [
     name: "Erkan Ateşli",
     designation: "Chapter Lead at ABN AMRO Bank N.V.",
     message:
-      "In our connection with Jiwan at ABN AMRO, I noticed that he has a lot of knowledge in his field of expertise. He can transfer his knowledge easily to others. With his strong analytics skills, he can handle complex questions as usual. Jiwan is a brave colleague I’ve met, and we had a lot of fun during the India visit and especially at the party. ",
+      "In our connection with Jiwan at ABN AMRO, I noticed that he has a lot of knowledge in his field of expertise. He can transfer his knowledge easily to others. With his strong analytics skills, he can handle complex questions as usual.",
     avatar:
       "https://media.licdn.com/dms/image/v2/C4E03AQFg4Oh_B9JEeQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1621625662967?e=1750896000&v=beta&t=9KwLZLloVo4ianxK3csxIjlMY0_G0Ez7nKYvgPVVssE",
     link: "https://www.linkedin.com/in/erkanatesli",
@@ -101,25 +93,25 @@ export const whyme = [
     id: "proven_expertise",
     title: "10+ Years of Proven Expertise",
     description:
-      "Over a decade of delivering impactful projects, consistently providing innovative solutions that drive tangible results and add measurable value for clients across industries.",
+      "Bringing over a decade of hands-on web development experience, I deliver reliable and impactful solutions that help your business grow -> faster",
   },
   {
     id: "client_centric_approach",
     title: "Client-Centric Approach",
     description:
-      "Focused on understanding your unique needs, I offer tailored solutions that align with your business goals, ensuring seamless collaboration and delivering the most effective value.",
+      "Every project starts by listening: I tailor solutions to your exact needs, with clear communication and a step-by-step plan you understand",
   },
   {
     id: "wide_range_of_experience",
     title: "20+ Clients Across Industries",
     description:
-      "With experience working with over 20 clients from diverse sectors, I bring versatile expertise, quickly adapting to challenges and offering solutions suited to each industry’s demands.",
+      "My expertise spans 20+ clients in diverse sectors, allowing me to adapt quickly and deliver what your industry requires with proven results.",
   },
   {
     id: "commitment_to_quality_code",
     title: "Commitment to Quality Code",
     description:
-      "I ensure all code is clean, scalable, and efficient by using industry-standard tools such as ESLint, Prettier, SonarQube, and Jest, delivering high-performance, maintainable, and reliable solutions.",
+      "Expect clean, maintainable code built with top industry tools—making your project robust, scalable, and easy to update.",
   },
 ];
 export const stackLogos = [

@@ -40,19 +40,31 @@ export const enNavbar = navbar([
         text: "Hosting",
         link: "web-development-services/#hosting",
       },
+      {
+        text: "Other",
+        link: "contact/",
+      },
     ],
   },
   {
-    text: "Videos",
-    icon: "pi pi-youtube",
-    link: "stackseekers-tv/",
+    text: "Resources",
+    icon: "pi pi-code",
+    link: "/web-development-services/",
+    children: [
+      { 
+        text: "Blog",
+        link: "/posts/"
+     },
+      {
+        text: "Videos",
+        link: "stackseekers-tv/",
+      },
+      {
+        text: "Podcast",
+        link: "stackcast-podcast-mini/",
+      },
+    ],
   },
-  {
-    text: "Podcast",
-    icon: "pi pi-youtube",
-    link: "stackcast-podcast-mini/",
-  },
-  { text: "Blog", icon: "pi pi-user", link: "/posts/" },
   { text: "About", icon: "pi pi-user", link: "/about/" },
   {
     text: "Contact",

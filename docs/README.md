@@ -4,27 +4,28 @@ title: Web Developer
 description: Stack Seekers is a full-stack web development agency helping startups and businesses build modern, high-performance websites and web applications. From idea to launch, we turn your vision into powerful digital solutions. Expert Vue.js, React.js, and Node.js developer delivering scalable web, mobile, and software solutions with 𝙈𝙀𝙍𝙉 and 𝙈𝙀𝙑𝙉 stacks (MongoDB, Express, React/Vue, Next/Nuxt, Node.js).
 heroImage: /img/home/jiwanghosal.webp
 heroText: Hi, Stack Seekers
-tagline: 👋 I'm a full-stack consultant specializing in scalable web, mobile, and software solutions built with the MERN and MEVN stacks. I help businesses turn ideas into powerful digital products. Let’s bring your ideas to life, connect with me today!
+tagline: Build, launch, and scale your product 2x faster with a senior MERN/MEVN developer.<br/><br/><div class="text-xl -mt-2">I help startups and SMBs ship reliable web apps in weeks, not months without sacrificing code quality.</div>
 containerClass: fancy-container
-actions:
-  - text: Book free consultation
-    link: https://cal.com/stackseekers
-    type: primary
 
 editLink: false
 copyright: false
 ---
 
-<div class="mb-6">
+<div>
+<a href="https://cal.com/stackseekers" size="large"
+    class="flex justify-content-center text-center no-underline -mt-4" aria-label="Send an Email">
+<Button label="Book a 25‑min free strategy call" icon="pi pi-briefcase" severity="primary" raised rounded />
+</a>
+<div class="text-center text-xs mt-1">No commitment. Get a roadmap and estimate.</div>
+<div class="text-center text-sm mt-2 text-orange-600 font-medium">
+  <i class="pi pi-bell mr-1"></i>Only 2 complimentary consults left this month.
+</div>
+</div>
+
+<div class="mt-8">
   <div class="text-center pb-4">
     <div class="text-4xl font-bold"><h2>Scalable Solutions for <div class="text-4xl font-bold bg-primary">Startups, Enterprises & Agencies</div></h2></div>
-    <div class="text-xl md:text-center line-height-3"> I am Jiwan Ghosal. A full-stack developer with extensive experience in the JavaScript, VueJS, ReactJS and NodeJS ecosystems, as well as expertise in the Azure cloud platform.</div>
-  </div>  
-  <div class="grid justify-content-center my-4">
-    <div class="flex gap-2 p-2" v-for="stackLogo in stackLogos" :key="stackLogo.title">
-      <img width="38px" height="38px" :src="`https://cdn.simpleicons.org/${stackLogo.link}`" :alt="stackLogo.title" loading="eager" fetchpriority="high"/>
-      <h3 class="sr-only">{{stackLogo.title}}</h3>
-    </div>
+    <div class="text-xl md:text-center line-height-3"> I’m Jiwan Ghosal, a senior JavaScript engineer specializing in React/Vue and Node on Azure. I help founders and teams ship fast, clean, and scalable software.</div>
   </div>
   <div class="gallery gap-4">
     <div
@@ -36,6 +37,12 @@ copyright: false
         <img :src="project.images[0].itemImageSrc" :alt="project.images[0].alt" loading="eager" fetchpriority="high" />
         <h3 class="p-0 m-2">{{ project.name }}</h3>
       </a>
+    </div>
+  </div>
+  <div class="grid justify-content-center my-4">
+    <div class="flex gap-2 p-2" v-for="stackLogo in stackLogos" :key="stackLogo.title">
+      <img width="38px" height="38px" :src="`https://cdn.simpleicons.org/${stackLogo.link}`" :alt="stackLogo.title" loading="eager" fetchpriority="high"/>
+      <h3 class="sr-only">{{stackLogo.title}}</h3>
     </div>
   </div>
   <div class="text-center pb-4 grid justify-content-center gap-4">
@@ -64,11 +71,8 @@ copyright: false
       @page="onPageChange">
         <template #item="slotProps">
           <div class="card shadow-1 border-round-md p-4 md:mx-8 vp-feature-item">
-            <div class="font-italic mb-8">
-              <div class="text-md line-height-3" ><span class="font-bold text-4xl">"</span> {{ slotProps.data.message }}</div>
-            </div>
             <div class="flex align-items-center">
-              <img :src="slotProps.data.avatar" :alt="slotProps.data.name" loading="eager" fetchpriority="high" class="border-circle" width="50px" height="50px" />
+              <!-- <img :src="slotProps.data.avatar" :alt="slotProps.data.name" loading="eager" fetchpriority="high" class="border-circle" width="50px" height="50px" /> -->
               <a :href="slotProps.data.link" target="_blank" class="no-underline">
                 <h3 class="flex flex-column align-items-start ml-2 p-0 m-0">
                   <div>
@@ -82,6 +86,9 @@ copyright: false
                 </h3>
               </a>
             </div>
+            <div class="font-italic mb-8">
+              <div class="text-md line-height-3" ><span class="font-bold text-4xl">"</span> {{ slotProps.data.message }}</div>
+            </div>
           </div>
         </template>
     </Carousel>
@@ -89,11 +96,8 @@ copyright: false
   <div class="grid justify-content-center my-4 md:flex hidden">
     <div class="card md:mx-0 -mx-4 col-12 md:col-3" v-for="testimony in testimonials" :key="testimony.name">
       <div class="card shadow-1 border-round-md m-2 p-2 vp-feature-item">
-        <div class="font-italic mb-8">
-          <div class="text-md line-height-3" ><span class="font-bold text-4xl">"</span> {{ testimony.message }}</div>
-        </div>
         <div class="flex align-items-center">
-          <img :src="testimony.avatar" :alt="testimony.name" loading="eager" fetchpriority="high" class="border-circle" width="50px" height="50px" />
+          <!-- <img :src="testimony.avatar" :alt="testimony.name" loading="eager" fetchpriority="high" class="border-circle" width="50px" height="50px" /> -->
           <a :href="testimony.link" target="_blank" class="no-underline">
             <h3 class="flex flex-column align-items-start ml-2 p-0 m-0">
               <div>
@@ -106,6 +110,9 @@ copyright: false
               </div>
             </h3>
           </a>
+        </div>
+        <div class="font-italic mb-8">
+          <div class="text-md line-height-3" ><span class="font-bold text-4xl">"</span> {{ testimony.message }}</div>
         </div>
       </div>
     </div>
@@ -174,6 +181,13 @@ copyright: false
       </div>
     </div>
   </div>
+  <div class="my-8">
+      <a href="https://cal.com/stackseekers" size="large"
+          class="flex justify-content-center text-center no-underline -mt-4" aria-label="Send an Email">
+      <Button label="Book a 25‑min free strategy call" icon="pi pi-briefcase" severity="primary" raised rounded />
+      </a>
+      <div class="text-center text-xs mt-1">No commitment. Get a roadmap and estimate.</div>
+  </div>
 </div>
 <!-- FAQ -->
 <div class="my-6">
@@ -182,7 +196,7 @@ copyright: false
   </div>
   <div class="grid overflow-hidden border-round-md">
     <div class="col-12 ">
-      <div class="border-round-md flex flex-column gap-2 md:p-2">
+      <div class="border-round-md flex flex-column gap-4 md:p-2">
         <div class="p-4 border-round-md border-1 border-primary">
           <h3 class="m-0 p-0 font-bold">How can I start a project with you?</h3>
           <p class="mx-3">
@@ -219,12 +233,30 @@ copyright: false
                 {{ slotProps.item.status }}
               </template>
             </Timeline>
+            <div class="my-8">
+                <a href="https://cal.com/stackseekers" size="large"
+                    class="flex justify-content-center text-center no-underline -mt-4" aria-label="Send an Email">
+                <Button label="Book a 25‑min free strategy call" icon="pi pi-briefcase" severity="primary" raised rounded />
+                </a>
+                <div class="text-center text-xs mt-1">No commitment. Get a roadmap and estimate.</div>
+            </div>
           </div>
-        </div>
-        <div class="my-4">
-          <a href="https://cal.com/stackseekers" size="large" class="flex justify-content-center text-center no-underline mt-4" aria-label="scheduling a meeting"> 
-            <Button label="Hire Me" icon="pi pi-calendar-clock" severity="primary" raised rounded/>
-          </a>
+        </div>       
+        <!-- Guarantees and Safety Nets -->
+        <div class="p-4 border-round-md border-1 border-primary">
+          <h3 class="mt-0 p-0 font-bold">Guarantees & Safety Nets</h3>
+          <div class="mx-3">
+            <div class="my-4">
+              <div class="flex align-items-center mb-3">
+                <i class="pi pi-shield text-primary mr-3" style="font-size: 1.5rem;"></i>
+                <span class="text-lg">"If I'm not a fit after the first week, you pay nothing."</span>
+              </div>
+              <div class="flex align-items-center">
+                <i class="pi pi-unlock text-primary mr-3" style="font-size: 1.5rem;"></i>
+                <span class="text-lg">"No lock‑in: cancel monthly engagement anytime."</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
