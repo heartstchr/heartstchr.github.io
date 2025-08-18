@@ -248,22 +248,31 @@ export async function submitProjectRequest(
   }
 }
 
-// Fetch Service Type select options from Notion database schema
-export async function fetchServiceTypeOptions(): Promise<ServiceOption[]> {
+// Fetch database schema options for form dropdowns
+export async function fetchDatabaseSchemaOptions(): Promise<{
+  serviceOptions: ServiceOption[];
+  budgetOptions: ServiceOption[];
+}> {
   if (!endpoint) {
     console.error("❌ Notion proxy endpoint missing: VITE_NOTION_ENDPOINT");
-    return [];
+    return { serviceOptions: [], budgetOptions: [] };
+  }
+
+  if (!databaseId) {
+    console.error("❌ Notion database ID missing: VITE_NOTION_DATABASE_ID");
+    return { serviceOptions: [], budgetOptions: [] };
   }
 
   try {
+    console.log("🔍 Fetching database schema options from:", databaseId);
+
     const response = await fetch(`${endpoint}/all`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        endpoint: `/v1/databases/${databaseId}/query`,
+        endpoint: `/v1/databases/${databaseId}`,
         options: {
-          method: "POST",
-          body: JSON.stringify({}), // Empty body for database query
+          method: "GET",
         },
       }),
     });
@@ -273,24 +282,56 @@ export async function fetchServiceTypeOptions(): Promise<ServiceOption[]> {
     }
 
     const data = await response.json();
-    console.log("data->", data);
+    console.log("📊 Database schema response:", data);
 
-    // data.properties should contain the DB properties
+    // Get database properties from the schema
     const properties = data?.properties || {};
+    console.log("🏗️ Available properties:", Object.keys(properties));
+
+    // Extract Service Type options
     const serviceProp = properties["Service Type"];
-    if (!serviceProp) return [];
+    let serviceOptions: ServiceOption[] = [];
+    if (serviceProp) {
+      const options: SelectOption[] =
+        serviceProp?.select?.options ||
+        serviceProp?.multi_select?.options ||
+        [];
+      serviceOptions = options.map((opt) => ({
+        label: opt.name,
+        value: opt.name,
+        color: opt.color,
+      }));
+      console.log("🎯 Service Type options:", serviceOptions);
+    } else {
+      console.warn("⚠️ 'Service Type' property not found in database schema");
+    }
 
-    // Support both select and multi_select definitions
-    const options: SelectOption[] =
-      serviceProp?.select?.options || serviceProp?.multi_select?.options || [];
+    // Extract Budget Range options
+    const budgetProp = properties["Budget Range"];
+    let budgetOptions: ServiceOption[] = [];
+    if (budgetProp) {
+      const options: SelectOption[] =
+        budgetProp?.select?.options || budgetProp?.multi_select?.options || [];
+      budgetOptions = options.map((opt) => ({
+        label: opt.name,
+        value: opt.name,
+        color: opt.color,
+      }));
+      console.log("💰 Budget Range options:", budgetOptions);
+    } else {
+      console.warn("⚠️ 'Budget Range' property not found in database schema");
+    }
 
-    return options.map((opt) => ({
-      label: opt.name,
-      value: opt.name,
-      color: opt.color,
-    }));
+    console.log("✅ Returning schema options:", {
+      serviceOptions,
+      budgetOptions,
+    });
+    return { serviceOptions, budgetOptions };
   } catch (error) {
-    console.error("Failed to fetch Service Type options from Notion:", error);
-    return [];
+    console.error(
+      "❌ Failed to fetch database schema options from Notion:",
+      error
+    );
+    return { serviceOptions: [], budgetOptions: [] };
   }
 }

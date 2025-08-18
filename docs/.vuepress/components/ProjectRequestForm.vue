@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, reactive, onMounted } from 'vue';
-import { fetchServiceTypeOptions } from '../services/notionService';
+import { fetchDatabaseSchemaOptions } from '../services/notionService';
 import { submitProjectRequest } from '../services/notionService';
 
 type FormState = {
@@ -20,13 +20,16 @@ const form = reactive<FormState>({
 });
 
 const serviceOptions = ref<{ label: string; value: string }[]>([]);
+const budgetOptions = ref<{ label: string; value: string }[]>([]);
 
 onMounted(async () => {
     try {
-        const options = await fetchServiceTypeOptions();
-        console.log('serviceOptions', options);
-        // Fallback to defaults if none returned
-        serviceOptions.value = options.length ? options : [
+        const { serviceOptions: notionServices, budgetOptions: notionBudgets } = await fetchDatabaseSchemaOptions();
+        console.log('Notion service options:', notionServices);
+        console.log('Notion budget options:', notionBudgets);
+
+        // Use Notion options if available, otherwise fallback to defaults
+        serviceOptions.value = notionServices.length ? notionServices : [
             { label: 'Website Development', value: 'Website Development' },
             { label: 'E-commerce', value: 'E-commerce' },
             { label: 'API Integration', value: 'API Integration' },
@@ -34,7 +37,16 @@ onMounted(async () => {
             { label: 'UI/UX Design', value: 'UI/UX Design' },
             { label: 'Other', value: 'Other' },
         ];
+
+        budgetOptions.value = notionBudgets.length ? notionBudgets : [
+            { label: 'Under $1,000', value: '<1000' },
+            { label: '$1,000 - $5,000', value: '1000-5000' },
+            { label: '$5,000 - $10,000', value: '5000-10000' },
+            { label: 'Over $10,000', value: '>10000' }
+        ];
     } catch (e) {
+        console.error('Failed to fetch options from Notion:', e);
+        // Fallback to defaults
         serviceOptions.value = [
             { label: 'Website Development', value: 'Website Development' },
             { label: 'E-commerce', value: 'E-commerce' },
@@ -43,15 +55,17 @@ onMounted(async () => {
             { label: 'UI/UX Design', value: 'UI/UX Design' },
             { label: 'Other', value: 'Other' },
         ];
+
+        budgetOptions.value = [
+            { label: 'Under $1,000', value: '<1000' },
+            { label: '$1,000 - $5,000', value: '1000-5000' },
+            { label: '$5,000 - $10,000', value: '5000-10000' },
+            { label: 'Over $10,000', value: '>10000' }
+        ];
     }
 });
 
-const budgetOptions = [
-    { label: 'Under $1,00', value: '<100' },
-    { label: '$1,00 - $5,00', value: '100-500' },
-    { label: '$5,000 - $10,000', value: '500-1000' },
-    { label: 'Over $10,00', value: '>1000' }
-];
+
 
 type ErrorState = {
     name: string;
@@ -150,7 +164,7 @@ async function onSubmit() {
                     <small v-if="errors.service" class="p-error">{{ errors.service }}</small>
                 </div>
                 <div class="mb-4">
-                    <label for="budget" class="block mb-1 font-semibold">Budget</label>
+                    <label for="budget" class="block mb-1 font-semibold">Budget $</label>
                     <Dropdown id="budget" v-model="form.budget" :options="budgetOptions" optionLabel="label"
                         optionValue="value" placeholder="Select budget" class="w-full"
                         :class="{ 'p-invalid': errors.budget }" />
