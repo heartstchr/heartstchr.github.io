@@ -21,6 +21,7 @@ import BlogList from "./components/BlogList.vue";
 import MetaContent from "./components/MetaContent.vue";
 import Contact from "./components/Contact.vue";
 import Pagination from "./components/Pagination.vue";
+import ProjectRequestForm from "./components/ProjectRequestForm.vue";
 
 export default defineClientConfig({
   enhance({ app }) {
@@ -45,5 +46,6 @@ export default defineClientConfig({
     app.component("MetaContent", MetaContent);
     app.component("Contact", Contact);
     app.component("Pagination", Pagination);
+    app.component("ProjectRequestForm", ProjectRequestForm);
   },
 });

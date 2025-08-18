@@ -1,8 +1,8 @@
 import { defineUserConfig } from "vuepress";
 import { loadEnv } from "vite";
-import { viteBundler } from '@vuepress/bundler-vite';
-import Components from 'unplugin-vue-components/vite';
-import { PrimeVueResolver } from 'unplugin-vue-components/resolvers';
+import { viteBundler } from "@vuepress/bundler-vite";
+import Components from "unplugin-vue-components/vite";
+import { PrimeVueResolver } from "unplugin-vue-components/resolvers";
 import { path } from "vuepress/utils";
 import theme from "./theme.js";
 
@@ -18,7 +18,7 @@ export default defineUserConfig({
       plugins: [
         Components({
           resolvers: [PrimeVueResolver()],
-        }),
+        }) as unknown as any,
       ],
       ssr: {
         noExternal: ["primevue"],
@@ -33,9 +33,10 @@ export default defineUserConfig({
       title: "Jiwan Ghosal",
       description:
         "Senior Full Stack Developer - Graphic Artist - UI/UX Designer",
+      // extra keys are permitted by casting
       logo: "/img/logojg.svg",
       logoAlt: "Stack Seekers Logo – Web Development Experts",
-    },
+    } as unknown as any,
   },
   head: [
     [
@@ -97,11 +98,14 @@ export default defineUserConfig({
     ),
     "@data": path.resolve(__dirname, "./data"),
     "@utils": path.resolve(__dirname, "./utils"),
+    "@services": path.resolve(__dirname, "./services"),
   },
   shouldPrefetch: false,
   define: {
     __VITE_YOUTUBE_API_KEY__: process.env.VITE_YOUTUBE_API_KEY,
     __VITE_YOUTUBE_CHANNEL_ID__: process.env.VITE_YOUTUBE_CHANNEL_ID,
     __VITE_YOUTUBE_PLAYLIST_ID__: process.env.VITE_YOUTUBE_PLAYLIST_ID,
-  }
+    __VITE_NOTION_ENDPOINT__: process.env.VITE_NOTION_ENDPOINT,
+    __VITE_NOTION_DATABASE_ID__: process.env.VITE_NOTION_DATABASE_ID,
+  },
 });
