@@ -41,7 +41,11 @@ jobs:
           VITE_NOTION_ENDPOINT: ${{secrets.VITE_NOTION_ENDPOINT}}
           VITE_NOTION_DATABASE_ID: ${{secrets.VITE_NOTION_DATABASE_ID}}
         run: |-
+          # Clear any existing cache
+          rm -rf docs/.vuepress/.temp docs/.vuepress/.cache docs/.vuepress/dist
+          # Build with clean state
           pnpm run build
+          # Create .nojekyll file
           > docs/.vuepress/dist/.nojekyll
 
       - name: Deploy web
