@@ -6,4 +6,8 @@ editLink: false
 copyright: false
 ---
 
-<Contact/>
+<div>
+    <Contact/>
+    <div class="text-center m-4 text-2xl font-bold">OR</div>
+    <ProjectRequestForm/>
+</div>

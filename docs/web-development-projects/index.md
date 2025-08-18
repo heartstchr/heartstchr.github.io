@@ -30,7 +30,6 @@ copyright: false
     </a>
   </div>
 </div>
-
 <div class="p-d-flex p-flex-column p-mr-3">
   <div class="grid my-6 gap-8">
     <ProjectCard
