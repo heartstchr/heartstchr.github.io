@@ -11,7 +11,7 @@ editLink: false
 copyright: false
 ---
 
-<div>
+<div class="-mt-2">
 <a href="https://cal.com/stackseekers" size="large"
     class="flex justify-content-center text-center no-underline -mt-4" aria-label="Send an Email">
 <Button label="Book a 25‑min free strategy call" icon="pi pi-briefcase" severity="primary" raised rounded />
