@@ -4,7 +4,7 @@ title: Web Developer
 description: Stack Seekers is a full-stack web development agency helping startups and businesses build modern, high-performance websites and web applications. From idea to launch, we turn your vision into powerful digital solutions. Expert Vue.js, React.js, and Node.js developer delivering scalable web, mobile, and software solutions with 𝙈𝙀𝙍𝙉 and 𝙈𝙀𝙑𝙉 stacks (MongoDB, Express, React/Vue, Next/Nuxt, Node.js).
 heroImage: /img/home/jiwanghosal.webp
 heroText: Hi, Stack Seekers
-tagline: Build, launch, and scale your product 2x faster with a senior MERN/MEVN developer.<br/><br/><div class="text-xl -mt-2">I help startups and SMBs ship reliable web apps in weeks, not months without sacrificing code quality.</div>
+tagline: Build, launch, and scale your product 2x faster with a senior MERN/MEVN developer.<br/><br/>I help startups and SMBs ship reliable web apps in weeks, not months without sacrificing code quality.
 containerClass: fancy-container
 
 editLink: false
