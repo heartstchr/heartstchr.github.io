@@ -91,27 +91,27 @@ export const testimonials = [
 export const whyme = [
   {
     id: "proven_expertise",
-    title: "10+ Years of Proven Expertise",
+    title: "MVP Ready in 4-8 Weeks",
     description:
-      "Bringing over a decade of hands-on web development experience, I deliver reliable and impactful solutions that help your business grow -> faster",
+      "I specialize in rapid MVP development that gets your product in front of users fast. With proven frameworks and agile sprints, your funded startup can validate ideas and iterate quickly before your runway runs out.",
   },
   {
     id: "client_centric_approach",
-    title: "Client-Centric Approach",
+    title: "Investor-Ready Products",
     description:
-      "Every project starts by listening: I tailor solutions to your exact needs, with clear communication and a step-by-step plan you understand",
+      "Beyond just code, I deliver polished MVPs with technical documentation, deployment guides, and scalable architecture that impresses investors and sets your startup up for future funding rounds.",
   },
   {
     id: "wide_range_of_experience",
-    title: "20+ Clients Across Industries",
+    title: "20+ Startup Success Stories",
     description:
-      "My expertise spans 20+ clients in diverse sectors, allowing me to adapt quickly and deliver what your industry requires with proven results.",
+      "I've helped funded startups from fintech to SaaS launch their first products. I understand the unique pressures of startup timelines, budget constraints, and the need to pivot quickly based on user feedback.",
   },
   {
     id: "commitment_to_quality_code",
-    title: "Commitment to Quality Code",
+    title: "Built to Scale Day One",
     description:
-      "Expect clean, maintainable code built with top industry tools making your project robust, scalable, and easy to update.",
+      "Your MVP won't become technical debt. I architect solutions using modern tech stacks that can handle 10x growth, making it easy to onboard your future development team without costly rewrites.",
   },
 ];
 export const stackLogos = [
@@ -152,4 +152,3 @@ export const stackLogos = [
     title: "lighthouse",
   },
 ];
-
