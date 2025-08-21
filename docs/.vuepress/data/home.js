@@ -111,7 +111,7 @@ export const whyme = [
     id: "commitment_to_quality_code",
     title: "Commitment to Quality Code",
     description:
-      "Expect clean, maintainable code built with top industry tools—making your project robust, scalable, and easy to update.",
+      "Expect clean, maintainable code built with top industry tools making your project robust, scalable, and easy to update.",
   },
 ];
 export const stackLogos = [
