@@ -2,86 +2,187 @@ import { toKebabCase } from "../utils/index.js";
 
 export const freelance = [
   {
-    "name": "Appliance Repair Service Platform",
-    "description": "A modern, content-driven platform for connecting users with local appliance repair professionals and providing troubleshooting guides for major home appliances",
-    "software": "Web",
-    "org": "ApplianceRepairly",
-    "year": "2025",
-    domain: "Digital Marketing",
-    "schema": "https://schema.org/WebApplication",
-    "link": "https://appliancerepairly.com",
+    name: "Service Request System",
+    description:
+      "Build a complete customer service request management system using Notion database and Netlify functions. Features automated email notifications, file uploads, real-time sync, and professional web forms - all completely free with no coding required.",
+    software: "Web",
+    org: "Stack Seekers",
+    year: "2025",
+    domain: "Service Request",
+    schema: "https://schema.org/WebApplication",
+    link: "https://notion-p.netlify.app/",
     contact: "mailto:jiwan.cse@gmail.com?subject=Inquiry : ",
-    "stack": ["nextdotjs/black/white", "react", "nodedotjs", "json/black/white", "tailwindcss", "axios", "npm", "pm2", "digitalocean", "lighthouse", "bitbucket", "Eslint", "Prettier", "github/black/white"],
-    "otherSkills": ["SEO","Content Management","Accessibility", "Performance Optimization", "Responsive Design","API Integration"],
-    "features": [
+    stack: [
+      "nodedotjs",
+      "json/black/white",
+      "tailwindcss",
+      "axios",
+      "npm",
+      "netlify",
+      "notion",
+      "Eslint",
+      "Prettier",
+      "github/black/white",
+    ],
+    otherSkills: [
+      "Accessibility",
+      "Performance Optimization",
+      "Responsive Design",
+      "API Integration",
+    ],
+    features: [
       {
-        "text": "Dynamic Appliance Support: Browse and get help for refrigerators, washers, dryers, dishwashers, ovens, microwaves, cooktops, and more."
+        text: "Real-time Notion Database Sync: Form submissions instantly appear as structured database entries",
       },
       {
-        "text": "Find Local Providers: Enter your ZIP code or select your state to view local repair listings."
+        text: "Automated Email Notifications: Smart status-based email system with professional HTML templates",
       },
       {
-        "text": "Problem & Troubleshooting Guides: Step-by-step guides for common appliance issues, including DIY tips and when to call a pro."
+        text: "Drag-and-Drop File Uploads: Images automatically stored in Notion with thumbnail previews",
       },
       {
-        "text": "SEO Optimized: Each page includes dynamic SEO metadata for better search engine visibility."
+        text: "Dynamic Issue Type Loading: Dropdown options update automatically from your Notion database",
       },
       {
-        "text": "Reusable UI Components: Modular React components for listings, CTAs, features, and more."
+        text: "Complete Workflow Management: Multiple views for status tracking, employee assignment, and priority management",
       },
-      {
-        "text": "Content Management: All appliance, problem, and troubleshooting content is managed centrally in JSON for easy updates."
-      }
     ],
     images: [
       {
-        "itemImageSrc": "/img/home/projects/appliance_repair_cover.webp",
-        "alt": "Cover page image"
+        itemImageSrc: "/img/home/projects/notion_service_request.webp",
+        alt: "Service Request System - Cover page",
       },
       {
-        "itemImageSrc": "/img/projects/appliance-repair/home.webp",
-        "alt": "Home page image"
+        itemImageSrc:
+          "/img/projects/service-request/customer_service_form.webp",
+        alt: "Customer service form interface",
       },
       {
-        "itemImageSrc": "/img/projects/appliance-repair/performance-desktop.webp",
-        "alt": "Desktop performance image"
+        itemImageSrc: "/img/projects/service-request/chart_by_issue_type.webp",
+        alt: "Chart showing issues by type",
       },
       {
-        "itemImageSrc": "/img/projects/appliance-repair/performance-mobile.webp",
-        "alt": "Mobile performance image"
+        itemImageSrc: "/img/projects/service-request/service_by_status.webp",
+        alt: "Service requests by status",
       },
       {
-        "itemImageSrc": "/img/projects/appliance-repair/services.webp",
-        "alt": "Services image"
+        itemImageSrc: "/img/projects/service-request/service_by_priority.webp",
+        alt: "Service requests by priority",
       },
       {
-        "itemImageSrc": "/img/projects/appliance-repair/find-repair.webp",
-        "alt": "Find repair services image"
+        itemImageSrc:
+          "/img/projects/service-request/email_notification_notion.webp",
+        alt: "Email notification in Notion",
+      },
+    ],
+    details: "./details/service-request.md",
+  },
+  {
+    name: "Appliance Repair Service Platform",
+    description:
+      "A modern, content-driven platform for connecting users with local appliance repair professionals and providing troubleshooting guides for major home appliances",
+    software: "Web",
+    org: "ApplianceRepairly",
+    year: "2025",
+    domain: "Digital Marketing",
+    schema: "https://schema.org/WebApplication",
+    link: "https://appliancerepairly.com",
+    contact: "mailto:jiwan.cse@gmail.com?subject=Inquiry : ",
+    stack: [
+      "nextdotjs/black/white",
+      "react",
+      "nodedotjs",
+      "json/black/white",
+      "tailwindcss",
+      "axios",
+      "npm",
+      "pm2",
+      "digitalocean",
+      "lighthouse",
+      "bitbucket",
+      "Eslint",
+      "Prettier",
+      "github/black/white",
+    ],
+    otherSkills: [
+      "SEO",
+      "Content Management",
+      "Accessibility",
+      "Performance Optimization",
+      "Responsive Design",
+      "API Integration",
+    ],
+    features: [
+      {
+        text: "Dynamic Appliance Support: Browse and get help for refrigerators, washers, dryers, dishwashers, ovens, microwaves, cooktops, and more.",
       },
       {
-        "itemImageSrc": "/img/projects/appliance-repair/contact.webp",
-        "alt": "Contact page image"
+        text: "Find Local Providers: Enter your ZIP code or select your state to view local repair listings.",
       },
       {
-        "itemImageSrc": "/img/projects/appliance-repair/refrigerator-troubleshoot.webp",
-        "alt": "Refrigerator troubleshooting image"
+        text: "Problem & Troubleshooting Guides: Step-by-step guides for common appliance issues, including DIY tips and when to call a pro.",
       },
       {
-        "itemImageSrc": "/img/projects/appliance-repair/refrigerator-problem.webp",
-        "alt": "Refrigerator problem image"
+        text: "SEO Optimized: Each page includes dynamic SEO metadata for better search engine visibility.",
       },
       {
-        "itemImageSrc": "/img/projects/appliance-repair/refrigerator.webp",
-        "alt": "Refrigerator home page image"
+        text: "Reusable UI Components: Modular React components for listings, CTAs, features, and more.",
       },
       {
-        "itemImageSrc": "/img/projects/appliance-repair/blog-post.webp",
-        "alt": "Blog post image"
+        text: "Content Management: All appliance, problem, and troubleshooting content is managed centrally in JSON for easy updates.",
+      },
+    ],
+    images: [
+      {
+        itemImageSrc: "/img/home/projects/appliance_repair_cover.webp",
+        alt: "Appliance Repair Service Platform - Cover page",
       },
       {
-        "itemImageSrc": "/img/projects/appliance-repair/blog.webp",
-        "alt": "Blog section image"
-      }
+        itemImageSrc: "/img/projects/appliance-repair/home.webp",
+        alt: "Appliance Repair Service Platform - Home page",
+      },
+      {
+        itemImageSrc: "/img/projects/appliance-repair/performance-desktop.webp",
+        alt: "Appliance Repair Service Platform - Desktop performance metrics",
+      },
+      {
+        itemImageSrc: "/img/projects/appliance-repair/performance-mobile.webp",
+        alt: "Appliance Repair Service Platform - Mobile performance metrics",
+      },
+      {
+        itemImageSrc: "/img/projects/appliance-repair/services.webp",
+        alt: "Appliance Repair Service Platform - Services page",
+      },
+      {
+        itemImageSrc: "/img/projects/appliance-repair/find-repair.webp",
+        alt: "Appliance Repair Service Platform - Find repair services",
+      },
+      {
+        itemImageSrc: "/img/projects/appliance-repair/contact.webp",
+        alt: "Appliance Repair Service Platform - Contact page",
+      },
+      {
+        itemImageSrc:
+          "/img/projects/appliance-repair/refrigerator-troubleshoot.webp",
+        alt: "Appliance Repair Service Platform - Refrigerator troubleshooting guide",
+      },
+      {
+        itemImageSrc:
+          "/img/projects/appliance-repair/refrigerator-problem.webp",
+        alt: "Appliance Repair Service Platform - Refrigerator problem identification",
+      },
+      {
+        itemImageSrc: "/img/projects/appliance-repair/refrigerator.webp",
+        alt: "Appliance Repair Service Platform - Refrigerator home page",
+      },
+      {
+        itemImageSrc: "/img/projects/appliance-repair/blog-post.webp",
+        alt: "Appliance Repair Service Platform - Blog post",git 
+      },
+      {
+        itemImageSrc: "/img/projects/appliance-repair/blog.webp",
+        alt: "Appliance Repair Service Platform - Blog section",
+      },
     ],
     details: "./details/appliance-repair.md",
   },
@@ -151,39 +252,39 @@ export const freelance = [
       },
       {
         itemImageSrc: "/img/projects/sr22/desktop_web_performance.webp",
-        alt: "Desktop web performance",
+        alt: "SR-22 Insurance Now - Desktop web performance metrics",
       },
       {
         itemImageSrc: "/img/projects/sr22/mobile_web_performance.webp",
-        alt: "Mobile web performance",
+        alt: "SR-22 Insurance Now - Mobile web performance metrics",
       },
       {
         itemImageSrc: "/img/projects/sr22/why_need_sr22.webp",
-        alt: "why need sr22 insurance Now",
+        alt: "SR-22 Insurance Now - Why you need SR-22 insurance",
       },
       {
         itemImageSrc: "/img/projects/sr22/how_to_get_sr22.webp",
-        alt: "how to get sr22 insurance Now",
+        alt: "SR-22 Insurance Now - How to get SR-22 insurance",
       },
       {
         itemImageSrc: "/img/projects/sr22/landing_page.webp",
-        alt: "Landing page sr22 insurance Now",
+        alt: "SR-22 Insurance Now - Landing page",
       },
       {
         itemImageSrc: "/img/projects/sr22/states_map.webp",
-        alt: "states map sr22 insurance Now",
+        alt: "SR-22 Insurance Now - States map",
       },
       {
         itemImageSrc: "/img/projects/sr22/sr22_city.webp",
-        alt: "sr22 city list",
+        alt: "SR-22 Insurance Now - City list",
       },
       {
         itemImageSrc: "/img/projects/sr22/auto_complete_zip_code.webp",
-        alt: "auto complete zip code sr22 insurance Now",
+        alt: "SR-22 Insurance Now - Auto-complete zip code functionality",
       },
       {
         itemImageSrc: "/img/projects/sr22/render_json.webp",
-        alt: "JSON reader for sr22 insurance Now",
+        alt: "SR-22 Insurance Now - JSON reader functionality",
       },
     ],
     details: "./details/sr22.md",
@@ -249,47 +350,47 @@ export const freelance = [
       },
       {
         itemImageSrc: "/img/projects/momentum/swagger.webp",
-        alt: "Incident Management swagger api docs",
+        alt: "Momentum Incident Management - Swagger API documentation",
       },
       {
         itemImageSrc: "/img/projects/momentum/expanded_incident.webp",
-        alt: "Incident Management expanded incident",
+        alt: "Momentum Incident Management - Expanded incident view",
       },
       {
         itemImageSrc: "/img/projects/momentum/sorting_searching.webp",
-        alt: "Incident Management sorting searching",
+        alt: "Momentum Incident Management - Sorting and searching functionality",
       },
       {
         itemImageSrc: "/img/projects/momentum/download_incidents.webp",
-        alt: "Incident Management download incidents",
+        alt: "Momentum Incident Management - Download incidents feature",
       },
       {
         itemImageSrc: "/img/projects/momentum/incident_notes_task.webp",
-        alt: "Incident Management incident notes,task",
+        alt: "Momentum Incident Management - Incident notes and task management",
       },
       {
         itemImageSrc: "/img/projects/momentum/edit_notes.webp",
-        alt: "Incident Management edit notes",
+        alt: "Momentum Incident Management - Edit notes functionality",
       },
       {
         itemImageSrc: "/img/projects/momentum/view_notes.webp",
-        alt: "Incident Management view notes",
+        alt: "Momentum Incident Management - View notes interface",
       },
       {
         itemImageSrc: "/img/projects/momentum/edit_task.webp",
-        alt: "Incident Management edit task",
+        alt: "Momentum Incident Management - Edit task functionality",
       },
       {
         itemImageSrc: "/img/projects/momentum/edit_incident.webp",
-        alt: "Incident Management edit incident",
+        alt: "Momentum Incident Management - Edit incident interface",
       },
       {
         itemImageSrc: "/img/projects/momentum/login.webp",
-        alt: "Incident Management Login",
+        alt: "Momentum Incident Management - Login page",
       },
       {
         itemImageSrc: "/img/projects/momentum/register.webp",
-        alt: "Incident Management register",
+        alt: "Momentum Incident Management - Registration page",
       },
     ],
     details: "./details/momentum.md",
@@ -394,56 +495,67 @@ export const freelance = [
     images: [
       {
         itemImageSrc: "/img/home/projects/ABN_Amro.webp",
-        alt: "Cover screen for application page",
+        alt: "IBRebuild for ABN AMRO BANK N.V. - Cover page",
       },
     ],
   },
   {
     name: "Emerald Design System",
-    description: "Our innovative digital strategy emphasizes efficiency through a 'build once, deploy multiple times' approach. Utilizing the Emerald design system, we ensure a consistent and seamless user experience across platforms. Significant investments in this system, coupled with an expanded team, have enhanced productivity and scalability, delivering cohesive digital solutions for optimal user engagement.",
+    description:
+      "Our innovative digital strategy emphasizes efficiency through a 'build once, deploy multiple times' approach. Utilizing the Emerald design system, we ensure a consistent and seamless user experience across platforms. Significant investments in this system, coupled with an expanded team, have enhanced productivity and scalability, delivering cohesive digital solutions for optimal user engagement.",
     software: "Web",
     org: "ABN Amro",
     year: "2022",
     domain: "Banking",
     schema: "https://schema.org/SoftwareApplication",
     stack: [
-        "JavaScript",
-        "Lit",
-        "Axios",
-        "Webpack",
-        "Bitbucket",
-        "npm",
-        "Node.js",
-        "Git",
-        "ESLint",
-        "Prettier",
-        "storybook",
-        "markdown/black/white",
-        "vitepress"
+      "JavaScript",
+      "Lit",
+      "Axios",
+      "Webpack",
+      "Bitbucket",
+      "npm",
+      "Node.js",
+      "Git",
+      "ESLint",
+      "Prettier",
+      "storybook",
+      "markdown/black/white",
+      "vitepress",
     ],
-    features:[
+    features: [
       { text: "Responsive Design: Seamless experience across devices." },
-      { text: "Component-Based Architecture: Efficient and scalable codebase." },
+      {
+        text: "Component-Based Architecture: Efficient and scalable codebase.",
+      },
       { text: "Modern UI/UX: Clean aesthetics with intuitive navigation." },
-      { text: "API Integration: Robust connectivity with external services using Axios." },
-      { text: "Modular Development: Leverages Webpack for optimized, modular builds." },
-      { text: "Code Quality Assurance: Enforced by ESLint and Prettier for consistent, error-free code." },
-      { text: "Version Control: Streamlined collaboration via Git and Bitbucket." }
+      {
+        text: "API Integration: Robust connectivity with external services using Axios.",
+      },
+      {
+        text: "Modular Development: Leverages Webpack for optimized, modular builds.",
+      },
+      {
+        text: "Code Quality Assurance: Enforced by ESLint and Prettier for consistent, error-free code.",
+      },
+      {
+        text: "Version Control: Streamlined collaboration via Git and Bitbucket.",
+      },
     ],
     images: [
-        {
-            itemImageSrc: "/img/home/projects/ABN_Amro_design_system.webp",
-            alt: "Cover screen for Emerald Design System project page"
-        },
-        {
-          itemImageSrc: "/img/projects/abn/emerald_home.webp",
-          alt: "Emerald Design System Home Page",
-        },
-        {
-          itemImageSrc: "/img/projects/abn/emerald_storybook.webp",
-          alt: "Emerald Design System Storybook",
-        },
-    ]
+      {
+        itemImageSrc: "/img/home/projects/ABN_Amro_design_system.webp",
+        alt: "Cover screen for Emerald Design System project page",
+      },
+      {
+        itemImageSrc: "/img/projects/abn/emerald_home.webp",
+        alt: "Emerald Design System Home Page",
+      },
+      {
+        itemImageSrc: "/img/projects/abn/emerald_storybook.webp",
+        alt: "Emerald Design System Storybook",
+      },
+    ],
   },
   {
     name: "Tech Create",
@@ -476,7 +588,7 @@ export const freelance = [
     images: [
       {
         itemImageSrc: "/img/home/projects/tech_create.webp",
-        alt: "landing page for tech",
+        alt: "Tech Create - Landing page",
       },
     ],
     details: "./details/tech-create.md",
@@ -510,43 +622,43 @@ export const freelance = [
     images: [
       {
         itemImageSrc: "/img/home/projects/YIT_plus.webp",
-        alt: "Yit plus - Login page | Yit plus",
+        alt: "YIT Plus - Login page",
       },
       {
         itemImageSrc: "/img/projects/yitplus/login.webp",
-        alt: "Yit plus - Login page | Yit plus",
+        alt: "YIT Plus - Login page",
       },
       {
         itemImageSrc: "/img/projects/yitplus/home.webp",
-        alt: "Yit plus - Home page | Yit plus",
+        alt: "YIT Plus - Home page",
       },
       {
         itemImageSrc: "/img/projects/yitplus/discussion_board.webp",
-        alt: "Yit plus - Directions page | Yit plus",
+        alt: "YIT Plus - Discussion board",
       },
       {
         itemImageSrc: "/img/projects/yitplus/document.webp",
-        alt: "Yit plus - document page | Yit plus",
+        alt: "YIT Plus - Document management page",
       },
       {
         itemImageSrc: "/img/projects/yitplus/one_year_warranty.webp",
-        alt: "Yit plus - One year warranty page | Yit plus",
+        alt: "YIT Plus - One year warranty page",
       },
       {
         itemImageSrc: "/img/projects/yitplus/service_lounge.webp",
-        alt: "Yit plus - Service lounge page | Yit plus",
+        alt: "YIT Plus - Service lounge page",
       },
       {
         itemImageSrc: "/img/projects/yitplus/service_request.webp",
-        alt: "Yit plus - Service request category | Yit plus",
+        alt: "YIT Plus - Service request category",
       },
       {
         itemImageSrc: "/img/projects/yitplus/service_request_category.webp",
-        alt: "Yit plus - Service request category | Yit plus",
+        alt: "YIT Plus - Service request category management",
       },
       {
         itemImageSrc: "/img/projects/yitplus/admin.webp",
-        alt: "Yit plus - Admin page | Yit plus",
+        alt: "YIT Plus - Admin dashboard",
       },
     ],
   },
@@ -653,39 +765,39 @@ export const freelance = [
     images: [
       {
         itemImageSrc: "/img/home/projects/Recipe.webp",
-        alt: "Recipes - Login page | Recipes",
+        alt: "Recipes - Login page",
       },
       {
         itemImageSrc: "/img/projects/recipe/login.webp",
-        alt: "Recipes - Login page | Recipes",
+        alt: "Recipes - Login page",
       },
       {
         itemImageSrc: "/img/projects/recipe/register.webp",
-        alt: "Recipes - Register page | Recipes",
+        alt: "Recipes - Registration page",
       },
       {
         itemImageSrc: "/img/projects/recipe/home.webp",
-        alt: "Recipes - Home page | Recipes",
+        alt: "Recipes - Home page",
       },
       {
         itemImageSrc: "/img/projects/recipe/direction.webp",
-        alt: "Recipes - Directions page | Recipes",
+        alt: "Recipes - Directions page",
       },
       {
         itemImageSrc: "/img/projects/recipe/ingredients.webp",
-        alt: "Recipes - Ingredients page | Recipes",
+        alt: "Recipes - Ingredients page",
       },
       {
         itemImageSrc: "/img/projects/recipe/addrecipe.webp",
-        alt: "Recipes - Add Recipe page | Recipes",
+        alt: "Recipes - Add Recipe page",
       },
       {
         itemImageSrc: "/img/projects/recipe/search.webp",
-        alt: "Recipes - Search page | Recipes",
+        alt: "Recipes - Search page",
       },
       {
         itemImageSrc: "/img/projects/recipe/share.webp",
-        alt: "Recipes - Share screen | Recipes",
+        alt: "Recipes - Share screen",
       },
     ],
   },
@@ -730,27 +842,27 @@ export const freelance = [
     images: [
       {
         itemImageSrc: "/img/home/projects/tvmaze.webp",
-        alt: "TVmaze - Home page. | Tv maze",
+        alt: "TVmaze - Home page",
       },
       {
         itemImageSrc: "/img/projects/tvmaze/home.webp",
-        alt: "TVmaze - Home page. | Tv maze",
+        alt: "TVmaze - Home page",
       },
       {
         itemImageSrc: "/img/projects/tvmaze/search.webp",
-        alt: "TVmaze - . Search page| Tv maze",
+        alt: "TVmaze - Search page",
       },
       {
         itemImageSrc: "/img/projects/tvmaze/episodes.webp",
-        alt: "TVmaze - Episodes tab. | Tv maze",
+        alt: "TVmaze - Episodes tab",
       },
       {
         itemImageSrc: "/img/projects/tvmaze/cast.webp",
-        alt: "TVmaze - Cast tab. | Tv maze",
+        alt: "TVmaze - Cast tab",
       },
       {
         itemImageSrc: "/img/projects/tvmaze/genres.webp",
-        alt: "TVmaze - Genres. | Tv maze",
+        alt: "TVmaze - Genres",
       },
     ],
   },
@@ -927,23 +1039,23 @@ export const freelance = [
     images: [
       {
         itemImageSrc: "/img/projects/partnerUpstox/partnerUpstox.webp",
-        alt: "Open a sub-broker account with Upstox.",
+        alt: "Partner Dashboard Upstox - Cover page",
       },
       {
         itemImageSrc: "/img/projects/partnerUpstox/dashboard.webp",
-        alt: "Open a sub-broker account with Upstox.",
+        alt: "Partner Dashboard Upstox - Dashboard",
       },
       {
         itemImageSrc: "/img/projects/partnerUpstox/leads.webp",
-        alt: "Open a sub-broker account with Upstox.",
+        alt: "Partner Dashboard Upstox - Leads management",
       },
       {
         itemImageSrc: "/img/projects/partnerUpstox/customer.webp",
-        alt: "Open a sub-broker account with Upstox.",
+        alt: "Partner Dashboard Upstox - Customer management",
       },
       {
         itemImageSrc: "/img/projects/partnerUpstox/earning.webp",
-        alt: "Open a sub-broker account with Upstox.",
+        alt: "Partner Dashboard Upstox - Earnings report",
       },
     ],
   },
@@ -1132,6 +1244,128 @@ export const freelance = [
 
 const baseProjects = [
   {
+    name: "Service Request System",
+    schema: "https://schema.org/WebApplication",
+    images: [
+      {
+        itemImageSrc: "/img/home/projects/notion_service_request.webp",
+        alt: "Service Request System",
+      },
+    ],
+  },
+  {
+    name: "Finding The Spots",
+    description:
+      "Say goodbye to the chaos of location scouting host, book, and create in our spaces effortlessly.",
+    software: "Web",
+    org: "FTS",
+    year: "2024",
+    domain: "Leisure, travel, and tourism",
+    schema: "https://schema.org/DeveloperApplication",
+    link: "https://findingthespots.com/",
+    contact:
+      "https://wa.me/917026217029?text=Hi%20there%2C%20I'm%20interested%20in%20a%20custom%20code%20solution%20for%20",
+    stack: [
+      "Javascript",
+      "Vuedotjs",
+      "vite",
+      "Axios",
+      "Express/black/white",
+      "jsonwebtokens/black/white",
+      "stripe",
+      "nodedotjs",
+      "MongoDB",
+      "Git",
+      "github/black/white",
+      "Eslint",
+      "Prettier",
+    ],
+    otherSkills: ["Pinia", "API integration"],
+    images: [
+      {
+        itemImageSrc: "/img/home/projects/fts.webp",
+        alt: "Cover screen for application page",
+      },
+    ],
+    features: [
+      { text: "Secure user registration, login, and logout functionality." },
+      {
+        text: "Role-based access for general users, property owners, and admins.",
+      },
+      { text: "Search for properties/spots by type, country, city, and time." },
+      {
+        text: "Advanced filters to refine search results based on user preferences.",
+      },
+      {
+        text: "Detailed property pages with full image galleries and spot information.",
+      },
+      {
+        text: "Booking request system with date, time, and duration selection.",
+      },
+      {
+        text: "Free cancellation within 24 hours with redirection to spot listings.",
+      },
+      {
+        text: "Seamless and secure payment processing via Stripe for confirmed bookings.",
+      },
+      {
+        text: "Email notifications for booking and payment confirmations (users & owners).",
+      },
+      { text: "Property owners can list new spots with images and details." },
+      { text: "Admin verification process for new spot submissions." },
+      {
+        text: "Responsive, mobile-friendly interface for seamless access across devices.",
+      },
+      {
+        text: "Integrated APIs for authentication, spot listing, booking, search, and payments.",
+      },
+      {
+        text: "Scalable backend architecture to support future growth and features.",
+      },
+    ],
+    details: "./details/fts.md",
+  },
+  {
+    name: "IBRebuild for ABN AMRO BANK N.V.",
+    schema: "https://schema.org/DeveloperApplication",
+    images: [
+      {
+        itemImageSrc: "/img/home/projects/ABN_Amro.webp",
+        alt: "Cover screen for application page",
+      },
+    ],
+  },
+  {
+    name: "Emerald Design System",
+    schema: "https://schema.org/SoftwareApplication",
+    images: [
+      {
+        itemImageSrc: "/img/home/projects/ABN_Amro_design_system.webp",
+        alt: "Cover screen for Emerald Design System project page",
+      },
+    ],
+  },
+  {
+    name: "Appliance Repair Service Platform",
+    schema: "https://schema.org/BusinessApplication",
+    images: [
+      {
+        itemImageSrc: "/img/home/projects/appliance_repair_cover.webp",
+        alt: "Appliance Repair Service Platform Cover page image",
+      },
+    ],
+  },
+  {
+    name: "Demat Account Open",
+    schema: "https://schema.org/BusinessApplication",
+    images: [
+      {
+        itemImageSrc: "/img/home/projects/open-demat-account.webp",
+        alt: "Open a Demat Account Online: Demat Account Opening at Upstox",
+      },
+    ],
+  },
+  {
     name: "SR-22 Insurance Now",
     schema: "https://schema.org/BusinessApplication",
     images: [
@@ -1142,12 +1376,12 @@ const baseProjects = [
     ],
   },
   {
-    name: "Trokka Attraction",
-    schema: "https://schema.org/DeveloperApplication",
+    name: "Call Matrix",
+    schema: "https://schema.org/BusinessApplication",
     images: [
       {
-        itemImageSrc: "/img/projects/trokka.webp",
-        alt: "Trokka.com | Book Attractions and Tours for Your Next Holiday",
+        itemImageSrc: "/img/home/projects/callmatrix.webp",
+        alt: "CallMatrix - Call Intelligence, Marketing, and Analytics Platform",
       },
     ],
   },
@@ -1158,46 +1392,6 @@ const baseProjects = [
       {
         itemImageSrc: "/img/home/projects/momentum_incident_management.webp",
         alt: "Incident Management",
-      },
-    ],
-  },
-  {
-    name: "Catch That Bus",
-    schema: "https://schema.org/DeveloperApplication",
-    images: [
-      {
-        itemImageSrc: "/img/projects/catchthatbus.webp",
-        alt: "Book Malaysia and Singapore bus tickets online. | CatchThatBus",
-      },
-    ],
-  },
-  {
-    name: "Demat Account Open",
-    schema: "https://schema.org/BusinessApplication",
-    images: [
-      {
-        itemImageSrc: "/img/projects/openDemat.webp",
-        alt: "Open a Demat Account Online: Demat Account Opening at Upstox",
-      },
-    ],
-  },
-  {
-    name: "Call Matrix",
-    schema: "https://schema.org/BusinessApplication",
-    images: [
-      {
-        itemImageSrc: "/img/projects/callmatrix/callmatrix.webp",
-        alt: "CallMatrix - Call Intelligence, Marketing, and Analytics Platform",
-      },
-    ],
-  },
-  {
-    name: "Recipes",
-    schema: "https://schema.org/DeveloperApplication",
-    images: [
-      {
-        itemImageSrc: "/img/home/projects/Recipe.webp",
-        alt: "Recipes - Social Network | Recipes",
       },
     ],
   },

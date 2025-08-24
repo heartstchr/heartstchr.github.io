@@ -10,19 +10,31 @@ containerClass: fancy-container
 editLink: false
 copyright: false
 ---
-
-<div class="-mt-2">
-<a href="https://cal.com/stackseekers" size="large"
-    class="flex justify-content-center text-center no-underline -mt-4" aria-label="Send an Email">
-<Button label="Book a 25‑min free strategy call" icon="pi pi-briefcase" severity="primary" raised rounded />
-</a>
-<div class="text-center text-xs mt-1">No commitment. Get a roadmap and estimate.</div>
-<div class="text-center text-sm mt-2 text-orange-600 font-medium">
-  <i class="pi pi-bell mr-1"></i>Only 2 complimentary consults left this month.
+<div class="mt-2">
+  <a href="https://cal.com/stackseekers" size="large" target="_blank"
+      class="flex justify-content-center text-center no-underline -mt-4" aria-label="Send an Email">
+  <Button label="Book a 25‑min free strategy call" icon="pi pi-briefcase" severity="primary" raised rounded />
+  </a>
+  <div class="text-center text-xs mt-1">No commitment. Get a roadmap and estimate.</div>
+  <div class="text-center text-sm mt-2 text-orange-600 font-medium">
+    <i class="pi pi-bell mr-1"></i>Only 2 complimentary consults left this month.
+  </div>
 </div>
+<div class="flex flex-column md:flex-row gap-4 p-4 align-items-center justify-content-center">
+  <template v-for="(cert, certIdx) in certificate" :key="certIdx">
+    <img
+      v-for="(img, idx) in cert.images"
+      :key="img.itemImageSrc"
+      :src="img.itemImageSrc"
+      :alt="img.alt"
+      width="120px"
+      loading="eager"
+      fetchpriority="high"
+    />
+  </template>
 </div>
 
-<div class="mt-8">
+<div class="mt-6">
   <div class="text-center pb-4">
     <div class="text-4xl font-bold"><h2>Scalable Solutions for <div class="text-4xl font-bold bg-primary">Startups, Enterprises & Agencies</div></h2></div>
     <div class="text-xl md:text-center line-height-3"> I’m Jiwan Ghosal, a senior JavaScript engineer specializing in React/Vue and Node on Azure. I help founders and teams ship fast, clean, and scalable software.</div>
@@ -271,6 +283,7 @@ copyright: false
   import { projects } from "@data/projects.js";
   import { stackLogos, events, orgs, testimonials , whyme} from "@data/home.js";
   // Current page and autoplay interval
+  import {certificate} from "@data/home.js";
   const currentPage = ref(0);
   const autoplayInterval = 10000;
   let autoplayTimer = null;

@@ -51,10 +51,10 @@ export const enNavbar = navbar([
     icon: "pi pi-code",
     link: "/web-development-services/",
     children: [
-      { 
+      {
         text: "Blog",
-        link: "/posts/"
-     },
+        link: "/posts/",
+      },
       {
         text: "Videos",
         link: "stackseekers-tv/",
@@ -62,6 +62,10 @@ export const enNavbar = navbar([
       {
         text: "Podcast",
         link: "stackcast-podcast-mini/",
+      },
+      {
+        text: "Products",
+        link: "https://stackseekers.gumroad.com/",
       },
     ],
   },
