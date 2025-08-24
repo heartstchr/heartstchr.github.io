@@ -10,17 +10,17 @@ containerClass: fancy-container
 editLink: false
 copyright: false
 ---
+
 <div class="mt-4">
   <a href="https://cal.com/stackseekers" size="large" target="_blank"
       class="flex justify-content-center text-center no-underline -mt-4" aria-label="Send an Email">
-  <Button label="Book a 25‑min free strategy call" icon="pi pi-briefcase" severity="primary" raised rounded />
+  <Button label="Book a 25‑min free strategy call" icon="pi pi-calendar-clock" severity="primary" raised rounded />
   </a>
   <div class="text-center text-xs mt-1">No commitment. Get a roadmap and estimate.</div>
   <div class="text-center text-sm mt-2 text-orange-600 font-medium">
     <i class="pi pi-bell mr-1"></i>Only 2 complimentary consults left this month.
   </div>
 </div>
-
 
 <div class="mt-6">
   <div class="text-center pb-4">
