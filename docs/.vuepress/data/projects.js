@@ -1162,21 +1162,11 @@ const baseProjects = [
     ],
   },
   {
-    name: "Catch That Bus",
-    schema: "https://schema.org/DeveloperApplication",
-    images: [
-      {
-        itemImageSrc: "/img/projects/catchthatbus.webp",
-        alt: "Book Malaysia and Singapore bus tickets online. | CatchThatBus",
-      },
-    ],
-  },
-  {
     name: "Demat Account Open",
     schema: "https://schema.org/BusinessApplication",
     images: [
       {
-        itemImageSrc: "/img/projects/openDemat.webp",
+        itemImageSrc: "/img/home/projects/open-demat-account.webp",
         alt: "Open a Demat Account Online: Demat Account Opening at Upstox",
       },
     ],
@@ -1186,7 +1176,7 @@ const baseProjects = [
     schema: "https://schema.org/BusinessApplication",
     images: [
       {
-        itemImageSrc: "/img/projects/callmatrix/callmatrix.webp",
+        itemImageSrc: "/img/home/projects/callmatrix.webp",
         alt: "CallMatrix - Call Intelligence, Marketing, and Analytics Platform",
       },
     ],
@@ -1198,6 +1188,16 @@ const baseProjects = [
       {
         itemImageSrc: "/img/home/projects/Recipe.webp",
         alt: "Recipes - Social Network | Recipes",
+      },
+    ],
+  },
+  {
+    name: "Catch That Bus",
+    schema: "https://schema.org/DeveloperApplication",
+    images: [
+      {
+        itemImageSrc: "/img/projects/catchthatbus.webp",
+        alt: "Book Malaysia and Singapore bus tickets online. | CatchThatBus",
       },
     ],
   },

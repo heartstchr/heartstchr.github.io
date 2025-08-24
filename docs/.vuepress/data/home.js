@@ -152,3 +152,28 @@ export const stackLogos = [
     title: "lighthouse",
   },
 ];
+export const certificate =[
+  {
+    name: "certificate",
+    images: [
+      {
+        itemImageSrc: "/img/about/JiwanGhosalMicrosoftAz900.webp",
+        thumbnailImageSrc: "/img/about/JiwanGhosalMicrosoftAz900.webp",
+        alt: "Jiwan Ghosal Microsoft Az900",
+        title: "Jiwan Ghosal Microsoft Az900",
+      },
+      {
+        itemImageSrc: "/img/about/platformcon-2025-golden-path-labs.png",
+        thumbnailImageSrc: "/img/about/platformcon-2025-golden-path-labs.png",
+        alt: "Platformcon 2025 golden path labs",
+        title: "Platformcon 2025 golden path labs",
+      },
+      {
+        itemImageSrc: "/img/about/connectedManager.webp",
+        thumbnailImageSrc: "/img/about/connectedManager.webp",
+        alt: "Connected Manager",
+        title: "Connected Manager",
+      },
+    ],
+  },
+];
