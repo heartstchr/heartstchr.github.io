@@ -16,6 +16,8 @@ A professional web application that helps businesses manage customer service req
 
 **Realistic Setup Time: 15-30 minutes** for first-time users using the template. The demo script claims "15 minutes" for users who follow the steps exactly.
 
+<iframe src="https://stackseekers.notion.site/ebd/24a30c0a61cd80869243f2beb52b019c?v=24a30c0a61cd80ee8563000c46a3714e" width="100%" height="600" frameborder="0" allowfullscreen />
+
 ## 🎯 What This System Does
 
 **For Your Customers:**
