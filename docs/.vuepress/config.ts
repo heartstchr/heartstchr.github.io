@@ -92,6 +92,10 @@ export default defineUserConfig({
       __dirname,
       "./components/NavbarBrand.vue"
     ),
+    "@theme-hope/modules/navbar/components/RepoLink": path.resolve(
+      __dirname,
+      "./components/RepoLink.vue"
+    ),
     "@theme-hope/modules/navbar/components/Sidebar": path.resolve(
       __dirname,
       "./components/Sidebar.vue"

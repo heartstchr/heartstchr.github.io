@@ -119,7 +119,7 @@ fieldset {
   color: var(--text-color) !important;
 }
 .p-paginator-content-start {
-    margin-inline-end: revert;
+  margin-inline-end: revert;
 }
 .custom-button {
   border-radius: 50px;
@@ -253,6 +253,9 @@ fieldset {
 
 .p-galleria-thumbnails-content {
   height: 80px;
+}
+.vp-navbar {
+  padding-right: 2rem !important;
 }
 
 @media only screen and (max-width: 600px) {
