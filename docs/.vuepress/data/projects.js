@@ -1132,32 +1132,12 @@ export const freelance = [
 
 const baseProjects = [
   {
-    name: "SR-22 Insurance Now",
+    name: "Appliance Repair Service Platform",
     schema: "https://schema.org/BusinessApplication",
     images: [
       {
-        itemImageSrc: "/img/home/projects/sr22.webp",
-        alt: "SR-22 Insurance Now",
-      },
-    ],
-  },
-  {
-    name: "Trokka Attraction",
-    schema: "https://schema.org/DeveloperApplication",
-    images: [
-      {
-        itemImageSrc: "/img/projects/trokka.webp",
-        alt: "Trokka.com | Book Attractions and Tours for Your Next Holiday",
-      },
-    ],
-  },
-  {
-    name: "Momentum Incident Management",
-    schema: "https://schema.org/BusinessApplication",
-    images: [
-      {
-        itemImageSrc: "/img/home/projects/momentum_incident_management.webp",
-        alt: "Incident Management",
+        itemImageSrc: "/img/home/projects/appliance_repair_cover.webp",
+        alt: "Appliance Repair Service Platform Cover page image",
       },
     ],
   },
@@ -1172,6 +1152,16 @@ const baseProjects = [
     ],
   },
   {
+    name: "SR-22 Insurance Now",
+    schema: "https://schema.org/BusinessApplication",
+    images: [
+      {
+        itemImageSrc: "/img/home/projects/sr22.webp",
+        alt: "SR-22 Insurance Now",
+      },
+    ],
+  },
+  {
     name: "Call Matrix",
     schema: "https://schema.org/BusinessApplication",
     images: [
@@ -1182,22 +1172,22 @@ const baseProjects = [
     ],
   },
   {
+    name: "Momentum Incident Management",
+    schema: "https://schema.org/BusinessApplication",
+    images: [
+      {
+        itemImageSrc: "/img/home/projects/momentum_incident_management.webp",
+        alt: "Incident Management",
+      },
+    ],
+  },
+  {
     name: "Recipes",
     schema: "https://schema.org/DeveloperApplication",
     images: [
       {
         itemImageSrc: "/img/home/projects/Recipe.webp",
         alt: "Recipes - Social Network | Recipes",
-      },
-    ],
-  },
-  {
-    name: "Catch That Bus",
-    schema: "https://schema.org/DeveloperApplication",
-    images: [
-      {
-        itemImageSrc: "/img/projects/catchthatbus.webp",
-        alt: "Book Malaysia and Singapore bus tickets online. | CatchThatBus",
       },
     ],
   },
