@@ -50,7 +50,7 @@ export const freelance = [
     images: [
       {
         itemImageSrc: "/img/home/projects/notion_service_request.webp",
-        alt: "Cover page image",
+        alt: "Service Request System - Cover page",
       },
       {
         itemImageSrc:
@@ -135,53 +135,53 @@ export const freelance = [
     images: [
       {
         itemImageSrc: "/img/home/projects/appliance_repair_cover.webp",
-        alt: "Cover page image",
+        alt: "Appliance Repair Service Platform - Cover page",
       },
       {
         itemImageSrc: "/img/projects/appliance-repair/home.webp",
-        alt: "Home page image",
+        alt: "Appliance Repair Service Platform - Home page",
       },
       {
         itemImageSrc: "/img/projects/appliance-repair/performance-desktop.webp",
-        alt: "Desktop performance image",
+        alt: "Appliance Repair Service Platform - Desktop performance metrics",
       },
       {
         itemImageSrc: "/img/projects/appliance-repair/performance-mobile.webp",
-        alt: "Mobile performance image",
+        alt: "Appliance Repair Service Platform - Mobile performance metrics",
       },
       {
         itemImageSrc: "/img/projects/appliance-repair/services.webp",
-        alt: "Services image",
+        alt: "Appliance Repair Service Platform - Services page",
       },
       {
         itemImageSrc: "/img/projects/appliance-repair/find-repair.webp",
-        alt: "Find repair services image",
+        alt: "Appliance Repair Service Platform - Find repair services",
       },
       {
         itemImageSrc: "/img/projects/appliance-repair/contact.webp",
-        alt: "Contact page image",
+        alt: "Appliance Repair Service Platform - Contact page",
       },
       {
         itemImageSrc:
           "/img/projects/appliance-repair/refrigerator-troubleshoot.webp",
-        alt: "Refrigerator troubleshooting image",
+        alt: "Appliance Repair Service Platform - Refrigerator troubleshooting guide",
       },
       {
         itemImageSrc:
           "/img/projects/appliance-repair/refrigerator-problem.webp",
-        alt: "Refrigerator problem image",
+        alt: "Appliance Repair Service Platform - Refrigerator problem identification",
       },
       {
         itemImageSrc: "/img/projects/appliance-repair/refrigerator.webp",
-        alt: "Refrigerator home page image",
+        alt: "Appliance Repair Service Platform - Refrigerator home page",
       },
       {
         itemImageSrc: "/img/projects/appliance-repair/blog-post.webp",
-        alt: "Blog post image",
+        alt: "Appliance Repair Service Platform - Blog post",git 
       },
       {
         itemImageSrc: "/img/projects/appliance-repair/blog.webp",
-        alt: "Blog section image",
+        alt: "Appliance Repair Service Platform - Blog section",
       },
     ],
     details: "./details/appliance-repair.md",
@@ -252,39 +252,39 @@ export const freelance = [
       },
       {
         itemImageSrc: "/img/projects/sr22/desktop_web_performance.webp",
-        alt: "Desktop web performance",
+        alt: "SR-22 Insurance Now - Desktop web performance metrics",
       },
       {
         itemImageSrc: "/img/projects/sr22/mobile_web_performance.webp",
-        alt: "Mobile web performance",
+        alt: "SR-22 Insurance Now - Mobile web performance metrics",
       },
       {
         itemImageSrc: "/img/projects/sr22/why_need_sr22.webp",
-        alt: "why need sr22 insurance Now",
+        alt: "SR-22 Insurance Now - Why you need SR-22 insurance",
       },
       {
         itemImageSrc: "/img/projects/sr22/how_to_get_sr22.webp",
-        alt: "how to get sr22 insurance Now",
+        alt: "SR-22 Insurance Now - How to get SR-22 insurance",
       },
       {
         itemImageSrc: "/img/projects/sr22/landing_page.webp",
-        alt: "Landing page sr22 insurance Now",
+        alt: "SR-22 Insurance Now - Landing page",
       },
       {
         itemImageSrc: "/img/projects/sr22/states_map.webp",
-        alt: "states map sr22 insurance Now",
+        alt: "SR-22 Insurance Now - States map",
       },
       {
         itemImageSrc: "/img/projects/sr22/sr22_city.webp",
-        alt: "sr22 city list",
+        alt: "SR-22 Insurance Now - City list",
       },
       {
         itemImageSrc: "/img/projects/sr22/auto_complete_zip_code.webp",
-        alt: "auto complete zip code sr22 insurance Now",
+        alt: "SR-22 Insurance Now - Auto-complete zip code functionality",
       },
       {
         itemImageSrc: "/img/projects/sr22/render_json.webp",
-        alt: "JSON reader for sr22 insurance Now",
+        alt: "SR-22 Insurance Now - JSON reader functionality",
       },
     ],
     details: "./details/sr22.md",
@@ -350,47 +350,47 @@ export const freelance = [
       },
       {
         itemImageSrc: "/img/projects/momentum/swagger.webp",
-        alt: "Incident Management swagger api docs",
+        alt: "Momentum Incident Management - Swagger API documentation",
       },
       {
         itemImageSrc: "/img/projects/momentum/expanded_incident.webp",
-        alt: "Incident Management expanded incident",
+        alt: "Momentum Incident Management - Expanded incident view",
       },
       {
         itemImageSrc: "/img/projects/momentum/sorting_searching.webp",
-        alt: "Incident Management sorting searching",
+        alt: "Momentum Incident Management - Sorting and searching functionality",
       },
       {
         itemImageSrc: "/img/projects/momentum/download_incidents.webp",
-        alt: "Incident Management download incidents",
+        alt: "Momentum Incident Management - Download incidents feature",
       },
       {
         itemImageSrc: "/img/projects/momentum/incident_notes_task.webp",
-        alt: "Incident Management incident notes,task",
+        alt: "Momentum Incident Management - Incident notes and task management",
       },
       {
         itemImageSrc: "/img/projects/momentum/edit_notes.webp",
-        alt: "Incident Management edit notes",
+        alt: "Momentum Incident Management - Edit notes functionality",
       },
       {
         itemImageSrc: "/img/projects/momentum/view_notes.webp",
-        alt: "Incident Management view notes",
+        alt: "Momentum Incident Management - View notes interface",
       },
       {
         itemImageSrc: "/img/projects/momentum/edit_task.webp",
-        alt: "Incident Management edit task",
+        alt: "Momentum Incident Management - Edit task functionality",
       },
       {
         itemImageSrc: "/img/projects/momentum/edit_incident.webp",
-        alt: "Incident Management edit incident",
+        alt: "Momentum Incident Management - Edit incident interface",
       },
       {
         itemImageSrc: "/img/projects/momentum/login.webp",
-        alt: "Incident Management Login",
+        alt: "Momentum Incident Management - Login page",
       },
       {
         itemImageSrc: "/img/projects/momentum/register.webp",
-        alt: "Incident Management register",
+        alt: "Momentum Incident Management - Registration page",
       },
     ],
     details: "./details/momentum.md",
@@ -495,7 +495,7 @@ export const freelance = [
     images: [
       {
         itemImageSrc: "/img/home/projects/ABN_Amro.webp",
-        alt: "Cover screen for application page",
+        alt: "IBRebuild for ABN AMRO BANK N.V. - Cover page",
       },
     ],
   },
@@ -588,7 +588,7 @@ export const freelance = [
     images: [
       {
         itemImageSrc: "/img/home/projects/tech_create.webp",
-        alt: "landing page for tech",
+        alt: "Tech Create - Landing page",
       },
     ],
     details: "./details/tech-create.md",
@@ -622,43 +622,43 @@ export const freelance = [
     images: [
       {
         itemImageSrc: "/img/home/projects/YIT_plus.webp",
-        alt: "Yit plus - Login page | Yit plus",
+        alt: "YIT Plus - Login page",
       },
       {
         itemImageSrc: "/img/projects/yitplus/login.webp",
-        alt: "Yit plus - Login page | Yit plus",
+        alt: "YIT Plus - Login page",
       },
       {
         itemImageSrc: "/img/projects/yitplus/home.webp",
-        alt: "Yit plus - Home page | Yit plus",
+        alt: "YIT Plus - Home page",
       },
       {
         itemImageSrc: "/img/projects/yitplus/discussion_board.webp",
-        alt: "Yit plus - Directions page | Yit plus",
+        alt: "YIT Plus - Discussion board",
       },
       {
         itemImageSrc: "/img/projects/yitplus/document.webp",
-        alt: "Yit plus - document page | Yit plus",
+        alt: "YIT Plus - Document management page",
       },
       {
         itemImageSrc: "/img/projects/yitplus/one_year_warranty.webp",
-        alt: "Yit plus - One year warranty page | Yit plus",
+        alt: "YIT Plus - One year warranty page",
       },
       {
         itemImageSrc: "/img/projects/yitplus/service_lounge.webp",
-        alt: "Yit plus - Service lounge page | Yit plus",
+        alt: "YIT Plus - Service lounge page",
       },
       {
         itemImageSrc: "/img/projects/yitplus/service_request.webp",
-        alt: "Yit plus - Service request category | Yit plus",
+        alt: "YIT Plus - Service request category",
       },
       {
         itemImageSrc: "/img/projects/yitplus/service_request_category.webp",
-        alt: "Yit plus - Service request category | Yit plus",
+        alt: "YIT Plus - Service request category management",
       },
       {
         itemImageSrc: "/img/projects/yitplus/admin.webp",
-        alt: "Yit plus - Admin page | Yit plus",
+        alt: "YIT Plus - Admin dashboard",
       },
     ],
   },
@@ -765,39 +765,39 @@ export const freelance = [
     images: [
       {
         itemImageSrc: "/img/home/projects/Recipe.webp",
-        alt: "Recipes - Login page | Recipes",
+        alt: "Recipes - Login page",
       },
       {
         itemImageSrc: "/img/projects/recipe/login.webp",
-        alt: "Recipes - Login page | Recipes",
+        alt: "Recipes - Login page",
       },
       {
         itemImageSrc: "/img/projects/recipe/register.webp",
-        alt: "Recipes - Register page | Recipes",
+        alt: "Recipes - Registration page",
       },
       {
         itemImageSrc: "/img/projects/recipe/home.webp",
-        alt: "Recipes - Home page | Recipes",
+        alt: "Recipes - Home page",
       },
       {
         itemImageSrc: "/img/projects/recipe/direction.webp",
-        alt: "Recipes - Directions page | Recipes",
+        alt: "Recipes - Directions page",
       },
       {
         itemImageSrc: "/img/projects/recipe/ingredients.webp",
-        alt: "Recipes - Ingredients page | Recipes",
+        alt: "Recipes - Ingredients page",
       },
       {
         itemImageSrc: "/img/projects/recipe/addrecipe.webp",
-        alt: "Recipes - Add Recipe page | Recipes",
+        alt: "Recipes - Add Recipe page",
       },
       {
         itemImageSrc: "/img/projects/recipe/search.webp",
-        alt: "Recipes - Search page | Recipes",
+        alt: "Recipes - Search page",
       },
       {
         itemImageSrc: "/img/projects/recipe/share.webp",
-        alt: "Recipes - Share screen | Recipes",
+        alt: "Recipes - Share screen",
       },
     ],
   },
@@ -842,27 +842,27 @@ export const freelance = [
     images: [
       {
         itemImageSrc: "/img/home/projects/tvmaze.webp",
-        alt: "TVmaze - Home page. | Tv maze",
+        alt: "TVmaze - Home page",
       },
       {
         itemImageSrc: "/img/projects/tvmaze/home.webp",
-        alt: "TVmaze - Home page. | Tv maze",
+        alt: "TVmaze - Home page",
       },
       {
         itemImageSrc: "/img/projects/tvmaze/search.webp",
-        alt: "TVmaze - . Search page| Tv maze",
+        alt: "TVmaze - Search page",
       },
       {
         itemImageSrc: "/img/projects/tvmaze/episodes.webp",
-        alt: "TVmaze - Episodes tab. | Tv maze",
+        alt: "TVmaze - Episodes tab",
       },
       {
         itemImageSrc: "/img/projects/tvmaze/cast.webp",
-        alt: "TVmaze - Cast tab. | Tv maze",
+        alt: "TVmaze - Cast tab",
       },
       {
         itemImageSrc: "/img/projects/tvmaze/genres.webp",
-        alt: "TVmaze - Genres. | Tv maze",
+        alt: "TVmaze - Genres",
       },
     ],
   },
@@ -1039,23 +1039,23 @@ export const freelance = [
     images: [
       {
         itemImageSrc: "/img/projects/partnerUpstox/partnerUpstox.webp",
-        alt: "Open a sub-broker account with Upstox.",
+        alt: "Partner Dashboard Upstox - Cover page",
       },
       {
         itemImageSrc: "/img/projects/partnerUpstox/dashboard.webp",
-        alt: "Open a sub-broker account with Upstox.",
+        alt: "Partner Dashboard Upstox - Dashboard",
       },
       {
         itemImageSrc: "/img/projects/partnerUpstox/leads.webp",
-        alt: "Open a sub-broker account with Upstox.",
+        alt: "Partner Dashboard Upstox - Leads management",
       },
       {
         itemImageSrc: "/img/projects/partnerUpstox/customer.webp",
-        alt: "Open a sub-broker account with Upstox.",
+        alt: "Partner Dashboard Upstox - Customer management",
       },
       {
         itemImageSrc: "/img/projects/partnerUpstox/earning.webp",
-        alt: "Open a sub-broker account with Upstox.",
+        alt: "Partner Dashboard Upstox - Earnings report",
       },
     ],
   },
