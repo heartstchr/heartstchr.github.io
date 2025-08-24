@@ -16,7 +16,7 @@ project:
   codeLink: 
   contact: 
   stack: ["Javascript","Angular/black/white","Vuedotjs","Axios","webpack","lit","bitbucket","npm","nodedotjs","Git","Eslint","Prettier"]
-  images: [{"itemImageSrc":"/img/home/projects/ABN_Amro.webp","alt":"Cover screen for application page"}]
+  images: [{"itemImageSrc":"/img/home/projects/ABN_Amro.webp","alt":"IBRebuild for ABN AMRO BANK N.V. - Cover page"}]
   features: 
   details: ""
 ---

@@ -177,7 +177,7 @@ export const freelance = [
       },
       {
         itemImageSrc: "/img/projects/appliance-repair/blog-post.webp",
-        alt: "Appliance Repair Service Platform - Blog post",git 
+        alt: "Appliance Repair Service Platform - Blog post", 
       },
       {
         itemImageSrc: "/img/projects/appliance-repair/blog.webp",
