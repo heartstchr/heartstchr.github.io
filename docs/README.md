@@ -44,6 +44,7 @@ copyright: false
       <img width="38px" height="38px" :src="`https://cdn.simpleicons.org/${stackLogo.link}`" :alt="stackLogo.title" loading="eager" fetchpriority="high"/>
       <h3 class="sr-only">{{stackLogo.title}}</h3>
     </div>
+    ...
   </div>
   <div class="text-center pb-4 grid justify-content-center gap-4">
     <CustomButton href="/about/#stack" label="Explore Tech Stack">
