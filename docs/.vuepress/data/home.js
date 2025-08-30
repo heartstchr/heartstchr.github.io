@@ -18,6 +18,18 @@ export const events = [
 ];
 export const orgs = [
   {
+    title: "YIT",
+    icon: "/img/home/yitlogo.png",
+    details: "constructing housing, business premises, infrastructure",
+    link: "https://www.yitgroup.com/en",
+  },
+  {
+    title: "Abn Amro",
+    icon: "/img/home/abn-amro-logo.png",
+    details: "Personal bank in the digital age",
+    link: "https://www.abnamro.com/en/home",
+  },
+  {
     title: "Capgemini",
     icon: "/img/home/capgemini.webp",
     details: "Consulting and technology services",
