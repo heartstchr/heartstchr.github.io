@@ -24,6 +24,7 @@ copyright: false
       <div class="text-xl md:text-2xl mt-3 line-height-3 min-h-10rem">
         From <Transition name="fade" mode="out-in"><span :key="currentPhrase" class="text-gradient-2">{{ currentPhrase }}</span></Transition> to scale.
         <span class="flex mt-8">I partner with founders to plan, build, and launch reliable software with clarity and speed.</span>
+        <p class="mt-3">I build with your business goals in mind and keep learning, so we both win.</p>
       </div>
       <div class="flex gap-3 mt-5 flex-wrap">
         <a href="https://cal.com/stackseekers" target="_blank" class="no-underline mt-4">
