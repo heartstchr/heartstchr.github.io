@@ -103,27 +103,27 @@ export const testimonials = [
 export const whyme = [
   {
     id: "proven_expertise",
-    title: "MVP Ready in 4-8 Weeks",
+    title: "Clear Guidance",
     description:
-      "I specialize in rapid MVP development that gets your product in front of users fast. With proven frameworks and agile sprints, your funded startup can validate ideas and iterate quickly before your runway runs out.",
+      "I turn your idea into a simple, step-by-step plan - no tech skills needed.",
   },
   {
     id: "client_centric_approach",
-    title: "Investor-Ready Products",
+    title: "Always in Touch",
     description:
-      "Beyond just code, I deliver polished MVPs with technical documentation, deployment guides, and scalable architecture that impresses investors and sets your startup up for future funding rounds.",
+      "You get fast replies and regular updates, so you’re never left guessing.",
   },
   {
     id: "wide_range_of_experience",
-    title: "20+ Startup Success Stories",
+    title: "No Surprise Costs",
     description:
-      "I've helped funded startups from fintech to SaaS launch their first products. I understand the unique pressures of startup timelines, budget constraints, and the need to pivot quickly based on user feedback.",
+      "Get an upfront quote and focused features - no unexpected bills.",
   },
   {
     id: "commitment_to_quality_code",
-    title: "Built to Scale Day One",
+    title: "Quality You Can Grow On",
     description:
-      "Your MVP won't become technical debt. I architect solutions using modern tech stacks that can handle 10x growth, making it easy to onboard your future development team without costly rewrites.",
+      "Your product is built clean and ready for users and future updates.",
   },
 ];
 export const stackLogos = [

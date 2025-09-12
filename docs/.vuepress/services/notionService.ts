@@ -42,27 +42,6 @@ export interface NotionFileObject {
 const endpoint = __VITE_NOTION_ENDPOINT__;
 const databaseId = __VITE_NOTION_DATABASE_ID__;
 
-// Log configuration status only in browser environment
-if (typeof window !== "undefined") {
-  console.log("🔧 Environment check:");
-  console.log("  - VITE_NOTION_ENDPOINT:", __VITE_NOTION_ENDPOINT__);
-  console.log("  - VITE_NOTION_DATABASE_ID:", __VITE_NOTION_DATABASE_ID__);
-  console.log("  - endpoint variable:", endpoint);
-  console.log("  - databaseId variable:", databaseId);
-
-  if (endpoint) {
-    console.log("✅ Using proxy endpoint for Notion integration:", endpoint);
-    console.log("🌐 Client origin:", window.location.origin);
-  } else {
-    console.error(
-      "❌ Notion integration not configured. Please set VITE_NOTION_ENDPOINT to your github pages."
-    );
-    console.error(
-      "💡 Make sure you have a .env file with VITE_NOTION_ENDPOINT=https://stackseekers.vercel.app"
-    );
-  }
-}
-
 function buildNotionProperties(
   payload: ProjectRequestPayload,
   files?: NotionFileObject[]

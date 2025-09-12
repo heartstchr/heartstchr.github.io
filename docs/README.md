@@ -6,7 +6,6 @@ editLink: false
 copyright: false
 ---
 
-<!-- New‑age Hero -->
 <section class="hero-newage relative overflow-hidden p-4 md:p-6 surface-0">
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
@@ -23,19 +22,20 @@ copyright: false
         Build <span class="text-gradient">world‑class</span> products, faster
       </h1>
       <div class="text-xl md:text-2xl mt-3 line-height-3 min-h-10rem">
-        From <Transition name="fade" mode="out-in"><span :key="currentPhrase" class="text-gradient-2">{{ currentPhrase }}</span></Transition> to scale
-        <br/>
-        I partner with founders to plan, build, and launch reliable software with clarity and speed.
+        From <Transition name="fade" mode="out-in"><span :key="currentPhrase" class="text-gradient-2">{{ currentPhrase }}</span></Transition> to scale.
+        <span class="flex mt-8">I partner with founders to plan, build, and launch reliable software with clarity and speed.</span>
       </div>
       <div class="flex gap-3 mt-5 flex-wrap">
-        <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+        <a href="https://cal.com/stackseekers" target="_blank" class="no-underline mt-4">
           <Button label="Book a 25‑min strategy call" icon="pi pi-calendar-clock" severity="primary" rounded raised />
         </a>
-        <a href="/web-development-projects/" class="no-underline">
-          <Button label="See Work" icon="pi pi-briefcase" severity="secondary" outlined rounded />
-        </a>
+        <CustomButton href="/web-development-projects/" label="See Work">
+          <template #icon>
+            <Circles />
+          </template>
+        </CustomButton>
       </div>
-      <div class="mt-5 grid gap-3">
+      <div class="mt-5 grid gap-3 ml-1">
         <div class="flex align-items-center gap-3">
           <i class="pi pi-check-circle text-green-500"></i>
           <span class="text-sm md:text-base">Enterprise patterns, startup speed</span>
@@ -81,11 +81,6 @@ copyright: false
   </div>
   <div class="text-center pb-4 grid justify-content-center gap-4">
     <CustomButton href="/about/#stack" label="Explore Tech Stack">
-      <template #icon>
-        <Circles />
-      </template>
-    </CustomButton>
-    <CustomButton href="/web-development-projects/" label="Explore Projects">
       <template #icon>
         <Circles />
       </template>
@@ -350,7 +345,7 @@ copyright: false
   onMounted(() => {
     phraseTimer = setInterval(() => {
       currentPhraseIndex.value = (currentPhraseIndex.value + 1) % phrases.length;
-    }, 2500);
+    }, 3000);
   });
 
   onBeforeUnmount(() => {
