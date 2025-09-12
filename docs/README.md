@@ -2,25 +2,58 @@
 home: true
 title: Web Developer
 description: Stack Seekers is a full-stack web development agency helping startups and businesses build modern, high-performance websites and web applications. From idea to launch, we turn your vision into powerful digital solutions. Expert Vue.js, React.js, and Node.js developer delivering scalable web, mobile, and software solutions with 𝙈𝙀𝙍𝙉 and 𝙈𝙀𝙑𝙉 stacks (MongoDB, Express, React/Vue, Next/Nuxt, Node.js).
-heroImage: /img/home/jiwanghosal.webp
-heroText: Stack Seekers
-tagline: Build, launch, and scale your product 2x faster with a senior MERN/MEVN developer.<br/><br/>I help startups and SMBs ship reliable web apps in weeks, not months without sacrificing code quality.
-containerClass: fancy-container
-
 editLink: false
 copyright: false
 ---
 
-<div class="mt-4">
-  <a href="https://cal.com/stackseekers" size="large" target="_blank"
-      class="flex justify-content-center text-center no-underline -mt-4" aria-label="Send an Email">
-  <Button label="Book a 25‑min free strategy call" icon="pi pi-calendar-clock" severity="primary" raised rounded />
-  </a>
-  <div class="text-center text-xs mt-1">No commitment. Get a roadmap and estimate.</div>
-  <div class="text-center text-sm mt-2 text-orange-600 font-medium">
-    <i class="pi pi-bell mr-1"></i>Only 2 complimentary consults left this month.
+<!-- New‑age Hero -->
+<section class="hero-newage relative overflow-hidden p-4 md:p-6 surface-0">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="grid align-items-center">
+    <div class="col-12 md:col-8">
+      <div class="mb-3 flex align-items-center gap-2">
+        <span class="inline-flex align-items-center px-2 py-1 border-round-xl bg-primary text-0 text-xs">
+          <i class="pi pi-sparkles mr-1"></i> New‑age development partner
+        </span>
+        <span class="text-xs text-500">MEVN/MERN • AWS/Azure • AI</span>
+      </div>
+      <h1 class="m-0 p-0 line-height-2 text-5xl md:text-7xl font-bold">
+        Build <span class="text-gradient">world‑class</span> products, faster
+      </h1>
+      <div class="text-xl md:text-2xl mt-3 line-height-3 min-h-10rem">
+        From <Transition name="fade" mode="out-in"><span :key="currentPhrase" class="text-gradient-2">{{ currentPhrase }}</span></Transition> to scale
+        <br/>
+        I partner with founders to plan, build, and launch reliable software with clarity and speed.
+      </div>
+      <div class="flex gap-3 mt-5 flex-wrap">
+        <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+          <Button label="Book a 25‑min strategy call" icon="pi pi-calendar-clock" severity="primary" rounded raised />
+        </a>
+        <a href="/web-development-projects/" class="no-underline">
+          <Button label="See Work" icon="pi pi-briefcase" severity="secondary" outlined rounded />
+        </a>
+      </div>
+      <div class="mt-5 grid gap-3">
+        <div class="flex align-items-center gap-3">
+          <i class="pi pi-check-circle text-green-500"></i>
+          <span class="text-sm md:text-base">Enterprise patterns, startup speed</span>
+        </div>
+        <div class="flex align-items-center gap-3">
+          <i class="pi pi-check-circle text-green-500"></i>
+          <span class="text-sm md:text-base">Transparent roadmap and weekly demos</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 md:col-4 mt-6 md:mt-0">
+      <div class="relative hero-visual border-round-2xl overflow-hidden">
+        <img src="/img/home/jiwanghosal.webp" alt="Jiwan Ghosal" class="w-1/2 border-round-2xl shadow-4 hero-image" loading="eager" fetchpriority="high" />
+        <div class="glow-ring"></div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
 <div class="mt-6">
   <div class="text-center pb-4">
@@ -308,6 +341,22 @@ copyright: false
   const getImage = () =>
     `background-image: url('/img/home/faq.webp');  background-repeat: no-repeat; background-size: cover;`;
 
+  // Hero rotating phrase
+  const phrases = ['idea to launch', 'MVPs', 'enterprise‑grade apps', 'AI‑powered products'];
+  const currentPhraseIndex = ref(0);
+  const currentPhrase = computed(() => phrases[currentPhraseIndex.value]);
+  let phraseTimer: ReturnType<typeof setInterval> | null = null;
+
+  onMounted(() => {
+    phraseTimer = setInterval(() => {
+      currentPhraseIndex.value = (currentPhraseIndex.value + 1) % phrases.length;
+    }, 2500);
+  });
+
+  onBeforeUnmount(() => {
+    if (phraseTimer) clearInterval(phraseTimer);
+  });
+
   // Function to start autoplay
   const startAutoPlay = () => {
     autoplayTimer = setInterval(() => {
@@ -340,3 +389,92 @@ copyright: false
     pauseAutoPlay();
   });
 </script>
+
+<style>
+/* New‑age Hero styles */
+.hero-newage {
+  position: relative;
+  /* Full-bleed width inside constrained content container */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #14b8a6, #22d3ee, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.text-gradient-2 {
+  background: linear-gradient(90deg, #f97316, #f43f5e, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.hero-visual {
+  background: radial-gradient(600px 400px at 70% 20%, rgba(34, 211, 238, 0.15), transparent),
+              radial-gradient(500px 300px at 30% 80%, rgba(168, 85, 247, 0.18), transparent);
+}
+
+.hero-image {
+  transform: translateZ(0);
+  transition: transform 800ms ease, filter 800ms ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.02);
+  filter: saturate(1.05);
+}
+
+.glow-ring {
+  position: absolute;
+  inset: -20% -10% -20% -10%;
+  border-radius: 32px;
+  background: conic-gradient(from 0deg, rgba(34, 211, 238, 0.15), rgba(168, 85, 247, 0.15), rgba(34, 211, 238, 0.15));
+  filter: blur(40px);
+  mix-blend-mode: color-dodge;
+  animation: spin 18s linear infinite;
+  pointer-events: none;
+}
+
+.orb {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  filter: blur(50px);
+  opacity: 0.5;
+  pointer-events: none;
+  animation: floatY 12s ease-in-out infinite;
+}
+.orb-1 { top: -80px; left: -80px; background: radial-gradient(circle at 30% 30%, #22d3ee, transparent 60%); }
+.orb-2 { bottom: -100px; right: -60px; background: radial-gradient(circle at 70% 70%, #a855f7, transparent 60%); animation-delay: 2.5s; }
+.orb-3 { top: 40%; right: 10%; background: radial-gradient(circle at 50% 50%, #34d399, transparent 60%); animation-delay: 5s; width: 280px; height: 280px; }
+
+@keyframes floatY {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Fade transition for rotating phrase */
+.fade-enter-active, .fade-leave-active { transition: opacity 400ms ease; }
+.fade-enter-from, .fade-leave-to { opacity: 0; }
+
+/* Responsive tweaks */
+@media (max-width: 767px) {
+  .hero-newage { padding: 1rem; }
+  .orb { filter: blur(40px); opacity: 0.45; }
+}
+</style>
