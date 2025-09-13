@@ -88,17 +88,17 @@ export const testimonials = [
     location: "India",
     code: "in",
   },
-  {
-    name: "Erkan Ateşli",
-    designation: "Chapter Lead at ABN AMRO Bank N.V.",
-    message:
-      "In our connection with Jiwan at ABN AMRO, I noticed that he has a lot of knowledge in his field of expertise. He can transfer his knowledge easily to others. With his strong analytics skills, he can handle complex questions as usual.",
-    avatar:
-      "https://media.licdn.com/dms/image/v2/C4E03AQFg4Oh_B9JEeQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1621625662967?e=1750896000&v=beta&t=9KwLZLloVo4ianxK3csxIjlMY0_G0Ez7nKYvgPVVssE",
-    link: "https://www.linkedin.com/in/erkanatesli",
-    location: "The Netherlands",
-    code: "nl",
-  },
+  // {
+  //   name: "Erkan Ateşli",
+  //   designation: "Chapter Lead at ABN AMRO Bank N.V.",
+  //   message:
+  //     "In our connection with Jiwan at ABN AMRO, I noticed that he has a lot of knowledge in his field of expertise. He can transfer his knowledge easily to others. With his strong analytics skills, he can handle complex questions as usual.",
+  //   avatar:
+  //     "https://media.licdn.com/dms/image/v2/C4E03AQFg4Oh_B9JEeQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1621625662967?e=1750896000&v=beta&t=9KwLZLloVo4ianxK3csxIjlMY0_G0Ez7nKYvgPVVssE",
+  //   link: "https://www.linkedin.com/in/erkanatesli",
+  //   location: "The Netherlands",
+  //   code: "nl",
+  // },
 ];
 export const whyme = [
   {

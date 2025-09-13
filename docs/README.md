@@ -57,9 +57,10 @@ copyright: false
 </section>
 
 <div class="mt-6">
+  <div class="orb orb-3"></div>
   <div class="text-center pb-4">
     <div class="text-4xl font-bold"><h2>Scalable Solutions for <div class="text-4xl font-bold bg-primary">Startups, Enterprises & Agencies</div></h2></div>
-    <div class="text-xl md:text-center line-height-3"> I’m Jiwan Ghosal, a senior JavaScript engineer specializing in React/Vue and Node on Azure. I help founders and teams ship fast, clean, and scalable software.</div>
+    <div class="text-xl md:text-center line-height-3"> I’m Jiwan Ghosal, a senior JavaScript engineer specializing in React/Vue and Node on AWS/Azure. I help founders and teams ship fast, clean, and scalable software.</div>
   </div>
   <div class="gallery gap-4">
     <div
@@ -126,7 +127,7 @@ copyright: false
   <div class="grid justify-content-center my-4 md:flex hidden">
     <div class="card md:mx-0 -mx-4 col-12 md:col-3" v-for="testimony in testimonials" :key="testimony.name">
       <div class="card shadow-1 border-round-md m-2 p-2 vp-feature-item">
-        <div class="flex align-items-center">
+        <div class="flex align-items-center mb-4">
           <!-- <img :src="testimony.avatar" :alt="testimony.name" loading="eager" fetchpriority="high" class="border-circle" width="50px" height="50px" /> -->
           <a :href="testimony.link" target="_blank" class="no-underline">
             <h3 class="flex flex-column align-items-start ml-2 p-0 m-0">
@@ -141,8 +142,8 @@ copyright: false
             </h3>
           </a>
         </div>
-        <div class="font-italic mb-8">
-          <div class="text-md line-height-3" ><span class="font-bold text-4xl">"</span> {{ testimony.message }}</div>
+        <div class="font-italic">
+          <div class="text-md line-height-3" >{{ testimony.message }}</div>
         </div>
       </div>
     </div>
@@ -166,6 +167,7 @@ copyright: false
 </div>
 
 <div class="my-6 flex flex-column">
+  <div class="orb orb-1"></div>
   <div class="text-center pb-4">
     <div class="text-4xl font-bold"><h2>Why choose <span class="bg-primary">me?</span></h2></div>
     <div class="my-4 text-xl line-height-2">Here’s why I’m the right choice for your project</div>
@@ -192,21 +194,35 @@ copyright: false
       </Fieldset>
     </div>
   </div>
+  <div class="orb orb-2"></div>
 </div>
 <div class="my-6">
   <div class="text-center pb-4">
     <div class="text-4xl font-bold"><h2>Scaling startups <div class="text-4xl font-bold bg-primary">Elevating industry giants</div></h2></div>
     <div class="my-4 text-xl line-height-2">I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development.</div>
   </div>
-  <div class="my-4 grid md:flex-row justify-content-center gap-2">
-    <div class="md:col-3 col-5 border-round-md md:p-2 md:m-2 vp-feature-item flex align-items-center justify-content-center" v-for="org in orgs" :key="org.title">
-      <div class="no-underline flex flex-column justify-content-center flex-wrap">
-        <div class="mb-2 flex align-items-center justify-content-center h-4rem">
-          <img :src="org.icon" :alt="org.title" width="40px" height="40px" class="border-round-md" loading="eager" fetchpriority="high"/>
+  <div class="my-4 marquee">
+    <div class="marquee-track">
+      <div class="border-round-md md:p-2 md:m-2 vp-feature-item flex align-items-center justify-content-center marquee-item" v-for="org in orgs" :key="`org-1-${org.title}`">
+        <div class="no-underline flex flex-column justify-content-center flex-wrap">
+          <div class="mb-2 flex align-items-center justify-content-center h-4rem">
+            <img :src="org.icon" :alt="org.title" width="40px" height="40px" class="border-round-md" loading="eager" fetchpriority="high"/>
+          </div>
+          <div class="h-5rem">
+            <h3 class="text-base md:text-xl font-bold flex align-items-center justify-content-center p-0 m-0 text-center line-height-3">{{org.title}}</h3>
+            <div class="text-xs md:text-sm flex align-items-center justify-content-center line-height-2 text-center">{{org.details}}</div>
+          </div>
         </div>
-        <div class="h-5rem">
-          <h3 class="text-base md:text-xl font-bold flex align-items-center justify-content-center p-0 m-0 text-center line-height-3">{{org.title}}</h3>
-          <div class="text-xs md:text-sm flex align-items-center justify-content-center line-height-2 text-center">{{org.details}}</div>
+      </div>
+      <div class="border-round-md md:p-2 md:m-2 vp-feature-item flex align-items-center justify-content-center marquee-item" v-for="org in orgs" :key="`org-2-${org.title}`" aria-hidden="true">
+        <div class="no-underline flex flex-column justify-content-center flex-wrap">
+          <div class="mb-2 flex align-items-center justify-content-center h-4rem">
+            <img :src="org.icon" :alt="org.title" width="40px" height="40px" class="border-round-md" loading="eager" fetchpriority="high"/>
+          </div>
+          <div class="h-5rem">
+            <h3 class="text-base md:text-xl font-bold flex align-items-center justify-content-center p-0 m-0 text-center line-height-3">{{org.title}}</h3>
+            <div class="text-xs md:text-sm flex align-items-center justify-content-center line-height-2 text-center">{{org.details}}</div>
+          </div>
         </div>
       </div>
     </div>
@@ -227,14 +243,14 @@ copyright: false
   <div class="grid overflow-hidden border-round-md">
     <div class="col-12 ">
       <div class="border-round-md flex flex-column gap-4 md:p-2">
-        <div class="p-4 border-round-md border-1 border-primary">
-          <h3 class="m-0 p-0 font-bold">How can I start a project with you?</h3>
+        <div class="p-4">
+          <h3 class="m-0 p-0 font-bold">Q. How can I start a project with you?</h3>
           <p class="mx-3">
               You can start by <a href="https://cal.com/stackseekers" class="no-underline text-xl" aria-label="schedule a meeting">scheduling a meeting</a> with me. I’ll connect with you promptly to discuss your requirements and plan the next steps.
           </p>
         </div>
-        <div class="p-4 border-round-md border-1 border-primary">
-          <h3 class="mt-0 p-0 font-bold">What services do you provide?</h3>
+        <div class="p-4">
+          <h3 class="mt-0 p-0 font-bold">Q. What services do you provide?</h3>
           <div class="mx-3">
             I offer a variety of services tailored to your needs, including 
             <a href="web-development-services/consulting-and-technical-advisory/" class="no-underline text-xl" aria-label="Custom Web Development">Custom Web Development</a>, 
@@ -245,8 +261,8 @@ copyright: false
             <p class="mt-2">Let’s find the best solution for your project!</p>
           </div>
         </div>
-        <div class="p-4 border-round-md border-1 border-primary">
-          <h3 class="mt-0 p-0 font-bold">What does the project process look like?</h3>
+        <div class="p-4">
+          <h3 class="mt-0 p-0 font-bold">Q. What does the project process look like?</h3>
           <div class="mx-3">
             <div class="my-4">It’s simple and straightforward: </div>
             <Timeline :value="events" align="left"
@@ -273,17 +289,17 @@ copyright: false
           </div>
         </div>       
         <!-- Guarantees and Safety Nets -->
-        <div class="p-4 border-round-md border-1 border-primary">
-          <h3 class="mt-0 p-0 font-bold">Guarantees & Safety Nets</h3>
-          <div class="mx-3">
-            <div class="my-4">
-              <div class="flex align-items-center mb-3">
-                <i class="pi pi-shield text-primary mr-3" style="font-size: 1.5rem;"></i>
-                <span class="text-lg">"If I'm not a fit after the first week, you pay nothing."</span>
+        <div>
+          <h3 class="mt-0 p-0">Guarantees & Safety Nets</h3>
+          <div class="">
+            <div class="flex flex-column gap-4">
+              <div class="">
+                <i class="pi pi-shield text-small mr-3"></i>
+                <span class="text-lg">If I'm not a fit after the first week, you pay nothing.</span>
               </div>
-              <div class="flex align-items-center">
-                <i class="pi pi-unlock text-primary mr-3" style="font-size: 1.5rem;"></i>
-                <span class="text-lg">"No lock‑in: cancel monthly engagement anytime."</span>
+              <div class="">
+                <i class="pi pi-unlock text-small mr-3"></i>
+                <span class="text-lg">No lock‑in: cancel monthly engagement anytime.</span>
               </div>
             </div>
           </div>
@@ -467,6 +483,25 @@ copyright: false
 /* Fade transition for rotating phrase */
 .fade-enter-active, .fade-leave-active { transition: opacity 400ms ease; }
 .fade-enter-from, .fade-leave-to { opacity: 0; }
+
+/* Marquee for orgs */
+.marquee {
+  position: relative;
+  overflow: hidden;
+}
+.marquee-track {
+  display: flex;
+  gap: 0.5rem;
+  width: max-content;
+  animation: marquee-scroll 30s linear infinite;
+}
+.marquee-item {
+  min-width: 240px;
+}
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
 /* Responsive tweaks */
 @media (max-width: 767px) {
