@@ -76,18 +76,17 @@ copyright: false
   </div>
   <div class="grid justify-content-center my-4">
     <div class="flex gap-2 p-2" v-for="stackLogo in stackLogos" :key="stackLogo.title">
-      <img width="38px" height="38px" :src="`https://cdn.simpleicons.org/${stackLogo.link}`" :alt="stackLogo.title" loading="eager" fetchpriority="high"/>
+      <img width="32px" height="32px" :src="`https://cdn.simpleicons.org/${stackLogo.link}`" :alt="stackLogo.title" loading="eager" fetchpriority="high"/>
       <h3 class="sr-only">{{stackLogo.title}}</h3>
     </div>
-    ...
   </div>
-  <div class="text-center pb-4 grid justify-content-center gap-4">
+  <!-- <div class="text-center pb-4 grid justify-content-center gap-4">
     <CustomButton href="/about/#stack" label="Explore Tech Stack">
       <template #icon>
         <Circles />
       </template>
     </CustomButton>
-  </div>
+  </div> -->
 </div>
 
 <!-- Testimonials -->
