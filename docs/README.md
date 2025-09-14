@@ -9,11 +9,10 @@ copyright: false
 <section class="hero-newage relative overflow-hidden p-4 md:p-6 surface-0">
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
-  <div class="orb orb-3"></div>
   <div class="grid align-items-center">
     <div class="col-12 md:col-8">
       <div class="mb-3 flex align-items-center gap-2">
-        <span class="inline-flex align-items-center px-2 py-1 border-round-xl bg-primary text-0 text-xs">
+        <span class="inline-flex align-items-center px-2 py-1 border-round-xl bg-primary text-xs">
           <i class="pi pi-sparkles mr-1"></i> New‑age development partner
         </span>
         <span class="text-xs text-500">MEVN/MERN • AWS/Azure • AI</span>
@@ -22,8 +21,8 @@ copyright: false
         Build <span class="text-gradient">world‑class</span> products, faster
       </h1>
       <div class="text-xl md:text-2xl mt-3 line-height-3 min-h-10rem">
-        From <Transition name="fade" mode="out-in"><span :key="currentPhrase" class="text-gradient-2">{{ currentPhrase }}</span></Transition> to scale.
-        <span class="flex mt-8">I partner with founders to plan, build, and launch reliable software with clarity and speed.</span>
+        <div class="text-4xl" >From <Transition name="fade" mode="out-in"><span :key="currentPhrase" class="text-gradient-2">{{ currentPhrase }}</span></Transition> to scale.</div>
+        <span class="flex mt-4">I partner with founders to plan, build, and launch reliable software with clarity, quality, and speed.</span>
         <p class="mt-3">I build with your business goals in mind and keep learning, so we both win.</p>
       </div>
       <div class="flex gap-3 mt-5 flex-wrap">
@@ -57,7 +56,6 @@ copyright: false
 </section>
 
 <div class="mt-6">
-  <div class="orb orb-3"></div>
   <div class="text-center pb-4">
     <div class="text-4xl font-bold"><h2>Scalable Solutions for <div class="text-4xl font-bold bg-primary">Startups, Enterprises & Agencies</div></h2></div>
     <div class="text-xl md:text-center line-height-3"> I’m Jiwan Ghosal, a senior JavaScript engineer specializing in React/Vue and Node on AWS/Azure. I help founders and teams ship fast, clean, and scalable software.</div>
@@ -166,7 +164,6 @@ copyright: false
 </div>
 
 <div class="my-6 flex flex-column">
-  <div class="orb orb-1"></div>
   <div class="text-center pb-4">
     <div class="text-4xl font-bold"><h2>Why choose <span class="bg-primary">me?</span></h2></div>
     <div class="my-4 text-xl line-height-2">Here’s why I’m the right choice for your project</div>
@@ -193,7 +190,6 @@ copyright: false
       </Fieldset>
     </div>
   </div>
-  <div class="orb orb-2"></div>
 </div>
 <div class="my-6">
   <div class="text-center pb-4">
@@ -400,111 +396,3 @@ copyright: false
     pauseAutoPlay();
   });
 </script>
-
-<style>
-/* New‑age Hero styles */
-.hero-newage {
-  position: relative;
-  /* Full-bleed width inside constrained content container */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.text-gradient {
-  background: linear-gradient(90deg, #14b8a6, #22d3ee, #a855f7);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-
-.text-gradient-2 {
-  background: linear-gradient(90deg, #f97316, #f43f5e, #8b5cf6);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-
-.hero-visual {
-  background: radial-gradient(600px 400px at 70% 20%, rgba(34, 211, 238, 0.15), transparent),
-              radial-gradient(500px 300px at 30% 80%, rgba(168, 85, 247, 0.18), transparent);
-}
-
-.hero-image {
-  transform: translateZ(0);
-  transition: transform 800ms ease, filter 800ms ease;
-}
-
-.hero-image:hover {
-  transform: scale(1.02);
-  filter: saturate(1.05);
-}
-
-.glow-ring {
-  position: absolute;
-  inset: -20% -10% -20% -10%;
-  border-radius: 32px;
-  background: conic-gradient(from 0deg, rgba(34, 211, 238, 0.15), rgba(168, 85, 247, 0.15), rgba(34, 211, 238, 0.15));
-  filter: blur(40px);
-  mix-blend-mode: color-dodge;
-  animation: spin 18s linear infinite;
-  pointer-events: none;
-}
-
-.orb {
-  position: absolute;
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  filter: blur(50px);
-  opacity: 0.5;
-  pointer-events: none;
-  animation: floatY 12s ease-in-out infinite;
-}
-.orb-1 { top: -80px; left: -80px; background: radial-gradient(circle at 30% 30%, #22d3ee, transparent 60%); }
-.orb-2 { bottom: -100px; right: -60px; background: radial-gradient(circle at 70% 70%, #a855f7, transparent 60%); animation-delay: 2.5s; }
-.orb-3 { top: 40%; right: 10%; background: radial-gradient(circle at 50% 50%, #34d399, transparent 60%); animation-delay: 5s; width: 280px; height: 280px; }
-
-@keyframes floatY {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0px); }
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-/* Fade transition for rotating phrase */
-.fade-enter-active, .fade-leave-active { transition: opacity 400ms ease; }
-.fade-enter-from, .fade-leave-to { opacity: 0; }
-
-/* Marquee for orgs */
-.marquee {
-  position: relative;
-  overflow: hidden;
-}
-.marquee-track {
-  display: flex;
-  gap: 0.5rem;
-  width: max-content;
-  animation: marquee-scroll 30s linear infinite;
-}
-.marquee-item {
-  min-width: 240px;
-}
-@keyframes marquee-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* Responsive tweaks */
-@media (max-width: 767px) {
-  .hero-newage { padding: 1rem; }
-  .orb { filter: blur(40px); opacity: 0.45; }
-}
-</style>

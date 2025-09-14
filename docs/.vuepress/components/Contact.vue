@@ -1,5 +1,6 @@
 <template>
     <div class="border-round-md vp-feature-item" id="contact">
+        <div class="orb orb-3"></div>
         <Svg />
         <div>
             <div class="text-center pb-4">

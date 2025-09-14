@@ -1,5 +1,5 @@
 <template>
-    <div class="vp-nav-item vp-action flex align-items-center gap-3 md:gap-4">
+    <div class="vp-nav-item vp-action flex align-items-center gap-3 md:gap-4 !flex-row ">
         <a href="https://cal.com/stackseekers" target="_blank" rel="noopener noreferrer" class="no-underline"
             aria-label="Book a 25-min free strategy call">
             <Button label="Book a Call" icon="pi pi-calendar-clock" severity="primary" raised rounded size="small" />

@@ -5,7 +5,7 @@ export default hopeTheme(
   {
     hostname: "https://stackseekers.com/",
     author: {
-      name: "Jiwan Ghosal",
+      name: "Stack Seekers",
       url: "http://heartstchr.github.io/",
     },
     repo: "heartstchr",
@@ -28,7 +28,6 @@ export default hopeTheme(
                     <a href="/careers/"> Careers </a>
                     <a href="/contact/"> Contact </a>
                   </div>
-                  <div class="flex flex-row justify-content-between align-items-center gap-2 m-auto">© 2024 Stack Seekers</div>
                 </div>
               </div>
             </div>

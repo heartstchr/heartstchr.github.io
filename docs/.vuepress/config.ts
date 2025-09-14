@@ -30,7 +30,7 @@ export default defineUserConfig({
   locales: {
     "/": {
       lang: "en-US",
-      title: "Jiwan Ghosal",
+      title: "Stack Seekers",
       description:
         "Senior Full Stack Developer - Graphic Artist - UI/UX Designer",
       // extra keys are permitted by casting
