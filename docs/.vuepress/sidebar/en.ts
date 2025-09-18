@@ -6,8 +6,8 @@ export const enSidebar = sidebar({
     {
       icon: "pi pi-briefcase",
       text: "Projects",
-      prefix: "projects/",
-      link: "projects/",
+      prefix: "web-development-projects/",
+      link: "web-development-projects/",
     },
     {
       icon: "pi pi-code",
