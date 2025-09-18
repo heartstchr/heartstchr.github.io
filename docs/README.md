@@ -54,7 +54,45 @@ copyright: false
     </div>
   </div>
 </section>
-
+<div class="my-6">
+  <div class="text-center pb-4">
+    <div class="text-4xl font-bold"><h2>Scaling startups <div class="text-4xl font-bold bg-primary">Elevating industry giants</div></h2></div>
+    <div class="my-4 text-xl line-height-2">I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development.</div>
+  </div>
+  <div class="my-4 marquee">
+    <div class="marquee-track">
+      <div class="border-round-md md:p-2 md:m-2 vp-feature-item flex align-items-center justify-content-center marquee-item" v-for="org in orgs" :key="`org-1-${org.title}`">
+        <div class="no-underline flex flex-column justify-content-center flex-wrap">
+          <div class="mb-2 flex align-items-center justify-content-center h-4rem">
+            <img :src="org.icon" :alt="org.title" width="40px" height="40px" class="border-round-md" loading="eager" fetchpriority="high"/>
+          </div>
+          <div class="h-5rem">
+            <h3 class="text-base md:text-xl font-bold flex align-items-center justify-content-center p-0 m-0 text-center line-height-3">{{org.title}}</h3>
+            <div class="text-xs md:text-sm flex align-items-center justify-content-center line-height-2 text-center">{{org.details}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="border-round-md md:p-2 md:m-2 vp-feature-item flex align-items-center justify-content-center marquee-item" v-for="org in orgs" :key="`org-2-${org.title}`" aria-hidden="true">
+        <div class="no-underline flex flex-column justify-content-center flex-wrap">
+          <div class="mb-2 flex align-items-center justify-content-center h-4rem">
+            <img :src="org.icon" :alt="org.title" width="40px" height="40px" class="border-round-md" loading="eager" fetchpriority="high"/>
+          </div>
+          <div class="h-5rem">
+            <h3 class="text-base md:text-xl font-bold flex align-items-center justify-content-center p-0 m-0 text-center line-height-3">{{org.title}}</h3>
+            <div class="text-xs md:text-sm flex align-items-center justify-content-center line-height-2 text-center">{{org.details}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="my-8">
+      <a href="https://cal.com/stackseekers" size="large"
+          class="flex justify-content-center text-center no-underline -mt-4" aria-label="Send an Email">
+      <Button label="Book a 25‑min free strategy call" icon="pi pi-briefcase" severity="primary" raised rounded />
+      </a>
+      <div class="text-center text-xs mt-1">No commitment. Get a roadmap and estimate.</div>
+  </div>
+</div>
 <div class="mt-6">
   <div class="text-center pb-4">
     <div class="text-4xl font-bold"><h2>Scalable Solutions for <div class="text-4xl font-bold bg-primary">Startups, Enterprises & Agencies</div></h2></div>
@@ -191,45 +229,7 @@ copyright: false
     </div>
   </div>
 </div>
-<div class="my-6">
-  <div class="text-center pb-4">
-    <div class="text-4xl font-bold"><h2>Scaling startups <div class="text-4xl font-bold bg-primary">Elevating industry giants</div></h2></div>
-    <div class="my-4 text-xl line-height-2">I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development.</div>
-  </div>
-  <div class="my-4 marquee">
-    <div class="marquee-track">
-      <div class="border-round-md md:p-2 md:m-2 vp-feature-item flex align-items-center justify-content-center marquee-item" v-for="org in orgs" :key="`org-1-${org.title}`">
-        <div class="no-underline flex flex-column justify-content-center flex-wrap">
-          <div class="mb-2 flex align-items-center justify-content-center h-4rem">
-            <img :src="org.icon" :alt="org.title" width="40px" height="40px" class="border-round-md" loading="eager" fetchpriority="high"/>
-          </div>
-          <div class="h-5rem">
-            <h3 class="text-base md:text-xl font-bold flex align-items-center justify-content-center p-0 m-0 text-center line-height-3">{{org.title}}</h3>
-            <div class="text-xs md:text-sm flex align-items-center justify-content-center line-height-2 text-center">{{org.details}}</div>
-          </div>
-        </div>
-      </div>
-      <div class="border-round-md md:p-2 md:m-2 vp-feature-item flex align-items-center justify-content-center marquee-item" v-for="org in orgs" :key="`org-2-${org.title}`" aria-hidden="true">
-        <div class="no-underline flex flex-column justify-content-center flex-wrap">
-          <div class="mb-2 flex align-items-center justify-content-center h-4rem">
-            <img :src="org.icon" :alt="org.title" width="40px" height="40px" class="border-round-md" loading="eager" fetchpriority="high"/>
-          </div>
-          <div class="h-5rem">
-            <h3 class="text-base md:text-xl font-bold flex align-items-center justify-content-center p-0 m-0 text-center line-height-3">{{org.title}}</h3>
-            <div class="text-xs md:text-sm flex align-items-center justify-content-center line-height-2 text-center">{{org.details}}</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="my-8">
-      <a href="https://cal.com/stackseekers" size="large"
-          class="flex justify-content-center text-center no-underline -mt-4" aria-label="Send an Email">
-      <Button label="Book a 25‑min free strategy call" icon="pi pi-briefcase" severity="primary" raised rounded />
-      </a>
-      <div class="text-center text-xs mt-1">No commitment. Get a roadmap and estimate.</div>
-  </div>
-</div>
+
 <!-- FAQ -->
 <div class="my-6">
   <div class="text-center pb-4">

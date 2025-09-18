@@ -26,7 +26,7 @@ const readMarkdownContent = (detailsPath) => {
   if (!detailsPath) return "";
   const fullPath = path.resolve(detailsDir, path.basename(detailsPath));
   try {
-    return fs.existsSync(fullPath) ? fs.readFileSync(fullPath, 'utf-8') : "";
+    return fs.existsSync(fullPath) ? fs.readFileSync(fullPath, "utf-8") : "";
   } catch (error) {
     console.error(`Error reading markdown file ${fullPath}:`, error);
     return "";
@@ -90,7 +90,7 @@ project:
     <div class="col-12 pt-4">
       <link itemprop="applicationCategory" :href="$frontmatter.project.schema" />
       <div class="flex md:flex-row flex-column justify-content-center align-items-center gap-2 my-4 w-full max-w-96">
-        <a v-if="$frontmatter.project.contact" :href="\`${"$frontmatter.project.contact"} ${"$frontmatter.project.name"}\`" target="_blank"
+        <a v-if="$frontmatter.project.contact" :href="\`${project.contact}${project.name}\`" target="_blank"
           class="flex flex-row no-underline w-full">
           <Button label="Get Custom Request" icon="pi pi-inbox" severity="secondary" raised rounded class="w-full" />
         </a>
@@ -158,7 +158,7 @@ service:
 `;
 
 // Function to generate pages
-const generatePages = (data, outputDir,slug, templateFn) => {
+const generatePages = (data, outputDir, slug, templateFn) => {
   ensureDirectoryExists(outputDir);
 
   data.forEach((item) => {
@@ -173,5 +173,5 @@ const generatePages = (data, outputDir,slug, templateFn) => {
 };
 
 // Generate project and service pages
-generatePages(freelance, outProjectDir,"name",projectTemplate);
-generatePages(services, outServiceDir,"code", serviceTemplate);
+generatePages(freelance, outProjectDir, "name", projectTemplate);
+generatePages(services, outServiceDir, "code", serviceTemplate);
