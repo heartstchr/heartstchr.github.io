@@ -25,8 +25,6 @@ const budgetOptions = ref<{ label: string; value: string }[]>([]);
 onMounted(async () => {
     try {
         const { serviceOptions: notionServices, budgetOptions: notionBudgets } = await fetchDatabaseSchemaOptions();
-        console.log('Notion service options:', notionServices);
-        console.log('Notion budget options:', notionBudgets);
 
         // Use Notion options if available, otherwise fallback to defaults
         serviceOptions.value = notionServices.length ? notionServices : [

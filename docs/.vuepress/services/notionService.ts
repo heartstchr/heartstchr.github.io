@@ -199,7 +199,6 @@ export async function submitProjectRequest(
   }
 
   try {
-    console.log("📤 Submitting to proxy endpoint:", endpoint);
 
     const notionPageRequest: any = {
       parent: {
@@ -225,7 +224,6 @@ export async function submitProjectRequest(
     }
 
     const data = await response.json();
-    console.log("✅ Successfully submitted to proxy endpoint");
     return { ok: true, data };
   } catch (error: any) {
     const message =
@@ -265,7 +263,6 @@ export async function fetchDatabaseSchemaOptions(): Promise<{
   }
 
   try {
-    console.log("🔍 Fetching database schema options from:", databaseId);
 
     const response = await fetch(`${endpoint}/all`, {
       method: "POST",
@@ -283,11 +280,9 @@ export async function fetchDatabaseSchemaOptions(): Promise<{
     }
 
     const data = await response.json();
-    console.log("📊 Database schema response:", data);
 
     // Get database properties from the schema
     const properties = data?.properties || {};
-    console.log("🏗️ Available properties:", Object.keys(properties));
 
     // Extract Service Type options
     const serviceProp = properties["Service Type"];
@@ -302,7 +297,6 @@ export async function fetchDatabaseSchemaOptions(): Promise<{
         value: opt.name,
         color: opt.color,
       }));
-      console.log("🎯 Service Type options:", serviceOptions);
     } else {
       console.warn("⚠️ 'Service Type' property not found in database schema");
     }
@@ -318,15 +312,10 @@ export async function fetchDatabaseSchemaOptions(): Promise<{
         value: opt.name,
         color: opt.color,
       }));
-      console.log("💰 Budget Range options:", budgetOptions);
     } else {
       console.warn("⚠️ 'Budget Range' property not found in database schema");
     }
 
-    console.log("✅ Returning schema options:", {
-      serviceOptions,
-      budgetOptions,
-    });
     return { serviceOptions, budgetOptions };
   } catch (error) {
     console.error(
