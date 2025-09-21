@@ -1,12 +1,14 @@
-import { getPlaylistItems, getChannelDetails } from "./apiClient";
+import { getPlaylistItems } from "./apiClient";
 
 declare const __VITE_YOUTUBE_API_KEY__: string;
 declare const __VITE_YOUTUBE_CHANNEL_ID__: string;
-declare const __VITE_YOUTUBE_PLAYLIST_ID__: string;
+declare const __VITE_YOUTUBE_UPLOADS_PLAYLIST_ID__: string;
+declare const __VITE_YOUTUBE_PODCAST_PLAYLIST_ID__: string;
 
 const API_KEY = __VITE_YOUTUBE_API_KEY__;
 const CHANNEL_ID = __VITE_YOUTUBE_CHANNEL_ID__;
-const PODCAST_PLAYLIST_ID = __VITE_YOUTUBE_PLAYLIST_ID__;
+const PODCAST_PLAYLIST_ID = __VITE_YOUTUBE_PODCAST_PLAYLIST_ID__;
+const UPLOADS_PLAYLIST_ID = __VITE_YOUTUBE_UPLOADS_PLAYLIST_ID__;
 
 interface Video {
   id: string;
@@ -18,14 +20,14 @@ interface Video {
 
 const formatPublishTime = (dateTime: string): string => {
   const options: Intl.DateTimeFormatOptions = {
-    year: 'numeric',
-    month: 'short',
-    day: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit',
+    year: "numeric",
+    month: "short",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
     hour12: true,
   };
-  return new Intl.DateTimeFormat('en-US', options).format(new Date(dateTime));
+  return new Intl.DateTimeFormat("en-US", options).format(new Date(dateTime));
 };
 
 const mapVideos = (items: any[]): Video[] => {
@@ -38,54 +40,48 @@ const mapVideos = (items: any[]): Video[] => {
   }));
 };
 
-async function fetchPublicVideosFromPlaylist(playlistId: string, maxResults: number): Promise<any[]> {
-    const items = await getPlaylistItems(API_KEY, playlistId, maxResults);
-    return items.filter(
-      (item: any) => item.status.privacyStatus === 'public'
+async function fetchPublicVideosFromPlaylist(
+  playlistId: string,
+  maxResults: number
+): Promise<any[]> {
+  const items = await getPlaylistItems(API_KEY, playlistId, maxResults);
+  return items.filter((item: any) => item.status.privacyStatus === "public");
+}
+
+export const fetchAndSplitVideos = async (): Promise<{
+  channelVideos: Video[];
+  podcastVideos: Video[];
+}> => {
+  try {
+    const [uploadedVideoItems, podcastVideoItems] = await Promise.all([
+      fetchPublicVideosFromPlaylist(UPLOADS_PLAYLIST_ID, 50),
+      fetchPublicVideosFromPlaylist(PODCAST_PLAYLIST_ID, 50),
+    ]);
+
+    const podcastVideoIds = new Set(
+      podcastVideoItems.map((item) => item.snippet.resourceId.videoId)
     );
-}
 
-async function getUploadsPlaylistId(): Promise<string> {
-    const data = await getChannelDetails(API_KEY, CHANNEL_ID);
-    if (data.items.length > 0) {
-        return data.items[0].contentDetails.relatedPlaylists.uploads;
-    }
-    throw new Error("Could not find uploads playlist for the channel.");
-}
+    const channelVideoItems = uploadedVideoItems.filter(
+      (item) => !podcastVideoIds.has(item.snippet.resourceId.videoId)
+    );
 
-export const fetchAndSplitVideos = async (): Promise<{ channelVideos: Video[], podcastVideos: Video[] }> => {
+    const podcastVideos = mapVideos(podcastVideoItems);
+    const channelVideos = mapVideos(channelVideoItems);
 
-    try {
-        const uploadsPlaylistId = await getUploadsPlaylistId();
-
-        const [uploadedVideoItems, podcastVideoItems] = await Promise.all([
-            fetchPublicVideosFromPlaylist(uploadsPlaylistId, 50),
-            fetchPublicVideosFromPlaylist(PODCAST_PLAYLIST_ID, 50)
-        ]);
-
-        const podcastVideoIds = new Set(podcastVideoItems.map(item => item.snippet.resourceId.videoId));
-
-        const channelVideoItems = uploadedVideoItems.filter(
-            item => !podcastVideoIds.has(item.snippet.resourceId.videoId)
-        );
-        
-        const podcastVideos = mapVideos(podcastVideoItems);
-        const channelVideos = mapVideos(channelVideoItems);
-
-        return { channelVideos, podcastVideos };
-
-    } catch (error) {
-        console.error("Failed to fetch and split YouTube videos:", error);
-        throw error;
-    }
+    return { channelVideos, podcastVideos };
+  } catch (error) {
+    console.error("Failed to fetch and split YouTube videos:", error);
+    throw error;
+  }
 };
 
 export const fetchChannelVideos = async (maxResults = 4): Promise<Video[]> => {
-    const { channelVideos } = await fetchAndSplitVideos();
-    return channelVideos.slice(0, maxResults);
+  const { channelVideos } = await fetchAndSplitVideos();
+  return channelVideos.slice(0, maxResults);
 };
 
 export const fetchPodcastVideos = async (maxResults = 10): Promise<Video[]> => {
-    const { podcastVideos } = await fetchAndSplitVideos();
-    return podcastVideos.slice(0, maxResults);
+  const { podcastVideos } = await fetchAndSplitVideos();
+  return podcastVideos.slice(0, maxResults);
 };
