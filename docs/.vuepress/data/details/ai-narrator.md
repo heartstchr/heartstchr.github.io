@@ -27,6 +27,17 @@ As a completely **free AI voice generator**, AI Narrator offers professional tex
 - Custom voice instructions for tone and style (e.g., "Speak energetically for a YouTube video" or "Use a calm, instructional tone for teaching").
 - Audio playback with controls and option to save WAV files to Google Drive in "AI Narrator" folder - easy export for video editing or sharing lessons.
 
+<div style="display: flex; gap: 20px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 300px;">
+    <img src="/img/projects/ai-narrator/male-voices.webp" alt="AI Narrator Male Voice Options" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+    <p style="text-align: center; margin-top: 10px; font-size: 14px; color: #666;">Male Voice Options</p>
+  </div>
+  <div style="flex: 1; min-width: 300px;">
+    <img src="/img/projects/ai-narrator/female-voices.webp" alt="AI Narrator Female Voice Options" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+    <p style="text-align: center; margin-top: 10px; font-size: 14px; color: #666;">Female Voice Options</p>
+  </div>
+</div>
+
 ### 2. Document Analysis with AI
 - **AI Doc Review**: Get comprehensive analysis of your document's structure, content, style, and effectiveness.
 - Actionable recommendations for improvements, writing techniques, and content optimization.
