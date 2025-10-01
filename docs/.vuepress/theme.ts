@@ -29,6 +29,12 @@ export default hopeTheme(
                     <a href="/contact/"> Contact </a>
                   </div>
                 </div>
+                <div class="flex md:flex-row flex-column justify-content-center flex-grow-1 my-2 align-item-center gap-4">
+                  <div class="flex flex-row justify-content-center align-items-center gap-4">
+                    <a href="/privacy-policy/"> Privacy Policy </a>
+                    <a href="/terms-of-service/"> Terms of Service </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

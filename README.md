@@ -48,3 +48,10 @@ This is a professional portfolio website for **Jiwan Ghosal**, a full-stack free
 ## 🎯 Unique Value Proposition
 
 "Stack Seekers" is a full-stack development partner specializing in MERN/MEVN stacks, helping startups and businesses turn ideas into powerful digital products. The portfolio demonstrates both technical capability and business understanding.
+
+## 📋 Legal & Compliance
+
+- **Privacy Policy:** Comprehensive data protection and privacy practices
+- **Terms of Service:** Clear terms and conditions for all services
+- **GDPR/CCPA Compliant:** Adheres to international privacy regulations
+- **Transparent Communication:** Clear policies on data collection, usage, and protection

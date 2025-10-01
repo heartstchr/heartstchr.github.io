@@ -52,7 +52,7 @@ project:
     <div class="col-12 pt-4">
       <link itemprop="applicationCategory" :href="$frontmatter.project.schema" />
       <div class="flex md:flex-row flex-column justify-content-center align-items-center gap-2 my-4 w-full max-w-96">
-        <a v-if="$frontmatter.project.contact" :href="`https://wa.me/917026217029?text=Hi%20there%2C%20I'm%20interested%20in%20a%20custom%20code%20solution%20for%Tech Create`" target="_blank"
+        <a v-if="$frontmatter.project.contact" :href="`${$frontmatter.project.contact}${$frontmatter.project.name}`" target="_blank"
           class="flex flex-row no-underline w-full">
           <Button label="Get Custom Request" icon="pi pi-inbox" severity="secondary" raised rounded class="w-full" />
         </a>

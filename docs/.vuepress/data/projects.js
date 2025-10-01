@@ -1,6 +1,69 @@
 import { toKebabCase } from "../utils/index.js";
 
 export const freelance = [
+{
+    name: "AI Narrator",
+    description:
+      "Transform your Google Docs into high-quality audio with AI-powered text-to-speech. A Google Docs add-on that creates natural-sounding voiceovers for YouTubers, teachers, writers, and content creators - completely free with your own API key.",
+    software: "Google Docs Add-on",
+    org: "Stack Lab",
+    year: "2025",
+    domain: "AI & Content Creation",
+    schema: "https://schema.org/WebApplication",
+    link: "https://ainarrator.stackseekers.com/",
+    contact: "mailto:jiwan.cse@gmail.com?subject=AI Narrator Inquiry",
+    stack: [
+      "javascript",
+      "googleappsscript",
+      "googledocs",
+      "googledrive",
+      "html5",
+      "css",
+      "json/black/white",
+    ],
+    otherSkills: [
+      "AI Integration",
+      "Document Processing",
+      "API Development",
+    ],
+    features: [
+      {
+        text: "Smart Document Analysis: AI-powered review of document structure, word choice, and engagement factors",
+      },
+      {
+        text: "25+ Professional AI Voices: Choose from diverse voice options with detailed descriptions for different content types",
+      },
+      {
+        text: "Real-time Voice Preview: Test selected text with instant browser playback before full generation",
+      },
+      {
+        text: "Custom Voice Instructions: Add pronunciation guides and tone settings for brand names and proper nouns",
+      },
+      {
+        text: "Multi-language Support: Generate audio in different languages for global content reach",
+      },
+      {
+        text: "Smart Text Processing: Automatically converts bullets, tables, and complex formatting into natural speech",
+      },
+      {
+        text: "Flexible Audio Generation: Create full document audio or regenerate specific sections as needed",
+      },
+      {
+        text: "Seamless Integration: Works directly within Google Docs with a clean, modern sidebar interface",
+      },
+    ],
+     images: [
+       {
+         itemImageSrc: "/img/projects/ai-narrator/Google-docs-text-to-speech-ai-voice-ai-audio.webp",
+         alt: "AI Narrator Google Docs Add-on Interface",
+       },
+       {
+         itemImageSrc: "/img/projects/ai-narrator/app-screenshot.webp",
+         alt: "AI Narrator Application Screenshot",
+       },
+     ],
+     details: "./details/ai-narrator.md",
+  },
   {
     name: "Service Request System",
     description:
@@ -1243,6 +1306,20 @@ export const freelance = [
 ];
 
 const baseProjects = [
+  {
+    name: "AI Narrator",
+    schema: "https://schema.org/WebApplication",
+    images: [
+      {
+        itemImageSrc: "/img/projects/ai-narrator/Google-docs-text-to-speech-ai-voice-ai-audio.webp",
+        alt: "AI Narrator Google Docs Add-on Interface",
+      },
+      {
+        itemImageSrc: "/img/projects/ai-narrator/app-screenshot.webp",
+        alt: "AI Narrator Application Screenshot",
+      }
+    ],
+  },
   {
     name: "Service Request System",
     schema: "https://schema.org/WebApplication",
