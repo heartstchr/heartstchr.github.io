@@ -10,7 +10,7 @@ export const freelance = [
     year: "2025",
     domain: "Database Management & No-Code",
     schema: "https://schema.org/WebApplication",
-    link: "https://notion-crud.stackseekers.com/",
+    link: "https://notion-crud.netlify.app/",
     contact: "mailto:jiwan.cse@gmail.com?subject=Notion CRUD App Inquiry",
     stack: [
       "javascript",
@@ -57,12 +57,20 @@ export const freelance = [
     ],
     images: [
       {
-        itemImageSrc: "/img/projects/notion-crud-app/15.png",
+        itemImageSrc: "/img/projects/notion-crud-app/Notion-crud-app-free.webp",
         alt: "Dynamic Form Generation from Notion Database",
       },
       {
-        itemImageSrc: "/img/projects/notion-crud-app/14.png",
+        itemImageSrc: "/img/projects/notion-crud-app/CRUD-app-free.webp",
         alt: "CRUD App Free Interface",
+      },
+      {
+        itemImageSrc: "/img/projects/notion-crud-app/edit-talent-pool.webp",
+        alt: "Edit Talent Pool Interface",
+      },
+      {
+        itemImageSrc: "/img/projects/notion-crud-app/home-page.webp",
+        alt: "Dynamic CRUD App Home Page",
       },
     ],
     details: "./details/notion-crud.md",
@@ -1377,13 +1385,9 @@ const baseProjects = [
     schema: "https://schema.org/WebApplication",
     images: [
       {
-        itemImageSrc: "/img/projects/notion-crud-app/15.png",
+        itemImageSrc: "/img/projects/notion-crud-app/Notion-crud-app-free.webp",
         alt: "Dynamic Form Generation from Notion Database",
-      },
-      {
-        itemImageSrc: "/img/projects/notion-crud-app/14.png",
-        alt: "CRUD App Free Interface",
-      },
+      }
     ],
   },
   {

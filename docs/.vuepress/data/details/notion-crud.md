@@ -1,32 +1,21 @@
 # Notion Web App - Simple Setup Guide
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/7a42be49-638d-48bf-a7fc-7b1bacc4b0d0/deploy-status)](https://app.netlify.com/sites/7a42be49-638d-48bf-a7fc-7b1bacc4b0d0/deploys)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Notion](https://img.shields.io/badge/Notion-000000?style=flat&logo=notion&logoColor=white)](https://notion.so)
-
 Turn your Notion database into a professional website in just a few steps! This guide will help you create a beautiful, responsive web application from any Notion database without any coding knowledge.
 
 ## 🎥 **Video Tutorial**
 
 **Watch the complete setup process:**
 
-[![Notion Web App Setup Tutorial](https://img.youtube.com/vi/SpFH3XrxoTY/0.jpg)](https://www.youtube.com/watch?v=SpFH3XrxoTY)
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000;">
+     <iframe 
+       src="https://www.youtube.com/embed/SpFH3XrxoTY" 
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+       frameborder="0" 
+       allowfullscreen
+       title="Notion Web App Setup Tutorial- CRUD app">
+     </iframe>
+</div>
 
 > **📺 Video Guide**: Follow along with our step-by-step video tutorial that shows the entire process from start to finish. Perfect for visual learners!
-
-## 📋 Table of Contents
-
-- [Video Tutorial](#-video-tutorial)
-- [What This Does](#what-this-does)
-- [What You Get](#what-you-get)
-- [What You Need](#what-you-need)
-- [Step-by-Step Setup](#step-by-step-setup)
-- [You're Done!](#youre-done-)
-- [How It Works](#how-it-works)
-- [Common Questions](#common-questions)
-- [Troubleshooting](#troubleshooting)
-- [What Happens Next](#what-happens-next)
-- [Need Help?](#need-help)
 
 ## What This Does
 
@@ -56,7 +45,8 @@ Before you start, make sure you have:
 
 1. **A Notion account** (free) - [Sign up here](https://notion.so)
 2. **A Netlify account** (free) - [Sign up here](https://app.netlify.com)
-3. **Your Notion database** (the one you want to turn into a website)
+3. **Your Notion database** (the one you want to turn into a web app)
+<iframe src="https://stackseekers.notion.site/ebd/25d30c0a61cd809e99b8f04ff79fe712?v=25d30c0a61cd80abb8b6000ca5bfa1a5" width="100%" height="600" frameborder="0" allowfullscreen />
 4. **About 30 minutes** to complete the setup
 
 > **💡 Pro Tip**: If you don't have a Notion database yet, you can create one or duplicate an existing template to get started quickly!
@@ -86,8 +76,8 @@ Before you start, make sure you have:
 9. **Copy the database ID** from the URL:
    - Look at your Notion database URL
    - Copy the long string of letters and numbers after the last slash
-   - Example: `https://notion.so/workspace/a1b2c3d4-e5f6-7890-...`
-   - The ID is: `a1b2c3d4-e5f6-7890-...`
+   - Example: `https://www.notion.so/stackseekers/25d30c0a61cd809e99b8f04ff79fe712?v=25d30c0a61cd80abb8b6000ca5bfa1a5`
+   - The ID is: `25d30c0a61cd809e99b8f04ff79fe712`
 
 **Note**: If you don't see a "Duplicate" button on a shared link, ask the owner to share the database with you first.
 
@@ -123,7 +113,7 @@ Deploy your website using Netlify's free hosting service:
 6. **Click**: "Deploy site"
 7. **Wait** for deployment to complete (usually 2-3 minutes)
 
-> **🚀 Deployment Tip**: Netlify will automatically build and deploy your website. You'll get a unique URL like `https://amazing-app-123456.netlify.app`
+> **🚀 Deployment Tip**: Netlify will automatically build and deploy your website. You'll get a unique URL like `https://notion-crud.netlify.app/`
 
 ### Step 4: Connect Your Notion Database
 
@@ -211,7 +201,7 @@ Understanding the magic behind your new website:
 **Solutions**:
 
 - ✅ Make sure you added the environment variables correctly in Netlify
-- ✅ Check that the token starts with `secret_`
+- ✅ Check that the token starts with `ntn_`
 - ✅ Redeploy your site after adding the variables
 - ✅ Verify the token is copied completely (no extra spaces)
 
@@ -281,7 +271,7 @@ If you're still having issues, here are some resources:
 
 - [Notion API Documentation](https://developers.notion.com/) - Official Notion API guide
 - [Netlify Documentation](https://docs.netlify.com/) - Netlify hosting and deployment guide
-- [GitHub Issues](https://github.com/your-repo/issues) - Report bugs or ask questions
+- [GitHub Issues](https://github.com/stackseekers/notion-crud) - Report bugs or ask questions
 
 ### 💬 **Getting Support**
 

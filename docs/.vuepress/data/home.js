@@ -20,7 +20,7 @@ export const orgs = [
   {
     title: "YIT",
     icon: "/img/home/yitlogo.png",
-    details: "constructing housing, business premises, infrastructure",
+    details: "constructing infrastructure",
     link: "https://www.yitgroup.com/en",
   },
   {
@@ -32,7 +32,7 @@ export const orgs = [
   {
     title: "Capgemini",
     icon: "/img/home/capgemini.webp",
-    details: "Consulting and technology services",
+    details: "Consulting IT services",
     link: "https://www.capgemini.com/",
   },
   {
