@@ -1,8 +1,74 @@
 import { toKebabCase } from "../utils/index.js";
 
 export const freelance = [
-{
-    name: "AI Narrator",
+  {
+    name: "Dynamic CRUD App Free",
+    description:
+      "Transform your Notion database into a professional web application in minutes. Automatically reads your Notion structure and creates beautiful, responsive interfaces with intelligent forms, search, and multi-language support - completely free and no-code required.",
+    software: "Web Application",
+    org: "Stack Lab",
+    year: "2025",
+    domain: "Database Management & No-Code",
+    schema: "https://schema.org/WebApplication",
+    link: "https://notion-crud.stackseekers.com/",
+    contact: "mailto:jiwan.cse@gmail.com?subject=Notion CRUD App Inquiry",
+    stack: [
+      "javascript",
+      "vuedotjs",
+      "notion/black/white",
+      "html5",
+      "css",
+      "json/black/white",
+      "netlify",
+      "github/black/white",
+    ],
+    otherSkills: [
+      "No-Code Development",
+      "Database Integration",
+      "Dynamic Form Generation",
+      "Multi-language Support",
+      "Responsive Design",
+    ],
+    features: [
+      {
+        text: "Intelligent Schema Detection: Automatically reads and adapts to your Notion database structure in real-time",
+      },
+      {
+        text: "Dynamic Form Generation: Creates perfect forms based on field types - text, email, phone, dates, dropdowns, checkboxes",
+      },
+      {
+        text: "Professional Interface: Clean, modern design with card and table views that work on any device",
+      },
+      {
+        text: "Smart Search & Filtering: Intelligent search across all field types with automatic filter toggles for yes/no fields",
+      },
+      {
+        text: "Enterprise Safety: Confirmation dialogs for deletions, pre-loaded edit forms, and validation to prevent data loss",
+      },
+      {
+        text: "Multi-language Support: Works in any language with automatic currency formatting (USD, EUR, JPY, etc.)",
+      },
+      {
+        text: "Privacy Controls: Mark fields as '(Private)' in Notion to automatically mask sensitive information",
+      },
+      {
+        text: "Real-time Updates: Interface automatically updates when you modify your Notion database structure",
+      },
+    ],
+    images: [
+      {
+        itemImageSrc: "/img/projects/notion-crud-app/15.png",
+        alt: "Dynamic Form Generation from Notion Database",
+      },
+      {
+        itemImageSrc: "/img/projects/notion-crud-app/14.png",
+        alt: "CRUD App Free Interface",
+      },
+    ],
+    details: "./details/notion-crud.md",
+  },
+  {
+    name: "AI Voice Generator",
     description:
       "Transform your Google Docs into high-quality audio with AI-powered text-to-speech. A Google Docs add-on that creates natural-sounding voiceovers for YouTubers, teachers, writers, and content creators - completely free with your own API key.",
     software: "Google Docs Add-on",
@@ -1307,7 +1373,21 @@ export const freelance = [
 
 const baseProjects = [
   {
-    name: "AI Narrator",
+    name: "Dynamic CRUD App Free",
+    schema: "https://schema.org/WebApplication",
+    images: [
+      {
+        itemImageSrc: "/img/projects/notion-crud-app/15.png",
+        alt: "Dynamic Form Generation from Notion Database",
+      },
+      {
+        itemImageSrc: "/img/projects/notion-crud-app/14.png",
+        alt: "CRUD App Free Interface",
+      },
+    ],
+  },
+  {
+    name: "AI voice generator",
     schema: "https://schema.org/WebApplication",
     images: [
       {
