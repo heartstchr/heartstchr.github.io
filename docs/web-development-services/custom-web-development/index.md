@@ -9,6 +9,8 @@ service:
   descriptions: ["I design responsive and visually stunning custom web application optimized for performance and user experience.","Whether you need a simple landing page or a <a href='/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/'>complex web application</a>, I have the expertise to bring your vision to life."]
   icon: "googlechrome"
   code: "custom-web-development"
+  previousService: {"name":"Consulting","link":"/web-development-services/consulting-and-technical-advisory/"}
+  nextService: {"name":"API","link":"/web-development-services/API-development-and-integration/"}
 ---
 <div class="shadow-1 col-12 p-0 overflow-hidden" itemscope itemtype="https://schema.org/SoftwareApplication">
     <div class="px-4 m-2">
@@ -27,4 +29,31 @@ service:
           </a>
         </div>
     </div>
+</div>
+
+<div class="flex justify-content-between align-items-center mt-6 pt-4 border-top-1 surface-border">
+  <div class="flex-1">
+    <a v-if="$frontmatter.service.previousService" :href="$frontmatter.service.previousService.link" class="flex align-items-center no-underline text-color-secondary hover:text-primary">
+      <i class="pi pi-chevron-left mr-2"></i>
+      <div class="flex flex-column">
+        <span class="text-sm text-color-secondary">Previous Service</span>
+        <span class="font-semibold">{{ $frontmatter.service.previousService.name }}</span>
+      </div>
+    </a>
+  </div>
+  <div class="flex-1 text-center">
+    <a href="/web-development-services/" class="no-underline text-color-secondary hover:text-primary">
+      <i class="pi pi-th-large mr-2"></i>
+      All Services
+    </a>
+  </div>
+  <div class="flex-1 text-right">
+    <a v-if="$frontmatter.service.nextService" :href="$frontmatter.service.nextService.link" class="flex align-items-center justify-content-end no-underline text-color-secondary hover:text-primary">
+      <div class="flex flex-column text-right">
+        <span class="text-sm text-color-secondary">Next Service</span>
+        <span class="font-semibold">{{ $frontmatter.service.nextService.name }}</span>
+      </div>
+      <i class="pi pi-chevron-right ml-2"></i>
+    </a>
+  </div>
 </div>

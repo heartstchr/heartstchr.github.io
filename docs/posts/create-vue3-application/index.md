@@ -103,4 +103,6 @@ Follow these steps to create a Vue 3 application, customize its content, and deb
 3. For production, disable Vue Devtools in `vite.config.js` by commenting out the Devtools plugin to prevent exposure.
 
 ### conclusion
-That’s it! You now have a Vue 3 application scaffolded with Vue CLI, ready for customization and debugging. Stay tuned for more Vue 3 tips and tricks to elevate your web development skills!
+That's it! You now have a Vue 3 application scaffolded with Vue CLI, ready for customization and debugging. Stay tuned for more Vue 3 tips and tricks to elevate your web development skills!
+
+<BlogNavigation />

@@ -19,6 +19,8 @@ project:
   images: [{"itemImageSrc":"/img/home/projects/ABN_Amro_design_system.webp","alt":"Cover screen for Emerald Design System project page"},{"itemImageSrc":"/img/projects/abn/emerald_home.webp","alt":"Emerald Design System Home Page"},{"itemImageSrc":"/img/projects/abn/emerald_storybook.webp","alt":"Emerald Design System Storybook"}]
   features: [{"text":"Responsive Design: Seamless experience across devices."},{"text":"Component-Based Architecture: Efficient and scalable codebase."},{"text":"Modern UI/UX: Clean aesthetics with intuitive navigation."},{"text":"API Integration: Robust connectivity with external services using Axios."},{"text":"Modular Development: Leverages Webpack for optimized, modular builds."},{"text":"Code Quality Assurance: Enforced by ESLint and Prettier for consistent, error-free code."},{"text":"Version Control: Streamlined collaboration via Git and Bitbucket."}]
   details: ""
+  previousProject: {"name":"IBRebuild for ABN AMRO BANK N.V.","link":"/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/"}
+  nextProject: {"name":"Tech Create","link":"/web-development-projects/tech-create/"}
 ---
 <div>
   <div class="col-12">
@@ -80,6 +82,33 @@ project:
 </div>
 
 
+
+<div class="flex justify-content-between align-items-center mt-6 pt-4 border-top-1 surface-border">
+  <div class="flex-1">
+    <a v-if="$frontmatter.project.previousProject" :href="$frontmatter.project.previousProject.link" class="flex align-items-center no-underline text-color-secondary hover:text-primary">
+      <i class="pi pi-chevron-left mr-2"></i>
+      <div class="flex flex-column">
+        <span class="text-sm text-color-secondary">Previous Project</span>
+        <span class="font-semibold">{{ $frontmatter.project.previousProject.name }}</span>
+      </div>
+    </a>
+  </div>
+  <div class="flex-1 text-center">
+    <a href="/web-development-projects/" class="no-underline text-color-secondary hover:text-primary">
+      <i class="pi pi-th-large mr-2"></i>
+      All Projects
+    </a>
+  </div>
+  <div class="flex-1 text-right">
+    <a v-if="$frontmatter.project.nextProject" :href="$frontmatter.project.nextProject.link" class="flex align-items-center justify-content-end no-underline text-color-secondary hover:text-primary">
+      <div class="flex flex-column text-right">
+        <span class="text-sm text-color-secondary">Next Project</span>
+        <span class="font-semibold">{{ $frontmatter.project.nextProject.name }}</span>
+      </div>
+      <i class="pi pi-chevron-right ml-2"></i>
+    </a>
+  </div>
+</div>
 
 <script setup>
 import { responsiveOptions } from "@data/responsive.js"

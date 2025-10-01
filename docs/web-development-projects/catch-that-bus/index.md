@@ -19,6 +19,8 @@ project:
   images: [{"itemImageSrc":"/img/projects/catchthatbus.webp","alt":"Book Malaysia and Singapore bus tickets online. | CatchThatBus"},{"itemImageSrc":"https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/ad/b9/3b/adb93b8f-08b6-ac23-8f9e-906f7b2529c2/pr_source.png/230x0w.png","alt":"IOS app for booking Malaysia and Singapore bus tickets online | CatchThatBus"}]
   features: [{"text":"Search for a bus by choosing from the destination and to the destination in Malaysia for dates."},{"text":"Sort and filter on available buses"},{"text":"Seat visualization of a bus"},{"text":"Booking system to handle concurrent requests"},{"text":"Discount system based on coupon code"},{"text":"Insurance integration for travellers"},{"text":"Payment system using wallets and cards"},{"text":"Webview for Boost wallet"},{"text":"Multiple language support"},{"text":"Multiple Currency support"},{"text":"Bus Booked history"},{"text":"Bus onboarding system for admin and bus operator"}]
   details: ""
+  previousProject: {"name":"Trokka Attraction","link":"/web-development-projects/trokka-attraction/"}
+  nextProject: {"name":"Partner Dashboard Upstox","link":"/web-development-projects/partner-dashboard-upstox/"}
 ---
 <div>
   <div class="col-12">
@@ -80,6 +82,33 @@ project:
 </div>
 
 
+
+<div class="flex justify-content-between align-items-center mt-6 pt-4 border-top-1 surface-border">
+  <div class="flex-1">
+    <a v-if="$frontmatter.project.previousProject" :href="$frontmatter.project.previousProject.link" class="flex align-items-center no-underline text-color-secondary hover:text-primary">
+      <i class="pi pi-chevron-left mr-2"></i>
+      <div class="flex flex-column">
+        <span class="text-sm text-color-secondary">Previous Project</span>
+        <span class="font-semibold">{{ $frontmatter.project.previousProject.name }}</span>
+      </div>
+    </a>
+  </div>
+  <div class="flex-1 text-center">
+    <a href="/web-development-projects/" class="no-underline text-color-secondary hover:text-primary">
+      <i class="pi pi-th-large mr-2"></i>
+      All Projects
+    </a>
+  </div>
+  <div class="flex-1 text-right">
+    <a v-if="$frontmatter.project.nextProject" :href="$frontmatter.project.nextProject.link" class="flex align-items-center justify-content-end no-underline text-color-secondary hover:text-primary">
+      <div class="flex flex-column text-right">
+        <span class="text-sm text-color-secondary">Next Project</span>
+        <span class="font-semibold">{{ $frontmatter.project.nextProject.name }}</span>
+      </div>
+      <i class="pi pi-chevron-right ml-2"></i>
+    </a>
+  </div>
+</div>
 
 <script setup>
 import { responsiveOptions } from "@data/responsive.js"

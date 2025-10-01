@@ -101,4 +101,6 @@ Adopt these habits for a professional Git workflow:
 
 ## Conclusion
 
-Cleaning up local Git branches that no longer exist on the remote is a simple way to maintain an organized development environment. The improved Bash script makes this process safe and efficient, with an exclusion list to protect critical branches. Combine this with the bonus tips, visual tools, and best practices to optimize your Git workflow. Whether you’re a solo developer or part of a team, these techniques will save time and reduce errors.
+Cleaning up local Git branches that no longer exist on the remote is a simple way to maintain an organized development environment. The improved Bash script makes this process safe and efficient, with an exclusion list to protect critical branches. Combine this with the bonus tips, visual tools, and best practices to optimize your Git workflow. Whether you're a solo developer or part of a team, these techniques will save time and reduce errors.
+
+<BlogNavigation />

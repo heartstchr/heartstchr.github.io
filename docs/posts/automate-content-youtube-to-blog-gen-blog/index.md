@@ -89,3 +89,5 @@ Ready to automate your content? Here’s how to set up GEN-BLOG:
 GEN-BLOG takes the hassle out of repurposing YouTube videos into blog posts, blending AI power with Node.js simplicity. Whether you’re a content creator looking to grow your blog or a developer seeking automation tools, it’s worth a try. Share your thoughts in the comments, and let me know how it works for you!
 
 For more tips on content automation, subscribe to my YouTube channel and stay tuned for future tutorials.
+
+<BlogNavigation />

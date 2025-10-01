@@ -87,3 +87,5 @@ Accessible design makes your site welcoming and brain-friendly for all users.
 CSS isn’t just about aesthetics—it’s about creating an experience that’s easy on the eyes and the brain. By optimizing **typography**, **color contrast**, **white space**, **visual hierarchy**, **layout design**, **focus**, and **accessibility**, you can craft a website that users love and remember. Start implementing these 7 CSS techniques today to boost engagement, improve readability, and leave a lasting impression.
 
 **Ready to elevate your web design?** Share your favorite CSS tips in the comments or check out our [YouTube video](https://www.youtube.com/watch?v=8rYCgrrbHqk) for a deeper dive into brain-friendly web design!
+
+<BlogNavigation />

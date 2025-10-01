@@ -9,6 +9,8 @@ service:
   descriptions: ["I specialize in designing and optimizing CI/CD pipelines to streamline your software delivery process. Utilizing tools like Jenkins, GitLab CI, <a href='https://github.com/heartstchr/heartstchr.github.io/actions/workflows/vuepress-deploy.yml' target='_blank'>Github Actions</a> I automate builds, tests, and deployments for faster, more reliable releases.","My expertise in scripting and Infrastructure as Code (IaC) enhances efficiency and scalability, allowing your development team to focus on innovation. Whether you're starting from scratch or refining existing workflows, I deliver tailored solutions that boost productivity and quality in your software projects."]
   icon: "yaml"
   code: "ci-cd"
+  previousService: {"name":"API","link":"/web-development-services/API-development-and-integration/"}
+  nextService: {"name":"Hosting","link":"/web-development-services/hosting/"}
 ---
 <div class="shadow-1 col-12 p-0 overflow-hidden" itemscope itemtype="https://schema.org/SoftwareApplication">
     <div class="px-4 m-2">
@@ -27,4 +29,31 @@ service:
           </a>
         </div>
     </div>
+</div>
+
+<div class="flex justify-content-between align-items-center mt-6 pt-4 border-top-1 surface-border">
+  <div class="flex-1">
+    <a v-if="$frontmatter.service.previousService" :href="$frontmatter.service.previousService.link" class="flex align-items-center no-underline text-color-secondary hover:text-primary">
+      <i class="pi pi-chevron-left mr-2"></i>
+      <div class="flex flex-column">
+        <span class="text-sm text-color-secondary">Previous Service</span>
+        <span class="font-semibold">{{ $frontmatter.service.previousService.name }}</span>
+      </div>
+    </a>
+  </div>
+  <div class="flex-1 text-center">
+    <a href="/web-development-services/" class="no-underline text-color-secondary hover:text-primary">
+      <i class="pi pi-th-large mr-2"></i>
+      All Services
+    </a>
+  </div>
+  <div class="flex-1 text-right">
+    <a v-if="$frontmatter.service.nextService" :href="$frontmatter.service.nextService.link" class="flex align-items-center justify-content-end no-underline text-color-secondary hover:text-primary">
+      <div class="flex flex-column text-right">
+        <span class="text-sm text-color-secondary">Next Service</span>
+        <span class="font-semibold">{{ $frontmatter.service.nextService.name }}</span>
+      </div>
+      <i class="pi pi-chevron-right ml-2"></i>
+    </a>
+  </div>
 </div>

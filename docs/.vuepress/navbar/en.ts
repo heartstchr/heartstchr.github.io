@@ -14,31 +14,31 @@ export const enNavbar = navbar([
     children: [
       {
         text: "Figma to web",
-        link: "web-development-services/#figma-to-web",
+        link: "/web-development-services/figma-to-web/",
       },
       {
         text: "E-commerce",
-        link: "web-development-services/#e-commerce-solutions",
+        link: "/web-development-services/e-commerce-solutions/",
       },
       {
         text: "Consulting",
-        link: "web-development-services/#consulting-and-technical-advisory",
+        link: "/web-development-services/consulting-and-technical-advisory/",
       },
       {
         text: "Web Development",
-        link: "web-development-services/#custom-web-development",
+        link: "/web-development-services/custom-web-development/",
       },
       {
         text: "API Development",
-        link: "web-development-services/#API-development-and-integration",
+        link: "/web-development-services/api-development-and-integration/",
       },
       {
         text: "CICD",
-        link: "web-development-services/#cicd",
+        link: "/web-development-services/ci-cd/",
       },
       {
         text: "Hosting",
-        link: "web-development-services/#hosting",
+        link: "/web-development-services/hosting/",
       },
       {
         text: "Other",

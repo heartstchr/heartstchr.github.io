@@ -19,6 +19,8 @@ project:
   images: [{"itemImageSrc":"/img/projects/callmatrix/callmatrix.webp","alt":"CallMatrix - Call Intelligence, Marketing, and Analytics Platform"},{"itemImageSrc":"/img/projects/callmatrix/mobistreak.webp","alt":"CallMatrix - Call Intelligence, Marketing, and Analytics Platform"}]
   features: [{"text":"Create a campaign for the call"},{"text":"Create a bundle of campaigns for the call"},{"text":"Buy local & toll-free numbers"},{"text":"Call Recording and Off-Hour Call Handling"},{"text":"Funnel to redirect the call based on the multi-level IVR"},{"text":"Report of bundle, CDR, and offer based on hour, week, and geo location"},{"text":"Dashboard to get a birds-eye view"},{"text":"Google AdWords API integration"},{"text":"User authorization based on role"}]
   details: ""
+  previousProject: {"name":"Demat Account Open","link":"/web-development-projects/demat-account-open/"}
+  nextProject: {"name":"Command Line Dictionary","link":"/web-development-projects/command-line-dictionary/"}
 ---
 <div>
   <div class="col-12">
@@ -80,6 +82,33 @@ project:
 </div>
 
 
+
+<div class="flex justify-content-between align-items-center mt-6 pt-4 border-top-1 surface-border">
+  <div class="flex-1">
+    <a v-if="$frontmatter.project.previousProject" :href="$frontmatter.project.previousProject.link" class="flex align-items-center no-underline text-color-secondary hover:text-primary">
+      <i class="pi pi-chevron-left mr-2"></i>
+      <div class="flex flex-column">
+        <span class="text-sm text-color-secondary">Previous Project</span>
+        <span class="font-semibold">{{ $frontmatter.project.previousProject.name }}</span>
+      </div>
+    </a>
+  </div>
+  <div class="flex-1 text-center">
+    <a href="/web-development-projects/" class="no-underline text-color-secondary hover:text-primary">
+      <i class="pi pi-th-large mr-2"></i>
+      All Projects
+    </a>
+  </div>
+  <div class="flex-1 text-right">
+    <a v-if="$frontmatter.project.nextProject" :href="$frontmatter.project.nextProject.link" class="flex align-items-center justify-content-end no-underline text-color-secondary hover:text-primary">
+      <div class="flex flex-column text-right">
+        <span class="text-sm text-color-secondary">Next Project</span>
+        <span class="font-semibold">{{ $frontmatter.project.nextProject.name }}</span>
+      </div>
+      <i class="pi pi-chevron-right ml-2"></i>
+    </a>
+  </div>
+</div>
 
 <script setup>
 import { responsiveOptions } from "@data/responsive.js"

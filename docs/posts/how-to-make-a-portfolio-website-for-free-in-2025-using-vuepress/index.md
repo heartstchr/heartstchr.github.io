@@ -113,3 +113,5 @@ The `ProjectCard` component displays project details in a card layout, styled wi
   import { toKebabCase } from "@utils";
 </script>
 
+<BlogNavigation />
+

@@ -19,6 +19,8 @@ project:
   images: [{"itemImageSrc":"/img/projects/stocks.webp","alt":"Consuming socket data and plotting a real-time D3 graph"}]
   features: [{"text":"Show realtime charts of a unit"},{"text":"Show history of a unit in charts"}]
   details: ""
+  previousProject: {"name":"Command Line Dictionary","link":"/web-development-projects/command-line-dictionary/"}
+  nextProject: null
 ---
 <div>
   <div class="col-12">
@@ -80,6 +82,33 @@ project:
 </div>
 
 
+
+<div class="flex justify-content-between align-items-center mt-6 pt-4 border-top-1 surface-border">
+  <div class="flex-1">
+    <a v-if="$frontmatter.project.previousProject" :href="$frontmatter.project.previousProject.link" class="flex align-items-center no-underline text-color-secondary hover:text-primary">
+      <i class="pi pi-chevron-left mr-2"></i>
+      <div class="flex flex-column">
+        <span class="text-sm text-color-secondary">Previous Project</span>
+        <span class="font-semibold">{{ $frontmatter.project.previousProject.name }}</span>
+      </div>
+    </a>
+  </div>
+  <div class="flex-1 text-center">
+    <a href="/web-development-projects/" class="no-underline text-color-secondary hover:text-primary">
+      <i class="pi pi-th-large mr-2"></i>
+      All Projects
+    </a>
+  </div>
+  <div class="flex-1 text-right">
+    <a v-if="$frontmatter.project.nextProject" :href="$frontmatter.project.nextProject.link" class="flex align-items-center justify-content-end no-underline text-color-secondary hover:text-primary">
+      <div class="flex flex-column text-right">
+        <span class="text-sm text-color-secondary">Next Project</span>
+        <span class="font-semibold">{{ $frontmatter.project.nextProject.name }}</span>
+      </div>
+      <i class="pi pi-chevron-right ml-2"></i>
+    </a>
+  </div>
+</div>
 
 <script setup>
 import { responsiveOptions } from "@data/responsive.js"

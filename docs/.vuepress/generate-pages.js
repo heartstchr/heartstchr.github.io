@@ -34,8 +34,20 @@ const readMarkdownContent = (detailsPath) => {
 };
 
 // Template for project pages
-const projectTemplate = (project) => {
+const projectTemplate = (project, projectIndex, allProjects) => {
   const markdownContent = readMarkdownContent(project.details);
+  
+  // Get previous and next project info
+  const previousProject = projectIndex > 0 ? {
+    name: allProjects[projectIndex - 1].name,
+    link: `/web-development-projects/${toKebabCase(allProjects[projectIndex - 1].name)}/`
+  } : null;
+  
+  const nextProject = projectIndex < allProjects.length - 1 ? {
+    name: allProjects[projectIndex + 1].name,
+    link: `/web-development-projects/${toKebabCase(allProjects[projectIndex + 1].name)}/`
+  } : null;
+  
   return `---
 title: ${project.name}
 description: ${project.description}
@@ -57,6 +69,8 @@ project:
   images: ${JSON.stringify(project.images)}
   features: ${JSON.stringify(project.features) || []}
   details: ${JSON.stringify(markdownContent)}
+  previousProject: ${JSON.stringify(previousProject)}
+  nextProject: ${JSON.stringify(nextProject)}
 ---
 <div>
   <div class="col-12">
@@ -119,13 +133,52 @@ project:
 
 ${markdownContent}
 
+<div class="flex justify-content-between align-items-center mt-6 pt-4 border-top-1 surface-border">
+  <div class="flex-1">
+    <a v-if="$frontmatter.project.previousProject" :href="$frontmatter.project.previousProject.link" class="flex align-items-center no-underline text-color-secondary hover:text-primary">
+      <i class="pi pi-chevron-left mr-2"></i>
+      <div class="flex flex-column">
+        <span class="text-sm text-color-secondary">Previous Project</span>
+        <span class="font-semibold">{{ $frontmatter.project.previousProject.name }}</span>
+      </div>
+    </a>
+  </div>
+  <div class="flex-1 text-center">
+    <a href="/web-development-projects/" class="no-underline text-color-secondary hover:text-primary">
+      <i class="pi pi-th-large mr-2"></i>
+      All Projects
+    </a>
+  </div>
+  <div class="flex-1 text-right">
+    <a v-if="$frontmatter.project.nextProject" :href="$frontmatter.project.nextProject.link" class="flex align-items-center justify-content-end no-underline text-color-secondary hover:text-primary">
+      <div class="flex flex-column text-right">
+        <span class="text-sm text-color-secondary">Next Project</span>
+        <span class="font-semibold">{{ $frontmatter.project.nextProject.name }}</span>
+      </div>
+      <i class="pi pi-chevron-right ml-2"></i>
+    </a>
+  </div>
+</div>
+
 <script setup>
 import { responsiveOptions } from "@data/responsive.js"
 </script>`;
 };
 
 // Template for service pages
-const serviceTemplate = (service) => `---
+const serviceTemplate = (service, serviceIndex, allServices) => {
+  // Get previous and next service info
+  const previousService = serviceIndex > 0 ? {
+    name: allServices[serviceIndex - 1].name,
+    link: `/web-development-services/${allServices[serviceIndex - 1].code}/`
+  } : null;
+  
+  const nextService = serviceIndex < allServices.length - 1 ? {
+    name: allServices[serviceIndex + 1].name,
+    link: `/web-development-services/${allServices[serviceIndex + 1].code}/`
+  } : null;
+  
+  return `---
 title: ${service.name}
 lastUpdated: false
 editLink: false
@@ -136,6 +189,8 @@ service:
   descriptions: ${JSON.stringify(service.descriptions)}
   icon: ${JSON.stringify(service.icon)}
   code: ${JSON.stringify(service.code)}
+  previousService: ${JSON.stringify(previousService)}
+  nextService: ${JSON.stringify(nextService)}
 ---
 <div class="shadow-1 col-12 p-0 overflow-hidden" itemscope itemtype="https://schema.org/SoftwareApplication">
     <div class="px-4 m-2">
@@ -155,14 +210,42 @@ service:
         </div>
     </div>
 </div>
+
+<div class="flex justify-content-between align-items-center mt-6 pt-4 border-top-1 surface-border">
+  <div class="flex-1">
+    <a v-if="$frontmatter.service.previousService" :href="$frontmatter.service.previousService.link" class="flex align-items-center no-underline text-color-secondary hover:text-primary">
+      <i class="pi pi-chevron-left mr-2"></i>
+      <div class="flex flex-column">
+        <span class="text-sm text-color-secondary">Previous Service</span>
+        <span class="font-semibold">{{ $frontmatter.service.previousService.name }}</span>
+      </div>
+    </a>
+  </div>
+  <div class="flex-1 text-center">
+    <a href="/web-development-services/" class="no-underline text-color-secondary hover:text-primary">
+      <i class="pi pi-th-large mr-2"></i>
+      All Services
+    </a>
+  </div>
+  <div class="flex-1 text-right">
+    <a v-if="$frontmatter.service.nextService" :href="$frontmatter.service.nextService.link" class="flex align-items-center justify-content-end no-underline text-color-secondary hover:text-primary">
+      <div class="flex flex-column text-right">
+        <span class="text-sm text-color-secondary">Next Service</span>
+        <span class="font-semibold">{{ $frontmatter.service.nextService.name }}</span>
+      </div>
+      <i class="pi pi-chevron-right ml-2"></i>
+    </a>
+  </div>
+</div>
 `;
+};
 
 // Function to generate pages
 const generatePages = (data, outputDir, slug, templateFn) => {
   ensureDirectoryExists(outputDir);
 
-  data.forEach((item) => {
-    const content = templateFn(item);
+  data.forEach((item, index) => {
+    const content = templateFn(item, index, data);
     const dirPath = path.join(outputDir, toKebabCase(item[slug])); // Directory path
     const filePath = path.join(dirPath, "index.md"); // File path
 

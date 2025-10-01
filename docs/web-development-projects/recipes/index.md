@@ -19,6 +19,8 @@ project:
   images: [{"itemImageSrc":"/img/home/projects/Recipe.webp","alt":"Recipes - Login page"},{"itemImageSrc":"/img/projects/recipe/login.webp","alt":"Recipes - Login page"},{"itemImageSrc":"/img/projects/recipe/register.webp","alt":"Recipes - Registration page"},{"itemImageSrc":"/img/projects/recipe/home.webp","alt":"Recipes - Home page"},{"itemImageSrc":"/img/projects/recipe/direction.webp","alt":"Recipes - Directions page"},{"itemImageSrc":"/img/projects/recipe/ingredients.webp","alt":"Recipes - Ingredients page"},{"itemImageSrc":"/img/projects/recipe/addrecipe.webp","alt":"Recipes - Add Recipe page"},{"itemImageSrc":"/img/projects/recipe/search.webp","alt":"Recipes - Search page"},{"itemImageSrc":"/img/projects/recipe/share.webp","alt":"Recipes - Share screen"}]
   features: [{"text":"Authentication with Incognigo pool"},{"text":"Create and Share recipes with friends"},{"text":"Search recipes"},{"text":"List and share your recipes direction or ingradients"},{"text":"Rate and review for recipe"}]
   details: ""
+  previousProject: {"name":"Qatar Airways widget","link":"/web-development-projects/qatar-airways-widget/"}
+  nextProject: {"name":"Frontend of Tv Maze API","link":"/web-development-projects/frontend-of-tv-maze-api/"}
 ---
 <div>
   <div class="col-12">
@@ -80,6 +82,33 @@ project:
 </div>
 
 
+
+<div class="flex justify-content-between align-items-center mt-6 pt-4 border-top-1 surface-border">
+  <div class="flex-1">
+    <a v-if="$frontmatter.project.previousProject" :href="$frontmatter.project.previousProject.link" class="flex align-items-center no-underline text-color-secondary hover:text-primary">
+      <i class="pi pi-chevron-left mr-2"></i>
+      <div class="flex flex-column">
+        <span class="text-sm text-color-secondary">Previous Project</span>
+        <span class="font-semibold">{{ $frontmatter.project.previousProject.name }}</span>
+      </div>
+    </a>
+  </div>
+  <div class="flex-1 text-center">
+    <a href="/web-development-projects/" class="no-underline text-color-secondary hover:text-primary">
+      <i class="pi pi-th-large mr-2"></i>
+      All Projects
+    </a>
+  </div>
+  <div class="flex-1 text-right">
+    <a v-if="$frontmatter.project.nextProject" :href="$frontmatter.project.nextProject.link" class="flex align-items-center justify-content-end no-underline text-color-secondary hover:text-primary">
+      <div class="flex flex-column text-right">
+        <span class="text-sm text-color-secondary">Next Project</span>
+        <span class="font-semibold">{{ $frontmatter.project.nextProject.name }}</span>
+      </div>
+      <i class="pi pi-chevron-right ml-2"></i>
+    </a>
+  </div>
+</div>
 
 <script setup>
 import { responsiveOptions } from "@data/responsive.js"

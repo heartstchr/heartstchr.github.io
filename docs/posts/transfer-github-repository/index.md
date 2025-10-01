@@ -72,4 +72,6 @@ Follow these steps to transfer a GitHub repository to an organization, clone it 
    code .
    ```
 2. Verify that all files, including the `.git` folder, are present in the project directory.
-3. You’re now ready to edit, commit, and push changes to the organization’s repository.
+3. You're now ready to edit, commit, and push changes to the organization's repository.
+
+<BlogNavigation />

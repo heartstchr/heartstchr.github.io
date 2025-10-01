@@ -3,7 +3,7 @@
         <div class="flex flex-row gap-2 align-items-center justify-content-start text-900" v-if="date">
             <i class="pi pi-calendar mr-2"></i>
             {{ new Date(date).toLocaleDateString('en-US', {
-            month: 'short', day: 'numeric', year: 'numeric'
+                month: 'short', day: 'numeric', year: 'numeric'
             }) }}
         </div>
         <div class="flex flex-row gap-2 flex-wrap md:justify-content-start justify-content-center">
@@ -16,7 +16,7 @@
 <script setup>
 defineProps({
     date: {
-        type: Date,
+        type: [Date, String],
         required: false
     },
     category: {

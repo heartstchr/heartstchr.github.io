@@ -9,6 +9,8 @@ service:
   descriptions: ["Turn your Figma designs into fully functional, dynamic websites with my expertise. Leveraging the power of VueJS, ReactJS, and their robust ecosystems, I create <a href='/web-development-projects/sr-22-insurance-now/'> innovative websites</a> tailored precisely to your requirements.","My solutions are fully customizable and reusable, ensuring they align perfectly with your vision, while remaining exceptionally lightweight for optimal performance."]
   icon: "figma"
   code: "figma-to-web"
+  previousService: null
+  nextService: {"name":"E-commerce","link":"/web-development-services/e-commerce-solutions/"}
 ---
 <div class="shadow-1 col-12 p-0 overflow-hidden" itemscope itemtype="https://schema.org/SoftwareApplication">
     <div class="px-4 m-2">
@@ -27,4 +29,31 @@ service:
           </a>
         </div>
     </div>
+</div>
+
+<div class="flex justify-content-between align-items-center mt-6 pt-4 border-top-1 surface-border">
+  <div class="flex-1">
+    <a v-if="$frontmatter.service.previousService" :href="$frontmatter.service.previousService.link" class="flex align-items-center no-underline text-color-secondary hover:text-primary">
+      <i class="pi pi-chevron-left mr-2"></i>
+      <div class="flex flex-column">
+        <span class="text-sm text-color-secondary">Previous Service</span>
+        <span class="font-semibold">{{ $frontmatter.service.previousService.name }}</span>
+      </div>
+    </a>
+  </div>
+  <div class="flex-1 text-center">
+    <a href="/web-development-services/" class="no-underline text-color-secondary hover:text-primary">
+      <i class="pi pi-th-large mr-2"></i>
+      All Services
+    </a>
+  </div>
+  <div class="flex-1 text-right">
+    <a v-if="$frontmatter.service.nextService" :href="$frontmatter.service.nextService.link" class="flex align-items-center justify-content-end no-underline text-color-secondary hover:text-primary">
+      <div class="flex flex-column text-right">
+        <span class="text-sm text-color-secondary">Next Service</span>
+        <span class="font-semibold">{{ $frontmatter.service.nextService.name }}</span>
+      </div>
+      <i class="pi pi-chevron-right ml-2"></i>
+    </a>
+  </div>
 </div>
