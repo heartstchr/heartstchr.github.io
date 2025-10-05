@@ -549,7 +549,7 @@ The main content file (493KB) contains:
       <i class="pi pi-chevron-left mr-2"></i>
       <div class="flex flex-column">
         <span class="text-sm text-color-secondary">Previous Project</span>
-        <span class="font-semibold">{{ $frontmatter.project.previousProject.name }}</span>
+        <span class="font-semibold" style="color: var(--theme-color)">{{ $frontmatter.project.previousProject.name }}</span>
       </div>
     </a>
   </div>
@@ -563,7 +563,7 @@ The main content file (493KB) contains:
     <a v-if="$frontmatter.project.nextProject" :href="$frontmatter.project.nextProject.link" class="flex align-items-center justify-content-end no-underline text-color-secondary hover:text-primary">
       <div class="flex flex-column text-right">
         <span class="text-sm text-color-secondary">Next Project</span>
-        <span class="font-semibold">{{ $frontmatter.project.nextProject.name }}</span>
+        <span class="font-semibold" style="color: var(--theme-color)">{{ $frontmatter.project.nextProject.name }}</span>
       </div>
       <i class="pi pi-chevron-right ml-2"></i>
     </a>

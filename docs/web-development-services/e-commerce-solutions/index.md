@@ -37,7 +37,7 @@ service:
       <i class="pi pi-chevron-left mr-2"></i>
       <div class="flex flex-column">
         <span class="text-sm text-color-secondary">Previous Service</span>
-        <span class="font-semibold">{{ $frontmatter.service.previousService.name }}</span>
+        <span class="font-semibold" style="color: var(--theme-color)">{{ $frontmatter.service.previousService.name }}</span>
       </div>
     </a>
   </div>
@@ -51,7 +51,7 @@ service:
     <a v-if="$frontmatter.service.nextService" :href="$frontmatter.service.nextService.link" class="flex align-items-center justify-content-end no-underline text-color-secondary hover:text-primary">
       <div class="flex flex-column text-right">
         <span class="text-sm text-color-secondary">Next Service</span>
-        <span class="font-semibold">{{ $frontmatter.service.nextService.name }}</span>
+        <span class="font-semibold" style="color: var(--theme-color)">{{ $frontmatter.service.nextService.name }}</span>
       </div>
       <i class="pi pi-chevron-right ml-2"></i>
     </a>
