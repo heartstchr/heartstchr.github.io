@@ -6,7 +6,7 @@
                 <i class="pi pi-chevron-left mr-2"></i>
                 <div class="flex flex-column">
                     <span class="text-sm text-color-secondary">Previous Post</span>
-                    <span class="font-semibold">{{ previousPost.title }}</span>
+                    <span class="font-semibold" style="color: var(--theme-color)">{{ previousPost.title }}</span>
                 </div>
             </a>
         </div>
@@ -21,7 +21,7 @@
                 class="flex align-items-center justify-content-end no-underline text-color-secondary hover:text-primary">
                 <div class="flex flex-column text-right">
                     <span class="text-sm text-color-secondary">Next Post</span>
-                    <span class="font-semibold">{{ nextPost.title }}</span>
+                    <span class="font-semibold" style="color: var(--theme-color)">{{ nextPost.title }}</span>
                 </div>
                 <i class="pi pi-chevron-right ml-2"></i>
             </a>

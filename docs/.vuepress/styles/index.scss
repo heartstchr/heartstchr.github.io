@@ -7,6 +7,20 @@
 body {
   font-family: "Inter", sans-serif;
 }
+/* Green headings for all pages with markdown content */
+.vp-page #markdown-content h1, 
+.vp-page #markdown-content h2, 
+.vp-page #markdown-content h3 {
+  color: var(--theme-color) !important;
+}
+
+/* Exclude home page */
+.vp-page.vp-project-home #markdown-content h1, 
+.vp-page.vp-project-home #markdown-content h2, 
+.vp-page.vp-project-home #markdown-content h3 {
+  color: inherit !important;
+}
+
 h2 {
   padding-bottom: 1rem;
   border: 0;
