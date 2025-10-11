@@ -2,6 +2,89 @@ import { toKebabCase } from "../utils/index.js";
 
 export const freelance = [
   {
+    name: "AI-Powered Influencer Platform - Vibe3",
+    description:
+      "A cutting-edge AI-powered influencer marketing platform built with modern frontend technologies. Features a sophisticated React-based user interface that connects content creators with premium brands through intelligent matching algorithms. Built as a Progressive Web App (PWA) with Web3 integration, delivering seamless user experience across all devices.",
+    software: "Progressive Web App",
+    org: "VibeSquad",
+    year: "2025",
+    domain: "Web3 & Influencer Marketing",
+    schema: "https://schema.org/WebApplication",
+    link: "https://vibe3.vibesquad.co",
+    contact: "mailto:hello@vibe3.vibesquad.co?subject=Vibe3 Platform Inquiry",
+    stack: [
+      "nextdotjs/black/white",
+      "react",
+      "typescript",
+      "tailwindcss",
+      "pwa",
+      "nodedotjs",
+      "mongodb",
+      "github/black/white",
+      "solana",
+      "ton",
+    ],
+    otherSkills: [
+      "React Component Architecture",
+      "Responsive Design Excellence",
+      "Modern UI/UX Design",
+      "PWA Development",
+      "Web3 Frontend Integration",
+      "Interactive Dashboards",
+      "Mobile-First Design",
+      "Performance Optimization",
+    ],
+    features: [
+      {
+        text: "Responsive Design Excellence: Built with mobile-first approach using Tailwind CSS v4 with adaptive layouts, custom glass-morphism effects, and cyber-themed animations for premium UX",
+      },
+      {
+        text: "Modern UI/UX Design: Cyberpunk-inspired design system with neon accents, custom gradient animations, floating elements, glass-effect components with backdrop blur, and responsive grid layouts",
+      },
+      {
+        text: "AI-Powered Matching System: Intelligent brand-influencer matching algorithm analyzing audience engagement patterns and content style with compatibility scoring system showing 94% match rates",
+      },
+      {
+        text: "Progressive Web App (PWA): Full PWA implementation with service workers, install prompts for mobile and desktop, offline capabilities, and custom manifest with shortcuts to Dashboard and Campaigns",
+      },
+    ],
+    images: [
+      {
+        itemImageSrc: "/img/projects/vibesquade/vibe3-platform-overview.png",
+        alt: "Vibe3 Modern React-Based User Interface",
+      },
+      {
+        itemImageSrc: "/img/projects/vibesquade/creator-dashboard.png",
+        alt: "Vibe3 Interactive Creator Dashboard with Real-time Analytics",
+      },
+      {
+        itemImageSrc: "/img/projects/vibesquade/campaign-management.png",
+        alt: "Vibe3 Campaign Management Interface with Drag-and-Drop Features",
+      },
+      {
+        itemImageSrc: "/img/projects/vibesquade/web3-payments.png",
+        alt: "Vibe3 Web3 Wallet Integration UI Components",
+      },
+      {
+        itemImageSrc: "/img/projects/vibesquade/ai-matching.png",
+        alt: "Vibe3 AI-Powered Creator Matching Interface",
+      },
+      {
+        itemImageSrc: "/img/projects/vibesquade/pwa-mobile.png",
+        alt: "Vibe3 PWA Mobile User Experience",
+      },
+      {
+        itemImageSrc: "/img/projects/vibesquade/user-profile-management.png",
+        alt: "Vibe3 User Profile Management Interface",
+      },
+      {
+        itemImageSrc: "/img/projects/vibesquade/earnings-calculator.png",
+        alt: "Vibe3 Earnings Calculator Interface",
+      },
+    ],
+    details: "./details/vibesquade.md",
+  },
+  {
     name: "Dynamic CRUD App Free",
     description:
       "Transform your Notion database into a professional web application in minutes. Automatically reads your Notion structure and creates beautiful, responsive interfaces with intelligent forms, search, and multi-language support - completely free and no-code required.",
@@ -1380,6 +1463,16 @@ export const freelance = [
 ];
 
 const baseProjects = [
+  {
+    name: "AI-Powered Influencer Platform - Vibe3",
+    schema: "https://schema.org/WebApplication",
+    images: [
+      {
+        itemImageSrc: "/img/projects/vibesquade/vibesquade-cover.png",
+        alt: "Vibe3 Figma to Web Design - Desktop and Mobile Interface",
+      },
+    ],
+  },
   {
     name: "Dynamic CRUD App Free",
     schema: "https://schema.org/WebApplication",

@@ -126,7 +126,7 @@ project:
     <li v-for="feature in $frontmatter.project.features" :key="feature.text"
       class="flex flex-row align-content-center line-height-3">
       <i class="pi pi-verified m-2 bg-primary" alt="arrow" style="font-size: 1rem;"></i>
-      <h4 class="m-2 text-sm" v-html="feature.text"></h4>
+      <h4 class="m-2 text-sm line-height-3" v-html="feature.text"></h4>
     </li>
   </ul>
 </div>
