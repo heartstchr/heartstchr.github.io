@@ -50,35 +50,35 @@ export const freelance = [
     ],
     images: [
       {
-        itemImageSrc: "/img/projects/vibesquade/vibe3-platform-overview.png",
+        itemImageSrc: "/img/projects/vibesquade/vibe3-platform-overview.webp",
         alt: "Vibe3 Modern React-Based User Interface",
       },
       {
-        itemImageSrc: "/img/projects/vibesquade/creator-dashboard.png",
+        itemImageSrc: "/img/projects/vibesquade/creator-dashboard.webp",
         alt: "Vibe3 Interactive Creator Dashboard with Real-time Analytics",
       },
       {
-        itemImageSrc: "/img/projects/vibesquade/campaign-management.png",
+        itemImageSrc: "/img/projects/vibesquade/campaign-management.webp",
         alt: "Vibe3 Campaign Management Interface with Drag-and-Drop Features",
       },
       {
-        itemImageSrc: "/img/projects/vibesquade/web3-payments.png",
+        itemImageSrc: "/img/projects/vibesquade/web3-payments.webp",
         alt: "Vibe3 Web3 Wallet Integration UI Components",
       },
       {
-        itemImageSrc: "/img/projects/vibesquade/ai-matching.png",
+        itemImageSrc: "/img/projects/vibesquade/ai-matching.webp",
         alt: "Vibe3 AI-Powered Creator Matching Interface",
       },
       {
-        itemImageSrc: "/img/projects/vibesquade/pwa-mobile.png",
+        itemImageSrc: "/img/projects/vibesquade/pwa-mobile.webp",
         alt: "Vibe3 PWA Mobile User Experience",
       },
       {
-        itemImageSrc: "/img/projects/vibesquade/user-profile-management.png",
+        itemImageSrc: "/img/projects/vibesquade/user-profile-management.webp",
         alt: "Vibe3 User Profile Management Interface",
       },
       {
-        itemImageSrc: "/img/projects/vibesquade/earnings-calculator.png",
+        itemImageSrc: "/img/projects/vibesquade/earnings-calculator.webp",
         alt: "Vibe3 Earnings Calculator Interface",
       },
     ],
@@ -1468,7 +1468,7 @@ const baseProjects = [
     schema: "https://schema.org/WebApplication",
     images: [
       {
-        itemImageSrc: "/img/projects/vibesquade/vibesquade-cover.png",
+        itemImageSrc: "/img/projects/vibesquade/vibesquade-cover.webp",
         alt: "Vibe3 Figma to Web Design - Desktop and Mobile Interface",
       },
     ],
