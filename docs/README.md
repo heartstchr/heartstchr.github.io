@@ -56,10 +56,10 @@ copyright: false
 </section>
 
 <div class="my-6">
-  <div class="text-center pb-4">
-    <div class="text-4xl font-bold"><h2>Scaling startups <div class="text-4xl font-bold bg-primary">Elevating industry giants</div></h2></div>
-    <div class="my-4 text-xl line-height-2">I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development.</div>
-  </div>
+  <!-- <div class="text-center"> -->
+    <div class="text-4xl font-bold sr-only"><h2>Scaling startups <div class="text-4xl font-bold bg-primary">Elevating industry giants</div></h2></div>
+    <!-- <div class="text-xl line-height-2">I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development.</div>
+  </div> -->
   <div class="my-4 marquee">
     <div class="marquee-track">
       <div class="border-round-md flex align-items-center justify-content-center marquee-item" v-for="org in orgs" :key="`org-1-${org.title}`">
@@ -73,9 +73,9 @@ copyright: false
           </div>
         </div>
       </div>
-      <div class="border-round-md md:p-2 md:m-2 vp-feature-item flex align-items-center justify-content-center marquee-item" v-for="org in orgs" :key="`org-2-${org.title}`" aria-hidden="true">
+      <div class="border-round-md flex align-items-center justify-content-center marquee-item" v-for="org in orgs" :key="`org-2-${org.title}`" aria-hidden="true">
         <div class="no-underline flex flex-column justify-content-center flex-wrap">
-          <div class="mb-2 flex align-items-center justify-content-center h-4rem">
+          <div class="flex align-items-center justify-content-center h-3rem">
             <img :src="org.icon" :alt="org.title" width="40px" height="40px" class="border-round-md" loading="eager" fetchpriority="high"/>
           </div>
           <div class="h-5rem">
@@ -91,7 +91,7 @@ copyright: false
 <div class="mt-6">
   <div class="text-center pb-4">
     <div class="text-4xl font-bold"><h2>Scalable Solutions for <div class="text-4xl font-bold bg-primary">Startups, Enterprises & Agencies</div></h2></div>
-    <div class="text-xl md:text-center line-height-3"> I’m Jiwan Ghosal, a senior JavaScript engineer specializing in React/Vue and Node on AWS/Azure. I help founders and teams ship fast, clean, and scalable software.</div>
+    <div class="text-xl md:text-center line-height-3"> I’m Jiwan Ghosal, a senior JavaScript engineer specializing in React/Vue and Node on AWS/Azure. I help founders and teams ship fast, clean, and scalable software. I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development.</div>
   </div>
   <div class="gallery gap-4">
     <div
