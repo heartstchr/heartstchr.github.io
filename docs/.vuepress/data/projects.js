@@ -209,17 +209,17 @@ export const freelance = [
         text: "Seamless Integration: Works directly within Google Docs with a clean, modern sidebar interface",
       },
     ],
-     images: [
-       {
-         itemImageSrc: "/img/projects/ai-narrator/Google-docs-text-to-speech-ai-voice-ai-audio.webp",
-         alt: "AI Narrator Google Docs Add-on Interface",
-       },
-       {
-         itemImageSrc: "/img/projects/ai-narrator/app-screenshot.webp",
-         alt: "AI Narrator Application Screenshot",
-       },
-     ],
-     details: "./details/ai-narrator.md",
+    images: [
+      {
+        itemImageSrc: "/img/projects/ai-narrator/Google-docs-text-to-speech-ai-voice-ai-audio.webp",
+        alt: "AI Narrator Google Docs Add-on Interface",
+      },
+      {
+        itemImageSrc: "/img/projects/ai-narrator/app-screenshot.webp",
+        alt: "AI Narrator Application Screenshot",
+      },
+    ],
+    details: "./details/ai-narrator.md",
   },
   {
     name: "Service Request System",
@@ -296,6 +296,80 @@ export const freelance = [
       },
     ],
     details: "./details/service-request.md",
+  },
+  {
+    name: "Contact Form Plugin",
+    description:
+      "A lightweight, embeddable contact form widget that can be integrated into any website and automatically forwards submissions to a Notion database. Generator-based architecture allowing multiple form configurations with various field combinations - completely free and easy to customize.",
+    software: "Widget",
+    org: "Stack Lab",
+    year: "2025",
+    domain: "Contact Forms & Lead Capture",
+    schema: "https://schema.org/WebApplication",
+    link: "https://contact-form-app.stackseekers.com/",
+    contact: "mailto:jiwan.cse@gmail.com?subject=Contact Form Plugin Inquiry",
+    stack: [
+      "javascript",
+      "notion/black/white",
+      "html5",
+      "css",
+      "netlify",
+      "json/black/white",
+      "github/black/white",
+    ],
+    otherSkills: [
+      "Serverless Functions",
+      "Widget Development",
+      "Embeddable Components",
+      "CAPTCHA Integration",
+      "Rate Limiting",
+      "Input Sanitization",
+    ],
+    features: [
+      {
+        text: "Generator-Based Architecture: Create unlimited form configurations with dynamic field combinations without code changes",
+      },
+      {
+        text: "Automatic Notion Integration: Form submissions instantly saved to your Notion database with structured properties",
+      },
+      {
+        text: "Security-First Design: Built-in rate limiting (5 req/min), CAPTCHA verification, input sanitization, and XSS protection",
+      },
+      {
+        text: "Easy Integration: Copy-paste one script tag to embed into any website - works across all platforms and frameworks",
+      },
+      {
+        text: "Flexible Field Types: Support for text, email, phone, website, select dropdowns, textarea, and checkbox fields",
+      },
+      {
+        text: "Customizable Styling: Full theme control with custom colors, fonts, border radius, and responsive max-width",
+      },
+      {
+        text: "Client & Server Validation: Comprehensive validation on both frontend and backend for data integrity",
+      },
+      {
+        text: "Privacy Protected: Rate limiting prevents spam while CAPTCHA blocks automated bot submissions",
+      },
+    ],
+    images: [
+      {
+        itemImageSrc: "/img/projects/contact-form-plugin/contact-form-widget-cover.webp",
+        alt: "Contact Form Plugin - Embeddable Contact Form",
+      },
+      {
+        itemImageSrc: "/img/projects/contact-form-plugin/business-contact-form-widget-cover.webp",
+        alt: "Contact Form Plugin - Business Contact Form",
+      },
+      {
+        itemImageSrc: "/img/projects/contact-form-plugin/simple-contact-form-widget.webp",
+        alt: "Contact Form Plugin - Simple Contact Form",
+      },
+      {
+        itemImageSrc: "/img/projects/contact-form-plugin/live-demo-contact-form-widget.webp",
+        alt: "Contact Form Plugin - Live Demo",
+      },
+    ],
+    details: "./details/contact-form-plugin.md",
   },
   {
     name: "Appliance Repair Service Platform",
@@ -397,7 +471,7 @@ export const freelance = [
       },
       {
         itemImageSrc: "/img/projects/appliance-repair/blog-post.webp",
-        alt: "Appliance Repair Service Platform - Blog post", 
+        alt: "Appliance Repair Service Platform - Blog post",
       },
       {
         itemImageSrc: "/img/projects/appliance-repair/blog.webp",
@@ -1463,16 +1537,16 @@ export const freelance = [
 ];
 
 const baseProjects = [
-  {
-    name: "AI-Powered Influencer Platform - Vibe3",
-    schema: "https://schema.org/WebApplication",
-    images: [
-      {
-        itemImageSrc: "/img/projects/vibesquade/vibesquade-cover.webp",
-        alt: "Vibe3 Figma to Web Design - Desktop and Mobile Interface",
-      },
-    ],
-  },
+  // {
+  //   name: "AI-Powered Influencer Platform - Vibe3",
+  //   schema: "https://schema.org/WebApplication",
+  //   images: [
+  //     {
+  //       itemImageSrc: "/img/projects/vibesquade/vibesquade-cover.webp",
+  //       alt: "Vibe3 Figma to Web Design - Desktop and Mobile Interface",
+  //     },
+  //   ],
+  // },
   {
     name: "Dynamic CRUD App Free",
     schema: "https://schema.org/WebApplication",
@@ -1508,6 +1582,16 @@ const baseProjects = [
     ],
   },
   {
+    name: "Contact Form Plugin",
+    schema: "https://schema.org/WebApplication",
+    images: [
+      {
+        itemImageSrc: "/img/projects/contact-form-plugin/contact-form-widget-cover.webp",
+        alt: "Contact Form Plugin - Embeddable Contact Form",
+      },
+    ],
+  },
+  {
     name: "Finding The Spots",
     description:
       "Say goodbye to the chaos of location scouting host, book, and create in our spaces effortlessly.",
@@ -1519,21 +1603,7 @@ const baseProjects = [
     link: "https://findingthespots.com/",
     contact:
       "https://wa.me/917026217029?text=Hi%20there%2C%20I'm%20interested%20in%20a%20custom%20code%20solution%20for%20",
-    stack: [
-      "Javascript",
-      "Vuedotjs",
-      "vite",
-      "Axios",
-      "Express/black/white",
-      "jsonwebtokens/black/white",
-      "stripe",
-      "nodedotjs",
-      "MongoDB",
-      "Git",
-      "github/black/white",
-      "Eslint",
-      "Prettier",
-    ],
+
     otherSkills: ["Pinia", "API integration"],
     images: [
       {
