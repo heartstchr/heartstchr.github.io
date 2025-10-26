@@ -393,3 +393,41 @@ fieldset {
   .hero-newage { padding: 1rem; }
   .orb { filter: blur(40px); opacity: 0.45; }
 }
+
+/* Match other pages #markdown-content width to home page - Desktop only */
+@media (min-width: 768px) {
+  /* VuePress Theme Hope home page uses ~64rem, other pages use ~100rem */
+  /* We're restricting other pages to match home page width and center it */
+  main.vp-page:not(.vp-project-home) {
+    max-width: 64rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  main.vp-page:not(.vp-project-home) > div[vp-content] {
+    max-width: 64rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative !important;
+  }
+
+  main.vp-page:not(.vp-project-home) #markdown-content,
+  main.vp-page:not(.vp-project-home) .vp-breadcrumb,
+  main.vp-page:not(.vp-project-home) .vp-page-title {
+    max-width: 64rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Make TOC fixed after scroll on other pages */
+  main.vp-page:not(.vp-project-home) .vp-toc-placeholder,
+  main.vp-page:not(.vp-project-home) aside.vp-toc,
+  main.vp-page:not(.vp-project-home) aside[aria-label] {
+    position: sticky !important;
+    top: 100px !important;
+    float: right !important;
+    margin-left: 2rem !important;
+    max-width: 15rem !important;
+    height: fit-content !important;
+  }
+}
