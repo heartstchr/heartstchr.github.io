@@ -1,7 +1,3 @@
-This project is a **lightweight, embeddable contact form widget** that can be integrated into any website and automatically forwards submissions to a Notion database. It's designed as a "generator" where different form configurations (generators) can be instantiated with various field combinations.
-
----
-
 ## Architecture Overview
 
 ### System Components
