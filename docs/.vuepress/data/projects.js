@@ -2,6 +2,80 @@ import { toKebabCase } from "../utils/index.js";
 
 export const freelance = [
   {
+    name: "Contact Form Plugin",
+    description:
+      "A lightweight, embeddable contact form widget that can be integrated into any website and automatically forwards submissions to a Notion database. Generator-based architecture allowing multiple form configurations with various field combinations - completely free and easy to customize.",
+    software: "Widget",
+    org: "Stack Lab",
+    year: "2025",
+    domain: "Contact Forms & Lead Capture",
+    schema: "https://schema.org/WebApplication",
+    link: "https://contact-form-app.stackseekers.com/",
+    contact: "mailto:jiwan.cse@gmail.com?subject=Contact Form Plugin Inquiry",
+    stack: [
+      "javascript",
+      "notion/black/white",
+      "html5",
+      "css",
+      "netlify",
+      "json/black/white",
+      "github/black/white",
+    ],
+    otherSkills: [
+      "Serverless Functions",
+      "Widget Development",
+      "Embeddable Components",
+      "CAPTCHA Integration",
+      "Rate Limiting",
+      "Input Sanitization",
+    ],
+    features: [
+      {
+        text: "Generator-Based Architecture: Create unlimited form configurations with dynamic field combinations without code changes",
+      },
+      {
+        text: "Automatic Notion Integration: Form submissions instantly saved to your Notion database with structured properties",
+      },
+      {
+        text: "Security-First Design: Built-in rate limiting (5 req/min), CAPTCHA verification, input sanitization, and XSS protection",
+      },
+      {
+        text: "Easy Integration: Copy-paste one script tag to embed into any website - works across all platforms and frameworks",
+      },
+      {
+        text: "Flexible Field Types: Support for text, email, phone, website, select dropdowns, textarea, and checkbox fields",
+      },
+      {
+        text: "Customizable Styling: Full theme control with custom colors, fonts, border radius, and responsive max-width",
+      },
+      {
+        text: "Client & Server Validation: Comprehensive validation on both frontend and backend for data integrity",
+      },
+      {
+        text: "Privacy Protected: Rate limiting prevents spam while CAPTCHA blocks automated bot submissions",
+      },
+    ],
+    images: [
+      {
+        itemImageSrc: "/img/projects/contact-form-plugin/contact-form-widget-cover.webp",
+        alt: "Contact Form Plugin - Embeddable Contact Form",
+      },
+      {
+        itemImageSrc: "/img/projects/contact-form-plugin/business-contact-form-widget-cover.webp",
+        alt: "Contact Form Plugin - Business Contact Form",
+      },
+      {
+        itemImageSrc: "/img/projects/contact-form-plugin/simple-contact-form-widget.webp",
+        alt: "Contact Form Plugin - Simple Contact Form",
+      },
+      {
+        itemImageSrc: "/img/projects/contact-form-plugin/live-demo-contact-form-widget.webp",
+        alt: "Contact Form Plugin - Live Demo",
+      },
+    ],
+    details: "./details/contact-form-plugin.md",
+  },
+  {
     name: "AI-Powered Influencer Platform - Vibe3",
     description:
       "A cutting-edge AI-powered influencer marketing platform built with modern frontend technologies. Features a sophisticated React-based user interface that connects content creators with premium brands through intelligent matching algorithms. Built as a Progressive Web App (PWA) with Web3 integration, delivering seamless user experience across all devices.",
@@ -296,80 +370,6 @@ export const freelance = [
       },
     ],
     details: "./details/service-request.md",
-  },
-  {
-    name: "Contact Form Plugin",
-    description:
-      "A lightweight, embeddable contact form widget that can be integrated into any website and automatically forwards submissions to a Notion database. Generator-based architecture allowing multiple form configurations with various field combinations - completely free and easy to customize.",
-    software: "Widget",
-    org: "Stack Lab",
-    year: "2025",
-    domain: "Contact Forms & Lead Capture",
-    schema: "https://schema.org/WebApplication",
-    link: "https://contact-form-app.stackseekers.com/",
-    contact: "mailto:jiwan.cse@gmail.com?subject=Contact Form Plugin Inquiry",
-    stack: [
-      "javascript",
-      "notion/black/white",
-      "html5",
-      "css",
-      "netlify",
-      "json/black/white",
-      "github/black/white",
-    ],
-    otherSkills: [
-      "Serverless Functions",
-      "Widget Development",
-      "Embeddable Components",
-      "CAPTCHA Integration",
-      "Rate Limiting",
-      "Input Sanitization",
-    ],
-    features: [
-      {
-        text: "Generator-Based Architecture: Create unlimited form configurations with dynamic field combinations without code changes",
-      },
-      {
-        text: "Automatic Notion Integration: Form submissions instantly saved to your Notion database with structured properties",
-      },
-      {
-        text: "Security-First Design: Built-in rate limiting (5 req/min), CAPTCHA verification, input sanitization, and XSS protection",
-      },
-      {
-        text: "Easy Integration: Copy-paste one script tag to embed into any website - works across all platforms and frameworks",
-      },
-      {
-        text: "Flexible Field Types: Support for text, email, phone, website, select dropdowns, textarea, and checkbox fields",
-      },
-      {
-        text: "Customizable Styling: Full theme control with custom colors, fonts, border radius, and responsive max-width",
-      },
-      {
-        text: "Client & Server Validation: Comprehensive validation on both frontend and backend for data integrity",
-      },
-      {
-        text: "Privacy Protected: Rate limiting prevents spam while CAPTCHA blocks automated bot submissions",
-      },
-    ],
-    images: [
-      {
-        itemImageSrc: "/img/projects/contact-form-plugin/contact-form-widget-cover.webp",
-        alt: "Contact Form Plugin - Embeddable Contact Form",
-      },
-      {
-        itemImageSrc: "/img/projects/contact-form-plugin/business-contact-form-widget-cover.webp",
-        alt: "Contact Form Plugin - Business Contact Form",
-      },
-      {
-        itemImageSrc: "/img/projects/contact-form-plugin/simple-contact-form-widget.webp",
-        alt: "Contact Form Plugin - Simple Contact Form",
-      },
-      {
-        itemImageSrc: "/img/projects/contact-form-plugin/live-demo-contact-form-widget.webp",
-        alt: "Contact Form Plugin - Live Demo",
-      },
-    ],
-    details: "./details/contact-form-plugin.md",
   },
   {
     name: "Appliance Repair Service Platform",
