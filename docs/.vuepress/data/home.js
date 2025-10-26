@@ -24,7 +24,7 @@ export const orgs = [
     link: "https://www.yitgroup.com/en",
   },
   {
-    title: "Abn Amro",
+    title: "ABN Amro",
     icon: "/img/home/abn-amro-logo.png",
     details: "Personal bank in the digital age",
     link: "https://www.abnamro.com/en/home",
