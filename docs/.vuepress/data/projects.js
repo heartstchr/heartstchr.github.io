@@ -85,7 +85,7 @@ export const freelance = [
     domain: "Web3 & Influencer Marketing",
     schema: "https://schema.org/WebApplication",
     link: "https://vibe3.vibesquad.co",
-    contact: "mailto:hello@vibe3.vibesquad.co?subject=Vibe3 Platform Inquiry",
+    contact: "mailto:jiwan.cse@gmail.com?subject=Vibe3 Platform Inquiry",
     stack: [
       "nextdotjs/black/white",
       "react",
