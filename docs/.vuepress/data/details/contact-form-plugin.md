@@ -3,39 +3,39 @@
 ### System Components
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                     USER'S WEBSITE                           │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │  contact-widget.js (Generator)                       │   │
+┌───────────────────────────────────────────────────────────┐
+│                     USER'S WEBSITE                        │
+│  ┌────────────────────────────────────────────────────┐   │
+│  │  contact-widget.js (Generator)                     │   │
 │  │  ┌─────────────────────────────────────────────┐   │   │
-│  │  │  ContactWidget Instance                      │   │   │
-│  │  │  - Configures form fields                    │   │   │
-│  │  │  - Generates HTML dynamically                │   │   │
-│  │  │  - Handles user interactions                 │   │   │
-│  │  │  - Validates inputs                          │   │   │
-│  │  │  - Sends data to backend                     │   │   │
+│  │  │  ContactWidget Instance                     │   │   │
+│  │  │  - Configures form fields                   │   │   │
+│  │  │  - Generates HTML dynamically               │   │   │
+│  │  │  - Handles user interactions                │   │   │
+│  │  │  - Validates inputs                         │   │   │
+│  │  │  - Sends data to backend                    │   │   │
 │  │  └─────────────────────────────────────────────┘   │   │
-│  └─────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────┘
+│  └────────────────────────────────────────────────────┘   │
+└───────────────────────────────────────────────────────────┘
                             │
                             │ HTTPS POST (JSON)
                             ▼
-┌─────────────────────────────────────────────────────────────┐
-│                     NETLIFY BACKEND                          │
+┌────────────────────────────────────────────────────────────┐
+│                     NETLIFY BACKEND                        │
 │  ┌─────────────────────────────────────────────────────┐   │
-│  │  /.netlify/functions/submit-contact                  │   │
+│  │  /.netlify/functions/submit-contact                 │   │
 │  │  - Rate limiting (5 req/min/IP)                     │   │
 │  │  - CAPTCHA verification                             │   │
 │  │  - Input sanitization                               │   │
 │  │  - Email validation                                 │   │
 │  │  - Notion API integration                           │   │
 │  └─────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────┘
+└────────────────────────────────────────────────────────────┘
                             │
                             │ Notion API
                             ▼
 ┌─────────────────────────────────────────────────────────────┐
-│                    NOTION DATABASE                           │
+│                   NOTION DATABASE                           │
 │  - Stores contact submissions                               │
 │  - Structured as database rows                              │
 └─────────────────────────────────────────────────────────────┘
