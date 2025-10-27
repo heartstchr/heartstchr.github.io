@@ -36,18 +36,18 @@ const readMarkdownContent = (detailsPath) => {
 // Template for project pages
 const projectTemplate = (project, projectIndex, allProjects) => {
   const markdownContent = readMarkdownContent(project.details);
-  
+
   // Get previous and next project info
   const previousProject = projectIndex > 0 ? {
     name: allProjects[projectIndex - 1].name,
     link: `/web-development-projects/${toKebabCase(allProjects[projectIndex - 1].name)}/`
   } : null;
-  
+
   const nextProject = projectIndex < allProjects.length - 1 ? {
     name: allProjects[projectIndex + 1].name,
     link: `/web-development-projects/${toKebabCase(allProjects[projectIndex + 1].name)}/`
   } : null;
-  
+
   return `---
 title: ${project.name}
 description: ${project.description}
@@ -104,7 +104,7 @@ project:
     <div class="col-12 pt-4">
       <link itemprop="applicationCategory" :href="$frontmatter.project.schema" />
       <div class="flex md:flex-row flex-column justify-content-center align-items-center gap-2 my-4 w-full max-w-96">
-        <a v-if="$frontmatter.project.contact" :href="\`\${$frontmatter.project.contact}\${$frontmatter.project.name}\`" target="_blank"
+        <a v-if="$frontmatter.project.contact" :href="\`/contact/?subject=\${encodeURIComponent('Custom Request: ' + $frontmatter.project.name)}\`"
           class="flex flex-row no-underline w-full">
           <Button label="Get Custom Request" icon="pi pi-inbox" severity="secondary" raised rounded class="w-full" />
         </a>
@@ -172,12 +172,12 @@ const serviceTemplate = (service, serviceIndex, allServices) => {
     name: allServices[serviceIndex - 1].name,
     link: `/web-development-services/${allServices[serviceIndex - 1].code}/`
   } : null;
-  
+
   const nextService = serviceIndex < allServices.length - 1 ? {
     name: allServices[serviceIndex + 1].name,
     link: `/web-development-services/${allServices[serviceIndex + 1].code}/`
   } : null;
-  
+
   return `---
 title: ${service.name}
 lastUpdated: false
@@ -204,9 +204,9 @@ service:
           <div itemprop="name" v-for= "(description, index) in $frontmatter.service.descriptions" >
             <div v-html="description"></div>
           </div>
-          <a :href="\`mailto:jiwan.cse@gmail.com?subject=Inquiry : $frontmatter.service.name Services\`" size="large" class="flex justify-content-center text-center no-underline mt-4" aria-label="Send an Email"> 
-            <Button label="Book Now!" icon="pi pi-briefcase" severity="primary" raised rounded />
-          </a>
+        <a :href="\`/contact/?subject=\${encodeURIComponent($frontmatter.service.name + ' Services')}\`" size="large" class="flex justify-content-center text-center no-underline mt-4" aria-label="Book Now"> 
+          <Button label="Book Now!" icon="pi pi-briefcase" severity="primary" raised rounded />
+        </a>
         </div>
     </div>
 </div>

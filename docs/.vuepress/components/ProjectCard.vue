@@ -8,7 +8,7 @@ defineProps({
         type: Object,
         required: true,
     },
-    showHeader:{
+    showHeader: {
         type: Boolean,
         default: false
     }
@@ -54,10 +54,11 @@ defineProps({
                                 <Button label="More details" icon="pi pi-info-circle" severity="secondary" raised
                                     rounded class="w-full mr-3" />
                             </a>
-                            <a v-if="project.contact" :href="`${project.contact} ${project.name}`" target="_blank"
+                            <a v-if="project.contact"
+                                :href="`/contact/?subject=${encodeURIComponent('Custom Request: ' + project.name)}`"
                                 class="flex flex-row no-underline w-full">
-                                <Button label="Get Custom Request" icon="pi pi-inbox" severity="secondary" raised rounded
-                                    class="w-full" />
+                                <Button label="Get Custom Request" icon="pi pi-inbox" severity="secondary" raised
+                                    rounded class="w-full" />
                             </a>
                             <a v-if="project.link" :href="project.link" target="_blank"
                                 class="flex flex-row no-underline w-full">

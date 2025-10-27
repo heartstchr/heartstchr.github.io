@@ -31,5 +31,5 @@
 </template>
 
 <script setup>
-    import { social } from "@data/social.js";
+import { social } from "@data/social.js";
 </script>

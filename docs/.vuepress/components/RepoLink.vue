@@ -8,5 +8,13 @@
             aria-label="GitHub Repository">
             <i class="pi pi-github text-xl"></i>
         </a>
+        <a class="vp-action-link" href="https://www.linkedin.com/in/jiwanghosal/details/recommendations/"
+            target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="pi pi-linkedin text-xl"></i>
+        </a>
+        <a class="vp-action-link" href="https://www.youtube.com/playlist?list=PLGK9Y5ibwm0-qWAUabrF387SEdcYzCL7s"
+            target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <i class="pi pi-youtube text-xl"></i>
+        </a>
     </div>
 </template>

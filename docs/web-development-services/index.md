@@ -34,7 +34,7 @@ copyright: false
                       <div itemprop="name" v-for= "(description, index) in service.descriptions" >
                         <div v-html="description"></div>
                       </div>
-                      <a :href="`mailto:jiwan.cse@gmail.com?subject=Inquiry : ${service.name} Services`" size="large" class="flex justify-content-center text-center no-underline mt-4" aria-label="Send an Email"> 
+                      <a :href="`/contact/?subject=${encodeURIComponent(service.name + ' Services')}`" size="large" class="flex justify-content-center text-center no-underline mt-4" aria-label="Book Now"> 
                       <Button label="Book Now!" icon="pi pi-briefcase" severity="primary" raised rounded />
                       </a>
                   </div>
@@ -58,7 +58,7 @@ copyright: false
                   <div itemprop="name" v-for= "(description, index) in service.descriptions" >
                     <div v-html="description"></div>
                   </div>
-                  <a :href="`mailto:jiwan.cse@gmail.com?subject=Inquiry : ${service.name} Services`" size="large" class="flex justify-content-center text-center no-underline mt-4" aria-label="Send an Email"> 
+                  <a :href="`/contact/?subject=${encodeURIComponent(service.name + ' Services')}`" size="large" class="flex justify-content-center text-center no-underline mt-4" aria-label="Book Now"> 
                   <Button label="Book Now!" icon="pi pi-briefcase" severity="primary" raised rounded />
                   </a>
               </div>

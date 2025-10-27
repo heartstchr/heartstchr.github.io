@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { ref, reactive, onMounted } from 'vue';
+import { useRoute } from 'vue-router';
 import { fetchDatabaseSchemaOptions } from '../services/notionService';
 import { submitProjectRequest } from '../services/notionService';
+
+const route = useRoute();
 
 type FormState = {
     name: string;
@@ -23,6 +26,15 @@ const serviceOptions = ref<{ label: string; value: string }[]>([]);
 const budgetOptions = ref<{ label: string; value: string }[]>([]);
 
 onMounted(async () => {
+    // Read query parameters and pre-populate form
+    const query = route.query;
+    if (query.subject) {
+        form.details = decodeURIComponent(query.subject as string);
+    }
+    if (query.service) {
+        form.service = decodeURIComponent(query.service as string);
+    }
+
     try {
         const { serviceOptions: notionServices, budgetOptions: notionBudgets } = await fetchDatabaseSchemaOptions();
 

@@ -24,9 +24,9 @@ service:
           <div itemprop="name" v-for= "(description, index) in $frontmatter.service.descriptions" >
             <div v-html="description"></div>
           </div>
-          <a :href="`mailto:jiwan.cse@gmail.com?subject=Inquiry : $frontmatter.service.name Services`" size="large" class="flex justify-content-center text-center no-underline mt-4" aria-label="Send an Email"> 
-            <Button label="Book Now!" icon="pi pi-briefcase" severity="primary" raised rounded />
-          </a>
+        <a :href="`/contact/?subject=${encodeURIComponent($frontmatter.service.name + ' Services')}`" size="large" class="flex justify-content-center text-center no-underline mt-4" aria-label="Book Now"> 
+          <Button label="Book Now!" icon="pi pi-briefcase" severity="primary" raised rounded />
+        </a>
         </div>
     </div>
 </div>
