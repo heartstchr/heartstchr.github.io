@@ -43,11 +43,9 @@ export default defineUserConfig({
       "meta",
       {
         "http-equiv": "Cache-Control",
-        content: "no-cache, no-store, must-revalidate",
+        content: "public, max-age=31536000, immutable", // Cache static assets
       },
     ],
-    ["meta", { "http-equiv": "Pragma", content: "no-cache" }],
-    ["meta", { "http-equiv": "Expires", content: "0" }],
     [
       "link",
       {
