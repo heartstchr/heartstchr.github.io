@@ -18,7 +18,7 @@ Mission here is to unpack the tools, trends, and strategies that power the softw
             class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button"
           >
             <span class="mr-6">
-              <i class="pi pi-youtube mr-1" aria-label="View on Youtube" style="font-size: 1rem; color:#f03;"></i>
+              <i class="pi pi-youtube mr-1" aria-label="View on Youtube" style="font-size: 1rem; color:#FF0000;"></i>
               Browse All Episodes
             </span>
             <Circles/>
