@@ -56,4 +56,13 @@ From automating mundane tasks to unlocking deep customer insights, the benefits 
 
 What is the first area of your business you would like to improve with AI? Let's discuss how we can help you get there.
 
+<div class="blog-content-and-aside">
+  <div class="blog-content-main"></div>
+  <div class="blog-content-aside">
+    <YouTubeAside />
+  </div>
+</div>
+
+<RelatedPosts />
+
 <BlogNavigation />

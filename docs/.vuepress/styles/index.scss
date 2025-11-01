@@ -423,6 +423,37 @@ fieldset {
     margin-right: auto !important;
   }
 
+  /* Blog post: content (3/4) | YouTubeAside (1/4) layout */
+  /* Position wrapper absolutely on the right side */
+  main.vp-page:not(.vp-project-home):has(.blog-content-and-aside) #markdown-content {
+    position: relative !important;
+    padding-right: calc(25% + 1.5rem) !important;
+  }
+  
+  main.vp-page:not(.vp-project-home) .blog-content-and-aside {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: 25% !important;
+    max-width: 20rem !important;
+    margin-top: 0 !important;
+    height: 100% !important;
+    pointer-events: none !important;
+  }
+  
+  main.vp-page:not(.vp-project-home) .blog-content-main {
+    display: none !important;
+  }
+  
+  main.vp-page:not(.vp-project-home) .blog-content-aside {
+    width: 100% !important;
+    position: sticky !important;
+    top: 6rem !important;
+    align-self: flex-start !important;
+    pointer-events: auto !important;
+    z-index: 10 !important;
+  }
+
   /* Make TOC fixed after scroll on other pages */
   main.vp-page:not(.vp-project-home) .vp-toc-placeholder,
   main.vp-page:not(.vp-project-home) aside.vp-toc,
@@ -452,4 +483,22 @@ html[data-theme="dark"] .pi-github,
 
 .pi-youtube {
   color: #FF0000 !important;
+}
+
+@media (max-width: 767px) {
+  main.vp-page:not(.vp-project-home) .blog-content-and-aside {
+    flex-direction: column !important;
+  }
+  
+  main.vp-page:not(.vp-project-home) .blog-content-main {
+    flex: 1 !important;
+    width: 100% !important;
+  }
+  
+  main.vp-page:not(.vp-project-home) .blog-content-aside {
+    position: relative !important;
+    width: 100% !important;
+    flex: 1 !important;
+    max-width: 100% !important;
+  }
 }

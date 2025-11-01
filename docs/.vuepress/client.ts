@@ -24,6 +24,7 @@ import Contact from "./components/Contact.vue";
 import Pagination from "./components/Pagination.vue";
 import ProjectRequestForm from "./components/ProjectRequestForm.vue";
 import BlogNavigation from "./components/BlogNavigation.vue";
+import RelatedPosts from "./components/RelatedPosts.vue";
 
 export default defineClientConfig({
   enhance({ app }) {
@@ -51,6 +52,7 @@ export default defineClientConfig({
     app.component("Pagination", Pagination);
     app.component("ProjectRequestForm", ProjectRequestForm);
     app.component("BlogNavigation", BlogNavigation);
+    app.component("RelatedPosts", RelatedPosts);
   },
   setup() {
     // Ensure canonical URLs strip query parameters

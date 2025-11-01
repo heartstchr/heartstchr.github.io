@@ -105,4 +105,13 @@ Follow these steps to create a Vue 3 application, customize its content, and deb
 ### conclusion
 That's it! You now have a Vue 3 application scaffolded with Vue CLI, ready for customization and debugging. Stay tuned for more Vue 3 tips and tricks to elevate your web development skills!
 
+<div class="blog-content-and-aside">
+  <div class="blog-content-main"></div>
+  <div class="blog-content-aside">
+    <YouTubeAside />
+  </div>
+</div>
+
+<RelatedPosts />
+
 <BlogNavigation />
