@@ -6,6 +6,7 @@ import "primeicons/primeicons.css"; // icons
 import "primeflex/primeflex.css";
 import "./styles/flags.css";
 import YouTubeVideos from "./components/YoutubeVideos.vue";
+import YouTubeAside from "./components/YouTubeAside.vue";
 import Podcast from "./components/Podcast.vue";
 import YouTubePlayers from "./components/YoutubePlayers.vue";
 import Svg from "./components/Svg.vue";
@@ -23,6 +24,7 @@ import Contact from "./components/Contact.vue";
 import Pagination from "./components/Pagination.vue";
 import ProjectRequestForm from "./components/ProjectRequestForm.vue";
 import BlogNavigation from "./components/BlogNavigation.vue";
+import RelatedPosts from "./components/RelatedPosts.vue";
 
 export default defineClientConfig({
   enhance({ app }) {
@@ -32,6 +34,7 @@ export default defineClientConfig({
       },
     });
     app.component("YouTubeVideos", YouTubeVideos);
+    app.component("YouTubeAside", YouTubeAside);
     app.component("Podcast", Podcast);
     app.component("YouTubePlayers", YouTubePlayers);
     app.component("Svg", Svg);
@@ -49,5 +52,56 @@ export default defineClientConfig({
     app.component("Pagination", Pagination);
     app.component("ProjectRequestForm", ProjectRequestForm);
     app.component("BlogNavigation", BlogNavigation);
+    app.component("RelatedPosts", RelatedPosts);
+  },
+  setup() {
+    // Ensure canonical URLs strip query parameters
+    if (typeof window !== 'undefined') {
+      const updateCanonical = () => {
+        // Get current URL without query params and hash
+        let cleanPath = window.location.pathname;
+        // Ensure homepage always has trailing slash for consistency
+        if (cleanPath === '' || cleanPath === '/') {
+          cleanPath = '/';
+        }
+        // Ensure path doesn't have double slashes
+        cleanPath = cleanPath.replace(/\/+/g, '/');
+        // Build canonical URL
+        const cleanUrl = `https://stackseekers.com${cleanPath}`;
+        
+        // Find or create canonical link tag
+        let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+        
+        if (!canonicalLink) {
+          canonicalLink = document.createElement('link');
+          canonicalLink.setAttribute('rel', 'canonical');
+          document.head.appendChild(canonicalLink);
+        }
+        
+        // Update canonical URL to clean version (without query params)
+        canonicalLink.setAttribute('href', cleanUrl);
+      };
+      
+      // Update on page load
+      updateCanonical();
+      
+      // Update on navigation (for Vue Router and browser navigation)
+      window.addEventListener('popstate', updateCanonical);
+      
+      // Also watch for Vue Router navigation
+      if (window.history && window.history.pushState) {
+        const originalPushState = window.history.pushState;
+        window.history.pushState = function(...args) {
+          originalPushState.apply(window.history, args);
+          setTimeout(updateCanonical, 0);
+        };
+        
+        const originalReplaceState = window.history.replaceState;
+        window.history.replaceState = function(...args) {
+          originalReplaceState.apply(window.history, args);
+          setTimeout(updateCanonical, 0);
+        };
+      }
+    }
   },
 });

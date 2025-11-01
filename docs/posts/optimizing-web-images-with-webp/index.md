@@ -89,4 +89,13 @@ Optimizing images with WebP is a game-changer for web performance and SEO. By us
 
 Ready to optimize your website? Share your experience with WebP in the comments below or explore more web performance tips on our blog!
 
+<div class="blog-content-and-aside">
+  <div class="blog-content-main"></div>
+  <div class="blog-content-aside">
+    <YouTubeAside />
+  </div>
+</div>
+
+<RelatedPosts />
+
 <BlogNavigation />

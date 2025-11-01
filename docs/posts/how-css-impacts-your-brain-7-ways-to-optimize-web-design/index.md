@@ -88,4 +88,13 @@ CSS isn’t just about aesthetics—it’s about creating an experience that’s
 
 **Ready to elevate your web design?** Share your favorite CSS tips in the comments or check out our [YouTube video](https://www.youtube.com/watch?v=8rYCgrrbHqk) for a deeper dive into brain-friendly web design!
 
+<div class="blog-content-and-aside">
+  <div class="blog-content-main"></div>
+  <div class="blog-content-aside">
+    <YouTubeAside />
+  </div>
+</div>
+
+<RelatedPosts />
+
 <BlogNavigation />

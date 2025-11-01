@@ -90,4 +90,13 @@ GEN-BLOG takes the hassle out of repurposing YouTube videos into blog posts, ble
 
 For more tips on content automation, subscribe to my YouTube channel and stay tuned for future tutorials.
 
+<div class="blog-content-and-aside">
+  <div class="blog-content-main"></div>
+  <div class="blog-content-aside">
+    <YouTubeAside />
+  </div>
+</div>
+
+<RelatedPosts />
+
 <BlogNavigation />

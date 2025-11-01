@@ -7,45 +7,32 @@ editLink: false
 copyright: false
 ---
 
-<div class="flex flex-column gap-4 my-6 line-height-4">
+<div class="flex flex-column gap-4 my-4 line-height-4">
   <div>
-    Explore a curated selection of my freelance and organizational web development projects. These works highlight my expertise in building modern, scalable, and user-focused digital solutions.
-  </div>
-  <div>
-    Each project is thoughtfully crafted to transform client ideas into functional, high-impact experiences tailored to specific business goals.
-  </div>
-  <div>
-    <a
-      href="https://cal.com/stackseekers"
-      size="large"
-      class="flex justify-content-center text-center no-underline mt-4"
-    >
-      <Button
-        label="Build Your Vision with Us!"
-        icon="pi pi-calendar-clock"
-        severity="primary"
-        raised
-        rounded
-      />
-    </a>
+    Explore my freelance and organizational web development projects. These works highlight my expertise in building modern, scalable, and user-focused digital solutions. Each project is thoughtfully crafted to transform ideas into functional, high-impact experiences tailored to specific business goals.
   </div>
 </div>
-<div class="p-d-flex p-flex-column p-mr-3">
-  <div class="grid my-6 gap-8">
-    <ProjectCard
-      v-for="(project, index) in paginatedProjects"
-      :key="index"
-      :project="project"
-      :showHeader=true
+<div class="flex md:flex-row flex-column gap-4">
+  <div class="p-d-flex p-flex-column" style="flex: 3;">
+    <div class="grid my-6 gap-8">
+      <ProjectCard
+        v-for="(project, index) in paginatedProjects"
+        :key="index"
+        :project="project"
+        :showHeader=true
+      />
+    </div>
+    <Pagination 
+      :totalRecords="freelance.length" 
+      :rowsPerPage="10"
+      @page-change="onPageChange"
     />
   </div>
-  
-  <Pagination 
-    :totalRecords="freelance.length" 
-    :rowsPerPage="10"
-    @page-change="onPageChange"
-  />
+  <div class="flex-1 align-self-start" style="max-width: 100%; position: sticky; top: 6rem;">
+    <YouTubeAside />
+  </div>
 </div>
+
 
 <script setup lang="ts">
   import { freelance } from "@data/projects.js";
