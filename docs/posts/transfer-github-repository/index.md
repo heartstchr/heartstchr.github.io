@@ -1,6 +1,6 @@
 ---
 title: How to Transfer a GitHub Repository to an Organization
-date: 2025-05-26
+date: 2024-05-26
 category: [Tech]
 tags: [GitHub, Blog]
 ---

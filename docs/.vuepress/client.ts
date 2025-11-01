@@ -50,4 +50,49 @@ export default defineClientConfig({
     app.component("ProjectRequestForm", ProjectRequestForm);
     app.component("BlogNavigation", BlogNavigation);
   },
+  setup() {
+    // Ensure canonical URLs strip query parameters
+    if (typeof window !== 'undefined') {
+      const updateCanonical = () => {
+        // Get current URL without query params and hash
+        const cleanPath = window.location.pathname;
+        // Ensure path ends with / for homepage, or handle it correctly
+        const finalPath = cleanPath === '' ? '/' : cleanPath;
+        const cleanUrl = `https://stackseekers.com${finalPath}`;
+        
+        // Find or create canonical link tag
+        let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+        
+        if (!canonicalLink) {
+          canonicalLink = document.createElement('link');
+          canonicalLink.setAttribute('rel', 'canonical');
+          document.head.appendChild(canonicalLink);
+        }
+        
+        // Update canonical URL to clean version (without query params)
+        canonicalLink.setAttribute('href', cleanUrl);
+      };
+      
+      // Update on page load
+      updateCanonical();
+      
+      // Update on navigation (for Vue Router and browser navigation)
+      window.addEventListener('popstate', updateCanonical);
+      
+      // Also watch for Vue Router navigation
+      if (window.history && window.history.pushState) {
+        const originalPushState = window.history.pushState;
+        window.history.pushState = function(...args) {
+          originalPushState.apply(window.history, args);
+          setTimeout(updateCanonical, 0);
+        };
+        
+        const originalReplaceState = window.history.replaceState;
+        window.history.replaceState = function(...args) {
+          originalReplaceState.apply(window.history, args);
+          setTimeout(updateCanonical, 0);
+        };
+      }
+    }
+  },
 });

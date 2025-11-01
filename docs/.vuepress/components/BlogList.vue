@@ -24,7 +24,7 @@
                   <div>
                     <i class="pi pi-calendar mr-2"></i>
                     {{ new Date(items[0].date).toLocaleDateString('en-US', {
-                    month: 'short', day: 'numeric', year: 'numeric'
+                      month: 'short', day: 'numeric', year: 'numeric'
                     }) }}
                   </div>
                   <a :href="items[0].link" class="text-sm">
@@ -37,7 +37,7 @@
         </ul>
       </div>
 
-      <!-- Second column (col-6) with the next 3 elements -->
+      <!-- Second column (col-6) with the next 2 elements -->
       <div class="md:col-6">
         <ul class="blog-list p-0">
           <li v-for="item in items.slice(1, 3)" :key="item.link" class="blog-list-item mb-3">
@@ -51,10 +51,10 @@
                   <div>
                     <i class="pi pi-calendar mr-2"></i>
                     {{ new Date(item.date).toLocaleDateString('en-US', {
-                    month: 'short', day: 'numeric', year: 'numeric'
+                      month: 'short', day: 'numeric', year: 'numeric'
                     }) }}
                   </div>
-                  <a :href="items.link" class="text-sm">
+                  <a :href="item.link" class="text-sm">
                     Read More &rarr;
                   </a>
                 </div>
@@ -66,8 +66,8 @@
     </div>
 
     <!-- Remaining elements in col-12 -->
-    <ul v-if="items.length > 4" class="blog-list p-0 md:col-12">
-      <li v-for="item in items.slice(4)" :key="item.link" class="blog-list-item mb-5">
+    <ul v-if="items.length > 3" class="blog-list p-0 md:col-12">
+      <li v-for="item in items.slice(3)" :key="item.link" class="blog-list-item mb-5">
         <div class="vp-feature-item p-3">
           <h3 class="blog-title m-0 mb-2 text-xl font-semibold">
             <a :href="item.link" class="text-decoration-none hover:underline">{{ item.title }}</a>
@@ -77,7 +77,7 @@
             <div>
               <i class="pi pi-calendar mr-2"></i>
               {{ new Date(item.date).toLocaleDateString('en-US', {
-              month: 'short', day: 'numeric', year: 'numeric'
+                month: 'short', day: 'numeric', year: 'numeric'
               }) }}
             </div>
             <a :href="item.link" class="text-sm">
@@ -89,7 +89,7 @@
     </ul>
   </div>
 </template>
-  
+
 <script setup>
 defineProps({
   items: {

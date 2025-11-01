@@ -43,7 +43,13 @@ export default hopeTheme(
       },
     },
     plugins: {
-      seo: true,
+      seo: {
+        canonical: (page) => {
+          // Strip query parameters and hash from canonical URL
+          const cleanUrl = page.path.replace(/\?.*$/, '').replace(/#.*$/, '');
+          return `https://stackseekers.com${cleanUrl}`;
+        },
+      },
       sitemap: {
         changefreq: "hourly",
       },

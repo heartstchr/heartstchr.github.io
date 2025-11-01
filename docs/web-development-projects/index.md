@@ -14,21 +14,6 @@ copyright: false
   <div>
     Each project is thoughtfully crafted to transform client ideas into functional, high-impact experiences tailored to specific business goals.
   </div>
-  <div>
-    <a
-      href="https://cal.com/stackseekers"
-      size="large"
-      class="flex justify-content-center text-center no-underline mt-4"
-    >
-      <Button
-        label="Build Your Vision with Us!"
-        icon="pi pi-calendar-clock"
-        severity="primary"
-        raised
-        rounded
-      />
-    </a>
-  </div>
 </div>
 <div class="p-d-flex p-flex-column p-mr-3">
   <div class="grid my-6 gap-8">
