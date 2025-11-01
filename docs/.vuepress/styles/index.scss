@@ -438,8 +438,14 @@ fieldset {
 
 /* Social media brand colors */
 .pi-github {
+  color: black !important;
+}
+
+html[data-theme="dark"] .pi-github,
+.dark .pi-github {
   color: white !important;
 }
+
 .pi-linkedin {
   color: #0a66c2 !important;
 }
