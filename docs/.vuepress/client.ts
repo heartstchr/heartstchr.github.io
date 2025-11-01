@@ -6,6 +6,7 @@ import "primeicons/primeicons.css"; // icons
 import "primeflex/primeflex.css";
 import "./styles/flags.css";
 import YouTubeVideos from "./components/YoutubeVideos.vue";
+import YouTubeAside from "./components/YouTubeAside.vue";
 import Podcast from "./components/Podcast.vue";
 import YouTubePlayers from "./components/YoutubePlayers.vue";
 import Svg from "./components/Svg.vue";
@@ -32,6 +33,7 @@ export default defineClientConfig({
       },
     });
     app.component("YouTubeVideos", YouTubeVideos);
+    app.component("YouTubeAside", YouTubeAside);
     app.component("Podcast", Podcast);
     app.component("YouTubePlayers", YouTubePlayers);
     app.component("Svg", Svg);

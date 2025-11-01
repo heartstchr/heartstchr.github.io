@@ -12,7 +12,7 @@ copyright: false
     <div class="md:col-6 col-12">
       <h3 class="my-4 text-md"> Diverse skill set and a passion for continuous exploration and creativity.</h3>
       <div class="my-4 text-md">
-      With extensive experience in full-stack development, I excel in both <a href="#Frontend Technologies" class="no-underline">frontend technologies</a> and <a href="#Backend Technologies" class="no-underline">backend</a>, making significant contributions to various <a href="/web-development-projects/" class="no-underline">projects</a> within the tech industry.</div>
+      With extensive experience in full-stack development, I excel in both <a href="#Frontend-Technologies" class="no-underline">frontend technologies</a> and <a href="#Backend-Technologies" class="no-underline">backend</a>, making significant contributions to various <a href="/web-development-projects/" class="no-underline">projects</a> within the tech industry.</div>
       <div class="my-4 text-md">
       My expertise spans all stages of agile software development, from planning and implementation to testing, monitoring, and delivery.</div>
       <div class="my-4 text-md">
@@ -24,14 +24,6 @@ copyright: false
   </div>
 </div>
 
-<div class="my-6 flex md:flex-row flex-column ">
-  <div class="col-12 line-height-3">
-    <h2 class="my-4 text-4xl font-bold">I will simplify the steps for you</h2>
-    <h3 class="my-4 text-md">My mission is to make the whole process much easier and understandable for you</h3>
-    <div class="my-4 text-md">I simplify the steps to launching a digital application minus the lingo and hype so you can get on with living the life you envisioned.</div>
-    <div class="my-4 text-md">You'll finally gain the clarity and confidence you need.</div>
-  </div>
-</div>
 <div class="my-6 flex md:flex-row flex-column ">
   <div class="col-12 line-height-3">
     <h2 class="my-4 text-4xl font-bold">Highlights of My Journey</h2>
@@ -57,7 +49,7 @@ copyright: false
   </div>
   <div class="flex flex-wrap gap-4">
     <div v-for="(category, key) in technologies" :key="key" class='grid md:col-6' 
-    :class="[{ 'md:col-12' : key === 'otherTools' }]" :id="category.title">
+    :class="[{ 'md:col-12' : key === 'otherTools' }]" :id="slugify(category.title)">
       <div class="shadow-1 border-round-md vp-feature-item">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 50 1440 320"><path fill="#10b981" fill-opacity="0.1" d="M0,128L40,144C80,160,160,192,240,192C320,192,400,160,480,160C560,160,640,192,720,176C800,160,880,96,960,80C1040,64,1120,96,1200,144C1280,192,1360,256,1400,288L1440,320L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
         <div class="px-2 gap-2">
@@ -83,7 +75,7 @@ copyright: false
 
 <!-- Certificate -->
 <div class="my-6" id="stack">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 60 1440 320"><path fill="#10b981" fill-opacity="0.1" d="M0,128L40,144C80,160,160,192,240,192C320,192,400,160,480,160C560,160,640,192,720,176C800,160,880,96,960,80C1040,64,1120,96,1200,144C1280,192,1360,256,1400,288L1440,320L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+
   <div class="text-center pb-4">
     <h2 class="text-4xl font-bold">Certificate of Achievement</h2>
   </div>
@@ -107,7 +99,7 @@ copyright: false
 </div>
 
 <!-- Contact Me -->
-<div class="border-round-md vp-feature-item" id="contact">
+<div class="border-round-md" id="contact" style="width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); max-width: 100vw;">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 60 1440 320"><path fill="#10b981" fill-opacity="0.1" d="M0,128L40,144C80,160,160,192,240,192C320,192,400,160,480,160C560,160,640,192,720,176C800,160,880,96,960,80C1040,64,1120,96,1200,144C1280,192,1360,256,1400,288L1440,320L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
   <div>
     <div class="text-center px-4">
@@ -148,6 +140,10 @@ copyright: false
   
   const getIcon = (logoUrl) => {
     return logoUrl ? 'pi pi-cog' : null;
+  };
+  
+  const slugify = (text) => {
+    return text.replace(/\s+/g, '-');
   };
   
   const social= [
