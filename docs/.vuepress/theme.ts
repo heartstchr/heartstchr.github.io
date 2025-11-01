@@ -3,7 +3,7 @@ import { enNavbar } from "./navbar/index.js";
 
 export default hopeTheme(
   {
-    hostname: "https://stackseekers.com/",
+    hostname: "https://stackseekers.com",
     author: {
       name: "Stack Seekers",
       url: "http://heartstchr.github.io/",
@@ -46,8 +46,14 @@ export default hopeTheme(
       seo: {
         canonical: (page) => {
           // Strip query parameters and hash from canonical URL
-          const cleanUrl = page.path.replace(/\?.*$/, '').replace(/#.*$/, '');
-          return `https://stackseekers.com${cleanUrl}`;
+          let cleanPath = page.path.replace(/\?.*$/, '').replace(/#.*$/, '');
+          // Ensure homepage always has trailing slash for consistency
+          if (cleanPath === '/' || cleanPath === '') {
+            cleanPath = '/';
+          }
+          // Ensure path doesn't have double slashes
+          cleanPath = cleanPath.replace(/\/+/g, '/');
+          return `https://stackseekers.com${cleanPath}`;
         },
       },
       sitemap: {

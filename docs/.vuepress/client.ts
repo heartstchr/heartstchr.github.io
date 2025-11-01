@@ -57,10 +57,15 @@ export default defineClientConfig({
     if (typeof window !== 'undefined') {
       const updateCanonical = () => {
         // Get current URL without query params and hash
-        const cleanPath = window.location.pathname;
-        // Ensure path ends with / for homepage, or handle it correctly
-        const finalPath = cleanPath === '' ? '/' : cleanPath;
-        const cleanUrl = `https://stackseekers.com${finalPath}`;
+        let cleanPath = window.location.pathname;
+        // Ensure homepage always has trailing slash for consistency
+        if (cleanPath === '' || cleanPath === '/') {
+          cleanPath = '/';
+        }
+        // Ensure path doesn't have double slashes
+        cleanPath = cleanPath.replace(/\/+/g, '/');
+        // Build canonical URL
+        const cleanUrl = `https://stackseekers.com${cleanPath}`;
         
         // Find or create canonical link tag
         let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
