@@ -264,10 +264,25 @@ import { posts } from "./data/posts.js";
 const outTagsDir = path.resolve(__dirname, "../tags");
 
 const tagTemplate = (tag) => {
+  const description = `Explore our collection of articles, tutorials, and insights about ${tag}. Stay updated with the latest trends and best practices in ${tag}.`;
   return `---
 title: Posts tagged with ${tag}
+description: ${description}
 layout: Layout
 tag: ${tag}
+head:
+  - - meta
+    - name: keywords
+      content: ${tag}, web development, programming, tech, tutorial
+  - - meta
+    - property: og:title
+      content: Posts tagged with ${tag}
+  - - meta
+    - property: og:description
+      content: ${description}
+  - - meta
+    - property: og:type
+      content: website
 ---
 <TagPage />
 `;
