@@ -2,9 +2,11 @@
     <div class="flex flex-column flex-row align-items-center gap-3 py-2 my-4">
         <div class="flex flex-row gap-2 align-items-center justify-content-start text-900" v-if="date">
             <i class="pi pi-calendar mr-2"></i>
-            {{ new Date(date).toLocaleDateString('en-US', {
-                month: 'short', day: 'numeric', year: 'numeric'
-            }) }}
+            <time :datetime="new Date(date).toISOString()">
+                {{ new Date(date).toLocaleDateString('en-US', {
+                    month: 'short', day: 'numeric', year: 'numeric'
+                }) }}
+            </time>
         </div>
         <div class="flex flex-row gap-2 flex-wrap md:justify-content-start justify-content-center">
             <a v-for="cat in category" :key="cat" :href="'/tags/' + cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') + '/'" class="no-underline text-900">

@@ -11,6 +11,8 @@ export const freelance = [
     domain: "Contact Forms & Lead Capture",
     schema: "https://schema.org/WebApplication",
     link: "https://contact-form-app.stackseekers.com/",
+    price: "0",
+    currency: "USD",
     contact: "mailto:jiwan.cse@gmail.com?subject=Contact Form Plugin Inquiry",
     stack: [
       "javascript",
@@ -168,6 +170,8 @@ export const freelance = [
     domain: "Database Management & No-Code",
     schema: "https://schema.org/WebApplication",
     link: "https://notion-crud.netlify.app/",
+    price: "0",
+    currency: "USD",
     contact: "mailto:jiwan.cse@gmail.com?subject=Notion CRUD App Inquiry",
     stack: [
       "javascript",
@@ -235,13 +239,15 @@ export const freelance = [
   {
     name: "AI Voice Generator",
     description:
-      "Transform your Google Docs into high-quality audio with AI-powered text-to-speech. A Google Docs add-on that creates natural-sounding voiceovers for YouTubers, teachers, writers, and content creators - completely free with your own API key.",
+      "Transform your Google Docs into high-quality audio with this free AI voice generator and text to audio converter. Powered by Gemini TTS, it offers natural-sounding speech generation for YouTubers, teachers, and creators. Experience the best free text to speech AI directly in your documents.",
     software: "Google Docs Add-on",
     org: "Stack Lab",
     year: "2025",
     domain: "AI & Content Creation",
     schema: "https://schema.org/WebApplication",
     link: "https://ainarrator.stackseekers.com/",
+    price: "0",
+    currency: "USD",
     contact: "mailto:jiwan.cse@gmail.com?subject=AI Narrator Inquiry",
     stack: [
       "javascript",
@@ -256,25 +262,36 @@ export const freelance = [
       "AI Integration",
       "Document Processing",
       "API Development",
+      "Gemini Speech Generation",
+      "Text to Audio Converter",
+      "gemini-tts",
+      "text-to-speech",
+      "free-ai-voice",
     ],
     features: [
       {
-        text: "Smart Document Analysis: AI-powered review of document structure, word choice, and engagement factors",
+        text: "Gemini Speech Generation: Leverage advanced Gemini TTS for ultra-realistic, natural-sounding voiceovers completely free.",
       },
       {
-        text: "25+ Professional AI Voices: Choose from diverse voice options with detailed descriptions for different content types",
+        text: "Free Text to Speech AI: Convert unlimited text to audio without subscription fees using your own API key.",
       },
       {
-        text: "Real-time Voice Preview: Test selected text with instant browser playback before full generation",
+        text: "Smart Document Analysis: AI-powered review of document structure, word choice, and engagement factors.",
       },
       {
-        text: "Custom Voice Instructions: Add pronunciation guides and tone settings for brand names and proper nouns",
+        text: "25+ Professional AI Voices: Choose from diverse voice options including 'Gemini Speech' styles for any content type.",
       },
       {
-        text: "Multi-language Support: Generate audio in different languages for global content reach",
+        text: "Real-time Voice Preview: Test selected text with instant browser playback before full generation.",
       },
       {
-        text: "Smart Text Processing: Automatically converts bullets, tables, and complex formatting into natural speech",
+        text: "Custom Voice Instructions: Add pronunciation guides and tone settings for brand names and proper nouns.",
+      },
+      {
+        text: "Multi-language Support: Generate audio in different languages for global content reach.",
+      },
+      {
+        text: "Smart Text Processing: Automatically converts bullets, tables, and complex formatting into natural speech.",
       },
       {
         text: "Flexible Audio Generation: Create full document audio or regenerate specific sections as needed",
@@ -305,6 +322,8 @@ export const freelance = [
     domain: "Service Request",
     schema: "https://schema.org/WebApplication",
     link: "https://notion-p.netlify.app/",
+    price: "0",
+    currency: "USD",
     contact: "mailto:jiwan.cse@gmail.com?subject=Inquiry : ",
     stack: [
       "nodedotjs",

@@ -6,11 +6,11 @@
                 <Svg />
                 <div class="p-3">
                     <h3 class="blog-title m-0 mb-2 text-xl font-semibold">
-                        <a :href="post.link" class="text-decoration-none hover:underline">{{ post.title }}</a>
+                        <a :href="post.link" class="text-decoration-none hover:underline" :aria-label="'Read related post: ' + post.title">{{ post.title }}</a>
                     </h3>
                     <p class="blog-summary m-0 text-sm text-gray-700 line-height-3">{{ post.summary }}</p>
                     <div class="my-1  flex flex-row items-center justify-content-between">
-                        <a :href="post.link" class="text-sm">
+                        <a :href="post.link" class="text-sm" :aria-label="'Read more about ' + post.title">
                             Read More &rarr;
                         </a>
                     </div>

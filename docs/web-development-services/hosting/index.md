@@ -12,7 +12,7 @@ service:
   previousService: {"name":"CICD","link":"/web-development-services/ci-cd/"}
   nextService: null
 ---
-<div class="shadow-1 col-12 p-0 overflow-hidden" itemscope itemtype="https://schema.org/SoftwareApplication">
+<article class="shadow-1 col-12 p-0 overflow-hidden service-details" itemscope itemtype="https://schema.org/SoftwareApplication">
     <div class="px-4 m-2">
         <div class="text-4xl font-bold mb-4">
           <h2 itemprop="name" class="text-4xl">
@@ -29,7 +29,7 @@ service:
         </a>
         </div>
     </div>
-</div>
+</article>
 
 <div class="flex justify-content-between align-items-center mt-6 pt-4 border-top-1 surface-border">
   <div class="flex-1">

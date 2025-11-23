@@ -1,0 +1,100 @@
+# Stack Seekers - Full Context
+
+> Stack Seekers is a full-stack web development agency led by Jiwan Ghosal, specializing in scalable web, mobile, and software solutions using MEVN/MERN stacks, AWS, and Azure. We help startups and businesses build modern, high-performance websites and AI-powered products.
+
+## Core Expertise
+- **Tech Stack**: MEVN (MongoDB, Express, Vue, Node.js) and MERN (MongoDB, Express, React, Node.js).
+- **Cloud**: AWS and Azure.
+- **Focus**: Enterprise patterns, startup speed, AI-powered products.
+
+## Services
+
+### Figma to Web
+Turn your Figma designs into fully functional, dynamic websites with my expertise. Leveraging the power of VueJS, ReactJS, and their robust ecosystems, I create innovative websites tailored precisely to your requirements. My solutions are fully customizable and reusable, ensuring they align perfectly with your vision, while remaining exceptionally lightweight for optimal performance.
+
+### E-commerce Solutions
+I specialize in building robust e-commerce platforms that empower businesses to sell their products and services online effortlessly. My solutions are scalable, secure, and packed with advanced features to drive sales and boost customer satisfaction.
+
+### Consulting & Technical Advisory
+Whether you're just starting your project or facing technical challenges, I'm here to provide expert guidance and support. I offer consulting services to help you make informed decisions and overcome any obstacles along the way.
+
+### Custom Web Development
+I design responsive and visually stunning custom web application optimized for performance and user experience. Whether you need a simple landing page or a complex web application, I have the expertise to bring your vision to life.
+
+### API Development & Integration
+Need to integrate third-party services or develop custom APIs for your application? I specialize in creating RESTful APIs, enabling seamless communication between systems and enhancing your software's functionality.
+
+### CI/CD
+I specialize in designing and optimizing CI/CD pipelines to streamline your software delivery process. Utilizing tools like Jenkins, GitLab CI, Github Actions I automate builds, tests, and deployments for faster, more reliable releases. My expertise in scripting and Infrastructure as Code (IaC) enhances efficiency and scalability.
+
+### Hosting & Deployment
+I offer comprehensive hosting services to ensure your applications run smoothly, securely, and efficiently. From setting up cloud infrastructure on AWS, or Azure to configuring and maintaining web servers, databases, and load balancers. My expertise in containerization with Docker and orchestration with Kubernetes ensures scalable and resilient deployments.
+
+## Products & Projects
+
+### Contact Form Plugin
+- **Description**: A lightweight, embeddable contact form widget that can be integrated into any website and automatically forwards submissions to a Notion database. Generator-based architecture allowing multiple form configurations.
+- **Problem**: Custom contact forms usually require backend code and database setup.
+- **Solution**: A drop-in widget that sends submissions directly to a Notion database.
+- **Price**: Free
+- **Link**: https://contact-form-app.stackseekers.com/
+- **Stack**: JavaScript, Notion, HTML5, CSS, Netlify, JSON.
+
+### Vibe3
+- **Description**: A cutting-edge AI-powered influencer marketing platform built with modern frontend technologies. Features a sophisticated React-based user interface that connects content creators with premium brands.
+- **Problem**: Brands struggle to find relevant influencers; Creators struggle to manage campaigns.
+- **Solution**: AI-powered matching platform with campaign management and Web3 payments.
+- **Link**: https://vibe3.vibesquad.co
+- **Stack**: Next.js, React, TypeScript, TailwindCSS, PWA, Node.js, MongoDB, Solana, TON.
+
+### Dynamic CRUD App
+- **Description**: Transform your Notion database into a professional web application in minutes. Automatically reads your Notion structure and creates beautiful, responsive interfaces.
+- **Problem**: Building admin panels for Notion databases is time-consuming.
+- **Solution**: Instantly turns any Notion database into a professional CRUD web application.
+- **Price**: Free
+- **Link**: https://notion-crud.netlify.app/
+- **Stack**: JavaScript, Vue.js, Notion, HTML5, CSS, Netlify.
+
+### Free AI Voice Generator & Text to Speech (Gemini)
+- **Description**: Transform your Google Docs into high-quality audio with this free AI voice generator and text to audio converter. Powered by Gemini TTS, it offers natural-sounding speech generation for YouTubers, teachers, and creators. Experience the best free text to speech AI directly in your documents.
+- **Problem**: Creating professional voiceovers is expensive and requires specialized software.
+- **Solution**: Google Docs add-on that converts text to natural-sounding AI speech.
+- **Price**: Free
+- **Link**: https://ainarrator.stackseekers.com/
+- **Stack**: JavaScript, Google Apps Script, Google Docs, Google Drive.
+
+### Service Request System
+- **Description**: Build a complete customer service request management system using Notion database and Netlify functions. Features automated email notifications and file uploads.
+- **Problem**: Managing customer service requests often requires expensive ticketing software.
+- **Solution**: A complete ticketing system using Notion as the backend and Netlify for hosting.
+- **Price**: Free
+- **Link**: https://notion-p.netlify.app/
+- **Stack**: Node.js, JSON, TailwindCSS, Axios, Netlify, Notion.
+
+### Appliance Repair Platform
+- **Description**: A modern, content-driven platform for connecting users with local appliance repair professionals and providing troubleshooting guides.
+- **Problem**: Finding reliable local appliance repair information and professionals is difficult.
+- **Solution**: A directory and troubleshooting guide for home appliances.
+- **Link**: https://appliancerepairly.com
+- **Stack**: Next.js, React, Node.js, TailwindCSS, DigitalOcean.
+
+### SR-22 Insurance Now
+- **Description**: Need a Cheap SR-22 Insurance? Compare & save on SR22 Insurance from top providers.
+- **Problem**: Finding affordable SR-22 insurance is confusing and opaque.
+- **Solution**: A comparison platform specifically for high-risk insurance needs.
+- **Link**: https://sr22insurancenow.com/
+- **Stack**: Next.js, React, Node.js, JSON, DigitalOcean.
+
+### Momentum Incident Management
+- **Description**: A structured process for identifying, analyzing, and resolving incidents that disrupt an organization's operations.
+- **Problem**: IT incident tracking tools are often bloated and expensive.
+- **Solution**: A streamlined, nested-table incident management system.
+- **Link**: https://momentum-chi-brown.vercel.app/
+- **Stack**: Vue.js, PrimeVue, Vite, TailwindCSS, Node.js, Express, MongoDB, Vercel.
+
+### Finding The Spots
+- **Description**: Say goodbye to the chaos of location scouting host, book, and create in our spaces effortlessly.
+- **Problem**: Location scouting for creative projects is disorganized.
+- **Solution**: A dedicated marketplace for booking creative spaces.
+- **Link**: https://findingthespots.com/
+- **Stack**: JavaScript, Vue.js, Vite, Express, Stripe, Node.js, MongoDB.

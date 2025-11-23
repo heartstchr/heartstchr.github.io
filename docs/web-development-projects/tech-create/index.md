@@ -12,6 +12,8 @@ project:
   schema: "https://schema.org/BusinessApplication"
   domain: "IT Service"
   year: "2025"
+  price: 0
+  currency: USD
   link: "https://techcreate.vercel.app/"
   codeLink: 
   contact: "https://wa.me/917026217029?text=Hi%20there%2C%20I'm%20interested%20in%20a%20custom%20code%20solution%20for%"
@@ -22,7 +24,7 @@ project:
   previousProject: {"name":"Emerald Design System","link":"/web-development-projects/emerald-design-system/"}
   nextProject: {"name":"Yit Plus","link":"/web-development-projects/yit-plus/"}
 ---
-<div>
+<article class="project-details">
   <div class="col-12">
     <div class="my-2 text-l line-height-3">{{$frontmatter.project.description}}</div>
   </div>
@@ -53,6 +55,10 @@ project:
     </div>
     <div class="col-12 pt-4">
       <link itemprop="applicationCategory" :href="$frontmatter.project.schema" />
+      <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+        <meta itemprop="price" :content="$frontmatter.project.price" />
+        <meta itemprop="priceCurrency" :content="$frontmatter.project.currency" />
+      </div>
       <div class="flex md:flex-row flex-column justify-content-center align-items-center gap-2 my-4 w-full max-w-96">
         <a v-if="$frontmatter.project.contact" :href="'/contact/?subject=' + encodeURIComponent('Custom Request: ' + $frontmatter.project.name)"
           class="flex flex-row no-underline w-full">
@@ -69,7 +75,7 @@ project:
       </div>
     </div>
   </div>
-</div>
+</article>
 <div class="flex flex-column px-4">
   <h3 class="my-2 text-l">Features</h3>
   <ul class="my-2 md:ml-3 text-sm">

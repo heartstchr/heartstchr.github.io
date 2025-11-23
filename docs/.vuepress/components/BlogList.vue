@@ -23,9 +23,11 @@
                 <div class="mb-1 p-2 flex flex-row items-center justify-content-between">
                   <div>
                     <i class="pi pi-calendar mr-2"></i>
-                    {{ new Date(items[0].date).toLocaleDateString('en-US', {
-                      month: 'short', day: 'numeric', year: 'numeric'
-                    }) }}
+                    <time :datetime="new Date(items[0].date).toISOString()">
+                      {{ new Date(items[0].date).toLocaleDateString('en-US', {
+                        month: 'short', day: 'numeric', year: 'numeric'
+                      }) }}
+                    </time>
                   </div>
                   <a :href="items[0].link" class="text-sm">
                     Read More &rarr;
@@ -50,9 +52,11 @@
                 <div class="mb-1 p-2 flex flex-row items-center justify-content-between">
                   <div>
                     <i class="pi pi-calendar mr-2"></i>
-                    {{ new Date(item.date).toLocaleDateString('en-US', {
-                      month: 'short', day: 'numeric', year: 'numeric'
-                    }) }}
+                    <time :datetime="new Date(item.date).toISOString()">
+                      {{ new Date(item.date).toLocaleDateString('en-US', {
+                        month: 'short', day: 'numeric', year: 'numeric'
+                      }) }}
+                    </time>
                   </div>
                   <a :href="item.link" class="text-sm">
                     Read More &rarr;
@@ -76,9 +80,11 @@
           <div class="mb-1 p-2 flex flex-row items-center justify-content-between">
             <div>
               <i class="pi pi-calendar mr-2"></i>
-              {{ new Date(item.date).toLocaleDateString('en-US', {
-                month: 'short', day: 'numeric', year: 'numeric'
-              }) }}
+              <time :datetime="new Date(item.date).toISOString()">
+                {{ new Date(item.date).toLocaleDateString('en-US', {
+                  month: 'short', day: 'numeric', year: 'numeric'
+                }) }}
+              </time>
             </div>
             <a :href="item.link" class="text-sm">
               Read More &rarr;

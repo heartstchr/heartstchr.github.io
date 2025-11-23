@@ -46,6 +46,28 @@ export default defineUserConfig({
         content: "public, max-age=31536000, immutable", // Cache static assets
       },
     ],
+    ["meta", { property: "og:image", content: "https://stackseekers.com/img/home/jiwanghosal.webp" }],
+    ["meta", { property: "og:site_name", content: "Stack Seekers" }],
+    ["meta", { name: "twitter:card", content: "summary_large_image" }],
+    ["meta", { name: "twitter:site", content: "@heartstchr" }],
+    ["meta", { name: "twitter:creator", content: "@heartstchr" }],
+    [
+      "script",
+      { type: "application/ld+json" },
+      JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Stack Seekers",
+        url: "https://stackseekers.com",
+        logo: "https://stackseekers.com/img/logojg.svg",
+        sameAs: [
+          "https://github.com/heartstchr",
+          "https://www.linkedin.com/in/jiwanghosal/",
+          "https://twitter.com/heartstchr",
+        ],
+      }),
+    ],
+
     [
       "link",
       {
