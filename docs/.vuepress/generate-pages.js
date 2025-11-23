@@ -258,3 +258,39 @@ const generatePages = (data, outputDir, slug, templateFn) => {
 // Generate project and service pages
 generatePages(freelance, outProjectDir, "name", projectTemplate);
 generatePages(services, outServiceDir, "code", serviceTemplate);
+
+// --- Tag Pages Generation ---
+import { posts } from "./data/posts.js";
+const outTagsDir = path.resolve(__dirname, "../tags");
+
+const tagTemplate = (tag) => {
+  return `---
+title: Posts tagged with ${tag}
+layout: Layout
+tag: ${tag}
+---
+<TagPage />
+`;
+};
+
+// Extract unique tags
+const allTags = new Set();
+posts.forEach(post => {
+  if (post.tags && Array.isArray(post.tags)) {
+    post.tags.forEach(tag => allTags.add(String(tag).toLowerCase()));
+  }
+});
+
+ensureDirectoryExists(outTagsDir);
+
+allTags.forEach(tag => {
+  const content = tagTemplate(tag);
+  // Create a slug for the tag (e.g., "web-development")
+  const tagSlug = toKebabCase(tag);
+  const dirPath = path.join(outTagsDir, tagSlug);
+  const filePath = path.join(dirPath, "index.md");
+
+  ensureDirectoryExists(dirPath);
+  fs.writeFileSync(filePath, content, "utf-8");
+  console.log(`✅ Created Tag Page: ${filePath}`);
+});
