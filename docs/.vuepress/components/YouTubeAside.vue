@@ -15,6 +15,7 @@
                     class="flex flex-column gap-1.5 p-1.5 bg-surface-0 rounded-md border border-surface-200 transition-all duration-200 hover:border-p-green-800 hover:shadow-md">
                     <img :src="video.thumbnail" :alt="video.title" class="w-full aspect-video object-cover rounded"
                         loading="lazy" />
+                    <span class="text-sm font-medium text-900 line-clamp-2 mt-2">{{ video.title }}</span>
                 </div>
             </a>
             <a href="https://www.youtube.com/@stackseekers" target="_blank" class="no-underline mt-2">
