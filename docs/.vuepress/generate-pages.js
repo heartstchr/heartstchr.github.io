@@ -62,6 +62,8 @@ project:
   schema: ${JSON.stringify(project.schema)}
   domain: ${JSON.stringify(project.domain)}
   year: ${JSON.stringify(project.year)}
+  price: ${JSON.stringify(project.price) || "0"}
+  currency: ${JSON.stringify(project.currency) || "USD"}
   link: ${JSON.stringify(project.link) || ""}
   codeLink: ${JSON.stringify(project.codeLink) || ""}
   contact: ${JSON.stringify(project.contact) || ""}
@@ -72,7 +74,7 @@ project:
   previousProject: ${JSON.stringify(previousProject)}
   nextProject: ${JSON.stringify(nextProject)}
 ---
-<div>
+<article class="project-details">
   <div class="col-12">
     <div class="my-2 text-l line-height-3">{{$frontmatter.project.description}}</div>
   </div>
@@ -103,6 +105,10 @@ project:
     </div>
     <div class="col-12 pt-4">
       <link itemprop="applicationCategory" :href="$frontmatter.project.schema" />
+      <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+        <meta itemprop="price" :content="$frontmatter.project.price" />
+        <meta itemprop="priceCurrency" :content="$frontmatter.project.currency" />
+      </div>
       <div class="flex md:flex-row flex-column justify-content-center align-items-center gap-2 my-4 w-full max-w-96">
         <a v-if="$frontmatter.project.contact" :href="'/contact/?subject=' + encodeURIComponent('Custom Request: ' + $frontmatter.project.name)"
           class="flex flex-row no-underline w-full">
@@ -119,7 +125,7 @@ project:
       </div>
     </div>
   </div>
-</div>
+</article>
 <div class="flex flex-column px-4">
   <h3 class="my-2 text-l">Features</h3>
   <ul class="my-2 md:ml-3 text-sm">
@@ -192,7 +198,7 @@ service:
   previousService: ${JSON.stringify(previousService)}
   nextService: ${JSON.stringify(nextService)}
 ---
-<div class="shadow-1 col-12 p-0 overflow-hidden" itemscope itemtype="https://schema.org/SoftwareApplication">
+<article class="shadow-1 col-12 p-0 overflow-hidden service-details" itemscope itemtype="https://schema.org/SoftwareApplication">
     <div class="px-4 m-2">
         <div class="text-4xl font-bold mb-4">
           <h2 itemprop="name" class="text-4xl">
@@ -209,7 +215,7 @@ service:
         </a>
         </div>
     </div>
-</div>
+</article>
 
 <div class="flex justify-content-between align-items-center mt-6 pt-4 border-top-1 surface-border">
   <div class="flex-1">

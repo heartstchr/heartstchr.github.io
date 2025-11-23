@@ -11,8 +11,9 @@ export default hopeTheme(
     repo: "heartstchr",
     docsDir: "/src",
     darkmode: "auto",
-    pageInfo: [],
+    pageInfo: ["Category", "Tag", "ReadingTime", "Date"],
     sidebar: false,
+    breadcrumb: true,
     locales: {
       "/": {
         navbar: enNavbar,

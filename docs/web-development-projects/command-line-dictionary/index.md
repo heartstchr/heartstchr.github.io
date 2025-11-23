@@ -12,6 +12,8 @@ project:
   schema: "https://schema.org/DeveloperApplication"
   domain: "Ed Tech"
   year: "2020"
+  price: 0
+  currency: USD
   link: 
   codeLink: "https://github.com/heartstchr/dic"
   contact: 
@@ -22,7 +24,7 @@ project:
   previousProject: {"name":"Call Matrix","link":"/web-development-projects/call-matrix/"}
   nextProject: {"name":"Stock Market","link":"/web-development-projects/stock-market/"}
 ---
-<div>
+<article class="project-details">
   <div class="col-12">
     <div class="my-2 text-l line-height-3">{{$frontmatter.project.description}}</div>
   </div>
@@ -53,6 +55,10 @@ project:
     </div>
     <div class="col-12 pt-4">
       <link itemprop="applicationCategory" :href="$frontmatter.project.schema" />
+      <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+        <meta itemprop="price" :content="$frontmatter.project.price" />
+        <meta itemprop="priceCurrency" :content="$frontmatter.project.currency" />
+      </div>
       <div class="flex md:flex-row flex-column justify-content-center align-items-center gap-2 my-4 w-full max-w-96">
         <a v-if="$frontmatter.project.contact" :href="'/contact/?subject=' + encodeURIComponent('Custom Request: ' + $frontmatter.project.name)"
           class="flex flex-row no-underline w-full">
@@ -69,7 +75,7 @@ project:
       </div>
     </div>
   </div>
-</div>
+</article>
 <div class="flex flex-column px-4">
   <h3 class="my-2 text-l">Features</h3>
   <ul class="my-2 md:ml-3 text-sm">

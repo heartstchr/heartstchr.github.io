@@ -1,13 +1,13 @@
-# AI Voice Generator Free - AI Narrator for Google Docs
+# Free AI Voice Generator & Text to Speech (Gemini) - AI Narrator
 
 ![AI Voice Generator Free](/img/projects/ai-narrator/app-screenshot.webp)  
-*Transform your Google Docs into professional audio narrations with this free AI voice generator.*
+*Transform your Google Docs into professional audio narrations with this free AI voice generator and text to audio converter.*
 
-## What is AI Narrator? Your Free AI Voice Generator
+## What is AI Narrator? Your Free AI Voice Generator & Text to Audio Converter
 
-AI Narrator is a powerful, **free AI voice generator** add-on for Google Docs that converts your documents into high-quality audio using advanced AI technology. This **AI voice generator free** tool leverages Google Gemini AI for natural-sounding voices and includes document analysis features to enhance your content. Whether you're a YouTuber creating voiceovers, a teacher narrating lessons, or anyone needing reliable text-to-speech, AI Narrator makes audio creation simple and free.
+AI Narrator is a powerful, **free AI voice generator** add-on for Google Docs that converts your documents into high-quality audio using advanced **Gemini TTS** technology. This **AI voice generator free** tool leverages Google Gemini AI for natural-sounding voices and includes document analysis features to enhance your content. Whether you're a YouTuber creating voiceovers, a teacher narrating lessons, or anyone needing reliable **text to speech AI**, AI Narrator makes audio creation simple and free.
 
-As a completely **free AI voice generator**, AI Narrator offers professional text-to-speech capabilities without any subscription fees. Simply use your free Google AI API key to access premium voices.
+As a completely **free AI voice generator**, AI Narrator offers professional **text to speech** capabilities without any subscription fees. Simply use your free Google AI API key to access premium **Gemini speech generation**.
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000;">
      <iframe 
@@ -21,8 +21,9 @@ As a completely **free AI voice generator**, AI Narrator offers professional tex
 
 ## Key Features of This Free AI Voice Generator
 
-### 1. AI-Powered Voice Generation
-- **Free AI Voice Generator**: Generate audio using 25+ unique Gemini AI voices (male and female) - perfect for YouTube intros or educational narrations.
+### 1. AI-Powered Voice Generation (Gemini TTS)
+- **Free AI Voice Generator**: Generate audio using 25+ unique **Gemini AI voices** (male and female) - perfect for YouTube intros or educational narrations.
+- **Text to Audio Converter**: Instantly convert any text selection into a downloadable WAV file.
 - Voice styles including Clear, Bright, Firm, Youthful, Breezy, Easy-going, Soft, Mature, Forward, Gentle, Warm, Upbeat, Informative, Excitable, Gravelly, Knowledgeable, Lively, and more.
 - Custom voice instructions for tone and style (e.g., "Speak energetically for a YouTube video" or "Use a calm, instructional tone for teaching").
 - Audio playback with controls and option to save WAV files to Google Drive in "AI Narrator" folder - easy export for video editing or sharing lessons.
@@ -66,22 +67,22 @@ As a completely **free AI voice generator**, AI Narrator offers professional tex
 ## Use Cases for AI Narrator - Free AI Voice Generator
 
 ### For YouTubers
-- Create professional voiceovers for videos without expensive software.
+- Create professional voiceovers for videos without expensive software using **Gemini TTS**.
 - Generate intros, outros, or full narrations from scripts in Google Docs.
 - Experiment with different voices to match your channel's style - e.g., upbeat for gaming content or informative for tutorials.
 - Analyze scripts with AI to improve engagement and viewer retention.
 
 ### For Teachers and Educators
 - Narrate lesson plans, worksheets, or study materials for students.
-- Create accessible audio versions of documents for diverse learning needs.
+- Create accessible audio versions of documents for diverse learning needs using **text to speech AI**.
 - Use AI analysis to refine educational content and make it more effective.
 - Generate podcasts or audio guides for remote learning - all for free.
 
 ### For General Users (Content Creators, Podcasters, etc.)
 - Convert blog posts, articles, or notes to podcasts or audiobooks.
 - Add voice to presentations or social media content.
-- Use as a free text-to-speech tool for proofreading or accessibility.
-- Leverage AI voices for multilingual content creation.
+- Use as a **free text to speech** tool for proofreading or accessibility.
+- Leverage **Gemini speech** for multilingual content creation.
 
 ## How to Use AI Narrator - Free AI Voice Generator
 
@@ -90,7 +91,7 @@ As a completely **free AI voice generator**, AI Narrator offers professional tex
    - Open from menu: Extensions > AI Narrator > Open Sidebar.
 
 2. **Setup Free AI Voice Generator**:
-   - Get your free Google AI API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
+   - Get your free **Gemini API key** from [Google AI Studio](https://aistudio.google.com/app/apikey).
    - Enter and save the key in the sidebar.
    - Test connection to verify.
 
@@ -126,9 +127,9 @@ As a completely **free AI voice generator**, AI Narrator offers professional tex
 
 ## Why Choose AI Narrator as Your AI Voice Generator Free Tool?
 
-- **Completely Free**: No costs beyond your free Google AI API usage - ideal for budget-conscious YouTubers and educators.
-- **Seamless Google Docs Integration**: Works directly in your documents, perfect for scripting videos or lesson plans.
-- **High-Quality AI Voices**: Powered by Gemini AI for natural speech that engages audiences.
+- **Completely Free**: No costs beyond your free **Gemini API key** usage - ideal for budget-conscious YouTubers and educators.
+- **Seamless Google Docs Integration**: Works directly in your documents, a powerful alternative to **Google Docs voice typing**.
+- **High-Quality AI Voices**: Powered by **Gemini TTS** for natural speech that engages audiences.
 - **Content Analysis**: Improve your writing with AI insights - great for refining YouTube scripts or teaching materials.
 - **Open-Source**: Based on Google Apps Script (code.gs) with customizable UI (Sidebar.html).
-- **SEO-Friendly Audio Creation**: Perfect for content creators searching for "AI voice generator free".
+- **SEO-Friendly Audio Creation**: Perfect for content creators searching for "**ai voice generator free**" or "**text to audio converter**".

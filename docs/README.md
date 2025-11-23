@@ -65,7 +65,7 @@ copyright: false
       <div class="border-round-md flex align-items-center justify-content-center marquee-item" v-for="org in orgs" :key="`org-1-${org.title}`">
         <div class="no-underline flex flex-column justify-content-center flex-wrap">
           <div class="flex align-items-center justify-content-center h-3rem">
-            <img :src="org.icon" :alt="org.title" width="40px" height="40px" class="border-round-md" loading="eager" fetchpriority="high"/>
+            <img :src="org.icon" :alt="org.title" width="40px" height="40px" class="border-round-md" loading="lazy" fetchpriority="low"/>
           </div>
           <div class="h-5rem">
             <h3 class="text-base md:text-xl font-bold flex align-items-center justify-content-center p-0 m-0 text-center line-height-3">{{org.title}}</h3>
@@ -76,7 +76,7 @@ copyright: false
       <div class="border-round-md flex align-items-center justify-content-center marquee-item" v-for="org in orgs" :key="`org-2-${org.title}`" aria-hidden="true">
         <div class="no-underline flex flex-column justify-content-center flex-wrap">
           <div class="flex align-items-center justify-content-center h-3rem">
-            <img :src="org.icon" :alt="org.title" width="40px" height="40px" class="border-round-md" loading="eager" fetchpriority="high"/>
+            <img :src="org.icon" :alt="org.title" width="40px" height="40px" class="border-round-md" loading="lazy" fetchpriority="low"/>
           </div>
           <div class="h-5rem">
             <h3 class="text-base md:text-xl font-bold flex align-items-center justify-content-center p-0 m-0 text-center line-height-3">{{org.title}}</h3>
