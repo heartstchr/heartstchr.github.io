@@ -7,9 +7,11 @@
             }) }}
         </div>
         <div class="flex flex-row gap-2 flex-wrap md:justify-content-start justify-content-center">
-            <div v-for="cat in category" :key="cat" class="px-2 py-1 border-round-lg border-1 border-green-200 text-sm">
-                {{ cat.toLowerCase().replace(/\s+/g, '-') }}
-            </div>
+            <a v-for="cat in category" :key="cat" :href="'/tags/' + cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') + '/'" class="no-underline text-900">
+                <div class="px-2 py-1 border-round-lg border-1 border-green-200 text-sm hover:bg-green-50 transition-colors cursor-pointer">
+                    {{ cat.toLowerCase() }}
+                </div>
+            </a>
         </div>
     </div>
 </template>

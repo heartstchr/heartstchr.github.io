@@ -26,6 +26,8 @@ import ProjectRequestForm from "./components/ProjectRequestForm.vue";
 import BlogNavigation from "./components/BlogNavigation.vue";
 import RelatedPosts from "./components/RelatedPosts.vue";
 
+import TagPage from "./components/TagPage.vue";
+
 export default defineClientConfig({
   enhance({ app }) {
     app.use(PrimeVue, {
@@ -53,6 +55,7 @@ export default defineClientConfig({
     app.component("ProjectRequestForm", ProjectRequestForm);
     app.component("BlogNavigation", BlogNavigation);
     app.component("RelatedPosts", RelatedPosts);
+    app.component("TagPage", TagPage);
   },
   setup() {
     // Ensure canonical URLs strip query parameters
