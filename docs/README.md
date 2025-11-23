@@ -226,7 +226,7 @@ copyright: false
   <div class="my-8">
       <a href="https://cal.com/stackseekers" size="large"
           class="flex justify-content-center text-center no-underline -mt-4" aria-label="Send an Email">
-      <Button label="Book a 25‑min free strategy call" icon="pi pi-briefcase" severity="primary" raised rounded />
+      <Button label="Book a free call" icon="pi pi-briefcase" severity="primary" raised rounded />
       </a>
       <div class="text-center text-xs mt-1">No commitment. Get a roadmap and estimate.</div>
   </div>
@@ -279,7 +279,7 @@ copyright: false
             <div class="my-8">
                 <a href="https://cal.com/stackseekers" size="large"
                     class="flex justify-content-center text-center no-underline -mt-4" aria-label="Send an Email">
-                <Button label="Book a 25‑min free strategy call" icon="pi pi-briefcase" severity="primary" raised rounded />
+                <Button label="Book a free call" icon="pi pi-briefcase" severity="primary" raised rounded />
                 </a>
                 <div class="text-center text-xs mt-1">No commitment. Get a roadmap and estimate.</div>
             </div>
