@@ -56,6 +56,18 @@ export default hopeTheme(
           cleanPath = cleanPath.replace(/\/+/g, '/');
           return `https://stackseekers.com${cleanPath}`;
         },
+        // Dynamically set Open Graph image based on project frontmatter
+        ogp: (ogp, page) => {
+          const images = page.frontmatter?.project?.images;
+          if (Array.isArray(images) && images.length > 0 && images[0].itemImageSrc) {
+            const src = images[0].itemImageSrc;
+            ogp['og:image'] = src.startsWith('http') ? src : `https://stackseekers.com${src}`;
+          } else if (!ogp['og:image']) {
+             // Fallback if no image is found by default logic
+             ogp['og:image'] = 'https://stackseekers.com/img/home/jiwanghosal.webp';
+          }
+          return ogp;
+        },
       },
       sitemap: {
         changefreq: "hourly",
