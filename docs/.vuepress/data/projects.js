@@ -2,6 +2,81 @@ import { toKebabCase } from "../utils/index.js";
 
 export const freelance = [
   {
+    name: "Home Services Marketplace",
+    description:
+      "A modern, SEO-optimized web platform that connects homeowners and property managers with verified local service providers. Built with Next.js 15 and React 19, it serves as a lead generation and matching service with dynamic routing for thousands of location-service combinations.",
+    software: "Web Platform",
+    org: "Stack Seekers",
+    year: "2025",
+    domain: "Home Services & Lead Generation",
+    schema: "https://schema.org/WebApplication",
+    link: "https://localxr.com",
+    price: "0",
+    currency: "USD",
+    contact: "mailto:jiwan.cse@gmail.com?subject=LocalXR Inquiry",
+    stack: [
+      "nextdotjs/black/white",
+      "react",
+      "tailwindcss",
+      "sass",
+      "nodedotjs",
+      "axios",
+      "Eslint",
+      "Prettier",
+    ],
+    otherSkills: [
+      "SEO Optimization",
+      "Lead Generation",
+      "Dynamic Routing",
+      "Server-Side Rendering",
+      "Google Places API",
+      "Performance Optimization",
+    ],
+    features: [
+      {
+        text: "Location-Aware Search: Google Places Integration, ZIP Code Search, and hierarchical State/City navigation with smart normalization.",
+      },
+      {
+        text: "Dynamic Listings & Routing: Automatically generated listings for thousands of location-service combinations with SEO-optimized URLs.",
+      },
+      {
+        text: "Lead Generation System: Secure callback and contact forms with input sanitization, validation, and rate limiting.",
+      },
+      {
+        text: "Performance First: Optimized for Core Web Vitals with dynamic imports, image optimization, and server-side rendering.",
+      },
+      {
+        text: "Comprehensive SEO: Dynamic meta tags, canonical URLs, and automated sitemap generation for maximum search visibility.",
+      },
+      {
+        text: "Scalable Architecture: Built on Next.js 15 and React 19 with a modular component system and context-driven state management.",
+      },
+    ],
+    images: [
+      {
+        itemImageSrc: "/img/projects/localxr/localxr-cover.png",
+        alt: "LocalXR - Home Services Marketplace Cover",
+      },
+      {
+        itemImageSrc: "/img/projects/localxr/plumber-home.png",
+        alt: "LocalXR - Plumber Home Page",
+      },
+      {
+        itemImageSrc: "/img/projects/localxr/listing.png",
+        alt: "LocalXR - Service Listings",
+      },
+      {
+        itemImageSrc: "/img/projects/localxr/plumbing-services.png",
+        alt: "LocalXR - Plumbing Services Page",
+      },
+      {
+        itemImageSrc: "/img/projects/localxr/blog.png",
+        alt: "LocalXR - Blog Section",
+      },
+    ],
+    details: "./details/localxr.md",
+  },
+  {
     name: "Contact Form Plugin",
     description:
       "A lightweight, embeddable contact form widget that can be integrated into any website and automatically forwards submissions to a Notion database. Generator-based architecture allowing multiple form configurations with various field combinations - completely free and easy to customize.",
