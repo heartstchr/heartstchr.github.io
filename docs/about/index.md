@@ -29,8 +29,8 @@ copyright: false
     <h2 class="my-4 text-4xl font-bold">Highlights of My Journey</h2>
     <div>
       <h3 class="my-4 text-2xl text-md">Participant at the JS world conference, Amsterdam. </h3>
-      <div class="col-12 overflow-hidden image-box">
-        <Image :src="`/img/about/amsterdamConference.webp`" width="100%" />
+      <div class="col-12">
+        <YouTubePlayers videoId="H7B5hQbQqKQ" :autoplay="true" :muted="true" :loop="true" :controls="false" />
       </div>
       <div class="my-4 text-md">In 2023, I had the privilege of participating in the renowned JS world conference Amsterdam, where I contributed to discussions on cutting-edge technologies, VueJs, Pinia, including micro-frontend and modern application architectures.</div>
       <h3 class="my-4 text-2xl text-md">Participant at NSE Future Tech hackathon, India.</h3>

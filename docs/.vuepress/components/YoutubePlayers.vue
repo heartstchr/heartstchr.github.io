@@ -9,11 +9,33 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-const props = defineProps<{
-    videoId: string
-}>()
+const props = withDefaults(defineProps<{
+    videoId: string,
+    autoplay?: boolean,
+    muted?: boolean,
+    loop?: boolean,
+    controls?: boolean
+}>(), {
+    autoplay: false,
+    muted: false,
+    loop: false,
+    controls: true
+})
 
-const embedUrl = computed(() => `https://www.youtube.com/embed/${props.videoId}`)
+const embedUrl = computed(() => {
+    let url = `https://www.youtube.com/embed/${props.videoId}?`
+    const params = new URLSearchParams()
+
+    if (props.autoplay) params.append('autoplay', '1')
+    if (props.muted || props.autoplay) params.append('mute', '1')
+    if (props.loop) {
+        params.append('loop', '1')
+        params.append('playlist', props.videoId)
+    }
+    if (!props.controls) params.append('controls', '0')
+
+    return url + params.toString()
+})
 </script>
 
 <style scoped>
