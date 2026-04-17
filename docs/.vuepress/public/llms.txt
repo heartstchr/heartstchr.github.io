@@ -51,10 +51,6 @@
   - **Problem**: IT incident tracking tools are often bloated and expensive.
   - **Solution**: A streamlined, nested-table incident management system.
 
-- [Finding The Spots](https://findingthespots.com/)
-  - **Problem**: Location scouting for creative projects is disorganized.
-  - **Solution**: A dedicated marketplace for booking creative spaces.
-
 ## Contact
 
 - [Book a Call](https://cal.com/stackseekers)

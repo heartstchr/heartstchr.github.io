@@ -1676,74 +1676,64 @@ const baseProjects = [
       },
     ],
   },
-  {
-    name: "Contact Form Plugin",
-    schema: "https://schema.org/WebApplication",
-    images: [
-      {
-        itemImageSrc: "/img/projects/contact-form-plugin/contact-form-widget-cover.webp",
-        alt: "Contact Form Plugin - Embeddable Contact Form",
-      },
-    ],
-  },
-  {
-    name: "Finding The Spots",
-    description:
-      "Say goodbye to the chaos of location scouting host, book, and create in our spaces effortlessly.",
-    software: "Web",
-    org: "FTS",
-    year: "2024",
-    domain: "Leisure, travel, and tourism",
-    schema: "https://schema.org/DeveloperApplication",
-    link: "https://findingthespots.com/",
-    contact:
-      "https://wa.me/917026217029?text=Hi%20there%2C%20I'm%20interested%20in%20a%20custom%20code%20solution%20for%20",
+  // {
+  //   name: "Finding The Spots",
+  //   description:
+  //     "Say goodbye to the chaos of location scouting host, book, and create in our spaces effortlessly.",
+  //   software: "Web",
+  //   org: "FTS",
+  //   year: "2024",
+  //   domain: "Leisure, travel, and tourism",
+  //   schema: "https://schema.org/DeveloperApplication",
+  //   link: "https://findingthespots.com/",
+  //   contact:
+  //     "https://wa.me/917026217029?text=Hi%20there%2C%20I'm%20interested%20in%20a%20custom%20code%20solution%20for%20",
 
-    otherSkills: ["Pinia", "API integration"],
-    images: [
-      {
-        itemImageSrc: "/img/home/projects/fts.webp",
-        alt: "Cover screen for application page",
-      },
-    ],
-    features: [
-      { text: "Secure user registration, login, and logout functionality." },
-      {
-        text: "Role-based access for general users, property owners, and admins.",
-      },
-      { text: "Search for properties/spots by type, country, city, and time." },
-      {
-        text: "Advanced filters to refine search results based on user preferences.",
-      },
-      {
-        text: "Detailed property pages with full image galleries and spot information.",
-      },
-      {
-        text: "Booking request system with date, time, and duration selection.",
-      },
-      {
-        text: "Free cancellation within 24 hours with redirection to spot listings.",
-      },
-      {
-        text: "Seamless and secure payment processing via Stripe for confirmed bookings.",
-      },
-      {
-        text: "Email notifications for booking and payment confirmations (users & owners).",
-      },
-      { text: "Property owners can list new spots with images and details." },
-      { text: "Admin verification process for new spot submissions." },
-      {
-        text: "Responsive, mobile-friendly interface for seamless access across devices.",
-      },
-      {
-        text: "Integrated APIs for authentication, spot listing, booking, search, and payments.",
-      },
-      {
-        text: "Scalable backend architecture to support future growth and features.",
-      },
-    ],
-    details: "./details/fts.md",
-  },
+  //   otherSkills: ["Pinia", "API integration"],
+  //   images: [
+  //     {
+  //       itemImageSrc: "/img/home/projects/fts.webp",
+  //       alt: "Cover screen for application page",
+  //     },
+  //   ],
+  //   features: [
+  //     { text: "Secure user registration, login, and logout functionality." },
+  //     {
+  //       text: "Role-based access for general users, property owners, and admins.",
+  //     },
+  //     { text: "Search for properties/spots by type, country, city, and time." },
+  //     {
+  //       text: "Advanced filters to refine search results based on user preferences.",
+  //     },
+  //     {
+  //       text: "Detailed property pages with full image galleries and spot information.",
+  //     },
+  //     {
+  //       text: "Booking request system with date, time, and duration selection.",
+  //     },
+  //     {
+  //       text: "Free cancellation within 24 hours with redirection to spot listings.",
+  //     },
+  //     {
+  //       text: "Seamless and secure payment processing via Stripe for confirmed bookings.",
+  //     },
+  //     {
+  //       text: "Email notifications for booking and payment confirmations (users & owners).",
+  //     },
+  //     { text: "Property owners can list new spots with images and details." },
+  //     { text: "Admin verification process for new spot submissions." },
+  //     {
+  //       text: "Responsive, mobile-friendly interface for seamless access across devices.",
+  //     },
+  //     {
+  //       text: "Integrated APIs for authentication, spot listing, booking, search, and payments.",
+  //     },
+  //     {
+  //       text: "Scalable backend architecture to support future growth and features.",
+  //     },
+  //   ],
+  //   details: "./details/fts.md",
+  // },
   {
     name: "IBRebuild for ABN AMRO BANK N.V.",
     schema: "https://schema.org/DeveloperApplication",
@@ -1751,6 +1741,16 @@ const baseProjects = [
       {
         itemImageSrc: "/img/home/projects/ABN_Amro.webp",
         alt: "Cover screen for application page",
+      },
+    ],
+  },
+  {
+    name: "Contact Form Plugin",
+    schema: "https://schema.org/WebApplication",
+    images: [
+      {
+        itemImageSrc: "/img/projects/contact-form-plugin/contact-form-widget-cover.webp",
+        alt: "Contact Form Plugin - Embeddable Contact Form",
       },
     ],
   },

@@ -21,7 +21,7 @@ project:
   images: [{"itemImageSrc":"/img/home/projects/ABN_Amro.webp","alt":"IBRebuild for ABN AMRO BANK N.V. - Cover page"}]
   features: 
   details: ""
-  previousProject: {"name":"Finding The Spots","link":"/web-development-projects/finding-the-spots/"}
+  previousProject: {"name":"Momentum Incident Management","link":"/web-development-projects/momentum-incident-management/"}
   nextProject: {"name":"Emerald Design System","link":"/web-development-projects/emerald-design-system/"}
 ---
 <article class="project-details">
