@@ -8,7 +8,7 @@ tags: [VuePress, CSS, Blog, Web Design, Tech]
 
 <MetaContent :date="$frontmatter.date" :category="$frontmatter.tags"/>
 
-Have you ever visited a website that felt chaotic—tiny fonts, clashing colors, or a cluttered layout that made your brain hurt? Poor design can overwhelm users, but with **CSS (Cascading Style Sheets)**, you can create a visually appealing, brain-friendly website that enhances user experience. CSS does more than make a site look good; it influences how users process and retain information. In this blog post, we’ll explore **7 ways CSS impacts your brain** and how to use it to optimize your website for readability, engagement, and accessibility.
+Have you ever visited a website that felt chaotic—tiny fonts, clashing colors, or a cluttered layout that made your brain hurt? Poor design can overwhelm users, but with **CSS (Cascading Style Sheets)**, you can create a visually appealing, brain-friendly website that enhances user experience. CSS does more than make a site look good; it influences how users process and retain information. In this blog post, I’ll explore **7 ways CSS impacts your brain** and how to use it to optimize your website for readability, engagement, and accessibility.
 
 Watch this insightful video to dive deeper into how CSS can transform your web design: [YouTube Video on CSS and Web Design](https://www.youtube.com/watch?v=8rYCgrrbHqk)
 
@@ -86,7 +86,7 @@ Accessible design makes your site welcoming and brain-friendly for all users.
 
 CSS isn’t just about aesthetics—it’s about creating an experience that’s easy on the eyes and the brain. By optimizing **typography**, **color contrast**, **white space**, **visual hierarchy**, **layout design**, **focus**, and **accessibility**, you can craft a website that users love and remember. Start implementing these 7 CSS techniques today to boost engagement, improve readability, and leave a lasting impression.
 
-**Ready to elevate your web design?** Share your favorite CSS tips in the comments or check out our [YouTube video](https://www.youtube.com/watch?v=8rYCgrrbHqk) for a deeper dive into brain-friendly web design!
+**Ready to elevate your web design?** Share your favorite CSS tips in the comments or check out my [YouTube video](https://www.youtube.com/watch?v=8rYCgrrbHqk) for a deeper dive into brain-friendly web design!
 
 <div class="blog-content-and-aside">
   <div class="blog-content-main"></div>

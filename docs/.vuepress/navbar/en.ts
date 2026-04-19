@@ -69,7 +69,21 @@ export const enNavbar = navbar([
       },
     ],
   },
-  { text: "About", icon: "pi pi-user", link: "/about/" },
+  {
+    text: "About",
+    icon: "pi pi-user",
+    link: "/about/",
+    children: [
+      {
+        text: "Agency",
+        link: "/about/",
+      },
+      {
+        text: "Jiwan Ghosal Profile",
+        link: "/jiwan-ghosal/",
+      },
+    ],
+  },
   {
     text: "Contact",
     icon: "",

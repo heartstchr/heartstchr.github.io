@@ -1,7 +1,7 @@
 ---
 home: true
-title: Web Developer
-description: Stack Seekers is a full-stack web development agency helping startups and businesses build modern, high-performance websites and web applications. From idea to launch, we turn your vision into powerful digital solutions. Expert Vue.js, React.js, and Node.js developer delivering scalable web, mobile, and software solutions with 𝙈𝙀𝙍𝙉 and 𝙈𝙀𝙑𝙉 stacks (MongoDB, Express, React/Vue, Next/Nuxt, Node.js).
+title: High-Performance Digital Product Engineering
+description: "Freelance Full-Stack Developer available for hire. I build high-performance web platforms — from programmatic SEO engines to custom SaaS dashboards. React, Next.js & Node.js expert."
 editLink: false
 copyright: false
 ---
@@ -10,391 +10,421 @@ copyright: false
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
   <div class="grid align-items-center">
-    <div class="col-12 md:col-8">
+    <div class="col-12 lg:col-8">
       <div class="mb-3 flex align-items-center gap-2">
-        <span class="inline-flex align-items-center px-2 py-1 border-round-xl bg-primary text-xs">
-          <i class="pi pi-sparkles mr-1"></i> New‑age development partner
+        <span class="inline-flex align-items-center px-2 py-1 border-round-xl bg-primary text-xs font-bold uppercase letter-spacing-wide">
+          <i class="pi pi-bolt mr-1"></i> 10 Years of Enterprise-Grade Architecture
         </span>
-        <span class="text-xs text-500">MEVN/MERN • AWS/Azure • AI</span>
       </div>
-      <h1 class="m-0 p-0 line-height-2 text-5xl md:text-7xl font-bold">
-        Build <span class="text-gradient">world‑class</span> products, faster
+      <h1 class="m-0 p-0 line-height-2 text-4xl md:text-7xl font-bold">
+        I engineer products that <span class="text-gradient">shatter performance</span> bottlenecks and <span class="text-gradient-2">force growth</span>.
       </h1>
-      <div class="text-xl md:text-2xl mt-3 line-height-3 min-h-10rem">
-        <div class="text-4xl" >From <Transition name="fade" mode="out-in"><span :key="currentPhrase" class="text-gradient-2">{{ currentPhrase }}</span></Transition> to scale.</div>
-        <span class="flex mt-4">I partner with founders to plan, build, and launch reliable software with clarity, quality, and speed.</span>
-        <p class="mt-3">I build with your business goals in mind and keep learning, so we both win.</p>
+      <div class="text-xl md:text-2xl mt-4 line-height-3 text-700">
+        From migrating global banking infra for **ABN AMRO** to reducing lead turnaround from **4 days to 2 hours** for **Upstox**. I build the high-integrity architecture that powers your next 6 months of growth.
       </div>
-      <div class="flex gap-3 mt-5 flex-wrap">
-        <a href="https://cal.com/stackseekers" target="_blank" class="no-underline mt-4">
-          <Button label="Book a 25‑min strategy call" icon="pi pi-calendar-clock" severity="primary" rounded raised />
+      <div class="flex flex-column md:flex-row gap-3 mt-5">
+        <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+          <Button label="Book a Free Discovery Call" icon="pi pi-calendar-clock" severity="primary" size="large" rounded raised class="w-full md:w-auto" />
         </a>
-        <CustomButton href="/web-development-projects/" label="See Work">
-          <template #icon>
-            <Circles />
-          </template>
-        </CustomButton>
+        <a href="#solutions" class="no-underline">
+          <Button label="Explore My Solutions" icon="pi pi-arrow-down" class="p-button-outlined p-button-secondary w-full md:w-auto" size="large" rounded />
+        </a>
       </div>
       <div class="mt-5 grid gap-3 ml-1">
         <div class="flex align-items-center gap-3">
           <i class="pi pi-check-circle text-green-500"></i>
-          <span class="text-sm md:text-base">Enterprise patterns, startup speed</span>
+          <span class="text-sm md:text-base">Modern Tech Stack (Next.js, React, Node)</span>
         </div>
         <div class="flex align-items-center gap-3">
           <i class="pi pi-check-circle text-green-500"></i>
-          <span class="text-sm md:text-base">Transparent roadmap and weekly demos</span>
+          <span class="text-sm md:text-base">Built for Scale and Speed</span>
         </div>
       </div>
     </div>
-    <div class="col-12 md:col-4 mt-6 md:mt-0">
-      <div class="relative hero-visual border-round-2xl overflow-hidden">
-        <img src="/img/home/jiwanghosal.webp" alt="Jiwan Ghosal" class="w-1/2 border-round-2xl shadow-4 hero-image" loading="eager" fetchpriority="high" />
-        <div class="glow-ring"></div>
+    <div class="col-12 lg:col-4 mt-6 lg:mt-0 hidden lg:block">
+      <div class="relative hero-visual border-round-2xl overflow-hidden p-4 text-center glass-effect">
+        <Carousel :value="heroSlides" :numVisible="1" :numScroll="1" :autoplayInterval="5000" circular>
+            <template #item="slotProps">
+                <div class="p-2">
+                    <img :src="slotProps.data.image" :alt="slotProps.data.alt" class="w-full border-round-2xl shadow-4 mb-3" />
+                    <div class="font-bold text-lg text-900">{{ slotProps.data.title }}</div>
+                    <div class="text-sm text-600">{{ slotProps.data.subtitle }}</div>
+                </div>
+            </template>
+        </Carousel>
       </div>
     </div>
   </div>
 </section>
 
-<div class="my-6">
-  <!-- <div class="text-center"> -->
-    <div class="text-4xl font-bold sr-only"><h2>Scaling startups <div class="text-4xl font-bold bg-primary">Elevating industry giants</div></h2></div>
-    <!-- <div class="text-xl line-height-2">I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development.</div>
-  </div> -->
-  <div class="my-4 marquee">
+<!-- Trusted By Marquee -->
+<div class="mb-8 mt-4">
+  <div class="text-center font-bold text-500 mb-3 text-sm uppercase letter-spacing-wide opacity-60">Verified Technical Partnerships</div>
+  <div class="marquee">
     <div class="marquee-track">
-      <div class="border-round-md flex align-items-center justify-content-center marquee-item" v-for="org in orgs" :key="`org-1-${org.title}`">
-        <div class="no-underline flex flex-column justify-content-center flex-wrap">
-          <div class="flex align-items-center justify-content-center h-3rem">
-            <img :src="org.icon" :alt="org.title" width="40px" height="40px" class="border-round-md" loading="lazy" fetchpriority="low"/>
-          </div>
-          <div class="h-5rem">
-            <h3 class="text-base md:text-xl font-bold flex align-items-center justify-content-center p-0 m-0 text-center line-height-3">{{org.title}}</h3>
-            <div class="text-xs md:text-sm flex align-items-center justify-content-center line-height-2 text-center">{{org.details}}</div>
-          </div>
+      <div class="marquee-item flex align-items-center gap-2" v-for="org in orgs" :key="`org-1-${org.title}`">
+            <img :src="org.icon" :alt="org.title" width="32px" height="32px" class="border-round-md grayscale-filter" loading="lazy" fetchpriority="low"/>
+            <span class="text-xl font-bold text-500">{{org.title}}</span>
+      </div>
+      <div class="marquee-item flex align-items-center gap-2" v-for="org in orgs" :key="`org-2-${org.title}`" aria-hidden="true">
+            <img :src="org.icon" :alt="org.title" width="32px" height="32px" class="border-round-md grayscale-filter" loading="lazy" fetchpriority="low"/>
+            <span class="text-xl font-bold text-500">{{org.title}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- High Impact Metrics -->
+<div class="mb-8 px-2 md:px-4" style="max-width: 1200px; margin: 0 auto;">
+  <div class="grid">
+    <div class="col-12 md:col-4 p-2 md:p-3" v-for="win in highImpactWins" :key="win.title">
+      <div class="surface-0 p-4 border-round-xl shadow-2 h-full border-top-3" :class="[`border-${win.color}-500`]">
+        <div class="flex align-items-center justify-content-between mb-3">
+          <span class="text-sm font-bold uppercase text-500">{{win.title}}</span>
+          <i class="pi" :class="[win.icon, `text-${win.color}-500`]"></i>
+        </div>
+        <div class="text-3xl font-bold mb-2">{{win.metric}}</div>
+        <p class="text-700 line-height-3 m-0" v-html="win.description"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mb-8 px-2 md:px-4 py-6 md:py-8 surface-50 border-round-3xl" style="max-width: 1200px; margin: 0 auto;">
+  <div class="text-center mb-6">
+    <h2 class="text-3xl md:text-5xl font-bold line-height-2 m-0 p-0 mb-3">Which bottleneck is holding you back?</h2>
+    <p class="text-lg md:text-xl text-600 max-w-30rem mx-auto">I engineer specialized solutions that break through your company's deepest technical challenges.</p>
+  </div>
+  
+  <div class="grid">
+    <div class="col-12 md:col-6 p-3">
+      <div class="surface-0 p-4 border-round-xl shadow-2 h-full border-top-3 border-green-500">
+        <div class="bg-green-100 text-green-600 border-circle w-3rem h-3rem flex align-items-center justify-content-center mb-4"><i class="pi pi-sparkles text-xl"></i></div>
+        <h3 class="m-0 mb-3 font-bold text-xl">The Intelligence Problem</h3>
+        <p class="text-700 line-height-3">You are spending hundreds of hours on manual content creation or matching processes. You need custom AI integration (like Gemini/OpenAI interfaces) to automate intelligence safely within your own app.</p>
+      </div>
+    </div>
+    <div class="col-12 md:col-6 p-3">
+      <div class="surface-0 p-4 border-round-xl shadow-2 h-full border-top-3 border-purple-500">
+        <div class="bg-purple-100 text-purple-600 border-circle w-3rem h-3rem flex align-items-center justify-content-center mb-4"><i class="pi pi-code text-xl"></i></div>
+        <h3 class="m-0 mb-3 font-bold text-xl">The Scale Problem</h3>
+        <p class="text-700 line-height-3">You need to launch a complex SaaS MVP, or your legacy application is crumbling under traffic. You require flawless UI/UX, robust backend architecture, and high-concurrency capability.</p>
+      </div>
+    </div>
+    <div class="col-12 md:col-6 p-3">
+      <div class="surface-0 p-4 border-round-xl shadow-2 h-full border-top-3 border-orange-500">
+        <div class="bg-orange-100 text-orange-600 border-circle w-3rem h-3rem flex align-items-center justify-content-center mb-4"><i class="pi pi-users text-xl"></i></div>
+        <h3 class="m-0 mb-3 font-bold text-xl">The Traffic Problem</h3>
+        <p class="text-700 line-height-3">Manual SEO doesn't scale. You need thousands of lightning-fast, dynamically generated pages to capture long-tail local search traffic natively, but standard CMS platforms buckle under the weight.</p>
+      </div>
+    </div>
+    <div class="col-12 md:col-6 p-3">
+      <div class="surface-0 p-4 border-round-xl shadow-2 h-full border-top-3 border-blue-500">
+        <div class="bg-blue-100 text-blue-600 border-circle w-3rem h-3rem flex align-items-center justify-content-center mb-4"><i class="pi pi-database text-xl"></i></div>
+        <h3 class="m-0 mb-3 font-bold text-xl">The Operational Problem</h3>
+        <p class="text-700 line-height-3">Your team is drowning in manual data entry. Your data is stuck in Notion or Spreadsheets, and building a custom portal from scratch seems too expensive and time-consuming.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Solutions & Case Studies -->
+<div id="solutions" class="mb-8">
+  <div class="text-center pb-6">
+    <h2 class="text-4xl font-bold mb-2">My Engineering Pillars</h2>
+    <p class="text-xl text-600">Proven architectures deployed for real businesses.</p>
+  </div>
+
+  <!-- Pillar 1 -->
+  <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1">
+    <div class="col-12 lg:col-5">
+      <h3 class="text-sm font-bold uppercase text-green-500 letter-spacing-wide mb-2"><i class="pi pi-sparkles mr-1"></i> Pillar 1</h3>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">AI & Machine Learning Apps</h2>
+      <p class="text-lg line-height-3 text-700 mb-4">Integrate Large Language Models (LLMs) deeply into your user experience. I build custom applications featuring AI-powered matching algorithms, text-to-speech generators, and native intelligence that saves thousands of manual hours.</p>
+      <ul class="list-none p-0 m-0 mb-5 text-700">
+        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Advanced Matching Algorithms</li>
+        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Gemini / OpenAI API Integrations</li>
+        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Prompt Engineering & Context</li>
+      </ul>
+    </div>
+    <div class="col-12 lg:col-7">
+      <div class="grid">
+        <div class="col-6 p-2">
+          <a href="/web-development-projects/ai-dynamic-crud-app/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
+            <img src="/img/projects/ai-dynamic-crud-app/ai-webapp-english.png" alt="AI Dynamic CRUD App" class="w-full h-10rem md:h-12rem object-cover" />
+            <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">AI Dynamic CRUD</div>
+          </a>
+        </div>
+        <div class="col-6 p-2">
+          <a href="/web-development-projects/ai-voice-generator/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
+            <img src="/img/projects/ai-narrator/Google-docs-text-to-speech-ai-voice-ai-audio.webp" alt="AI Voice Generator" class="w-full h-10rem md:h-12rem object-cover" />
+             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">AI Voice Generator</div>
+          </a>
         </div>
       </div>
-      <div class="border-round-md flex align-items-center justify-content-center marquee-item" v-for="org in orgs" :key="`org-2-${org.title}`" aria-hidden="true">
-        <div class="no-underline flex flex-column justify-content-center flex-wrap">
-          <div class="flex align-items-center justify-content-center h-3rem">
-            <img :src="org.icon" :alt="org.title" width="40px" height="40px" class="border-round-md" loading="lazy" fetchpriority="low"/>
-          </div>
-          <div class="h-5rem">
-            <h3 class="text-base md:text-xl font-bold flex align-items-center justify-content-center p-0 m-0 text-center line-height-3">{{org.title}}</h3>
-            <div class="text-xs md:text-sm flex align-items-center justify-content-center line-height-2 text-center">{{org.details}}</div>
-          </div>
+    </div>
+  </div>
+
+  <!-- Pillar 2 -->
+  <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1 flex-column lg:flex-row-reverse">
+    <div class="col-12 lg:col-5">
+      <h3 class="text-sm font-bold uppercase text-purple-500 letter-spacing-wide mb-2"><i class="pi pi-code mr-1"></i> Pillar 2</h3>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Custom SaaS & Enterprise Apps</h2>
+      <p class="text-lg line-height-3 text-700 mb-4">Sophisticated web applications designed for scale. From highly complex banking portal migrations to high-concurrency dashboards, I architect React/Node systems that will never slow down.</p>
+      <ul class="list-none p-0 m-0 mb-5 text-700">
+        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Complex State Management</li>
+        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Legacy Cloud Migrations</li>
+        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> High-Concurrency Microservices</li>
+      </ul>
+    </div>
+    <div class="col-12 lg:col-7">
+      <div class="grid">
+        <div class="col-6 p-2">
+          <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
+            <img src="/img/home/projects/ABN_Amro.webp" alt="ABN AMRO Migration" class="w-full h-10rem md:h-12rem object-cover" />
+            <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">ABN AMRO Enterprise</div>
+          </a>
+        </div>
+        <div class="col-6 p-2">
+          <a href="/web-development-projects/momentum/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
+            <img src="/img/home/projects/momentum_incident_management.webp" alt="Momentum" class="w-full h-10rem md:h-12rem object-cover" />
+             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">Momentum Incident Mgmt</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pillar 3 -->
+  <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1">
+    <div class="col-12 lg:col-5">
+      <h3 class="text-sm font-bold uppercase text-orange-500 letter-spacing-wide mb-2"><i class="pi pi-chart-line mr-1"></i> Pillar 3</h3>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Programmatic SEO & Lead Gen</h2>
+      <p class="text-lg line-height-3 text-700 mb-4">I build massive, database-driven directory platforms. Automatically generate thousands of highly optimized location and service pages that dominate organic search and convert traffic via dynamic lead capture.</p>
+      <ul class="list-none p-0 m-0 mb-5 text-700">
+        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Next.js Server-Side Rendering</li>
+        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Google Places Data Integration</li>
+        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Dynamic Routing (State > City > ZIP)</li>
+      </ul>
+    </div>
+    <div class="col-12 lg:col-7">
+      <div class="grid">
+        <div class="col-6 p-2">
+          <a href="/web-development-projects/local-home-services-pros/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
+            <img src="/img/projects/localxr/localxr-cover.png" alt="LocalXR" class="w-full h-10rem md:h-12rem object-cover" />
+            <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">LocalXR Directory</div>
+          </a>
+        </div>
+        <div class="col-6 p-2">
+          <a href="/web-development-projects/appliance-repair-service-platform/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
+            <img src="/img/home/projects/appliance_repair_cover.webp" alt="Appliance Repair" class="w-full h-10rem md:h-12rem object-cover" />
+             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">Appliance Repair Platform</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pillar 4 -->
+  <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1 flex-column lg:flex-row-reverse">
+    <div class="col-12 lg:col-5">
+      <h3 class="text-sm font-bold uppercase text-blue-500 letter-spacing-wide mb-2"><i class="pi pi-sync mr-1"></i> Pillar 4</h3>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Internal Tooling & Portals</h2>
+      <p class="text-lg line-height-3 text-700 mb-4">I turn your existing systems (Notion databases, spreadsheets) into full-fledged, professional web applications instantly. Automate workflows, capture leads securely, without waiting months for a backend build.</p>
+      <ul class="list-none p-0 m-0 mb-5 text-700">
+        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Notion-to-Web Architecture</li>
+        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Dynamic Form Generators</li>
+        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Automated Email & Sync Workflows</li>
+      </ul>
+    </div>
+    <div class="col-12 lg:col-7">
+      <div class="grid">
+        <div class="col-6 p-2">
+          <a href="/web-development-projects/notion-crud/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
+            <img src="/img/projects/notion-crud-app/Notion-crud-app-free.webp" alt="Notion CRUD" class="w-full h-10rem md:h-12rem object-cover" />
+            <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">Dynamic CRUD App</div>
+          </a>
+        </div>
+        <div class="col-6 p-2">
+          <a href="/web-development-projects/service-request/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
+            <img src="/img/home/projects/notion_service_request.webp" alt="Service Request" class="w-full h-10rem md:h-12rem object-cover" />
+             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">Service Request Portal</div>
+          </a>
         </div>
       </div>
     </div>
   </div>
   
+  <div class="text-center mt-6">
+     <a href="/web-development-projects/" class="text-primary font-bold text-lg no-underline hover:underline">View the complete project portfolio ></a>
+  </div>
 </div>
-<div class="mt-6">
-  <div class="text-center pb-4">
-    <div class="text-4xl font-bold"><h2>Scalable Solutions for <div class="text-4xl font-bold bg-primary">Startups, Enterprises & Agencies</div></h2></div>
-    <div class="text-xl md:text-center line-height-3"> I’m Jiwan Ghosal, a senior JavaScript engineer specializing in React/Vue and Node on AWS/Azure. I help founders and teams ship fast, clean, and scalable software. I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development.</div>
-  </div>
-  <div class="gallery gap-4">
-    <div
-      v-for="(project, index) in projects"
-      :key="index"
-      class="gallery-item mb-4"
-    >
-      <a :href="project.link" class="text-l gap-2 font-medium text-center no-underline" :aria-label="project.name">
-        <img :src="project.images[0].itemImageSrc" :alt="project.images[0].alt" loading="eager" fetchpriority="high" />
-        <h3 class="p-0 m-2">{{ project.name }}</h3>
-      </a>
+
+<!-- Pricing Tiers / Fixed Packages -->
+<div class="mb-8 text-center" id="pricing">
+  <h2 class="text-3xl md:text-4xl font-bold mb-2">Clear Plans. Rapid Deployment.</h2>
+  <p class="text-lg md:text-xl text-600 mb-6">Choose a service package tailored to your exact business needs.</p>
+  
+  <div class="grid justify-content-center">
+    <!-- Tier 1: Machine Learning (POPULAR) -->
+    <div class="col-12 lg:col-3 md:col-6 p-2">
+      <div class="surface-0 border-round-2xl shadow-6 p-5 h-full flex flex-column text-left relative overflow-hidden border-2 border-primary">
+        <div class="absolute top-0 right-0 bg-primary text-900 text-xs font-bold px-2 py-1 border-round-bottom-left-md">POPULAR</div>
+        <div class="text-xl font-bold text-primary mb-2">Machine Learning</div>
+        <div class="text-2xl font-bold mb-4">AI Feature Integration</div>
+        <p class="text-sm line-height-3 mb-5 flex-grow-1">Embed LLMs and matching algorithms natively into your application to save manual hours.</p>
+        <a href="https://cal.com/stackseekers" class="w-full line-height-1">
+          <Button label="Discuss AI Strategy" class="w-full" size="small"/>
+        </a>
+      </div>
+    </div>
+    <!-- Tier 2: Enterprise Software -->
+    <div class="col-12 lg:col-3 md:col-6 p-2">
+      <div class="surface-0 border-round-2xl shadow-2 p-5 h-full flex flex-column text-left hover:shadow-4 transition-all border-1 border-200">
+        <div class="text-xl font-bold text-600 mb-2">Enterprise Software</div>
+        <div class="text-2xl font-bold mb-4">SaaS MVP & Platform Build</div>
+        <p class="text-sm line-height-3 mb-5 flex-grow-1">End-to-end development of robust business platforms starting from ideation to launch.</p>
+        <a href="https://cal.com/stackseekers" class="w-full line-height-1">
+          <Button label="Start MVP Scope" class="w-full p-button-outlined" size="small"/>
+        </a>
+      </div>
+    </div>
+    <!-- Tier 3: Scalable SEO -->
+    <div class="col-12 lg:col-3 md:col-6 p-2">
+      <div class="surface-0 border-round-2xl shadow-2 p-5 h-full flex flex-column text-left hover:shadow-4 transition-all border-1 border-200">
+        <div class="text-xl font-bold text-600 mb-2">Scalable SEO</div>
+        <div class="text-2xl font-bold mb-4">Programmatic Growth Engine</div>
+        <p class="text-sm line-height-3 mb-5 flex-grow-1">A highly optimized directory framework to dominate local SEO and capture massive traffic.</p>
+        <a href="https://cal.com/stackseekers" class="w-full line-height-1">
+          <Button label="Get a Custom Quote" class="w-full p-button-outlined" size="small" />
+        </a>
+      </div>
+    </div>
+    <!-- Tier 4: Internal Tools -->
+    <div class="col-12 lg:col-3 md:col-6 p-2">
+      <div class="surface-0 border-round-2xl shadow-2 p-5 h-full flex flex-column text-left hover:shadow-4 transition-all border-1 border-200">
+        <div class="text-xl font-bold text-600 mb-2">Internal Tools</div>
+        <div class="text-2xl font-bold mb-4">No-Code / Low-Code Custom Portal</div>
+        <p class="text-sm line-height-3 mb-5 flex-grow-1">Perfect for transforming existing Notion or Airtable systems into user-facing web apps.</p>
+        <a href="https://cal.com/stackseekers" class="w-full line-height-1">
+          <Button label="Book a Scope Call" class="w-full p-button-outlined" size="small"/>
+        </a>
+      </div>
     </div>
   </div>
-  <div class="grid justify-content-center my-4">
-    <div class="flex gap-2 p-2" v-for="stackLogo in stackLogos" :key="stackLogo.title">
-      <img width="32px" height="32px" :src="`https://cdn.simpleicons.org/${stackLogo.link}`" :alt="stackLogo.title" loading="eager" fetchpriority="high"/>
-      <h3 class="sr-only">{{stackLogo.title}}</h3>
-    </div>
-  </div>
-  <!-- <div class="text-center pb-4 grid justify-content-center gap-4">
-    <CustomButton href="/about/#stack" label="Explore Tech Stack">
-      <template #icon>
-        <Circles />
-      </template>
-    </CustomButton>
-  </div> -->
 </div>
 
 <!-- Testimonials -->
-<div class="my-6">
+<div class="mb-8 py-4">
   <div class="text-center pb-4">
-    <div class="text-4xl font-bold"><h2>Trusted by <div class="text-4xl font-bold bg-primary">World Wide</div></h2></div>
-    <h3 class="my-4 text-xl line-height-2">Client Testimonials: See how partners describe their experience collaborating with me on innovative digital solutions.</h3>
+    <h2 class="text-4xl font-bold mb-2">Don't just take my word for it.</h2>
+    <p class="text-xl text-600 line-height-2">See how partners describe the experience of building scalable digital solutions with me.</p>
   </div>
-  <div class="card relative md:mx-0 -mx-4 md:hidden block" @mouseenter="pauseAutoPlay"
-    @mouseleave="resumeAutoPlay">
-    <Carousel :value="testimonials" :numVisible="1" :numScroll="1"  ref="carousel" :responsiveOptions="responsiveCustomerOptions" circular :page="currentPage"
-      @page="onPageChange">
-        <template #item="slotProps">
-          <div class="card shadow-1 border-round-md p-4 md:mx-8 vp-feature-item">
-            <div class="flex align-items-center">
-              <!-- <img :src="slotProps.data.avatar" :alt="slotProps.data.name" loading="eager" fetchpriority="high" class="border-circle" width="50px" height="50px" /> -->
-              <a :href="slotProps.data.link" target="_blank" class="no-underline">
-                <h3 class="flex flex-column align-items-start ml-2 p-0 m-0">
-                  <div>
-                    <i class="pi pi-linkedin mr-1 text-blue-700" style="font-size: 1rem;"></i>
-                    {{ slotProps.data.name }}, 
-                  </div>
-                  <div class="text-sm">
-                    <img :alt="slotProps.data.location" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" loading="eager" fetchpriority="high" :class="`flag flag-${slotProps.data.code.toLowerCase()} mr-1`" style="width: 18px" />
-                    {{ slotProps.data.location }}
-                  </div>
-                </h3>
-              </a>
-            </div>
-            <div class="font-italic mb-8">
-              <div class="text-md line-height-3" ><span class="font-bold text-4xl">"</span> {{ slotProps.data.message }}</div>
-            </div>
+  <div class="card relative md:mx-0 -mx-4 block" @mouseenter="pauseAutoPlay" @mouseleave="resumeAutoPlay">
+    <Carousel :value="testimonials" :numVisible="1" :numScroll="1" ref="carousel" :responsiveOptions="responsiveCustomerOptions" circular :page="currentPage" @page="onPageChange">
+      <template #item="slotProps">
+        <div class="surface-0 shadow-2 border-round-2xl p-6 md:mx-8 m-3">
+          <div class="flex align-items-center mb-4 pb-4 border-bottom-1 border-200">
+            <a :href="slotProps.data.link" target="_blank" class="no-underline flex align-items-center">
+              <i class="pi pi-linkedin text-blue-600 text-3xl mr-3"></i>
+              <div>
+                <h3 class="m-0 text-xl font-bold text-900">{{ slotProps.data.name }}</h3>
+                <div class="text-sm text-600 flex align-items-center mt-1">
+                  <img :alt="slotProps.data.location" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" :class="`flag flag-${slotProps.data.code.toLowerCase()} mr-2`" style="width: 20px" />
+                  {{ slotProps.data.location }}
+                </div>
+              </div>
+            </a>
           </div>
-        </template>
+          <div class="font-italic text-lg text-700 line-height-3 relative">
+            <i class="pi pi-quote-left absolute opacity-20 text-5xl" style="top: -10px; left: -20px; color: var(--primary-color)"></i>
+            <span class="relative z-1">{{ slotProps.data.message }}</span>
+          </div>
+        </div>
+      </template>
     </Carousel>
   </div>
-  <div class="grid justify-content-center my-4 md:flex hidden">
-    <div class="card md:mx-0 -mx-4 col-12 md:col-3" v-for="testimony in testimonials" :key="testimony.name">
-      <div class="card shadow-1 border-round-md m-2 p-2 vp-feature-item">
-        <div class="flex align-items-center mb-4">
-          <!-- <img :src="testimony.avatar" :alt="testimony.name" loading="eager" fetchpriority="high" class="border-circle" width="50px" height="50px" /> -->
-          <a :href="testimony.link" target="_blank" class="no-underline">
-            <h3 class="flex flex-column align-items-start ml-2 p-0 m-0">
-              <div>
-                <i class="pi pi-linkedin mr-1 text-blue-700" style="font-size: 1rem;"></i>
-                {{ testimony.name }}, 
-              </div>
-              <div class="text-sm">
-                <img :alt="testimony.location" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" loading="eager" fetchpriority="high" :class="`flag flag-${testimony.code.toLowerCase()} mr-1`" style="width: 18px" />
-                {{ testimony.location }}
-              </div>
-            </h3>
-          </a>
-        </div>
-        <div class="font-italic">
-          <div class="text-md line-height-3" >{{ testimony.message }}</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="text-center pb-4">
-    <a href="https://www.linkedin.com/in/jiwanghosal/details/recommendations/" size="large" class="flex justify-content-center text-center no-underline mt-4"> 
-      <div class="p-flex p-ai-center">
-        <div
-          class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button"
-        >
-          <span class="mr-6">
-            <i class="pi pi-linkedin mr-1" aria-label="View LinkedIn Reviews" style="font-size: 1rem; color:#0a66c2;"></i>
-             View Recommendations
-          </span>
-          <Circles/>
-          <i class="pi pi-angle-double-right" style="font-size: 1rem;"></i>
-        </div>
-      </div>
+  <div class="text-center mt-4">
+    <a href="https://www.linkedin.com/in/jiwanghosal/details/recommendations/" target="_blank" class="no-underline inline-flex align-items-center gap-2 text-primary font-bold hover:underline">
+      <i class="pi pi-linkedin"></i> View all verified LinkedIn recommendations
     </a>
   </div>
 </div>
 
-<div class="my-6 flex flex-column">
-  <div class="text-center pb-4">
-    <div class="text-4xl font-bold"><h2>Why choose <span class="bg-primary">me?</span></h2></div>
-    <div class="my-4 text-xl line-height-2">Here’s why I’m the right choice for your project</div>
-  </div>
-  <div class="flex flex-wrap">
-    <div class="md:col-6 col-12 md:p-4" v-for="why in whyme" :key="why.title">  
-      <Fieldset class="vp-feature-item">
-        <template #legend>
-            <h3 class="flex align-items-center pl-2 m-0 p-0">
-                <img
-                  :src="`/img/home/${why.id}.svg`"
-                  class="p-avatar p-avatar-circle"
-                  loading="lazy"
-                  :alt="`${why.title} icon`"
-                  width="24px"
-                  height=24px
-                />
-                <span class="font-bold p-2 line-height-2">{{why.title}}</span>
-            </h3>
-        </template>
-        <p class="m-0 pt-4">
-          {{why.description}}
-        </p>
-      </Fieldset>
-    </div>
-  </div>
-  <div class="my-8">
-      <a href="https://cal.com/stackseekers" size="large"
-          class="flex justify-content-center text-center no-underline -mt-4" aria-label="Send an Email">
-      <Button label="Book a free call" icon="pi pi-briefcase" severity="primary" raised rounded />
-      </a>
-      <div class="text-center text-xs mt-1">No commitment. Get a roadmap and estimate.</div>
-  </div>
-</div>
-
 <!-- FAQ -->
-<div class="my-6">
-  <div class="text-center pb-4">
-    <div class="text-4xl font-bold line-height-2"><h2>Frequently asked <span class="bg-primary">questions</span></h2></div>
+<div class="mb-8 surface-50 border-round-3xl p-4 md:p-6" style="max-width: 1000px; margin: 0 auto;">
+  <div class="text-center pb-6">
+    <h2 class="text-4xl font-bold m-0 p-0">Frequently asked <span class="text-primary">questions</span></h2>
   </div>
-  <div class="grid overflow-hidden border-round-md">
-    <div class="col-12 ">
-      <div class="border-round-md flex flex-column gap-4 md:p-2">
-        <div class="p-4">
-          <h3 class="m-0 p-0 font-bold">Q. How can I start a project with you?</h3>
-          <p class="mx-3">
-              You can start by <a href="https://cal.com/stackseekers" class="no-underline text-xl" aria-label="schedule a meeting">scheduling a meeting</a> with me. I’ll connect with you promptly to discuss your requirements and plan the next steps.
-          </p>
-        </div>
-        <div class="p-4">
-          <h3 class="mt-0 p-0 font-bold">Q. What services do you provide?</h3>
-          <div class="mx-3">
-            I offer a variety of services tailored to your needs, including 
-            <a href="web-development-services/consulting-and-technical-advisory/" class="no-underline text-xl" aria-label="Custom Web Development">Custom Web Development</a>, 
-            <a href="web-development-services/e-commerce-solutions/" class="no-underline text-xl" aria-label="E-commerce Solutions">E-commerce Solutions</a>, 
-            <a href="web-development-services/API-development-and-integration/" class="no-underline text-xl" aria-label="API Development and Integration">API Development and Integration </a>, 
-            <a href="web-development-services/figma-to-web/" class="no-underline text-xl" aria-label="Figma to Web Conversion">Figma to Web Conversion</a>, and 
-            <a href="web-development-services/hosting/" class="no-underline text-xl" aria-label="Hosting & Deployment">Hosting & Deployment</a>. 
-            <p class="mt-2">Let’s find the best solution for your project!</p>
-          </div>
-        </div>
-        <div class="p-4">
-          <h3 class="mt-0 p-0 font-bold">Q. What does the project process look like?</h3>
-          <div class="mx-3">
-            <div class="my-4">It’s simple and straightforward: </div>
-            <Timeline :value="events" align="left"
-                :pt="{
-                  eventOpposite: { style: { padding: 0, flex: 0 } },
-                  marker: { style: { backgroundColor: '#FFA500' } },
-                  connector: { style: { backgroundColor: '#FFA500' } },
-                  content: { style: { padding: '4px, 2px' } }
-                }">
-              <template #opposite="slotProps">
-                <small class="p-text-secondary"></small>
-              </template>
-              <template #content="slotProps">
-                {{ slotProps.item.status }}
-              </template>
-            </Timeline>
-            <div class="my-8">
-                <a href="https://cal.com/stackseekers" size="large"
-                    class="flex justify-content-center text-center no-underline -mt-4" aria-label="Send an Email">
-                <Button label="Book a free call" icon="pi pi-briefcase" severity="primary" raised rounded />
-                </a>
-                <div class="text-center text-xs mt-1">No commitment. Get a roadmap and estimate.</div>
-            </div>
-          </div>
-        </div>       
-        <!-- Guarantees and Safety Nets -->
-        <div>
-          <h3 class="mt-0 p-0">Guarantees & Safety Nets</h3>
-          <div class="">
-            <div class="flex flex-column gap-4">
-              <div class="">
-                <i class="pi pi-shield text-small mr-3"></i>
-                <span class="text-lg">If I'm not a fit after the first week, you pay nothing.</span>
-              </div>
-              <div class="">
-                <i class="pi pi-unlock text-small mr-3"></i>
-                <span class="text-lg">No lock‑in: cancel monthly engagement anytime.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="flex flex-column gap-5">
+    <div class="surface-0 p-4 border-round-xl shadow-1">
+      <h3 class="m-0 p-0 font-bold text-xl mb-3">Q. Why do I need Programmatic SEO over regular SEO?</h3>
+      <p class="m-0 text-700 line-height-3">
+        Regular SEO works for a blog post. Programmatic SEO works for building massive directories or local service marketplaces. If you need to target long-tail keywords natively across 1,000 cities, you need database-driven site architecture, not standard blogging tools.
+      </p>
+    </div>
+    <div class="surface-0 p-4 border-round-xl shadow-1">
+      <h3 class="m-0 p-0 font-bold text-xl mb-3">Q. Do you handle both Frontend and Backend on custom SaaS builds?</h3>
+      <p class="m-0 text-700 line-height-3">
+        Yes. As a Full-Stack engineering partner, I design architecture spanning the entire stack—from React/Vue UI interfaces to Node.js Microservices, and secure database management in AWS/Azure/MongoDB.
+      </p>
+    </div>
+    <div class="surface-0 p-4 border-round-xl shadow-1 border-left-3 border-primary">
+      <h3 class="m-0 p-0 font-bold text-xl flex align-items-center"><i class="pi pi-shield mr-2 text-primary"></i> The Zero-Risk Guarantee</h3>
+      <p class="m-0 text-700 line-height-3 mt-3">
+        <strong>If I'm not a perfect fit after the first week of engagement, you pay absolutely nothing.</strong> I partner strictly on milestone-based or month-to-month contracts depending on the scope, so you are never locked into a bad situation.
+      </p>
     </div>
   </div>
 </div>
 
-<!-- Contact Me -->
-<Contact/>
+<!-- Contact CTA -->
+<div class="mb-8 border-round-3xl p-6 text-center shadow-4" style="max-width: 1000px; margin: 0 auto;">
+  <h2 class="text-4xl md:text-5xl font-bold m-0 mb-3 text-900">Let's solve your hardest technical bottleneck</h2>
+  <p class="text-xl line-height-3 mb-5 opacity-90 mx-auto" style="max-width: 650px;">
+    Stop letting manual processes or weak infrastructure hold back your company's growth. Book a call to discuss architecture and solutions.
+  </p>
+  <a href="https://cal.com/stackseekers" size="large" class="no-underline"> 
+    <Button label="Book a Free Discovery Call" icon="pi pi-video" class="p-button-secondary bg-white text-primary text-lg font-bold px-5 py-3 border-none hover:bg-gray-100 transition-colors" raised rounded />
+  </a>
+  <div class="text-sm mt-4 opacity-80">No commitment. Get a technical roadmap on the call.</div>
+</div>
 
 <script setup lang="ts">
-  import { ref, onMounted, onBeforeUnmount, computed } from "vue";
-  import { projects } from "@data/projects.js";
-  import { stackLogos, events, orgs, testimonials , whyme} from "@data/home.js";
-  // Current page and autoplay interval
-  import {certificate} from "@data/home.js";
-  const currentPage = ref(0);
-  const autoplayInterval = 10000;
-  let autoplayTimer = null;
-  const visible = ref(false);
-  const onVisible = () => {
-    visible.value = true;
-  };
+  import { ref, onMounted, onBeforeUnmount } from "vue";
+  import { orgs, testimonials, highImpactWins, heroSlides } from "@data/home.js";
 
+  const currentPage = ref(0);
+  const autoplayInterval = 6000;
+  let autoplayTimer = null;
 
   const responsiveCustomerOptions = ref([
-    {
-      breakpoint: "1400px",
-      numVisible: 1,
-      numScroll: 1,
-    },
-    {
-      breakpoint: "1199px",
-      numVisible: 1,
-      numScroll: 1,
-    },
-    {
-      breakpoint: "767px",
-      numVisible: 1,
-      numScroll: 1,
-    },
-    {
-      breakpoint: "575px",
-      numVisible: 1,
-      numScroll: 1,
-    },
+    { breakpoint: "1400px", numVisible: 1, numScroll: 1 },
+    { breakpoint: "1199px", numVisible: 1, numScroll: 1 },
+    { breakpoint: "767px", numVisible: 1, numScroll: 1 },
+    { breakpoint: "575px", numVisible: 1, numScroll: 1 },
   ]);
 
-  const getImage = () =>
-    `background-image: url('/img/home/faq.webp');  background-repeat: no-repeat; background-size: cover;`;
-
-  // Hero rotating phrase
-  const phrases = ['idea to launch', 'MVPs', 'enterprise‑grade apps', 'AI‑powered products'];
-  const currentPhraseIndex = ref(0);
-  const currentPhrase = computed(() => phrases[currentPhraseIndex.value]);
-  let phraseTimer: ReturnType<typeof setInterval> | null = null;
-
-  onMounted(() => {
-    phraseTimer = setInterval(() => {
-      currentPhraseIndex.value = (currentPhraseIndex.value + 1) % phrases.length;
-    }, 3000);
-  });
-
-  onBeforeUnmount(() => {
-    if (phraseTimer) clearInterval(phraseTimer);
-  });
-
-  // Function to start autoplay
   const startAutoPlay = () => {
     autoplayTimer = setInterval(() => {
       currentPage.value = (currentPage.value + 1) % testimonials.length;
     }, autoplayInterval);
   };
 
-  // Function to pause autoplay
-  const pauseAutoPlay = () => {
-    clearInterval(autoplayTimer);
-  };
+  const pauseAutoPlay = () => clearInterval(autoplayTimer);
+  const resumeAutoPlay = () => startAutoPlay();
 
-  // Function to resume autoplay
-  const resumeAutoPlay = () => {
-    startAutoPlay(autoplayTimer);
-  };
+  const onPageChange = (newPage) => { currentPage.value = newPage; };
 
-  // Handle page change when user interacts with the carousel
-  const onPageChange = (newPage) => {
-    currentPage.value = newPage;
-  };
-
-  // Start autoplay when the component mounts
-  onMounted(() => {
-    startAutoPlay();
-  });
-
-  // Clear the autoplay timer when the component unmounts
-  onBeforeUnmount(() => {
-    pauseAutoPlay();
-  });
+  onMounted(() => { startAutoPlay(); });
+  onBeforeUnmount(() => { pauseAutoPlay(); });
 </script>
+
+<style scoped>
+.grayscale-filter { filter: grayscale(100%); opacity: 0.7; transition: all 0.3s ease; }
+@media (hover: hover) {
+  .hover-zoom img { transition: transform 0.3s ease; }
+  .hover-zoom:hover img { transform: scale(1.05); }
+  .grayscale-filter:hover { filter: grayscale(0%); opacity: 1; }
+}
+</style>

@@ -1,13 +1,13 @@
 ---
-title: Stack Cast 🎙️
-description: Mission here is to unpack the tools, trends, and strategies that power the software world, so you can stay ahead of the curve. Whether you're a developer, an engineer, or just tech-curious, we've got you covered with actionable insights.
+title: Stack Cast 🎙️ | Tech Strategy Podcast for Developers
+description: A mini-podcast unpacking tools, trends and SaaS strategies for devs and startup CTOs. Hosted by a practicing freelance engineer — Stack Seekers.
 order: 5
 editLink: false
 copyright: false
 ---
 
 <h2 class="text-2xl font-semibold">Your go-to mini podcast</h2>
-Mission here is to unpack the tools, trends, and strategies that power the software world, so you can stay ahead of the curve. Whether you're a developer, an engineer, or just tech-curious, we've got you covered with actionable insights.Tools, insights & frameworks for devs, and startup CTOs.
+Mission here is to unpack the tools, trends, and strategies that power the software world, so you can stay ahead of the curve. Whether you're a developer, an engineer, or just tech-curious, I've got you covered with actionable insights. Tools, insights & frameworks for devs, and startup CTOs.
 <div class="surface-ground">
     <section>
       <h2 class="text-2xl font-semibold">Featured Episodes</h2>

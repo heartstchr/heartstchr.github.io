@@ -6,8 +6,8 @@ editLink: false
 copyright: false
 layout: Layout
 project:
-  name: "Qatar Airways widget"
-  description: "Book flights to destinations around the world with Qatar Airways and fly on board an award-winning airline. Enjoy special fares, collect Avios, and more."
+  name: "Qatar Airways Travel Engine"
+  description: "Built the high-impact global travel booking widgets for Qatar Airways, engineering a modular search ecosystem for flights, hotels, and holiday packages deployed across millions of users."
   software: "Web"
   schema: "https://schema.org/DeveloperApplication"
   domain: "Leisure, travel, and tourism"

@@ -56,7 +56,7 @@ Several tools and resources can aid in your prompt engineering journey:
 
 For example, OpenAI's API documentation provides detailed information on crafting effective prompts for their language models.  [OpenAI API Documentation](https://platform.openai.com/docs/guides/completion/prompt-design)
 
-**Internal Link:** Check out our blog post on [Best AI Tools for Business](/posts/ai-tools-for-business/) to find other resources.
+**Internal Link:** Check out my blog post on [Best AI Tools for Business](/posts/ai-tools-for-business/) to find other resources.
 
 ## Conclusion
 

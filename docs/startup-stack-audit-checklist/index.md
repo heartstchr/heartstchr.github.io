@@ -1,6 +1,6 @@
 ---
-title: Startup Stack Audit Checklist
-description: Mission here is to unpack the tools, trends, and strategies that power the software world, so you can stay ahead of the curve. Whether you’re a developer, an engineer, or just tech-curious, we’ve got you covered with actionable insights.
+title: Startup Tech Stack Audit Checklist | Stack Seekers
+description: Free checklist to audit your startup’s SaaS infrastructure, technical debt, and cloud architecture. Created by a senior freelance full-stack developer.
 order: 5
 editLink: false
 copyright: false
