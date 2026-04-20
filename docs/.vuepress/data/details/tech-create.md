@@ -42,7 +42,7 @@ techcreate/
 │   ├── App.vue                # Root application component
 │   └── main.js                # Application entry point
 ├── public/                      # Static public assets
-│   ├── *.png                  # Service showcase images
+│   ├── *.webp                  # Service showcase images
 │   ├── *.svg                  # Icons and logos
 │   └── favicon.ico            # Site favicon
 ├── dist/                        # Production build output
@@ -101,10 +101,10 @@ public/
 ├── favicon.ico                  # Site favicon
 ├── headerLogo.svg               # Company logo
 ├── Service Images:              # Service showcase images
-│   ├── dashboard.png            # Programming & Development
-│   ├── fantacy.png              # Game Development
-│   ├── character.png            # Art & Animation
-│   └── digital.png              # Digital solutions
+│   ├── dashboard.webp            # Programming & Development
+│   ├── fantacy.webp              # Game Development
+│   ├── character.webp            # Art & Animation
+│   └── digital.webp              # Digital solutions
 └── Service Icons:               # Service category icons
     ├── iaa.svg                  # Art & Animation icon
     ├── igd.svg                  # Game Development icon

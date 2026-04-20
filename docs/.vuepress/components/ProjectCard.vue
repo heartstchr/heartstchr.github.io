@@ -36,7 +36,7 @@ defineProps({
                                 }">
                                 <template #item="slotProps">
                                     <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt"
-                                        style="width: 100%; display: block" loading="eager" fetchpriority="high" />
+                                        style="width: 100%; display: block" loading="lazy" />
                                 </template>
                                 <template #thumbnail="slotProps">
                                     <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" />
@@ -45,7 +45,7 @@ defineProps({
                         </div>
                         <div class="card" v-else>
                             <img :src="project.images[0].itemImageSrc" :alt="project.images[0].alt"
-                                style="width: 100%; display: block" loading="eager" fetchpriority="high" />
+                                style="width: 100%; display: block" loading="lazy" />
                         </div>
                         <div
                             class="flex flex-column justify-content-center align-items-center gap-2 my-4 w-full max-w-96">

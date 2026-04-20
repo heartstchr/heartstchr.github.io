@@ -16,7 +16,7 @@ project:
   codeLink: 
   contact: "mailto:jiwan.cse@gmail.com?subject=Notion CRUD App Inquiry"
   stack: ["javascript","vuejs","notion","html5","css","json/black/white","netlify","github/black/white"]
-  images: [{"itemImageSrc":"/img/projects/notion-crud-app/14.png","alt":"CRUD App Free Interface"},{"itemImageSrc":"/img/projects/notion-crud-app/15.png","alt":"Dynamic Form Generation from Notion Database"}]
+  images: [{"itemImageSrc":"/img/projects/notion-crud-app/14.webp","alt":"CRUD App Free Interface"},{"itemImageSrc":"/img/projects/notion-crud-app/15.webp","alt":"Dynamic Form Generation from Notion Database"}]
   features: [{"text":"Intelligent Schema Detection: Automatically reads and adapts to your Notion database structure in real-time"},{"text":"Dynamic Form Generation: Creates perfect forms based on field types - text, email, phone, dates, dropdowns, checkboxes"},{"text":"Professional Interface: Clean, modern design with card and table views that work on any device"},{"text":"Smart Search & Filtering: Intelligent search across all field types with automatic filter toggles for yes/no fields"},{"text":"Enterprise Safety: Confirmation dialogs for deletions, pre-loaded edit forms, and validation to prevent data loss"},{"text":"Multi-language Support: Works in any language with automatic currency formatting (USD, EUR, JPY, etc.)"},{"text":"Privacy Controls: Mark fields as '(Private)' in Notion to automatically mask sensitive information"},{"text":"Real-time Updates: Interface automatically updates when you modify your Notion database structure"}]
   details: ""
 ---

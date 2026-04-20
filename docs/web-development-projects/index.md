@@ -54,7 +54,7 @@ copyright: false
 <!-- Trust Bar -->
 <div class="flex flex-wrap align-items-center justify-content-center gap-4 mb-8 px-4 py-4 surface-50 border-round-2xl">
   <span class="text-sm font-bold text-500 uppercase" style="letter-spacing: 0.1em;">Trusted by enterprises</span>
-  <img src="/img/home/abn-amro-logo.png" alt="ABN AMRO" class="h-2rem opacity-60" style="object-fit:contain;" />
+  <img src="/img/home/abn-amro-logo.webp" alt="ABN AMRO" class="h-2rem opacity-60" style="object-fit:contain;" />
   <img src="/img/home/upstox.webp" alt="Upstox" class="h-2rem opacity-60" style="object-fit:contain;" />
   <img src="/img/home/capgemini.webp" alt="Capgemini" class="h-2rem opacity-60" style="object-fit:contain;" />
 </div>

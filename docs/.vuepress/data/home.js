@@ -19,7 +19,7 @@ export const events = [
 export const orgs = [
   {
     title: "ABN Amro",
-    icon: "/img/home/abn-amro-logo.png",
+    icon: "/img/home/abn-amro-logo.webp",
     details: "Global Banking",
   },
   {
@@ -34,7 +34,7 @@ export const orgs = [
   },
   {
     title: "YIT",
-    icon: "/img/home/yitlogo.png",
+    icon: "/img/home/yitlogo.webp",
     details: "Infrastructure",
   },
 ];
@@ -67,7 +67,7 @@ export const heroSlides = [
   {
     title: "AI & Machine Learning",
     subtitle: "Native AI Architectures",
-    image: "/img/projects/ai-dynamic-crud-app/ai-webapp-english.png",
+    image: "/img/projects/ai-dynamic-crud-app/ai-webapp-english.webp",
     alt: "AI Dynamic CRUD Application"
   },
   {
@@ -79,7 +79,7 @@ export const heroSlides = [
   {
     title: "Programmatic Growth",
     subtitle: "Scalable Lead Engines",
-    image: "/img/projects/localxr/localxr-cover.png",
+    image: "/img/projects/localxr/localxr-cover.webp",
     alt: "LocalXR Programmatic SEO Platform"
   }
 ];
@@ -204,8 +204,8 @@ export const certificate =[
         title: "Jiwan Ghosal Microsoft Az900",
       },
       {
-        itemImageSrc: "/img/about/platformcon-2025-golden-path-labs.png",
-        thumbnailImageSrc: "/img/about/platformcon-2025-golden-path-labs.png",
+        itemImageSrc: "/img/about/platformcon-2025-golden-path-labs.webp",
+        thumbnailImageSrc: "/img/about/platformcon-2025-golden-path-labs.webp",
         alt: "Platformcon 2025 golden path labs",
         title: "Platformcon 2025 golden path labs",
       },

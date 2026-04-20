@@ -34,8 +34,8 @@ export default defineUserConfig({
       description:
         "Senior Full Stack Developer - Graphic Artist - UI/UX Designer",
       // extra keys are permitted by casting
-      logo: "/img/whitelogo.png",
-      logoDark: "/img/stackseekers.png",
+      logo: "/img/whitelogo.webp",
+      logoDark: "/img/stackseekers.webp",
       logoAlt: "Stack Seekers Logo – Web Development Experts",
     } as unknown as any,
   },
@@ -60,7 +60,7 @@ export default defineUserConfig({
         "@type": "Organization",
         name: "Stack Seekers",
         url: "https://stackseekers.com",
-        logo: "https://stackseekers.com/img/stackseekers.png",
+        logo: "https://stackseekers.com/img/stackseekers.webp",
         sameAs: [
           "https://github.com/heartstchr",
           "https://www.linkedin.com/in/jiwanghosal/",
@@ -108,6 +108,8 @@ export default defineUserConfig({
         href: "https://fonts.googleapis.com/css2?family=Inter&display=swap",
       },
     ],
+    ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
+    ["link", { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" }],
     ["link", { rel: "dns-prefetch", href: "//stackseekers.com" }],
     ["link", { rel: "dns-prefetch", href: "//heartstchr.github.io" }],
     ["link", { rel: "dns-prefetch", href: "//youtube.com" }],

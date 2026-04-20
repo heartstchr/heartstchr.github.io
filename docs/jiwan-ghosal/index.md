@@ -185,7 +185,7 @@ copyright: false
                     {{ slotProps.data.name }}, 
                   </div>
                   <div class="text-sm">
-                    <img :alt="slotProps.data.location" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" loading="eager" fetchpriority="high" :class="`flag flag-${slotProps.data.code.toLowerCase()} mr-1`" style="width: 18px" />
+                    <img :alt="slotProps.data.location" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.webp" loading="eager" fetchpriority="high" :class="`flag flag-${slotProps.data.code.toLowerCase()} mr-1`" style="width: 18px" />
                     {{ slotProps.data.location }}
                   </div>
                 </h3>
@@ -210,7 +210,7 @@ copyright: false
                 {{ testimony.name }}, 
               </div>
               <div class="text-sm">
-                <img :alt="testimony.location" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" loading="eager" fetchpriority="high" :class="`flag flag-${testimony.code.toLowerCase()} mr-1`" style="width: 18px" />
+                <img :alt="testimony.location" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.webp" loading="eager" fetchpriority="high" :class="`flag flag-${testimony.code.toLowerCase()} mr-1`" style="width: 18px" />
                 {{ testimony.location }}
               </div>
             </h3>

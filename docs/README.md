@@ -16,11 +16,18 @@ copyright: false
           <i class="pi pi-bolt mr-1"></i> 10 Years of Enterprise-Grade Architecture
         </span>
       </div>
-      <h1 class="m-0 p-0 line-height-2 text-4xl md:text-7xl font-bold">
+      <!-- Desktop Headline -->
+      <h1 class="m-0 p-0 line-height-2 text-4xl md:text-7xl font-bold hidden md:block">
         I engineer products that <span class="text-gradient">shatter performance</span> bottlenecks and <span class="text-gradient-2">force growth</span>.
       </h1>
-      <div class="text-xl md:text-2xl mt-4 line-height-3 text-700">
+      <h1 class="m-0 p-0 line-height-2 text-4xl font-bold block md:hidden">
+        I engineer products that <span class="text-gradient">shatter bottlenecks</span> and <span class="text-gradient-2">force growth</span>.
+      </h1>
+      <div class="text-xl md:text-2xl mt-4 line-height-3 text-700 hidden md:block">
         From migrating global banking infra for **ABN AMRO** to reducing lead turnaround from **4 days to 2 hours** for **Upstox**. I build the high-integrity architecture that powers your next 6 months of growth.
+      </div>
+      <div class="text-xl mt-4 line-height-3 text-700 block md:hidden">
+        Proven architecture for **ABN AMRO** and **Upstox**. I build the high-integrity systems that power your growth.
       </div>
       <div class="flex flex-column md:flex-row gap-3 mt-5">
         <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
@@ -42,11 +49,11 @@ copyright: false
       </div>
     </div>
     <div class="col-12 lg:col-4 mt-6 lg:mt-0 hidden lg:block">
-      <div class="relative hero-visual border-round-2xl overflow-hidden p-4 text-center glass-effect">
-        <Carousel :value="heroSlides" :numVisible="1" :numScroll="1" :autoplayInterval="5000" circular>
+      <div class="relative hero-visual border-round-2xl overflow-hidden p-2 md:p-3 text-center glass-effect">
+        <Carousel :value="heroSlides" :numVisible="1" :numScroll="1" :autoplayInterval="5000" circular :showNavigators="false" :showIndicators="true">
             <template #item="slotProps">
                 <div class="p-2">
-                    <img :src="slotProps.data.image" :alt="slotProps.data.alt" class="w-full border-round-2xl shadow-4 mb-3" />
+                    <img :src="slotProps.data.image" :alt="slotProps.data.alt" class="w-full border-round-2xl shadow-4 mb-3" loading="eager" fetchpriority="high" />
                     <div class="font-bold text-lg text-900">{{ slotProps.data.title }}</div>
                     <div class="text-sm text-600">{{ slotProps.data.subtitle }}</div>
                 </div>
@@ -138,7 +145,7 @@ copyright: false
   <!-- Pillar 1 -->
   <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1">
     <div class="col-12 lg:col-5">
-      <h3 class="text-sm font-bold uppercase text-green-500 letter-spacing-wide mb-2"><i class="pi pi-sparkles mr-1"></i> Pillar 1</h3>
+      <h3 class="text-sm font-bold uppercase text-green-500 letter-spacing-wide mb-2"><i class="pi pi-sparkles mr-1"></i> Pillar 1: Intelligence Automation</h3>
       <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">AI & Machine Learning Apps</h2>
       <p class="text-lg line-height-3 text-700 mb-4">Integrate Large Language Models (LLMs) deeply into your user experience. I build custom applications featuring AI-powered matching algorithms, text-to-speech generators, and native intelligence that saves thousands of manual hours.</p>
       <ul class="list-none p-0 m-0 mb-5 text-700">
@@ -149,15 +156,15 @@ copyright: false
     </div>
     <div class="col-12 lg:col-7">
       <div class="grid">
-        <div class="col-6 p-2">
+        <div class="col-12 md:col-6 p-2">
           <a href="/web-development-projects/ai-dynamic-crud-app/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
-            <img src="/img/projects/ai-dynamic-crud-app/ai-webapp-english.png" alt="AI Dynamic CRUD App" class="w-full h-10rem md:h-12rem object-cover" />
+            <img src="/img/projects/ai-dynamic-crud-app/ai-webapp-english.webp" alt="AI Dynamic CRUD App" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">AI Dynamic CRUD</div>
           </a>
         </div>
-        <div class="col-6 p-2">
+        <div class="col-12 md:col-6 p-2">
           <a href="/web-development-projects/ai-voice-generator/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
-            <img src="/img/projects/ai-narrator/Google-docs-text-to-speech-ai-voice-ai-audio.webp" alt="AI Voice Generator" class="w-full h-10rem md:h-12rem object-cover" />
+            <img src="/img/projects/ai-narrator/Google-docs-text-to-speech-ai-voice-ai-audio.webp" alt="AI Voice Generator" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
              <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">AI Voice Generator</div>
           </a>
         </div>
@@ -168,7 +175,7 @@ copyright: false
   <!-- Pillar 2 -->
   <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1 flex-column lg:flex-row-reverse">
     <div class="col-12 lg:col-5">
-      <h3 class="text-sm font-bold uppercase text-purple-500 letter-spacing-wide mb-2"><i class="pi pi-code mr-1"></i> Pillar 2</h3>
+      <h3 class="text-sm font-bold uppercase text-purple-500 letter-spacing-wide mb-2"><i class="pi pi-code mr-1"></i> Pillar 2: Scalable Infrastructure</h3>
       <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Custom SaaS & Enterprise Apps</h2>
       <p class="text-lg line-height-3 text-700 mb-4">Sophisticated web applications designed for scale. From highly complex banking portal migrations to high-concurrency dashboards, I architect React/Node systems that will never slow down.</p>
       <ul class="list-none p-0 m-0 mb-5 text-700">
@@ -179,15 +186,15 @@ copyright: false
     </div>
     <div class="col-12 lg:col-7">
       <div class="grid">
-        <div class="col-6 p-2">
+        <div class="col-12 md:col-6 p-2">
           <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
-            <img src="/img/home/projects/ABN_Amro.webp" alt="ABN AMRO Migration" class="w-full h-10rem md:h-12rem object-cover" />
+            <img src="/img/home/projects/ABN_Amro.webp" alt="ABN AMRO Migration" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">ABN AMRO Enterprise</div>
           </a>
         </div>
-        <div class="col-6 p-2">
+        <div class="col-12 md:col-6 p-2">
           <a href="/web-development-projects/momentum/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
-            <img src="/img/home/projects/momentum_incident_management.webp" alt="Momentum" class="w-full h-10rem md:h-12rem object-cover" />
+            <img src="/img/home/projects/momentum_incident_management.webp" alt="Momentum" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
              <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">Momentum Incident Mgmt</div>
           </a>
         </div>
@@ -198,7 +205,7 @@ copyright: false
   <!-- Pillar 3 -->
   <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1">
     <div class="col-12 lg:col-5">
-      <h3 class="text-sm font-bold uppercase text-orange-500 letter-spacing-wide mb-2"><i class="pi pi-chart-line mr-1"></i> Pillar 3</h3>
+      <h3 class="text-sm font-bold uppercase text-orange-500 letter-spacing-wide mb-2"><i class="pi pi-chart-line mr-1"></i> Pillar 3: Database-Driven Growth</h3>
       <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Programmatic SEO & Lead Gen</h2>
       <p class="text-lg line-height-3 text-700 mb-4">I build massive, database-driven directory platforms. Automatically generate thousands of highly optimized location and service pages that dominate organic search and convert traffic via dynamic lead capture.</p>
       <ul class="list-none p-0 m-0 mb-5 text-700">
@@ -209,15 +216,15 @@ copyright: false
     </div>
     <div class="col-12 lg:col-7">
       <div class="grid">
-        <div class="col-6 p-2">
+        <div class="col-12 md:col-6 p-2">
           <a href="/web-development-projects/local-home-services-pros/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
-            <img src="/img/projects/localxr/localxr-cover.png" alt="LocalXR" class="w-full h-10rem md:h-12rem object-cover" />
+            <img src="/img/projects/localxr/localxr-cover.webp" alt="LocalXR" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">LocalXR Directory</div>
           </a>
         </div>
-        <div class="col-6 p-2">
+        <div class="col-12 md:col-6 p-2">
           <a href="/web-development-projects/appliance-repair-service-platform/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
-            <img src="/img/home/projects/appliance_repair_cover.webp" alt="Appliance Repair" class="w-full h-10rem md:h-12rem object-cover" />
+            <img src="/img/home/projects/appliance_repair_cover.webp" alt="Appliance Repair" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
              <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">Appliance Repair Platform</div>
           </a>
         </div>
@@ -228,7 +235,7 @@ copyright: false
   <!-- Pillar 4 -->
   <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1 flex-column lg:flex-row-reverse">
     <div class="col-12 lg:col-5">
-      <h3 class="text-sm font-bold uppercase text-blue-500 letter-spacing-wide mb-2"><i class="pi pi-sync mr-1"></i> Pillar 4</h3>
+      <h3 class="text-sm font-bold uppercase text-blue-500 letter-spacing-wide mb-2"><i class="pi pi-sync mr-1"></i> Pillar 4: Operational Efficiency</h3>
       <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Internal Tooling & Portals</h2>
       <p class="text-lg line-height-3 text-700 mb-4">I turn your existing systems (Notion databases, spreadsheets) into full-fledged, professional web applications instantly. Automate workflows, capture leads securely, without waiting months for a backend build.</p>
       <ul class="list-none p-0 m-0 mb-5 text-700">
@@ -239,15 +246,15 @@ copyright: false
     </div>
     <div class="col-12 lg:col-7">
       <div class="grid">
-        <div class="col-6 p-2">
+        <div class="col-12 md:col-6 p-2">
           <a href="/web-development-projects/notion-crud/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
-            <img src="/img/projects/notion-crud-app/Notion-crud-app-free.webp" alt="Notion CRUD" class="w-full h-10rem md:h-12rem object-cover" />
+            <img src="/img/projects/notion-crud-app/Notion-crud-app-free.webp" alt="Notion CRUD" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">Dynamic CRUD App</div>
           </a>
         </div>
-        <div class="col-6 p-2">
+        <div class="col-12 md:col-6 p-2">
           <a href="/web-development-projects/service-request/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
-            <img src="/img/home/projects/notion_service_request.webp" alt="Service Request" class="w-full h-10rem md:h-12rem object-cover" />
+            <img src="/img/home/projects/notion_service_request.webp" alt="Service Request" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
              <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">Service Request Portal</div>
           </a>
         </div>
@@ -257,6 +264,60 @@ copyright: false
   
   <div class="text-center mt-6">
      <a href="/web-development-projects/" class="text-primary font-bold text-lg no-underline hover:underline">View the complete project portfolio ></a>
+  </div>
+</div>
+
+<!-- The Roadmap to Results Section -->
+<div class="mb-8 px-4 py-8 surface-900 text-white border-round-3xl shadow-4" style="max-width: 1200px; margin: 0 auto;">
+  <div class="text-center mb-8">
+    <h2 class="text-4xl md:text-6xl font-bold mb-3">The Roadmap to Results</h2>
+    <p class="text-xl opacity-80 max-w-30rem mx-auto">A proven, four-stage architectural framework to solve your technical bottlenecks.</p>
+  </div>
+  <div class="grid">
+    <div class="col-12 md:col-6 lg:col-3 p-3">
+      <div class="flex flex-column h-full">
+        <div class="text-primary-400 text-5xl font-bold mb-3 opacity-20">01</div>
+        <h3 class="text-2xl font-bold mb-3">Discovery Call</h3>
+        <p class="text-600 line-height-3 text-sm flex-grow-1 opacity-80">We identify the specific bottleneck holding back your growth. You get an immediate technical diagnosis and high-level strategy.</p>
+        <div class="mt-4 border-top-1 border-white-alpha-10 pt-3 flex align-items-center gap-2">
+          <i class="pi pi-check-circle text-primary"></i>
+          <span class="text-xs uppercase font-bold letter-spacing-wide">Diagnosis</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 md:col-6 lg:col-3 p-3">
+      <div class="flex flex-column h-full">
+        <div class="text-primary-400 text-5xl font-bold mb-3 opacity-20">02</div>
+        <h3 class="text-2xl font-bold mb-3">Architecture Audit</h3>
+        <p class="text-600 line-height-3 text-sm flex-grow-1 opacity-80">I dive deep into your existing code, infrastructure, and technical debt to find the root cause of inefficiency.</p>
+        <div class="mt-4 border-top-1 border-white-alpha-10 pt-3 flex align-items-center gap-2">
+          <i class="pi pi-check-circle text-primary"></i>
+          <span class="text-xs uppercase font-bold letter-spacing-wide">Analysis</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 md:col-6 lg:col-3 p-3">
+      <div class="flex flex-column h-full">
+        <div class="text-primary-400 text-5xl font-bold mb-3 opacity-20">03</div>
+        <h3 class="text-2xl font-bold mb-3">Fixed-Scope Roadmap</h3>
+        <p class="text-600 line-height-3 text-sm flex-grow-1 opacity-80">You receive a detailed milestone-based blueprint. No moving targets—just clear deliverables and a fixed timeline for execution.</p>
+        <div class="mt-4 border-top-1 border-white-alpha-10 pt-3 flex align-items-center gap-2">
+          <i class="pi pi-check-circle text-primary"></i>
+          <span class="text-xs uppercase font-bold letter-spacing-wide">Strategy</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 md:col-6 lg:col-3 p-3">
+      <div class="flex flex-column h-full">
+        <div class="text-primary-400 text-5xl font-bold mb-3 opacity-20">04</div>
+        <h3 class="text-2xl font-bold mb-3">Senior Execution</h3>
+        <p class="text-600 line-height-3 text-sm flex-grow-1 opacity-80">I build the solution using high-integrity engineering standards, providing async Loom updates and total transparency in Linear.</p>
+        <div class="mt-4 border-top-1 border-white-alpha-10 pt-3 flex align-items-center gap-2">
+          <i class="pi pi-check-circle text-primary"></i>
+          <span class="text-xs uppercase font-bold letter-spacing-wide">Velocity</span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -330,7 +391,7 @@ copyright: false
               <div>
                 <h3 class="m-0 text-xl font-bold text-900">{{ slotProps.data.name }}</h3>
                 <div class="text-sm text-600 flex align-items-center mt-1">
-                  <img :alt="slotProps.data.location" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" :class="`flag flag-${slotProps.data.code.toLowerCase()} mr-2`" style="width: 20px" />
+                  <img :alt="slotProps.data.location" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.webp" :class="`flag flag-${slotProps.data.code.toLowerCase()} mr-2`" style="width: 20px" />
                   {{ slotProps.data.location }}
                 </div>
               </div>

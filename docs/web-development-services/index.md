@@ -78,7 +78,7 @@ copyright: false
         <div class="col-12 md:col-6 lg:col-4 p-3" v-for="(svc, sIdx) in services" :key="svc.code">
             <div class="surface-0 shadow-2 border-round-2xl p-0 overflow-hidden h-full border-1 border-100 transition-all hover:shadow-6 flex flex-column">
                 <div class="relative overflow-hidden h-12rem bg-gray-900">
-                    <img :src="'/img/service/' + svc.code + '.png'" :alt="svc.name" class="w-full h-full object-cover opacity-80" />
+                    <img :src="'/img/service/' + svc.code + '.webp'" :alt="svc.name" class="w-full h-full object-cover opacity-80" />
                     <div class="absolute top-0 right-0 p-3">
                         <span class="bg-primary text-900 text-xs font-bold px-2 py-1 border-round-md shadow-2 uppercase">{{svc.metric}}</span>
                     </div>
