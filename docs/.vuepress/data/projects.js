@@ -33,23 +33,23 @@ export const freelance = [
     ],
     images: [
       {
-        itemImageSrc: "/img/projects/ai-dynamic-crud-app/ai-webapp-english.png",
+        itemImageSrc: "/img/projects/ai-dynamic-crud-app/ai-webapp-english.webp",
         alt: "AI Dynamic CRUD App - Create with Gemini",
       },
       {
-        itemImageSrc: "/img/projects/ai-dynamic-crud-app/ai-webapp-hindi.png",
+        itemImageSrc: "/img/projects/ai-dynamic-crud-app/ai-webapp-hindi.webp",
         alt: "AI Dynamic CRUD App - Hindi Translation",
       },
       {
-        itemImageSrc: "/img/projects/ai-dynamic-crud-app/ai-webapp-japanese.png",
+        itemImageSrc: "/img/projects/ai-dynamic-crud-app/ai-webapp-japanese.webp",
         alt: "AI Dynamic CRUD App - Japanese Translation",
       },
       {
-        itemImageSrc: "/img/projects/ai-dynamic-crud-app/ai-webapp-schema-review.png",
+        itemImageSrc: "/img/projects/ai-dynamic-crud-app/ai-webapp-schema-review.webp",
         alt: "AI Database Schema Review",
       },
       {
-        itemImageSrc: "/img/projects/ai-dynamic-crud-app/ai-webapp-crud-ui.png",
+        itemImageSrc: "/img/projects/ai-dynamic-crud-app/ai-webapp-crud-ui.webp",
         alt: "AI Generated Dashboard Interface",
       }
     ],
@@ -108,23 +108,23 @@ export const freelance = [
     ],
     images: [
       {
-        itemImageSrc: "/img/projects/localxr/localxr-cover.png",
+        itemImageSrc: "/img/projects/localxr/localxr-cover.webp",
         alt: "LocalXR - Home Services Marketplace Cover",
       },
       {
-        itemImageSrc: "/img/projects/localxr/plumber-home.png",
+        itemImageSrc: "/img/projects/localxr/plumber-home.webp",
         alt: "LocalXR - Plumber Home Page",
       },
       {
-        itemImageSrc: "/img/projects/localxr/listing.png",
+        itemImageSrc: "/img/projects/localxr/listing.webp",
         alt: "LocalXR - Service Listings",
       },
       {
-        itemImageSrc: "/img/projects/localxr/plumbing-services.png",
+        itemImageSrc: "/img/projects/localxr/plumbing-services.webp",
         alt: "LocalXR - Plumbing Services Page",
       },
       {
-        itemImageSrc: "/img/projects/localxr/blog.png",
+        itemImageSrc: "/img/projects/localxr/blog.webp",
         alt: "LocalXR - Blog Section",
       },
     ],
@@ -1427,7 +1427,7 @@ export const freelance = [
       },
       {
         itemImageSrc:
-          "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/ad/b9/3b/adb93b8f-08b6-ac23-8f9e-906f7b2529c2/pr_source.png/230x0w.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/ad/b9/3b/adb93b8f-08b6-ac23-8f9e-906f7b2529c2/pr_source.webp/230x0w.webp",
         alt: "IOS app for booking Malaysia and Singapore bus tickets online | CatchThatBus",
       },
     ],

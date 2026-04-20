@@ -34,10 +34,10 @@ Before you begin, ensure `cwebp` is installed on your system:
 ### Step 2: Convert a Single Image
 To convert a single JPG image to WebP, use the following command:
 ```bash
-cwebp -q 80 image.jpg -o image.webp
+cwebp -q 80 image.webp -o image.webp
 ```
 - `-q 80`: Sets the quality to 80 (out of 100), balancing file size and visual quality.
-- `image.jpg`: The input file.
+- `image.webp`: The input file.
 - `-o image.webp`: The output WebP file.
 
 ### Step 3: Convert Images Recursively
@@ -45,28 +45,28 @@ To convert all JPG images in a folder and its subfolders, you can use a script. 
 
 #### Linux/MacOS Shell Script
 ```bash
-find . -type f -name "*.jpg" | while read img; do
-    webp_img="${img%.jpg}.webp"
+find . -type f -name "*.webp" | while read img; do
+    webp_img="${img%.webp}.webp"
     cwebp -q 80 "$img" -o "$webp_img"
     echo "Converted: $img -> $webp_img"
 done
 ```
 This command:
-- Finds all `.jpg` files in the current directory and subdirectories.
+- Finds all `.webp` files in the current directory and subdirectories.
 - Converts each file to WebP with the same name but a `.webp` extension.
 
 #### Windows Batch Script
 ```batch
-for /r %%i in (*.jpg) do cwebp -q 80 "%%i" -o "%%~ni.webp"
+for /r %%i in (*.webp) do cwebp -q 80 "%%i" -o "%%~ni.webp"
 ```
-This script processes all `.jpg` files recursively, creating WebP versions in the same directories.
+This script processes all `.webp` files recursively, creating WebP versions in the same directories.
 
 ### Step 4: Verify and Implement
 After conversion, verify the WebP files for quality and file size reduction. Update your website's HTML or CSS to reference the `.webp` files. For browsers that don't support WebP, consider using a `<picture>` element to provide fallback formats like JPG or PNG:
 ```html
 <picture>
   <source srcset="image.webp" type="image/webp">
-  <img src="image.jpg" alt="Description">
+  <img src="image.webp" alt="Description">
 </picture>
 ```
 

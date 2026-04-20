@@ -7,7 +7,7 @@ A professional web application that helps businesses manage customer service req
 **📺 Complete Setup Tutorial** - Follow along with step-by-step video instructions for the easiest setup experience!
 
 <a href="https://youtu.be/4QR0qERWssI" target="_blank">
-  <img src="https://img.youtube.com/vi/4QR0qERWssI/maxresdefault.jpg" alt="Setup Tutorial Video" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); cursor: pointer;" />
+  <img src="https://img.youtube.com/vi/4QR0qERWssI/maxresdefault.webp" alt="Setup Tutorial Video" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); cursor: pointer;" />
 </a>
 
 **Click the image above to watch the full video tutorial**
@@ -313,7 +313,7 @@ Plus easy filtering, searching, and multiple view options for workflow managemen
 ### Change the Visual Design
 
 - Edit `public/index.html` to modify the form design
-- Update the logo by replacing `public/stackseekers.jpg`
+- Update the logo by replacing `public/stackseekers.webp`
 - Modify colors and styling using the embedded Tailwind CSS
 
 ### Modify Form Fields

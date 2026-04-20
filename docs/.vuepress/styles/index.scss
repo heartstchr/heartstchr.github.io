@@ -3,6 +3,12 @@
   --p-galleria-nav-button-size: 2rem !important;
   --p-galleria-nav-icon-size: 1rem !important;
   --primary-color-text: var(--theme-color);
+  
+  /* Premium Slate Palette */
+  --premium-slate: #1e293b;
+  --premium-charcoal: #0f172a;
+  --premium-border: rgba(255, 255, 255, 0.08);
+  --premium-hover-bg: rgba(255, 255, 255, 0.03);
 }
 body {
   font-family: "Inter", sans-serif;
@@ -115,9 +121,32 @@ fieldset {
   padding: 4px;
 }
 
-.p-carousel-indicator-list,
+.p-carousel-indicator-list {
+  padding: 0.75rem 0 0.25rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.p-carousel-indicator .p-link {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background-color: var(--text-color) !important;
+  opacity: 0.2;
+  transition: all 0.3s ease;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.p-carousel-indicator.p-highlight .p-link {
+  opacity: 1 !important;
+  background-color: var(--theme-color) !important;
+  transform: scale(1.2);
+}
+
 .p-tabview-ink-bar {
-  display: none !important; //vp-outlook-wrapper
+  display: none !important;
 }
 
 .p-button-secondary {
@@ -303,24 +332,32 @@ fieldset {
 }
 
 .text-gradient {
-  background: linear-gradient(90deg, #14b8a6, #22d3ee, #a855f7);
+  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 50%, #7e22ce 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+  text-shadow: 0 0 30px rgba(13, 148, 136, 0.1);
 }
 
 .text-gradient-2 {
-  background: linear-gradient(90deg, #f97316, #f43f5e, #8b5cf6);
+  background: linear-gradient(135deg, #ea580c 0%, #f43f5e 50%, #8b5cf6 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+  text-shadow: 0 0 30px rgba(234, 88, 12, 0.1);
 }
 
 .hero-visual {
   background: radial-gradient(600px 400px at 70% 20%, rgba(34, 211, 238, 0.15), transparent),
               radial-gradient(500px 300px at 30% 80%, rgba(168, 85, 247, 0.18), transparent);
+  min-height: 320px;
+}
+
+.hero-visual img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
 .hero-image {
@@ -505,4 +542,33 @@ html[data-theme="dark"] .pi-github,
 
 .vp-blog-type-icon-wrapper {
   padding: 0 !important;
+}
+
+/* Premium Card Interactivity */
+.surface-0, .p-card, .vp-feature-item {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border: 1px solid var(--premium-border) !important;
+}
+
+@media (hover: hover) {
+  .surface-0:hover, .p-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+    border-color: var(--theme-color) !important;
+    background: var(--premium-hover-bg) !important;
+  }
+}
+
+/* Glassmorphism utility */
+.glass-effect {
+  background: rgba(15, 23, 42, 0.6) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Roadmap Section Specific Polish */
+.surface-900 {
+  background-color: var(--premium-charcoal) !important;
+  border: 1px solid var(--premium-border);
 }
