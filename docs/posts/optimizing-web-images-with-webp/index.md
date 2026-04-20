@@ -87,7 +87,7 @@ While WebP is powerful, there are some challenges to watch out for:
 ## Conclusion
 Optimizing images with WebP is a game-changer for web performance and SEO. By using the `cwebp` tool to convert images recursively, you can significantly reduce file sizes, improve load times, and enhance user experience. Start implementing WebP today to give your website a competitive edge.
 
-Ready to optimize your website? Share your experience with WebP in the comments below or explore more web performance tips on our blog!
+Ready to optimize your website? Share your experience with WebP in the comments below or explore more web performance tips on my blog!
 
 <div class="blog-content-and-aside">
   <div class="blog-content-main"></div>

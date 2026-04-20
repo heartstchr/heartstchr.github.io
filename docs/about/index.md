@@ -1,22 +1,22 @@
 ---
-title: Full-stack web app developer
-description: Stack Seekers is a web development agency committed to delivering custom digital solutions for startups and enterprises. Meet our team and explore the values behind our success. Full-stack developer for hire, specializing in development of custom websites, Figma to web, and web applications in JavaScript, React.js, Next.js, Node.js, & more.
+title: About | Stack Seekers | Independent Engineering Consultancy
+description: Stack Seekers is an independent engineering consultancy founded by Jiwan Ghosal. I engineer high-performance platforms for enterprises and startups globally.
 order: 4
 editLink: false
 copyright: false
 ---
 
 <div class="my-6 ">
-  <h2 class="text-4xl font-bold"> I am a freelance professional.</h2>
+  <h2 class="text-4xl font-bold"> 10+ Years of Scaling Global Digital Products.</h2>
   <div class="flex md:flex-row flex-column flex-column-reverse md:align-items-start line-height-3">
     <div class="md:col-6 col-12">
-      <h3 class="my-4 text-md"> Diverse skill set and a passion for continuous exploration and creativity.</h3>
+      <h3 class="my-4 text-xl font-bold"> I provide strategic technical leadership for global partners.</h3>
       <div class="my-4 text-md">
-      With extensive experience in full-stack development, I excel in both <a href="#Frontend-Technologies" class="no-underline">frontend technologies</a> and <a href="#Backend-Technologies" class="no-underline">backend</a>, making significant contributions to various <a href="/web-development-projects/" class="no-underline">projects</a> within the tech industry.</div>
+      I am **Jiwan Ghosal**, a Senior Technical Architect with over a decade of experience engineering systems for massive global entities like **ABN AMRO (Netherlands)**, **Qatar Airways (Global)**, and **Upstox (India)**. Instead of the overhead of a large agency, I offer direct, high-trust engineering partnerships for clients who need banking-grade reliability and rapid growth.</div>
       <div class="my-4 text-md">
-      My expertise spans all stages of agile software development, from planning and implementation to testing, monitoring, and delivery.</div>
+      My expertise lies in the "High-Stakes" layer of engineering: migrating legacy architectures, reducing lead latencies by 98%, and building the foundation for startups to scale from zero to millions of users without technical debt.</div>
       <div class="my-4 text-md">
-      You might know me as <span class="my-4 font-italic">heartstchr/Jiwanghosal</span> on various platforms.</div>
+      If you are a recruiter looking for my traditional employment history, <a href="/jiwan-ghosal/" class="no-underline text-primary font-bold">view my personal profile here >></a>.</div>
     </div>
     <div class="md:col-6 col-12 h-30rem overflow-hidden image-box">
       <Image :src="`/img/about/about_jiwanghosal.webp`" width="100%" />
@@ -24,23 +24,7 @@ copyright: false
   </div>
 </div>
 
-<div class="my-6 flex md:flex-row flex-column ">
-  <div class="col-12 line-height-3">
-    <h2 class="my-4 text-4xl font-bold">Highlights of My Journey</h2>
-    <div>
-      <h3 class="my-4 text-2xl text-md">Participant at the JS world conference, Amsterdam. </h3>
-      <div class="col-12">
-        <YouTubePlayers videoId="H7B5hQbQqKQ" :autoplay="true" :muted="true" :loop="true" :controls="false" />
-      </div>
-      <div class="my-4 text-md">In 2023, I had the privilege of participating in the renowned JS world conference Amsterdam, where I contributed to discussions on cutting-edge technologies, VueJs, Pinia, including micro-frontend and modern application architectures.</div>
-      <h3 class="my-4 text-2xl text-md">Participant at NSE Future Tech hackathon, India.</h3>
-      <div class="col-12 overflow-hidden image-box">
-        <Image :src="`/img/about/nseHackathon.webp`" width="100%" />
-      </div>
-      <div class="my-4 text-md">At NSE Hackathon, our team reached the top 7 finalists, showcasing innovative problem-solving skills and pushing the boundaries of creative technology development.</div>
-    </div>
-  </div>
-</div>
+
 <!-- Skills -->
 <div class="my-6" id="stack">
   <div class="text-center pb-4">
@@ -103,8 +87,8 @@ copyright: false
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 60 1440 320"><path fill="#10b981" fill-opacity="0.1" d="M0,128L40,144C80,160,160,192,240,192C320,192,400,160,480,160C560,160,640,192,720,176C800,160,880,96,960,80C1040,64,1120,96,1200,144C1280,192,1360,256,1400,288L1440,320L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
   <div>
     <div class="text-center px-4">
-      <h2 class="text-4xl font-bold p-0 m-0">A Little More About Me</h2>
-      <div class="my-4 text-md line-height-3">When I’m not coding, I enjoy creating tech tutorials for my YouTube channel <a href="https://www.youtube.com/@stackseekers" target="_blank" class="no-underline">Stack Seekers</a>, exploring the latest in mobile technology, and <a href="https://www.youtube.com/@JiwanGhosal" target="_blank" class="no-underline">traveling</a> to discover new cultures and ideas.</div>
+      <h2 class="text-4xl font-bold p-0 m-0">Our Philosophy</h2>
+      <div class="my-4 text-md line-height-3">Stack Seekers was founded on the principle that high-end engineering shouldn't be locked behind massive agency overhead. I provide enterprise-grade architecture with the speed and transparency of a dedicated partner. Every line of code is written with your business growth and technical debt reduction in mind.</div>
     </div>
     <div class="text-center py-4">
       <div class="my-4 text-md">Let's work together!</div>
@@ -150,6 +134,5 @@ copyright: false
     { label: 'Linkedin', icon: 'pi pi-linkedin', url: 'https://www.linkedin.com/in/jiwanghosal/' },
     { label: 'Youtube', icon: 'pi pi-youtube', url: 'https://www.youtube.com/@stackseekers' },
     { label: 'Stack Overflow', icon: 'pi pi-chart-bar', url: 'https://stackoverflow.com/users/10376224/stchr?tab=profile' },
-    { label: 'Instagram', icon: 'pi pi-instagram', url: 'https://www.instagram.com/jiwan_ghosal/' },
   ]
 </script>

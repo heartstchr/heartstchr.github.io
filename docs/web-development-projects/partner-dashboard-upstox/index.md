@@ -7,7 +7,7 @@ copyright: false
 layout: Layout
 project:
   name: "Partner Dashboard Upstox"
-  description: "Open a sub-broker account with Upstox."
+  description: "Built the high-growth 'Refer & Earn' ecosystem for Upstox, reducing lead conversion turnaround from 4 days to 2 hours—a 50% increase in lead velocity."
   software: "Web"
   schema: "https://schema.org/BusinessApplication"
   domain: "FinTech"

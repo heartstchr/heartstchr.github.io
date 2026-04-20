@@ -1,58 +1,87 @@
 export const events = [
   {
-    status: "Free strategy call (25 min)",
+    status: "Free Technical Roadmap Call (25 min)",
     color: "#9C27B0",
   },
   {
-    status: "Scoping & estimate (48 hours)",
+    status: "Audit, Scoping & ROI Estimate (48 hours)",
     color: "#673AB7",
   },
   {
-    status: "Build in bi-weekly sprints (demo every alternate Friday)",
+    status: "Build in Bi-Weekly Sprints (Demo every alternate Friday)",
     color: "#FF9800",
   },
   {
-    status: "Launch & handover (+30 days support)",
+    status: "Launch, Scale & 30-Day Transition Support",
     color: "#607D8B",
   },
 ];
 export const orgs = [
   {
-    title: "YIT",
-    icon: "/img/home/yitlogo.png",
-    details: "constructing infrastructure",
-    link: "https://www.yitgroup.com/en",
-  },
-  {
     title: "ABN Amro",
     icon: "/img/home/abn-amro-logo.png",
-    details: "Personal bank in the digital age",
-    link: "https://www.abnamro.com/en/home",
-  },
-  {
-    title: "Capgemini",
-    icon: "/img/home/capgemini.webp",
-    details: "Consulting IT services",
-    link: "https://www.capgemini.com/",
-  },
-  {
-    title: "Catch That Bus",
-    icon: "/img/home/catchthatbus.webp",
-    details: "Leisure, travel, and tourism",
-    link: "https://www.catchthatbus.com/",
+    details: "Global Banking",
   },
   {
     title: "Upstox",
     icon: "/img/home/upstox.webp",
-    details: "Online stock broker",
-    link: "https://www.upstox.com/",
+    details: "Fintech",
   },
   {
-    title: "Mobistreak",
-    icon: "/img/home/mobistreak.webp",
-    details: "Marketing and advertising",
-    link: "https://www.mobistreak.com/",
+    title: "Capgemini",
+    icon: "/img/home/capgemini.webp",
+    details: "Consulting",
   },
+  {
+    title: "YIT",
+    icon: "/img/home/yitlogo.png",
+    details: "Infrastructure",
+  },
+];
+
+export const highImpactWins = [
+  {
+    title: "Upstox",
+    metric: "98% Speed Increase",
+    description: "Reduced lead conversion turnaround from **4 days to 2 hours** with high-velocity engineering.",
+    icon: "pi-chart-line",
+    color: "green"
+  },
+  {
+    title: "ABN Amro",
+    metric: "Enterprise Scale",
+    description: "Architected the global frontend migration to the **Emerald Design System** for millions of users.",
+    icon: "pi-shield",
+    color: "blue"
+  },
+  {
+    title: "Qatar Airways",
+    metric: "Global Impact",
+    description: "Built high-performance travel booking modular engines for one of the **world's leading airlines**.",
+    icon: "pi-globe",
+    color: "purple"
+  }
+];
+
+export const heroSlides = [
+  {
+    title: "AI & Machine Learning",
+    subtitle: "Native AI Architectures",
+    image: "/img/projects/ai-dynamic-crud-app/ai-webapp-english.png",
+    alt: "AI Dynamic CRUD Application"
+  },
+  {
+    title: "Enterprise SaaS",
+    subtitle: "ABN AMRO Banking Scale",
+    image: "/img/home/projects/ABN_Amro.webp",
+    alt: "ABN AMRO Enterprise Migration"
+  },
+  {
+    title: "Programmatic Growth",
+    subtitle: "Scalable Lead Engines",
+    image: "/img/projects/localxr/localxr-cover.png",
+    alt: "LocalXR Programmatic SEO Platform"
+  }
 ];
 export const testimonials = [
   {
@@ -103,27 +132,27 @@ export const testimonials = [
 export const whyme = [
   {
     id: "proven_expertise",
-    title: "Clear Guidance",
+    title: "Strategic Technical Partnership",
     description:
-      "I turn your idea into a simple, step-by-step plan - no tech skills needed.",
+      "I don't just write code; I partner with your leadership to build a technical roadmap that hits your ROI and scaling goals.",
   },
   {
     id: "client_centric_approach",
-    title: "Always in Touch",
+    title: "Transparent & Async Accountability",
     description:
-      "You get fast replies and regular updates, so you’re never left guessing.",
+      "Stay in the loop with weekly Loom demos, Linear project boards, and automated staging links. You see progress every 48 hours.",
   },
   {
     id: "wide_range_of_experience",
-    title: "No Surprise Costs",
+    title: "ROI-Focused Delivery",
     description:
-      "Get an upfront quote and focused features - no unexpected bills.",
+      "My priority is moving your business metrics—like reducing lead turnaround or automating manual ops—not just shipping features.",
   },
   {
     id: "commitment_to_quality_code",
-    title: "Quality You Can Grow On",
+    title: "High-Integrity Infrastructure",
     description:
-      "Your product is built clean and ready for users and future updates.",
+      "Built with enterprise standards (ABN AMRO grade) so your product can scale to 10M+ users without needing a total rewrite.",
   },
 ];
 export const stackLogos = [

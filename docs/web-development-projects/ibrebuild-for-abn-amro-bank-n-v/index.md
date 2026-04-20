@@ -7,7 +7,7 @@ copyright: false
 layout: Layout
 project:
   name: "IBRebuild for ABN AMRO BANK N.V."
-  description: "ABN AMRO Bank N.V. is a Dutch bank with headquarters in Amsterdam. The internet banking (IB) application for the bank customers which is migrating from old Angular JS to Vue.js integrated with Microsoft Azure cloud services as IBRebuild."
+  description: "Architected the frontend migration of ABN AMRO's global internet banking system from legacy Angular to a scalable Vue.js architecture integrated with the Emerald Design System and Microsoft Azure."
   software: "Web"
   schema: "https://schema.org/DeveloperApplication"
   domain: "Banking"

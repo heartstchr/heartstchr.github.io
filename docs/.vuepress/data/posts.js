@@ -1,5 +1,77 @@
 export const posts = [
   {
+    title: "Why Your Software Project Needs an Architect, Not Just an 'Order Taker'",
+    link: "/posts/architect-vs-order-taker/",
+    date: "2026-04-18",
+    summary: "Most developers build exactly what you ask for, even if it is a bad business decision. Learn why hiring a strategic technical architect saves your project from costly failures.",
+    category: "Technical Advisory",
+    tags: ["Architecture", "Strategy", "Product Development", "Consultancy"]
+  },
+  {
+    title: "The Spaghetti MVP: Why Cheap Development is the Most Expensive Mistake for Startups",
+    link: "/posts/the-spaghetti-mvp-technical-debt/",
+    date: "2026-04-18",
+    summary: "Rushing to market with messy code feels like speed, but it's actually technical debt. Learn how to build an MVP that scales without needing a total rewrite.",
+    category: "Web Development",
+    tags: ["Technical Debt", "Architecture", "MVP", "Startup Strategy", "Refactoring"]
+  },
+  {
+    title: "Breaking the Black Box: How I Ensure 100% Visibility in Your Software Build",
+    link: "/posts/software-build-visibility-strategy/",
+    date: "2026-04-18",
+    summary: "Stop wondering what your developers are doing. Learn how a transparent engineering process with weekly demos and clear roadmaps eliminates project risk.",
+    category: "Project Management",
+    tags: ["Transparency", "Process", "Agile", "Consultancy", "Communication"]
+  },
+  {
+    title: "Code Freedom: How to Build a SaaS without Becoming a Hostage to Your Agency",
+    link: "/posts/avoiding-vendor-lock-in-saas/",
+    date: "2026-04-18",
+    summary: "Don't let your developers own your future. Learn how to maintain full control of your IP, source code, and technical freedom when outsourcing development.",
+    category: "Business Strategy",
+    tags: ["IP Ownership", "Vendor Lock-in", "SaaS Strategy", "Clean Code", "Founders"]
+  },
+  {
+    title: "The Runway Killer: Why Your MVP Doesn't Need a $200k Infrastructure (Yet)",
+    link: "/posts/mvp-infrastructure-pragmatic-engineering/",
+    date: "2026-04-18",
+    summary: "Over-engineering your infrastructure is the fastest way to kill your startup's runway. Learn how to build for the scale you have, while architecting for the scale you want.",
+    category: "Cloud & DevOps",
+    tags: ["Infrastructure", "Scalability", "Cloud Costs", "MVP", "DevOps"]
+  },
+  {
+    title: "Beyond the Big Launch: Why Your Product’s Real Life Starts After Day One",
+    link: "/posts/post-launch-maintenance-strategy/",
+    date: "2026-04-18",
+    summary: "Launching your SaaS is only the beginning. Learn how to navigate the 'Maintenance Gap' and maintain technical momentum with fractional CTO advisory.",
+    category: "Technical Advisory",
+    tags: ["Maintenance", "Fractional CTO", "Post-Launch", "Growth", "Software Lifecycle"]
+  },
+  {
+    title: "Stop Chasing Backlinks: The 10k Monthly Lead Blueprint with Programmatic SEO",
+    link: "/posts/scaling-with-programmatic-seo/",
+    date: "2026-04-18",
+    summary: "Learn how to scale traffic and lead generation with Programmatic SEO. Move beyond manual blogging and build high-performance, database-driven directory platforms with React and Next.js.",
+    category: "Web Development",
+    tags: ["SEO", "Programmatic SEO", "Lead Generation", "Next.js", "Growth"]
+  },
+  {
+    title: "Beyond Spreadsheets: Scaling Operations with Custom Internal Portals",
+    link: "/posts/scaling-ops-with-internal-portals/",
+    date: "2026-04-18",
+    summary: "Stop drowning in manual data entry. Learn how to bridge your Notion databases and spreadsheets with custom React-based internal portals to automate your workflow.",
+    category: "Business Automation",
+    tags: ["Internal Tools", "Notion", "Automation", "Productivity", "React"]
+  },
+  {
+    title: "Building an AI-First SaaS: How to Integrate LLMs for Real Business Moat",
+    link: "/posts/ai-first-saas-architecture/",
+    date: "2026-04-18",
+    summary: "Move past the ChatGPT wrapper. Learn how to architect deeply integrated AI features that provide real competitive advantage and operational efficiency.",
+    category: "Artificial Intelligence",
+    tags: ["AI", "LLM", "SaaS", "Architecture", "Gemini", "Automation"]
+  },
+  {
     title: "Supercharge Your Growth AI Tools for Business You Need Now",
     link: "/posts/ai-tools-for-business/",
     date: "2025-07-02",

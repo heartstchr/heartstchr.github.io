@@ -4,6 +4,8 @@ import { enNavbar } from "./navbar/index.js";
 export default hopeTheme(
   {
     hostname: "https://stackseekers.com",
+    logo: "/img/stackseekers.png",
+    logoDark: "/img/whitelogo.png",
     author: {
       name: "Stack Seekers",
       url: "http://heartstchr.github.io/",

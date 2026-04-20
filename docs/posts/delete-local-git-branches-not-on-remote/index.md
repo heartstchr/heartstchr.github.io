@@ -8,14 +8,14 @@ tags: [Git, Version Control, Developer Tools, Branch Management, Workflow Optimi
 
 <MetaContent :date="$frontmatter.date" :category="$frontmatter.tags"/>
 
-Maintaining a clean Git workspace is essential for developers, especially when collaborating on projects with multiple branches. Over time, local branches can accumulate, particularly when remote branches are merged or deleted. These stale branches clutter your repository, increase the risk of working on outdated code, and hinder productivity. In this guide, we’ll provide an improved Bash script to safely delete local Git branches that no longer exist on the remote. We’ll also share expert tips, a video tutorial, and best practices to streamline your Git workflow.
+Maintaining a clean Git workspace is essential for developers, especially when collaborating on projects with multiple branches. Over time, local branches can accumulate, particularly when remote branches are merged or deleted. These stale branches clutter your repository, increase the risk of working on outdated code, and hinder productivity. In this guide, I’ll provide an improved Bash script to safely delete local Git branches that no longer exist on the remote. I’ll also share expert tips, a video tutorial, and best practices to streamline your Git workflow.
 
 ## Why Clean Up Local Git Branches?
 
 Regularly removing local branches that no longer exist on the remote repository keeps your development environment organized and efficient. Here’s why it’s important:
 
 - **Reduce Clutter**: A tidy workspace minimizes confusion and prevents accidental work on outdated branches.
-- **Enhance Collaboration**: Syncing your local repository with the remote ensures alignment with your team’s progress.
+- **Enhance Clarity**: Syncing your local repository with the remote ensures alignment with the current codebase.
 - **Boost Productivity**: A lean Git environment speeds up navigation and reduces errors in complex projects.
 
 ## How to Delete a Single Local Branch
@@ -96,7 +96,7 @@ Adopt these habits for a professional Git workflow:
 - **Prune Regularly**: Run `git fetch -p` weekly to stay in sync with the remote.
 - **Use Descriptive Names**: Name branches clearly (e.g., `feature/login-page`, `bugfix/payment-error`) for better collaboration.
 - **Delete Merged Branches Promptly**: Remove feature branches after merging to keep the repository lean.
-- **Communicate with Your Team**: Notify teammates when deleting remote branches to avoid conflicts.
+- **Keep Repositories in Sync**: Regularly prune branches to avoid conflicts and clutter.
 - **Test Before Force-Deleting**: Use `git branch -d` before `-D` to avoid losing unmerged work.
 
 ## Conclusion

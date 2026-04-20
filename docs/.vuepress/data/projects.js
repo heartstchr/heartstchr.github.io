@@ -1,7 +1,60 @@
 import { toKebabCase } from "../utils/index.js";
 
 export const freelance = [
-  
+  {
+    name: "AI Dynamic CRUD App",
+    description: "Transform your Notion database into a professional web application in minutes with the power of AI. Automatically reads your Notion structure, suggests field relationships, and creates beautiful, responsive interfaces with intelligent forms, search, and multi-language support.",
+    software: "Web Application",
+    org: "Stack Seekers",
+    year: "2025",
+    domain: "Database Management & AI Automation",
+    schema: "https://schema.org/WebApplication",
+    link: "https://ai-dynamic-crud-app.stackseekers.com/",
+    price: "0",
+    currency: "USD",
+    contact: "mailto:jiwan.cse@gmail.com?subject=AI Dynamic CRUD App Inquiry",
+    stack: [
+      "javascript",
+      "vuedotjs",
+      "notion/black/white",
+      "html5",
+      "css",
+      "json/black/white",
+    ],
+    otherSkills: [
+      "AI Form Generation",
+      "No-Code Development",
+      "Database Integration",
+    ],
+    features: [
+      { text: "AI Schema Detection: Automatically detects and adapts to your Notion database structure." },
+      { text: "Dynamic Form Generation: Creates perfect forms based on field types." },
+      { text: "Professional Interface: Clean, modern design with card and table views." }
+    ],
+    images: [
+      {
+        itemImageSrc: "/img/projects/ai-dynamic-crud-app/ai-webapp-english.png",
+        alt: "AI Dynamic CRUD App - Create with Gemini",
+      },
+      {
+        itemImageSrc: "/img/projects/ai-dynamic-crud-app/ai-webapp-hindi.png",
+        alt: "AI Dynamic CRUD App - Hindi Translation",
+      },
+      {
+        itemImageSrc: "/img/projects/ai-dynamic-crud-app/ai-webapp-japanese.png",
+        alt: "AI Dynamic CRUD App - Japanese Translation",
+      },
+      {
+        itemImageSrc: "/img/projects/ai-dynamic-crud-app/ai-webapp-schema-review.png",
+        alt: "AI Database Schema Review",
+      },
+      {
+        itemImageSrc: "/img/projects/ai-dynamic-crud-app/ai-webapp-crud-ui.png",
+        alt: "AI Generated Dashboard Interface",
+      }
+    ],
+    details: "./details/ai-dynamic-crud-app.md",
+  },
   {
     name: "Local Home Services Pros",
     description:

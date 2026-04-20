@@ -1,6 +1,6 @@
 ---
-title: Contact
-description: Stack Seekers is a web development agency committed to delivering custom digital solutions for startups and enterprises. Meet our team and explore the values behind our success. Full-stack developer for hire, specializing in development of custom websites, Figma to web, and web applications in JavaScript, React.js, Next.js, Node.js, & more.
+title: Hire Jiwan Ghosal | Freelance Full-Stack Developer
+description: Available for freelance remote projects. Book a free 25-min discovery call to scope your architecture. Full-stack developer for hire — React, Next.js, Node.js.
 order: 4
 editLink: false
 copyright: false
