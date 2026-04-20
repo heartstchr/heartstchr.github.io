@@ -24,7 +24,7 @@ copyright: false
         I engineer products that <span class="text-gradient">shatter bottlenecks</span> and <span class="text-gradient-2">force growth</span>.
       </h1>
       <div class="text-xl md:text-2xl mt-4 line-height-3 text-700 hidden md:block">
-        From migrating global banking infra for **ABN AMRO** to reducing lead turnaround from **4 days to 2 hours** for **Upstox**. I build the high-integrity architecture that powers your next 6 months of growth.
+        From migrating global banking infra for <strong>ABN AMRO</strong> to reducing lead turnaround from <strong>4 days to 2 hours</strong> for <strong>Upstox</strong>. I build the high-integrity architecture that powers your next 6 months of growth.
       </div>
       <div class="text-xl mt-4 line-height-3 text-700 block md:hidden">
         Proven architecture for **ABN AMRO** and **Upstox**. I build the high-integrity systems that power your growth.
