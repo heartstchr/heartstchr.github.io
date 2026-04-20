@@ -391,7 +391,7 @@ copyright: false
               <div>
                 <h3 class="m-0 text-xl font-bold text-900">{{ slotProps.data.name }}</h3>
                 <div class="text-sm text-600 flex align-items-center mt-1">
-                  <img :alt="slotProps.data.location" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.webp" :class="`flag flag-${slotProps.data.code.toLowerCase()} mr-2`" style="width: 20px" />
+                  <img :alt="slotProps.data.location" :src="`https://flagcdn.com/w20/${slotProps.data.code.toLowerCase()}.png`" width="20" height="15" class="mr-2 border-round-sm" loading="lazy" />
                   {{ slotProps.data.location }}
                 </div>
               </div>
