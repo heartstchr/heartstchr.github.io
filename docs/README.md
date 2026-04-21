@@ -16,15 +16,11 @@ copyright: false
           <i class="pi pi-bolt mr-1"></i> 10 Years of Enterprise-Grade Architecture
         </span>
       </div>
-      <!-- Desktop Headline -->
-      <h1 class="m-0 p-0 line-height-2 text-4xl md:text-7xl font-bold hidden md:block">
-        I engineer products that <span class="text-gradient">shatter performance</span> bottlenecks and <span class="text-gradient-2">force growth</span>.
-      </h1>
-      <h1 class="m-0 p-0 line-height-2 text-4xl font-bold block md:hidden">
-        I engineer products that <span class="text-gradient">shatter bottlenecks</span> and <span class="text-gradient-2">force growth</span>.
+      <h1 class="m-0 p-0 line-height-2 text-4xl md:text-7xl font-bold">
+        I engineer products that <span class="text-gradient">shatter <span class="hidden md:inline">performance </span>bottlenecks</span> and <span class="text-gradient-2">force growth</span>.
       </h1>
       <div class="text-xl md:text-2xl mt-4 line-height-3 text-700 hidden md:block">
-        From migrating global banking infra for **ABN AMRO** to reducing lead turnaround from **4 days to 2 hours** for **Upstox**. I build the high-integrity architecture that powers your next 6 months of growth.
+        From migrating global banking infra for <strong>ABN AMRO</strong> to reducing lead turnaround from <strong>4 days to 2 hours</strong> for <strong>Upstox</strong>. I build the high-integrity architecture that powers your next 6 months of growth.
       </div>
       <div class="text-xl mt-4 line-height-3 text-700 block md:hidden">
         Proven architecture for **ABN AMRO** and **Upstox**. I build the high-integrity systems that power your growth.
@@ -386,7 +382,7 @@ copyright: false
       <template #item="slotProps">
         <div class="surface-0 shadow-2 border-round-2xl p-6 md:mx-8 m-3">
           <div class="flex align-items-center mb-4 pb-4 border-bottom-1 border-200">
-            <a :href="slotProps.data.link" target="_blank" class="no-underline flex align-items-center">
+            <a :href="slotProps.data.link" target="_blank" class="no-underline flex align-items-center" :aria-label="`View ${slotProps.data.name}'s LinkedIn profile`">
               <i class="pi pi-linkedin text-blue-600 text-3xl mr-3"></i>
               <div>
                 <h3 class="m-0 text-xl font-bold text-900">{{ slotProps.data.name }}</h3>
@@ -406,7 +402,7 @@ copyright: false
     </Carousel>
   </div>
   <div class="text-center mt-4">
-    <a href="https://www.linkedin.com/in/jiwanghosal/details/recommendations/" target="_blank" class="no-underline inline-flex align-items-center gap-2 text-primary font-bold hover:underline">
+    <a href="https://www.linkedin.com/in/jiwanghosal/details/recommendations/" target="_blank" class="no-underline inline-flex align-items-center gap-2 text-primary font-bold hover:underline" aria-label="View all verified recommendations on LinkedIn">
       <i class="pi pi-linkedin"></i> View all verified LinkedIn recommendations
     </a>
   </div>

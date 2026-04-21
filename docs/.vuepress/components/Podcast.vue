@@ -1,6 +1,6 @@
 <template>
     <div v-if="videos.length === 0">
-        <a href="https://www.youtube.com/@stackseekers" target="_blank">
+        <a href="https://www.youtube.com/@stackseekers" target="_blank" aria-label="Watch the Stack Seekers podcast on YouTube">
             <Button label="Watch on youtube" icon="pi pi-youtube" iconPos="left" class="w-full" raised rounded />
         </a>
     </div>
@@ -27,7 +27,7 @@
                         <template #footer>
                             <div class="flex gap-3 m-1 align-content-end">
                                 <Button label="Watch on youtube" icon="pi pi-youtube" iconPos="left" class="w-full"
-                                    raised rounded />
+                                    raised rounded :aria-label="`Watch ${video.title} on YouTube`" />
                             </div>
                         </template>
                     </Card>

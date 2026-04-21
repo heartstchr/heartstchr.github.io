@@ -47,7 +47,7 @@ copyright: false
       </div>
     </div>
     <div class="col-12 md:col-4 mt-6 md:mt-0">
-      <div class="relative hero-visual border-round-2xl overflow-hidden">
+      <div class="relative border-round-2xl overflow-hidden">
         <img src="/img/home/jiwanghosal.webp" alt="Jiwan Ghosal" class="w-1/2 border-round-2xl shadow-4 hero-image" loading="eager" fetchpriority="high" />
         <div class="glow-ring"></div>
       </div>
@@ -180,14 +180,12 @@ copyright: false
               <!-- <img :src="slotProps.data.avatar" :alt="slotProps.data.name" loading="eager" fetchpriority="high" class="border-circle" width="50px" height="50px" /> -->
               <a :href="slotProps.data.link" target="_blank" class="no-underline">
                 <h3 class="flex flex-column align-items-start ml-2 p-0 m-0">
-                  <div>
+                  <div class="text-sm text-600 flex align-items-center mt-1">
                     <i class="pi pi-linkedin mr-1 text-blue-700" style="font-size: 1rem;"></i>
-                    {{ slotProps.data.name }}, 
-                  </div>
-                  <div class="text-sm">
-                    <img :alt="slotProps.data.location" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.webp" loading="eager" fetchpriority="high" :class="`flag flag-${slotProps.data.code.toLowerCase()} mr-1`" style="width: 18px" />
+                    {{ slotProps.data.name }},                   
+                    <img :alt="slotProps.data.location" :src="`https://flagcdn.com/w20/${slotProps.data.code.toLowerCase()}.png`" width="20" height="15" class="mr-2 border-round-sm" loading="lazy" />
                     {{ slotProps.data.location }}
-                  </div>
+                </div>
                 </h3>
               </a>
             </div>
@@ -210,8 +208,8 @@ copyright: false
                 {{ testimony.name }}, 
               </div>
               <div class="text-sm">
-                <img :alt="testimony.location" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.webp" loading="eager" fetchpriority="high" :class="`flag flag-${testimony.code.toLowerCase()} mr-1`" style="width: 18px" />
-                {{ testimony.location }}
+                  <img :alt="testimony.location" :src="`https://flagcdn.com/w20/${testimony.code.toLowerCase()}.png`" width="20" height="15" class="mr-2 border-round-sm" loading="lazy" />
+                  {{ testimony.location }}
               </div>
             </h3>
           </a>

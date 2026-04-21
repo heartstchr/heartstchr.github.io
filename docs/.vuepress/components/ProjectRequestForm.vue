@@ -151,34 +151,39 @@ async function onSubmit() {
                 <div class="mb-4">
                     <label for="name" class="block mb-1 font-semibold">Name</label>
                     <InputText id="name" v-model="form.name" :class="{ 'p-invalid': errors.name }" class="w-full"
-                        placeholder="Your Name" />
-                    <small v-if="errors.name" class="p-error">{{ errors.name }}</small>
+                        placeholder="Your Name" aria-required="true" :aria-invalid="!!errors.name"
+                        aria-describedby="name-error" />
+                    <small v-if="errors.name" id="name-error" class="p-error">{{ errors.name }}</small>
                 </div>
                 <div class="mb-4">
                     <label for="email" class="block mb-1 font-semibold">Email</label>
                     <InputText id="email" v-model="form.email" :class="{ 'p-invalid': errors.email }" class="w-full"
-                        placeholder="you@email.com" />
-                    <small v-if="errors.email" class="p-error">{{ errors.email }}</small>
+                        placeholder="you@email.com" aria-required="true" :aria-invalid="!!errors.email"
+                        aria-describedby="email-error" />
+                    <small v-if="errors.email" id="email-error" class="p-error">{{ errors.email }}</small>
                 </div>
                 <div class="mb-4">
                     <label for="details" class="block mb-1 font-semibold">Project Details</label>
                     <Textarea id="details" v-model="form.details" :class="{ 'p-invalid': errors.details }"
-                        class="w-full" rows="4" placeholder="Describe your project..." />
-                    <small v-if="errors.details" class="p-error">{{ errors.details }}</small>
+                        class="w-full" rows="4" placeholder="Describe your project..." aria-required="true"
+                        :aria-invalid="!!errors.details" aria-describedby="details-error" />
+                    <small v-if="errors.details" id="details-error" class="p-error">{{ errors.details }}</small>
                 </div>
                 <div class="mb-4">
                     <label for="service" class="block mb-1 font-semibold">Service</label>
                     <Dropdown id="service" v-model="form.service" :options="serviceOptions" optionLabel="label"
                         optionValue="value" placeholder="Select service" class="w-full"
-                        :class="{ 'p-invalid': errors.service }" />
-                    <small v-if="errors.service" class="p-error">{{ errors.service }}</small>
+                        :class="{ 'p-invalid': errors.service }" aria-required="true" :aria-invalid="!!errors.service"
+                        aria-describedby="service-error" />
+                    <small v-if="errors.service" id="service-error" class="p-error">{{ errors.service }}</small>
                 </div>
                 <div class="mb-4">
                     <label for="budget" class="block mb-1 font-semibold">Budget $</label>
                     <Dropdown id="budget" v-model="form.budget" :options="budgetOptions" optionLabel="label"
                         optionValue="value" placeholder="Select budget" class="w-full"
-                        :class="{ 'p-invalid': errors.budget }" />
-                    <small v-if="errors.budget" class="p-error">{{ errors.budget }}</small>
+                        :class="{ 'p-invalid': errors.budget }" aria-required="true" :aria-invalid="!!errors.budget"
+                        aria-describedby="budget-error" />
+                    <small v-if="errors.budget" id="budget-error" class="p-error">{{ errors.budget }}</small>
                 </div>
 
                 <Button type="submit" label="Submit Request" icon="pi pi-send" class="w-full" :loading="submitting" />
