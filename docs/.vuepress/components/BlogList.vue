@@ -29,7 +29,7 @@
                       }) }}
                     </time>
                   </div>
-                  <a :href="items[0].link" class="text-sm">
+                  <a :href="items[0].link" class="text-sm" :aria-label="`Read more about ${items[0].title}`">
                     Read More &rarr;
                   </a>
                 </div>
@@ -86,9 +86,9 @@
                 }) }}
               </time>
             </div>
-            <a :href="item.link" class="text-sm">
-              Read More &rarr;
-            </a>
+             <a :href="item.link" class="text-sm" :aria-label="`Read more about ${item.title}`">
+               Read More &rarr;
+             </a>
           </div>
         </div>
       </li>

@@ -49,22 +49,22 @@ defineProps({
                         </div>
                         <div
                             class="flex flex-column justify-content-center align-items-center gap-2 my-4 w-full max-w-96">
-                            <a :href="`/web-development-projects/${toKebabCase(project.name)}/`"
-                                class="flex flex-row no-underline w-full">
-                                <Button label="More details" icon="pi pi-info-circle" severity="secondary" raised
-                                    rounded class="w-full mr-3" />
-                            </a>
-                            <a v-if="project.contact"
-                                :href="`/contact/?subject=${encodeURIComponent('Custom Request: ' + project.name)}`"
-                                class="flex flex-row no-underline w-full">
-                                <Button label="Get Custom Request" icon="pi pi-inbox" severity="secondary" raised
-                                    rounded class="w-full" />
-                            </a>
-                            <a v-if="project.link" :href="project.link" target="_blank"
-                                class="flex flex-row no-underline w-full">
-                                <Button label="Live Demo" icon="pi pi-angle-double-right" severity="primary" raised
-                                    rounded class="w-full" />
-                            </a>
+                             <a :href="`/web-development-projects/${toKebabCase(project.name)}/`"
+                                 class="flex flex-row no-underline w-full" :aria-label="`Read more technical details about ${project.name}`">
+                                 <Button label="More details" icon="pi pi-info-circle" severity="secondary" raised
+                                     rounded class="w-full mr-3" />
+                             </a>
+                             <a v-if="project.contact"
+                                 :href="`/contact/?subject=${encodeURIComponent('Custom Request: ' + project.name)}`"
+                                 class="flex flex-row no-underline w-full" :aria-label="`Request a custom quote for ${project.name}`">
+                                 <Button label="Get Custom Request" icon="pi pi-inbox" severity="secondary" raised
+                                     rounded class="w-full" />
+                             </a>
+                             <a v-if="project.link" :href="project.link" target="_blank"
+                                 class="flex flex-row no-underline w-full" :aria-label="`View live demo of ${project.name}`">
+                                 <Button label="Live Demo" icon="pi pi-angle-double-right" severity="primary" raised
+                                     rounded class="w-full" />
+                             </a>
                             <a v-if="project.codeLink" :href="project.codeLink" target="_blank"
                                 class="flex flex-row no-underline w-full">
                                 <Button label="Get Started" icon="pi pi-github" severity="secondary" raised rounded

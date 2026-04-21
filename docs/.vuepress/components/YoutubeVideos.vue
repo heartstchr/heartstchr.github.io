@@ -1,6 +1,6 @@
 <template>
     <div v-if="videos.length === 0">
-        <a href="https://www.youtube.com/@stackseekers" target="_blank">
+        <a href="https://www.youtube.com/@stackseekers" target="_blank" aria-label="Watch the Stack Seekers channel on YouTube">
             <Button label="Watch on youtube" icon="pi pi-youtube" iconPos="left" class="w-full" raised rounded />
         </a>
     </div>
@@ -19,7 +19,7 @@
                 </template>
                 <template #footer>
                     <div class="flex gap-3 m-1 align-content-end">
-                        <a :href="'https://www.youtube.com/watch?v=' + video.id" target="_blank">
+                        <a :href="'https://www.youtube.com/watch?v=' + video.id" target="_blank" :aria-label="`Watch ${video.title} on YouTube`">
                             <Button label="Watch on youtube" icon="pi pi-youtube" iconPos="left" class="w-full" raised
                                 rounded />
                         </a>

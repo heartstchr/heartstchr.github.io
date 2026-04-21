@@ -9,6 +9,17 @@
   --premium-charcoal: #0f172a;
   --premium-border: rgba(255, 255, 255, 0.08);
   --premium-hover-bg: rgba(255, 255, 255, 0.03);
+
+  /* Accessibility Overrides */
+  --p-text-muted-color: #71717a; /* Darker than default for better contrast */
+  --p-text-secondary-color: #52525b;
+}
+
+/* Global Focus Styles */
+:focus-visible {
+  outline: 2px solid var(--theme-color) !important;
+  outline-offset: 3px !important;
+  border-radius: 4px;
 }
 body {
   font-family: "Inter", sans-serif;
