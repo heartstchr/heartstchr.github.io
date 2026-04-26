@@ -112,7 +112,7 @@ copyright: false
   <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
     <Button label="Request Technical Roadmap" icon="pi pi-map" severity="primary" size="large" raised rounded />
   </a>
-  <div class="text-sm mt-3 text-400">Preferred for 6-month international partnerships.</div>
+  <div class="text-sm mt-3 text-400">Preferred for 6-month partnerships.</div>
 </div>
 
 <script setup lang="ts">
