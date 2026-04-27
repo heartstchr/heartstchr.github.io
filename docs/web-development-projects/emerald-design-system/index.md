@@ -25,7 +25,6 @@ project:
   nextProject: {"name":"Tech Create","link":"/web-development-projects/tech-create/"}
 ---
 
-<!-- Architectural Brief Header -->
 <section class="mt-4 mb-6">
   <div class="grid align-items-center">
     <div class="col-12 lg:col-8">
@@ -60,8 +59,6 @@ project:
     </div>
   </div>
 </section>
-
-<!-- Visual Evidence Section -->
 <section class="mb-8 overflow-hidden border-round-3xl shadow-4" itemscope itemtype="https://schema.org/SoftwareApplication">
   <div v-if="$frontmatter.project.images">
     <div v-if="$frontmatter.project.images.length > 1">
@@ -82,8 +79,6 @@ project:
     </div>
   </div>
 </section>
-
-<!-- Performance Infrastructure -->
 <div class="grid mb-8">
   <div class="col-12 lg:col-8">
      <div class="surface-card p-4 md:p-6 border-round-3xl shadow-2 h-full">
@@ -106,7 +101,6 @@ project:
         <div class="relative z-1">
           <h3 class="text-2xl font-bold mb-4">The Stack</h3>
           <Stacks :stack="$frontmatter.project.stack" :other-skills="$frontmatter.project.otherSkills" />
-          
           <div class="flex flex-column gap-2 mt-6">
             <div class="flex align-items-stretch gap-2 w-full">
               <a v-if="$frontmatter.project.link" :href="$frontmatter.project.link" target="_blank" class="flex-1 no-underline flex align-items-stretch">
@@ -116,7 +110,6 @@ project:
                 <Button label="Source" icon="pi pi-github" severity="secondary" class="w-full h-full font-bold" raised rounded />
               </a>
             </div>
-            
             <a v-if="$frontmatter.project.contact" :href="'/contact/?subject=' + encodeURIComponent('Scale Request: ' + $frontmatter.project.name)" class="no-underline w-full">
               <Button label="Architect Similar Solution" icon="pi pi-bolt" severity="secondary" class="w-full font-bold" raised rounded />
             </a>
@@ -126,7 +119,6 @@ project:
   </div>
 </div>
 
-<!-- Narrative Transformation -->
 <div class="project-markdown-content text-lg line-height-4 mb-8">
   
 </div>
