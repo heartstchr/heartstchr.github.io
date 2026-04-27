@@ -1,7 +1,7 @@
 ---
 home: true
-title: High-Performance Digital Product Engineering
-description: "Freelance Full-Stack Developer available for hire. I build high-performance web platforms — from programmatic SEO engines to custom SaaS dashboards. React, Next.js & Node.js expert."
+title: Fractional CTO, AI Automation, and Programmatic SEO Engineering
+description: "Stack Seekers helps startups and enterprise teams with fractional CTO leadership, AI automation, scalable SaaS architecture, and programmatic SEO systems built for growth."
 editLink: false
 copyright: false
 ---
@@ -17,20 +17,20 @@ copyright: false
         </span>
       </div>
       <h1 class="m-0 p-0 line-height-2 text-4xl md:text-7xl font-bold">
-        I engineer products that <span class="text-gradient">shatter <span class="hidden md:inline">performance </span>bottlenecks</span> and <span class="text-gradient-2">force growth</span>.
+        Fractional CTO, <span class="text-gradient">AI automation</span>, and <span class="text-gradient-2">programmatic SEO systems</span> for teams that need senior execution.
       </h1>
       <div class="text-xl md:text-2xl mt-4 line-height-3 text-700 hidden md:block">
-        From migrating global banking infra for <strong>ABN AMRO</strong> to reducing lead turnaround from <strong>4 days to 2 hours</strong> for <strong>Upstox</strong>. I build the high-integrity architecture that powers your next 6 months of growth.
+        From migrating global banking infrastructure for <strong>ABN AMRO</strong> to reducing lead turnaround from <strong>4 days to 2 hours</strong> for <strong>Upstox</strong>. I help founders and product teams turn technical bottlenecks into scalable revenue systems.
       </div>
       <div class="text-xl mt-4 line-height-3 text-700 block md:hidden">
-        Proven architecture for **ABN AMRO** and **Upstox**. I build the high-integrity systems that power your growth.
+        Proven work for **ABN AMRO** and **Upstox**. Senior architecture, automation, and growth systems for teams that need momentum.
       </div>
       <div class="flex flex-column md:flex-row gap-3 mt-5">
         <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
-          <Button label="Book Free Discovery Call" icon="pi pi-calendar-clock" severity="primary" size="large" rounded raised class="w-full md:w-auto white-space-nowrap" />
+          <Button label="Book Technical Roadmap Call" icon="pi pi-calendar-clock" severity="primary" size="large" rounded raised class="w-full md:w-auto white-space-nowrap" />
         </a>
         <Button 
-          label="Explore My Solutions" 
+          label="Explore Services" 
           icon="pi pi-arrow-down" 
           class="p-button-outlined p-button-secondary w-full md:w-auto" 
           size="large" 
@@ -41,11 +41,11 @@ copyright: false
       <div class="mt-5 grid gap-3 ml-1">
         <div class="flex align-items-center gap-3">
           <i class="pi pi-check-circle text-green-500"></i>
-          <span class="text-sm md:text-base">Modern Tech Stack (Next.js, React, Node)</span>
+          <span class="text-sm md:text-base">Fractional CTO guidance with hands-on implementation</span>
         </div>
         <div class="flex align-items-center gap-3">
           <i class="pi pi-check-circle text-green-500"></i>
-          <span class="text-sm md:text-base">Built for Scale and Speed</span>
+          <span class="text-sm md:text-base">Built for scale, crawlability, and measurable business outcomes</span>
         </div>
       </div>
     </div>

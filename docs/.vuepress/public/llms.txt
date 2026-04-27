@@ -1,59 +1,36 @@
 # Stack Seekers
 
-> Stack Seekers is an Enterprise Architecture Partner and Fractional CTO consultancy led by Jiwan Ghosal. We specialize in architecting high-performance digital products, scaling complex web platforms, and implementing AI-driven automation for startups and global enterprises.
+> Stack Seekers is an independent engineering consultancy led by Jiwan Ghosal. The firm helps startups and enterprise teams with fractional CTO support, AI automation, programmatic SEO systems, scalable product architecture, enterprise cloud migration, and API performance work.
 
-## Services
+## Best Pages
 
-- [Figma to Web](https://stackseekers.com/web-development-services/figma-to-web/) - Converting designs into functional, dynamic websites using Vue.js/React.js.
-- [E-commerce Solutions](https://stackseekers.com/web-development-services/e-commerce-solutions/) - Building robust, scalable online stores.
-- [Consulting & Technical Advisory](https://stackseekers.com/web-development-services/consulting-and-technical-advisory/) - Expert guidance for projects and technical challenges.
-- [Custom Web Development](https://stackseekers.com/web-development-services/custom-web-development/) - Web apps tailored to business needs.
-- [API Development](https://stackseekers.com/web-development-services/api-development-and-integration/) - Creating RESTful APIs and integrating third-party services.
-- [CI/CD](https://stackseekers.com/web-development-services/ci-cd/) - Designing pipelines with Jenkins, GitLab CI, and GitHub Actions.
-- [Hosting & Deployment](https://stackseekers.com/web-development-services/hosting/) - Cloud infrastructure setup (AWS/Azure) and containerization.
+- [Home](https://stackseekers.com/) - Primary overview of positioning, proof, and commercial fit.
+- [Services](https://stackseekers.com/web-development-services/) - Service catalog and engagement entry point.
+- [Contact](https://stackseekers.com/contact/) - Project inquiry and technical roadmap call.
 
-## Products & Projects
+## Core Services
 
-- [Contact Form Plugin](https://contact-form-app.stackseekers.com/)
-  - **Problem**: Custom contact forms usually require backend code and database setup.
-  - **Solution**: A drop-in widget that sends submissions directly to a Notion database.
-  - **Price**: Free
+- [Product Architecture & Scale](https://stackseekers.com/web-development-services/product-architecture-and-scaling/) - Architecture strategy for SaaS products, platform rebuilds, and scale-readiness.
+- [ROI-Driven AI Automation](https://stackseekers.com/web-development-services/ai-and-automation-strategy/) - LLM integrations, automation workflows, and AI-enabled internal tools.
+- [Fractional CTO Strategy](https://stackseekers.com/web-development-services/fractional-cto-and-advisory/) - Technical roadmap, delivery oversight, and senior engineering leadership without a full-time CTO hire.
+- [Enterprise Cloud Migration](https://stackseekers.com/web-development-services/enterprise-cloud-migration/) - Legacy modernization and phased migration strategy for mission-critical systems.
+- [Programmatic Growth Engines](https://stackseekers.com/web-development-services/programmatic-seo-and-growth/) - Scalable landing-page systems for long-tail organic acquisition and lead generation.
+- [High-Performance API Design](https://stackseekers.com/web-development-services/api-performance-and-integration/) - Faster APIs, cleaner integrations, and backend architecture improvements.
 
-- [Vibe3](https://vibe3.vibesquad.co)
-  - **Problem**: Brands struggle to find relevant influencers; Creators struggle to manage campaigns.
-  - **Solution**: AI-powered matching platform with campaign management and Web3 payments.
-  - **Target**: Brands, Influencers, Marketers.
+## Proof
 
-- [Dynamic CRUD App](https://notion-crud.netlify.app/)
-  - **Problem**: Building admin panels for Notion databases is time-consuming.
-  - **Solution**: Instantly turns any Notion database into a professional CRUD web application.
-  - **Price**: Free
+- ABN AMRO: enterprise-grade platform and migration work.
+- Upstox: lead-response turnaround improved from 4 days to 2 hours.
+- Qatar Airways: high-performance travel-booking interface work.
 
-- [Free AI Voice Generator & Text to Speech (Gemini)](https://ainarrator.stackseekers.com/)
-  - **Problem**: Creating professional voiceovers is expensive and requires specialized software.
-  - **Solution**: Google Docs add-on that converts text to natural-sounding AI speech.
-  - **Price**: Free
+## Relevant Case Studies
 
-- [Service Request System](https://notion-p.netlify.app/)
-  - **Problem**: Managing customer service requests often requires expensive ticketing software.
-  - **Solution**: A complete ticketing system using Notion as the backend and Netlify for hosting.
-  - **Price**: Free
-
-- [Appliance Repair Platform](https://appliancerepairly.com)
-  - **Problem**: Finding reliable local appliance repair information and professionals is difficult.
-  - **Solution**: A directory and troubleshooting guide for home appliances.
-
-- [SR-22 Insurance Now](https://sr22insurancenow.com/)
-  - **Problem**: Finding affordable SR-22 insurance is confusing and opaque.
-  - **Solution**: A comparison platform specifically for high-risk insurance needs.
-
-- [Momentum Incident Management](https://momentum-chi-brown.vercel.app/)
-  - **Problem**: IT incident tracking tools are often bloated and expensive.
-  - **Solution**: A streamlined, nested-table incident management system.
+- [Local Home Services Pros](https://stackseekers.com/web-development-projects/local-home-services-pros/) - Programmatic SEO and lead-generation architecture.
+- [AI Dynamic CRUD App](https://stackseekers.com/web-development-projects/ai-dynamic-crud-app/) - AI-assisted web application generation and workflow automation.
+- [Momentum Incident Management](https://stackseekers.com/web-development-projects/momentum-incident-management/) - Operational software and workflow management.
+- [ABN AMRO Enterprise Migration](https://stackseekers.com/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/) - Enterprise frontend migration and system modernization.
 
 ## Contact
 
-- [Book a Call](https://cal.com/stackseekers)
-- [Website](https://stackseekers.com)
-- [GitHub](https://github.com/heartstchr)
-- [LinkedIn](https://www.linkedin.com/in/jiwanghosal/)
+- [Book a Technical Roadmap Call](https://cal.com/stackseekers)
+- [Project Inquiry Form](https://stackseekers.com/contact/)

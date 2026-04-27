@@ -837,78 +837,77 @@ export const freelance = [
     ],
     details: "./details/momentum.md",
   },
-  // {
-  //   name: "Finding The Spots",
-  //   description:
-  //     "Say goodbye to the chaos of location scouting host, book, and create in our spaces effortlessly.",
-  //   software: "Web",
-  //   org: "FTS",
-  //   year: "2024",
-  //   domain: "Leisure, travel, and tourism",
-  //   schema: "https://schema.org/DeveloperApplication",
-  //   link: "https://findingthespots.com/",
-  //   contact:
-  //     "https://wa.me/917026217029?text=Hi%20there%2C%20I'm%20interested%20in%20a%20custom%20code%20solution%20for%20",
-  //   stack: [
-  //     "Javascript",
-  //     "Vuedotjs",
-  //     "vite",
-  //     "Axios",
-  //     "Express/black/white",
-  //     "jsonwebtokens/black/white",
-  //     "stripe",
-  //     "nodedotjs",
-  //     "MongoDB",
-  //     "Git",
-  //     "github/black/white",
-  //     "Eslint",
-  //     "Prettier",
-  //   ],
-  //   otherSkills: ["Pinia", "API integration"],
-  //   images: [
-  //     {
-  //       itemImageSrc: "/img/home/projects/fts.webp",
-  //       alt: "Cover screen for application page",
-  //     },
-  //   ],
-  //   features: [
-  //     { text: "Secure user registration, login, and logout functionality." },
-  //     {
-  //       text: "Role-based access for general users, property owners, and admins.",
-  //     },
-  //     { text: "Search for properties/spots by type, country, city, and time." },
-  //     {
-  //       text: "Advanced filters to refine search results based on user preferences.",
-  //     },
-  //     {
-  //       text: "Detailed property pages with full image galleries and spot information.",
-  //     },
-  //     {
-  //       text: "Booking request system with date, time, and duration selection.",
-  //     },
-  //     {
-  //       text: "Free cancellation within 24 hours with redirection to spot listings.",
-  //     },
-  //     {
-  //       text: "Seamless and secure payment processing via Stripe for confirmed bookings.",
-  //     },
-  //     {
-  //       text: "Email notifications for booking and payment confirmations (users & owners).",
-  //     },
-  //     { text: "Property owners can list new spots with images and details." },
-  //     { text: "Admin verification process for new spot submissions." },
-  //     {
-  //       text: "Responsive, mobile-friendly interface for seamless access across devices.",
-  //     },
-  //     {
-  //       text: "Integrated APIs for authentication, spot listing, booking, search, and payments.",
-  //     },
-  //     {
-  //       text: "Scalable backend architecture to support future growth and features.",
-  //     },
-  //   ],
-  //   details: "./details/fts.md",
-  // },
+  {
+    name: "Marketplace Booking Platform",
+    description:
+      "A multi-sided booking marketplace with search, listing management, reservations, and payments that can be adapted to other inventory-led domains.",
+    software: "Web",
+    org: "Confidential Client",
+    year: "2024",
+    domain: "Marketplace SaaS",
+    schema: "https://schema.org/DeveloperApplication",
+    link: "",
+    contact:
+      "https://wa.me/917026217029?text=Hi%20there%2C%20I'm%20interested%20in%20a%20custom%20code%20solution%20for%20",
+    stack: [
+      "Javascript",
+      "Vuedotjs",
+      "vite",
+      "Axios",
+      "Express/black/white",
+      "jsonwebtokens/black/white",
+      "stripe",
+      "nodedotjs",
+      "MongoDB",
+      "Git",
+      "github/black/white",
+      "Eslint",
+      "Prettier",
+    ],
+    otherSkills: ["Pinia", "API integration"],
+    images: [
+    ],
+    features: [
+      { text: "Secure user registration, login, and logout functionality." },
+      {
+        text: "Role-based access for general users, property owners, and admins.",
+      },
+      { text: "Search inventory by type, geography, availability, and time." },
+      {
+        text: "Advanced filters to refine search results based on user preferences.",
+      },
+      {
+        text: "Detailed listing pages with full image galleries and inventory information.",
+      },
+      {
+        text: "Booking request system with date, time, and duration selection.",
+      },
+      {
+        text: "Free cancellation within 24 hours with redirection to the inventory catalog.",
+      },
+      {
+        text: "Seamless and secure payment processing via Stripe for confirmed bookings.",
+      },
+      {
+        text: "Email notifications for booking and payment confirmations (users & owners).",
+      },
+      { text: "Providers can publish new listings with images and details." },
+      { text: "Admin verification process for new listing submissions." },
+      {
+        text: "Responsive, mobile-friendly interface for seamless access across devices.",
+      },
+      {
+        text: "Integrated APIs for authentication, listing management, booking, search, and payments.",
+      },
+      {
+        text: "Scalable backend architecture to support future growth and features.",
+      },
+      {
+        text: "Reusable marketplace architecture that can be replicated in another domain with different inventory, filters, and booking logic.",
+      },
+    ],
+    details: "./details/fts.md",
+  },
   {
     name: "IBRebuild for ABN AMRO BANK N.V.",
     description:
@@ -1730,11 +1729,11 @@ const baseProjects = [
     ],
   },
   // {
-  //   name: "Finding The Spots",
+  //   name: "Marketplace Booking Platform",
   //   description:
   //     "Say goodbye to the chaos of location scouting host, book, and create in our spaces effortlessly.",
   //   software: "Web",
-  //   org: "FTS",
+  //   org: "Confidential Client",
   //   year: "2024",
   //   domain: "Leisure, travel, and tourism",
   //   schema: "https://schema.org/DeveloperApplication",

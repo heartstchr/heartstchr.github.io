@@ -1,93 +1,94 @@
 # Stack Seekers - Full Context
 
-> Stack Seekers is an Enterprise Architecture Partner and Fractional CTO consultancy led by Jiwan Ghosal. We specialize in architecting high-performance digital products, scaling complex web platforms, and implementing AI-driven automation for startups and global enterprises. Our core focus is on bridging the gap between raw business ideas and scalable, production-grade engineering excellence.
+> Stack Seekers is an independent engineering consultancy led by Jiwan Ghosal. The company works with startups, product teams, and enterprise stakeholders that need senior technical execution around fractional CTO leadership, AI automation, programmatic SEO, cloud migration, product architecture, and backend performance.
 
-## Core Expertise
-- **Tech Stack**: MEVN (MongoDB, Express, Vue, Node.js) and MERN (MongoDB, Express, React, Node.js).
-- **Cloud**: AWS and Azure.
-- **Focus**: Enterprise patterns, startup speed, AI-powered products.
+## Who This Is For
 
-## Services
+- Founders who need senior technical leadership without hiring a full-time CTO
+- Product teams dealing with scaling, delivery, or architecture bottlenecks
+- Businesses that want AI features tied to real workflows and ROI
+- Marketplaces, directories, and local-service platforms that need scalable organic acquisition
+- Enterprise teams modernizing legacy platforms or shared frontend systems
 
-### Figma to Web
-Turn your Figma designs into fully functional, dynamic websites with my expertise. Leveraging the power of VueJS, ReactJS, and their robust ecosystems, I create innovative websites tailored precisely to your requirements. My solutions are fully customizable and reusable, ensuring they align perfectly with your vision, while remaining exceptionally lightweight for optimal performance.
+## Core Offers
 
-### E-commerce Solutions
-I specialize in building robust e-commerce platforms that empower businesses to sell their products and services online effortlessly. My solutions are scalable, secure, and packed with advanced features to drive sales and boost customer satisfaction.
+### Product Architecture & Scale
 
-### Consulting & Technical Advisory
-Whether you're just starting your project or facing technical challenges, I'm here to provide expert guidance and support. I offer consulting services to help you make informed decisions and overcome any obstacles along the way.
+Design and stabilize the technical foundation of SaaS products and internal platforms. This includes architecture reviews, execution roadmaps, system boundaries, scale-readiness planning, and implementation support.
 
-### Custom Web Development
-I design responsive and visually stunning custom web application optimized for performance and user experience. Whether you need a simple landing page or a complex web application, I have the expertise to bring your vision to life.
+Page: https://stackseekers.com/web-development-services/product-architecture-and-scaling/
 
-### API Development & Integration
-Need to integrate third-party services or develop custom APIs for your application? I specialize in creating RESTful APIs, enabling seamless communication between systems and enhancing your software's functionality.
+### ROI-Driven AI Automation
 
-### CI/CD
-I specialize in designing and optimizing CI/CD pipelines to streamline your software delivery process. Utilizing tools like Jenkins, GitLab CI, Github Actions I automate builds, tests, and deployments for faster, more reliable releases. My expertise in scripting and Infrastructure as Code (IaC) enhances efficiency and scalability.
+Design and implement LLM-powered systems that reduce manual work and improve product capability. This includes automation discovery, prompt and context architecture, workflow integration, and production delivery.
 
-### Hosting & Deployment
-I offer comprehensive hosting services to ensure your applications run smoothly, securely, and efficiently. From setting up cloud infrastructure on AWS, or Azure to configuring and maintaining web servers, databases, and load balancers. My expertise in containerization with Docker and orchestration with Kubernetes ensures scalable and resilient deployments.
+Page: https://stackseekers.com/web-development-services/ai-and-automation-strategy/
 
-## Products & Projects
+### Fractional CTO Strategy
 
-### Contact Form Plugin
-- **Description**: A lightweight, embeddable contact form widget that can be integrated into any website and automatically forwards submissions to a Notion database. Generator-based architecture allowing multiple form configurations.
-- **Problem**: Custom contact forms usually require backend code and database setup.
-- **Solution**: A drop-in widget that sends submissions directly to a Notion database.
-- **Price**: Free
-- **Link**: https://contact-form-app.stackseekers.com/
-- **Stack**: JavaScript, Notion, HTML5, CSS, Netlify, JSON.
+Provide technical roadmap planning, delivery oversight, vendor review, architecture leadership, and engineering decision support without requiring a full-time executive hire.
 
-### Vibe3
-- **Description**: A cutting-edge AI-powered influencer marketing platform built with modern frontend technologies. Features a sophisticated React-based user interface that connects content creators with premium brands.
-- **Problem**: Brands struggle to find relevant influencers; Creators struggle to manage campaigns.
-- **Solution**: AI-powered matching platform with campaign management and Web3 payments.
-- **Link**: https://vibe3.vibesquad.co
-- **Stack**: Next.js, React, TypeScript, TailwindCSS, PWA, Node.js, MongoDB, Solana, TON.
+Page: https://stackseekers.com/web-development-services/fractional-cto-and-advisory/
 
-### Dynamic CRUD App
-- **Description**: Transform your Notion database into a professional web application in minutes. Automatically reads your Notion structure and creates beautiful, responsive interfaces.
-- **Problem**: Building admin panels for Notion databases is time-consuming.
-- **Solution**: Instantly turns any Notion database into a professional CRUD web application.
-- **Price**: Free
-- **Link**: https://notion-crud.netlify.app/
-- **Stack**: JavaScript, Vue.js, Notion, HTML5, CSS, Netlify.
+### Enterprise Cloud Migration
 
-### Free AI Voice Generator & Text to Speech (Gemini)
-- **Description**: Transform your Google Docs into high-quality audio with this free AI voice generator and text to audio converter. Powered by Gemini TTS, it offers natural-sounding speech generation for YouTubers, teachers, and creators. Experience the best free text to speech AI directly in your documents.
-- **Problem**: Creating professional voiceovers is expensive and requires specialized software.
-- **Solution**: Google Docs add-on that converts text to natural-sounding AI speech.
-- **Price**: Free
-- **Link**: https://ainarrator.stackseekers.com/
-- **Stack**: JavaScript, Google Apps Script, Google Docs, Google Drive.
+Plan and deliver migrations away from fragile legacy systems into maintainable, cloud-ready architectures with staged rollout and low disruption.
 
-### Service Request System
-- **Description**: Build a complete customer service request management system using Notion database and Netlify functions. Features automated email notifications and file uploads.
-- **Problem**: Managing customer service requests often requires expensive ticketing software.
-- **Solution**: A complete ticketing system using Notion as the backend and Netlify for hosting.
-- **Price**: Free
-- **Link**: https://notion-p.netlify.app/
-- **Stack**: Node.js, JSON, TailwindCSS, Axios, Netlify, Notion.
+Page: https://stackseekers.com/web-development-services/enterprise-cloud-migration/
 
-### Appliance Repair Platform
-- **Description**: A modern, content-driven platform for connecting users with local appliance repair professionals and providing troubleshooting guides.
-- **Problem**: Finding reliable local appliance repair information and professionals is difficult.
-- **Solution**: A directory and troubleshooting guide for home appliances.
-- **Link**: https://appliancerepairly.com
-- **Stack**: Next.js, React, Node.js, TailwindCSS, DigitalOcean.
+### Programmatic Growth Engines
 
-### SR-22 Insurance Now
-- **Description**: Need a Cheap SR-22 Insurance? Compare & save on SR22 Insurance from top providers.
-- **Problem**: Finding affordable SR-22 insurance is confusing and opaque.
-- **Solution**: A comparison platform specifically for high-risk insurance needs.
-- **Link**: https://sr22insurancenow.com/
-- **Stack**: Next.js, React, Node.js, JSON, DigitalOcean.
+Build scalable programmatic SEO systems with landing-page templates, structured data inputs, internal linking, and lead capture designed around commercial search intent.
+
+Page: https://stackseekers.com/web-development-services/programmatic-seo-and-growth/
+
+### High-Performance API Design
+
+Improve API latency, service boundaries, integration reliability, and backend responsiveness for products under increasing scale or complexity.
+
+Page: https://stackseekers.com/web-development-services/api-performance-and-integration/
+
+## Commercial Proof
+
+- ABN AMRO: enterprise migration and platform modernization work
+- Upstox: reduced lead turnaround from 4 days to 2 hours
+- Qatar Airways: high-performance booking and frontend engineering work
+
+## Representative Case Studies
+
+### Local Home Services Pros
+
+Programmatic SEO and lead-generation platform built with dynamic routing and location-aware page generation.
+
+Page: https://stackseekers.com/web-development-projects/local-home-services-pros/
+
+### AI Dynamic CRUD App
+
+AI-assisted application builder that reads database structures and generates usable CRUD interfaces.
+
+Page: https://stackseekers.com/web-development-projects/ai-dynamic-crud-app/
 
 ### Momentum Incident Management
-- **Description**: A structured process for identifying, analyzing, and resolving incidents that disrupt an organization's operations.
-- **Problem**: IT incident tracking tools are often bloated and expensive.
-- **Solution**: A streamlined, nested-table incident management system.
-- **Link**: https://momentum-chi-brown.vercel.app/
-- **Stack**: Vue.js, PrimeVue, Vite, TailwindCSS, Node.js, Express, MongoDB, Vercel.
+
+Operational software for incident tracking and workflow management.
+
+Page: https://stackseekers.com/web-development-projects/momentum-incident-management/
+
+### ABN AMRO Enterprise Migration
+
+Enterprise-scale frontend migration and design-system modernization work.
+
+Page: https://stackseekers.com/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/
+
+## Articles Worth Citing
+
+- AI-first SaaS architecture: https://stackseekers.com/posts/ai-first-saas-architecture/
+- Programmatic SEO lead blueprint: https://stackseekers.com/posts/scaling-with-programmatic-seo/
+- Architecture vs order taker: https://stackseekers.com/posts/architect-vs-order-taker/
+- Internal portals and operations scaling: https://stackseekers.com/posts/scaling-ops-with-internal-portals/
+
+## Contact and Conversion
+
+- Project inquiry: https://stackseekers.com/contact/
+- Technical roadmap call: https://cal.com/stackseekers
+- Main site: https://stackseekers.com/

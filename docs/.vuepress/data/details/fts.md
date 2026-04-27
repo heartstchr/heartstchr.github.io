@@ -1,5 +1,30 @@
 ## Project Overview
-A comprehensive **location-based marketplace platform** for discovering and booking unique spots/venues. Built as a **freelance project for FindingTheSpot** team, this is a **full-stack application** that connects spot owners with people looking for unique locations for events, photoshoots, meetings, or experiences.
+A comprehensive **marketplace booking platform** for discovering and reserving structured inventory. Built for a **confidential client** under NDA, this is a **full-stack application** that connects inventory providers with users looking to browse, compare, and book listed resources.
+
+One of the strongest parts of this build is that the product logic is not tied to a single vertical. The same architecture can be replicated in another domain where users search structured inventory, compare results, book or request access, make payments, and manage listings through role-based workflows.
+
+## Executive Summary
+
+This project shows how to build a reusable multi-sided marketplace foundation with booking, payments, provider workflows, and search-driven discovery. The commercial value is not limited to one vertical because the same architecture can be adapted to many inventory-led businesses.
+
+## Business Problem
+
+Marketplace products are difficult because they combine supply management, demand capture, trust, availability, payments, and role-based operations in one system. Many teams can prototype the interface, but far fewer can create a stable full-stack flow that providers and customers can actually use.
+
+## What I Built
+
+- A marketplace booking platform with provider, customer, and admin flows
+- Search, filtering, listing management, booking, and payment infrastructure
+- A role-based architecture that supports moderation and operational workflows
+- A reusable system that can be repurposed for other booking and catalog domains
+
+## Why It Matters
+
+This kind of build is valuable because it compresses multiple business systems into one product foundation: discovery, inventory management, transactional workflow, and operational control. That makes it a strong proof point for both marketplace execution and scalable product architecture.
+
+## Best Fit If You Need Something Similar
+
+This case study supports [Product Architecture & Scale](/web-development-services/product-architecture-and-scaling/) and [High-Performance API Design](/web-development-services/api-performance-and-integration/). It is a strong fit if you need a marketplace, booking system, or provider-managed platform.
 
 ## Architecture
 This is a **modern monorepo** with separate **client** and **server** applications, utilizing a **microservices-inspired architecture** with clear separation of concerns, role-based authentication, payment processing, and comprehensive booking management.
@@ -32,7 +57,7 @@ This is a **modern monorepo** with separate **client** and **server** applicatio
 ### **Root Directory Structure**
 
 ```
-fts/
+marketplace-platform/
 ├── client/                       # Frontend Vue.js application
 │   ├── src/                     # Source code
 │   ├── public/                  # Static assets
@@ -83,25 +108,25 @@ src/
 │   ├── shared/                  # Shared utility components
 │   │   ├── Gallery.vue
 │   │   ├── Loader.vue
-│   │   ├── Spot.vue
+│   │   ├── ListingCard.vue
 │   │   ├── Search.vue
 │   │   └── ConfirmTemplate.vue
 │   ├── UploadImages.vue         # Image upload component
 │   └── PaymentFailed.vue        # Payment failure handling
 ├── views/                       # Page-level components
 │   ├── HomeView.vue             # Homepage
-│   ├── SpotsView.vue            # Spots listing
-│   ├── SpotDetailsView.vue      # Individual spot details
-│   ├── RegisterYourSpotView.vue # Spot registration
+│   ├── ListingsView.vue         # Inventory listing
+│   ├── ListingDetailsView.vue   # Individual listing details
+│   ├── RegisterListingView.vue  # Listing registration
 │   ├── Payment.vue              # Payment processing
 │   ├── AboutView.vue            # About page
 │   ├── NotFoundView.vue         # 404 page
 │   ├── Privacy.vue              # Privacy policy
 │   ├── Terms.vue                # Terms of service
-│   └── spots/                   # Spot management views
-│       ├── AddSpotView.vue
-│       ├── EditSpotView.vue
-│       └── ListSpotsView.vue
+│   └── listings/                # Listing management views
+│       ├── AddListingView.vue
+│       ├── EditListingView.vue
+│       └── ListListingsView.vue
 ├── router/                      # Routing configuration
 │   ├── index.ts                 # Main router setup
 │   └── routes.ts                # Route definitions
@@ -109,7 +134,7 @@ src/
 │   ├── [8 store modules for:
 │   ├── - Authentication
 │   ├── - User management
-│   ├── - Spots management
+│   ├── - Listings management
 │   ├── - Booking system
 │   ├── - Payment processing
 │   ├── - Location services
@@ -120,7 +145,7 @@ src/
 │   ├── - API client configuration
 │   ├── - Authentication services
 │   ├── - User services
-│   ├── - Spot services
+│   ├── - Listing services
 │   ├── - Booking services
 │   ├── - Payment services
 │   ├── - Location services
@@ -129,7 +154,7 @@ src/
 │   └── - Error handling]
 ├── models/                      # TypeScript interfaces
 │   ├── User.interface.ts
-│   ├── Spot.interface.ts
+│   ├── Listing.interface.ts
 │   ├── Booking.interface.ts
 │   └── Payment.interface.ts
 ├── assets/                      # Static assets
@@ -148,7 +173,7 @@ server/
 ├── server.js                    # Main server entry point
 ├── models/                      # Database models (9 models)
 │   ├── user.model.js            # User schema and methods
-│   ├── spot.model.js            # Spot/venue schema
+│   ├── listing.model.js         # Inventory listing schema
 │   ├── booking.model.js         # Booking management
 │   ├── payment.model.js         # Payment records
 │   ├── role.model.js            # User roles (admin, owner, user)
@@ -159,7 +184,7 @@ server/
 ├── controllers/                 # Business logic (8 controllers)
 │   ├── auth.controller.js       # Authentication logic
 │   ├── user.controller.js       # User management
-│   ├── spot.controller.js       # Spot CRUD operations
+│   ├── listing.controller.js    # Listing CRUD operations
 │   ├── booking.controller.js    # Booking management
 │   ├── payment.controller.js    # Stripe payment processing
 │   ├── filter.controller.js     # Search and filtering
@@ -169,7 +194,7 @@ server/
 ├── routes/                      # API route definitions (7 route files)
 │   ├── auth.routes.js           # Authentication endpoints
 │   ├── user.routes.js           # User management endpoints
-│   ├── spot.routes.js           # Spot management endpoints
+│   ├── listing.routes.js        # Listing management endpoints
 │   ├── booking.routes.js        # Booking endpoints
 │   ├── payment.routes.js        # Payment endpoints
 │   ├── filter.routes.js         # Search and filter endpoints
@@ -195,7 +220,7 @@ server/
 ├── validations/                 # Input validation schemas
 │   ├── [Validation rules for:
 │   ├── - User registration/login
-│   ├── - Spot creation/updates
+│   ├── - Listing creation/updates
 │   ├── - Booking submissions
 │   └── - Payment processing]
 ├── configs/                     # Configuration files
@@ -207,25 +232,25 @@ server/
 ## **Key Features & Functionality**
 
 ### **Core Platform Features**
-- **Spot Discovery**: Browse and search unique venues/locations
-- **Detailed Listings**: Comprehensive spot information with image galleries
+- **Inventory Discovery**: Browse and search structured listings
+- **Detailed Listings**: Comprehensive item information with image galleries
 - **Booking System**: Full booking workflow with calendar integration
 - **Payment Processing**: Secure payments via Stripe integration
 - **User Management**: Role-based authentication (admin, owner, user)
-- **Location Services**: Country and city-based filtering
+- **Catalog Filtering**: Geography and availability-based filtering
 
 ### **User Roles & Permissions**
-1. **Regular Users**: Browse spots, make bookings, manage their bookings
-2. **Spot Owners**: List their spots, manage bookings, update availability
+1. **Regular Users**: Browse listings, make bookings, manage their bookings
+2. **Providers**: Publish listings, manage bookings, update availability
 3. **Administrators**: Full platform management, user moderation
 
 ### **Booking & Payment Flow**
-1. **Spot Discovery**: Users browse available spots with filters
-2. **Spot Details**: View comprehensive information, images, availability
+1. **Inventory Discovery**: Users browse available listings with filters
+2. **Listing Details**: View comprehensive information, images, availability
 3. **Booking Request**: Select dates, submit booking with details
 4. **Payment Processing**: Secure payment via Stripe
 5. **Confirmation**: Email notifications and booking management
-6. **Communication**: In-platform messaging between users and owners
+6. **Communication**: In-platform messaging between users and providers
 
 ### **Technical Features**
 - **Image Upload**: Multi-image upload with optimization
@@ -233,6 +258,19 @@ server/
 - **Responsive Design**: Mobile-first approach with PrimeVue components
 - **Real-time Updates**: Dynamic content updates
 - **Email Notifications**: Automated booking confirmations and updates
+
+## **Replication in Another Domain**
+
+This platform is a strong reusable base for other marketplace and booking products because the core building blocks are already separated cleanly:
+
+- **Searchable inventory model**: adapt the same structure to equipment, workspaces, tours, professionals, rentals, appointments, or other bookable resources
+- **Role-based access**: keep the same user, provider, and admin workflow with only domain-specific policy changes
+- **Booking and request flow**: reuse the booking engine for reservations, consultations, demo slots, rentals, or service requests
+- **Payment infrastructure**: preserve Stripe flows while adjusting pricing, deposits, or commission rules
+- **Listing management**: reuse create, edit, verify, and media-upload workflows for any provider-managed catalog
+- **Filtering and discovery**: adapt country, city, availability, and attribute filters to the new vertical
+
+In practical terms, this means the functionality does not need to be rebuilt from zero for a different business category. The existing frontend patterns, backend route structure, auth model, payment handling, and admin verification flow can be ported into another domain with targeted changes to terminology, schemas, business rules, and search attributes.
 
 ## **Development Workflow**
 
@@ -290,15 +328,15 @@ POST   /api/auth/logout       # User logout
 User Management:
 GET    /api/users/profile     # Get user profile
 PUT    /api/users/profile     # Update user profile
-GET    /api/users/spots       # Get user's spots
+GET    /api/users/listings    # Get user's listings
 
-Spot Management:
-GET    /api/spots             # List all spots (with filters)
-GET    /api/spots/:id         # Get spot details
-POST   /api/spots             # Create new spot (owner only)
-PUT    /api/spots/:id         # Update spot (owner only)
-DELETE /api/spots/:id         # Delete spot (owner only)
-POST   /api/spots/images      # Upload spot images
+Listing Management:
+GET    /api/listings          # List all listings (with filters)
+GET    /api/listings/:id      # Get listing details
+POST   /api/listings          # Create new listing (provider only)
+PUT    /api/listings/:id      # Update listing (provider only)
+DELETE /api/listings/:id      # Delete listing (provider only)
+POST   /api/listings/images   # Upload listing images
 
 Booking Management:
 GET    /api/bookings          # List user's bookings
@@ -315,7 +353,7 @@ GET    /api/countries         # List countries
 GET    /api/cities            # List cities by country
 
 Filtering:
-GET    /api/filters/spots     # Advanced spot filtering
+GET    /api/filters/listings  # Advanced listing filtering
 ```
 
 ## **Security Features**
@@ -389,7 +427,7 @@ GET    /api/filters/spots     # Advanced spot filtering
 
 ### **Marketplace Features**
 - **Commission-based model** (configurable)
-- **Spot verification** process
+- **Listing verification** process
 - **Rating and review system** (ready for implementation)
 - **Search algorithm** with relevance scoring
 - **Availability management** with calendar integration
@@ -403,10 +441,9 @@ GET    /api/filters/spots     # Advanced spot filtering
 
 ---
 
-**Project**: FindingTheSpot (FTS)  
-**Team**: FindingTheSpot Development Team  
+**Project**: Confidential Marketplace Booking Platform  
+**Client**: Withheld under NDA  
 **Developers**: Jiwan Ghosal, Naresh Battul  
 **Architecture**: Full-stack Vue.js + Node.js  
 **Database**: MongoDB with Mongoose  
 **Payment**: Stripe Integration  
-

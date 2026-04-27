@@ -30,16 +30,6 @@
         </a>
       </div>
     </section>
-
-    <!-- Contextual "Expertise" Re-assurance -->
-    <div class="text-center mb-8">
-      <h3 class="text-900 font-bold text-2xl mb-4 uppercase tracking-widest">Global Brand Integrity</h3>
-      <div class="flex flex-wrap align-items-center justify-content-center gap-6 opacity-40">
-        <img src="/img/home/abn-amro-logo.webp" alt="ABN AMRO" class="h-2rem grayscale-100" />
-        <img src="/img/home/upstox.webp" alt="Upstox" class="h-2rem grayscale-100" />
-        <img src="/img/home/capgemini.webp" alt="Capgemini" class="h-2rem grayscale-100" />
-      </div>
-    </div>
   </div>
 
   <!-- Sticky Mobile CTA -->

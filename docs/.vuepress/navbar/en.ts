@@ -13,36 +13,28 @@ export const enNavbar = navbar([
     link: "/web-development-services/",
     children: [
       {
-        text: "Figma to web",
-        link: "/web-development-services/figma-to-web/",
+        text: "Product Architecture",
+        link: "/web-development-services/product-architecture-and-scaling/",
       },
       {
-        text: "E-commerce",
-        link: "/web-development-services/e-commerce-solutions/",
+        text: "AI Automation",
+        link: "/web-development-services/ai-and-automation-strategy/",
       },
       {
-        text: "Consulting",
-        link: "/web-development-services/consulting-and-technical-advisory/",
+        text: "Fractional CTO",
+        link: "/web-development-services/fractional-cto-and-advisory/",
       },
       {
-        text: "Web Development",
-        link: "/web-development-services/custom-web-development/",
+        text: "Cloud Migration",
+        link: "/web-development-services/enterprise-cloud-migration/",
       },
       {
-        text: "API Development",
-        link: "/web-development-services/api-development-and-integration/",
+        text: "Programmatic SEO",
+        link: "/web-development-services/programmatic-seo-and-growth/",
       },
       {
-        text: "CICD",
-        link: "/web-development-services/ci-cd/",
-      },
-      {
-        text: "Hosting",
-        link: "/web-development-services/hosting/",
-      },
-      {
-        text: "Other",
-        link: "contact/",
+        text: "API Performance",
+        link: "/web-development-services/api-performance-and-integration/",
       },
       {
         text: "All Services",
@@ -58,6 +50,10 @@ export const enNavbar = navbar([
       {
         text: "Blog",
         link: "/posts/",
+      },
+      {
+        text: "Audit Checklist",
+        link: "/startup-stack-audit-checklist/",
       },
       {
         text: "Videos",

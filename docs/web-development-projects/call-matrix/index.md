@@ -59,8 +59,8 @@ project:
     </div>
   </div>
 </section>
-<section class="mb-8 overflow-hidden border-round-3xl shadow-4" itemscope itemtype="https://schema.org/SoftwareApplication">
-  <div v-if="$frontmatter.project.images">
+<section v-if="$frontmatter.project.images && $frontmatter.project.images.length" class="mb-8 overflow-hidden border-round-3xl shadow-4" itemscope itemtype="https://schema.org/SoftwareApplication">
+  <div>
     <div v-if="$frontmatter.project.images.length > 1">
       <Galleria :value="$frontmatter.project.images" :responsiveOptions="responsiveOptions" :numVisible="5"
         :circular="true" :showItemNavigators="true" :showThumbnails="true" class="custom-galleria">
@@ -96,7 +96,7 @@ project:
      </div>
   </div>
   <div class="col-12 lg:col-4">
-     <div class="surface-900 text-white p-4 md:p-6 border-round-3xl shadow-4 h-full relative overflow-hidden">
+     <div class="surface-900 text-white p-4 border-round-3xl shadow-4 h-full relative overflow-hidden">
         <div class="absolute top-0 right-0 w-10rem h-10rem border-circle bg-primary opacity-20" style="filter: blur(40px); transform: translate(30%, -30%);"></div>
         <div class="relative z-1">
           <h3 class="text-2xl font-bold mb-4">The Stack</h3>
@@ -120,6 +120,7 @@ project:
 </div>
 
 <div class="project-markdown-content text-lg line-height-4 mb-8">
+
   
 </div>
 

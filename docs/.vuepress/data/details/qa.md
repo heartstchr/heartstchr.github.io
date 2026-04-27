@@ -1,6 +1,29 @@
 ## Project Overview
 A comprehensive **travel booking widget collection** built with **Vue.js 2** for **TUI International Holiday (Malaysia)** . This project contains multiple embeddable search forms for different travel products including **flights**, **hotels**, **flight+hotel packages**, **tours**, **transfers**, and **car rentals**.
 
+## Executive Summary
+
+This project is a strong example of modular frontend architecture for high-traffic commercial travel flows. It shows how one codebase can support multiple booking widgets, each tailored to a different product type while staying consistent and embeddable across partner environments.
+
+## Business Problem
+
+Travel businesses often need many search and booking entry points across different products and websites, but duplicating those flows creates maintenance overhead and UX inconsistency. The challenge is to build reusable widgets that still support domain-specific behavior.
+
+## What I Built
+
+- A modular widget suite for multiple travel-booking use cases
+- Embeddable search experiences for flights, hotels, packages, tours, transfers, and rentals
+- Shared frontend architecture with reusable components and integration logic
+- A structure designed for deployment across different travel web properties
+
+## Why It Matters
+
+This kind of system matters because commercial search widgets are often the conversion-critical layer of a travel product. Strong component architecture here improves maintainability, speed of rollout, and consistency across multiple booking funnels.
+
+## Best Fit If You Need Something Similar
+
+This case study supports [Product Architecture & Scale](/web-development-services/product-architecture-and-scaling/) and [High-Performance API Design](/web-development-services/api-performance-and-integration/). It is especially relevant for embeddable booking experiences, modular frontend systems, and multi-product search interfaces.
+
 ## Architecture
 This is a **modular Vue.js 2 application** built with **Webpack 3**, designed as **embeddable widgets** that can be integrated into various travel websites. Each widget is a self-contained search form component that interfaces with GoQuo's booking platform.
 
@@ -446,4 +469,3 @@ cross-env               # Cross-platform environment variables
 **Platform**: GoQuo Travel Technology  
 **Framework**: Vue.js 2 + Webpack 3  
 **Focus**: Embeddable Travel Booking Widgets
-

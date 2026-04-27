@@ -9,7 +9,7 @@ export default hopeTheme(
     logoDark: "/img/whitelogo.webp",
     author: {
       name: "Stack Seekers",
-      url: "http://heartstchr.github.io/",
+      url: "https://stackseekers.com/",
     },
     repo: "heartstchr",
     docsDir: "/src",
@@ -50,9 +50,7 @@ export default hopeTheme(
           return ogp;
         },
       },
-      sitemap: {
-        changefreq: "hourly",
-      },
+      sitemap: false,
       blog: true,
       git: {
         contributors: false, // Disable contributors list
