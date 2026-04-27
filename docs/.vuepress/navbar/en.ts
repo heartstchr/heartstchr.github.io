@@ -44,6 +44,10 @@ export const enNavbar = navbar([
         text: "Other",
         link: "contact/",
       },
+      {
+        text: "All Services",
+        link: "/web-development-services/",
+      },
     ],
   },
   {

@@ -1,6 +1,6 @@
 ---
-title: Partner Network | Stack Seekers Freelance Collaborations
-description: Stack Seekers is a solo freelance practice. I partner with exceptional freelance designers and specialists for large-scale client projects. Explore collaboration opportunities.
+title: Partner Network | Stack Seekers Enterprise Collaborations
+description: Stack Seekers is a specialized architecture practice. I partner with exceptional designers and specialists for large-scale client projects. Explore collaboration opportunities.
 order: 4
 editLink: false
 copyright: false

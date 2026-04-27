@@ -15,8 +15,8 @@
                 collaborate!
             </div>
             <div class="my-4">
-                <a href="mailto:jiwan.cse@gmail.com?subject=Inquiry:%20collaborate%20now" size="large"
-                    class="flex justify-content-center text-center no-underline" aria-label="Send an Email">
+                <a href="/contact/?subject=Inquiry:%20collaborate%20now" size="large"
+                    class="flex justify-content-center text-center no-underline" aria-label="Book a free discovery call">
                     <Button label="Let's collaborate now!" icon="pi pi-briefcase" severity="primary" raised rounded />
                 </a>
             </div>

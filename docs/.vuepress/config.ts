@@ -5,6 +5,7 @@ import Components from "unplugin-vue-components/vite";
 import { PrimeVueResolver } from "unplugin-vue-components/resolvers";
 import { path } from "vuepress/utils";
 import theme from "./theme.js";
+import { globalSchemas, pageSpecificSchemas } from "./data/schemas.js";
 
 const mode = process.env.NODE_ENV || "development";
 process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
@@ -52,54 +53,11 @@ export default defineUserConfig({
     ["meta", { name: "twitter:card", content: "summary_large_image" }],
     ["meta", { name: "twitter:site", content: "@heartstchr" }],
     ["meta", { name: "twitter:creator", content: "@heartstchr" }],
-    [
+    ...globalSchemas.map((schema) => [
       "script",
       { type: "application/ld+json" },
-      JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        name: "Stack Seekers",
-        url: "https://stackseekers.com",
-        logo: "https://stackseekers.com/img/stackseekers.webp",
-        sameAs: [
-          "https://github.com/heartstchr",
-          "https://www.linkedin.com/in/jiwanghosal/",
-          "https://twitter.com/heartstchr",
-        ],
-      }),
-    ],
-    [
-      "script",
-      { type: "application/ld+json" },
-      JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Person",
-        name: "Jiwan Ghosal",
-        url: "https://stackseekers.com",
-        image: "https://stackseekers.com/img/home/jiwanghosal.webp",
-        jobTitle: "Senior Freelance Full-Stack Developer",
-        worksFor: {
-          "@type": "Organization",
-          name: "Stack Seekers",
-        },
-        knowsAbout: [
-          "React.js",
-          "Next.js",
-          "Node.js",
-          "AI Integration",
-          "SaaS Development",
-          "Programmatic SEO",
-          "Vue.js",
-          "TypeScript",
-        ],
-        sameAs: [
-          "https://www.linkedin.com/in/jiwanghosal/",
-          "https://github.com/heartstchr",
-          "https://twitter.com/heartstchr",
-          "https://www.youtube.com/@stackseekers",
-        ],
-      }),
-    ],
+      JSON.stringify(schema),
+    ]),
 
     [
       "link",
@@ -137,9 +95,30 @@ export default defineUserConfig({
         fetchpriority: "high",
       },
     ],
+    ["meta", { name: "ai-category", content: "Enterprise Architecture Digital Transformation" }],
+    ["meta", { name: "ai-specialty", content: "Fractional CTO, AI Automation, Scalable SaaS" }],
     ["script", { src: "/ga-loader.js" }],
   ],
   theme,
+  plugins: [
+    (app: any) => ({
+      name: "inject-json-ld",
+      extendsPage: (page: any) => {
+        const path = page.path;
+        const schemas = pageSpecificSchemas[path] || [];
+        if (schemas.length > 0) {
+          page.frontmatter.head = [
+            ...(page.frontmatter.head || []),
+            ...schemas.map((s) => [
+              "script",
+              { type: "application/ld+json" },
+              JSON.stringify(s),
+            ]),
+          ];
+        }
+      },
+    }),
+  ],
   alias: {
     // Here you can redirect aliases to your own components
     // For example, here we change the theme's home page component to HomePage.vue under user .vuepress/components
@@ -167,5 +146,6 @@ export default defineUserConfig({
     __VITE_YOUTUBE_UPLOADS_PLAYLIST_ID__: process.env.VITE_YOUTUBE_UPLOADS_PLAYLIST_ID || "",
     __VITE_NOTION_ENDPOINT__: process.env.VITE_NOTION_ENDPOINT || "",
     __VITE_NOTION_DATABASE_ID__: process.env.VITE_NOTION_DATABASE_ID || "",
+    __WHATSAPP_NUMBER__: process.env.VITE_WHATSAPP_NUMBER || "",
   },
 });

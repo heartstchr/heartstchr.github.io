@@ -2,9 +2,8 @@
     <aside class="p-3 bg-surface-50 rounded-lg border border-surface-200 max-w-full">
         <h2 class="text-lg font-bold mb-2">Latest Videos</h2>
         <div v-if="videos.length === 0" class="flex flex-column gap-2">
-            <p class="text-sm text-color-secondary">Loading videos...</p>
             <a href="https://www.youtube.com/@stackseekers" target="_blank" class="no-underline" aria-label="Visit Stack Seekers YouTube Channel">
-                <Button label="Visit Channel" icon="pi pi-youtube" iconPos="left" class="w-full" severity="secondary"
+                <Button label="Watch on YouTube" icon="pi pi-youtube" iconPos="left" class="w-full" severity="secondary"
                     size="small" raised rounded />
             </a>
         </div>

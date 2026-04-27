@@ -1,6 +1,6 @@
 ---
-title: Hire Jiwan Ghosal | Freelance Full-Stack Developer
-description: Available for freelance remote projects. Book a free 25-min discovery call to scope your architecture. Full-stack developer for hire — React, Next.js, Node.js.
+title: Book Jiwan Ghosal | Enterprise Architecture Partner
+description: Available for high-impact architectural projects. Book a free 25-min discovery call to scope your architecture. Fractional CTO & Tech Lead — React, Next.js, Node.js.
 order: 4
 editLink: false
 copyright: false

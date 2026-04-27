@@ -21,13 +21,23 @@ const showEmailModal = ref(false);
 const userEmail = ref('');
 const emailError = ref('');
 const isSubmitting = ref(false);
+const pendingExternalUrl = ref('');
 
 const handleMoreDetails = () => {
-    // Check if the user has already provided their email in this session / device
     const hasProvidedEmail = localStorage.getItem('collected_email');
     if (hasProvidedEmail) {
         window.location.href = `/web-development-projects/${toKebabCase(props.project.name)}/`;
     } else {
+        pendingExternalUrl.value = ''; // Ensure not external
+        showEmailModal.value = true;
+    }
+};
+
+const handleExternalLinkClick = (url, e) => {
+    const hasProvidedEmail = localStorage.getItem('collected_email');
+    if (!hasProvidedEmail) {
+        if (e) e.preventDefault();
+        pendingExternalUrl.value = url;
         showEmailModal.value = true;
     }
 };
@@ -54,7 +64,12 @@ const submitEmail = async () => {
         showEmailModal.value = false;
         
         // Navigate
-        window.location.href = `/web-development-projects/${toKebabCase(props.project.name)}/`;
+        if (pendingExternalUrl.value) {
+            window.open(pendingExternalUrl.value, '_blank');
+            pendingExternalUrl.value = ''; // Reset
+        } else {
+            window.location.href = `/web-development-projects/${toKebabCase(props.project.name)}/`;
+        }
     } catch (e) {
         console.error('Failed to submit email:', e);
         emailError.value = 'An error occurred. Please try again.';
@@ -95,25 +110,27 @@ const submitEmail = async () => {
                             <img :src="project.images[0].itemImageSrc" :alt="project.images[0].alt"
                                 style="width: 100%; display: block" loading="lazy" />
                         </div>
-                        <div
-                            class="flex flex-column justify-content-center align-items-center gap-2 my-4 w-full max-w-96">
-                             <Button @click="handleMoreDetails" label="More details" icon="pi pi-info-circle" severity="secondary" raised
-                                 rounded class="w-full mb-2" :aria-label="`Read more technical details about ${project.name}`" />
-                             <a v-if="project.contact"
-                                 :href="`/contact/?subject=${encodeURIComponent('Custom Request: ' + project.name)}`"
-                                 class="flex flex-row no-underline w-full" :aria-label="`Request a custom quote for ${project.name}`">
-                                 <Button label="Get Custom Request" icon="pi pi-inbox" severity="secondary" raised
-                                     rounded class="w-full" />
-                             </a>
-                             <a v-if="project.link" :href="project.link" target="_blank"
-                                 class="flex flex-row no-underline w-full" :aria-label="`View live demo of ${project.name}`">
-                                 <Button label="Live Demo" icon="pi pi-angle-double-right" severity="primary" raised
-                                     rounded class="w-full" />
-                             </a>
-                            <a v-if="project.codeLink" :href="project.codeLink" target="_blank"
-                                class="flex flex-row no-underline w-full">
-                                <Button label="Get Started" icon="pi pi-github" severity="secondary" raised rounded
-                                    class="w-full" />
+                        <div class="flex flex-column gap-2 my-4 w-full max-w-96">
+                            <!-- Row 1: Discovery Actions -->
+                            <div class="flex align-items-stretch gap-2 w-full">
+                                <Button @click="handleMoreDetails" label="Details" icon="pi pi-info-circle" severity="secondary" raised rounded class="flex-1" :aria-label="`Read more technical details about ${project.name}`" />
+                                <a v-if="project.link" :href="project.link" target="_blank" @click="handleExternalLinkClick(project.link, $event)"
+                                    class="flex-1 no-underline flex align-items-stretch" :aria-label="`View live demo of ${project.name}`">
+                                    <Button label="Demo" icon="pi pi-external-link" severity="primary" raised rounded class="w-full h-full" />
+                                </a>
+                            </div>
+
+                            <!-- Row 2: Conversion Action -->
+                            <a v-if="project.contact"
+                                :href="`/contact/?subject=${encodeURIComponent('Custom Request: ' + project.name)}`"
+                                class="no-underline w-full" :aria-label="`Request a custom quote for ${project.name}`">
+                                <Button label="Get Custom Request" icon="pi pi-bolt" severity="secondary" raised rounded class="w-full" />
+                            </a>
+
+                            <!-- Row 3: Repository (Optional) -->
+                            <a v-if="project.codeLink" :href="project.codeLink" target="_blank" @click="handleExternalLinkClick(project.codeLink, $event)"
+                                class="no-underline w-full">
+                                <Button label="View Source" icon="pi pi-github" severity="secondary" text class="w-full" />
                             </a>
                         </div>
                     </div>
@@ -121,16 +138,16 @@ const submitEmail = async () => {
             </div>
         </div>
         <!-- Email Capture Dialog -->
-        <Dialog v-model:visible="showEmailModal" modal header="Enter your email to view details" :style="{ width: '90vw', maxWidth: '400px' }">
+        <Dialog v-model:visible="showEmailModal" modal header="Unlock the Architectural Blueprint" :style="{ width: '90vw', maxWidth: '400px' }">
             <div class="flex flex-column gap-3 pt-3">
-                <p class="m-0 text-color-secondary">Please provide your email to seamlessly access technical details and architecture breakdowns for all projects.</p>
+                <p class="m-0 text-color-secondary line-height-3">Gain exclusive access to the high-stakes architectural decisions, performance benchmarks, and delivery roadmaps that drove these transformations.</p>
                 <div class="flex flex-column gap-1">
-                    <InputText id="email" v-model="userEmail" type="email" placeholder="you@email.com" class="w-full" :class="{'p-invalid': !!emailError}" />
+                    <InputText id="email" v-model="userEmail" type="email" placeholder="Professional Email Address" class="w-full" :class="{'p-invalid': !!emailError}" />
                     <small v-if="emailError" class="p-error">{{ emailError }}</small>
                 </div>
                 <div class="flex justify-content-end gap-2 mt-2">
-                    <Button type="button" label="Cancel" severity="secondary" @click="showEmailModal = false" :disabled="isSubmitting"></Button>
-                    <Button type="button" label="Continue" @click="submitEmail" :loading="isSubmitting"></Button>
+                    <Button type="button" label="Stay Anonymous" severity="secondary" @click="showEmailModal = false" :disabled="isSubmitting" text></Button>
+                    <Button type="button" label="Unlock Access" icon="pi pi-lock-open" @click="submitEmail" :loading="isSubmitting" raised rounded></Button>
                 </div>
             </div>
         </Dialog>

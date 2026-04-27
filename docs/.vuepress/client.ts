@@ -27,6 +27,10 @@ import BlogNavigation from "./components/BlogNavigation.vue";
 import RelatedPosts from "./components/RelatedPosts.vue";
 
 import TagPage from "./components/TagPage.vue";
+import GlobalLeadCapture from "./components/GlobalLeadCapture.vue";
+import NewsletterForm from "./components/NewsletterForm.vue";
+import DiagnosticQuiz from "./components/DiagnosticQuiz.vue";
+import ConsultingBridge from "./components/ConsultingBridge.vue";
 
 export default defineClientConfig({
   enhance({ app }) {
@@ -56,7 +60,12 @@ export default defineClientConfig({
     app.component("BlogNavigation", BlogNavigation);
     app.component("RelatedPosts", RelatedPosts);
     app.component("TagPage", TagPage);
+    app.component("GlobalLeadCapture", GlobalLeadCapture);
+    app.component("NewsletterForm", NewsletterForm);
+    app.component("DiagnosticQuiz", DiagnosticQuiz);
+    app.component("ConsultingBridge", ConsultingBridge);
   },
+  rootComponents: [GlobalLeadCapture, ConsultingBridge],
   setup() {
     // Ensure canonical URLs strip query parameters
     if (typeof window !== 'undefined') {

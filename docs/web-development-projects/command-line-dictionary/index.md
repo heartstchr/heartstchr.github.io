@@ -24,70 +24,112 @@ project:
   previousProject: {"name":"Call Matrix","link":"/web-development-projects/call-matrix/"}
   nextProject: {"name":"Stock Market","link":"/web-development-projects/stock-market/"}
 ---
-<article class="project-details">
-  <div class="col-12">
-    <div class="my-2 text-l line-height-3">{{$frontmatter.project.description}}</div>
-  </div>
-  <div class="flex flex-column" itemscope itemtype="https://schema.org/SoftwareApplication">
-    <div v-if="$frontmatter.project.images">
-      <div class="card" v-if="$frontmatter.project.images.length != 1">
-        <Galleria :value="$frontmatter.project.images" :responsiveOptions="responsiveOptions" :numVisible="5"
-          :circular="true" :showItemNavigators="true" :showThumbnails="true" :pt="{
-            prevButton: { 'aria-label': 'Previous screen of project' },
-            nextButton: { 'aria-label': 'Next screen of project' }
-          }">
-          <template #item="slotProps">
-            <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt"
-              style="width: 100%; display: block" loading="eager" fetchpriority="high" />
-          </template>
-          <template #thumbnail="slotProps">
-            <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" />
-          </template>
-        </Galleria>
-      </div>
-      <div class="card" v-else>
-        <img :src="$frontmatter.project.images[0].itemImageSrc" :alt="$frontmatter.project.images[0].alt"
-          style="width: 100%; display: block" loading="eager" fetchpriority="high" />
-      </div>
+
+<!-- Architectural Brief Header -->
+<section class="mt-4 mb-6">
+  <div class="grid align-items-center">
+    <div class="col-12 lg:col-8">
+      <div class="text-primary font-bold mb-2 uppercase tracking-widest text-xs">Project Case Study</div>
+      <h1 class="text-4xl md:text-6xl font-bold mb-3 mt-0 line-height-2">{{$frontmatter.project.name}}</h1>
+      <p class="text-xl opacity-70 line-height-3 max-w-30rem">{{$frontmatter.project.description}}</p>
     </div>
-    <div class="col-12">
-      <Stacks :stack="$frontmatter.project.stack" :other-skills="$frontmatter.project.otherSkills" />
-    </div>
-    <div class="col-12 pt-4">
-      <link itemprop="applicationCategory" :href="$frontmatter.project.schema" />
-      <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-        <meta itemprop="price" :content="$frontmatter.project.price" />
-        <meta itemprop="priceCurrency" :content="$frontmatter.project.currency" />
-      </div>
-      <div class="flex md:flex-row flex-column justify-content-center align-items-center gap-2 my-4 w-full max-w-96">
-        <a v-if="$frontmatter.project.contact" :href="'/contact/?subject=' + encodeURIComponent('Custom Request: ' + $frontmatter.project.name)"
-          class="flex flex-row no-underline w-full">
-          <Button label="Get Custom Request" icon="pi pi-inbox" severity="secondary" raised rounded class="w-full" />
-        </a>
-        <a v-if="$frontmatter.project.link" :href="$frontmatter.project.link" target="_blank"
-          class="flex flex-row no-underline w-full">
-          <Button label="Live Demo" icon="pi pi-angle-double-right" severity="primary" raised rounded class="w-full" />
-        </a>
-        <a v-if="$frontmatter.project.codeLink" :href="$frontmatter.project.codeLink" target="_blank"
-          class="flex flex-row no-underline w-full">
-          <Button label="Get Started" icon="pi pi-github" severity="secondary" raised rounded class="w-full" />
-        </a>
+    <div class="col-12 lg:col-4">
+      <div class="surface-card p-4 border-round-2xl shadow-2 border-1 border-100">
+        <div class="flex align-items-center gap-3 mb-3">
+          <i class="pi pi-clock text-primary"></i>
+          <div>
+            <div class="text-xs opacity-50 uppercase font-bold">Timeline</div>
+            <div class="font-bold">{{$frontmatter.project.year}}</div>
+          </div>
+        </div>
+        <div class="flex align-items-center gap-3 mb-3">
+          <i class="pi pi-briefcase text-primary"></i>
+          <div>
+            <div class="text-xs opacity-50 uppercase font-bold">Industry</div>
+            <div class="font-bold">{{$frontmatter.project.domain}}</div>
+          </div>
+        </div>
+        <div class="flex align-items-center gap-3">
+          <i class="pi pi-bolt text-primary"></i>
+          <div>
+            <div class="text-xs opacity-50 uppercase font-bold">Status</div>
+            <div class="font-bold">Scale & Growth</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</article>
-<div class="flex flex-column px-4">
-  <h3 class="my-2 text-l">Features</h3>
-  <ul class="my-2 md:ml-3 text-sm">
-    <li v-for="feature in $frontmatter.project.features" :key="feature.text"
-      class="flex flex-row align-content-center line-height-3">
-      <i class="pi pi-verified m-2 bg-primary" alt="arrow" style="font-size: 1rem;"></i>
-      <h4 class="m-2 text-sm line-height-3" v-html="feature.text"></h4>
-    </li>
-  </ul>
+</section>
+
+<!-- Visual Evidence Section -->
+<section class="mb-8 overflow-hidden border-round-3xl shadow-4" itemscope itemtype="https://schema.org/SoftwareApplication">
+  <div v-if="$frontmatter.project.images">
+    <div v-if="$frontmatter.project.images.length > 1">
+      <Galleria :value="$frontmatter.project.images" :responsiveOptions="responsiveOptions" :numVisible="5"
+        :circular="true" :showItemNavigators="true" :showThumbnails="true" class="custom-galleria">
+        <template #item="slotProps">
+          <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt"
+            style="width: 100%; display: block" loading="eager" fetchpriority="high" />
+        </template>
+        <template #thumbnail="slotProps">
+          <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 60px; height: 60px; object-fit: cover;" />
+        </template>
+      </Galleria>
+    </div>
+    <div v-else>
+      <img :src="$frontmatter.project.images[0].itemImageSrc" :alt="$frontmatter.project.images[0].alt"
+        style="width: 100%; display: block" loading="eager" fetchpriority="high" />
+    </div>
+  </div>
+</section>
+
+<!-- Performance Infrastructure -->
+<div class="grid mb-8">
+  <div class="col-12 lg:col-8">
+     <div class="surface-card p-4 md:p-6 border-round-3xl shadow-2 h-full">
+        <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">
+           <i class="pi pi-list text-primary"></i> Playbook Features
+        </h3>
+        <div class="grid">
+           <div v-for="feature in $frontmatter.project.features" :key="feature.text" class="col-12 md:col-6 mb-3">
+              <div class="flex align-items-start gap-3">
+                 <i class="pi pi-verified text-primary mt-1"></i>
+                 <div class="text-sm font-medium line-height-3" v-html="feature.text"></div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+  <div class="col-12 lg:col-4">
+     <div class="surface-900 text-white p-4 md:p-6 border-round-3xl shadow-4 h-full relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-10rem h-10rem border-circle bg-primary opacity-20" style="filter: blur(40px); transform: translate(30%, -30%);"></div>
+        <div class="relative z-1">
+          <h3 class="text-2xl font-bold mb-4">The Stack</h3>
+          <Stacks :stack="$frontmatter.project.stack" :other-skills="$frontmatter.project.otherSkills" />
+          
+          <div class="flex flex-column gap-2 mt-6">
+            <div class="flex align-items-stretch gap-2 w-full">
+              <a v-if="$frontmatter.project.link" :href="$frontmatter.project.link" target="_blank" class="flex-1 no-underline flex align-items-stretch">
+                <Button label="View Demo" icon="pi pi-external-link" severity="primary" class="w-full h-full font-bold" raised rounded />
+              </a>
+               <a v-if="$frontmatter.project.codeLink" :href="$frontmatter.project.codeLink" target="_blank" class="flex-1 no-underline flex align-items-stretch">
+                <Button label="Source" icon="pi pi-github" severity="secondary" class="w-full h-full font-bold" raised rounded />
+              </a>
+            </div>
+            
+            <a v-if="$frontmatter.project.contact" :href="'/contact/?subject=' + encodeURIComponent('Scale Request: ' + $frontmatter.project.name)" class="no-underline w-full">
+              <Button label="Architect Similar Solution" icon="pi pi-bolt" severity="secondary" class="w-full font-bold" raised rounded />
+            </a>
+          </div>
+        </div>
+     </div>
+  </div>
 </div>
 
-
+<!-- Narrative Transformation -->
+<div class="project-markdown-content text-lg line-height-4 mb-8">
+  
+</div>
 
 <div class="flex justify-content-between align-items-center mt-6 pt-4 border-top-1 surface-border">
   <div class="flex-1">
