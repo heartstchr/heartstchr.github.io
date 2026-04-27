@@ -30,8 +30,6 @@ copyright: false
     </div>
     <div class="mt-6 border-t pt-4">
       <h3 class="text-xl font-semibold mb-2">📊 Total Score Summary</h3>
-      
-      <!-- Hidden until complete and email provided -->
       <div v-if="scoreRevealed" class="text-sm bg-green-50 p-4 border-round-md">
         <div class="text-2xl font-bold mb-3">Audit Complete!</div>
         <strong>Total:</strong>
@@ -39,19 +37,14 @@ copyright: false
         ⚠️ {{ totalScore('progress') }} |
         ❌ {{ totalScore('no') }}
         <div class="mt-3">A detailed roadmap is being structured for you.</div>
-      </div>
-      
-      <!-- CTA to unlock -->
+      </div>     
       <div v-else-if="isComplete">
         <Button label="Reveal Results & Get PDF Roadmap" icon="pi pi-lock-open" class="w-full md:w-auto" size="large" @click="showEmailModal = true" />
       </div>
-      
       <div v-else class="text-sm text-500">
         Please complete all checklist items to view your evaluation. ({{ getAnsweredCount() }} / {{ getTotalCount() }})
       </div>
     </div>
-
-    <!-- Email Capture Dialog -->
     <Dialog v-model:visible="showEmailModal" modal header="Get Your Full Audit Report" :style="{ width: '90vw', maxWidth: '400px' }">
       <div class="flex flex-column gap-3 pt-3">
         <p class="m-0 text-color-secondary">Where should we send your results and personalized architecture roadmap?</p>
@@ -69,8 +62,7 @@ copyright: false
 
 <script setup>
 import { ref, computed } from 'vue';
-import Button from 'primevue/button';
-import { submitProjectRequest } from '../.vuepress/services/notionService';
+import { submitProjectRequest } from '@services/notionService';
 
 const checklist = ref([
   {

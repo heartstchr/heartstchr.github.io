@@ -181,7 +181,7 @@ copyright: false
 
   <!-- Pillar 1 -->
   <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1">
-    <div class="col-12 lg:col-5">
+    <div class="col-12 lg:col-5 relative">
       <div class="absolute top-0 right-0 p-3">
           <i class="pi pi-sparkles text-green-500" style="font-size: 2rem; opacity: 0.1"></i>
           <span class="text-md font-bold uppercase text-green-500 letter-spacing-wide mb-2" style="font-size: 2rem; opacity: 0.1">Pillar 1</span>
@@ -215,7 +215,7 @@ copyright: false
 
   <!-- Pillar 2 -->
   <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1 flex-column lg:flex-row-reverse">
-    <div class="col-12 lg:col-5">
+    <div class="col-12 lg:col-5 relative">
       <div class="absolute top-0 right-0 p-3">
           <i class="pi pi-code text-purple-500" style="font-size: 2rem; opacity: 0.1"></i>
           <span class="text-md font-bold uppercase text-purple-500 letter-spacing-wide mb-2" style="font-size: 2rem; opacity: 0.1">Pillar 2</span>
@@ -249,7 +249,7 @@ copyright: false
 
   <!-- Pillar 3 -->
   <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1">
-    <div class="col-12 lg:col-5">
+    <div class="col-12 lg:col-5 relative">
       <div class="absolute top-0 right-0 p-3">
           <i class="pi pi-chart-line text-orange-500" style="font-size: 2rem; opacity: 0.1"></i>
           <span class="text-md font-bold uppercase text-orange-500 letter-spacing-wide mb-2" style="font-size: 2rem; opacity: 0.1">Pillar 3</span>
@@ -283,7 +283,7 @@ copyright: false
 
   <!-- Pillar 4 -->
   <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1 flex-column lg:flex-row-reverse">
-    <div class="col-12 lg:col-5">
+    <div class="col-12 lg:col-5 relative">
       <div class="absolute top-0 right-0 p-3">
           <i class="pi pi-sync text-blue-500" style="font-size: 2rem; opacity: 0.1"></i>
           <span class="text-md font-bold uppercase text-blue-500 letter-spacing-wide mb-2" style="font-size: 2rem; opacity: 0.1">Pillar 4</span>
