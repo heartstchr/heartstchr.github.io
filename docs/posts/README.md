@@ -4,7 +4,7 @@ title: The Architect's Playbook | Engineering Insights
 summary: Technical deep-dives, strategic architectural breakdowns, and scaling playbooks for founders.
 ---
 
-<section class="py-6 px-4 md:px-8 surface-900 text-white border-round-3xl mb-8 overflow-hidden relative">
+<section class="p-4 surface-900 text-white border-round-3xl mb-8 overflow-hidden relative">
   <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary-900 border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
   <div class="relative z-1">
     <div class="flex align-items-center gap-2 text-primary font-bold mb-3 uppercase tracking-wider text-xs">
@@ -13,16 +13,12 @@ summary: Technical deep-dives, strategic architectural breakdowns, and scaling p
     </div>
     <h1 class="text-4xl md:text-6xl font-bold mb-4 mt-0 line-height-2">The <span class="text-primary-400">Architect's</span> Playbook.</h1>
     <p class="text-xl opacity-70 max-w-30rem mb-5">How to solve technical debt, architect for scale, and build engineering culture.</p>
-    
-    <div class="max-w-30rem">
+    <div class="">
       <div class="p-inputgroup flex-1 shadow-4 border-round-xl overflow-hidden glass-search">
-        <span class="p-inputgroup-addon bg-transparent border-none pr-0">
-          <i class="pi pi-search text-primary-400"></i>
-        </span>
         <InputText 
           v-model="searchQuery" 
           placeholder="Search topics (e.g. Next.js, AI, ROI)..." 
-          class="w-full border-none p-4 text-lg bg-transparent text-white focus:outline-none" 
+          class="w-full border-1 p-4 text-lg bg-transparent text-white focus:outline-none" 
         />
         <Button 
           v-if="searchQuery" 
@@ -43,7 +39,7 @@ summary: Technical deep-dives, strategic architectural breakdowns, and scaling p
 
 <div class="grid">
   <div class="col-12 lg:col-9">
-    <div class="surface-card border-round-2xl p-4 md:p-6 shadow-2">
+    <div class="surface-card border-round-2xl shadow-2">
        <div v-if="!searchQuery" class="mb-4">
          <a :href="filteredPosts[0].link" class="border-2 border-black px-5 py-3 text-md text-black uppercase shadow-md inline-block no-underline font-bold hover:bg-black hover:text-white transition-all">
            What's New →
@@ -58,7 +54,7 @@ summary: Technical deep-dives, strategic architectural breakdowns, and scaling p
         <h3 class="text-xl font-bold mb-3 text-primary-400">Solving Spaghetti Code?</h3>
         <p class="text-sm opacity-70 line-height-3 mb-4">I help startups audit their infrastructure and remove the bottlenecks stalling growth.</p>
         <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
-          <Button label="Book Technical Audit" icon="pi pi-bolt" severity="primary" class="w-full font-bold" raised rounded />
+          <Button label="Book Audit" icon="pi pi-bolt" severity="primary" class="w-full font-bold" raised rounded />
         </a>
       </div>
       <YouTubeAside />
