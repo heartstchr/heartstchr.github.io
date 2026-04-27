@@ -182,7 +182,11 @@ copyright: false
   <!-- Pillar 1 -->
   <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1">
     <div class="col-12 lg:col-5">
-      <h3 class="text-sm font-bold uppercase text-green-500 letter-spacing-wide mb-2"><i class="pi pi-sparkles mr-1"></i> Pillar 1: Intelligence Automation</h3>
+      <div class="absolute top-0 right-0 p-3">
+          <i class="pi pi-sparkles text-green-500" style="font-size: 2rem; opacity: 0.1"></i>
+          <span class="text-md font-bold uppercase text-green-500 letter-spacing-wide mb-2" style="font-size: 2rem; opacity: 0.1">Pillar 1</span>
+      </div>
+      <h3 class="text-sm font-bold uppercase text-green-500 letter-spacing-wide mb-2">Intelligence Automation</h3>
       <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">AI & Machine Learning Apps</h2>
       <p class="text-lg line-height-3 text-700 mb-4">Integrate Large Language Models (LLMs) deeply into your user experience. I build custom applications featuring AI-powered matching algorithms, text-to-speech generators, and native intelligence that saves thousands of manual hours.</p>
       <ul class="list-none p-0 m-0 mb-5 text-700">
@@ -212,7 +216,11 @@ copyright: false
   <!-- Pillar 2 -->
   <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1 flex-column lg:flex-row-reverse">
     <div class="col-12 lg:col-5">
-      <h3 class="text-sm font-bold uppercase text-purple-500 letter-spacing-wide mb-2"><i class="pi pi-code mr-1"></i> Pillar 2: Scalable Infrastructure</h3>
+      <div class="absolute top-0 right-0 p-3">
+          <i class="pi pi-code text-purple-500" style="font-size: 2rem; opacity: 0.1"></i>
+          <span class="text-md font-bold uppercase text-purple-500 letter-spacing-wide mb-2" style="font-size: 2rem; opacity: 0.1">Pillar 2</span>
+      </div>
+      <h3 class="text-sm font-bold uppercase text-purple-500 letter-spacing-wide mb-2">Scalable Infrastructure</h3>
       <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Custom SaaS & Enterprise Apps</h2>
       <p class="text-lg line-height-3 text-700 mb-4">Sophisticated web applications designed for scale. From highly complex banking portal migrations to high-concurrency dashboards, I architect React/Node systems that will never slow down.</p>
       <ul class="list-none p-0 m-0 mb-5 text-700">
@@ -242,7 +250,11 @@ copyright: false
   <!-- Pillar 3 -->
   <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1">
     <div class="col-12 lg:col-5">
-      <h3 class="text-sm font-bold uppercase text-orange-500 letter-spacing-wide mb-2"><i class="pi pi-chart-line mr-1"></i> Pillar 3: Database-Driven Growth</h3>
+      <div class="absolute top-0 right-0 p-3">
+          <i class="pi pi-chart-line text-orange-500" style="font-size: 2rem; opacity: 0.1"></i>
+          <span class="text-md font-bold uppercase text-orange-500 letter-spacing-wide mb-2" style="font-size: 2rem; opacity: 0.1">Pillar 3</span>
+      </div>
+      <h3 class="text-sm font-bold uppercase text-orange-500 letter-spacing-wide mb-2">Database-Driven Growth</h3>
       <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Programmatic SEO & Lead Gen</h2>
       <p class="text-lg line-height-3 text-700 mb-4">I build massive, database-driven directory platforms. Automatically generate thousands of highly optimized location and service pages that dominate organic search and convert traffic via dynamic lead capture.</p>
       <ul class="list-none p-0 m-0 mb-5 text-700">
@@ -272,7 +284,11 @@ copyright: false
   <!-- Pillar 4 -->
   <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1 flex-column lg:flex-row-reverse">
     <div class="col-12 lg:col-5">
-      <h3 class="text-sm font-bold uppercase text-blue-500 letter-spacing-wide mb-2"><i class="pi pi-sync mr-1"></i> Pillar 4: Operational Efficiency</h3>
+      <div class="absolute top-0 right-0 p-3">
+          <i class="pi pi-sync text-blue-500" style="font-size: 2rem; opacity: 0.1"></i>
+          <span class="text-md font-bold uppercase text-blue-500 letter-spacing-wide mb-2" style="font-size: 2rem; opacity: 0.1">Pillar 4</span>
+      </div>
+      <h3 class="text-sm font-bold uppercase text-blue-500 letter-spacing-wide mb-2">Operational Efficiency</h3>
       <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Internal Tooling & Portals</h2>
       <p class="text-lg line-height-3 text-700 mb-4">I turn your existing systems (Notion databases, spreadsheets) into full-fledged, professional web applications instantly. Automate workflows, capture leads securely, without waiting months for a backend build.</p>
       <ul class="list-none p-0 m-0 mb-5 text-700">
@@ -304,7 +320,7 @@ copyright: false
   </div>
 </div>
 
-<div class="mb-8 px-4 py-8 surface-900 text-white border-round-3xl shadow-4 overflow-hidden relative" style="max-width: 1200px; margin: 0 auto;">
+<div class="mb-8 px-4 py-4 surface-900 text-white border-round-3xl shadow-4 overflow-hidden relative" style="max-width: 1200px; margin: 0 auto;">
   <div class="absolute top-0 right-0 w-30rem h-30rem bg-primary-900 border-circle opacity-10" style="filter: blur(100px); transform: translate(30%, -30%)"></div>
   
   <div class="text-center mb-8 relative z-1">
