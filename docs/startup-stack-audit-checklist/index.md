@@ -1,6 +1,6 @@
 ---
 title: Startup Tech Stack Audit Checklist | Stack Seekers
-description: Free checklist to audit your startup’s SaaS infrastructure, technical debt, and cloud architecture. Created by a senior freelance full-stack developer.
+description: Free checklist to audit your startup’s SaaS infrastructure, technical debt, and cloud architecture. Created by a senior Enterprise Architecture Partner.
 order: 5
 editLink: false
 copyright: false
@@ -30,18 +30,47 @@ copyright: false
     </div>
     <div class="mt-6 border-t pt-4">
       <h3 class="text-xl font-semibold mb-2">📊 Total Score Summary</h3>
-      <div class="text-sm">
+      
+      <!-- Hidden until complete and email provided -->
+      <div v-if="scoreRevealed" class="text-sm bg-green-50 p-4 border-round-md">
+        <div class="text-2xl font-bold mb-3">Audit Complete!</div>
         <strong>Total:</strong>
         ✅ {{ totalScore('yes') }} |
         ⚠️ {{ totalScore('progress') }} |
         ❌ {{ totalScore('no') }}
+        <div class="mt-3">A detailed roadmap is being structured for you.</div>
+      </div>
+      
+      <!-- CTA to unlock -->
+      <div v-else-if="isComplete">
+        <Button label="Reveal Results & Get PDF Roadmap" icon="pi pi-lock-open" class="w-full md:w-auto" size="large" @click="showEmailModal = true" />
+      </div>
+      
+      <div v-else class="text-sm text-500">
+        Please complete all checklist items to view your evaluation. ({{ getAnsweredCount() }} / {{ getTotalCount() }})
       </div>
     </div>
+
+    <!-- Email Capture Dialog -->
+    <Dialog v-model:visible="showEmailModal" modal header="Get Your Full Audit Report" :style="{ width: '90vw', maxWidth: '400px' }">
+      <div class="flex flex-column gap-3 pt-3">
+        <p class="m-0 text-color-secondary">Where should we send your results and personalized architecture roadmap?</p>
+        <div class="flex flex-column gap-1">
+          <InputText id="email" v-model="userEmail" type="email" placeholder="you@email.com" class="w-full" :class="{'p-invalid': !!emailError}" />
+          <small v-if="emailError" class="p-error">{{ emailError }}</small>
+        </div>
+        <div class="flex justify-content-end gap-2 mt-2">
+          <Button type="button" label="Cancel" severity="secondary" @click="showEmailModal = false" :disabled="isSubmitting"></Button>
+          <Button type="button" label="Reveal Score" @click="submitEmail" :loading="isSubmitting"></Button>
+        </div>
+      </div>
+    </Dialog>
   </div>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import Button from 'primevue/button';
+import { submitProjectRequest } from '../.vuepress/services/notionService';
 
 const checklist = ref([
   {
@@ -105,6 +134,50 @@ const totalScore = (scoreType) => {
     return total + section.items.filter(item => item.score === scoreType).length;
   }, 0);
 };
+
+const getTotalCount = () => {
+  return checklist.value.reduce((total, section) => total + section.items.length, 0);
+};
+
+const getAnsweredCount = () => {
+    return totalScore('yes') + totalScore('progress') + totalScore('no');
+};
+
+const isComplete = computed(() => getTotalCount() === getAnsweredCount());
+
+const showEmailModal = ref(false);
+const scoreRevealed = ref(false);
+const userEmail = ref('');
+const emailError = ref('');
+const isSubmitting = ref(false);
+
+const submitEmail = async () => {
+    emailError.value = '';
+    if (!userEmail.value || !/.+@.+\..+/.test(userEmail.value)) {
+        emailError.value = 'Please enter a valid email address.';
+        return;
+    }
+    
+    isSubmitting.value = true;
+    try {
+        await submitProjectRequest({
+            name: 'Checklist Lead',
+            email: userEmail.value,
+            details: `Completed Tech Stack Audit. Positive marks: ${totalScore('yes')}, Progress: ${totalScore('progress')}, Red flags: ${totalScore('no')}`,
+            service: 'Consulting',
+            budget: '<1000'
+        });
+        
+        localStorage.setItem('collected_email', userEmail.value);
+        showEmailModal.value = false;
+        scoreRevealed.value = true;
+    } catch (e) {
+        console.error('Failed to submit email:', e);
+        emailError.value = 'An error occurred. Please try again.';
+    } finally {
+        isSubmitting.value = false;
+    }
+};
 </script>
 
 <style scoped>
@@ -112,5 +185,8 @@ const totalScore = (scoreType) => {
   width: 2rem;
   height: 2rem;
   padding: 0;
+}
+.p-error {
+  color: var(--p-error, #e24c4b);
 }
 </style>

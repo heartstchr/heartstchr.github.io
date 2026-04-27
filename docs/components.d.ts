@@ -13,6 +13,7 @@ declare module 'vue' {
     Button: typeof import('primevue/button')['default']
     Card: typeof import('primevue/card')['default']
     Carousel: typeof import('primevue/carousel')['default']
+    Dialog: typeof import('primevue/dialog')['default']
     Dropdown: typeof import('primevue/dropdown')['default']
     Fieldset: typeof import('primevue/fieldset')['default']
     Galleria: typeof import('primevue/galleria')['default']

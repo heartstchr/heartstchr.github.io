@@ -52,6 +52,11 @@ export const fetchAndSplitVideos = async (): Promise<{
   channelVideos: Video[];
   podcastVideos: Video[];
 }> => {
+  // Return empty if keys are missing
+  if (!API_KEY || !UPLOADS_PLAYLIST_ID) {
+    return { channelVideos: [], podcastVideos: [] };
+  }
+
   try {
     const [uploadedVideoItems, podcastVideoItems] = await Promise.all([
       fetchPublicVideosFromPlaylist(UPLOADS_PLAYLIST_ID, 50),

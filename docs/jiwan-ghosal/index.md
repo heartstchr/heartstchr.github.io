@@ -1,7 +1,7 @@
 ---
 home: true
-title: Jiwan Ghosal | Senior Freelance Full-Stack Developer for Hire
-description: Jiwan Ghosal — senior freelance full-stack developer. Available for hire globally. Founder of Stack Seekers. Building scalable React, Next.js & Node.js platforms.
+title: Jiwan Ghosal | Senior Enterprise Architecture Partner & Fractional CTO
+description: Jiwan Ghosal — senior enterprise architecture partner and Fractional CTO. Founder of Stack Seekers. Building scalable React, Next.js & Node.js platforms globally.
 editLink: false
 copyright: false
 ---
@@ -48,7 +48,7 @@ copyright: false
     </div>
     <div class="col-12 md:col-4 mt-6 md:mt-0">
       <div class="relative border-round-2xl overflow-hidden">
-        <img src="/img/home/jiwanghosal.webp" alt="Jiwan Ghosal" class="w-1/2 border-round-2xl shadow-4 hero-image" loading="eager" fetchpriority="high" />
+        <img src="/img/home/jiwanghosal.webp" alt="Jiwan Ghosal" width="600" height="600" class="w-1/2 border-round-2xl shadow-4 hero-image" style="height: auto; aspect-ratio: 1/1; object-fit: cover;" loading="eager" fetchpriority="high" />
         <div class="glow-ring"></div>
       </div>
     </div>
@@ -100,16 +100,16 @@ copyright: false
 </div>
 
 <div class="my-6">
-  <!-- <div class="text-center"> -->
-    <div class="text-4xl font-bold sr-only"><h2>Scaling startups <div class="text-4xl font-bold bg-primary">Elevating industry giants</div></h2></div>
-    <!-- <div class="text-xl line-height-2">I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development.</div>
-  </div> -->
+  <div class="text-center pb-4 px-2">
+    <h2 class="text-3xl md:text-5xl font-bold m-0 p-0 line-height-2 mb-3">Scaling startups. <span class="text-primary">Elevating industry giants.</span></h2>
+    <p class="text-lg md:text-xl text-600 line-height-3 max-w-40rem mx-auto mb-0">I bring a proven track record of success in the industry, engineering enterprise architectures for global brands.</p>
+  </div>
   <div class="my-4 marquee">
     <div class="marquee-track">
       <div class="border-round-md flex align-items-center justify-content-center marquee-item" v-for="org in orgs" :key="`org-1-${org.title}`">
         <div class="no-underline flex flex-column justify-content-center flex-wrap">
           <div class="flex align-items-center justify-content-center h-3rem">
-            <img :src="org.icon" :alt="org.title" width="40px" height="40px" class="border-round-md" loading="lazy" fetchpriority="low"/>
+            <img :src="org.icon" :alt="org.title" width="40" height="40" class="border-round-md" style="aspect-ratio: 1/1;" loading="lazy" fetchpriority="low"/>
           </div>
           <div class="h-5rem">
             <h3 class="text-base md:text-xl font-bold flex align-items-center justify-content-center p-0 m-0 text-center line-height-3">{{org.title}}</h3>
@@ -120,7 +120,7 @@ copyright: false
       <div class="border-round-md flex align-items-center justify-content-center marquee-item" v-for="org in orgs" :key="`org-2-${org.title}`" aria-hidden="true">
         <div class="no-underline flex flex-column justify-content-center flex-wrap">
           <div class="flex align-items-center justify-content-center h-3rem">
-            <img :src="org.icon" :alt="org.title" width="40px" height="40px" class="border-round-md" loading="lazy" fetchpriority="low"/>
+            <img :src="org.icon" :alt="org.title" width="40" height="40" class="border-round-md" style="aspect-ratio: 1/1;" loading="lazy" fetchpriority="low"/>
           </div>
           <div class="h-5rem">
             <h3 class="text-base md:text-xl font-bold flex align-items-center justify-content-center p-0 m-0 text-center line-height-3">{{org.title}}</h3>
@@ -152,7 +152,7 @@ copyright: false
   <div class="grid justify-content-center my-4">
     <div class="flex gap-2 p-2" v-for="stackLogo in stackLogos" :key="stackLogo.title">
       <img width="32px" height="32px" :src="`https://cdn.simpleicons.org/${stackLogo.link}`" :alt="stackLogo.title" loading="eager" fetchpriority="high"/>
-      <h3 class="sr-only">{{stackLogo.title}}</h3>
+      <span class="sr-only">{{stackLogo.title}}</span>
     </div>
   </div>
   <!-- <div class="text-center pb-4 grid justify-content-center gap-4">

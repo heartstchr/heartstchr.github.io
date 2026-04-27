@@ -1,6 +1,6 @@
 # Stack Seekers
 
-> Stack Seekers is a full-stack web development agency led by Jiwan Ghosal, specializing in scalable web, mobile, and software solutions using MEVN/MERN stacks, AWS, and Azure. We help startups and businesses build modern, high-performance websites and AI-powered products.
+> Stack Seekers is an Enterprise Architecture Partner and Fractional CTO consultancy led by Jiwan Ghosal. We specialize in architecting high-performance digital products, scaling complex web platforms, and implementing AI-driven automation for startups and global enterprises.
 
 ## Services
 

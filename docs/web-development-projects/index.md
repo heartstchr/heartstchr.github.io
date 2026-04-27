@@ -1,6 +1,6 @@
 ---
-title: Case Studies | Enterprise Engineering Portfolio | Stack Seekers
-description: "Real-world case studies from 10 years of elite full-stack engineering. ABN AMRO, Qatar Airways, Upstox — see how I solve complex technical bottlenecks and drive measurable business outcomes."
+title: The Architect's Playbook | Enterprise Engineering Portfolio | Stack Seekers
+description: "Strategic engineering insights and technical deep-dives for founders building high-stakes software. See how I solve complex technical bottlenecks and drive measurable business outcomes."
 order: 2
 home: true
 lastUpdated: false
@@ -50,20 +50,11 @@ copyright: false
     </div>
   </div>
 </section>
-
-<!-- Trust Bar -->
-<div class="flex flex-wrap align-items-center justify-content-center gap-4 mb-8 px-4 py-4 surface-50 border-round-2xl">
-  <span class="text-sm font-bold text-500 uppercase" style="letter-spacing: 0.1em;">Trusted by enterprises</span>
-  <img src="/img/home/abn-amro-logo.webp" alt="ABN AMRO" class="h-2rem opacity-60" style="object-fit:contain;" />
-  <img src="/img/home/upstox.webp" alt="Upstox" class="h-2rem opacity-60" style="object-fit:contain;" />
-  <img src="/img/home/capgemini.webp" alt="Capgemini" class="h-2rem opacity-60" style="object-fit:contain;" />
-</div>
-
 <!-- Section Title -->
 <div class="flex align-items-center justify-content-between mb-6 px-1">
   <div>
-    <h2 class="text-3xl font-bold m-0">Full Case Studies</h2>
-    <p class="text-600 m-0 mt-1">Click any project to see architecture decisions, challenges, and outcomes.</p>
+    <h2 class="text-3xl font-bold m-0">Pillar Case Studies</h2>
+    <p class="text-600 m-0 mt-1">Four in-depth breakdowns of enterprise transformations.</p>
   </div>
   <a href="https://cal.com/stackseekers" target="_blank" class="no-underline hidden md:block">
     <Button label="Book a Strategy Call" icon="pi pi-calendar" severity="primary" rounded raised />
@@ -75,21 +66,16 @@ copyright: false
   <div class="p-d-flex p-flex-column" style="flex: 3;">
     <div class="grid my-2 gap-8">
       <ProjectCard
-        v-for="(project, index) in paginatedProjects"
+        v-for="(project, index) in pillarProjects"
         :key="index"
         :project="project"
         :showHeader=true
       />
     </div>
-    <Pagination 
-      :totalRecords="freelance.length" 
-      :rowsPerPage="10"
-      @page-change="onPageChange"
-    />
   </div>
   <div class="flex-1 align-self-start" style="max-width: 100%; position: sticky; top: 6rem;">
     <!-- Sidebar CTA Card -->
-    <div class="surface-900 text-white border-round-2xl p-4 mb-4 shadow-4">
+    <div class="surface-900 text-white border-round-2xl p-2 mb-4 shadow-4">
       <div class="text-lg font-bold mb-2">Need something custom?</div>
       <p class="text-300 text-sm line-height-3 mb-3">
         Don't see your exact use case? I scope and build bespoke enterprise systems from scratch.
@@ -103,36 +89,60 @@ copyright: false
   </div>
 </div>
 
-<!-- Bottom CTA -->
-<div class="mt-8 mb-4 text-center py-8 px-4 surface-900 text-white border-round-3xl shadow-4">
-  <h2 class="text-3xl md:text-4xl font-bold mb-3">Ready to be the next case study?</h2>
-  <p class="text-lg text-300 line-height-3 mb-5 mx-auto" style="max-width: 600px;">
-    I take on a limited number of high-impact projects per quarter. If you have a complex engineering challenge, let's talk.
-  </p>
-  <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
-    <Button label="Request Technical Roadmap" icon="pi pi-map" severity="primary" size="large" raised rounded />
+<!-- Bottom Strategy Section -->
+<section class="mt-8 mb-8 px-4 py-8 surface-900 text-white border-round-3xl shadow-4 overflow-hidden relative">
+  <div class="absolute top-0 right-0 w-30rem h-30rem bg-primary-900 border-circle opacity-10" style="filter: blur(100px); transform: translate(30%, -30%)"></div>
+  
+  <div class="text-center mb-8 relative z-1">
+    <div class="flex align-items-center justify-content-center gap-2 text-primary-400 font-bold mb-3 uppercase tracking-widest text-xs">
+       <i class="pi pi-map"></i> The Success Playbook
+    </div>
+    <h2 class="text-4xl md:text-5xl font-bold mb-3">The Architectural <span class="text-primary-400">Logic Flow</span>.</h2>
+    <p class="text-xl opacity-70 max-w-30rem mx-auto">A proven, non-linear framework for scaling high-stakes software.</p>
+  </div>
+
+  <div class="grid relative z-1 max-w-1000 mx-auto mb-6">
+    <!-- Precision Architectural Path -->
+    <div class="hidden lg:block absolute w-full" style="z-index: 0; top: 3.15rem; width: 75%; left: 12.5%; height: 2px; background-image: linear-gradient(to right, var(--primary-800) 50%, transparent 50%); background-size: 16px 100%; opacity: 0.4;"></div>
+    <div class="col-12 lg:col-3 p-4" v-for="(step, idx) in roadmapSteps" :key="step.title">
+      <div class="flex flex-column h-full relative" style="z-index: 2;">
+        <div class="w-4rem h-4rem border-circle bg-primary-900 border-2 border-primary-500 flex align-items-center justify-content-center text-2xl font-bold text-primary-400 mb-4 shadow-pill mx-auto lg:mx-0 relative" style="z-index: 3;">
+           0{{ idx + 1 }}
+        </div>
+        <h3 class="text-2xl font-bold mb-3 text-white text-center lg:text-left">{{ step.title }}</h3>
+        <p class="text-400 line-height-4 text-sm mb-4 text-center lg:text-left">{{ step.desc }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-8 relative z-1">
+    <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+      <Button label="Book Free Discovery Call" icon="pi pi-bolt" severity="primary" size="large" raised rounded class="px-6 text-xl white-space-nowrap" />
+    </a>
+  </div>
+</section>
+
+<!-- Sticky Mobile CTA -->
+<div class="fixed bottom-0 left-0 w-full p-3 z-5 lg:hidden glass-sticky-cta shadow-6 flex gap-3 border-top-1 border-white-alpha-10">
+  <a href="https://cal.com/stackseekers" target="_blank" class="flex-grow-1 no-underline">
+    <Button label="Consult Strategy" icon="pi pi-calendar" severity="primary" class="w-full text-lg font-bold py-3" raised />
   </a>
-  <div class="text-sm mt-3 text-400">Preferred for 6-month international partnerships.</div>
 </div>
 
 <script setup lang="ts">
   import { freelance } from "@data/projects.js";
-  import { toKebabCase } from "@utils";
-  import { ref, computed } from 'vue';
+  import { computed } from 'vue';
 
-  const currentPage = ref(0);
-  const rowsPerPage = ref(10);
-
-  const paginatedProjects = computed(() => {
-    const start = currentPage.value * rowsPerPage.value;
-    const end = start + rowsPerPage.value;
-    return freelance.slice(start, end);
+  const pillarProjects = computed(() => {
+    return freelance.slice(0, 4);
   });
 
-  const onPageChange = (event) => {
-    currentPage.value = Math.floor(event.first / event.rows);
-    rowsPerPage.value = event.rows;
-  };
+  const roadmapSteps = [
+    { title: "Discovery Call", desc: "Technical diagnosis and scaling strategy." },
+    { title: "Architecture Audit", desc: "Deep dive into infra and technical debt." },
+    { title: "Fixed-Scope Roadmap", desc: "Detailed milestone-based blueprint." },
+    { title: "Senior Execution", desc: "High-integrity build & velocity." }
+  ];
 </script>
 
 <style scoped>
@@ -141,6 +151,13 @@ copyright: false
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+}
+.impact-card:hover { transform: translateY(-5px); border-color: var(--primary-color); }
+.glass-sticky-cta { 
+  background: rgba(15, 23, 42, 0.9); 
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px);
 }
 @media (max-width: 767px) {
   .impact-card {

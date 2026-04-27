@@ -10,7 +10,7 @@ copyright: false
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
   <div class="grid align-items-center">
-    <div class="col-12 lg:col-8">
+    <div class="col-12 lg:col-7">
       <div class="mb-3 flex align-items-center gap-2">
         <span class="inline-flex align-items-center px-2 py-1 border-round-xl bg-primary text-xs font-bold uppercase letter-spacing-wide">
           <i class="pi pi-bolt mr-1"></i> 10 Years of Enterprise-Grade Architecture
@@ -27,11 +27,16 @@ copyright: false
       </div>
       <div class="flex flex-column md:flex-row gap-3 mt-5">
         <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
-          <Button label="Book a Free Discovery Call" icon="pi pi-calendar-clock" severity="primary" size="large" rounded raised class="w-full md:w-auto" />
+          <Button label="Book Free Discovery Call" icon="pi pi-calendar-clock" severity="primary" size="large" rounded raised class="w-full md:w-auto white-space-nowrap" />
         </a>
-        <a href="#solutions" class="no-underline">
-          <Button label="Explore My Solutions" icon="pi pi-arrow-down" class="p-button-outlined p-button-secondary w-full md:w-auto" size="large" rounded />
-        </a>
+        <Button 
+          label="Explore My Solutions" 
+          icon="pi pi-arrow-down" 
+          class="p-button-outlined p-button-secondary w-full md:w-auto" 
+          size="large" 
+          rounded 
+          @click="scrollToSolutions"
+        />
       </div>
       <div class="mt-5 grid gap-3 ml-1">
         <div class="flex align-items-center gap-3">
@@ -44,17 +49,35 @@ copyright: false
         </div>
       </div>
     </div>
-    <div class="col-12 lg:col-4 mt-6 lg:mt-0 hidden lg:block">
-      <div class="relative hero-visual border-round-2xl overflow-hidden p-2 md:p-3 text-center glass-effect">
-        <Carousel :value="heroSlides" :numVisible="1" :numScroll="1" :autoplayInterval="5000" circular :showNavigators="false" :showIndicators="true">
-            <template #item="slotProps">
-                <div class="p-2">
-                    <img :src="slotProps.data.image" :alt="slotProps.data.alt" class="w-full border-round-2xl shadow-4 mb-3" loading="eager" fetchpriority="high" />
-                    <div class="font-bold text-lg text-900">{{ slotProps.data.title }}</div>
-                    <div class="text-sm text-600">{{ slotProps.data.subtitle }}</div>
-                </div>
-            </template>
-        </Carousel>
+    <div class="col-12 lg:col-5 mt-6 lg:mt-0 hidden lg:block">
+      <div class="bento-hero-grid h-30rem">
+        <div class="bento-hero-item bento-hero-1 shadow-4 border-round-2xl overflow-hidden relative bento-hover">
+          <img src="/img/projects/ai-dynamic-crud-app/ai-gemini-app.webp" alt="AI & ML with Gemini" class="w-full" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-90 via-black-alpha-40 to-transparent p-3 flex flex-column justify-content-end">
+            <div class="bg-black-alpha-60 p-2 border-round-md" style="backdrop-filter: blur(4px);">
+              <span class="text-xs font-bold text-primary-300 uppercase mb-1">Architecture 01</span>
+              <h4 class="text-white m-0 text-sm font-bold">AI & Machine Learning</h4>
+            </div>
+          </div>
+        </div>
+        <div class="bento-hero-item bento-hero-2 shadow-4 border-round-2xl overflow-hidden relative bento-hover">
+          <img src="/img/home/projects/ABN_Amro.webp" alt="Enterprise" class="w-full  object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-90 via-black-alpha-40 to-transparent p-3 flex flex-column justify-content-end">
+            <div class="bg-black-alpha-60 p-2 border-round-md" style="backdrop-filter: blur(4px);">
+              <span class="text-xs font-bold text-primary-300 uppercase mb-1">Architecture 02</span>
+              <h4 class="text-white m-0 text-sm font-bold">Enterprise SaaS</h4>
+            </div>
+          </div>
+        </div>
+        <div class="bento-hero-item bento-hero-3 shadow-4 border-round-2xl overflow-hidden relative bento-hover">
+          <img src="/img/projects/localxr/localxr-cover.webp" alt="Growth" class="w-full object-fill" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-90 via-black-alpha-40 to-transparent p-3 flex flex-column justify-content-end">
+            <div class="bg-black-alpha-60 p-2 border-round-md" style="backdrop-filter: blur(4px);">
+              <span class="text-xs font-bold text-primary-300 uppercase mb-1">Architecture 03</span>
+              <h4 class="text-white m-0 text-sm font-bold">Programmatic SEO</h4>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -77,17 +100,35 @@ copyright: false
   </div>
 </div>
 
-<!-- High Impact Metrics -->
 <div class="mb-8 px-2 md:px-4" style="max-width: 1200px; margin: 0 auto;">
+  <div class="text-center mb-6">
+    <span class="text-sm font-bold text-primary tracking-widest uppercase">The Transformation Effect</span>
+    <h2 class="text-3xl font-bold mt-2">Turning Technical Debt into Competitive Advantage</h2>
+  </div>
   <div class="grid">
-    <div class="col-12 md:col-4 p-2 md:p-3" v-for="win in highImpactWins" :key="win.title">
-      <div class="surface-0 p-4 border-round-xl shadow-2 h-full border-top-3" :class="[`border-${win.color}-500`]">
-        <div class="flex align-items-center justify-content-between mb-3">
-          <span class="text-sm font-bold uppercase text-500">{{win.title}}</span>
-          <i class="pi" :class="[win.icon, `text-${win.color}-500`]"></i>
+    <div class="col-12 md:col-4 p-3" v-for="win in highImpactWins" :key="win.title">
+      <div class="surface-0 border-round-2xl shadow-3 overflow-hidden border-1 border-100 h-full flex flex-column">
+        <div class="p-4 bg-gray-50 border-bottom-1 border-100">
+          <div class="flex align-items-center gap-2 text-500 mb-2">
+            <i class="pi pi-history"></i>
+            <span class="text-xs font-bold uppercase">Legacy Bottleneck</span>
+          </div>
+          <div class="text-sm text-600 font-italic">
+            {{ win.title === 'Upstox' ? '4-day manual lead processing' : (win.title === 'ABN Amro' ? 'Fragmented legacy frontend' : 'Slow manual booking engine') }}
+          </div>
         </div>
-        <div class="text-3xl font-bold mb-2">{{win.metric}}</div>
-        <p class="text-700 line-height-3 m-0" v-html="win.description"></p>
+        <div class="p-4 flex-grow-1 flex flex-column gap-3 relative">
+          <div class="absolute top-0 right-0 p-3">
+             <i class="pi" :class="[win.icon, `text-${win.color}-500`]" style="font-size: 2rem; opacity: 0.1"></i>
+          </div>
+          <div>
+            <div class="flex align-items-center gap-2 mb-2">
+              <span class="bg-green-100 text-green-700 text-xs px-2 py-1 border-round-md font-bold uppercase tracking-wider">The Architecture</span>
+            </div>
+            <div class="text-3xl font-bold text-900 mb-1">{{ win.metric }}</div>
+            <p class="text-sm text-700 line-height-3 m-0" v-html="win.description" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -141,7 +182,11 @@ copyright: false
   <!-- Pillar 1 -->
   <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1">
     <div class="col-12 lg:col-5">
-      <h3 class="text-sm font-bold uppercase text-green-500 letter-spacing-wide mb-2"><i class="pi pi-sparkles mr-1"></i> Pillar 1: Intelligence Automation</h3>
+      <div class="absolute top-0 right-0 p-3">
+          <i class="pi pi-sparkles text-green-500" style="font-size: 2rem; opacity: 0.1"></i>
+          <span class="text-md font-bold uppercase text-green-500 letter-spacing-wide mb-2" style="font-size: 2rem; opacity: 0.1">Pillar 1</span>
+      </div>
+      <h3 class="text-sm font-bold uppercase text-green-500 letter-spacing-wide mb-2">Intelligence Automation</h3>
       <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">AI & Machine Learning Apps</h2>
       <p class="text-lg line-height-3 text-700 mb-4">Integrate Large Language Models (LLMs) deeply into your user experience. I build custom applications featuring AI-powered matching algorithms, text-to-speech generators, and native intelligence that saves thousands of manual hours.</p>
       <ul class="list-none p-0 m-0 mb-5 text-700">
@@ -171,7 +216,11 @@ copyright: false
   <!-- Pillar 2 -->
   <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1 flex-column lg:flex-row-reverse">
     <div class="col-12 lg:col-5">
-      <h3 class="text-sm font-bold uppercase text-purple-500 letter-spacing-wide mb-2"><i class="pi pi-code mr-1"></i> Pillar 2: Scalable Infrastructure</h3>
+      <div class="absolute top-0 right-0 p-3">
+          <i class="pi pi-code text-purple-500" style="font-size: 2rem; opacity: 0.1"></i>
+          <span class="text-md font-bold uppercase text-purple-500 letter-spacing-wide mb-2" style="font-size: 2rem; opacity: 0.1">Pillar 2</span>
+      </div>
+      <h3 class="text-sm font-bold uppercase text-purple-500 letter-spacing-wide mb-2">Scalable Infrastructure</h3>
       <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Custom SaaS & Enterprise Apps</h2>
       <p class="text-lg line-height-3 text-700 mb-4">Sophisticated web applications designed for scale. From highly complex banking portal migrations to high-concurrency dashboards, I architect React/Node systems that will never slow down.</p>
       <ul class="list-none p-0 m-0 mb-5 text-700">
@@ -201,7 +250,11 @@ copyright: false
   <!-- Pillar 3 -->
   <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1">
     <div class="col-12 lg:col-5">
-      <h3 class="text-sm font-bold uppercase text-orange-500 letter-spacing-wide mb-2"><i class="pi pi-chart-line mr-1"></i> Pillar 3: Database-Driven Growth</h3>
+      <div class="absolute top-0 right-0 p-3">
+          <i class="pi pi-chart-line text-orange-500" style="font-size: 2rem; opacity: 0.1"></i>
+          <span class="text-md font-bold uppercase text-orange-500 letter-spacing-wide mb-2" style="font-size: 2rem; opacity: 0.1">Pillar 3</span>
+      </div>
+      <h3 class="text-sm font-bold uppercase text-orange-500 letter-spacing-wide mb-2">Database-Driven Growth</h3>
       <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Programmatic SEO & Lead Gen</h2>
       <p class="text-lg line-height-3 text-700 mb-4">I build massive, database-driven directory platforms. Automatically generate thousands of highly optimized location and service pages that dominate organic search and convert traffic via dynamic lead capture.</p>
       <ul class="list-none p-0 m-0 mb-5 text-700">
@@ -231,7 +284,11 @@ copyright: false
   <!-- Pillar 4 -->
   <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1 flex-column lg:flex-row-reverse">
     <div class="col-12 lg:col-5">
-      <h3 class="text-sm font-bold uppercase text-blue-500 letter-spacing-wide mb-2"><i class="pi pi-sync mr-1"></i> Pillar 4: Operational Efficiency</h3>
+      <div class="absolute top-0 right-0 p-3">
+          <i class="pi pi-sync text-blue-500" style="font-size: 2rem; opacity: 0.1"></i>
+          <span class="text-md font-bold uppercase text-blue-500 letter-spacing-wide mb-2" style="font-size: 2rem; opacity: 0.1">Pillar 4</span>
+      </div>
+      <h3 class="text-sm font-bold uppercase text-blue-500 letter-spacing-wide mb-2">Operational Efficiency</h3>
       <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Internal Tooling & Portals</h2>
       <p class="text-lg line-height-3 text-700 mb-4">I turn your existing systems (Notion databases, spreadsheets) into full-fledged, professional web applications instantly. Automate workflows, capture leads securely, without waiting months for a backend build.</p>
       <ul class="list-none p-0 m-0 mb-5 text-700">
@@ -263,57 +320,38 @@ copyright: false
   </div>
 </div>
 
-<!-- The Roadmap to Results Section -->
-<div class="mb-8 px-4 py-8 surface-900 text-white border-round-3xl shadow-4" style="max-width: 1200px; margin: 0 auto;">
-  <div class="text-center mb-8">
-    <h2 class="text-4xl md:text-6xl font-bold mb-3">The Roadmap to Results</h2>
-    <p class="text-xl opacity-80 max-w-30rem mx-auto">A proven, four-stage architectural framework to solve your technical bottlenecks.</p>
+<div class="mb-8 px-4 py-4 surface-900 text-white border-round-3xl shadow-4 overflow-hidden relative" style="max-width: 1200px; margin: 0 auto;">
+  <div class="absolute top-0 right-0 w-30rem h-30rem bg-primary-900 border-circle opacity-10" style="filter: blur(100px); transform: translate(30%, -30%)"></div>
+  
+  <div class="text-center mb-8 relative z-1">
+    <h2 class="text-4xl md:text-6xl font-bold mb-3">Architecting Your Success</h2>
+    <p class="text-xl opacity-80 max-w-30rem mx-auto">A proven, four-stage framework to stabilize your technical debt.</p>
+  </div>  <div class="grid relative z-1 max-w-1200 mx-auto">
+    <!-- Precision Architectural Path -->
+    <div class="hidden lg:block absolute w-full" style="z-index: 0; top: 3.15rem; width: 75%; left: 12.5%; height: 2px; background-image: linear-gradient(to right, var(--primary-800) 50%, transparent 50%); background-size: 16px 100%; opacity: 0.4;"></div>
+    <div class="col-12 lg:col-3 p-4" v-for="(step, idx) in roadmapSteps" :key="step.title">
+      <div class="flex flex-column h-full relative" style="z-index: 2;">
+        <div class="w-4rem h-4rem border-circle bg-primary-900 border-2 border-primary-500 flex align-items-center justify-content-center text-2xl font-bold text-primary-400 mb-4 shadow-pill mx-auto lg:mx-0 relative" style="z-index: 3;">
+           0{{ idx + 1 }}
+        </div>
+        <h3 class="text-2xl font-bold mb-3 text-white text-center lg:text-left">{{ step.title }}</h3>
+        <p class="text-400 line-height-3 text-sm mb-4 text-center lg:text-left">{{ step.desc }}</p>
+        <div class="mt-auto px-3 py-2 bg-white-alpha-10 border-round-lg inline-flex align-items-center gap-2 w-max mx-auto lg:mx-0">
+           <i class="pi pi-verified text-primary-400"></i>
+           <span class="text-xs font-bold tracking-widest uppercase opacity-80">{{ step.output }}</span>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="grid">
-    <div class="col-12 md:col-6 lg:col-3 p-3">
-      <div class="flex flex-column h-full">
-        <div class="text-primary-400 text-5xl font-bold mb-3 opacity-20">01</div>
-        <h3 class="text-2xl font-bold mb-3">Discovery Call</h3>
-        <p class="text-600 line-height-3 text-sm flex-grow-1 opacity-80">We identify the specific bottleneck holding back your growth. You get an immediate technical diagnosis and high-level strategy.</p>
-        <div class="mt-4 border-top-1 border-white-alpha-10 pt-3 flex align-items-center gap-2">
-          <i class="pi pi-check-circle text-primary"></i>
-          <span class="text-xs uppercase font-bold letter-spacing-wide">Diagnosis</span>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 md:col-6 lg:col-3 p-3">
-      <div class="flex flex-column h-full">
-        <div class="text-primary-400 text-5xl font-bold mb-3 opacity-20">02</div>
-        <h3 class="text-2xl font-bold mb-3">Architecture Audit</h3>
-        <p class="text-600 line-height-3 text-sm flex-grow-1 opacity-80">I dive deep into your existing code, infrastructure, and technical debt to find the root cause of inefficiency.</p>
-        <div class="mt-4 border-top-1 border-white-alpha-10 pt-3 flex align-items-center gap-2">
-          <i class="pi pi-check-circle text-primary"></i>
-          <span class="text-xs uppercase font-bold letter-spacing-wide">Analysis</span>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 md:col-6 lg:col-3 p-3">
-      <div class="flex flex-column h-full">
-        <div class="text-primary-400 text-5xl font-bold mb-3 opacity-20">03</div>
-        <h3 class="text-2xl font-bold mb-3">Fixed-Scope Roadmap</h3>
-        <p class="text-600 line-height-3 text-sm flex-grow-1 opacity-80">You receive a detailed milestone-based blueprint. No moving targets—just clear deliverables and a fixed timeline for execution.</p>
-        <div class="mt-4 border-top-1 border-white-alpha-10 pt-3 flex align-items-center gap-2">
-          <i class="pi pi-check-circle text-primary"></i>
-          <span class="text-xs uppercase font-bold letter-spacing-wide">Strategy</span>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 md:col-6 lg:col-3 p-3">
-      <div class="flex flex-column h-full">
-        <div class="text-primary-400 text-5xl font-bold mb-3 opacity-20">04</div>
-        <h3 class="text-2xl font-bold mb-3">Senior Execution</h3>
-        <p class="text-600 line-height-3 text-sm flex-grow-1 opacity-80">I build the solution using high-integrity engineering standards, providing async Loom updates and total transparency in Linear.</p>
-        <div class="mt-4 border-top-1 border-white-alpha-10 pt-3 flex align-items-center gap-2">
-          <i class="pi pi-check-circle text-primary"></i>
-          <span class="text-xs uppercase font-bold letter-spacing-wide">Velocity</span>
-        </div>
-      </div>
-    </div>
+</div>
+
+<!-- Sticky Mobile CTA -->
+<div class="fixed bottom-0 left-0 w-full p-3 z-5 lg:hidden glass-sticky-cta shadow-6 flex gap-3 border-top-1 border-white-alpha-10">
+  <a href="https://cal.com/stackseekers" target="_blank" class="flex-grow-1 no-underline">
+    <Button label="Book Call" icon="pi pi-calendar" severity="primary" class="w-full text-lg font-bold py-3" raised />
+  </a>
+  <div @click="scrollToSolutions" class="flex align-items-center justify-content-center bg-white-alpha-10 border-round-lg px-4 border-1 border-white-alpha-20 cursor-pointer">
+    <i class="pi pi-chevron-down text-white"></i>
   </div>
 </div>
 
@@ -371,38 +409,39 @@ copyright: false
   </div>
 </div>
 
-<!-- Testimonials -->
-<div class="mb-8 py-4">
-  <div class="text-center pb-4">
-    <h2 class="text-4xl font-bold mb-2">Don't just take my word for it.</h2>
-    <p class="text-xl text-600 line-height-2">See how partners describe the experience of building scalable digital solutions with me.</p>
+<div class="mb-8 py-8 surface-0">
+  <div class="text-center pb-6">
+    <h2 class="text-4xl font-bold mb-2">Verified Professional Impact</h2>
+    <p class="text-xl text-600 line-height-2">Don't just take my word for it. Trusted by leads at global organizations.</p>
   </div>
-  <div class="card relative md:mx-0 -mx-4 block" @mouseenter="pauseAutoPlay" @mouseleave="resumeAutoPlay">
-    <Carousel :value="testimonials" :numVisible="1" :numScroll="1" ref="carousel" :responsiveOptions="responsiveCustomerOptions" circular :page="currentPage" @page="onPageChange">
-      <template #item="slotProps">
-        <div class="surface-0 shadow-2 border-round-2xl p-6 md:mx-8 m-3">
-          <div class="flex align-items-center mb-4 pb-4 border-bottom-1 border-200">
-            <a :href="slotProps.data.link" target="_blank" class="no-underline flex align-items-center" :aria-label="`View ${slotProps.data.name}'s LinkedIn profile`">
-              <i class="pi pi-linkedin text-blue-600 text-3xl mr-3"></i>
-              <div>
-                <h3 class="m-0 text-xl font-bold text-900">{{ slotProps.data.name }}</h3>
-                <div class="text-sm text-600 flex align-items-center mt-1">
-                  <img :alt="slotProps.data.location" :src="`https://flagcdn.com/w20/${slotProps.data.code.toLowerCase()}.png`" width="20" height="15" class="mr-2 border-round-sm" loading="lazy" />
-                  {{ slotProps.data.location }}
-                </div>
+  
+  <div class="grid px-2 md:px-4" style="max-width: 1240px; margin: 0 auto;">
+    <div class="col-12 lg:col-4 p-3" v-for="slot in testimonials" :key="slot.name">
+      <div class="surface-0 shadow-2 border-round-2xl p-5 h-full flex flex-column border-1 border-100 bento-hover">
+        <div class="flex align-items-center mb-4 pb-3 border-bottom-1 border-50">
+          <a :href="slot.link" target="_blank" class="no-underline flex align-items-center gap-3">
+            <div class="relative">
+              <i class="pi pi-linkedin absolute text-blue-600 bg-white border-circle" style="bottom: -2px; right: -2px; font-size: 0.8rem;"></i>
+            </div>
+            <div>
+              <h3 class="m-0 text-base font-bold text-900 line-height-1">{{ slot.name }}</h3>
+              <div class="text-xs text-500 mt-1 flex align-items-center gap-1">
+                 <img :alt="slot.location" :src="`https://flagcdn.com/w20/${slot.code.toLowerCase()}.png`" width="16" height="12" class="border-round-sm" />
+                 {{ slot.location }}
               </div>
-            </a>
-          </div>
-          <div class="font-italic text-lg text-700 line-height-3 relative">
-            <i class="pi pi-quote-left absolute opacity-20 text-5xl" style="top: -10px; left: -20px; color: var(--primary-color)"></i>
-            <span class="relative z-1">{{ slotProps.data.message }}</span>
-          </div>
+            </div>
+          </a>
         </div>
-      </template>
-    </Carousel>
+        <div class="font-italic text-700 line-height-3 relative flex-grow-1 text-sm">
+          <i class="pi pi-quote-left absolute opacity-10 text-4xl" style="top: -10px; left: -15px; color: var(--primary-color)"></i>
+          <span class="relative z-1">{{ slot.message }}</span>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="text-center mt-4">
-    <a href="https://www.linkedin.com/in/jiwanghosal/details/recommendations/" target="_blank" class="no-underline inline-flex align-items-center gap-2 text-primary font-bold hover:underline" aria-label="View all verified recommendations on LinkedIn">
+
+  <div class="text-center mt-6">
+    <a href="https://www.linkedin.com/in/jiwanghosal/details/recommendations/" target="_blank" class="no-underline inline-flex align-items-center gap-2 text-primary font-bold hover:underline">
       <i class="pi pi-linkedin"></i> View all verified LinkedIn recommendations
     </a>
   </div>
@@ -448,37 +487,50 @@ copyright: false
 </div>
 
 <script setup lang="ts">
-  import { ref, onMounted, onBeforeUnmount } from "vue";
-  import { orgs, testimonials, highImpactWins, heroSlides } from "@data/home.js";
+  import { onMounted } from "vue";
+  import { orgs, testimonials, highImpactWins } from "@data/home.js";
 
-  const currentPage = ref(0);
-  const autoplayInterval = 6000;
-  let autoplayTimer = null;
+  const roadmapSteps = [
+    { title: "Discovery Call", desc: "Technical diagnosis and scaling strategy.", output: "Diagnosis" },
+    { title: "Architecture Audit", desc: "Deep dive into infra and technical debt.", output: "Analysis" },
+    { title: "Fixed-Scope Roadmap", desc: "Detailed milestone-based blueprint.", output: "Strategy" },
+    { title: "Senior Execution", desc: "High-integrity build & velocity.", output: "Velocity" }
+  ];
 
-  const responsiveCustomerOptions = ref([
-    { breakpoint: "1400px", numVisible: 1, numScroll: 1 },
-    { breakpoint: "1199px", numVisible: 1, numScroll: 1 },
-    { breakpoint: "767px", numVisible: 1, numScroll: 1 },
-    { breakpoint: "575px", numVisible: 1, numScroll: 1 },
-  ]);
-
-  const startAutoPlay = () => {
-    autoplayTimer = setInterval(() => {
-      currentPage.value = (currentPage.value + 1) % testimonials.length;
-    }, autoplayInterval);
+  const scrollToSolutions = (e) => {
+    if (e && e.currentTarget) (e.currentTarget as HTMLElement).blur();
+    const el = document.getElementById('solutions');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
-  const pauseAutoPlay = () => clearInterval(autoplayTimer);
-  const resumeAutoPlay = () => startAutoPlay();
-
-  const onPageChange = (newPage) => { currentPage.value = newPage; };
-
-  onMounted(() => { startAutoPlay(); });
-  onBeforeUnmount(() => { pauseAutoPlay(); });
+  onMounted(() => { 
+    console.log("Enterprise Sales Playbook Enabled");
+  });
 </script>
 
 <style scoped>
 .grayscale-filter { filter: grayscale(100%); opacity: 0.7; transition: all 0.3s ease; }
+.bento-hero-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+.bento-hero-1 { grid-area: 1 / 1 / 3 / 2; }
+.bento-hero-2 { grid-area: 1 / 2 / 2 / 3; }
+.bento-hero-3 { grid-area: 2 / 2 / 3 / 3; }
+.inset-0 { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+.bento-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; }
+.bento-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+.shadow-pill { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+.glass-sticky-cta { 
+  background: rgba(15, 23, 42, 0.8); 
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px);
+}
+
 @media (hover: hover) {
   .hover-zoom img { transition: transform 0.3s ease; }
   .hover-zoom:hover img { transform: scale(1.05); }
