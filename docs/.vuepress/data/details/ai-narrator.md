@@ -3,6 +3,29 @@
 ![AI Voice Generator Free](/img/projects/ai-narrator/app-screenshot.webp)  
 *Transform your Google Docs into professional audio narrations with this free AI voice generator and text to audio converter.*
 
+## Executive Summary
+
+AI Narrator is a practical example of shipping an AI-powered content workflow as a usable product, not just a demo. It shows how LLM-adjacent tooling, document workflows, and media generation can be packaged into a low-friction user experience that solves a real publishing and education problem.
+
+## Business Problem
+
+Voiceover production is usually too slow or too expensive for individual creators, teachers, and small teams. Even when AI speech tools exist, they are often disconnected from the documents and workflows people already use every day.
+
+## What I Built
+
+- A Google Docs add-on for AI-powered voice generation
+- Gemini-based text-to-speech output with multiple voice styles
+- Audio export and storage workflow tied to Google Drive
+- A document-native UX that reduces friction for creators and educators
+
+## Why It Matters
+
+This project shows how to embed AI directly into an existing productivity environment instead of forcing users into another app. That is a useful service signal for companies that want AI features integrated into real user workflows, especially around content, communication, and operational efficiency.
+
+## Best Fit If You Need Something Similar
+
+This case study supports [ROI-Driven AI Automation](/web-development-services/ai-and-automation-strategy/). It is relevant if you want AI media tooling, document-based automation, or productized LLM features inside an existing workflow.
+
 ## What is AI Narrator? Your Free AI Voice Generator & Text to Audio Converter
 
 AI Narrator is a powerful, **free AI voice generator** add-on for Google Docs that converts your documents into high-quality audio using advanced **Gemini TTS** technology. This **AI voice generator free** tool leverages Google Gemini AI for natural-sounding voices and includes document analysis features to enhance your content. Whether you're a YouTuber creating voiceovers, a teacher narrating lessons, or anyone needing reliable **text to speech AI**, AI Narrator makes audio creation simple and free.

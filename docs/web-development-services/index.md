@@ -1,6 +1,6 @@
 ---
-title: Engineering Services | Senior Technical Architect & Full-Stack Consultancy
-description: High-integrity technical architecture, AI automation strategy, and fractional CTO advisory for international high-growth startups and enterprise partners.
+title: Engineering Services | Fractional CTO, AI Automation, Programmatic SEO
+description: Fractional CTO leadership, AI automation systems, programmatic SEO engineering, cloud migration, and scalable product architecture for startups and enterprise teams.
 home: true
 order: 3
 lastUpdated: false
@@ -19,14 +19,14 @@ copyright: false
         </span>
       </div>
       <h1 class="m-0 p-0 line-height-2 text-4xl md:text-6xl font-bold">
-        Solve your hardest <span class="text-gradient">technical bottlenecks</span> with elite architecture.
+        Fractional CTO leadership and <span class="text-gradient">growth-ready engineering</span> for teams with real delivery pressure.
       </h1>
       <p class="text-xl md:text-2xl mt-4 line-height-3 text-700">
-        I provide high-integrity engineering standards — from migrating global banking infrastructure for ABN AMRO to building rapid AI growth engines. No bloat, just senior execution.
+        I help founders and product teams solve architecture, automation, and acquisition problems with hands-on senior execution. From ABN AMRO-grade platform work to high-velocity AI and programmatic SEO systems.
       </p>
       <div class="flex flex-column md:flex-row gap-3 mt-5">
         <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
-          <Button label="Request Technical Roadmap" icon="pi pi-map" severity="primary" size="large" rounded raised class="w-full md:w-auto" />
+          <Button label="Book Technical Roadmap" icon="pi pi-map" severity="primary" size="large" rounded raised class="w-full md:w-auto" />
         </a>
       </div>
     </div>
@@ -37,7 +37,7 @@ copyright: false
 <div class="mb-8 px-4 py-8 surface-50 border-round-3xl shadow-1">
   <div class="grid align-items-center">
     <div class="col-12 lg:col-6">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Why work with a Fractional CTO?</h2>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Why work with Stack Seekers?</h2>
       <p class="text-lg line-height-3 text-700 mb-4">
         Large agencies bring overhead, junior developers, and communication gaps. I provide the high-level technical leadership of a CTO with the hands-on execution of a senior architect.
       </p>
@@ -78,7 +78,7 @@ copyright: false
         <div class="col-12 md:col-6 lg:col-4 p-3" v-for="(svc, sIdx) in services" :key="svc.code">
             <div class="surface-0 shadow-2 border-round-2xl p-0 overflow-hidden h-full border-1 border-100 transition-all hover:shadow-6 flex flex-column">
                 <div class="relative overflow-hidden h-12rem bg-gray-900">
-                    <img :src="'/img/service/' + svc.code + '.webp'" :alt="svc.name" class="w-full h-full object-cover opacity-80" />
+                    <img :src="'/img/service/' + (svc.imageCode || svc.code) + '.webp'" :alt="svc.name" class="w-full h-full object-cover opacity-80" />
                     <div class="absolute top-0 right-0 p-3">
                         <span class="bg-primary text-900 text-xs font-bold px-2 py-1 border-round-md shadow-2 uppercase">{{svc.metric}}</span>
                     </div>
@@ -93,7 +93,7 @@ copyright: false
                     </div>
                     <div class="pt-3 border-top-1 border-100 flex align-items-center justify-content-between">
                         <span class="text-xs font-bold text-500 uppercase">{{svc.outcome}}</span>
-                        <a href="https://cal.com/stackseekers" class="no-underline">
+                        <a :href="'/web-development-services/' + svc.code + '/'" class="no-underline" :aria-label="'View ' + svc.name">
                             <i class="pi pi-arrow-right text-primary"></i>
                         </a>
                     </div>
@@ -107,12 +107,12 @@ copyright: false
 <div class="mb-8 border-round-3xl p-6 text-center shadow-4 surface-900 text-white" style="max-width: 1000px; margin: 0 auto;">
   <h2 class="text-3xl md:text-5xl font-bold m-0 mb-3">The Zero-Risk Technical Audit</h2>
   <p class="text-lg md:text-xl line-height-3 mb-5 opacity-90 mx-auto" style="max-width: 650px;">
-    Not sure what architecture you need? I provide a $0 / 25-minute discovery session where I'll audit your bottleneck and give you a technical roadmap to solve it.
+    Not sure which service fits? I use this short roadmap call to identify the bottleneck, pressure-test the architecture, and recommend the fastest path to revenue, reliability, or automation gains.
   </p>
   <a href="https://cal.com/stackseekers" class="no-underline">
     <Button label="Book Roadmap Session" icon="pi pi-calendar" severity="secondary" raised rounded class="text-lg font-bold px-5 py-3" />
   </a>
-  <div class="text-sm mt-4 opacity-70">Strictly for founders and technical leads seeking long-term architectural partnerships.</div>
+  <div class="text-sm mt-4 opacity-70">Best fit for founders, product owners, and engineering teams with active delivery goals.</div>
 </div>
 
 <script setup lang="ts">

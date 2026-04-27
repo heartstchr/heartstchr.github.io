@@ -2,6 +2,29 @@
 
 A professional web application that helps businesses manage customer service requests using Notion as a database. This system automatically saves customer requests to your Notion workspace, handles file uploads, and sends email notifications when request statuses change.
 
+## Executive Summary
+
+This project shows how to turn a lightweight workspace stack into a usable customer-service workflow system. It is a strong proof point for custom internal tools, service portals, and operational automation built without the cost of a heavyweight ticketing platform.
+
+## Business Problem
+
+Small and mid-sized teams often need request intake, file uploads, status tracking, and customer notifications, but buying or implementing a full service-management platform is overkill. Manual email and spreadsheet workflows create delays, mistakes, and poor customer visibility.
+
+## What I Built
+
+- A service request portal backed by Notion
+- Structured intake forms with file uploads
+- Status-based email notification flows
+- A simple operational system that can be deployed and adapted quickly
+
+## Why It Matters
+
+This kind of build helps businesses modernize customer operations without waiting for a large software initiative. It is especially useful when a team needs practical workflow automation, better intake quality, and faster service coordination.
+
+## Best Fit If You Need Something Similar
+
+This case study supports [ROI-Driven AI Automation](/web-development-services/ai-and-automation-strategy/) and [Product Architecture & Scale](/web-development-services/product-architecture-and-scaling/). It is a good fit for customer portals, service operations, and internal workflow tooling.
+
 ## 🎥 **WATCH THE SETUP VIDEO**
 
 **📺 Complete Setup Tutorial** - Follow along with step-by-step video instructions for the easiest setup experience!

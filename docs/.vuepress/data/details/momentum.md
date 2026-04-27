@@ -1,6 +1,29 @@
 ## Project Overview
 This is a **full-stack web application** that is called "momentum" internally and aims to replicate ServiceNow's IT service management capabilities.
 
+## Executive Summary
+
+This project demonstrates how to build internal operational software that replaces expensive or bloated enterprise tooling with a focused, modern workflow system. It is a strong proof point for custom internal tools, process-heavy dashboards, and product architecture for business operations.
+
+## Business Problem
+
+Many teams outgrow spreadsheets and lightweight ticket tools but do not want the cost, complexity, or rigidity of large enterprise platforms. They need a system that fits their workflow, not a generic product that forces them to adapt around it.
+
+## What I Built
+
+- A full-stack incident and task management platform
+- Role-based workflows for operations and internal teams
+- File management, export capability, and structured form handling
+- API-backed architecture that can support future automation and integrations
+
+## Why It Matters
+
+Internal software is often where a lot of business inefficiency hides. This project shows how targeted product architecture can create a cleaner operational system with less friction, better visibility, and room for future scaling.
+
+## Best Fit If You Need Something Similar
+
+This case study supports [Product Architecture & Scale](/web-development-services/product-architecture-and-scaling/), [Fractional CTO Strategy](/web-development-services/fractional-cto-and-advisory/), and [High-Performance API Design](/web-development-services/api-performance-and-integration/). It is especially relevant for internal portals, workflow tools, and operations software.
+
 ## Architecture
 The project follows a **client-server architecture** with clear separation of concerns:
 
@@ -187,5 +210,4 @@ Based on the structure, this clone implements:
 - Multer for efficient file handling
 
 This is a well-structured, production-ready application that demonstrates modern full-stack development practices while replicating core ServiceNow functionality for educational/demonstration purposes.
-
 

@@ -3,25 +3,25 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { freelance } from "./data/projects.js";
 import { services } from "./data/services.js";
+import { posts } from "./data/posts.js";
 import { toKebabCase } from "./utils/index.js";
 
-// Resolve __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-// Output directories
-const outProjectDir = path.resolve(__dirname, "../web-development-projects");
-const outServiceDir = path.resolve(__dirname, "../web-development-services");
+const docsRoot = path.resolve(__dirname, "..");
+const publicDir = path.resolve(__dirname, "./public");
+const outProjectDir = path.resolve(docsRoot, "web-development-projects");
+const outServiceDir = path.resolve(docsRoot, "web-development-services");
+const outTagsDir = path.resolve(docsRoot, "tags");
 const detailsDir = path.resolve(__dirname, "./data/details");
+const DOMAIN = "https://stackseekers.com";
 
-// Utility function to ensure a directory exists
 const ensureDirectoryExists = (dirPath) => {
   if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true });
   }
 };
 
-// Utility function to read markdown content if it exists
 const readMarkdownContent = (detailsPath) => {
   if (!detailsPath) return "";
   const fullPath = path.resolve(detailsDir, path.basename(detailsPath));
@@ -33,20 +33,41 @@ const readMarkdownContent = (detailsPath) => {
   }
 };
 
-// Template for project pages
+const escapeXml = (value) =>
+  String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+
+const toIsoDate = (value) => {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return new Date().toISOString().split("T")[0];
+  }
+  return date.toISOString().split("T")[0];
+};
+
+const buildContactLink = (subject, service) =>
+  `/contact/?subject=${encodeURIComponent(subject)}&service=${encodeURIComponent(service)}`;
+
 const projectTemplate = (project, projectIndex, allProjects) => {
   const markdownContent = readMarkdownContent(project.details);
-
-  // Get previous and next project info
-  const previousProject = projectIndex > 0 ? {
-    name: allProjects[projectIndex - 1].name,
-    link: `/web-development-projects/${toKebabCase(allProjects[projectIndex - 1].name)}/`
-  } : null;
-
-  const nextProject = projectIndex < allProjects.length - 1 ? {
-    name: allProjects[projectIndex + 1].name,
-    link: `/web-development-projects/${toKebabCase(allProjects[projectIndex + 1].name)}/`
-  } : null;
+  const previousProject =
+    projectIndex > 0
+      ? {
+          name: allProjects[projectIndex - 1].name,
+          link: `/web-development-projects/${toKebabCase(allProjects[projectIndex - 1].name)}/`,
+        }
+      : null;
+  const nextProject =
+    projectIndex < allProjects.length - 1
+      ? {
+          name: allProjects[projectIndex + 1].name,
+          link: `/web-development-projects/${toKebabCase(allProjects[projectIndex + 1].name)}/`,
+        }
+      : null;
 
   return `---
 title: ${project.name}
@@ -109,8 +130,8 @@ project:
     </div>
   </div>
 </section>
-<section class="mb-8 overflow-hidden border-round-3xl shadow-4" itemscope itemtype="https://schema.org/SoftwareApplication">
-  <div v-if="$frontmatter.project.images">
+<section v-if="$frontmatter.project.images && $frontmatter.project.images.length" class="mb-8 overflow-hidden border-round-3xl shadow-4" itemscope itemtype="https://schema.org/SoftwareApplication">
+  <div>
     <div v-if="$frontmatter.project.images.length > 1">
       <Galleria :value="$frontmatter.project.images" :responsiveOptions="responsiveOptions" :numVisible="5"
         :circular="true" :showItemNavigators="true" :showThumbnails="true" class="custom-galleria">
@@ -146,7 +167,7 @@ project:
      </div>
   </div>
   <div class="col-12 lg:col-4">
-     <div class="surface-900 text-white p-4 md:p-6 border-round-3xl shadow-4 h-full relative overflow-hidden">
+     <div class="surface-900 text-white p-4 border-round-3xl shadow-4 h-full relative overflow-hidden">
         <div class="absolute top-0 right-0 w-10rem h-10rem border-circle bg-primary opacity-20" style="filter: blur(40px); transform: translate(30%, -30%);"></div>
         <div class="relative z-1">
           <h3 class="text-2xl font-bold mb-4">The Stack</h3>
@@ -170,6 +191,7 @@ project:
 </div>
 
 <div class="project-markdown-content text-lg line-height-4 mb-8">
+
   ${markdownContent}
 </div>
 
@@ -205,21 +227,25 @@ import { responsiveOptions } from "@data/responsive.js"
 </script>`;
 };
 
-// Template for service pages
 const serviceTemplate = (service, serviceIndex, allServices) => {
-  // Get previous and next service info
-  const previousService = serviceIndex > 0 ? {
-    name: allServices[serviceIndex - 1].name,
-    link: `/web-development-services/${allServices[serviceIndex - 1].code}/`
-  } : null;
-
-  const nextService = serviceIndex < allServices.length - 1 ? {
-    name: allServices[serviceIndex + 1].name,
-    link: `/web-development-services/${allServices[serviceIndex + 1].code}/`
-  } : null;
+  const previousService =
+    serviceIndex > 0
+      ? {
+          name: allServices[serviceIndex - 1].name,
+          link: `/web-development-services/${toKebabCase(allServices[serviceIndex - 1].code)}/`,
+        }
+      : null;
+  const nextService =
+    serviceIndex < allServices.length - 1
+      ? {
+          name: allServices[serviceIndex + 1].name,
+          link: `/web-development-services/${toKebabCase(allServices[serviceIndex + 1].code)}/`,
+        }
+      : null;
 
   return `---
-title: ${service.name}
+title: ${service.name} | Stack Seekers
+description: ${service.descriptions.join(" ")}
 lastUpdated: false
 editLink: false
 copyright: false
@@ -229,26 +255,141 @@ service:
   descriptions: ${JSON.stringify(service.descriptions)}
   icon: ${JSON.stringify(service.icon)}
   code: ${JSON.stringify(service.code)}
+  imageCode: ${JSON.stringify(service.imageCode || service.code)}
+  metric: ${JSON.stringify(service.metric)}
+  outcome: ${JSON.stringify(service.outcome)}
+  keywords: ${JSON.stringify(service.keywords || [])}
+  idealFor: ${JSON.stringify(service.idealFor || [])}
+  problems: ${JSON.stringify(service.problems || [])}
+  deliverables: ${JSON.stringify(service.deliverables || [])}
+  proof: ${JSON.stringify(service.proof || "")}
+  faq: ${JSON.stringify(service.faq || [])}
   previousService: ${JSON.stringify(previousService)}
   nextService: ${JSON.stringify(nextService)}
 ---
-<article class="shadow-1 col-12 p-0 overflow-hidden service-details" itemscope itemtype="https://schema.org/SoftwareApplication">
-    <div class="px-4 m-2">
-        <div class="text-4xl font-bold mb-4">
-          <h2 itemprop="name" class="text-4xl">
-            <img v-if="$frontmatter.service.icon" :src="'https://cdn.simpleicons.org/' + $frontmatter.service.icon" :alt="$frontmatter.service.name" style="width: 28px;" loading="lazy" fetchpriority="high" class="mr-2"/>
-          </h2>
+<article class="service-sales-page">
+  <section class="mb-6">
+    <div class="grid align-items-center">
+      <div class="col-12 lg:col-7">
+        <div class="text-primary font-bold mb-2 uppercase tracking-widest text-xs">Core Service</div>
+        <h1 class="text-4xl md:text-6xl font-bold mt-0 mb-3 line-height-2">{{$frontmatter.service.name}}</h1>
+        <p class="text-xl text-700 line-height-3 mb-4" v-for="description in $frontmatter.service.descriptions" :key="description">
+          {{ description }}
+        </p>
+        <div class="flex flex-column md:flex-row gap-3">
+          <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+            <Button label="Book Technical Roadmap Call" icon="pi pi-calendar-clock" severity="primary" raised rounded />
+          </a>
+          <a :href="'/contact/?subject=' + encodeURIComponent($frontmatter.service.name + ' inquiry') + '&service=' + encodeURIComponent($frontmatter.service.name)" class="no-underline">
+            <Button label="Request a Quote" icon="pi pi-send" severity="secondary" raised rounded />
+          </a>
         </div>
-        <Image v-if="$frontmatter.service.code" :src="'/img/service/' + $frontmatter.service.code + '.webp'" class="" :alt="$frontmatter.service.name" width="100%"/>
-        <div class="my-4 flex flex-column gap-2 line-height-3">
-          <div itemprop="name" v-for= "(description, index) in $frontmatter.service.descriptions" >
-            <div v-html="description"></div>
+      </div>
+      <div class="col-12 lg:col-5">
+        <div class="surface-card p-4 md:p-5 border-round-3xl shadow-2 border-1 border-100">
+          <img v-if="$frontmatter.service.imageCode" :src="'/img/service/' + $frontmatter.service.imageCode + '.webp'" :alt="$frontmatter.service.name" class="w-full border-round-2xl mb-4" />
+          <div class="grid">
+            <div class="col-6">
+              <div class="text-xs uppercase text-500 font-bold mb-1">Primary Outcome</div>
+              <div class="font-bold line-height-3">{{$frontmatter.service.outcome}}</div>
+            </div>
+            <div class="col-6">
+              <div class="text-xs uppercase text-500 font-bold mb-1">Signal</div>
+              <div class="font-bold line-height-3">{{$frontmatter.service.metric}}</div>
+            </div>
           </div>
-        <a :href="'/contact/?subject=' + encodeURIComponent($frontmatter.service.name + ' Services')" size="large" class="flex justify-content-center text-center no-underline mt-4" aria-label="Book Now"> 
-          <Button label="Book Now!" icon="pi pi-briefcase" severity="primary" raised rounded />
-        </a>
         </div>
+      </div>
     </div>
+  </section>
+
+  <section class="mb-6 surface-50 border-round-3xl p-4 md:p-5">
+    <div class="grid">
+      <div class="col-12 md:col-4" v-if="$frontmatter.service.idealFor?.length">
+        <h2 class="text-2xl font-bold mt-0 mb-3">Ideal For</h2>
+        <ul class="list-none p-0 m-0">
+          <li v-for="item in $frontmatter.service.idealFor" :key="item" class="flex align-items-start gap-2 mb-3">
+            <i class="pi pi-check-circle text-primary mt-1"></i>
+            <span class="line-height-3">{{ item }}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 md:col-4" v-if="$frontmatter.service.problems?.length">
+        <h2 class="text-2xl font-bold mt-0 mb-3">Problems Solved</h2>
+        <ul class="list-none p-0 m-0">
+          <li v-for="item in $frontmatter.service.problems" :key="item" class="flex align-items-start gap-2 mb-3">
+            <i class="pi pi-exclamation-circle text-orange-500 mt-1"></i>
+            <span class="line-height-3">{{ item }}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 md:col-4" v-if="$frontmatter.service.deliverables?.length">
+        <h2 class="text-2xl font-bold mt-0 mb-3">What You Get</h2>
+        <ul class="list-none p-0 m-0">
+          <li v-for="item in $frontmatter.service.deliverables" :key="item" class="flex align-items-start gap-2 mb-3">
+            <i class="pi pi-star text-green-500 mt-1"></i>
+            <span class="line-height-3">{{ item }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-6">
+    <div class="surface-900 text-white border-round-3xl p-4 md:p-5 shadow-3">
+      <div class="text-sm uppercase font-bold opacity-70 mb-2">Proof of Fit</div>
+      <p class="text-lg line-height-3 m-0">{{$frontmatter.service.proof}}</p>
+    </div>
+  </section>
+
+  <section class="mb-6">
+    <div class="grid">
+      <div class="col-12 lg:col-8">
+        <h2 class="text-3xl font-bold mt-0 mb-3">How We Work</h2>
+        <div class="grid">
+          <div class="col-12 md:col-4">
+            <div class="surface-card border-round-2xl p-4 shadow-1 h-full">
+              <div class="text-primary font-bold mb-2">1. Audit</div>
+              <p class="line-height-3 m-0">We map the business bottleneck, technical constraints, and the highest-value delivery path.</p>
+            </div>
+          </div>
+          <div class="col-12 md:col-4">
+            <div class="surface-card border-round-2xl p-4 shadow-1 h-full">
+              <div class="text-primary font-bold mb-2">2. Roadmap</div>
+              <p class="line-height-3 m-0">You get a practical plan with architecture decisions, delivery priorities, and risk management.</p>
+            </div>
+          </div>
+          <div class="col-12 md:col-4">
+            <div class="surface-card border-round-2xl p-4 shadow-1 h-full">
+              <div class="text-primary font-bold mb-2">3. Execution</div>
+              <p class="line-height-3 m-0">I stay close to implementation so the strategy becomes shipped product, not a slide deck.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 lg:col-4">
+        <div class="surface-50 border-round-3xl p-4 md:p-5 h-full">
+          <h2 class="text-2xl font-bold mt-0 mb-3">Best Next Step</h2>
+          <p class="line-height-3 text-700">If this service matches your bottleneck, the fastest path is a short roadmap call with enough context to scope the technical direction and commercial fit.</p>
+          <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+            <Button label="Book the Call" icon="pi pi-arrow-right" severity="primary" raised rounded class="w-full" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-6" v-if="$frontmatter.service.faq?.length">
+    <h2 class="text-3xl font-bold mt-0 mb-4">FAQ</h2>
+    <div class="grid">
+      <div class="col-12 md:col-6" v-for="item in $frontmatter.service.faq" :key="item.question">
+        <div class="surface-card border-round-2xl p-4 shadow-1 h-full">
+          <h3 class="text-xl font-bold mt-0 mb-2">{{ item.question }}</h3>
+          <p class="line-height-3 m-0">{{ item.answer }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </article>
 
 <div class="flex justify-content-between align-items-center mt-6 pt-4 border-top-1 surface-border">
@@ -280,29 +421,6 @@ service:
 `;
 };
 
-// Function to generate pages
-const generatePages = (data, outputDir, slug, templateFn) => {
-  ensureDirectoryExists(outputDir);
-
-  data.forEach((item, index) => {
-    const content = templateFn(item, index, data);
-    const dirPath = path.join(outputDir, toKebabCase(item[slug])); // Directory path
-    const filePath = path.join(dirPath, "index.md"); // File path
-
-    ensureDirectoryExists(dirPath);
-    fs.writeFileSync(filePath, content, "utf-8");
-    console.log(`✅ Created: ${filePath}`);
-  });
-};
-
-// Generate project and service pages
-generatePages(freelance, outProjectDir, "name", projectTemplate);
-generatePages(services, outServiceDir, "code", serviceTemplate);
-
-// --- Tag Pages Generation ---
-import { posts } from "./data/posts.js";
-const outTagsDir = path.resolve(__dirname, "../tags");
-
 const tagTemplate = (tag) => {
   const description = `Explore our collection of articles, tutorials, and insights about ${tag}. Stay updated with the latest trends and best practices in ${tag}.`;
   return `---
@@ -328,24 +446,147 @@ head:
 `;
 };
 
-// Extract unique tags
-const allTags = new Set();
-posts.forEach(post => {
-  if (post.tags && Array.isArray(post.tags)) {
-    post.tags.forEach(tag => allTags.add(String(tag).toLowerCase()));
+const generatePages = (data, outputDir, slugKey, templateFn) => {
+  ensureDirectoryExists(outputDir);
+
+  data.forEach((item, index) => {
+    const content = templateFn(item, index, data);
+    const dirPath = path.join(outputDir, toKebabCase(item[slugKey]));
+    const filePath = path.join(dirPath, "index.md");
+
+    ensureDirectoryExists(dirPath);
+    fs.writeFileSync(filePath, content, "utf-8");
+    console.log(`Created: ${filePath}`);
+  });
+};
+
+const generateTagPages = () => {
+  const allTags = new Set();
+
+  posts.forEach((post) => {
+    if (Array.isArray(post.tags)) {
+      post.tags.forEach((tag) => allTags.add(String(tag).toLowerCase()));
+    }
+  });
+
+  ensureDirectoryExists(outTagsDir);
+
+  allTags.forEach((tag) => {
+    const content = tagTemplate(tag);
+    const dirPath = path.join(outTagsDir, toKebabCase(tag));
+    const filePath = path.join(dirPath, "index.md");
+
+    ensureDirectoryExists(dirPath);
+    fs.writeFileSync(filePath, content, "utf-8");
+    console.log(`Created Tag Page: ${filePath}`);
+  });
+};
+
+const collectMarkdownPages = (dirPath, result = []) => {
+  const entries = fs.readdirSync(dirPath, { withFileTypes: true });
+
+  for (const entry of entries) {
+    if (entry.name.startsWith(".")) continue;
+    if (entry.name === "node_modules") continue;
+
+    const fullPath = path.join(dirPath, entry.name);
+
+    if (entry.isDirectory()) {
+      collectMarkdownPages(fullPath, result);
+      continue;
+    }
+
+    if (!entry.name.endsWith(".md")) continue;
+    if (entry.name === "README.md" && dirPath === path.resolve(docsRoot, ".vuepress")) continue;
+
+    result.push(fullPath);
   }
-});
 
-ensureDirectoryExists(outTagsDir);
+  return result;
+};
 
-allTags.forEach(tag => {
-  const content = tagTemplate(tag);
-  // Create a slug for the tag (e.g., "web-development")
-  const tagSlug = toKebabCase(tag);
-  const dirPath = path.join(outTagsDir, tagSlug);
-  const filePath = path.join(dirPath, "index.md");
+const toPagePath = (filePath) => {
+  const relativePath = path.relative(docsRoot, filePath).replace(/\\/g, "/");
 
-  ensureDirectoryExists(dirPath);
-  fs.writeFileSync(filePath, content, "utf-8");
-  console.log(`✅ Created Tag Page: ${filePath}`);
-});
+  if (relativePath === "README.md") return "/";
+  if (relativePath.endsWith("/README.md")) {
+    return `/${relativePath.replace(/\/README\.md$/, "/")}`;
+  }
+  if (relativePath.endsWith("/index.md")) {
+    return `/${relativePath.replace(/\/index\.md$/, "/")}`;
+  }
+
+  return `/${relativePath.replace(/\.md$/, "/")}`;
+};
+
+const getPriority = (pagePath) => {
+  if (pagePath === "/") return "1.0";
+  if (pagePath === "/contact/") return "0.95";
+  if (pagePath === "/web-development-services/") return "0.95";
+  if (pagePath.startsWith("/web-development-services/")) return "0.90";
+  if (pagePath === "/web-development-projects/") return "0.85";
+  if (pagePath.startsWith("/web-development-projects/")) return "0.80";
+  if (pagePath.startsWith("/posts/")) return "0.76";
+  if (pagePath.startsWith("/about/") || pagePath.startsWith("/jiwan-ghosal/")) return "0.72";
+  if (pagePath.startsWith("/tags/")) return "0.58";
+  if (pagePath.startsWith("/privacy-policy/") || pagePath.startsWith("/terms-of-service/")) return "0.20";
+  return "0.64";
+};
+
+const getChangeFrequency = (pagePath) => {
+  if (pagePath === "/" || pagePath === "/contact/" || pagePath === "/web-development-services/") return "weekly";
+  if (pagePath.startsWith("/posts/")) return "monthly";
+  if (pagePath.startsWith("/tags/")) return "weekly";
+  return "monthly";
+};
+
+const getLastModified = (filePath, pagePath) => {
+  const post = posts.find((item) => item.link === pagePath);
+  if (post?.date) return toIsoDate(post.date);
+
+  const stats = fs.statSync(filePath);
+  return toIsoDate(stats.mtime);
+};
+
+const generateSitemap = () => {
+  ensureDirectoryExists(publicDir);
+
+  const markdownFiles = collectMarkdownPages(docsRoot).filter(
+    (filePath) => !filePath.includes(`${path.sep}.vuepress${path.sep}`)
+  );
+
+  const urls = markdownFiles
+    .map((filePath) => {
+      const pagePath = toPagePath(filePath);
+      return {
+        loc: `${DOMAIN}${pagePath}`,
+        lastmod: getLastModified(filePath, pagePath),
+        changefreq: getChangeFrequency(pagePath),
+        priority: getPriority(pagePath),
+      };
+    })
+    .sort((a, b) => a.loc.localeCompare(b.loc));
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls
+  .map(
+    (url) => `  <url>
+    <loc>${escapeXml(url.loc)}</loc>
+    <lastmod>${url.lastmod}</lastmod>
+    <changefreq>${url.changefreq}</changefreq>
+    <priority>${url.priority}</priority>
+  </url>`
+  )
+  .join("\n")}
+</urlset>
+`;
+
+  fs.writeFileSync(path.join(publicDir, "sitemap.xml"), xml, "utf-8");
+  console.log(`Created sitemap: ${path.join(publicDir, "sitemap.xml")}`);
+};
+
+generatePages(freelance, outProjectDir, "name", projectTemplate);
+generatePages(services, outServiceDir, "code", serviceTemplate);
+generateTagPages();
+generateSitemap();

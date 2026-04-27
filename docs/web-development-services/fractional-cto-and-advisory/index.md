@@ -1,5 +1,6 @@
 ---
-title: Fractional CTO Strategy
+title: Fractional CTO Strategy | Stack Seekers
+description: For international partners seeking an elite technical lead. I provide roadmap planning, architectural oversight, and team mentorship without the overhead of a full-time executive. I bridge the gap between business goals and technical execution, ensuring every sprint delivers maximum value to your bottom line.
 lastUpdated: false
 editLink: false
 copyright: false
@@ -9,26 +10,141 @@ service:
   descriptions: ["For international partners seeking an elite technical lead. I provide roadmap planning, architectural oversight, and team mentorship without the overhead of a full-time executive.","I bridge the gap between business goals and technical execution, ensuring every sprint delivers maximum value to your bottom line."]
   icon: "googlemeet"
   code: "fractional-cto-and-advisory"
+  imageCode: "fractional-cto-and-advisory"
+  metric: "6-Month Roadmap"
+  outcome: "Strategic Technical Partnership"
+  keywords: ["fractional CTO","startup technical advisor","technical leadership consultant"]
+  idealFor: ["Founders who need senior technical leadership without a full-time CTO","Product teams making architecture, hiring, or delivery decisions","Agencies and startups needing an experienced technical counterpart"]
+  problems: ["Roadmaps moving without technical prioritization","Teams shipping features with no shared architecture direction","Founders struggling to assess vendors, timelines, or engineering risk"]
+  deliverables: ["Technical roadmap aligned to business milestones","Architecture oversight, sprint guidance, and vendor review","Mentorship for developers and sharper technical decision-making"]
+  proof: "Trusted by enterprise and high-growth teams as an architect who can connect roadmap, execution, and long-term platform health."
+  faq: [{"question":"Is this advisory only, or will you get hands-on too?","answer":"It can be either. Many engagements start with advisory and expand into architecture reviews, delivery support, and selected implementation."},{"question":"What stage companies benefit most from fractional CTO support?","answer":"Usually pre-scale startups, post-MVP teams, and companies going through a platform transition or technical reset."}]
   previousService: {"name":"ROI-Driven AI Automation","link":"/web-development-services/ai-and-automation-strategy/"}
   nextService: {"name":"Enterprise Cloud Migration","link":"/web-development-services/enterprise-cloud-migration/"}
 ---
-<article class="shadow-1 col-12 p-0 overflow-hidden service-details" itemscope itemtype="https://schema.org/SoftwareApplication">
-    <div class="px-4 m-2">
-        <div class="text-4xl font-bold mb-4">
-          <h2 itemprop="name" class="text-4xl">
-            <img v-if="$frontmatter.service.icon" :src="'https://cdn.simpleicons.org/' + $frontmatter.service.icon" :alt="$frontmatter.service.name" style="width: 28px;" loading="lazy" fetchpriority="high" class="mr-2"/>
-          </h2>
+<article class="service-sales-page">
+  <section class="mb-6">
+    <div class="grid align-items-center">
+      <div class="col-12 lg:col-7">
+        <div class="text-primary font-bold mb-2 uppercase tracking-widest text-xs">Core Service</div>
+        <h1 class="text-4xl md:text-6xl font-bold mt-0 mb-3 line-height-2">{{$frontmatter.service.name}}</h1>
+        <p class="text-xl text-700 line-height-3 mb-4" v-for="description in $frontmatter.service.descriptions" :key="description">
+          {{ description }}
+        </p>
+        <div class="flex flex-column md:flex-row gap-3">
+          <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+            <Button label="Book Technical Roadmap Call" icon="pi pi-calendar-clock" severity="primary" raised rounded />
+          </a>
+          <a :href="'/contact/?subject=' + encodeURIComponent($frontmatter.service.name + ' inquiry') + '&service=' + encodeURIComponent($frontmatter.service.name)" class="no-underline">
+            <Button label="Request a Quote" icon="pi pi-send" severity="secondary" raised rounded />
+          </a>
         </div>
-        <Image v-if="$frontmatter.service.code" :src="'/img/service/' + $frontmatter.service.code + '.webp'" class="" :alt="$frontmatter.service.name" width="100%"/>
-        <div class="my-4 flex flex-column gap-2 line-height-3">
-          <div itemprop="name" v-for= "(description, index) in $frontmatter.service.descriptions" >
-            <div v-html="description"></div>
+      </div>
+      <div class="col-12 lg:col-5">
+        <div class="surface-card p-4 md:p-5 border-round-3xl shadow-2 border-1 border-100">
+          <img v-if="$frontmatter.service.imageCode" :src="'/img/service/' + $frontmatter.service.imageCode + '.webp'" :alt="$frontmatter.service.name" class="w-full border-round-2xl mb-4" />
+          <div class="grid">
+            <div class="col-6">
+              <div class="text-xs uppercase text-500 font-bold mb-1">Primary Outcome</div>
+              <div class="font-bold line-height-3">{{$frontmatter.service.outcome}}</div>
+            </div>
+            <div class="col-6">
+              <div class="text-xs uppercase text-500 font-bold mb-1">Signal</div>
+              <div class="font-bold line-height-3">{{$frontmatter.service.metric}}</div>
+            </div>
           </div>
-        <a :href="'/contact/?subject=' + encodeURIComponent($frontmatter.service.name + ' Services')" size="large" class="flex justify-content-center text-center no-underline mt-4" aria-label="Book Now"> 
-          <Button label="Book Now!" icon="pi pi-briefcase" severity="primary" raised rounded />
-        </a>
         </div>
+      </div>
     </div>
+  </section>
+
+  <section class="mb-6 surface-50 border-round-3xl p-4 md:p-5">
+    <div class="grid">
+      <div class="col-12 md:col-4" v-if="$frontmatter.service.idealFor?.length">
+        <h2 class="text-2xl font-bold mt-0 mb-3">Ideal For</h2>
+        <ul class="list-none p-0 m-0">
+          <li v-for="item in $frontmatter.service.idealFor" :key="item" class="flex align-items-start gap-2 mb-3">
+            <i class="pi pi-check-circle text-primary mt-1"></i>
+            <span class="line-height-3">{{ item }}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 md:col-4" v-if="$frontmatter.service.problems?.length">
+        <h2 class="text-2xl font-bold mt-0 mb-3">Problems Solved</h2>
+        <ul class="list-none p-0 m-0">
+          <li v-for="item in $frontmatter.service.problems" :key="item" class="flex align-items-start gap-2 mb-3">
+            <i class="pi pi-exclamation-circle text-orange-500 mt-1"></i>
+            <span class="line-height-3">{{ item }}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 md:col-4" v-if="$frontmatter.service.deliverables?.length">
+        <h2 class="text-2xl font-bold mt-0 mb-3">What You Get</h2>
+        <ul class="list-none p-0 m-0">
+          <li v-for="item in $frontmatter.service.deliverables" :key="item" class="flex align-items-start gap-2 mb-3">
+            <i class="pi pi-star text-green-500 mt-1"></i>
+            <span class="line-height-3">{{ item }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-6">
+    <div class="surface-900 text-white border-round-3xl p-4 md:p-5 shadow-3">
+      <div class="text-sm uppercase font-bold opacity-70 mb-2">Proof of Fit</div>
+      <p class="text-lg line-height-3 m-0">{{$frontmatter.service.proof}}</p>
+    </div>
+  </section>
+
+  <section class="mb-6">
+    <div class="grid">
+      <div class="col-12 lg:col-8">
+        <h2 class="text-3xl font-bold mt-0 mb-3">How We Work</h2>
+        <div class="grid">
+          <div class="col-12 md:col-4">
+            <div class="surface-card border-round-2xl p-4 shadow-1 h-full">
+              <div class="text-primary font-bold mb-2">1. Audit</div>
+              <p class="line-height-3 m-0">We map the business bottleneck, technical constraints, and the highest-value delivery path.</p>
+            </div>
+          </div>
+          <div class="col-12 md:col-4">
+            <div class="surface-card border-round-2xl p-4 shadow-1 h-full">
+              <div class="text-primary font-bold mb-2">2. Roadmap</div>
+              <p class="line-height-3 m-0">You get a practical plan with architecture decisions, delivery priorities, and risk management.</p>
+            </div>
+          </div>
+          <div class="col-12 md:col-4">
+            <div class="surface-card border-round-2xl p-4 shadow-1 h-full">
+              <div class="text-primary font-bold mb-2">3. Execution</div>
+              <p class="line-height-3 m-0">I stay close to implementation so the strategy becomes shipped product, not a slide deck.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 lg:col-4">
+        <div class="surface-50 border-round-3xl p-4 md:p-5 h-full">
+          <h2 class="text-2xl font-bold mt-0 mb-3">Best Next Step</h2>
+          <p class="line-height-3 text-700">If this service matches your bottleneck, the fastest path is a short roadmap call with enough context to scope the technical direction and commercial fit.</p>
+          <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+            <Button label="Book the Call" icon="pi pi-arrow-right" severity="primary" raised rounded class="w-full" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-6" v-if="$frontmatter.service.faq?.length">
+    <h2 class="text-3xl font-bold mt-0 mb-4">FAQ</h2>
+    <div class="grid">
+      <div class="col-12 md:col-6" v-for="item in $frontmatter.service.faq" :key="item.question">
+        <div class="surface-card border-round-2xl p-4 shadow-1 h-full">
+          <h3 class="text-xl font-bold mt-0 mb-2">{{ item.question }}</h3>
+          <p class="line-height-3 m-0">{{ item.answer }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </article>
 
 <div class="flex justify-content-between align-items-center mt-6 pt-4 border-top-1 surface-border">
