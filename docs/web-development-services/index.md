@@ -6,6 +6,7 @@ order: 3
 lastUpdated: false
 editLink: false
 copyright: false
+pageInfo: false
 ---
 
 <section class="hero-newage relative overflow-hidden p-4 md:p-6 surface-0 border-round-3xl mb-8">

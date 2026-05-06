@@ -72,7 +72,7 @@ export default defineClientConfig({
     app.component("ConsultingBridge", ConsultingBridge);
     app.component("TagIndex", TagIndex);
   },
-  rootComponents: [GlobalLeadCapture, ConsultingBridge],
+  rootComponents: [GlobalLeadCapture],
   setup() {
     // Ensure canonical URLs strip query parameters
     if (typeof window !== 'undefined') {
