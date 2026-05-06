@@ -825,9 +825,9 @@ If you're still having issues, here are some resources:
 **That's it!** You now have a professional website that automatically syncs with your Notion database. No coding required, no monthly fees, and it works on any device!
 
 </div>
-<ConsultingBridge />
 </div>
-    <div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
+<ConsultingBridge />
+<div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
       <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">
         <i class="pi pi-cog text-primary"></i>
         Related Engineering Services

@@ -505,9 +505,9 @@ As a completely **free AI voice generator**, AI Narrator offers professional **t
 - **SEO-Friendly Audio Creation**: Perfect for content creators searching for "**ai voice generator free**" or "**text to audio converter**".
 
 </div>
-<ConsultingBridge />
 </div>
-    <div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
+<ConsultingBridge />
+<div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
       <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">
         <i class="pi pi-cog text-primary"></i>
         Related Engineering Services

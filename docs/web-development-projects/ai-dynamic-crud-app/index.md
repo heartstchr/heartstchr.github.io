@@ -367,9 +367,9 @@ Once you add the environment variables, your frontend application immediately tr
 > **💡 Technical Note:** This platform uses strict Prompt Engineering bounds to ensure Gemini only outputs valid, heavily structured JSON schemas that perfectly map to Notion's Database API constraints.
 
 </div>
-<ConsultingBridge />
 </div>
-    <div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
+<ConsultingBridge />
+<div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
       <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">
         <i class="pi pi-cog text-primary"></i>
         Related Engineering Services
