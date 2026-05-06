@@ -154,6 +154,6 @@ export default defineUserConfig({
     __VITE_YOUTUBE_UPLOADS_PLAYLIST_ID__: process.env.VITE_YOUTUBE_UPLOADS_PLAYLIST_ID || "",
     __VITE_NOTION_ENDPOINT__: process.env.VITE_NOTION_ENDPOINT || "",
     __VITE_NOTION_DATABASE_ID__: process.env.VITE_NOTION_DATABASE_ID || "",
-    __WHATSAPP_NUMBER__: process.env.VITE_WHATSAPP_NUMBER || "",
+    __WHATSAPP_NUMBER__: process.env.VITE_WHATSAPP_NUMBER || "917026217029",
   },
 });
