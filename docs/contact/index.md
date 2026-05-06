@@ -4,6 +4,8 @@ description: Book Jiwan Ghosal for fractional CTO support, AI automation, progra
 order: 4
 editLink: false
 copyright: false
+pageInfo: false
+contributors: false
 ---
 
 <div class="flex flex-column gap-4 my-6 line-height-4">

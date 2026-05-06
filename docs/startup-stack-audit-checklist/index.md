@@ -4,6 +4,8 @@ description: Free checklist to audit your startup’s SaaS infrastructure, techn
 order: 5
 editLink: false
 copyright: false
+pageInfo: false
+contributors: false
 ---
 
   <div class="p-4">
@@ -58,7 +60,6 @@ copyright: false
         </div>
       </div>
     </Dialog>
-
     <!-- Post-Audit CTA -->
     <div class="mt-8 border-round-3xl p-6 text-center shadow-4 surface-900 text-white relative overflow-hidden">
       <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary-900 border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>

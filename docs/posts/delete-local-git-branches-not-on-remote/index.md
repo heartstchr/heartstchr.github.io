@@ -113,3 +113,4 @@ Cleaning up local Git branches that no longer exist on the remote is a simple wa
 <RelatedPosts />
 
 <BlogNavigation />
+<ConsultingBridge />

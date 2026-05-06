@@ -74,3 +74,4 @@ Ready to unlock the full potential of AI? Start crafting better prompts today an
 <RelatedPosts />
 
 <BlogNavigation />
+<ConsultingBridge />

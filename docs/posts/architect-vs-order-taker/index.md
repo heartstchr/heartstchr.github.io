@@ -56,3 +56,5 @@ A good architect says "No" more often than "Yes." Because every "No" to a bad fe
 <RelatedPosts />
 
 <BlogNavigation />
+
+<ConsultingBridge />

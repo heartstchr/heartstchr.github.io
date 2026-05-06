@@ -2,6 +2,8 @@
 layout: Layout
 title: The Architect's Playbook | Engineering Insights
 summary: Technical deep-dives, strategic architectural breakdowns, and scaling playbooks for founders.
+pageInfo: false
+contributors: false
 ---
 
 <section class="p-4 surface-900 text-white border-round-3xl mb-8 overflow-hidden relative">
@@ -38,7 +40,7 @@ summary: Technical deep-dives, strategic architectural breakdowns, and scaling p
 </section>
 
 <div class="grid">
-  <div class="col-12 lg:col-9">
+  <div class="col-12 lg:col-12">
     <div class="surface-card border-round-2xl shadow-2">
        <div v-if="!searchQuery" class="mb-4">
          <a :href="filteredPosts[0].link" class="border-2 border-black px-5 py-3 text-md text-black uppercase shadow-md inline-block no-underline font-bold hover:bg-black hover:text-white transition-all">

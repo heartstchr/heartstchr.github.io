@@ -1,7 +1,6 @@
 <template>
-  <div v-if="isActivePage" class="consulting-bridge-wrapper py-8 px-4 surface-0">
-    <!-- Architectural Roadmap Section -->
-    <section class="max-w-1200 mx-auto mb-8 px-4 py-8 surface-900 text-white border-round-3xl shadow-4 overflow-hidden relative">
+  <div v-if="isActivePage" class="mb-8 mt-4">
+    <section class="max-w-1200 mx-auto p-4 overflow-hidden relative">
       <div class="absolute top-0 right-0 w-30rem h-30rem bg-primary-900 border-circle opacity-10" style="filter: blur(100px); transform: translate(30%, -30%)"></div>
       
       <div class="text-center mb-8 relative z-1">
@@ -33,7 +32,7 @@
   </div>
 
   <!-- Sticky Mobile CTA -->
-  <div v-if="isActivePage" class="fixed bottom-0 left-0 w-full p-3 z-5 lg:hidden glass-sticky-cta shadow-6 flex gap-3 border-top-1 border-white-alpha-10">
+  <div v-if="isActivePage" class="fixed bottom-0 left-0 w-full p-3 z-5 lg:hidden glass-sticky-cta shadow-6 flex gap-3">
     <a href="https://cal.com/stackseekers" target="_blank" class="flex-grow-1 no-underline">
       <Button label="Consult Strategy" icon="pi pi-calendar" severity="primary" class="w-full text-lg font-bold py-3" raised />
     </a>

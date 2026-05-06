@@ -54,3 +54,5 @@ The goal of an MVP is to find Product-Market Fit. If you find it, but your softw
 <RelatedPosts />
 
 <BlogNavigation />
+
+<ConsultingBridge />

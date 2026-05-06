@@ -102,9 +102,17 @@ export default defineUserConfig({
   theme,
   plugins: [
     (app: any) => ({
-      name: "inject-json-ld",
+      name: "custom-page-config",
       extendsPage: (page: any) => {
         const path = page.path;
+        
+        // Disable metadata/breadcrumbs for all posts
+        if (path.startsWith("/posts/")) {
+          page.frontmatter.pageInfo = false;
+          page.frontmatter.breadcrumb = false;
+          page.frontmatter.contributors = false;
+        }
+
         const schemas = pageSpecificSchemas[path] || [];
         if (schemas.length > 0) {
           page.frontmatter.head = [

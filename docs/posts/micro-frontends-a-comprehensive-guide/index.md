@@ -86,3 +86,4 @@ Micro frontend offer a powerful approach to building scalable, maintainable, and
 <RelatedPosts />
 
 <BlogNavigation />
+<ConsultingBridge />

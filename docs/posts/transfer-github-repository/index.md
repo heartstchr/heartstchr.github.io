@@ -84,3 +84,4 @@ Follow these steps to transfer a GitHub repository to an organization, clone it 
 <RelatedPosts />
 
 <BlogNavigation />
+<ConsultingBridge />

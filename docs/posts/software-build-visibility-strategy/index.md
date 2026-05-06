@@ -54,3 +54,5 @@ Visibility isn't just about showing progress—it's about building trust. When y
 <RelatedPosts />
 
 <BlogNavigation />
+
+<ConsultingBridge />

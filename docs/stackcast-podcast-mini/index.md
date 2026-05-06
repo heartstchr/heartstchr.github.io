@@ -4,6 +4,8 @@ description: A mini-podcast unpacking tools, trends and SaaS strategies for devs
 order: 5
 editLink: false
 copyright: false
+pageInfo: false
+contributors: false
 ---
 
 <h2 class="text-2xl font-semibold">Your go-to mini podcast</h2>

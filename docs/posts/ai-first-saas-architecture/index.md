@@ -56,3 +56,5 @@ If you are just sending prompts to a text box, you are leaving 90% of AI's power
 <RelatedPosts />
 
 <BlogNavigation />
+
+<ConsultingBridge />

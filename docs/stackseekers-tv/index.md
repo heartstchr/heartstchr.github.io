@@ -4,6 +4,8 @@ description: Watch in-depth web development tutorials, app walkthroughs, and arc
 order: 4
 editLink: false
 copyright: false
+pageInfo: false
+contributors: false
 ---
 
 Watch web development tutorials, app walkthroughs, and project demos by Stack Seekers. Learn how I build full-stack solutions, explore technical insights, and follow my creative journey.
