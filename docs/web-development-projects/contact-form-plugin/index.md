@@ -1581,6 +1581,7 @@ This project implements a **generator-based contact form system** where:
 This architecture makes it easy to create new form variations (generators) by simply changing the configuration object passed to `ContactWidget`, without modifying the core code.
 
 </div>
+<ConsultingBridge />
 </div>
     <div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
       <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">

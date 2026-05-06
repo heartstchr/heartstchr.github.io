@@ -189,6 +189,7 @@ project:
 
 
 </div>
+<ConsultingBridge />
 </div>
     <div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
       <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">
