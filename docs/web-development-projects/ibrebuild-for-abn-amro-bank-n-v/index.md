@@ -4,7 +4,6 @@ description: ABN AMRO Bank N.V. is a Dutch bank with headquarters in Amsterdam. 
 lastUpdated: false
 editLink: false
 contributors: false
-breadcrumb: false
 pageInfo: false
 copyright: false
 layout: Layout
@@ -64,23 +63,26 @@ project:
   </div>
 </section>
 
-<section v-if="$frontmatter.project.images && $frontmatter.project.images.length" class="mb-8 overflow-hidden border-round-3xl shadow-4" itemscope itemtype="https://schema.org/SoftwareApplication">
-  <div>
-    <div v-if="$frontmatter.project.images.length > 1">
-      <Galleria :value="$frontmatter.project.images" :responsiveOptions="responsiveOptions" :numVisible="5"
-        :circular="true" :showItemNavigators="true" :showThumbnails="true" class="custom-galleria">
-        <template #item="slotProps">
-          <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt"
-            style="width: 100%; display: block" loading="eager" fetchpriority="high" />
-        </template>
-        <template #thumbnail="slotProps">
-          <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 60px; height: 60px; object-fit: cover;" />
-        </template>
-      </Galleria>
+<section v-if="$frontmatter.project.images && $frontmatter.project.images.length" class="mb-8" itemscope itemtype="https://schema.org/SoftwareApplication">
+  <div class="grid m-0 p-0">
+    <div :class="['col-12 p-2', $frontmatter.project.images.length > 1 ? 'md:col-8 lg:col-9' : 'col-12']">
+       <div class="border-round-3xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 h-full surface-card">
+         <Image :src="$frontmatter.project.images[0].itemImageSrc" :alt="$frontmatter.project.images[0].alt" preview class="w-full h-full" imageClass="w-full h-full object-cover block min-h-20rem md:min-h-30rem" />
+       </div>
     </div>
-    <div v-else>
-      <img :src="$frontmatter.project.images[0].itemImageSrc" :alt="$frontmatter.project.images[0].alt"
-        style="width: 100%; display: block" loading="eager" fetchpriority="high" />
+    <div v-if="$frontmatter.project.images.length > 1" class="col-12 md:col-4 lg:col-3 p-0">
+       <div class="grid m-0 p-0">
+          <div v-for="(img, idx) in $frontmatter.project.images.slice(1, 3)" :key="idx" class="col-12 p-2">
+             <div class="border-round-3xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 h-full surface-card">
+                <Image :src="img.itemImageSrc" :alt="img.alt" preview class="w-full h-full" imageClass="w-full h-full object-cover block min-h-12rem md:min-h-14-5rem" />
+             </div>
+          </div>
+       </div>
+    </div>
+    <div v-for="(img, idx) in $frontmatter.project.images.slice(3)" :key="idx" class="col-12 md:col-6 lg:col-4 p-2">
+       <div class="border-round-3xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 h-full surface-card">
+          <Image :src="img.itemImageSrc" :alt="img.alt" preview class="w-full h-full" imageClass="w-full h-full object-cover block min-h-15rem" />
+       </div>
     </div>
   </div>
 </section>
@@ -93,7 +95,7 @@ project:
         <span>Strategic Executive</span>
       </div>
     </template>
-    <div class="p-4 md:p-6 surface-card border-round-3xl shadow-1 border-1 border-100 mt-4">
+    <div class="p-4 md:p-6 surface-card border-round-3xl shadow-1 mt-4">
       <div class="flex align-items-center gap-2 text-primary font-bold mb-4 uppercase tracking-wider text-sm">
         <i class="pi pi-verified"></i>
         Business Impact & ROI
@@ -125,7 +127,7 @@ project:
         <span>Engineering Architecture</span>
       </div>
     </template>
-    <div class="p-4 md:p-6 surface-card border-round-3xl shadow-1 border-1 border-100 mt-4">
+    <div class="p-4 md:p-6 surface-card border-round-3xl shadow-1 mt-4">
       <div class="flex align-items-center gap-2 text-primary font-bold mb-4 uppercase tracking-wider text-sm">
         <i class="pi pi-code"></i>
         Technical Deep-Dive
@@ -133,10 +135,7 @@ project:
       <div class="text-xl line-height-4 text-700 mb-6">
         {{ $frontmatter.project.perspective.technical }}
       </div>
-      <div class="surface-900 text-white p-4 border-round-2xl mb-6">
-        <h4 class="text-lg font-bold mb-3 mt-0">Architecture Stack</h4>
-        <Stacks :stack="$frontmatter.project.stack" :other-skills="$frontmatter.project.otherSkills" />
-      </div>
+      <Stacks :stack="$frontmatter.project.stack" :other-skills="$frontmatter.project.otherSkills" />
       <div v-pre class="project-markdown-content text-lg line-height-4">
 
 
@@ -167,7 +166,6 @@ project:
        <div class="surface-900 text-white p-4 border-round-3xl shadow-4 h-full relative overflow-hidden">
           <div class="absolute top-0 right-0 w-10rem h-10rem border-circle bg-primary opacity-20" style="filter: blur(40px); transform: translate(30%, -30%);"></div>
           <div class="relative z-1">
-            <h3 class="text-2xl font-bold mb-4">The Stack</h3>
             <Stacks :stack="$frontmatter.project.stack" :other-skills="$frontmatter.project.otherSkills" />
             <div class="flex flex-column gap-2 mt-6">
               <div class="flex align-items-stretch gap-2 w-full">

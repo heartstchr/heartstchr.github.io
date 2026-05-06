@@ -4,6 +4,8 @@ title: Jiwan Ghosal | Senior Enterprise Architecture Partner & Fractional CTO
 description: Jiwan Ghosal — senior enterprise architecture partner and Fractional CTO. Founder of Stack Seekers. Building scalable React, Next.js & Node.js platforms globally.
 editLink: false
 copyright: false
+pageInfo: false
+contributors: false
 ---
 
 <section class="hero-newage relative overflow-hidden p-4 md:p-6 surface-0">

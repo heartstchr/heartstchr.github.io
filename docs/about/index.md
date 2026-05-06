@@ -4,6 +4,8 @@ description: Stack Seekers is an independent engineering consultancy founded by 
 order: 4
 editLink: false
 copyright: false
+pageInfo: false
+contributors: false
 ---
 
 <div class="my-6 ">

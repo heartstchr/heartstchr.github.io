@@ -2,6 +2,8 @@
 title: Privacy Policy
 description: Privacy Policy for Stack Seekers - Learn how we collect, use, and protect your personal information.
 editLink: false
+pageInfo: false
+contributors: false
 ---
 
 # Privacy Policy
