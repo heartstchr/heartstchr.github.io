@@ -58,6 +58,23 @@ copyright: false
         </div>
       </div>
     </Dialog>
+
+    <!-- Post-Audit CTA -->
+    <div class="mt-8 border-round-3xl p-6 text-center shadow-4 surface-900 text-white relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary-900 border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
+      <div class="relative z-1">
+        <h2 class="text-3xl font-bold mb-3">Found some red flags?</h2>
+        <p class="text-lg opacity-80 mb-5 max-w-30rem mx-auto">Don't let technical debt or fragile architecture slow your growth. Let's turn your audit results into a high-performance execution roadmap.</p>
+        <div class="flex flex-column md:flex-row gap-3 justify-content-center">
+          <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+            <Button label="Book Technical Roadmap Call" icon="pi pi-calendar" severity="primary" size="large" rounded raised />
+          </a>
+          <a href="/web-development-services/" class="no-underline">
+            <Button label="Explore Engineering Services" icon="pi pi-arrow-right" severity="secondary" size="large" rounded text class="text-white" />
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 
 <script setup>

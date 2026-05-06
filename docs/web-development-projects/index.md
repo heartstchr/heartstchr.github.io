@@ -89,6 +89,32 @@ copyright: false
   </div>
 </div>
 
+<!-- All Other Projects Grid -->
+<section class="mt-8 mb-8">
+  <div class="text-center mb-6">
+    <h2 class="text-3xl font-bold mb-2">More Enterprise Deliveries</h2>
+    <p class="text-600">A collection of specialized technical solutions and niche platforms.</p>
+  </div>
+  <div class="grid">
+    <div v-for="project in otherProjects" :key="project.name" class="col-12 md:col-6 lg:col-4 p-3">
+      <a :href="'/web-development-projects/' + toKebabCase(project.name) + '/'" class="no-underline block h-full">
+        <div class="surface-0 shadow-2 border-round-2xl p-4 h-full border-1 border-100 hover:shadow-6 transition-all flex flex-column">
+          <div class="flex align-items-center justify-content-between mb-3">
+            <div class="text-primary font-bold text-xs uppercase tracking-widest">{{project.domain}}</div>
+            <div class="text-500 text-xs font-bold">{{project.year}}</div>
+          </div>
+          <h3 class="text-xl font-bold mt-0 mb-2 text-900">{{project.name}}</h3>
+          <p class="text-sm text-600 line-height-3 mb-4 flex-grow-1">{{project.description}}</p>
+          <div class="pt-3 border-top-1 border-50 flex align-items-center justify-content-between">
+            <span class="text-xs font-bold text-500 uppercase">{{project.software}}</span>
+            <i class="pi pi-arrow-right text-primary"></i>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- Bottom Strategy Section -->
 <section class="mt-8 mb-8 px-4 py-8 surface-900 text-white border-round-3xl shadow-4 overflow-hidden relative">
   <div class="absolute top-0 right-0 w-30rem h-30rem bg-primary-900 border-circle opacity-10" style="filter: blur(100px); transform: translate(30%, -30%)"></div>
@@ -131,10 +157,15 @@ copyright: false
 
 <script setup lang="ts">
   import { freelance } from "@data/projects.js";
+  import { toKebabCase } from "@utils/index.js";
   import { computed } from 'vue';
 
   const pillarProjects = computed(() => {
     return freelance.slice(0, 4);
+  });
+
+  const otherProjects = computed(() => {
+    return freelance.slice(4);
   });
 
   const roadmapSteps = [

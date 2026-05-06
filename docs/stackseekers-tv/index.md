@@ -12,8 +12,19 @@ Watch web development tutorials, app walkthroughs, and project demos by Stack Se
   <YouTubeVideos />
 </div>
 
-<!-- Contact Me -->
-<div class="border-round-md vp-feature-item" id="contact">
+<!-- Ready to Build CTA -->
+<div class="mt-8 border-round-3xl p-6 text-center shadow-4 surface-900 text-white relative overflow-hidden">
+  <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary-900 border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
+  <div class="relative z-1">
+    <h2 class="text-3xl font-bold mb-3">Ready to build your own?</h2>
+    <p class="text-lg opacity-80 mb-5 max-w-30rem mx-auto">I help founders and teams take these technical concepts and turn them into scalable, production-ready systems.</p>
+    <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+      <Button label="Book Free Strategy Call" icon="pi pi-video" severity="primary" size="large" rounded raised />
+    </a>
+  </div>
+</div>
+
+<div class="border-round-md vp-feature-item mt-6" id="contact">
   <div>
     <div class="text-center py-4">
       <h2 class="my-4 text-md m-0 p-0">Connect with me on other social networks!</h2>

@@ -37,6 +37,16 @@ export const orgs = [
     icon: "/img/home/yitlogo.webp",
     details: "Infrastructure",
   },
+  {
+    title: "Mobistreak",
+    icon: "/img/home/mobistreak.webp",
+    details: "Digital Marketing",
+  },
+  {
+    title: "Catch That Bus",
+    icon: "/img/home/catchthatbus.webp",
+    details: "Travel & lesure",
+  }
 ];
 
 export const highImpactWins = [
