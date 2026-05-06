@@ -139,7 +139,7 @@ copyright: false
   </div>
   <div class="gallery gap-4">
     <div
-      v-for="(project, index) in projects"
+      v-for="(project, index) in projects.slice(0, 8)"
       :key="index"
       class="gallery-item mb-4"
     >
@@ -148,6 +148,11 @@ copyright: false
         <h3 class="p-0 m-2">{{ project.name }}</h3>
       </a>
     </div>
+  </div>
+  <div class="text-center mt-6">
+    <a href="/web-development-projects/" class="no-underline">
+      <Button label="View Full Architectural Playbook" icon="pi pi-th-large" severity="secondary" rounded outlined />
+    </a>
   </div>
   <div class="grid justify-content-center my-4">
     <div class="flex gap-2 p-2" v-for="stackLogo in stackLogos" :key="stackLogo.title">
@@ -291,13 +296,13 @@ copyright: false
         <div class="p-4">
           <h3 class="mt-0 p-0 font-bold">Q. What services do you provide?</h3>
           <div class="mx-3">
-            I offer a variety of services tailored to your needs, including 
-            <a href="web-development-services/consulting-and-technical-advisory/" class="no-underline text-xl" aria-label="Custom Web Development">Custom Web Development</a>, 
-            <a href="web-development-services/e-commerce-solutions/" class="no-underline text-xl" aria-label="E-commerce Solutions">E-commerce Solutions</a>, 
-            <a href="web-development-services/API-development-and-integration/" class="no-underline text-xl" aria-label="API Development and Integration">API Development and Integration </a>, 
-            <a href="web-development-services/figma-to-web/" class="no-underline text-xl" aria-label="Figma to Web Conversion">Figma to Web Conversion</a>, and 
-            <a href="web-development-services/hosting/" class="no-underline text-xl" aria-label="Hosting & Deployment">Hosting & Deployment</a>. 
-            <p class="mt-2">Let’s find the best solution for your project!</p>
+            I offer a variety of specialized engineering services including 
+            <a href="/web-development-services/product-architecture-and-scaling/" class="no-underline text-xl" aria-label="Product Architecture">Product Architecture</a>, 
+            <a href="/web-development-services/ai-and-automation-strategy/" class="no-underline text-xl" aria-label="AI Automation">AI & Automation</a>, 
+            <a href="/web-development-services/api-performance-and-integration/" class="no-underline text-xl" aria-label="API Design">High-Performance API Design</a>, 
+            <a href="/web-development-services/programmatic-seo-and-growth/" class="no-underline text-xl" aria-label="Programmatic SEO">Programmatic SEO</a>, and 
+            <a href="/web-development-services/enterprise-cloud-migration/" class="no-underline text-xl" aria-label="Cloud Migration">Enterprise Cloud Migration</a>. 
+            <p class="mt-2">Let’s find the best solution for your technical bottlenecks!</p>
           </div>
         </div>
         <div class="p-4">

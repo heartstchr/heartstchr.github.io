@@ -147,29 +147,68 @@ service:
   </section>
 </article>
 
-<div class="flex justify-content-between align-items-center mt-6 pt-4 border-top-1 surface-border">
+<!-- Related Case Studies -->
+<section class="mb-8">
+  <div class="surface-900 text-white p-6 md:p-8 border-round-3xl shadow-4 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary-900 border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
+    <div class="relative z-1">
+      <h3 class="text-3xl font-bold mb-4">Relevant Case Studies</h3>
+      <p class="text-xl text-300 mb-6 max-w-30rem">See how I've applied these principles to real-world business challenges.</p>
+      <div class="grid">
+        <div class="col-12 md:col-4">
+          <a href="/web-development-projects/ai-dynamic-crud-app/" class="no-underline block p-4 surface-800 border-round-2xl hover:surface-700 transition-all border-1 border-white-alpha-10 h-full">
+            <div class="text-primary-400 font-bold text-xs mb-2 uppercase">AI Automation</div>
+            <div class="text-white font-bold mb-2">AI Dynamic CRUD</div>
+            <div class="text-400 text-sm">Enterprise Notion-to-App engine.</div>
+          </a>
+        </div>
+        <div class="col-12 md:col-4">
+          <a href="/web-development-projects/local-home-services-pros/" class="no-underline block p-4 surface-800 border-round-2xl hover:surface-700 transition-all border-1 border-white-alpha-10 h-full">
+            <div class="text-primary-400 font-bold text-xs mb-2 uppercase">Scalable Web</div>
+            <div class="text-white font-bold mb-2">LocalXR Platform</div>
+            <div class="text-400 text-sm">10k+ dynamic service routes.</div>
+          </a>
+        </div>
+        <div class="col-12 md:col-4">
+          <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="no-underline block p-4 surface-800 border-round-2xl hover:surface-700 transition-all border-1 border-white-alpha-10 h-full">
+            <div class="text-primary-400 font-bold text-xs mb-2 uppercase">Enterprise Migration</div>
+            <div class="text-white font-bold mb-2">ABN AMRO Rebuild</div>
+            <div class="text-400 text-sm">Global banking infrastructure.</div>
+          </a>
+        </div>
+      </div>
+      <div class="mt-6 text-center">
+        <a href="/web-development-projects/" class="no-underline text-primary-400 font-bold hover:text-primary-300">
+          View All Projects <i class="pi pi-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="flex justify-content-between align-items-center mt-8 pt-6 border-top-1 surface-border">
   <div class="flex-1">
-    <a v-if="$frontmatter.service.previousService" :href="$frontmatter.service.previousService.link" class="flex align-items-center no-underline text-color-secondary hover:text-primary">
-      <i class="pi pi-chevron-left mr-2"></i>
+    <a v-if="$frontmatter.service.previousService" :href="$frontmatter.service.previousService.link" class="flex align-items-center no-underline text-color-secondary hover:text-primary group">
+      <i class="pi pi-chevron-left mr-2 transition-transform group-hover:-translate-x-1"></i>
       <div class="flex flex-column">
-        <span class="text-sm text-color-secondary">Previous Service</span>
-        <span class="font-semibold" style="color: var(--theme-color)">{{ $frontmatter.service.previousService.name }}</span>
+        <span class="text-xs uppercase text-500 font-bold">Previous</span>
+        <span class="font-bold text-900">{{ $frontmatter.service.previousService.name }}</span>
       </div>
     </a>
   </div>
   <div class="flex-1 text-center">
-    <a href="/web-development-services/" class="no-underline text-color-secondary hover:text-primary">
+    <a href="/web-development-services/" class="no-underline text-color-secondary hover:text-primary font-bold">
       <i class="pi pi-th-large mr-2"></i>
-      All Services
+      Services
     </a>
   </div>
   <div class="flex-1 text-right">
-    <a v-if="$frontmatter.service.nextService" :href="$frontmatter.service.nextService.link" class="flex align-items-center justify-content-end no-underline text-color-secondary hover:text-primary">
+    <a v-if="$frontmatter.service.nextService" :href="$frontmatter.service.nextService.link" class="flex align-items-center justify-content-end no-underline text-color-secondary hover:text-primary group">
       <div class="flex flex-column text-right">
-        <span class="text-sm text-color-secondary">Next Service</span>
-        <span class="font-semibold" style="color: var(--theme-color)">{{ $frontmatter.service.nextService.name }}</span>
+        <span class="text-xs uppercase text-500 font-bold">Next</span>
+        <span class="font-bold text-900">{{ $frontmatter.service.nextService.name }}</span>
       </div>
-      <i class="pi pi-chevron-right ml-2"></i>
+      <i class="pi pi-chevron-right ml-2 transition-transform group-hover:translate-x-1"></i>
     </a>
   </div>
 </div>

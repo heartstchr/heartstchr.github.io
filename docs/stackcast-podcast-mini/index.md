@@ -27,7 +27,17 @@ Mission here is to unpack the tools, trends, and strategies that power the softw
         </div>
       </a>
     </section>
-    <!-- Final CTA -->
+<!-- Ready to Scale CTA -->
+<div class="mt-8 border-round-3xl p-6 text-center shadow-4 surface-900 text-white relative overflow-hidden">
+  <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary-900 border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
+  <div class="relative z-1">
+    <h2 class="text-3xl font-bold mb-3">Need a technical strategy partner?</h2>
+    <p class="text-lg opacity-80 mb-5 max-w-30rem mx-auto">I help founders turn technical ideas into scalable architecture. Let's discuss your next milestone.</p>
+    <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+      <Button label="Book Free Discovery Call" icon="pi pi-microphone" severity="primary" size="large" rounded raised />
+    </a>
+  </div>
+</div>    <!-- Final CTA -->
     <section class="py-6 text-center">
       <h2 class="text-2xl font-bold mb-4">Not Hiring… But Open to Collaboration?</h2>
       <p>I help early-stage teams go from idea to MVP, and beyond. (Only when it's the right fit.)</p>

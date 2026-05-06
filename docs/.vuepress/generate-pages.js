@@ -26,7 +26,10 @@ const readMarkdownContent = (detailsPath) => {
   if (!detailsPath) return "";
   const fullPath = path.resolve(detailsDir, path.basename(detailsPath));
   try {
-    return fs.existsSync(fullPath) ? fs.readFileSync(fullPath, "utf-8") : "";
+    const content = fs.existsSync(fullPath) ? fs.readFileSync(fullPath, "utf-8") : "";
+    return content
+      .replace(/^---$/gm, "***")
+      .replace(/\n---$/gm, "\n***");
   } catch (error) {
     console.error(`Error reading markdown file ${fullPath}:`, error);
     return "";
@@ -74,6 +77,9 @@ title: ${project.name}
 description: ${project.description}
 lastUpdated: false
 editLink: false
+contributors: false
+breadcrumb: false
+pageInfo: false
 copyright: false
 layout: Layout
 project:
@@ -91,6 +97,7 @@ project:
   stack: ${JSON.stringify(project.stack)}
   images: ${JSON.stringify(project.images)}
   features: ${JSON.stringify(project.features) || []}
+  perspective: ${JSON.stringify(project.perspective || { executive: "", technical: "" })}
   details: ${JSON.stringify(markdownContent)}
   previousProject: ${JSON.stringify(previousProject)}
   nextProject: ${JSON.stringify(nextProject)}
@@ -130,6 +137,7 @@ project:
     </div>
   </div>
 </section>
+
 <section v-if="$frontmatter.project.images && $frontmatter.project.images.length" class="mb-8 overflow-hidden border-round-3xl shadow-4" itemscope itemtype="https://schema.org/SoftwareApplication">
   <div>
     <div v-if="$frontmatter.project.images.length > 1">
@@ -150,74 +158,150 @@ project:
     </div>
   </div>
 </section>
-<div class="grid mb-8">
-  <div class="col-12 lg:col-8">
-     <div class="surface-card p-4 md:p-6 border-round-3xl shadow-2 h-full">
-        <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">
-           <i class="pi pi-list text-primary"></i> Playbook Features
-        </h3>
-        <div class="grid">
-           <div v-for="feature in $frontmatter.project.features" :key="feature.text" class="col-12 md:col-6 mb-3">
-              <div class="flex align-items-start gap-3">
-                 <i class="pi pi-verified text-primary mt-1"></i>
-                 <div class="text-sm font-medium line-height-3" v-html="feature.text"></div>
+
+<TabView class="project-perspective-tabs mb-8" v-if="$frontmatter.project.perspective?.executive">
+  <TabPanel>
+    <template #header>
+      <div class="flex align-items-center gap-2">
+        <i class="pi pi-briefcase"></i>
+        <span>Strategic Executive</span>
+      </div>
+    </template>
+    <div class="p-4 md:p-6 surface-card border-round-3xl shadow-1 border-1 border-100 mt-4">
+      <div class="flex align-items-center gap-2 text-primary font-bold mb-4 uppercase tracking-wider text-sm">
+        <i class="pi pi-verified"></i>
+        Business Impact & ROI
+      </div>
+      <div class="text-xl line-height-4 text-700 mb-6">
+        {{ $frontmatter.project.perspective.executive }}
+      </div>
+      <div class="grid">
+        <div class="col-12">
+           <h4 class="text-lg font-bold mb-4 flex align-items-center gap-2">
+              <i class="pi pi-list text-primary"></i> Strategic Playbook Features
+           </h4>
+           <div class="grid">
+              <div v-for="feature in $frontmatter.project.features" :key="feature.text" class="col-12 md:col-6 mb-3">
+                 <div class="flex align-items-start gap-3">
+                    <i class="pi pi-check text-primary mt-1"></i>
+                    <div class="text-sm font-medium line-height-3" v-html="feature.text"></div>
+                 </div>
               </div>
            </div>
         </div>
-     </div>
-  </div>
-  <div class="col-12 lg:col-4">
-     <div class="surface-900 text-white p-4 border-round-3xl shadow-4 h-full relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-10rem h-10rem border-circle bg-primary opacity-20" style="filter: blur(40px); transform: translate(30%, -30%);"></div>
-        <div class="relative z-1">
-          <h3 class="text-2xl font-bold mb-4">The Stack</h3>
-          <Stacks :stack="$frontmatter.project.stack" :other-skills="$frontmatter.project.otherSkills" />
-          <div class="flex flex-column gap-2 mt-6">
-            <div class="flex align-items-stretch gap-2 w-full">
-              <a v-if="$frontmatter.project.link" :href="$frontmatter.project.link" target="_blank" class="flex-1 no-underline flex align-items-stretch">
-                <Button label="View Demo" icon="pi pi-external-link" severity="primary" class="w-full h-full font-bold" raised rounded />
-              </a>
-               <a v-if="$frontmatter.project.codeLink" :href="$frontmatter.project.codeLink" target="_blank" class="flex-1 no-underline flex align-items-stretch">
-                <Button label="Source" icon="pi pi-github" severity="secondary" class="w-full h-full font-bold" raised rounded />
+      </div>
+    </div>
+  </TabPanel>
+  <TabPanel>
+    <template #header>
+      <div class="flex align-items-center gap-2">
+        <i class="pi pi-cog"></i>
+        <span>Engineering Architecture</span>
+      </div>
+    </template>
+    <div class="p-4 md:p-6 surface-card border-round-3xl shadow-1 border-1 border-100 mt-4">
+      <div class="flex align-items-center gap-2 text-primary font-bold mb-4 uppercase tracking-wider text-sm">
+        <i class="pi pi-code"></i>
+        Technical Deep-Dive
+      </div>
+      <div class="text-xl line-height-4 text-700 mb-6">
+        {{ $frontmatter.project.perspective.technical }}
+      </div>
+      <div class="surface-900 text-white p-4 border-round-2xl mb-6">
+        <h4 class="text-lg font-bold mb-3 mt-0">Architecture Stack</h4>
+        <Stacks :stack="$frontmatter.project.stack" :other-skills="$frontmatter.project.otherSkills" />
+      </div>
+      <div v-pre class="project-markdown-content text-lg line-height-4">
+
+${markdownContent}
+
+</div>
+</div>
+</TabPanel>
+</TabView>
+
+<div v-else>
+  <div class="grid mb-8">
+    <div class="col-12 lg:col-8">
+       <div class="surface-card p-4 md:p-6 border-round-3xl shadow-2 h-full">
+          <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">
+             <i class="pi pi-list text-primary"></i> Playbook Features
+          </h3>
+          <div class="grid">
+             <div v-for="feature in $frontmatter.project.features" :key="feature.text" class="col-12 md:col-6 mb-3">
+                <div class="flex align-items-start gap-3">
+                   <i class="pi pi-verified text-primary mt-1"></i>
+                   <div class="text-sm font-medium line-height-3" v-html="feature.text"></div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="col-12 lg:col-4">
+       <div class="surface-900 text-white p-4 border-round-3xl shadow-4 h-full relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-10rem h-10rem border-circle bg-primary opacity-20" style="filter: blur(40px); transform: translate(30%, -30%);"></div>
+          <div class="relative z-1">
+            <h3 class="text-2xl font-bold mb-4">The Stack</h3>
+            <Stacks :stack="$frontmatter.project.stack" :other-skills="$frontmatter.project.otherSkills" />
+            <div class="flex flex-column gap-2 mt-6">
+              <div class="flex align-items-stretch gap-2 w-full">
+                <a v-if="$frontmatter.project.link" :href="$frontmatter.project.link" target="_blank" class="flex-1 no-underline flex align-items-stretch">
+                  <Button label="View Demo" icon="pi pi-external-link" severity="primary" class="w-full h-full font-bold" raised rounded />
+                </a>
+                 <a v-if="$frontmatter.project.codeLink" :href="$frontmatter.project.codeLink" target="_blank" class="flex-1 no-underline flex align-items-stretch">
+                  <Button label="Source" icon="pi pi-github" severity="secondary" class="w-full h-full font-bold" raised rounded />
+                </a>
+              </div>
+              <a v-if="$frontmatter.project.contact" :href="'/contact/?subject=' + encodeURIComponent('Scale Request: ' + $frontmatter.project.name)" class="no-underline w-full">
+                <Button label="Architect Similar Solution" icon="pi pi-bolt" severity="secondary" class="w-full font-bold" raised rounded />
               </a>
             </div>
-            <a v-if="$frontmatter.project.contact" :href="'/contact/?subject=' + encodeURIComponent('Scale Request: ' + $frontmatter.project.name)" class="no-underline w-full">
-              <Button label="Architect Similar Solution" icon="pi pi-bolt" severity="secondary" class="w-full font-bold" raised rounded />
-            </a>
           </div>
-        </div>
-     </div>
+       </div>
+    </div>
   </div>
+
+  <div v-pre class="project-markdown-content text-lg line-height-4 mb-8">
+
+${markdownContent}
 </div>
-
-<div class="project-markdown-content text-lg line-height-4 mb-8">
-
-  ${markdownContent}
 </div>
+    <div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
+      <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">
+        <i class="pi pi-cog text-primary"></i>
+        Related Engineering Services
+      </h3>
+      <div class="flex flex-wrap gap-3">
+        <a href="/web-development-services/custom-software-engineering/" class="no-underline px-4 py-2 surface-0 shadow-1 border-round-xl text-700 font-bold hover:text-primary transition-all">Custom Software</a>
+        <a href="/web-development-services/mvp-development-for-startups/" class="no-underline px-4 py-2 surface-0 shadow-1 border-round-xl text-700 font-bold hover:text-primary transition-all">MVP Development</a>
+        <a href="/web-development-services/ai-and-automation-strategy/" class="no-underline px-4 py-2 surface-0 shadow-1 border-round-xl text-700 font-bold hover:text-primary transition-all">AI & Automation</a>
+      </div>
+    </div>
 
-<div class="flex justify-content-between align-items-center mt-6 pt-4 border-top-1 surface-border">
+
+<div class="flex justify-content-between align-items-center mt-8 pt-6 border-top-1 surface-border">
   <div class="flex-1">
-    <a v-if="$frontmatter.project.previousProject" :href="$frontmatter.project.previousProject.link" class="flex align-items-center no-underline text-color-secondary hover:text-primary">
-      <i class="pi pi-chevron-left mr-2"></i>
+    <a v-if="$frontmatter.project.previousProject" :href="$frontmatter.project.previousProject.link" class="flex align-items-center no-underline text-color-secondary hover:text-primary group">
+      <i class="pi pi-chevron-left mr-2 transition-transform group-hover:-translate-x-1"></i>
       <div class="flex flex-column">
-        <span class="text-sm text-color-secondary">Previous Project</span>
-        <span class="font-semibold" style="color: var(--theme-color)">{{ $frontmatter.project.previousProject.name }}</span>
+        <span class="text-xs uppercase text-500 font-bold">Previous</span>
+        <span class="font-bold text-900">{{ $frontmatter.project.previousProject.name }}</span>
       </div>
     </a>
   </div>
   <div class="flex-1 text-center">
-    <a href="/web-development-projects/" class="no-underline text-color-secondary hover:text-primary">
+    <a href="/web-development-projects/" class="no-underline text-color-secondary hover:text-primary font-bold">
       <i class="pi pi-th-large mr-2"></i>
-      All Projects
+      Portfolio
     </a>
   </div>
   <div class="flex-1 text-right">
-    <a v-if="$frontmatter.project.nextProject" :href="$frontmatter.project.nextProject.link" class="flex align-items-center justify-content-end no-underline text-color-secondary hover:text-primary">
+    <a v-if="$frontmatter.project.nextProject" :href="$frontmatter.project.nextProject.link" class="flex align-items-center justify-content-end no-underline text-color-secondary hover:text-primary group">
       <div class="flex flex-column text-right">
-        <span class="text-sm text-color-secondary">Next Project</span>
-        <span class="font-semibold" style="color: var(--theme-color)">{{ $frontmatter.project.nextProject.name }}</span>
+        <span class="text-xs uppercase text-500 font-bold">Next</span>
+        <span class="font-bold text-900">{{ $frontmatter.project.nextProject.name }}</span>
       </div>
-      <i class="pi pi-chevron-right ml-2"></i>
+      <i class="pi pi-chevron-right ml-2 transition-transform group-hover:translate-x-1"></i>
     </a>
   </div>
 </div>
@@ -392,29 +476,68 @@ service:
   </section>
 </article>
 
-<div class="flex justify-content-between align-items-center mt-6 pt-4 border-top-1 surface-border">
+<!-- Related Case Studies -->
+<section class="mb-8">
+  <div class="surface-900 text-white p-6 md:p-8 border-round-3xl shadow-4 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary-900 border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
+    <div class="relative z-1">
+      <h3 class="text-3xl font-bold mb-4">Relevant Case Studies</h3>
+      <p class="text-xl text-300 mb-6 max-w-30rem">See how I've applied these principles to real-world business challenges.</p>
+      <div class="grid">
+        <div class="col-12 md:col-4">
+          <a href="/web-development-projects/ai-dynamic-crud-app/" class="no-underline block p-4 surface-800 border-round-2xl hover:surface-700 transition-all border-1 border-white-alpha-10 h-full">
+            <div class="text-primary-400 font-bold text-xs mb-2 uppercase">AI Automation</div>
+            <div class="text-white font-bold mb-2">AI Dynamic CRUD</div>
+            <div class="text-400 text-sm">Enterprise Notion-to-App engine.</div>
+          </a>
+        </div>
+        <div class="col-12 md:col-4">
+          <a href="/web-development-projects/local-home-services-pros/" class="no-underline block p-4 surface-800 border-round-2xl hover:surface-700 transition-all border-1 border-white-alpha-10 h-full">
+            <div class="text-primary-400 font-bold text-xs mb-2 uppercase">Scalable Web</div>
+            <div class="text-white font-bold mb-2">LocalXR Platform</div>
+            <div class="text-400 text-sm">10k+ dynamic service routes.</div>
+          </a>
+        </div>
+        <div class="col-12 md:col-4">
+          <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="no-underline block p-4 surface-800 border-round-2xl hover:surface-700 transition-all border-1 border-white-alpha-10 h-full">
+            <div class="text-primary-400 font-bold text-xs mb-2 uppercase">Enterprise Migration</div>
+            <div class="text-white font-bold mb-2">ABN AMRO Rebuild</div>
+            <div class="text-400 text-sm">Global banking infrastructure.</div>
+          </a>
+        </div>
+      </div>
+      <div class="mt-6 text-center">
+        <a href="/web-development-projects/" class="no-underline text-primary-400 font-bold hover:text-primary-300">
+          View All Projects <i class="pi pi-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="flex justify-content-between align-items-center mt-8 pt-6 border-top-1 surface-border">
   <div class="flex-1">
-    <a v-if="$frontmatter.service.previousService" :href="$frontmatter.service.previousService.link" class="flex align-items-center no-underline text-color-secondary hover:text-primary">
-      <i class="pi pi-chevron-left mr-2"></i>
+    <a v-if="$frontmatter.service.previousService" :href="$frontmatter.service.previousService.link" class="flex align-items-center no-underline text-color-secondary hover:text-primary group">
+      <i class="pi pi-chevron-left mr-2 transition-transform group-hover:-translate-x-1"></i>
       <div class="flex flex-column">
-        <span class="text-sm text-color-secondary">Previous Service</span>
-        <span class="font-semibold" style="color: var(--theme-color)">{{ $frontmatter.service.previousService.name }}</span>
+        <span class="text-xs uppercase text-500 font-bold">Previous</span>
+        <span class="font-bold text-900">{{ $frontmatter.service.previousService.name }}</span>
       </div>
     </a>
   </div>
   <div class="flex-1 text-center">
-    <a href="/web-development-services/" class="no-underline text-color-secondary hover:text-primary">
+    <a href="/web-development-services/" class="no-underline text-color-secondary hover:text-primary font-bold">
       <i class="pi pi-th-large mr-2"></i>
-      All Services
+      Services
     </a>
   </div>
   <div class="flex-1 text-right">
-    <a v-if="$frontmatter.service.nextService" :href="$frontmatter.service.nextService.link" class="flex align-items-center justify-content-end no-underline text-color-secondary hover:text-primary">
+    <a v-if="$frontmatter.service.nextService" :href="$frontmatter.service.nextService.link" class="flex align-items-center justify-content-end no-underline text-color-secondary hover:text-primary group">
       <div class="flex flex-column text-right">
-        <span class="text-sm text-color-secondary">Next Service</span>
-        <span class="font-semibold" style="color: var(--theme-color)">{{ $frontmatter.service.nextService.name }}</span>
+        <span class="text-xs uppercase text-500 font-bold">Next</span>
+        <span class="font-bold text-900">{{ $frontmatter.service.nextService.name }}</span>
       </div>
-      <i class="pi pi-chevron-right ml-2"></i>
+      <i class="pi pi-chevron-right ml-2 transition-transform group-hover:translate-x-1"></i>
     </a>
   </div>
 </div>
@@ -469,9 +592,11 @@ const generateTagPages = () => {
     }
   });
 
+  const tagsArray = Array.from(allTags).sort();
   ensureDirectoryExists(outTagsDir);
 
-  allTags.forEach((tag) => {
+  // Generate individual tag pages
+  tagsArray.forEach((tag) => {
     const content = tagTemplate(tag);
     const dirPath = path.join(outTagsDir, toKebabCase(tag));
     const filePath = path.join(dirPath, "index.md");
@@ -480,6 +605,48 @@ const generateTagPages = () => {
     fs.writeFileSync(filePath, content, "utf-8");
     console.log(`Created Tag Page: ${filePath}`);
   });
+
+  // Generate central Tags index page
+  const tagListHtml = tagsArray.map(tag => `
+    <div class="col-12 md:col-4 lg:col-3 p-2">
+      <a href="/tags/${toKebabCase(tag)}/" class="no-underline block p-4 surface-card border-round-2xl border-1 border-100 shadow-1 hover:shadow-3 transition-all text-center">
+        <div class="text-primary font-bold text-lg mb-1">#${tag}</div>
+        <div class="text-500 text-xs uppercase tracking-widest">Explore Topic</div>
+      </a>
+    </div>
+  `).join("");
+
+  const indexContent = `---
+title: Explore Topics | Stack Seekers
+description: Browse all technical topics, tutorials, and insights by category and tags.
+layout: Layout
+---
+
+<section class="p-4 surface-900 text-white border-round-3xl mb-8 overflow-hidden relative">
+  <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary-900 border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
+  <div class="relative z-1 text-center py-6">
+    <div class="flex align-items-center justify-content-center gap-2 text-primary font-bold mb-3 uppercase tracking-wider text-xs">
+      <i class="pi pi-tag"></i>
+      Knowledge Map
+    </div>
+    <h1 class="text-4xl md:text-6xl font-bold mb-4 mt-0 line-height-2">Explore <span class="text-primary-400">Topics</span>.</h1>
+    <p class="text-xl opacity-70 max-w-30rem mx-auto mb-5">Technical deep-dives and strategic breakdowns across the stack.</p>
+  </div>
+</section>
+
+<div class="grid">
+  ${tagListHtml}
+</div>
+
+<div class="mt-8 text-center">
+  <h3 class="text-2xl font-bold mb-4">Want more insights?</h3>
+  <a href="/posts/" class="no-underline">
+    <Button label="Back to Playbook" icon="pi pi-arrow-left" severity="secondary" rounded text />
+  </a>
+</div>
+`;
+  fs.writeFileSync(path.join(outTagsDir, "README.md"), indexContent, "utf-8");
+  console.log(`Created central Tags index: ${path.join(outTagsDir, "README.md")}`);
 };
 
 const collectMarkdownPages = (dirPath, result = []) => {

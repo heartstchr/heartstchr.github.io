@@ -50,7 +50,7 @@ export default hopeTheme(
           return ogp;
         },
       },
-      sitemap: false,
+      sitemap: true,
       blog: true,
       git: {
         contributors: false, // Disable contributors list

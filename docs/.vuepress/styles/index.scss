@@ -107,7 +107,10 @@ fieldset {
 .vp-footer-wrapper {
   background-color: var(--surface-100) !important;
 }
-
+.vp-footer {
+  width: 100%;
+  max-width: 100%;
+}
 .vp-article-title span {
   background-color: #669eff;
   padding: 4px;
@@ -576,6 +579,72 @@ html[data-theme="dark"] .pi-github,
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Project Perspective Tabs Styling */
+.project-perspective-tabs {
+  .p-tabview-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    border: none !important;
+    background: transparent !important;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+
+    li {
+      margin: 0;
+      
+      .p-tabview-nav-link {
+        background: rgba(255, 255, 255, 0.03) !important;
+        border: 1px solid var(--premium-border) !important;
+        border-radius: 50px !important;
+        padding: 0.75rem 1.5rem !important;
+        color: var(--text-color) !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        font-weight: 600;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+
+        &:hover {
+          background: rgba(16, 185, 129, 0.05) !important;
+          border-color: var(--theme-color) !important;
+          transform: translateY(-2px);
+        }
+      }
+
+      &.p-highlight {
+        .p-tabview-nav-link {
+          background: var(--theme-color) !important;
+          color: white !important;
+          border-color: var(--theme-color) !important;
+          box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+          
+          i {
+            color: white !important;
+          }
+        }
+      }
+    }
+  }
+
+  .p-tabview-panels {
+    background: transparent !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+}
+
+/* Mobile optimizations for tabs */
+@media (max-width: 768px) {
+  .project-perspective-tabs .p-tabview-nav {
+    gap: 0.5rem;
+    
+    li .p-tabview-nav-link {
+      padding: 0.5rem 1rem !important;
+      font-size: 0.85rem;
+    }
+  }
 }
 
 /* Roadmap Section Specific Polish */

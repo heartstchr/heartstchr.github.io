@@ -53,6 +53,10 @@ export const freelance = [
         alt: "AI Generated Dashboard Interface",
       }
     ],
+    perspective: {
+      executive: "A game-changer for businesses using Notion as a backend. It eliminates the need for expensive custom development by automatically generating a professional web interface directly from your data. Ideal for internal tools, client portals, and rapid prototyping with zero friction.",
+      technical: "Features a dynamic schema-driven UI engine. It parses Notion database properties in real-time to generate Vue components with appropriate validation and input types. Includes multi-language support through a custom i18n bridge and optimized API caching for smooth performance."
+    },
     details: "./details/ai-dynamic-crud-app.md",
   },
   {
@@ -128,6 +132,10 @@ export const freelance = [
         alt: "LocalXR - Blog Section",
       },
     ],
+    perspective: {
+      executive: "Engineered for high-volume lead generation. It solves the complexity of managing thousands of local service routes while maintaining lightning-fast performance and SEO dominance. Built to scale from a single city to a national platform with minimal operational overhead.",
+      technical: "Built with Next.js 15 and React 19, utilizing Server-Side Rendering (SSR) for maximum SEO efficiency. Implements a hierarchical routing system for thousands of dynamic paths, optimized with incremental static regeneration (ISR) and advanced image processing for Core Web Vitals excellence."
+    },
     details: "./details/localxr.md",
   },
   {
@@ -287,6 +295,10 @@ export const freelance = [
         alt: "Vibe3 Earnings Calculator Interface",
       },
     ],
+    perspective: {
+      executive: "A Web3-ready marketing engine that bridges the gap between premium brands and content creators. It utilizes AI to ensure high-match accuracy, reducing campaign waste and increasing engagement ROI in the influencer space.",
+      technical: "A sophisticated PWA implementation using Next.js and Tailwind CSS v4. Features a complex state management system for real-time analytics and Web3 wallet integration (Solana/TON). Utilizes glass-morphism effects and hardware-accelerated animations for a high-end feel."
+    },
     details: "./details/vibesquade.md",
   },
   {
@@ -367,6 +379,7 @@ export const freelance = [
   },
   {
     name: "AI Voice Generator",
+    details: "./details/ai-narrator.md",
     description:
       "Transform your Google Docs into high-quality audio with this free AI voice generator and text to audio converter. Powered by Gemini TTS, it offers natural-sounding speech generation for YouTubers, teachers, and creators. Experience the best free text to speech AI directly in your documents.",
     software: "Google Docs Add-on",
@@ -439,10 +452,15 @@ export const freelance = [
         alt: "AI Narrator Application Screenshot",
       },
     ],
+    perspective: {
+      executive: "Strategic content automation that turns static documents into professional audio assets. It allows marketing and education teams to scale their content reach across platforms without the cost of professional voice actors.",
+      technical: "Leverages Google Apps Script for deep integration with Google Workspace. It interfaces with the Gemini TTS API, handling complex text truncation and chunking to ensure stability with large documents. Includes a custom-built sidebar UI with real-time audio playback control."
+    },
     details: "./details/ai-narrator.md",
   },
   {
     name: "Service Request System",
+    details: "./details/service-request.md",
     description:
       "Build a complete customer service request management system using Notion database and Netlify functions. Features automated email notifications, file uploads, real-time sync, and professional web forms - all completely free with no coding required.",
     software: "Web",
@@ -517,10 +535,15 @@ export const freelance = [
         alt: "Email notification in Notion",
       },
     ],
+    perspective: {
+      executive: "Automates customer service workflows by bridging professional web forms with Notion. It provides a zero-cost alternative to expensive ticketing systems while maintaining professional notification standards and data integrity.",
+      technical: "Utilizes Netlify Functions (Serverless) as an intermediary to handle secure Notion API calls. Implements a sophisticated email templating engine and automated file processing pipeline for attachments, ensuring a seamless data flow from web to internal database."
+    },
     details: "./details/service-request.md",
   },
   {
     name: "Appliance Repair Service Platform",
+    details: "./details/appliance-repair.md",
     description:
       "A modern, content-driven platform for connecting users with local appliance repair professionals and providing troubleshooting guides for major home appliances",
     software: "Web",
@@ -630,6 +653,7 @@ export const freelance = [
   },
   {
     name: "SR-22 Insurance Now",
+    details: "./details/sr22.md",
     description:
       "Need a Cheap SR-22 Insurance? Compare & save on SR22 Insurance from top providers.",
     software: "Web",
@@ -729,10 +753,15 @@ export const freelance = [
         alt: "SR-22 Insurance Now - JSON reader functionality",
       },
     ],
+    perspective: {
+      executive: "A low-friction insurance lead engine designed for maximum conversion. It simplifies complex insurance compliance (SR-22) into a user-friendly experience, driving high-quality calls and form submissions for insurance providers.",
+      technical: "A high-performance landing page engine driven by JSON configurations. Features advanced Google Places API integration for address autocomplete and location-based dynamic content injection, optimized for sub-second load times on mobile devices."
+    },
     details: "./details/sr22.md",
   },
   {
     name: "Momentum Incident Management",
+    details: "./details/momentum.md",
     description:
       "A structured process for identifying, analyzing, and resolving incidents that disrupt an organization's operations",
     software: "Web",
@@ -1000,6 +1029,7 @@ export const freelance = [
   },
   {
     name: "Tech Create",
+    details: "./details/tech-create.md",
     description:
       "A landing page for digital solutions through innovative software development.",
     software: "Web",
@@ -1105,6 +1135,7 @@ export const freelance = [
   },
   {
     name: "Qatar Airways widget",
+    details: "./details/qa.md",
     description:
       "Book flights to destinations around the world with Qatar Airways and fly on board an award-winning airline. Enjoy special fares, collect Avios, and more.",
     software: "Web",
@@ -1562,7 +1593,7 @@ export const freelance = [
       "twilio",
       "DigitalOcean",
     ],
-    otherSkills: [""],
+    otherSkills: [],
     software: "Web",
     org: "Mobistreak",
     year: "2015",
@@ -1611,7 +1642,7 @@ export const freelance = [
   },
   {
     name: "Command Line Dictionary",
-    description: "CLI for Dictionary",
+    description: "A fast, lightweight Command Line Interface (CLI) for looking up word definitions, synonyms, and examples. Built for developers who live in the terminal.",
     software: "Terminal",
     org: "Freelance",
     year: "2020",
@@ -1649,7 +1680,7 @@ export const freelance = [
   },
   {
     name: "Stock Market",
-    description: "Consuming socket data and plotting a real-time D3 graph",
+    description: "A high-performance real-time data visualization platform that consumes socket-driven financial data and renders live, interactive D3.js charts with sub-second latency.",
     stack: [
       "Socket.io/black/white",
       "d3",
@@ -1683,192 +1714,7 @@ export const freelance = [
   },
 ];
 
-const baseProjects = [
-  // {
-  //   name: "AI-Powered Influencer Platform - Vibe3",
-  //   schema: "https://schema.org/WebApplication",
-  //   images: [
-  //     {
-  //       itemImageSrc: "/img/projects/vibesquade/vibesquade-cover.webp",
-  //       alt: "Vibe3 Figma to Web Design - Desktop and Mobile Interface",
-  //     },
-  //   ],
-  // },
-  {
-    name: "Dynamic CRUD App Free",
-    schema: "https://schema.org/WebApplication",
-    images: [
-      {
-        itemImageSrc: "/img/projects/notion-crud-app/Notion-crud-app-free.webp",
-        alt: "Dynamic Form Generation from Notion Database",
-      }
-    ],
-  },
-  {
-    name: "AI voice generator",
-    schema: "https://schema.org/WebApplication",
-    images: [
-      {
-        itemImageSrc: "/img/projects/ai-narrator/Google-docs-text-to-speech-ai-voice-ai-audio.webp",
-        alt: "AI Narrator Google Docs Add-on Interface",
-      },
-      {
-        itemImageSrc: "/img/projects/ai-narrator/app-screenshot.webp",
-        alt: "AI Narrator Application Screenshot",
-      }
-    ],
-  },
-  {
-    name: "Service Request System",
-    schema: "https://schema.org/WebApplication",
-    images: [
-      {
-        itemImageSrc: "/img/home/projects/notion_service_request.webp",
-        alt: "Service Request System",
-      },
-    ],
-  },
-  // {
-  //   name: "Marketplace Booking Platform",
-  //   description:
-  //     "Say goodbye to the chaos of location scouting host, book, and create in our spaces effortlessly.",
-  //   software: "Web",
-  //   org: "Confidential Client",
-  //   year: "2024",
-  //   domain: "Leisure, travel, and tourism",
-  //   schema: "https://schema.org/DeveloperApplication",
-  //   link: "https://findingthespots.com/",
-  //   contact:
-  //     "https://wa.me/917026217029?text=Hi%20there%2C%20I'm%20interested%20in%20a%20custom%20code%20solution%20for%20",
-
-  //   otherSkills: ["Pinia", "API integration"],
-  //   images: [
-  //     {
-  //       itemImageSrc: "/img/home/projects/fts.webp",
-  //       alt: "Cover screen for application page",
-  //     },
-  //   ],
-  //   features: [
-  //     { text: "Secure user registration, login, and logout functionality." },
-  //     {
-  //       text: "Role-based access for general users, property owners, and admins.",
-  //     },
-  //     { text: "Search for properties/spots by type, country, city, and time." },
-  //     {
-  //       text: "Advanced filters to refine search results based on user preferences.",
-  //     },
-  //     {
-  //       text: "Detailed property pages with full image galleries and spot information.",
-  //     },
-  //     {
-  //       text: "Booking request system with date, time, and duration selection.",
-  //     },
-  //     {
-  //       text: "Free cancellation within 24 hours with redirection to spot listings.",
-  //     },
-  //     {
-  //       text: "Seamless and secure payment processing via Stripe for confirmed bookings.",
-  //     },
-  //     {
-  //       text: "Email notifications for booking and payment confirmations (users & owners).",
-  //     },
-  //     { text: "Property owners can list new spots with images and details." },
-  //     { text: "Admin verification process for new spot submissions." },
-  //     {
-  //       text: "Responsive, mobile-friendly interface for seamless access across devices.",
-  //     },
-  //     {
-  //       text: "Integrated APIs for authentication, spot listing, booking, search, and payments.",
-  //     },
-  //     {
-  //       text: "Scalable backend architecture to support future growth and features.",
-  //     },
-  //   ],
-  //   details: "./details/fts.md",
-  // },
-  {
-    name: "IBRebuild for ABN AMRO BANK N.V.",
-    schema: "https://schema.org/DeveloperApplication",
-    images: [
-      {
-        itemImageSrc: "/img/home/projects/ABN_Amro.webp",
-        alt: "Cover screen for application page",
-      },
-    ],
-  },
-  {
-    name: "Contact Form Plugin",
-    schema: "https://schema.org/WebApplication",
-    images: [
-      {
-        itemImageSrc: "/img/projects/contact-form-plugin/contact-form-widget-cover.webp",
-        alt: "Contact Form Plugin - Embeddable Contact Form",
-      },
-    ],
-  },
-  {
-    name: "Emerald Design System",
-    schema: "https://schema.org/SoftwareApplication",
-    images: [
-      {
-        itemImageSrc: "/img/home/projects/ABN_Amro_design_system.webp",
-        alt: "Cover screen for Emerald Design System project page",
-      },
-    ],
-  },
-  {
-    name: "Appliance Repair Service Platform",
-    schema: "https://schema.org/BusinessApplication",
-    images: [
-      {
-        itemImageSrc: "/img/home/projects/appliance_repair_cover.webp",
-        alt: "Appliance Repair Service Platform Cover page image",
-      },
-    ],
-  },
-  {
-    name: "Demat Account Open",
-    schema: "https://schema.org/BusinessApplication",
-    images: [
-      {
-        itemImageSrc: "/img/home/projects/open-demat-account.webp",
-        alt: "Open a Demat Account Online: Demat Account Opening at Upstox",
-      },
-    ],
-  },
-  {
-    name: "SR-22 Insurance Now",
-    schema: "https://schema.org/BusinessApplication",
-    images: [
-      {
-        itemImageSrc: "/img/home/projects/sr22.webp",
-        alt: "SR-22 Insurance Now",
-      },
-    ],
-  },
-  {
-    name: "Call Matrix",
-    schema: "https://schema.org/BusinessApplication",
-    images: [
-      {
-        itemImageSrc: "/img/home/projects/callmatrix.webp",
-        alt: "CallMatrix - Call Intelligence, Marketing, and Analytics Platform",
-      },
-    ],
-  },
-  {
-    name: "Momentum Incident Management",
-    schema: "https://schema.org/BusinessApplication",
-    images: [
-      {
-        itemImageSrc: "/img/home/projects/momentum_incident_management.webp",
-        alt: "Incident Management",
-      },
-    ],
-  },
-];
-
-export const projects = baseProjects.map((project) => ({
+export const projects = freelance.map((project) => ({
   ...project,
-  link: `web-development-projects/${toKebabCase(project.name)}/`,
+  link: `/web-development-projects/${toKebabCase(project.name)}/`,
 }));

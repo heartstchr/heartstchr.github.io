@@ -17,7 +17,7 @@ copyright: false
         </span>
       </div>
       <h1 class="m-0 p-0 line-height-2 text-4xl md:text-7xl font-bold">
-        Fractional CTO, <span class="text-gradient">AI automation</span>, and <span class="text-gradient-2">programmatic SEO systems</span> for teams that need senior execution.
+        Fractional CTO, <span class="text-gradient">AI automation</span>, and <span class="text-gradient-2">programmatic SEO systems</span> for your brand that need execution.
       </h1>
       <div class="text-xl md:text-2xl mt-4 line-height-3 text-700 hidden md:block">
         From migrating global banking infrastructure for <strong>ABN AMRO</strong> to reducing lead turnaround from <strong>4 days to 2 hours</strong> for <strong>Upstox</strong>. I help founders and product teams turn technical bottlenecks into scalable revenue systems.
@@ -109,10 +109,6 @@ copyright: false
     <div class="col-12 md:col-4 p-3" v-for="win in highImpactWins" :key="win.title">
       <div class="surface-0 border-round-2xl shadow-3 overflow-hidden border-1 border-100 h-full flex flex-column">
         <div class="p-4 bg-gray-50 border-bottom-1 border-100">
-          <div class="flex align-items-center gap-2 text-500 mb-2">
-            <i class="pi pi-history"></i>
-            <span class="text-xs font-bold uppercase">Legacy Bottleneck</span>
-          </div>
           <div class="text-sm text-600 font-italic">
             {{ win.title === 'Upstox' ? '4-day manual lead processing' : (win.title === 'ABN Amro' ? 'Fragmented legacy frontend' : 'Slow manual booking engine') }}
           </div>
