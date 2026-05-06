@@ -124,3 +124,5 @@ The `ProjectCard` component displays project details in a card layout, styled wi
 
 <BlogNavigation />
 
+
+<ConsultingBridge />

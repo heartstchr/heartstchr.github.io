@@ -56,3 +56,5 @@ When you partner with me, you aren't just getting a developer for a "project." Y
 <RelatedPosts />
 
 <BlogNavigation />
+
+<ConsultingBridge />

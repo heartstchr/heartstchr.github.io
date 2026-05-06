@@ -115,3 +115,4 @@ That's it! You now have a Vue 3 application scaffolded with Vue CLI, ready for c
 <RelatedPosts />
 
 <BlogNavigation />
+<ConsultingBridge />
