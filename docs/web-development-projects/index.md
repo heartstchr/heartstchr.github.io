@@ -22,7 +22,7 @@ copyright: false
       Engineering that moves <span class="text-gradient">business metrics</span>, not just pixels.
     </h1>
     <p class="text-xl text-300 line-height-3 m-0 mb-6" style="max-width: 700px;">
-      These are not side projects. Every case study below represents a client's critical system — rebuilt, migration-ed, or accelerated from scratch using banking-grade engineering standards.
+      These are not side projects. Every case study below represents a client's critical system — rebuilt, migrated, or accelerated from scratch using banking-grade engineering standards.
     </p>
     <!-- Impact Bar -->
     <div class="grid gap-3">
@@ -50,70 +50,70 @@ copyright: false
     </div>
   </div>
 </section>
-<!-- Section Title -->
-<div class="flex align-items-center justify-content-between mb-6 px-1">
-  <div>
-    <h2 class="text-3xl font-bold m-0">Pillar Case Studies</h2>
-    <p class="text-600 m-0 mt-1">Four in-depth breakdowns of enterprise transformations.</p>
-  </div>
-  <a href="https://cal.com/stackseekers" target="_blank" class="no-underline hidden md:block">
-    <Button label="Book a Strategy Call" icon="pi pi-calendar" severity="primary" rounded raised />
+
+<!-- Category Anchor Pills -->
+<div class="flex flex-wrap gap-2 mb-8 px-1">
+  <a v-for="cat in categories" :key="cat.id" :href="'#' + cat.id" class="no-underline">
+    <span class="category-pill" :style="{ borderColor: cat.color, color: cat.color }">
+      <i :class="'pi ' + cat.icon + ' mr-1'"></i>{{ cat.label }}
+      <span class="ml-1 opacity-60 text-xs">({{ (groupedProjects[cat.label] || []).length }})</span>
+    </span>
   </a>
 </div>
 
-<!-- Project Cards + Sidebar -->
-<div class="flex md:flex-row flex-column gap-4">
-  <div class="p-d-flex p-flex-column" style="flex: 3;">
-    <div class="grid my-2 gap-8">
-      <ProjectCard
-        v-for="(project, index) in pillarProjects"
-        :key="index"
-        :project="project"
-        :showHeader=true
-      />
+<!-- Grouped Project Sections -->
+<div v-for="cat in categories" :key="cat.id" :id="cat.id" class="category-section mb-10">
+  <!-- Section Header -->
+  <div class="flex align-items-center gap-3 mb-5 pb-3" :style="{ borderBottom: '2px solid ' + cat.color + '33' }">
+    <div class="flex align-items-center justify-content-center border-round-xl" :style="{ background: cat.color + '18', color: cat.color, width: '2.75rem', height: '2.75rem', minWidth: '2.75rem' }">
+      <i :class="'pi ' + cat.icon + ' text-xl'"></i>
     </div>
-  </div>
-  <div class="flex-1 align-self-start" style="max-width: 100%; position: sticky; top: 6rem;">
-    <!-- Sidebar CTA Card -->
-    <div class="surface-900 text-white border-round-2xl p-2 mb-4 shadow-4">
-      <div class="text-lg font-bold mb-2">Need something custom?</div>
-      <p class="text-300 text-sm line-height-3 mb-3">
-        Don't see your exact use case? I scope and build bespoke enterprise systems from scratch.
-      </p>
-      <a href="https://cal.com/stackseekers" target="_blank" class="no-underline block">
-        <Button label="Book Free Discovery Call" icon="pi pi-calendar" severity="primary" raised rounded class="w-full" />
+    <div>
+      <h2 class="m-0 p-0 text-2xl font-bold" :style="{ color: cat.color }">{{ cat.label }}</h2>
+      <p class="m-0 text-sm text-500 mt-1">{{ cat.desc }}</p>
+    </div>
+    <div class="flex flex-column md:flex-row gap-3 mt-5 ml-auto hidden md:block">
+      <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+        <Button label="Book Free Discovery Call" icon="pi pi-calendar-clock" severity="primary" size="large" rounded raised class="w-full md:w-auto white-space-nowrap" />
       </a>
-      <div class="text-xs text-400 mt-2 text-center">No commitment. 25-minute technical audit.</div>
     </div>
-    <YouTubeAside />
   </div>
-</div>
 
-<!-- All Other Projects Grid -->
-<section class="mt-8 mb-8">
-  <div class="text-center mb-6">
-    <h2 class="text-3xl font-bold mb-2">More Enterprise Deliveries</h2>
-    <p class="text-600">A collection of specialized technical solutions and niche platforms.</p>
-  </div>
+  <!-- Project Cards Grid -->
   <div class="grid">
-    <div v-for="project in otherProjects" :key="project.name" class="col-12 md:col-6 lg:col-4 p-3">
+    <div v-for="project in (groupedProjects[cat.label] || [])" :key="project.name" class="col-12 md:col-6 lg:col-4 p-3">
       <a :href="'/web-development-projects/' + toKebabCase(project.name) + '/'" class="no-underline block h-full">
-        <div class="surface-0 shadow-2 border-round-2xl p-4 h-full border-1 border-100 hover:shadow-6 transition-all flex flex-column">
-          <div class="flex align-items-center justify-content-between mb-3">
-            <div class="text-primary font-bold text-xs uppercase tracking-widest">{{project.domain}}</div>
-            <div class="text-500 text-xs font-bold">{{project.year}}</div>
+        <div class="project-card surface-0 shadow-2 border-round-2xl overflow-hidden h-full border-1 border-100 flex flex-column" :style="{ '--cat-color': cat.color }">
+          <!-- Cover Image -->
+          <div class="project-card-img relative overflow-hidden" style="height: 11rem;">
+            <img
+              v-if="project.images && project.images.length"
+              :src="project.images[0].itemImageSrc"
+              :alt="project.images[0].alt"
+              class="w-full h-full"
+              style="object-fit: cover; display: block;"
+            />
+            <div v-else class="w-full h-full flex align-items-center justify-content-center" :style="{ background: 'linear-gradient(135deg, ' + cat.color + '18, ' + cat.color + '40)' }">
+              <i class="pi pi-image text-4xl opacity-30"></i>
+            </div>
+            <!-- Category badge overlay -->
+            <div class="absolute top-0 left-0 m-3">
+              <span class="px-2 py-1 border-round-lg text-xs font-bold" :style="{ background: cat.color, color: '#fff' }">{{ project.domain }}</span>
+            </div>
           </div>
-          <h3 class="text-xl font-bold mt-0 mb-2 text-900">{{project.name}}</h3>
-          <p class="text-sm text-600 line-height-3 mb-4 flex-grow-1">{{project.description}}</p>
-          <div class="pt-3 border-top-1 border-50 flex align-items-center justify-content-between">
-            <span class="text-xs font-bold text-500 uppercase">{{project.software}}</span>
-            <i class="pi pi-arrow-right text-primary"></i>
+          <!-- Card Body -->
+          <div class="p-4 flex flex-column flex-grow-1">
+            <h3 class="text-xl font-bold mt-0 mb-2 text-900">{{ project.name }}</h3>
+            <p class="text-sm text-600 line-height-3 mb-0 flex-grow-1">{{ project.description }}</p>
+            <div class="pt-3 mt-3 border-top-1 border-50 flex align-items-center justify-content-end">
+              <i class="pi pi-arrow-right" :style="{ color: cat.color }"></i>
+            </div>
           </div>
         </div>
       </a>
     </div>
   </div>
-</section>
+</div>
 
 <!-- Bottom Strategy Section -->
 <section class="mt-8 mb-8 px-4 py-8 surface-900 text-white border-round-3xl shadow-4 overflow-hidden relative">
@@ -128,7 +128,6 @@ copyright: false
   </div>
 
   <div class="grid relative z-1 max-w-1000 mx-auto mb-6">
-    <!-- Precision Architectural Path -->
     <div class="hidden lg:block absolute w-full" style="z-index: 0; top: 3.15rem; width: 75%; left: 12.5%; height: 2px; background-image: linear-gradient(to right, var(--primary-800) 50%, transparent 50%); background-size: 16px 100%; opacity: 0.4;"></div>
     <div class="col-12 lg:col-3 p-4" v-for="(step, idx) in roadmapSteps" :key="step.title">
       <div class="flex flex-column h-full relative" style="z-index: 2;">
@@ -160,19 +159,27 @@ copyright: false
   import { toKebabCase } from "@utils/index.js";
   import { computed } from 'vue';
 
-  const pillarProjects = computed(() => {
-    return freelance.slice(0, 4);
-  });
+  const categories = [
+    { id: 'enterprise',    label: 'Enterprise',    icon: 'pi-building',      color: '#6366f1', desc: 'Large-scale platforms, banking systems, and mission-critical applications.' },
+    { id: 'ai',            label: 'AI',            icon: 'pi-microchip-ai',  color: '#a855f7', desc: 'AI-powered tools, intelligent automation, and machine learning integrations.' },
+    { id: 'saas',          label: 'SaaS',          icon: 'pi-server',        color: '#0ea5e9', desc: 'Multi-tenant platforms, marketplaces, and subscription-based software.' },
+    { id: 'automation',    label: 'Automation',    icon: 'pi-cog',           color: '#f59e0b', desc: 'Workflow automation, no-code tooling, and process efficiency systems.' },
+    { id: 'startup-mvps',  label: 'Startup MVPs',  icon: 'pi-bolt',          color: '#10b981', desc: 'Fast-to-market products, niche platforms, and proof-of-concept launches.' },
+  ];
 
-  const otherProjects = computed(() => {
-    return freelance.slice(4);
+  const groupedProjects = computed(() => {
+    const groups: Record<string, typeof freelance> = {};
+    for (const cat of categories) {
+      groups[cat.label] = freelance.filter((p: any) => p.category === cat.label);
+    }
+    return groups;
   });
 
   const roadmapSteps = [
-    { title: "Discovery Call", desc: "Technical diagnosis and scaling strategy." },
-    { title: "Architecture Audit", desc: "Deep dive into infra and technical debt." },
-    { title: "Fixed-Scope Roadmap", desc: "Detailed milestone-based blueprint." },
-    { title: "Senior Execution", desc: "High-integrity build & velocity." }
+    { title: "Discovery Call",        desc: "Technical diagnosis and scaling strategy." },
+    { title: "Architecture Audit",    desc: "Deep dive into infra and technical debt." },
+    { title: "Fixed-Scope Roadmap",   desc: "Detailed milestone-based blueprint." },
+    { title: "Senior Execution",      desc: "High-integrity build & velocity." }
   ];
 </script>
 
@@ -185,6 +192,38 @@ copyright: false
   transition: all 0.3s ease;
 }
 .impact-card:hover { transform: translateY(-5px); border-color: var(--primary-color); }
+
+.category-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.85rem;
+  border-radius: 2rem;
+  border: 1.5px solid;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: transparent;
+  text-decoration: none;
+}
+.category-pill:hover {
+  filter: brightness(1.15);
+  transform: translateY(-1px);
+}
+
+.project-card {
+  transition: all 0.25s ease;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  border-color: var(--cat-color) !important;
+}
+
+.category-section {
+  scroll-margin-top: 6rem;
+}
+
 .glass-sticky-cta { 
   background: rgba(15, 23, 42, 0.9); 
   backdrop-filter: blur(12px); 

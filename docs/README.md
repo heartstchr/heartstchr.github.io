@@ -17,7 +17,7 @@ copyright: false
         </span>
       </div>
       <h1 class="m-0 p-0 line-height-2 text-4xl md:text-7xl font-bold">
-        Fractional CTO, <span class="text-gradient">AI automation</span>, and <span class="text-gradient-2">programmatic SEO systems</span> for your brand that need execution.
+        Fractional CTO, <span class="text-gradient">AI automation</span>, and <span class="text-gradient-2">programmatic SEO systems</span> for brands that need execution.
       </h1>
       <div class="text-xl md:text-2xl mt-4 line-height-3 text-700 hidden md:block">
         From migrating global banking infrastructure for <strong>ABN AMRO</strong> to reducing lead turnaround from <strong>4 days to 2 hours</strong> for <strong>Upstox</strong>. I help founders and product teams turn technical bottlenecks into scalable revenue systems.
@@ -84,17 +84,17 @@ copyright: false
 </section>
 
 <!-- Trusted By Marquee -->
-<div class="mb-8 mt-4">
-  <div class="text-center font-bold text-500 mb-3 text-sm uppercase letter-spacing-wide opacity-60">Verified Technical Partnerships</div>
-  <div class="marquee">
+<div class="mb-12 mt-6">
+  <div class="text-center font-bold text-500 mb-4 text-xs md:text-sm uppercase letter-spacing-wide opacity-60">Verified Technical Partnerships</div>
+  <div class="marquee overflow-hidden">
     <div class="marquee-track">
       <div class="marquee-item flex align-items-center gap-2" v-for="org in orgs" :key="`org-1-${org.title}`">
-            <img :src="org.icon" :alt="org.title" width="32px" height="32px" class="border-round-md grayscale-filter" loading="lazy" fetchpriority="low"/>
-            <span class="text-xl font-bold text-500">{{org.title}}</span>
+            <img :src="org.icon" :alt="org.title" width="32" height="32" class="border-round-md grayscale-filter" loading="lazy" />
+            <span class="text-lg md:text-xl font-bold text-500">{{org.title}}</span>
       </div>
       <div class="marquee-item flex align-items-center gap-2" v-for="org in orgs" :key="`org-2-${org.title}`" aria-hidden="true">
-            <img :src="org.icon" :alt="org.title" width="32px" height="32px" class="border-round-md grayscale-filter" loading="lazy" fetchpriority="low"/>
-            <span class="text-xl font-bold text-500">{{org.title}}</span>
+            <img :src="org.icon" :alt="org.title" width="32" height="32" class="border-round-md grayscale-filter" loading="lazy" />
+            <span class="text-lg md:text-xl font-bold text-500">{{org.title}}</span>
       </div>
     </div>
   </div>
@@ -178,9 +178,9 @@ copyright: false
   <!-- Pillar 1 -->
   <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1">
     <div class="col-12 lg:col-5 relative">
-      <div class="absolute top-0 right-0 p-3">
-          <i class="pi pi-sparkles text-green-500" style="font-size: 2rem; opacity: 0.1"></i>
-          <span class="text-md font-bold uppercase text-green-500 letter-spacing-wide mb-2" style="font-size: 2rem; opacity: 0.1">Pillar 1</span>
+      <div class="absolute top-0 right-0 p-3 opacity-10 md:opacity-20">
+          <i class="pi pi-sparkles text-green-500" style="font-size: 2rem;"></i>
+          <span class="text-md font-bold uppercase text-green-500 letter-spacing-wide mb-2 block" style="font-size: 2rem;">Pillar 1</span>
       </div>
       <h3 class="text-sm font-bold uppercase text-green-500 letter-spacing-wide mb-2">Intelligence Automation</h3>
       <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">AI & Machine Learning Apps</h2>
@@ -212,17 +212,17 @@ copyright: false
   <!-- Pillar 2 -->
   <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1 flex-column lg:flex-row-reverse">
     <div class="col-12 lg:col-5 relative">
-      <div class="absolute top-0 right-0 p-3">
-          <i class="pi pi-code text-purple-500" style="font-size: 2rem; opacity: 0.1"></i>
-          <span class="text-md font-bold uppercase text-purple-500 letter-spacing-wide mb-2" style="font-size: 2rem; opacity: 0.1">Pillar 2</span>
+      <div class="absolute top-0 right-0 p-3 opacity-10 md:opacity-20">
+          <i class="pi pi-code text-purple-500" style="font-size: 2rem;"></i>
+          <span class="text-md font-bold uppercase text-purple-500 letter-spacing-wide mb-2 block" style="font-size: 2rem;">Pillar 2</span>
       </div>
       <h3 class="text-sm font-bold uppercase text-purple-500 letter-spacing-wide mb-2">Scalable Infrastructure</h3>
       <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Custom SaaS & Enterprise Apps</h2>
-      <p class="text-lg line-height-3 text-700 mb-4">Sophisticated web applications designed for scale. From highly complex banking portal migrations to high-concurrency dashboards, I architect React/Node systems that will never slow down.</p>
+      <p class="text-lg line-height-3 text-700 mb-4">Sophisticated web applications designed for scale. From highly complex banking portal migrations to high-concurrency dashboards, I architect fast, resilient systems that grow with your business and never slow down.</p>
       <ul class="list-none p-0 m-0 mb-5 text-700">
-        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Complex State Management</li>
-        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Legacy Cloud Migrations</li>
-        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> High-Concurrency Microservices</li>
+        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Predictable, crash-resistant interfaces</li>
+        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Zero-downtime legacy modernisation</li>
+        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Systems built for 10× traffic spikes</li>
       </ul>
     </div>
     <div class="col-12 lg:col-7">
@@ -246,17 +246,17 @@ copyright: false
   <!-- Pillar 3 -->
   <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1">
     <div class="col-12 lg:col-5 relative">
-      <div class="absolute top-0 right-0 p-3">
-          <i class="pi pi-chart-line text-orange-500" style="font-size: 2rem; opacity: 0.1"></i>
-          <span class="text-md font-bold uppercase text-orange-500 letter-spacing-wide mb-2" style="font-size: 2rem; opacity: 0.1">Pillar 3</span>
+      <div class="absolute top-0 right-0 p-3 opacity-10 md:opacity-20">
+          <i class="pi pi-chart-line text-orange-500" style="font-size: 2rem;"></i>
+          <span class="text-md font-bold uppercase text-orange-500 letter-spacing-wide mb-2 block" style="font-size: 2rem;">Pillar 3</span>
       </div>
       <h3 class="text-sm font-bold uppercase text-orange-500 letter-spacing-wide mb-2">Database-Driven Growth</h3>
       <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Programmatic SEO & Lead Gen</h2>
       <p class="text-lg line-height-3 text-700 mb-4">I build massive, database-driven directory platforms. Automatically generate thousands of highly optimized location and service pages that dominate organic search and convert traffic via dynamic lead capture.</p>
       <ul class="list-none p-0 m-0 mb-5 text-700">
-        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Next.js Server-Side Rendering</li>
-        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Google Places Data Integration</li>
-        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Dynamic Routing (State > City > ZIP)</li>
+        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Pages indexed & ranked from day one</li>
+        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Location-aware lead capture at scale</li>
+        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Thousands of city pages, zero manual work</li>
       </ul>
     </div>
     <div class="col-12 lg:col-7">
@@ -280,9 +280,9 @@ copyright: false
   <!-- Pillar 4 -->
   <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1 flex-column lg:flex-row-reverse">
     <div class="col-12 lg:col-5 relative">
-      <div class="absolute top-0 right-0 p-3">
-          <i class="pi pi-sync text-blue-500" style="font-size: 2rem; opacity: 0.1"></i>
-          <span class="text-md font-bold uppercase text-blue-500 letter-spacing-wide mb-2" style="font-size: 2rem; opacity: 0.1">Pillar 4</span>
+      <div class="absolute top-0 right-0 p-3 opacity-10 md:opacity-20">
+          <i class="pi pi-sync text-blue-500" style="font-size: 2rem;"></i>
+          <span class="text-md font-bold uppercase text-blue-500 letter-spacing-wide mb-2 block" style="font-size: 2rem;">Pillar 4</span>
       </div>
       <h3 class="text-sm font-bold uppercase text-blue-500 letter-spacing-wide mb-2">Operational Efficiency</h3>
       <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Internal Tooling & Portals</h2>
@@ -357,46 +357,46 @@ copyright: false
   <p class="text-lg md:text-xl text-600 mb-6">Choose a service package tailored to your exact business needs.</p>
   
   <div class="grid justify-content-center">
-    <!-- Tier 1: Machine Learning (POPULAR) -->
+    <!-- Tier 1: Intelligence Integration -->
     <div class="col-12 lg:col-3 md:col-6 p-2">
       <div class="surface-0 border-round-2xl shadow-6 p-5 h-full flex flex-column text-left relative overflow-hidden border-2 border-primary">
         <div class="absolute top-0 right-0 bg-primary text-900 text-xs font-bold px-2 py-1 border-round-bottom-left-md">POPULAR</div>
-        <div class="text-xl font-bold text-primary mb-2">Machine Learning</div>
-        <div class="text-2xl font-bold mb-4">AI Feature Integration</div>
-        <p class="text-sm line-height-3 mb-5 flex-grow-1">Embed LLMs and matching algorithms natively into your application to save manual hours.</p>
+        <div class="text-xl font-bold text-primary mb-2">Intelligence Integration</div>
+        <div class="text-2xl font-bold mb-4">AI Feature Engineering</div>
+        <p class="text-sm line-height-3 mb-5 flex-grow-1">Embed custom LLMs and automated decision-making natively into your application to eliminate manual bottlenecks.</p>
         <a href="https://cal.com/stackseekers" class="w-full line-height-1">
           <Button label="Discuss AI Strategy" class="w-full" size="small"/>
         </a>
       </div>
     </div>
-    <!-- Tier 2: Enterprise Software -->
+    <!-- Tier 2: Product Architecture -->
     <div class="col-12 lg:col-3 md:col-6 p-2">
       <div class="surface-0 border-round-2xl shadow-2 p-5 h-full flex flex-column text-left hover:shadow-4 transition-all border-1 border-200">
-        <div class="text-xl font-bold text-600 mb-2">Enterprise Software</div>
+        <div class="text-xl font-bold text-600 mb-2">Product Architecture</div>
         <div class="text-2xl font-bold mb-4">SaaS MVP & Platform Build</div>
-        <p class="text-sm line-height-3 mb-5 flex-grow-1">End-to-end development of robust business platforms starting from ideation to launch.</p>
+        <p class="text-sm line-height-3 mb-5 flex-grow-1">End-to-end development of resilient business platforms, built to scale from launch to high-concurrency traffic.</p>
         <a href="https://cal.com/stackseekers" class="w-full line-height-1">
           <Button label="Start MVP Scope" class="w-full p-button-outlined" size="small"/>
         </a>
       </div>
     </div>
-    <!-- Tier 3: Scalable SEO -->
+    <!-- Tier 3: Growth Engineering -->
     <div class="col-12 lg:col-3 md:col-6 p-2">
       <div class="surface-0 border-round-2xl shadow-2 p-5 h-full flex flex-column text-left hover:shadow-4 transition-all border-1 border-200">
-        <div class="text-xl font-bold text-600 mb-2">Scalable SEO</div>
-        <div class="text-2xl font-bold mb-4">Programmatic Growth Engine</div>
-        <p class="text-sm line-height-3 mb-5 flex-grow-1">A highly optimized directory framework to dominate local SEO and capture massive traffic.</p>
+        <div class="text-xl font-bold text-600 mb-2">Growth Engineering</div>
+        <div class="text-2xl font-bold mb-4">Programmatic SEO Engine</div>
+        <p class="text-sm line-height-3 mb-5 flex-grow-1">A database-driven acquisition framework to dominate local SEO and capture massive inbound traffic automatically.</p>
         <a href="https://cal.com/stackseekers" class="w-full line-height-1">
           <Button label="Get a Custom Quote" class="w-full p-button-outlined" size="small" />
         </a>
       </div>
     </div>
-    <!-- Tier 4: Internal Tools -->
+    <!-- Tier 4: Operational Automation -->
     <div class="col-12 lg:col-3 md:col-6 p-2">
       <div class="surface-0 border-round-2xl shadow-2 p-5 h-full flex flex-column text-left hover:shadow-4 transition-all border-1 border-200">
-        <div class="text-xl font-bold text-600 mb-2">Internal Tools</div>
-        <div class="text-2xl font-bold mb-4">No-Code / Low-Code Custom Portal</div>
-        <p class="text-sm line-height-3 mb-5 flex-grow-1">Perfect for transforming existing Notion or Airtable systems into user-facing web apps.</p>
+        <div class="text-xl font-bold text-600 mb-2">Operational Automation</div>
+        <div class="text-2xl font-bold mb-4">Internal Portals & Workflows</div>
+        <p class="text-sm line-height-3 mb-5 flex-grow-1">Transform fragmented internal data (Notion, Sheets) into professional, high-integrity business tools.</p>
         <a href="https://cal.com/stackseekers" class="w-full line-height-1">
           <Button label="Book a Scope Call" class="w-full p-button-outlined" size="small"/>
         </a>
@@ -458,7 +458,7 @@ copyright: false
     <div class="surface-0 p-4 border-round-xl shadow-1">
       <h3 class="m-0 p-0 font-bold text-xl mb-3">Q. Do you handle both Frontend and Backend on custom SaaS builds?</h3>
       <p class="m-0 text-700 line-height-3">
-        Yes. As a Full-Stack engineering partner, I design architecture spanning the entire stack—from React/Vue UI interfaces to Node.js Microservices, and secure database management in AWS/Azure/MongoDB.
+        Yes. As a full-stack engineering partner, I design the complete system — from fast, interactive user interfaces to high-performance server logic and secure, scalable cloud infrastructure. One partner, full ownership.
       </p>
     </div>
     <div class="surface-0 p-4 border-round-xl shadow-1 border-left-3 border-primary">
