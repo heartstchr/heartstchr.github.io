@@ -74,7 +74,7 @@ copyright: false
     </div>
     <div class="flex flex-column md:flex-row gap-3 mt-5 ml-auto hidden md:block">
       <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
-        <Button label="Book Free Discovery Call" icon="pi pi-calendar-clock" severity="primary" size="large" rounded raised class="w-full md:w-auto white-space-nowrap" />
+        <Button label="Book Free Discovery Call" icon="pi pi-calendar-clock" severity="primary" size="small" rounded raised class="w-full md:w-auto white-space-nowrap" />
       </a>
     </div>
   </div>
