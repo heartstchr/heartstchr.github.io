@@ -31,7 +31,7 @@
     </Dialog>
 
     <!-- Floating WhatsApp Button -->
-    <a v-if="whatsappNumber" :href="whatsappLink" target="_blank" rel="noopener noreferrer" class="whatsapp-float bg-green-500 hover:bg-green-600 transition-colors transition-duration-200 text-white border-circle shadow-4 flex align-items-center justify-content-center cursor-pointer" aria-label="Chat on WhatsApp">
+    <a v-if="whatsappNumber" :href="whatsappLink" target="_blank" rel="noopener noreferrer" class="whatsapp-float text-white border-circle shadow-4 flex align-items-center justify-content-center cursor-pointer" aria-label="Chat on WhatsApp">
       <i class="pi pi-whatsapp text-3xl"></i>
     </a>
   </div>
@@ -169,9 +169,13 @@ onBeforeUnmount(() => {
     width: 60px;
     height: 60px;
     z-index: 1000;
+    background-color: #25D366;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .whatsapp-float:hover {
-    transform: scale(1.05);
+    background-color: #128C7E;
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 .p-error {
     color: var(--p-error, #e24c4b);
