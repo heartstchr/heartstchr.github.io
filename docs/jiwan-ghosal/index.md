@@ -136,8 +136,8 @@ contributors: false
 </div>
 <div class="mt-6">
   <div class="text-center pb-4">
-    <div class="text-4xl font-bold"><h2>Scalable Solutions for <div class="text-4xl font-bold bg-primary">Startups, Enterprises & Agencies</div></h2></div>
-    <div class="text-xl md:text-center line-height-3"> I’m Jiwan Ghosal, a senior JavaScript engineer specializing in React/Vue and Node on AWS/Azure. I help founders and teams ship fast, clean, and scalable software. I bring a proven track record of success in the industry, with a comprehensive skill set spanning every phase of software development.</div>
+    <h2 class="text-4xl font-bold mb-4">Scalable Solutions for <span class="bg-primary px-2">Startups, Enterprises & Agencies</span></h2>
+    <p class="text-xl md:text-center line-height-3 text-700">I'm Jiwan Ghosal, a senior engineer specialising in fast, interactive frontends and high-performance server infrastructure on scalable cloud platforms. I help founders and teams launch faster, scale confidently, and eliminate operational bottlenecks. I bring a proven track record across every phase of product development.</p>
   </div>
   <div class="gallery gap-4">
     <div
