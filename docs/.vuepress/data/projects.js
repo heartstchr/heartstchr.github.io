@@ -3,6 +3,7 @@ import { toKebabCase } from "../utils/index.js";
 export const freelance = [
   {
     name: "AI Dynamic CRUD App",
+    category: "AI",
     description: "Transform your Notion database into a professional web application in minutes with the power of AI. Automatically reads your Notion structure, suggests field relationships, and creates beautiful, responsive interfaces with intelligent forms, search, and multi-language support.",
     software: "Web Application",
     org: "Stack Seekers",
@@ -61,6 +62,7 @@ export const freelance = [
   },
   {
     name: "Local Home Services Pros",
+    category: "Startup MVPs",
     description:
       "A modern, SEO-optimized web platform that connects homeowners and property managers with verified local service providers. Built with Next.js 15 and React 19, it serves as a lead generation and matching service with dynamic routing for thousands of location-service combinations.",
     software: "Web Platform",
@@ -140,6 +142,7 @@ export const freelance = [
   },
   {
     name: "Contact Form Plugin",
+    category: "SaaS",
     description:
       "A lightweight, embeddable contact form widget that can be integrated into any website and automatically forwards submissions to a Notion database. Generator-based architecture allowing multiple form configurations with various field combinations - completely free and easy to customize.",
     software: "Widget",
@@ -216,6 +219,7 @@ export const freelance = [
   },
   {
     name: "AI-Powered Influencer Platform - Vibe3",
+    category: "AI",
     description:
       "A cutting-edge AI-powered influencer marketing platform built with modern frontend technologies. Features a sophisticated React-based user interface that connects content creators with premium brands through intelligent matching algorithms. Built as a Progressive Web App (PWA) with Web3 integration, delivering seamless user experience across all devices.",
     software: "Progressive Web App",
@@ -303,6 +307,7 @@ export const freelance = [
   },
   {
     name: "Dynamic CRUD App Free",
+    category: "Automation",
     description:
       "Transform your Notion database into a professional web application in minutes. Automatically reads your Notion structure and creates beautiful, responsive interfaces with intelligent forms, search, and multi-language support - completely free and no-code required.",
     software: "Web Application",
@@ -379,6 +384,7 @@ export const freelance = [
   },
   {
     name: "AI Voice Generator",
+    category: "AI",
     details: "./details/ai-narrator.md",
     description:
       "Transform your Google Docs into high-quality audio with this free AI voice generator and text to audio converter. Powered by Gemini TTS, it offers natural-sounding speech generation for YouTubers, teachers, and creators. Experience the best free text to speech AI directly in your documents.",
@@ -460,6 +466,7 @@ export const freelance = [
   },
   {
     name: "Service Request System",
+    category: "Automation",
     details: "./details/service-request.md",
     description:
       "Build a complete customer service request management system using Notion database and Netlify functions. Features automated email notifications, file uploads, real-time sync, and professional web forms - all completely free with no coding required.",
@@ -543,6 +550,7 @@ export const freelance = [
   },
   {
     name: "Appliance Repair Service Platform",
+    category: "Startup MVPs",
     details: "./details/appliance-repair.md",
     description:
       "A modern, content-driven platform for connecting users with local appliance repair professionals and providing troubleshooting guides for major home appliances",
@@ -653,6 +661,7 @@ export const freelance = [
   },
   {
     name: "SR-22 Insurance Now",
+    category: "Startup MVPs",
     details: "./details/sr22.md",
     description:
       "Need a Cheap SR-22 Insurance? Compare & save on SR22 Insurance from top providers.",
@@ -761,6 +770,7 @@ export const freelance = [
   },
   {
     name: "Momentum Incident Management",
+    category: "Enterprise",
     details: "./details/momentum.md",
     description:
       "A structured process for identifying, analyzing, and resolving incidents that disrupt an organization's operations",
@@ -868,6 +878,7 @@ export const freelance = [
   },
   {
     name: "Marketplace Booking Platform",
+    category: "SaaS",
     description:
       "A multi-sided booking marketplace with search, listing management, reservations, and payments that can be adapted to other inventory-led domains.",
     software: "Web",
@@ -939,6 +950,7 @@ export const freelance = [
   },
   {
     name: "IBRebuild for ABN AMRO BANK N.V.",
+    category: "Enterprise",
     description:
       "ABN AMRO Bank N.V. is a Dutch bank with headquarters in Amsterdam. The internet banking (IB) application for the bank customers which is migrating from old Angular JS to Vue.js integrated with Microsoft Azure cloud services as IBRebuild.",
     software: "Web",
@@ -971,6 +983,7 @@ export const freelance = [
   },
   {
     name: "Emerald Design System",
+    category: "Enterprise",
     description:
       "Our innovative digital strategy emphasizes efficiency through a 'build once, deploy multiple times' approach. Utilizing the Emerald design system, we ensure a consistent and seamless user experience across platforms. Significant investments in this system, coupled with an expanded team, have enhanced productivity and scalability, delivering cohesive digital solutions for optimal user engagement.",
     software: "Web",
@@ -1029,6 +1042,7 @@ export const freelance = [
   },
   {
     name: "Tech Create",
+    category: "Startup MVPs",
     details: "./details/tech-create.md",
     description:
       "A landing page for digital solutions through innovative software development.",
@@ -1066,6 +1080,7 @@ export const freelance = [
   },
   {
     name: "Yit Plus",
+    category: "Enterprise",
     description:
       "YIT Plus is a modern digital service helping you to monitor data related to your home and apartment association.",
     software: "Web",
@@ -1135,6 +1150,7 @@ export const freelance = [
   },
   {
     name: "Qatar Airways widget",
+    category: "Enterprise",
     details: "./details/qa.md",
     description:
       "Book flights to destinations around the world with Qatar Airways and fly on board an award-winning airline. Enjoy special fares, collect Avios, and more.",
@@ -1194,6 +1210,7 @@ export const freelance = [
   },
   {
     name: "Recipes",
+    category: "Startup MVPs",
     description:
       "A community-driven platform where food lovers share, discover, and discuss recipes from around the world. Connect, cook, and create with fellow culinary enthusiasts.",
     software: "Web",
@@ -1275,6 +1292,7 @@ export const freelance = [
   },
   {
     name: "Frontend of Tv Maze API",
+    category: "Startup MVPs",
     description: "TVmaze- Add TV information to your website or app.",
     software: "Web",
     org: "Freelance",
@@ -1340,6 +1358,7 @@ export const freelance = [
   },
   {
     name: "Trokka Attraction",
+    category: "Startup MVPs",
     description: "Book Attractions and Tours for Your Next Holiday",
     software: "Web",
     org: "Catch That Bus",
@@ -1392,6 +1411,7 @@ export const freelance = [
   },
   {
     name: "Catch That Bus",
+    category: "Enterprise",
     description: "Book Malaysia and Singapore bus tickets online.",
     software: "Web / IOS APP",
     org: "Catch That Bus",
@@ -1464,6 +1484,7 @@ export const freelance = [
   },
   {
     name: "Partner Dashboard Upstox",
+    category: "Enterprise",
     description: "Open a sub-broker account with Upstox.",
     software: "Web",
     org: "Upstox",
@@ -1533,6 +1554,7 @@ export const freelance = [
   },
   {
     name: "Demat Account Open",
+    category: "Enterprise",
     description: "Open a Demat Account Online at Upstox",
     stack: [
       "Angular/black/white",
@@ -1580,6 +1602,7 @@ export const freelance = [
   },
   {
     name: "Call Matrix",
+    category: "SaaS",
     description: "Call Intelligence, Marketing, and Analytics Platform",
     stack: [
       "Angular/black/white",
@@ -1642,6 +1665,7 @@ export const freelance = [
   },
   {
     name: "Command Line Dictionary",
+    category: "Automation",
     description: "A fast, lightweight Command Line Interface (CLI) for looking up word definitions, synonyms, and examples. Built for developers who live in the terminal.",
     software: "Terminal",
     org: "Freelance",
@@ -1680,6 +1704,7 @@ export const freelance = [
   },
   {
     name: "Stock Market",
+    category: "Startup MVPs",
     description: "A high-performance real-time data visualization platform that consumes socket-driven financial data and renders live, interactive D3.js charts with sub-second latency.",
     stack: [
       "Socket.io/black/white",

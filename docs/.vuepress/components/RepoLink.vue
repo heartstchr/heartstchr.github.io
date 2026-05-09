@@ -12,9 +12,9 @@
             target="_blank" rel="noopener noreferrer" aria-label="YouTube">
             <i class="pi pi-youtube text-xl"></i>
         </a>
-        <a class="vp-action-link" href="https://stackseekers.gumroad.com/"
-            target="_blank" rel="noopener noreferrer" aria-label="Gumroad">
-            <img src="https://cdn.simpleicons.org/gumroad" style="width: 20px;" loading="eager" fetchpriority="high"/>
+        <a class="vp-action-link" href="https://stackseekers.gumroad.com/" target="_blank" rel="noopener noreferrer"
+            aria-label="Gumroad">
+            <img src="https://cdn.simpleicons.org/gumroad" style="width: 20px;" loading="eager" fetchpriority="high" />
         </a>
     </div>
 </template>

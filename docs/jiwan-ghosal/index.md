@@ -17,7 +17,7 @@ contributors: false
         <span class="inline-flex align-items-center px-2 py-1 border-round-xl bg-primary text-xs">
           <i class="pi pi-sparkles mr-1"></i> New‑age development partner
         </span>
-        <span class="text-xs text-500">MEVN/MERN • AWS/Azure • AI</span>
+        <span class="text-xs text-500">Faster launches · Scalable systems · Reduced operational risk</span>
       </div>
       <h1 class="m-0 p-0 line-height-2 text-5xl md:text-7xl font-bold">
         The <span class="text-gradient">Architect</span> behind Stack Seekers
@@ -25,7 +25,7 @@ contributors: false
       <div class="text-xl md:text-2xl mt-3 line-height-3 min-h-10rem">
         <div class="text-4xl" >Turning <Transition name="fade" mode="out-in"><span :key="currentPhrase" class="text-gradient-2">{{ currentPhrase }}</span></Transition> into engineering excellence.</div>
         <span class="flex mt-4">I’m Jiwan Ghosal, a senior full-stack engineer and the founder of Stack Seekers. I specialize in taking raw ideas and architecting them into scalable, production-grade platforms.</span>
-        <p class="mt-3">Whether you need a high-performance SaaS or an AI-driven automation engine, I provide the technical leadership to make it happen.</p>
+        <p class="mt-3">Whether you need a high-performance SaaS or an AI-driven automation engine, I provide the technical leadership to launch faster, scale reliably, and reduce operational pain.</p>
       </div>
       <div class="flex gap-3 mt-5 flex-wrap">
         <a href="https://cal.com/stackseekers" target="_blank" class="no-underline mt-4">
@@ -64,7 +64,7 @@ contributors: false
       <div class="surface-card p-4 border-round-xl shadow-2 mb-4">
         <h3 class="text-2xl font-bold mb-2">JS World Conference, Amsterdam</h3>
         <YouTubePlayers videoId="H7B5hQbQqKQ" :autoplay="false" :muted="true" :loop="true" class="border-round-xl overflow-hidden"/>
-        <p class="mt-3 line-height-3">In 2023, I participated in the JS World Conference in Amsterdam, contributing to deep-dives into Vue.js, Pinia, and Micro-frontend architectures. Connecting with the global engineering community keeps me at the forefront of modern web standards.</p>
+        <p class="mt-3 line-height-3">In 2023, I participated in the JS World Conference in Amsterdam, presenting on high-performance frontend architecture and state management at scale. Connecting with the global engineering community keeps me at the forefront of modern web standards.</p>
       </div>
     </div>
     <div class="col-12 md:col-6">

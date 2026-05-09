@@ -6,6 +6,32 @@ export const enNavbar = navbar([
     text: "Projects",
     icon: "pi pi-briefcase",
     link: "/web-development-projects/",
+    children: [
+      {
+        text: "Enterprise",
+        link: "/web-development-projects/enterprise/",
+      },
+      {
+        text: "AI",
+        link: "/web-development-projects/ai/",
+      },
+      {
+        text: "SaaS",
+        link: "/web-development-projects/saas/",
+      },
+      {
+        text: "Automation",
+        link: "/web-development-projects/automation/",
+      },
+      {
+        text: "Startup MVPs",
+        link: "/web-development-projects/startup-mvps/",
+      },
+      {
+        text: "All Projects",
+        link: "/web-development-projects/",
+      },
+    ],
   },
   {
     text: "Services",
