@@ -1,7 +1,7 @@
 ---
-title: "Tag: React"
-description: "Browse articles and projects tagged with React"
+title: "Tag: react"
+description: "Explore our collection of articles, tutorials, and insights about react. Stay updated with the latest trends and best practices in react."
 layout: Layout
+tag: "react"
 ---
-
-<TagPage :tag="'React'" :items='[{"type":"Project","title":"SR-22 Insurance Now","description":"Need a Cheap SR-22 Insurance? Compare & save on SR22 Insurance from top providers.","link":"/web-development-projects/sr-22-insurance-now/"}]' />
+<TagPage :tag="'react'" />

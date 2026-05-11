@@ -1,7 +1,7 @@
 ---
 title: "Tag: swagger"
-description: "Browse articles and projects tagged with swagger"
+description: "Explore our collection of articles, tutorials, and insights about swagger. Stay updated with the latest trends and best practices in swagger."
 layout: Layout
+tag: "swagger"
 ---
-
-<TagPage :tag="'swagger'" :items='[{"type":"Project","title":"Momentum Incident Management","description":"A structured process for identifying, analyzing, and resolving incidents that disrupt an organization's operations","link":"/web-development-projects/momentum-incident-management/"}]' />
+<TagPage :tag="'swagger'" />

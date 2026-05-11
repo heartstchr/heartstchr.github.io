@@ -33,6 +33,15 @@ import DiagnosticQuiz from "./components/DiagnosticQuiz.vue";
 import ConsultingBridge from "./components/ConsultingBridge.vue";
 import TagIndex from "./components/TagIndex.vue";
 
+import ProjectHero from "./components/ProjectHero.vue";
+import ProjectGallery from "./components/ProjectGallery.vue";
+import ProjectTabs from "./components/ProjectTabs.vue";
+import AuditCTA from "./components/AuditCTA.vue";
+import AuditSidebar from "./components/AuditSidebar.vue";
+import RelatedServices from "./components/RelatedServices.vue";
+import ProjectNavigation from "./components/ProjectNavigation.vue";
+import GatedLink from "./components/GatedLink.vue";
+
 import Image from "primevue/image";
 import Galleria from "primevue/galleria";
 
@@ -71,6 +80,15 @@ export default defineClientConfig({
     app.component("DiagnosticQuiz", DiagnosticQuiz);
     app.component("ConsultingBridge", ConsultingBridge);
     app.component("TagIndex", TagIndex);
+
+    app.component("ProjectHero", ProjectHero);
+    app.component("ProjectGallery", ProjectGallery);
+    app.component("ProjectTabs", ProjectTabs);
+    app.component("AuditCTA", AuditCTA);
+    app.component("AuditSidebar", AuditSidebar);
+    app.component("RelatedServices", RelatedServices);
+    app.component("ProjectNavigation", ProjectNavigation);
+    app.component("GatedLink", GatedLink);
   },
   rootComponents: [GlobalLeadCapture],
   setup() {

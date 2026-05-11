@@ -1,7 +1,7 @@
 ---
-title: "Tag: Bitbucket"
-description: "Browse articles and projects tagged with Bitbucket"
+title: "Tag: bitbucket"
+description: "Explore our collection of articles, tutorials, and insights about bitbucket. Stay updated with the latest trends and best practices in bitbucket."
 layout: Layout
+tag: "bitbucket"
 ---
-
-<TagPage :tag="'Bitbucket'" :items='[{"type":"Project","title":"Emerald Design System","description":"Our innovative digital strategy emphasizes efficiency through a 'build once, deploy multiple times' approach. Utilizing the Emerald design system, we ensure a consistent and seamless user experience across platforms. Significant investments in this system, coupled with an expanded team, have enhanced productivity and scalability, delivering cohesive digital solutions for optimal user engagement.","link":"/web-development-projects/emerald-design-system/"}]' />
+<TagPage :tag="'bitbucket'" />

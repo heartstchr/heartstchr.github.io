@@ -1,7 +1,7 @@
 <template>
   <div class="grid mb-8">
     <div class="col-12">
-      <TabView class="project-perspective-tabs" v-if="project.perspective?.executive">
+      <TabView class="project-perspective-tabs" v-if="project?.perspective?.executive">
         <TabPanel>
           <template #header>
             <div class="flex align-items-center gap-2">
@@ -15,7 +15,7 @@
               Business Impact & ROI
             </div>
             <div class="text-xl line-height-4 text-700 mb-6">
-              {{ project.perspective.executive }}
+              {{ project?.perspective?.executive }}
             </div>
             <div class="grid">
               <div class="col-12">
@@ -23,7 +23,7 @@
                     <i class="pi pi-list text-primary"></i> Strategic Playbook Features
                  </h4>
                  <div class="grid">
-                    <div v-for="feature in project.features" :key="feature.text" class="col-12 md:col-6 mb-3">
+                    <div v-for="feature in project?.features" :key="feature.text" class="col-12 md:col-6 mb-3">
                        <div class="flex align-items-start gap-3">
                           <i class="pi pi-check text-primary mt-1"></i>
                           <div class="text-sm font-medium line-height-3" v-html="feature.text"></div>
@@ -47,7 +47,7 @@
               Technical Deep-Dive
             </div>
             <div class="text-xl line-height-4 text-700 mb-6">
-              {{ project.perspective.technical }}
+              {{ project?.perspective?.technical }}
             </div>
             <div v-pre class="project-markdown-content text-lg line-height-4">
               <slot></slot>
@@ -61,7 +61,7 @@
            <i class="pi pi-list text-primary"></i> Playbook Features
         </h3>
         <div class="grid">
-           <div v-for="feature in project.features" :key="feature.text" class="col-12 md:col-6 mb-3">
+           <div v-for="feature in project?.features" :key="feature.text" class="col-12 md:col-6 mb-3">
               <div class="flex align-items-start gap-3">
                  <i class="pi pi-verified text-primary mt-1"></i>
                  <div class="text-sm font-medium line-height-3" v-html="feature.text"></div>
@@ -77,7 +77,29 @@
 defineProps({
   project: {
     type: Object,
-    required: true
+    default: () => ({})
   }
 });
 </script>
+
+<style>
+.project-perspective-tabs .p-tabview-nav {
+  background: transparent !important;
+  border: none !important;
+  justify-content: center;
+  gap: 1rem;
+}
+.project-perspective-tabs .p-tabview-nav li .p-tabview-nav-link {
+  border-radius: 1rem !important;
+  border: 1px solid #e2e8f0 !important;
+  background: #f8fafc !important;
+  padding: 0.75rem 1.5rem !important;
+  font-weight: 700 !important;
+  transition: all 0.2s ease !important;
+}
+.project-perspective-tabs .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+  background: var(--primary-color) !important;
+  color: white !important;
+  border-color: var(--primary-color) !important;
+}
+</style>
