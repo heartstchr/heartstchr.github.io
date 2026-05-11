@@ -1,7 +1,7 @@
 ---
 title: "Tag: kentico"
-description: "Browse articles and projects tagged with kentico"
+description: "Explore our collection of articles, tutorials, and insights about kentico. Stay updated with the latest trends and best practices in kentico."
 layout: Layout
+tag: "kentico"
 ---
-
-<TagPage :tag="'kentico'" :items='[{"type":"Project","title":"Yit Plus","description":"YIT Plus is a modern digital service helping you to monitor data related to your home and apartment association.","link":"/web-development-projects/yit-plus/"}]' />
+<TagPage :tag="'kentico'" />

@@ -1,16 +1,91 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { projects } from './data/projects.js';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+import { freelance } from "./data/projects.js";
+import { services } from "./data/services.js";
+import { posts } from "./data/posts.js";
+import { toKebabCase } from "./utils/index.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const docsRoot = path.resolve(__dirname, "..");
+const publicDir = path.resolve(__dirname, "./public");
+const outProjectDir = path.resolve(docsRoot, "web-development-projects");
+const outServiceDir = path.resolve(docsRoot, "web-development-services");
+const outTagsDir = path.resolve(docsRoot, "tags");
+const detailsDir = path.resolve(__dirname, "./data/details");
+const DOMAIN = "https://stackseekers.com";
 
-function toKebabCase(str) {
-  return str.toLowerCase().replace(/ /g, '-').replace(/[^\w-]/g, '');
-}
+const ensureDirectoryExists = (dirPath) => {
+  if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath, { recursive: true });
+  }
+};
 
-const projectTemplate = (project, markdownContent, previousProject, nextProject) => {
+const clearDirectory = (dirPath) => {
+  if (fs.existsSync(dirPath)) {
+    fs.readdirSync(dirPath).forEach((file) => {
+      const curPath = path.join(dirPath, file);
+      if (fs.lstatSync(curPath).isDirectory()) {
+         if (!file.startsWith('.')) {
+           fs.rmSync(curPath, { recursive: true, force: true });
+         }
+      } else {
+        if (file !== "README.md") {
+          fs.unlinkSync(curPath);
+        }
+      }
+    });
+  }
+};
+
+const readMarkdownContent = (detailsPath) => {
+  if (!detailsPath) return "";
+  const fullPath = path.resolve(detailsDir, path.basename(detailsPath));
+  try {
+    const content = fs.existsSync(fullPath) ? fs.readFileSync(fullPath, "utf-8") : "";
+    return content
+      .replace(/^---$/gm, "***")
+      .replace(/\n---$/gm, "\n***");
+  } catch (error) {
+    console.error(`Error reading markdown file ${fullPath}:`, error);
+    return "";
+  }
+};
+
+const escapeXml = (value) =>
+  String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+
+const toIsoDate = (value) => {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return new Date().toISOString().split("T")[0];
+  }
+  return date.toISOString().split("T")[0];
+};
+
+const projectTemplate = (project, projectIndex, allProjects) => {
+  const markdownContent = readMarkdownContent(project.details);
+  const previousProject =
+    projectIndex > 0
+      ? {
+          name: allProjects[projectIndex - 1].name,
+          link: `/web-development-projects/${toKebabCase(allProjects[projectIndex - 1].name)}/`,
+        }
+      : null;
+  const nextProject =
+    projectIndex < allProjects.length - 1
+      ? {
+          name: allProjects[projectIndex + 1].name,
+          link: `/web-development-projects/${toKebabCase(allProjects[projectIndex + 1].name)}/`,
+        }
+      : null;
+
   return `---
 title: "${project.name}"
 description: "${project.description}"
@@ -28,15 +103,14 @@ project:
   domain: "${project.domain}"
   year: "${project.year}"
   price: ${project.price || 0}
-  currency: ${project.currency || 'USD'}
+  currency: "${project.currency || 'USD'}"
   link: "${project.link || ''}"
-  codeLink: ${project.codeLink || ''}
+  codeLink: "${project.codeLink || ''}"
   contact: "${project.contact || ''}"
-  stack: ${JSON.stringify(project.stack)}
-  images: ${JSON.stringify(project.images)}
-  features: ${JSON.stringify(project.features)}
-  perspective: ${JSON.stringify(project.perspective)}
-  details: ${JSON.stringify(markdownContent)}
+  stack: ${JSON.stringify(project.stack || [])}
+  images: ${JSON.stringify(project.images || [])}
+  features: ${JSON.stringify(project.features || [])}
+  perspective: ${JSON.stringify({ executive: "", technical: "", ...project.perspective })}
   previousProject: ${JSON.stringify(previousProject)}
   nextProject: ${JSON.stringify(nextProject)}
 ---
@@ -45,17 +119,23 @@ project:
 
 <ProjectGallery :images="$frontmatter.project.images" />
 
-<ProjectTabs :project="$frontmatter.project">
+<ProjectTabs v-if="$frontmatter.project?.perspective?.executive" :project="$frontmatter.project">
 
 ${markdownContent}
 
 </ProjectTabs>
 
-<div v-if="!$frontmatter.project.perspective?.executive" v-pre class="project-markdown-content text-lg line-height-4 mb-8">
+<template v-else>
+
+<ProjectTabs :project="$frontmatter.project" />
+
+<div v-pre class="project-markdown-content text-lg line-height-4 mb-8">
 
 ${markdownContent}
 
 </div>
+
+</template>
 
 <ConsultingBridge />
 
@@ -63,7 +143,7 @@ ${markdownContent}
 
 <RelatedServices />
 
-<ProjectNavigation :previous="$frontmatter.project.previousProject" :next="$frontmatter.project.nextProject" />
+<ProjectNavigation :previous="$frontmatter.project?.previousProject" :next="$frontmatter.project?.nextProject" />
 
 <script setup>
 import { responsiveOptions } from "@data/responsive.js"
@@ -86,9 +166,11 @@ const serviceTemplate = (service, serviceIndex, allServices) => {
         }
       : null;
 
+  const desc = service.description || (service.descriptions && service.descriptions[0]) || "";
+
   return `---
 title: "${service.name}"
-description: "${service.description}"
+description: "${desc}"
 lastUpdated: false
 editLink: false
 contributors: false
@@ -98,9 +180,9 @@ layout: Layout
 service:
   name: "${service.name}"
   code: "${service.code}"
-  description: "${service.description}"
-  benefits: ${JSON.stringify(service.benefits)}
-  outcomes: ${JSON.stringify(service.outcomes)}
+  description: "${desc}"
+  benefits: ${JSON.stringify(service.deliverables || [])}
+  outcomes: ${JSON.stringify(service.problems || [])}
   previousService: ${JSON.stringify(previousService)}
   nextService: ${JSON.stringify(nextService)}
 ---
@@ -110,7 +192,7 @@ service:
     <div class="col-12 lg:col-7">
       <div class="text-primary font-bold mb-2 uppercase tracking-widest text-xs">Core Expertise</div>
       <h1 class="text-4xl md:text-6xl font-bold mb-3 mt-0 line-height-2">${service.name}</h1>
-      <p class="text-xl opacity-70 line-height-4 max-w-40rem mb-4">${service.description}</p>
+      <p class="text-xl opacity-70 line-height-4 max-w-40rem mb-4">${desc}</p>
       <div class="flex gap-3">
          <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
            <Button label="Consult Strategy" icon="pi pi-calendar" severity="primary" size="large" raised rounded class="px-6 py-3 font-bold" />
@@ -130,7 +212,7 @@ service:
     <div class="surface-card p-4 md:p-6 border-round-3xl shadow-1 mb-6">
       <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">
         <i class="pi pi-verified text-primary"></i>
-        Strategic Benefits
+        Strategic Deliverables
       </h3>
       <div class="grid">
         <div v-for="benefit in $frontmatter.service.benefits" :key="benefit" class="col-12 md:col-6 mb-3">
@@ -144,13 +226,12 @@ service:
 
     <div class="surface-card p-4 md:p-6 border-round-3xl shadow-1">
        <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">
-        <i class="pi pi-chart-line text-primary"></i>
-        Primary Outcomes
+        <i class="pi pi-exclamation-triangle text-primary"></i>
+        Challenges We Solve
       </h3>
       <div class="flex flex-column gap-4">
-        <div v-for="outcome in $frontmatter.service.outcomes" :key="outcome.title" class="p-3 border-round-2xl surface-50 border-1 border-100">
-           <div class="font-bold text-lg mb-1">{{ outcome.title }}</div>
-           <div class="text-600 line-height-3">{{ outcome.desc }}</div>
+        <div v-for="outcome in $frontmatter.service.outcomes" :key="outcome" class="p-3 border-round-2xl surface-50 border-1 border-100">
+           <div class="text-lg line-height-3">{{ outcome }}</div>
         </div>
       </div>
     </div>
@@ -192,102 +273,107 @@ service:
 `;
 };
 
-const tagTemplate = (tag, taggedItems) => {
+const tagTemplate = (tag) => {
+  const description = `Explore our collection of articles, tutorials, and insights about ${tag}. Stay updated with the latest trends and best practices in ${tag}.`;
   return `---
 title: "Tag: ${tag}"
-description: "Browse articles and projects tagged with ${tag}"
+description: "${description}"
 layout: Layout
+tag: "${tag}"
 ---
-
-<TagPage :tag="'${tag}'" :items='${JSON.stringify(taggedItems)}' />
+<TagPage :tag="'${tag}'" />
 `;
 };
 
-const tagsIndexTemplate = (tags) => {
-  return `---
-title: All Tags
-description: Browse projects and articles by category
-layout: Layout
----
-
-<TagIndex :tags='${JSON.stringify(tags)}' />
-`;
+const generatePages = (data, outputDir, slugKey, templateFn) => {
+  ensureDirectoryExists(outputDir);
+  data.forEach((item, index) => {
+    const content = templateFn(item, index, data);
+    const dirPath = path.join(outputDir, toKebabCase(item[slugKey] || item.code));
+    const filePath = path.join(dirPath, "index.md");
+    ensureDirectoryExists(dirPath);
+    fs.writeFileSync(filePath, content, "utf-8");
+    console.log(`Created: ${filePath}`);
+  });
 };
 
-// --- Generation Logic ---
-
-const docsDir = path.join(__dirname, '../');
-
-// 1. Generate Project Pages
-const projectOutputDir = path.join(docsDir, 'web-development-projects');
-if (!fs.existsSync(projectOutputDir)) fs.mkdirSync(projectOutputDir);
-
-const allTags = new Map();
-
-projects.forEach((project, index) => {
-  const projectSlug = toKebabCase(project.name);
-  const projectDir = path.join(projectOutputDir, projectSlug);
-  if (!fs.existsSync(projectDir)) fs.mkdirSync(projectDir);
-
-  const previousProject =
-    index > 0
-      ? {
-          name: projects[index - 1].name,
-          link: `/web-development-projects/${toKebabCase(projects[index - 1].name)}/`,
-        }
-      : null;
-  const nextProject =
-    index < projects.length - 1
-      ? {
-          name: projects[index + 1].name,
-          link: `/web-development-projects/${toKebabCase(projects[index + 1].name)}/`,
-        }
-      : null;
-
-  // Read existing markdown content if it exists, otherwise use empty string
-  let markdownContent = '';
-  const existingPath = path.join(projectDir, 'index.md');
-  if (fs.existsSync(existingPath)) {
-    const existingContent = fs.readFileSync(existingPath, 'utf8');
-    const contentParts = existingContent.split('---');
-    if (contentParts.length >= 3) {
-      markdownContent = contentParts.slice(2).join('---').trim();
+const generateTagPages = () => {
+  const allTags = new Set();
+  posts.forEach((post) => {
+    if (Array.isArray(post.tags)) {
+      post.tags.forEach((tag) => allTags.add(String(tag).toLowerCase()));
     }
-  }
+  });
+  freelance.forEach((project) => {
+    if (Array.isArray(project.stack)) {
+      project.stack.forEach((tag) => allTags.add(String(tag).toLowerCase()));
+    }
+  });
+  const tagsArray = Array.from(allTags).sort();
+  ensureDirectoryExists(outTagsDir);
+  clearDirectory(outTagsDir);
+  tagsArray.forEach((tag) => {
+    const content = tagTemplate(tag);
+    const dirPath = path.join(outTagsDir, toKebabCase(tag));
+    const filePath = path.join(dirPath, "index.md");
+    ensureDirectoryExists(dirPath);
+    fs.writeFileSync(filePath, content, "utf-8");
+    console.log(`Created Tag Page: ${filePath}`);
+  });
+  const indexContent = `---
+title: Explore Topics | Stack Seekers
+description: Browse all technical topics, tutorials, and insights by category and tags.
+layout: Layout
+---
+<TagIndex />
+`;
+  fs.writeFileSync(path.join(outTagsDir, "README.md"), indexContent, "utf-8");
+};
 
-  fs.writeFileSync(
-    path.join(projectDir, 'index.md'),
-    projectTemplate(project, markdownContent, previousProject, nextProject)
+const collectMarkdownPages = (dirPath, result = []) => {
+  const entries = fs.readdirSync(dirPath, { withFileTypes: true });
+  for (const entry of entries) {
+    if (entry.name.startsWith(".")) continue;
+    if (entry.name === "node_modules") continue;
+    const fullPath = path.join(dirPath, entry.name);
+    if (entry.isDirectory()) {
+      collectMarkdownPages(fullPath, result);
+      continue;
+    }
+    if (!entry.name.endsWith(".md")) continue;
+    result.push(fullPath);
+  }
+  return result;
+};
+
+const toPagePath = (filePath) => {
+  const relativePath = path.relative(docsRoot, filePath).replace(/\\/g, "/");
+  if (relativePath === "README.md") return "/";
+  if (relativePath.endsWith("/README.md")) return `/${relativePath.replace(/\/README\.md$/, "/")}`;
+  if (relativePath.endsWith("/index.md")) return `/${relativePath.replace(/\/index\.md$/, "/")}`;
+  return `/${relativePath.replace(/\.md$/, "/")}`;
+};
+
+const generateSitemap = () => {
+  ensureDirectoryExists(publicDir);
+  const markdownFiles = collectMarkdownPages(docsRoot).filter(
+    (filePath) => !filePath.includes(`${path.sep}.vuepress${path.sep}`)
   );
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${markdownFiles
+  .map((filePath) => {
+    const pagePath = toPagePath(filePath);
+    return `  <url><loc>${escapeXml(DOMAIN + pagePath)}</loc></url>`;
+  })
+  .join("\n")}
+</urlset>`;
+  fs.writeFileSync(path.join(publicDir, "sitemap.xml"), xml, "utf-8");
+};
 
-  // Collect Tags
-  if (project.stack) {
-    project.stack.forEach((tag) => {
-      if (!allTags.has(tag)) allTags.set(tag, []);
-      allTags.get(tag).push({
-        type: 'Project',
-        title: project.name,
-        description: project.description,
-        link: `/web-development-projects/${projectSlug}/`,
-      });
-    });
-  }
-});
-
-// 2. Generate Tags Pages
-const tagsOutputDir = path.join(docsDir, 'tags');
-if (!fs.existsSync(tagsOutputDir)) fs.mkdirSync(tagsOutputDir);
-
-allTags.forEach((items, tag) => {
-  const tagSlug = toKebabCase(tag);
-  const tagDir = path.join(tagsOutputDir, tagSlug);
-  if (!fs.existsSync(tagDir)) fs.mkdirSync(tagDir);
-
-  fs.writeFileSync(path.join(tagDir, 'index.md'), tagTemplate(tag, items));
-});
-
-// Generate main tags index
-const sortedTags = Array.from(allTags.keys()).sort();
-fs.writeFileSync(path.join(tagsOutputDir, 'README.md'), tagsIndexTemplate(sortedTags));
-
-console.log('Project and Tag pages generated successfully!');
+clearDirectory(outProjectDir);
+clearDirectory(outServiceDir);
+generatePages(freelance, outProjectDir, "name", projectTemplate);
+generatePages(services, outServiceDir, "code", serviceTemplate);
+generateTagPages();
+generateSitemap();

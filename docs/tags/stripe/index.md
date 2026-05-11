@@ -1,7 +1,7 @@
 ---
 title: "Tag: stripe"
-description: "Browse articles and projects tagged with stripe"
+description: "Explore our collection of articles, tutorials, and insights about stripe. Stay updated with the latest trends and best practices in stripe."
 layout: Layout
+tag: "stripe"
 ---
-
-<TagPage :tag="'stripe'" :items='[{"type":"Project","title":"Marketplace Booking Platform","description":"A multi-sided booking marketplace with search, listing management, reservations, and payments that can be adapted to other inventory-led domains.","link":"/web-development-projects/marketplace-booking-platform/"}]' />
+<TagPage :tag="'stripe'" />

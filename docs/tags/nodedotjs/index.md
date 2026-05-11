@@ -1,7 +1,7 @@
 ---
-title: "Tag: NodedotJS"
-description: "Browse articles and projects tagged with NodedotJS"
+title: "Tag: nodedotjs"
+description: "Explore our collection of articles, tutorials, and insights about nodedotjs. Stay updated with the latest trends and best practices in nodedotjs."
 layout: Layout
+tag: "nodedotjs"
 ---
-
-<TagPage :tag="'NodedotJS'" :items='[{"type":"Project","title":"Stock Market","description":"A high-performance real-time data visualization platform that consumes socket-driven financial data and renders live, interactive D3.js charts with sub-second latency.","link":"/web-development-projects/stock-market/"}]' />
+<TagPage :tag="'nodedotjs'" />

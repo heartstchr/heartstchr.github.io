@@ -1,7 +1,7 @@
 ---
-title: "Tag: DigitalOcean"
-description: "Browse articles and projects tagged with DigitalOcean"
+title: "Tag: digitalocean"
+description: "Explore our collection of articles, tutorials, and insights about digitalocean. Stay updated with the latest trends and best practices in digitalocean."
 layout: Layout
+tag: "digitalocean"
 ---
-
-<TagPage :tag="'DigitalOcean'" :items='[{"type":"Project","title":"Call Matrix","description":"Call Intelligence, Marketing, and Analytics Platform","link":"/web-development-projects/call-matrix/"}]' />
+<TagPage :tag="'digitalocean'" />

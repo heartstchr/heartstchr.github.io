@@ -1,7 +1,7 @@
 ---
 title: "Tag: html5"
-description: "Browse articles and projects tagged with html5"
+description: "Explore our collection of articles, tutorials, and insights about html5. Stay updated with the latest trends and best practices in html5."
 layout: Layout
+tag: "html5"
 ---
-
-<TagPage :tag="'html5'" :items='[{"type":"Project","title":"AI Dynamic CRUD App","description":"Transform your Notion database into a professional web application in minutes with the power of AI. Automatically reads your Notion structure, suggests field relationships, and creates beautiful, responsive interfaces with intelligent forms, search, and multi-language support.","link":"/web-development-projects/ai-dynamic-crud-app/"},{"type":"Project","title":"Contact Form Plugin","description":"A lightweight, embeddable contact form widget that can be integrated into any website and automatically forwards submissions to a Notion database. Generator-based architecture allowing multiple form configurations with various field combinations - completely free and easy to customize.","link":"/web-development-projects/contact-form-plugin/"},{"type":"Project","title":"Dynamic CRUD App Free","description":"Transform your Notion database into a professional web application in minutes. Automatically reads your Notion structure and creates beautiful, responsive interfaces with intelligent forms, search, and multi-language support - completely free and no-code required.","link":"/web-development-projects/dynamic-crud-app-free/"},{"type":"Project","title":"AI Voice Generator","description":"Transform your Google Docs into high-quality audio with this free AI voice generator and text to audio converter. Powered by Gemini TTS, it offers natural-sounding speech generation for YouTubers, teachers, and creators. Experience the best free text to speech AI directly in your documents.","link":"/web-development-projects/ai-voice-generator/"}]' />
+<TagPage :tag="'html5'" />

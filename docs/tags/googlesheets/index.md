@@ -1,7 +1,7 @@
 ---
 title: "Tag: googlesheets"
-description: "Browse articles and projects tagged with googlesheets"
+description: "Explore our collection of articles, tutorials, and insights about googlesheets. Stay updated with the latest trends and best practices in googlesheets."
 layout: Layout
+tag: "googlesheets"
 ---
-
-<TagPage :tag="'googlesheets'" :items='[{"type":"Project","title":"Call Matrix","description":"Call Intelligence, Marketing, and Analytics Platform","link":"/web-development-projects/call-matrix/"}]' />
+<TagPage :tag="'googlesheets'" />

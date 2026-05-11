@@ -1,7 +1,7 @@
 ---
 title: "Tag: googledocs"
-description: "Browse articles and projects tagged with googledocs"
+description: "Explore our collection of articles, tutorials, and insights about googledocs. Stay updated with the latest trends and best practices in googledocs."
 layout: Layout
+tag: "googledocs"
 ---
-
-<TagPage :tag="'googledocs'" :items='[{"type":"Project","title":"AI Voice Generator","description":"Transform your Google Docs into high-quality audio with this free AI voice generator and text to audio converter. Powered by Gemini TTS, it offers natural-sounding speech generation for YouTubers, teachers, and creators. Experience the best free text to speech AI directly in your documents.","link":"/web-development-projects/ai-voice-generator/"}]' />
+<TagPage :tag="'googledocs'" />

@@ -1,7 +1,7 @@
 ---
 title: "Tag: d3"
-description: "Browse articles and projects tagged with d3"
+description: "Explore our collection of articles, tutorials, and insights about d3. Stay updated with the latest trends and best practices in d3."
 layout: Layout
+tag: "d3"
 ---
-
-<TagPage :tag="'d3'" :items='[{"type":"Project","title":"Call Matrix","description":"Call Intelligence, Marketing, and Analytics Platform","link":"/web-development-projects/call-matrix/"},{"type":"Project","title":"Stock Market","description":"A high-performance real-time data visualization platform that consumes socket-driven financial data and renders live, interactive D3.js charts with sub-second latency.","link":"/web-development-projects/stock-market/"}]' />
+<TagPage :tag="'d3'" />

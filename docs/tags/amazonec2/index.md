@@ -1,7 +1,7 @@
 ---
-title: "Tag: amazonEC2"
-description: "Browse articles and projects tagged with amazonEC2"
+title: "Tag: amazonec2"
+description: "Explore our collection of articles, tutorials, and insights about amazonec2. Stay updated with the latest trends and best practices in amazonec2."
 layout: Layout
+tag: "amazonec2"
 ---
-
-<TagPage :tag="'amazonEC2'" :items='[{"type":"Project","title":"Trokka Attraction","description":"Book Attractions and Tours for Your Next Holiday","link":"/web-development-projects/trokka-attraction/"}]' />
+<TagPage :tag="'amazonec2'" />

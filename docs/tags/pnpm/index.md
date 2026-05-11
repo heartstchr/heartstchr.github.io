@@ -1,7 +1,7 @@
 ---
 title: "Tag: pnpm"
-description: "Browse articles and projects tagged with pnpm"
+description: "Explore our collection of articles, tutorials, and insights about pnpm. Stay updated with the latest trends and best practices in pnpm."
 layout: Layout
+tag: "pnpm"
 ---
-
-<TagPage :tag="'pnpm'" :items='[{"type":"Project","title":"Momentum Incident Management","description":"A structured process for identifying, analyzing, and resolving incidents that disrupt an organization's operations","link":"/web-development-projects/momentum-incident-management/"}]' />
+<TagPage :tag="'pnpm'" />

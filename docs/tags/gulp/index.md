@@ -1,7 +1,7 @@
 ---
 title: "Tag: gulp"
-description: "Browse articles and projects tagged with gulp"
+description: "Explore our collection of articles, tutorials, and insights about gulp. Stay updated with the latest trends and best practices in gulp."
 layout: Layout
+tag: "gulp"
 ---
-
-<TagPage :tag="'gulp'" :items='[{"type":"Project","title":"Stock Market","description":"A high-performance real-time data visualization platform that consumes socket-driven financial data and renders live, interactive D3.js charts with sub-second latency.","link":"/web-development-projects/stock-market/"}]' />
+<TagPage :tag="'gulp'" />

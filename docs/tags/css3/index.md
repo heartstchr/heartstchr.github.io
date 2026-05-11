@@ -1,7 +1,7 @@
 ---
-title: "Tag: CSS3"
-description: "Browse articles and projects tagged with CSS3"
+title: "Tag: css3"
+description: "Explore our collection of articles, tutorials, and insights about css3. Stay updated with the latest trends and best practices in css3."
 layout: Layout
+tag: "css3"
 ---
-
-<TagPage :tag="'CSS3'" :items='[{"type":"Project","title":"Tech Create","description":"A landing page for digital solutions through innovative software development.","link":"/web-development-projects/tech-create/"}]' />
+<TagPage :tag="'css3'" />

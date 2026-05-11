@@ -1,7 +1,7 @@
 ---
-title: "Tag: Vite"
-description: "Browse articles and projects tagged with Vite"
+title: "Tag: vite"
+description: "Explore our collection of articles, tutorials, and insights about vite. Stay updated with the latest trends and best practices in vite."
 layout: Layout
+tag: "vite"
 ---
-
-<TagPage :tag="'Vite'" :items='[{"type":"Project","title":"Recipes","description":"A community-driven platform where food lovers share, discover, and discuss recipes from around the world. Connect, cook, and create with fellow culinary enthusiasts.","link":"/web-development-projects/recipes/"}]' />
+<TagPage :tag="'vite'" />

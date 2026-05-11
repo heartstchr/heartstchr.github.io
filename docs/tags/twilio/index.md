@@ -1,7 +1,7 @@
 ---
 title: "Tag: twilio"
-description: "Browse articles and projects tagged with twilio"
+description: "Explore our collection of articles, tutorials, and insights about twilio. Stay updated with the latest trends and best practices in twilio."
 layout: Layout
+tag: "twilio"
 ---
-
-<TagPage :tag="'twilio'" :items='[{"type":"Project","title":"Call Matrix","description":"Call Intelligence, Marketing, and Analytics Platform","link":"/web-development-projects/call-matrix/"}]' />
+<TagPage :tag="'twilio'" />
