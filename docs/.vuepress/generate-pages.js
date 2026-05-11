@@ -22,6 +22,23 @@ const ensureDirectoryExists = (dirPath) => {
   }
 };
 
+const clearDirectory = (dirPath) => {
+  if (fs.existsSync(dirPath)) {
+    fs.readdirSync(dirPath).forEach((file) => {
+      const curPath = path.join(dirPath, file);
+      if (fs.lstatSync(curPath).isDirectory()) {
+         if (!file.startsWith('.')) {
+           fs.rmSync(curPath, { recursive: true, force: true });
+         }
+      } else {
+        if (file !== "README.md") {
+          fs.unlinkSync(curPath);
+        }
+      }
+    });
+  }
+};
+
 const readMarkdownContent = (detailsPath) => {
   if (!detailsPath) return "";
   const fullPath = path.resolve(detailsDir, path.basename(detailsPath));
@@ -52,9 +69,6 @@ const toIsoDate = (value) => {
   return date.toISOString().split("T")[0];
 };
 
-const buildContactLink = (subject, service) =>
-  `/contact/?subject=${encodeURIComponent(subject)}&service=${encodeURIComponent(service)}`;
-
 const projectTemplate = (project, projectIndex, allProjects) => {
   const markdownContent = readMarkdownContent(project.details);
   const previousProject =
@@ -73,8 +87,8 @@ const projectTemplate = (project, projectIndex, allProjects) => {
       : null;
 
   return `---
-title: ${project.name}
-description: ${project.description}
+title: "${project.name}"
+description: "${project.description}"
 lastUpdated: false
 editLink: false
 contributors: false
@@ -82,218 +96,54 @@ pageInfo: false
 copyright: false
 layout: Layout
 project:
-  name: ${JSON.stringify(project.name)}
-  description: ${JSON.stringify(project.description)}
-  software: ${JSON.stringify(project.software)}
-  schema: ${JSON.stringify(project.schema)}
-  domain: ${JSON.stringify(project.domain)}
-  year: ${JSON.stringify(project.year)}
-  price: ${JSON.stringify(project.price) || "0"}
-  currency: ${JSON.stringify(project.currency) || "USD"}
-  link: ${JSON.stringify(project.link) || ""}
-  codeLink: ${JSON.stringify(project.codeLink) || ""}
-  contact: ${JSON.stringify(project.contact) || ""}
-  stack: ${JSON.stringify(project.stack)}
-  images: ${JSON.stringify(project.images)}
-  features: ${JSON.stringify(project.features) || []}
-  perspective: ${JSON.stringify(project.perspective || { executive: "", technical: "" })}
-  details: ${JSON.stringify(markdownContent)}
+  name: "${project.name}"
+  description: "${project.description}"
+  software: "${project.software}"
+  schema: "${project.schema}"
+  domain: "${project.domain}"
+  year: "${project.year}"
+  price: ${project.price || 0}
+  currency: "${project.currency || 'USD'}"
+  link: "${project.link || ''}"
+  codeLink: "${project.codeLink || ''}"
+  contact: "${project.contact || ''}"
+  stack: ${JSON.stringify(project.stack || [])}
+  images: ${JSON.stringify(project.images || [])}
+  features: ${JSON.stringify(project.features || [])}
+  perspective: ${JSON.stringify({ executive: "", technical: "", ...project.perspective })}
   previousProject: ${JSON.stringify(previousProject)}
   nextProject: ${JSON.stringify(nextProject)}
 ---
 
-<section class="mt-4 mb-6">
-  <div class="grid">
-    <div class="col-12">
-      <div class="text-primary font-bold mb-2 uppercase tracking-widest text-xs">Project Case Study</div>
-      <h1 class="text-4xl md:text-6xl font-bold mb-3 mt-0 line-height-2">{{$frontmatter.project.name}}</h1>
-      <p class="text-xl opacity-70 line-height-4 max-w-50rem mb-4">{{$frontmatter.project.description}}</p>
-      <div class="surface-card p-4 md:p-5 border-round-3xl shadow-2 border-1 border-100 mb-4">
-        <div class="grid align-items-center">
-          <div class="col-12 md:col-4 border-bottom-1 md:border-bottom-none md:border-right-1 border-100 mb-3 md:mb-0 pb-3 md:pb-0">
-             <div class="flex align-items-center gap-3">
-                <i class="pi pi-briefcase text-primary text-2xl"></i>
-                <div>
-                  <div class="text-xs opacity-50 uppercase font-bold">Industry</div>
-                  <div class="font-bold text-lg text-900">{{$frontmatter.project.domain}}</div>
-                </div>
-             </div>
-          </div>
-          <div class="col-12 md:col-4 border-bottom-1 md:border-bottom-none md:border-right-1 border-100 mb-3 md:mb-0 pb-3 md:pb-0">
-             <div class="flex align-items-center gap-3">
-                <i class="pi pi-bolt text-primary text-2xl"></i>
-                <div>
-                  <div class="text-xs opacity-50 uppercase font-bold">Project Status</div>
-                  <div class="font-bold text-lg text-900">Scale & Growth</div>
-                </div>
-             </div>
-          </div>
-          <div class="col-12 md:col-4 pt-3 md:pt-0">
-             <Stacks :stack="$frontmatter.project.stack" :other-skills="$frontmatter.project.otherSkills" />
-          </div>
-        </div>
-        <div class="mt-4 pt-4 border-top-1 border-100">
-           <div class="flex flex-column md:flex-row align-items-stretch gap-3">
-              <a v-if="$frontmatter.project.link" :href="$frontmatter.project.link" target="_blank" class="no-underline flex-1">
-                <Button label="View Live Demo" icon="pi pi-external-link" severity="primary" class="w-full font-bold py-3" raised rounded />
-              </a>
-              <a v-if="$frontmatter.project.codeLink" :href="$frontmatter.project.codeLink" target="_blank" class="no-underline flex-1">
-                <Button label="View Source Code" icon="pi pi-github" severity="secondary" class="w-full font-bold py-3" raised rounded />
-              </a>
-              <a v-if="$frontmatter.project.contact" :href="'/contact/?subject=' + encodeURIComponent('Scale Request: ' + $frontmatter.project.name)" class="no-underline flex-1">
-                <Button label="Architect Similar Solution" icon="pi pi-bolt" severity="secondary" class="w-full font-bold py-3" raised rounded />
-              </a>
-           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<ProjectHero :project="$frontmatter.project" />
 
-<section v-if="$frontmatter.project.images && $frontmatter.project.images.length" class="mb-8" itemscope itemtype="https://schema.org/SoftwareApplication">
-  <div class="grid m-0 p-0">
-    <div :class="['col-12 p-2', $frontmatter.project.images.length > 1 ? 'md:col-8 lg:col-9' : 'col-12']">
-       <div class="border-round-3xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 h-full surface-card">
-         <Image :src="$frontmatter.project.images[0].itemImageSrc" :alt="$frontmatter.project.images[0].alt" preview class="w-full h-full" imageClass="w-full h-full object-cover block min-h-20rem md:min-h-30rem" />
-       </div>
-    </div>
-    <div v-if="$frontmatter.project.images.length > 1" class="col-12 md:col-4 lg:col-3 p-0">
-       <div class="grid m-0 p-0">
-          <div v-for="(img, idx) in $frontmatter.project.images.slice(1, 3)" :key="idx" class="col-12 p-2">
-             <div class="border-round-3xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 h-full surface-card">
-                <Image :src="img.itemImageSrc" :alt="img.alt" preview class="w-full h-full" imageClass="w-full h-full object-cover block min-h-12rem md:min-h-14-5rem" />
-             </div>
-          </div>
-       </div>
-    </div>
-    <div v-for="(img, idx) in $frontmatter.project.images.slice(3)" :key="idx" class="col-12 md:col-6 lg:col-4 p-2">
-       <div class="border-round-3xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 h-full surface-card">
-          <Image :src="img.itemImageSrc" :alt="img.alt" preview class="w-full h-full" imageClass="w-full h-full object-cover block min-h-15rem" />
-       </div>
-    </div>
-  </div>
-</section>
+<ProjectGallery :images="$frontmatter.project.images" />
 
-<div class="grid mb-8">
-  <div class="col-12">
-    <TabView class="project-perspective-tabs" v-if="$frontmatter.project.perspective?.executive">
-      <TabPanel>
-        <template #header>
-          <div class="flex align-items-center gap-2">
-            <i class="pi pi-briefcase"></i>
-            <span>Strategic Executive</span>
-          </div>
-        </template>
-        <div class="p-4 md:p-6 surface-card border-round-3xl shadow-1 mt-4">
-          <div class="flex align-items-center gap-2 text-primary font-bold mb-4 uppercase tracking-wider text-sm">
-            <i class="pi pi-verified"></i>
-            Business Impact & ROI
-          </div>
-          <div class="text-xl line-height-4 text-700 mb-6">
-            {{ $frontmatter.project.perspective.executive }}
-          </div>
-          <div class="grid">
-            <div class="col-12">
-               <h4 class="text-lg font-bold mb-4 flex align-items-center gap-2">
-                  <i class="pi pi-list text-primary"></i> Strategic Playbook Features
-               </h4>
-               <div class="grid">
-                  <div v-for="feature in $frontmatter.project.features" :key="feature.text" class="col-12 md:col-6 mb-3">
-                     <div class="flex align-items-start gap-3">
-                        <i class="pi pi-check text-primary mt-1"></i>
-                        <div class="text-sm font-medium line-height-3" v-html="feature.text"></div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-          </div>
-        </div>
-      </TabPanel>
-      <TabPanel>
-        <template #header>
-          <div class="flex align-items-center gap-2">
-            <i class="pi pi-cog"></i>
-            <span>Engineering Architecture</span>
-          </div>
-        </template>
-        <div class="p-4 md:p-6 surface-card border-round-3xl shadow-1 mt-4">
-          <div class="flex align-items-center gap-2 text-primary font-bold mb-4 uppercase tracking-wider text-sm">
-            <i class="pi pi-code"></i>
-            Technical Deep-Dive
-          </div>
-          <div class="text-xl line-height-4 text-700 mb-6">
-            {{ $frontmatter.project.perspective.technical }}
-          </div>
-          <div v-pre class="project-markdown-content text-lg line-height-4">
+<ProjectTabs v-if="$frontmatter.project?.perspective?.executive" :project="$frontmatter.project">
+
+${markdownContent}
+
+</ProjectTabs>
+
+<template v-else>
+
+<ProjectTabs :project="$frontmatter.project" />
+
+<div v-pre class="project-markdown-content text-lg line-height-4 mb-8">
 
 ${markdownContent}
 
 </div>
-</div>
-</TabPanel>
-</TabView>
 
-<div v-else class="surface-card p-4 md:p-6 border-round-3xl shadow-2 h-full">
-  <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">
-     <i class="pi pi-list text-primary"></i> Playbook Features
-  </h3>
-  <div class="grid">
-     <div v-for="feature in $frontmatter.project.features" :key="feature.text" class="col-12 md:col-6 mb-3">
-        <div class="flex align-items-start gap-3">
-           <i class="pi pi-verified text-primary mt-1"></i>
-           <div class="text-sm font-medium line-height-3" v-html="feature.text"></div>
-        </div>
-     </div>
-  </div>
-</div>
-</div>
+</template>
 
-</div>
-
-<div v-if="!$frontmatter.project.perspective?.executive" v-pre class="project-markdown-content text-lg line-height-4 mb-8">
-
-${markdownContent}
-</div>
 <ConsultingBridge />
-<div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
-      <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">
-        <i class="pi pi-cog text-primary"></i>
-        Related Engineering Services
-      </h3>
-      <div class="flex flex-wrap gap-3">
-        <a href="/web-development-services/custom-software-engineering/" class="no-underline px-4 py-2 surface-0 shadow-1 border-round-xl text-700 font-bold hover:text-primary transition-all">Custom Software</a>
-        <a href="/web-development-services/mvp-development-for-startups/" class="no-underline px-4 py-2 surface-0 shadow-1 border-round-xl text-700 font-bold hover:text-primary transition-all">MVP Development</a>
-        <a href="/web-development-services/ai-and-automation-strategy/" class="no-underline px-4 py-2 surface-0 shadow-1 border-round-xl text-700 font-bold hover:text-primary transition-all">AI & Automation</a>
-      </div>
-    </div>
 
+<AuditCTA />
 
-<div class="flex justify-content-between align-items-center mt-8 pt-6 border-top-1 surface-border">
-  <div class="flex-1">
-    <a v-if="$frontmatter.project.previousProject" :href="$frontmatter.project.previousProject.link" class="flex align-items-center no-underline text-color-secondary hover:text-primary group">
-      <i class="pi pi-chevron-left mr-2 transition-transform group-hover:-translate-x-1"></i>
-      <div class="flex flex-column">
-        <span class="text-xs uppercase text-500 font-bold">Previous</span>
-        <span class="font-bold text-900">{{ $frontmatter.project.previousProject.name }}</span>
-      </div>
-    </a>
-  </div>
-  <div class="flex-1 text-center">
-    <a href="/web-development-projects/" class="no-underline text-color-secondary hover:text-primary font-bold">
-      <i class="pi pi-th-large mr-2"></i>
-      Portfolio
-    </a>
-  </div>
-  <div class="flex-1 text-right">
-    <a v-if="$frontmatter.project.nextProject" :href="$frontmatter.project.nextProject.link" class="flex align-items-center justify-content-end no-underline text-color-secondary hover:text-primary group">
-      <div class="flex flex-column text-right">
-        <span class="text-xs uppercase text-500 font-bold">Next</span>
-        <span class="font-bold text-900">{{ $frontmatter.project.nextProject.name }}</span>
-      </div>
-      <i class="pi pi-chevron-right ml-2 transition-transform group-hover:translate-x-1"></i>
-    </a>
-  </div>
-</div>
+<RelatedServices />
+
+<ProjectNavigation :previous="$frontmatter.project?.previousProject" :next="$frontmatter.project?.nextProject" />
 
 <script setup>
 import { responsiveOptions } from "@data/responsive.js"
@@ -316,193 +166,83 @@ const serviceTemplate = (service, serviceIndex, allServices) => {
         }
       : null;
 
+  const desc = service.description || (service.descriptions && service.descriptions[0]) || "";
+
   return `---
-title: ${service.name} | Stack Seekers
-description: ${service.descriptions.join(" ")}
+title: "${service.name}"
+description: "${desc}"
 lastUpdated: false
 editLink: false
+contributors: false
+pageInfo: false
 copyright: false
 layout: Layout
 service:
-  name: ${JSON.stringify(service.name)}
-  descriptions: ${JSON.stringify(service.descriptions)}
-  icon: ${JSON.stringify(service.icon)}
-  code: ${JSON.stringify(service.code)}
-  imageCode: ${JSON.stringify(service.imageCode || service.code)}
-  metric: ${JSON.stringify(service.metric)}
-  outcome: ${JSON.stringify(service.outcome)}
-  keywords: ${JSON.stringify(service.keywords || [])}
-  idealFor: ${JSON.stringify(service.idealFor || [])}
-  problems: ${JSON.stringify(service.problems || [])}
-  deliverables: ${JSON.stringify(service.deliverables || [])}
-  proof: ${JSON.stringify(service.proof || "")}
-  faq: ${JSON.stringify(service.faq || [])}
+  name: "${service.name}"
+  code: "${service.code}"
+  description: "${desc}"
+  benefits: ${JSON.stringify(service.deliverables || [])}
+  outcomes: ${JSON.stringify(service.problems || [])}
   previousService: ${JSON.stringify(previousService)}
   nextService: ${JSON.stringify(nextService)}
 ---
-<article class="service-sales-page">
-  <section class="mb-6">
-    <div class="grid align-items-center">
-      <div class="col-12 lg:col-7">
-        <div class="text-primary font-bold mb-2 uppercase tracking-widest text-xs">Core Service</div>
-        <h1 class="text-4xl md:text-6xl font-bold mt-0 mb-3 line-height-2">{{$frontmatter.service.name}}</h1>
-        <p class="text-xl text-700 line-height-3 mb-4" v-for="description in $frontmatter.service.descriptions" :key="description">
-          {{ description }}
-        </p>
-        <div class="flex flex-column md:flex-row gap-3">
-          <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
-            <Button label="Book Technical Roadmap Call" icon="pi pi-calendar-clock" severity="primary" raised rounded />
-          </a>
-          <a :href="'/contact/?subject=' + encodeURIComponent($frontmatter.service.name + ' inquiry') + '&service=' + encodeURIComponent($frontmatter.service.name)" class="no-underline">
-            <Button label="Request a Quote" icon="pi pi-send" severity="secondary" raised rounded />
-          </a>
-        </div>
-      </div>
-      <div class="col-12 lg:col-5">
-        <div class="surface-card p-4 md:p-5 border-round-3xl shadow-2 border-1 border-100">
-          <img v-if="$frontmatter.service.imageCode" :src="'/img/service/' + $frontmatter.service.imageCode + '.webp'" :alt="$frontmatter.service.name" class="w-full border-round-2xl mb-4" />
-          <div class="grid">
-            <div class="col-6">
-              <div class="text-xs uppercase text-500 font-bold mb-1">Primary Outcome</div>
-              <div class="font-bold line-height-3">{{$frontmatter.service.outcome}}</div>
-            </div>
-            <div class="col-6">
-              <div class="text-xs uppercase text-500 font-bold mb-1">Signal</div>
-              <div class="font-bold line-height-3">{{$frontmatter.service.metric}}</div>
-            </div>
-          </div>
-        </div>
+
+<section class="mt-4 mb-6">
+  <div class="grid align-items-center">
+    <div class="col-12 lg:col-7">
+      <div class="text-primary font-bold mb-2 uppercase tracking-widest text-xs">Core Expertise</div>
+      <h1 class="text-4xl md:text-6xl font-bold mb-3 mt-0 line-height-2">${service.name}</h1>
+      <p class="text-xl opacity-70 line-height-4 max-w-40rem mb-4">${desc}</p>
+      <div class="flex gap-3">
+         <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+           <Button label="Consult Strategy" icon="pi pi-calendar" severity="primary" size="large" raised rounded class="px-6 py-3 font-bold" />
+         </a>
       </div>
     </div>
-  </section>
-
-  <section class="mb-6 surface-50 border-round-3xl p-4 md:p-5">
-    <div class="grid">
-      <div class="col-12 md:col-4" v-if="$frontmatter.service.idealFor?.length">
-        <h2 class="text-2xl font-bold mt-0 mb-3">Ideal For</h2>
-        <ul class="list-none p-0 m-0">
-          <li v-for="item in $frontmatter.service.idealFor" :key="item" class="flex align-items-start gap-2 mb-3">
-            <i class="pi pi-check-circle text-primary mt-1"></i>
-            <span class="line-height-3">{{ item }}</span>
-          </li>
-        </ul>
-      </div>
-      <div class="col-12 md:col-4" v-if="$frontmatter.service.problems?.length">
-        <h2 class="text-2xl font-bold mt-0 mb-3">Problems Solved</h2>
-        <ul class="list-none p-0 m-0">
-          <li v-for="item in $frontmatter.service.problems" :key="item" class="flex align-items-start gap-2 mb-3">
-            <i class="pi pi-exclamation-circle text-orange-500 mt-1"></i>
-            <span class="line-height-3">{{ item }}</span>
-          </li>
-        </ul>
-      </div>
-      <div class="col-12 md:col-4" v-if="$frontmatter.service.deliverables?.length">
-        <h2 class="text-2xl font-bold mt-0 mb-3">What You Get</h2>
-        <ul class="list-none p-0 m-0">
-          <li v-for="item in $frontmatter.service.deliverables" :key="item" class="flex align-items-start gap-2 mb-3">
-            <i class="pi pi-star text-green-500 mt-1"></i>
-            <span class="line-height-3">{{ item }}</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="mb-6">
-    <div class="surface-900 text-white border-round-3xl p-4 md:p-5 shadow-3">
-      <div class="text-sm uppercase font-bold opacity-70 mb-2">Proof of Fit</div>
-      <p class="text-lg line-height-3 m-0">{{$frontmatter.service.proof}}</p>
-    </div>
-  </section>
-
-  <section class="mb-6">
-    <div class="grid">
-      <div class="col-12 lg:col-8">
-        <h2 class="text-3xl font-bold mt-0 mb-3">How We Work</h2>
-        <div class="grid">
-          <div class="col-12 md:col-4">
-            <div class="surface-card border-round-2xl p-4 shadow-1 h-full">
-              <div class="text-primary font-bold mb-2">1. Audit</div>
-              <p class="line-height-3 m-0">We map the business bottleneck, technical constraints, and the highest-value delivery path.</p>
-            </div>
-          </div>
-          <div class="col-12 md:col-4">
-            <div class="surface-card border-round-2xl p-4 shadow-1 h-full">
-              <div class="text-primary font-bold mb-2">2. Roadmap</div>
-              <p class="line-height-3 m-0">You get a practical plan with architecture decisions, delivery priorities, and risk management.</p>
-            </div>
-          </div>
-          <div class="col-12 md:col-4">
-            <div class="surface-card border-round-2xl p-4 shadow-1 h-full">
-              <div class="text-primary font-bold mb-2">3. Execution</div>
-              <p class="line-height-3 m-0">I stay close to implementation so the strategy becomes shipped product, not a slide deck.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 lg:col-4">
-        <div class="surface-50 border-round-3xl p-4 md:p-5 h-full">
-          <h2 class="text-2xl font-bold mt-0 mb-3">Best Next Step</h2>
-          <p class="line-height-3 text-700">If this service matches your bottleneck, the fastest path is a short roadmap call with enough context to scope the technical direction and commercial fit.</p>
-          <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
-            <Button label="Book the Call" icon="pi pi-arrow-right" severity="primary" raised rounded class="w-full" />
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="mb-6" v-if="$frontmatter.service.faq?.length">
-    <h2 class="text-3xl font-bold mt-0 mb-4">FAQ</h2>
-    <div class="grid">
-      <div class="col-12 md:col-6" v-for="item in $frontmatter.service.faq" :key="item.question">
-        <div class="surface-card border-round-2xl p-4 shadow-1 h-full">
-          <h3 class="text-xl font-bold mt-0 mb-2">{{ item.question }}</h3>
-          <p class="line-height-3 m-0">{{ item.answer }}</p>
-        </div>
-      </div>
-    </div>
-  </section>
-</article>
-
-<!-- Related Case Studies -->
-<section class="mb-8">
-  <div class="surface-900 text-white p-6 md:p-8 border-round-3xl shadow-4 relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary-900 border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
-    <div class="relative z-1">
-      <h3 class="text-3xl font-bold mb-4">Relevant Case Studies</h3>
-      <p class="text-xl text-300 mb-6 max-w-30rem">See how I've applied these principles to real-world business challenges.</p>
-      <div class="grid">
-        <div class="col-12 md:col-4">
-          <a href="/web-development-projects/ai-dynamic-crud-app/" class="no-underline block p-4 surface-800 border-round-2xl hover:surface-700 transition-all border-1 border-white-alpha-10 h-full">
-            <div class="text-primary-400 font-bold text-xs mb-2 uppercase">AI Automation</div>
-            <div class="text-white font-bold mb-2">AI Dynamic CRUD</div>
-            <div class="text-400 text-sm">Enterprise Notion-to-App engine.</div>
-          </a>
-        </div>
-        <div class="col-12 md:col-4">
-          <a href="/web-development-projects/local-home-services-pros/" class="no-underline block p-4 surface-800 border-round-2xl hover:surface-700 transition-all border-1 border-white-alpha-10 h-full">
-            <div class="text-primary-400 font-bold text-xs mb-2 uppercase">Scalable Web</div>
-            <div class="text-white font-bold mb-2">LocalXR Platform</div>
-            <div class="text-400 text-sm">10k+ dynamic service routes.</div>
-          </a>
-        </div>
-        <div class="col-12 md:col-4">
-          <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="no-underline block p-4 surface-800 border-round-2xl hover:surface-700 transition-all border-1 border-white-alpha-10 h-full">
-            <div class="text-primary-400 font-bold text-xs mb-2 uppercase">Enterprise Migration</div>
-            <div class="text-white font-bold mb-2">ABN AMRO Rebuild</div>
-            <div class="text-400 text-sm">Global banking infrastructure.</div>
-          </a>
-        </div>
-      </div>
-      <div class="mt-6 text-center">
-        <a href="/web-development-projects/" class="no-underline text-primary-400 font-bold hover:text-primary-300">
-          View All Projects <i class="pi pi-arrow-right ml-2"></i>
-        </a>
-      </div>
+    <div class="col-12 lg:col-5 hidden lg:block">
+       <div class="surface-card p-4 border-round-3xl shadow-2 border-1 border-100 flex align-items-center justify-content-center min-h-20rem">
+          <i class="pi pi-cog text-primary-100" style="font-size: 15rem; opacity: 0.2"></i>
+       </div>
     </div>
   </div>
 </section>
+
+<div class="grid mb-8">
+  <div class="col-12 lg:col-8">
+    <div class="surface-card p-4 md:p-6 border-round-3xl shadow-1 mb-6">
+      <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">
+        <i class="pi pi-verified text-primary"></i>
+        Strategic Deliverables
+      </h3>
+      <div class="grid">
+        <div v-for="benefit in $frontmatter.service.benefits" :key="benefit" class="col-12 md:col-6 mb-3">
+          <div class="flex align-items-start gap-3">
+            <i class="pi pi-check-circle text-primary mt-1"></i>
+            <span class="text-lg line-height-3">{{ benefit }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="surface-card p-4 md:p-6 border-round-3xl shadow-1">
+       <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">
+        <i class="pi pi-exclamation-triangle text-primary"></i>
+        Challenges We Solve
+      </h3>
+      <div class="flex flex-column gap-4">
+        <div v-for="outcome in $frontmatter.service.outcomes" :key="outcome" class="p-3 border-round-2xl surface-50 border-1 border-100">
+           <div class="text-lg line-height-3">{{ outcome }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 lg:col-4">
+    <AuditSidebar />
+  </div>
+</div>
+
+<ConsultingBridge />
 
 <div class="flex justify-content-between align-items-center mt-8 pt-6 border-top-1 surface-border">
   <div class="flex-1">
@@ -536,36 +276,21 @@ service:
 const tagTemplate = (tag) => {
   const description = `Explore our collection of articles, tutorials, and insights about ${tag}. Stay updated with the latest trends and best practices in ${tag}.`;
   return `---
-title: Posts tagged with ${tag}
-description: ${description}
+title: "Tag: ${tag}"
+description: "${description}"
 layout: Layout
-tag: ${tag}
-head:
-  - - meta
-    - name: keywords
-      content: ${tag}, web development, programming, tech, tutorial
-  - - meta
-    - property: og:title
-      content: Posts tagged with ${tag}
-  - - meta
-    - property: og:description
-      content: ${description}
-  - - meta
-    - property: og:type
-      content: website
+tag: "${tag}"
 ---
-<TagPage />
+<TagPage :tag="'${tag}'" />
 `;
 };
 
 const generatePages = (data, outputDir, slugKey, templateFn) => {
   ensureDirectoryExists(outputDir);
-
   data.forEach((item, index) => {
     const content = templateFn(item, index, data);
-    const dirPath = path.join(outputDir, toKebabCase(item[slugKey]));
+    const dirPath = path.join(outputDir, toKebabCase(item[slugKey] || item.code));
     const filePath = path.join(dirPath, "index.md");
-
     ensureDirectoryExists(dirPath);
     fs.writeFileSync(filePath, content, "utf-8");
     console.log(`Created: ${filePath}`);
@@ -574,163 +299,80 @@ const generatePages = (data, outputDir, slugKey, templateFn) => {
 
 const generateTagPages = () => {
   const allTags = new Set();
-
   posts.forEach((post) => {
     if (Array.isArray(post.tags)) {
       post.tags.forEach((tag) => allTags.add(String(tag).toLowerCase()));
     }
   });
-
+  freelance.forEach((project) => {
+    if (Array.isArray(project.stack)) {
+      project.stack.forEach((tag) => allTags.add(String(tag).toLowerCase()));
+    }
+  });
   const tagsArray = Array.from(allTags).sort();
   ensureDirectoryExists(outTagsDir);
-
-  // Generate individual tag pages
+  clearDirectory(outTagsDir);
   tagsArray.forEach((tag) => {
     const content = tagTemplate(tag);
     const dirPath = path.join(outTagsDir, toKebabCase(tag));
     const filePath = path.join(dirPath, "index.md");
-
     ensureDirectoryExists(dirPath);
     fs.writeFileSync(filePath, content, "utf-8");
     console.log(`Created Tag Page: ${filePath}`);
   });
-
-  // Central Tags index page content
   const indexContent = `---
 title: Explore Topics | Stack Seekers
 description: Browse all technical topics, tutorials, and insights by category and tags.
 layout: Layout
 ---
-
-<section class="p-4 surface-900 text-white border-round-3xl mb-8 overflow-hidden relative">
-  <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary-900 border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
-  <div class="relative z-1 text-center py-6">
-    <div class="flex align-items-center justify-content-center gap-2 text-primary font-bold mb-3 uppercase tracking-wider text-xs">
-      <i class="pi pi-tag"></i>
-      Knowledge Map
-    </div>
-    <h1 class="text-4xl md:text-6xl font-bold mb-4 mt-0 line-height-2">Explore <span class="text-primary-400">Topics</span>.</h1>
-    <p class="text-xl opacity-70 max-w-30rem mx-auto mb-5">Technical deep-dives and strategic breakdowns across the stack.</p>
-  </div>
-</section>
-
 <TagIndex />
-
-<div class="mt-8 text-center">
-  <h3 class="text-2xl font-bold mb-4">Want more insights?</h3>
-  <a href="/posts/" class="no-underline">
-    <Button label="Back to Playbook" icon="pi pi-arrow-left" severity="secondary" rounded text />
-  </a>
-</div>
 `;
   fs.writeFileSync(path.join(outTagsDir, "README.md"), indexContent, "utf-8");
-  console.log(`Created central Tags index: ${path.join(outTagsDir, "README.md")}`);
 };
 
 const collectMarkdownPages = (dirPath, result = []) => {
   const entries = fs.readdirSync(dirPath, { withFileTypes: true });
-
   for (const entry of entries) {
     if (entry.name.startsWith(".")) continue;
     if (entry.name === "node_modules") continue;
-
     const fullPath = path.join(dirPath, entry.name);
-
     if (entry.isDirectory()) {
       collectMarkdownPages(fullPath, result);
       continue;
     }
-
     if (!entry.name.endsWith(".md")) continue;
-    if (entry.name === "README.md" && dirPath === path.resolve(docsRoot, ".vuepress")) continue;
-
     result.push(fullPath);
   }
-
   return result;
 };
 
 const toPagePath = (filePath) => {
   const relativePath = path.relative(docsRoot, filePath).replace(/\\/g, "/");
-
   if (relativePath === "README.md") return "/";
-  if (relativePath.endsWith("/README.md")) {
-    return `/${relativePath.replace(/\/README\.md$/, "/")}`;
-  }
-  if (relativePath.endsWith("/index.md")) {
-    return `/${relativePath.replace(/\/index\.md$/, "/")}`;
-  }
-
+  if (relativePath.endsWith("/README.md")) return `/${relativePath.replace(/\/README\.md$/, "/")}`;
+  if (relativePath.endsWith("/index.md")) return `/${relativePath.replace(/\/index\.md$/, "/")}`;
   return `/${relativePath.replace(/\.md$/, "/")}`;
-};
-
-const getPriority = (pagePath) => {
-  if (pagePath === "/") return "1.0";
-  if (pagePath === "/contact/") return "0.95";
-  if (pagePath === "/web-development-services/") return "0.95";
-  if (pagePath.startsWith("/web-development-services/")) return "0.90";
-  if (pagePath === "/web-development-projects/") return "0.85";
-  if (pagePath.startsWith("/web-development-projects/")) return "0.80";
-  if (pagePath.startsWith("/posts/")) return "0.76";
-  if (pagePath.startsWith("/about/") || pagePath.startsWith("/jiwan-ghosal/")) return "0.72";
-  if (pagePath.startsWith("/tags/")) return "0.58";
-  if (pagePath.startsWith("/privacy-policy/") || pagePath.startsWith("/terms-of-service/")) return "0.20";
-  return "0.64";
-};
-
-const getChangeFrequency = (pagePath) => {
-  if (pagePath === "/" || pagePath === "/contact/" || pagePath === "/web-development-services/") return "weekly";
-  if (pagePath.startsWith("/posts/")) return "monthly";
-  if (pagePath.startsWith("/tags/")) return "weekly";
-  return "monthly";
-};
-
-const getLastModified = (filePath, pagePath) => {
-  const post = posts.find((item) => item.link === pagePath);
-  if (post?.date) return toIsoDate(post.date);
-
-  const stats = fs.statSync(filePath);
-  return toIsoDate(stats.mtime);
 };
 
 const generateSitemap = () => {
   ensureDirectoryExists(publicDir);
-
   const markdownFiles = collectMarkdownPages(docsRoot).filter(
     (filePath) => !filePath.includes(`${path.sep}.vuepress${path.sep}`)
   );
-
-  const urls = markdownFiles
-    .map((filePath) => {
-      const pagePath = toPagePath(filePath);
-      return {
-        loc: `${DOMAIN}${pagePath}`,
-        lastmod: getLastModified(filePath, pagePath),
-        changefreq: getChangeFrequency(pagePath),
-        priority: getPriority(pagePath),
-      };
-    })
-    .sort((a, b) => a.loc.localeCompare(b.loc));
-
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls
-  .map(
-    (url) => `  <url>
-    <loc>${escapeXml(url.loc)}</loc>
-    <lastmod>${url.lastmod}</lastmod>
-    <changefreq>${url.changefreq}</changefreq>
-    <priority>${url.priority}</priority>
-  </url>`
-  )
+${markdownFiles
+  .map((filePath) => {
+    const pagePath = toPagePath(filePath);
+    return `  <url><loc>${escapeXml(DOMAIN + pagePath)}</loc></url>`;
+  })
   .join("\n")}
-</urlset>
-`;
-
+</urlset>`;
   fs.writeFileSync(path.join(publicDir, "sitemap.xml"), xml, "utf-8");
-  console.log(`Created sitemap: ${path.join(publicDir, "sitemap.xml")}`);
 };
 
+clearDirectory(outProjectDir);
+clearDirectory(outServiceDir);
 generatePages(freelance, outProjectDir, "name", projectTemplate);
 generatePages(services, outServiceDir, "code", serviceTemplate);
 generateTagPages();
