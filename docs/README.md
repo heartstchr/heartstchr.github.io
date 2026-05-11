@@ -331,25 +331,25 @@ copyright: false
   </div>
 </div>
 
-<div class="mb-8 px-4 py-4 surface-900 text-white border-round-3xl shadow-4 overflow-hidden relative" style="max-width: 1200px; margin: 0 auto;">
+<div class="mb-8 px-4 py-6 md:py-8 surface-section border-round-3xl shadow-4 overflow-hidden relative border-1 border-100" style="max-width: 1200px; margin: 0 auto;">
   <div class="absolute top-0 right-0 w-30rem h-30rem bg-primary-900 border-circle opacity-10" style="filter: blur(100px); transform: translate(30%, -30%)"></div>
   
   <div class="text-center mb-8 relative z-1">
-    <h2 class="text-4xl md:text-6xl font-bold mb-3">Architecting Your Success</h2>
-    <p class="text-xl opacity-80 max-w-30rem mx-auto">A proven, four-stage framework to stabilize your technical debt.</p>
+    <h2 class="text-4xl md:text-6xl font-bold mb-3 text-900">Architecting Your Success</h2>
+    <p class="text-xl text-600 max-w-30rem mx-auto">A proven, four-stage framework to stabilize your technical debt.</p>
   </div>  <div class="grid relative z-1 max-w-1200 mx-auto">
     <!-- Precision Architectural Path -->
-    <div class="hidden lg:block absolute w-full" style="z-index: 0; top: 3.15rem; width: 75%; left: 12.5%; height: 2px; background-image: linear-gradient(to right, var(--primary-800) 50%, transparent 50%); background-size: 16px 100%; opacity: 0.4;"></div>
+    <div class="hidden lg:block absolute w-full" style="z-index: 0; top: 3.15rem; width: 75%; left: 12.5%; height: 2px; background-image: linear-gradient(to right, var(--primary-400) 50%, transparent 50%); background-size: 16px 100%; opacity: 0.2;"></div>
     <div class="col-12 lg:col-3 p-4" v-for="(step, idx) in roadmapSteps" :key="step.title">
       <div class="flex flex-column h-full relative" style="z-index: 2;">
-        <div class="w-4rem h-4rem border-circle bg-primary-900 border-2 border-primary-500 flex align-items-center justify-content-center text-2xl font-bold text-primary-400 mb-4 shadow-pill mx-auto lg:mx-0 relative" style="z-index: 3;">
+        <div class="w-4rem h-4rem border-circle bg-primary-50 dark:bg-primary-900 border-2 border-primary-500 flex align-items-center justify-content-center text-2xl font-bold text-primary mb-4 shadow-pill mx-auto lg:mx-0 relative" style="z-index: 3;">
            0{{ idx + 1 }}
         </div>
-        <h3 class="text-2xl font-bold mb-3 text-white text-center lg:text-left">{{ step.title }}</h3>
-        <p class="text-400 line-height-3 text-sm mb-4 text-center lg:text-left">{{ step.desc }}</p>
-        <div class="mt-auto px-3 py-2 bg-white-alpha-10 border-round-lg inline-flex align-items-center gap-2 w-max mx-auto lg:mx-0">
-           <i class="pi pi-verified text-primary-400"></i>
-           <span class="text-xs font-bold tracking-widest uppercase opacity-80">{{ step.output }}</span>
+        <h3 class="text-2xl font-bold mb-3 text-900 text-center lg:text-left">{{ step.title }}</h3>
+        <p class="text-600 line-height-3 text-sm mb-4 text-center lg:text-left">{{ step.desc }}</p>
+        <div class="mt-auto px-3 py-2 bg-primary-50 dark:bg-white-alpha-10 border-round-lg inline-flex align-items-center gap-2 w-max mx-auto lg:mx-0 border-1 border-primary-100 dark:border-none">
+           <i class="pi pi-verified text-primary"></i>
+           <span class="text-xs font-bold tracking-widest uppercase text-700 dark:text-white dark:opacity-80">{{ step.output }}</span>
         </div>
       </div>
     </div>
@@ -361,8 +361,8 @@ copyright: false
   <a href="https://cal.com/stackseekers" target="_blank" class="flex-grow-1 no-underline">
     <Button label="Book Call" icon="pi pi-calendar" severity="primary" class="w-full text-lg font-bold py-3" raised />
   </a>
-  <div @click="scrollToSolutions" class="flex align-items-center justify-content-center bg-white-alpha-10 border-round-lg px-4 border-1 border-white-alpha-20 cursor-pointer">
-    <i class="pi pi-chevron-down text-white"></i>
+  <div @click="scrollToSolutions" class="flex align-items-center justify-content-center bg-white-alpha-10 dark:bg-white-alpha-10 border-round-lg px-4 border-1 border-white-alpha-20 cursor-pointer">
+    <i class="pi pi-chevron-down text-900 dark:text-white"></i>
   </div>
 </div>
 
@@ -376,7 +376,7 @@ copyright: false
     <div class="col-12 lg:col-3 md:col-6 p-2">
       <div class="surface-0 border-round-2xl shadow-6 p-5 h-full flex flex-column text-left relative overflow-hidden border-2 border-primary">
         <div class="absolute top-0 right-0 bg-primary text-900 text-xs font-bold px-2 py-1 border-round-bottom-left-md">POPULAR</div>
-        <div class="text-xl font-bold text-primary mb-2">Intelligence Integration</div>
+        <div class="text-base font-bold text-primary mb-2">Intelligence Integration</div>
         <div class="text-2xl font-bold mb-4">AI Feature Engineering</div>
         <p class="text-sm line-height-3 mb-5 flex-grow-1">Embed custom LLMs and automated decision-making natively into your application to eliminate manual bottlenecks.</p>
         <a href="https://cal.com/stackseekers" class="w-full line-height-1">
@@ -387,7 +387,7 @@ copyright: false
     <!-- Tier 2: Product Architecture -->
     <div class="col-12 lg:col-3 md:col-6 p-2">
       <div class="surface-0 border-round-2xl shadow-2 p-5 h-full flex flex-column text-left hover:shadow-4 transition-all border-1 border-200">
-        <div class="text-xl font-bold text-600 mb-2">Product Architecture</div>
+        <div class="text-base font-bold text-600 mb-2">Product Architecture</div>
         <div class="text-2xl font-bold mb-4">SaaS MVP & Platform Build</div>
         <p class="text-sm line-height-3 mb-5 flex-grow-1">End-to-end development of resilient business platforms, built to scale from launch to high-concurrency traffic.</p>
         <a href="https://cal.com/stackseekers" class="w-full line-height-1">
@@ -398,7 +398,7 @@ copyright: false
     <!-- Tier 3: Growth Engineering -->
     <div class="col-12 lg:col-3 md:col-6 p-2">
       <div class="surface-0 border-round-2xl shadow-2 p-5 h-full flex flex-column text-left hover:shadow-4 transition-all border-1 border-200">
-        <div class="text-xl font-bold text-600 mb-2">Growth Engineering</div>
+        <div class="text-base font-bold text-600 mb-2">Growth Engineering</div>
         <div class="text-2xl font-bold mb-4">Programmatic SEO Engine</div>
         <p class="text-sm line-height-3 mb-5 flex-grow-1">A database-driven acquisition framework to dominate local SEO and capture massive inbound traffic automatically.</p>
         <a href="https://cal.com/stackseekers" class="w-full line-height-1">
@@ -409,7 +409,7 @@ copyright: false
     <!-- Tier 4: Operational Automation -->
     <div class="col-12 lg:col-3 md:col-6 p-2">
       <div class="surface-0 border-round-2xl shadow-2 p-5 h-full flex flex-column text-left hover:shadow-4 transition-all border-1 border-200">
-        <div class="text-xl font-bold text-600 mb-2">Operational Automation</div>
+        <div class="text-base font-bold text-600 mb-2">Operational Automation</div>
         <div class="text-2xl font-bold mb-4">Internal Portals & Workflows</div>
         <p class="text-sm line-height-3 mb-5 flex-grow-1">Transform fragmented internal data (Notion, Sheets) into professional, high-integrity business tools.</p>
         <a href="https://cal.com/stackseekers" class="w-full line-height-1">
@@ -462,21 +462,40 @@ copyright: false
 <div class="mb-8 surface-50 border-round-3xl p-4 md:p-6" style="max-width: 1000px; margin: 0 auto;">
   <div class="text-center pb-6">
     <h2 class="text-4xl font-bold m-0 p-0">Frequently asked <span class="text-primary">questions</span></h2>
-  </div>
-  <div class="flex flex-column gap-5">
-    <div class="surface-0 p-4 border-round-xl shadow-1">
-      <h3 class="m-0 p-0 font-bold text-xl mb-3">Q. Why do I need Programmatic SEO over regular SEO?</h3>
-      <p class="m-0 text-700 line-height-3">
-        Regular SEO works for a blog post. Programmatic SEO works for building massive directories or local service marketplaces. If you need to target long-tail keywords natively across 1,000 cities, you need database-driven site architecture, not standard blogging tools.
-      </p>
-    </div>
-    <div class="surface-0 p-4 border-round-xl shadow-1">
-      <h3 class="m-0 p-0 font-bold text-xl mb-3">Q. Do you handle both Frontend and Backend on custom SaaS builds?</h3>
-      <p class="m-0 text-700 line-height-3">
-        Yes. As a full-stack engineering partner, I design the complete system — from fast, interactive user interfaces to high-performance server logic and secure, scalable cloud infrastructure. One partner, full ownership.
-      </p>
-    </div>
-    <div class="surface-0 p-4 border-round-xl shadow-1 border-left-3 border-primary">
+  </div>  <div class="max-w-800 mx-auto">
+    <Accordion :multiple="true" :activeIndex="[0]">
+      <AccordionTab header="Q. Why do I need Programmatic SEO over regular SEO?">
+        <p class="m-0 text-700 line-height-3">
+          Regular SEO works for a blog post. Programmatic SEO works for building massive directories or local service marketplaces. If you need to target long-tail keywords natively across 1,000 cities, you need database-driven site architecture, not standard blogging tools.
+        </p>
+      </AccordionTab>
+      <AccordionTab header="Q. Do you handle both Frontend and Backend on custom SaaS builds?">
+        <p class="m-0 text-700 line-height-3">
+          Yes. As a full-stack engineering partner, I design the complete system — from fast, interactive user interfaces to high-performance server logic and secure, scalable cloud infrastructure. One partner, full ownership.
+        </p>
+      </AccordionTab>
+      <AccordionTab header="Q. How fast can we launch our MVP?">
+        <p class="m-0 text-700 line-height-3">
+          Most production-ready MVPs are scoped for a 4 to 8-week delivery cycle. We focus on 'High-Integrity Velocity' — shipping a product that is fast to market but built on a foundation that won't require a total rewrite at 10k users.
+        </p>
+      </AccordionTab>
+      <AccordionTab header="Q. Can you work with our existing engineering team?">
+        <p class="m-0 text-700 line-height-3">
+          Absolutely. I often operate as a Fractional CTO or Architecture Lead, working directly with your developers to set standards, review code, and solve the hardest technical bottlenecks while upskilling the internal team.
+        </p>
+      </AccordionTab>
+      <AccordionTab header="Q. What is your preferred technology stack?">
+        <p class="m-0 text-700 line-height-3">
+          I specialize in the 'Modern Enterprise Stack': **React/Next.js**, **Node.js/TypeScript**, and **Cloud-Native Infrastructure** (AWS/GCP/Azure). I choose tools based on your business constraints, not personal hype.
+        </p>
+      </AccordionTab>
+      <AccordionTab header="Q. What if our current codebase is a 'legacy mess'?">
+        <p class="m-0 text-700 line-height-3">
+          That is where I do my best work. I specialize in phased migrations and architectural resets — fixing the structural debt while keeping the product running, ensuring zero downtime during the modernization.
+        </p>
+      </AccordionTab>
+    </Accordion>
+    <div class="surface-0 p-4 md:p-6 border-round-xl shadow-1 border-left-3 border-primary mt-6">
       <h3 class="m-0 p-0 font-bold text-xl flex align-items-center"><i class="pi pi-shield mr-2 text-primary"></i> The Zero-Risk Guarantee</h3>
       <p class="m-0 text-700 line-height-3 mt-3">
         <strong>If I'm not a perfect fit after the first week of engagement, you pay absolutely nothing.</strong> I partner strictly on milestone-based or month-to-month contracts depending on the scope, so you are never locked into a bad situation.
@@ -486,15 +505,18 @@ copyright: false
 </div>
 
 <!-- Contact CTA -->
-<div class="mb-8 border-round-3xl p-6 text-center shadow-4" style="max-width: 1000px; margin: 0 auto;">
-  <h2 class="text-4xl md:text-5xl font-bold m-0 mb-3 text-900">Let's solve your hardest technical bottleneck</h2>
-  <p class="text-xl line-height-3 mb-5 opacity-90 mx-auto" style="max-width: 650px;">
+<div class="mb-8 border-round-3xl p-6 md:p-8 text-center shadow-4 surface-section border-1 border-100 relative overflow-hidden" style="max-width: 1000px; margin: 0 auto;">
+  <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
+  <h2 class="text-4xl md:text-5xl font-bold m-0 mb-3 text-900 relative z-1">Let's solve your hardest technical bottleneck</h2>
+  <p class="text-xl line-height-3 mb-5 text-600 mx-auto relative z-1" style="max-width: 650px;">
     Stop letting manual processes or weak infrastructure hold back your company's growth. Book a call to discuss architecture and solutions.
   </p>
-  <a href="https://cal.com/stackseekers" size="large" class="no-underline"> 
-    <Button label="Book a Free Discovery Call" icon="pi pi-video" class="p-button-secondary bg-white text-primary text-lg font-bold px-5 py-3 border-none hover:bg-gray-100 transition-colors" raised rounded />
-  </a>
-  <div class="text-sm mt-4 opacity-80">No commitment. Get a technical roadmap on the call.</div>
+  <div class="flex justify-content-center relative z-1">
+    <a href="https://cal.com/stackseekers" target="_blank" class="no-underline"> 
+      <Button label="Book a Free Discovery Call" icon="pi pi-video" severity="primary" size="large" raised rounded class="px-5 py-3 font-bold" />
+    </a>
+  </div>
+  <div class="text-sm mt-4 text-500 relative z-1">No commitment. Get a technical roadmap on the call.</div>
 </div>
 
 <script setup lang="ts">

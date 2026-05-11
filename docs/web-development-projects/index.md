@@ -119,28 +119,28 @@ copyright: false
 </div>
 
 <!-- Bottom Strategy Section -->
-<section class="mt-8 mb-8 px-4 py-8 surface-900 text-white border-round-3xl shadow-4 overflow-hidden relative">
+<section class="mt-8 mb-8 px-4 py-8 surface-section border-round-3xl shadow-4 overflow-hidden relative border-1 border-100">
   <div class="absolute top-0 right-0 w-30rem h-30rem bg-primary-900 border-circle opacity-10" style="filter: blur(100px); transform: translate(30%, -30%)"></div>
   
   <div class="text-center mb-8 relative z-1">
-    <div class="flex align-items-center justify-content-center gap-2 text-primary-400 font-bold mb-3 uppercase tracking-widest text-xs">
+    <div class="flex align-items-center justify-content-center gap-2 text-primary font-bold mb-3 uppercase tracking-widest text-xs">
        <i class="pi pi-map"></i> The Success Playbook
     </div>
-    <h2 class="text-4xl md:text-5xl font-bold mb-3">The Architectural <span class="text-primary-400">Logic Flow</span>.</h2>
-    <p class="text-xl opacity-70 max-w-30rem mx-auto">A proven, non-linear framework for scaling high-stakes software.</p>
+    <h2 class="text-4xl md:text-5xl font-bold mb-3 text-900">The Architectural <span class="text-primary">Logic Flow</span>.</h2>
+    <p class="text-xl text-600 max-w-30rem mx-auto">A proven, non-linear framework for scaling high-stakes software.</p>
   </div>
 
   <div class="grid relative z-1 max-w-1000 mx-auto mb-6">
-    <div class="hidden lg:block absolute w-full" style="z-index: 0; top: 3.15rem; width: 75%; left: 12.5%; height: 2px; background-image: linear-gradient(to right, var(--primary-800) 50%, transparent 50%); background-size: 16px 100%; opacity: 0.4;"></div>
+    <div class="hidden lg:block absolute w-full" style="z-index: 0; top: 3.15rem; width: 75%; left: 12.5%; height: 2px; background-image: linear-gradient(to right, var(--primary-400) 50%, transparent 50%); background-size: 16px 100%; opacity: 0.2;"></div>
     <div class="col-12 lg:col-3 p-4" v-for="(step, idx) in roadmapSteps" :key="step.title">
       <div class="flex flex-column h-full relative" style="z-index: 2;">
-        <div class="w-4rem h-4rem border-circle bg-primary-900 border-2 border-primary-500 flex align-items-center justify-content-center text-2xl font-bold text-primary-400 mb-4 shadow-pill mx-auto lg:mx-0 relative" style="z-index: 3;">
+        <div class="w-4rem h-4rem border-circle bg-primary-50 dark:bg-primary-900 border-2 border-primary-500 flex align-items-center justify-content-center text-2xl font-bold text-primary mb-4 shadow-pill mx-auto lg:mx-0 relative" style="z-index: 3;">
            0{{ idx + 1 }}
         </div>
-        <h3 class="text-2xl font-bold mb-3 text-white text-center lg:text-left">{{ step.title }}</h3>
-        <p class="text-400 line-height-4 text-sm mb-4 text-center lg:text-left">{{ step.desc }}</p>
+        <h3 class="text-2xl font-bold mb-3 text-900 text-center lg:text-left">{{ step.title }}</h3>
+        <p class="text-600 line-height-4 text-sm mb-4 text-center lg:text-left">{{ step.desc }}</p>
         <div v-if="idx === 1" class="mt-auto text-center lg:text-left">
-           <a href="/startup-stack-audit-checklist/" class="no-underline text-xs font-bold text-primary-400 flex align-items-center justify-content-center lg:justify-content-start gap-2 hover:text-white transition-colors">
+           <a href="/startup-stack-audit-checklist/" class="no-underline text-xs font-bold text-primary flex align-items-center justify-content-center lg:justify-content-start gap-2 hover:text-primary-700 transition-colors">
               Try Self-Audit <i class="pi pi-arrow-right"></i>
            </a>
         </div>
