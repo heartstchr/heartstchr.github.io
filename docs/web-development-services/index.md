@@ -110,9 +110,14 @@ pageInfo: false
   <p class="text-lg md:text-xl line-height-3 mb-5 opacity-90 mx-auto" style="max-width: 650px;">
     Not sure which service fits? I use this short roadmap call to identify the bottleneck, pressure-test the architecture, and recommend the fastest path to revenue, reliability, or automation gains.
   </p>
-  <a href="https://cal.com/stackseekers" class="no-underline">
-    <Button label="Book Roadmap Session" icon="pi pi-calendar" severity="secondary" raised rounded class="text-lg font-bold px-5 py-3" />
-  </a>
+  <div class="flex flex-column md:flex-row gap-3 justify-content-center">
+    <a href="https://cal.com/stackseekers" class="no-underline">
+      <Button label="Book Roadmap Session" icon="pi pi-calendar" severity="secondary" raised rounded class="text-lg font-bold px-5 py-3" />
+    </a>
+    <a href="/startup-stack-audit-checklist/" class="no-underline">
+      <Button label="Run 5-Min Self Audit" icon="pi pi-check-square" severity="primary" raised rounded outlined class="text-lg font-bold px-5 py-3" />
+    </a>
+  </div>
   <div class="text-sm mt-4 opacity-70">Best fit for founders, product owners, and engineering teams with active delivery goals.</div>
 </div>
 

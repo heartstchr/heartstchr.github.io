@@ -103,9 +103,14 @@ service:
         <h2 class="text-3xl font-bold mt-0 mb-3">How We Work</h2>
         <div class="grid">
           <div class="col-12 md:col-4">
-            <div class="surface-card border-round-2xl p-4 shadow-1 h-full">
+            <div class="surface-card border-round-2xl p-4 shadow-1 h-full flex flex-column">
               <div class="text-primary font-bold mb-2">1. Audit</div>
-              <p class="line-height-3 m-0">We map the business bottleneck, technical constraints, and the highest-value delivery path.</p>
+              <p class="line-height-3 m-0 mb-4">We map the business bottleneck, technical constraints, and the highest-value delivery path.</p>
+              <div class="mt-auto">
+                 <a href="/startup-stack-audit-checklist/" class="no-underline text-xs font-bold text-primary flex align-items-center gap-2">
+                    Start Self-Audit <i class="pi pi-arrow-right"></i>
+                 </a>
+              </div>
             </div>
           </div>
           <div class="col-12 md:col-4">

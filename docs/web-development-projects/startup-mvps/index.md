@@ -37,6 +37,16 @@ home: true
 <div class="mb-8 px-4 md:px-6 text-700 line-height-3" style="max-width: 900px;">
   <p>Building a successful startup requires more than just code; it requires a <strong>Minimum Viable Product (MVP)</strong> that proves your business thesis while remaining scalable. Our approach to startup development focuses on <strong>speed to market</strong> and <strong>architectural integrity</strong>.</p>
   <p>We've helped founders launch platforms ranging from niche home service marketplaces to high-traffic programmatic lead generation engines. By leveraging a battle-tested stack of React, Node.js, and automated infrastructure, we ensure your MVP doesn't just launch—it survives its first 10,000 users without a rewrite.</p>
+  
+  <div class="mt-6 p-4 border-round-2xl surface-card shadow-1 border-1 border-100 flex align-items-center justify-content-between gap-4">
+    <div>
+      <div class="font-bold text-900 mb-1">Is your current stack scale-ready?</div>
+      <p class="text-sm m-0 opacity-70">Run our free audit to check for infrastructure red flags.</p>
+    </div>
+    <a href="/startup-stack-audit-checklist/" class="no-underline">
+      <Button label="Audit My Stack" icon="pi pi-check-square" severity="secondary" rounded />
+    </a>
+  </div>
 </div>
 
 <div class="grid mb-8">

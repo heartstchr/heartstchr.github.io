@@ -37,6 +37,16 @@ home: true
 <div class="mb-8 px-4 md:px-6 text-700 line-height-3" style="max-width: 900px;">
   <p>Our <strong>SaaS development</strong> expertise spans from micro-SaaS widgets to full-scale multi-tenant platforms. We specialise in building <strong>subscription-based software</strong> that manages high-concurrency traffic while maintaining data isolation and security.</p>
   <p>Whether you are building a B2B productivity tool or a B2C marketplace, we architect the core pillars of your product: <strong>secure authentication</strong>, <strong>automated billing</strong>, and <strong>performant database schemas</strong>. Our solutions are built to grow with your MRR goals.</p>
+
+  <div class="mt-6 p-4 border-round-2xl surface-card shadow-1 border-1 border-100 flex align-items-center justify-content-between gap-4">
+    <div>
+      <div class="font-bold text-900 mb-1">Is your SaaS foundation scale-ready?</div>
+      <p class="text-sm m-0 opacity-70">Check for architectural red flags before they block your growth.</p>
+    </div>
+    <a href="/startup-stack-audit-checklist/" class="no-underline">
+      <Button label="Audit My SaaS" icon="pi pi-check-square" severity="secondary" rounded />
+    </a>
+  </div>
 </div>
 
 <div class="grid mb-8">

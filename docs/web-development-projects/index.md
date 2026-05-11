@@ -139,6 +139,11 @@ copyright: false
         </div>
         <h3 class="text-2xl font-bold mb-3 text-white text-center lg:text-left">{{ step.title }}</h3>
         <p class="text-400 line-height-4 text-sm mb-4 text-center lg:text-left">{{ step.desc }}</p>
+        <div v-if="idx === 1" class="mt-auto text-center lg:text-left">
+           <a href="/startup-stack-audit-checklist/" class="no-underline text-xs font-bold text-primary-400 flex align-items-center justify-content-center lg:justify-content-start gap-2 hover:text-white transition-colors">
+              Try Self-Audit <i class="pi pi-arrow-right"></i>
+           </a>
+        </div>
       </div>
     </div>
   </div>

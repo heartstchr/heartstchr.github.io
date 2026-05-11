@@ -153,16 +153,21 @@ copyright: false
   <div class="grid">
     <div class="col-12 md:col-6 p-3">
       <div class="surface-0 p-4 border-round-xl shadow-2 h-full border-top-3 border-green-500">
-        <div class="bg-green-100 text-green-600 border-circle w-3rem h-3rem flex align-items-center justify-content-center mb-4"><i class="pi pi-sparkles text-xl"></i></div>
+        <div class="bg-green-100 text-green-600 border-circle w-3rem h-3rem flex align-items-center justify-content-center mb-2"><i class="pi pi-sparkles text-xl"></i></div>
         <h3 class="m-0 mb-3 font-bold text-xl">The Intelligence Problem</h3>
         <p class="text-700 line-height-3">You are spending hundreds of hours on manual content creation or matching processes. You need custom AI integration (like Gemini/OpenAI interfaces) to automate intelligence safely within your own app.</p>
       </div>
     </div>
     <div class="col-12 md:col-6 p-3">
-      <div class="surface-0 p-4 border-round-xl shadow-2 h-full border-top-3 border-purple-500">
+      <div class="surface-0 p-4 border-round-xl shadow-2 h-full border-top-3 border-purple-500 flex flex-column">
         <div class="bg-purple-100 text-purple-600 border-circle w-3rem h-3rem flex align-items-center justify-content-center mb-4"><i class="pi pi-code text-xl"></i></div>
         <h3 class="m-0 mb-3 font-bold text-xl">The Scale Problem</h3>
-        <p class="text-700 line-height-3">You need to launch a complex SaaS MVP, or your legacy application is crumbling under traffic. You require flawless UI/UX, robust backend architecture, and high-concurrency capability.</p>
+        <p class="text-700 line-height-3 mb-4">You need to launch a complex SaaS MVP, or your legacy application is crumbling under traffic. You require flawless UI/UX, robust backend architecture, and high-concurrency capability.</p>
+        <div class="mt-auto pt-3 border-top-1 border-50">
+           <a href="/startup-stack-audit-checklist/" class="no-underline text-sm font-bold text-purple-600 flex align-items-center gap-2 hover:translate-x-2 transition-all">
+              Run a Tech Stack Self-Audit <i class="pi pi-arrow-right"></i>
+           </a>
+        </div>
       </div>
     </div>
     <div class="col-12 md:col-6 p-3">
