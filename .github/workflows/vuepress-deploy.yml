@@ -30,7 +30,7 @@ jobs:
 
       - name: Install Deps
         run: |
-          pnpm install --frozen-lockfile
+          pnpm install
 
       - name: Build Web
         env:
@@ -50,9 +50,12 @@ jobs:
           # Create .nojekyll file
           > docs/.vuepress/dist/.nojekyll
 
+      - name: Verify Build
+        run: ls -la docs/.vuepress/dist
+
       - name: Deploy web
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: docs/.vuepress/dist
+          folder: ./docs/.vuepress/dist
           clean: true
