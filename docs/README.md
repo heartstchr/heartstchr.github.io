@@ -6,75 +6,101 @@ editLink: false
 copyright: false
 ---
 
-<section class="hero-newage relative overflow-hidden p-4 md:p-6 surface-0">
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-  <div class="grid align-items-center">
+
+<section class="hero-newage relative overflow-hidden px-4 md:px-8 lg:px-12 surface-0 flex align-items-center" style="min-height: 100vh;">
+  <!-- Dynamic Background Elements -->
+  <div class="orb orb-1 opacity-20"></div>
+  <div class="orb orb-2 opacity-20"></div>
+  <div class="orb orb-3 opacity-10 hidden lg:block"></div>
+  <div class="grid align-items-center relative z-1 w-full max-w-screen-xl mx-auto py-4">
     <div class="col-12 lg:col-7">
-      <div class="mb-3 flex align-items-center gap-2">
-        <span class="inline-flex align-items-center px-2 py-1 border-round-xl bg-primary text-xs font-bold uppercase letter-spacing-wide">
-          <i class="pi pi-bolt mr-1"></i> 10 Years of Enterprise-Grade Architecture
+      <!-- Premium Badge -->
+      <div class="mb-2 flex align-items-center gap-2 fade-in">
+        <span class="inline-flex align-items-center px-3 py-1 border-round-3xl glass-effect text-xs font-bold uppercase letter-spacing-wide border-1 border-white-alpha-20 shadow-2">
+          <i class="pi pi-verified text-primary-400 mr-2"></i> 
+          <span class="text-color">Fractional CTO & Strategic Architecture Partnership</span>
         </span>
       </div>
-      <h1 class="m-0 p-0 line-height-2 text-4xl md:text-7xl font-bold">
-        Fractional CTO, <span class="text-gradient">AI automation</span>, and <span class="text-gradient-2">programmatic SEO systems</span> for brands that need execution.
+      <!-- Headline: Strategic Positioning Pivot -->
+      <h1 class="m-0 p-0 line-height-1 text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight">
+        Engineering <span class="text-gradient">Scalable Revenue</span> Systems.
       </h1>
-      <div class="text-xl md:text-2xl mt-4 line-height-3 text-700 hidden md:block">
-        From migrating global banking infrastructure for <strong>ABN AMRO</strong> to reducing lead turnaround from <strong>4 days to 2 hours</strong> for <strong>Upstox</strong>. I help founders and product teams turn technical bottlenecks into scalable revenue systems.
+      <p class="text-xl md:text-3xl mt-4 text-600 font-medium opacity-90 max-w-40rem line-height-3">Fractional CTO Leadership, AI Automation & Programmatic SEO Engineering.</p>
+      <!-- Trust-Asset Acceleration: Impact Matrix -->
+      <div class="grid mt-5 gap-3">
+        <div class="col-12 md:col-auto">
+          <div class="glass-effect px-4 py-3 border-round-2xl border-left-3 border-primary shadow-4">
+             <div class="text-xs font-bold text-500 uppercase mb-1">Upstox Impact</div>
+             <div class="text-2xl font-bold text-900 line-height-1">4 Days <i class="pi pi-arrow-right mx-1 text-sm opacity-50"></i> 2 Hours</div>
+             <div class="text-xs text-600 mt-1">Lead turnaround automation</div>
+          </div>
+        </div>
+        <div class="col-12 md:col-auto">
+          <div class="glass-effect px-4 py-3 border-round-2xl border-left-3 border-blue-500 shadow-4">
+             <div class="text-xs font-bold text-500 uppercase mb-1">ABN AMRO Scale</div>
+             <div class="text-2xl font-bold text-900 line-height-1">Global Migration</div>
+             <div class="text-xs text-600 mt-1">Enterprise Cloud Architecture</div>
+          </div>
+        </div>
       </div>
-      <div class="text-xl mt-4 line-height-3 text-700 block md:hidden">
-        Proven work for <strong>ABN AMRO</strong> and <strong>Upstox</strong>. Senior architecture, automation, and growth systems for teams that need momentum.
-      </div>
-      <div class="flex flex-column md:flex-row gap-3 mt-5">
+      <!-- Action Center -->
+      <div class="flex flex-column md:flex-row gap-3 mt-6">
         <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
-          <Button label="Book Technical Roadmap Call" icon="pi pi-calendar-clock" severity="primary" size="large" rounded raised class="w-full md:w-auto white-space-nowrap" />
+          <Button label="Book Strategy Call" icon="pi pi-calendar-clock" severity="primary" size="large" rounded raised class="px-6 py-4 font-bold text-lg shadow-pill hover:scale-102 transition-transform transition-duration-200" />
         </a>
         <Button 
-          label="Explore Services" 
-          icon="pi pi-arrow-down" 
-          class="p-button-outlined p-button-secondary w-full md:w-auto" 
+          label="View Roadmap" 
+          icon="pi pi-compass" 
+          class="p-button-outlined p-button-secondary px-6 py-4 font-bold text-lg" 
           size="large" 
           rounded 
           @click="scrollToSolutions"
         />
       </div>
-      <div class="mt-5 grid gap-3 ml-1">
-        <div class="flex align-items-center gap-3">
-          <i class="pi pi-check-circle text-green-500"></i>
-          <span class="text-sm md:text-base">Fractional CTO guidance with hands-on implementation</span>
+      <!-- Productization: Trust Signals -->
+      <div class="mt-6 flex flex-wrap gap-4 opacity-70">
+        <div class="flex align-items-center gap-2">
+          <i class="pi pi-check-circle text-primary font-bold"></i>
+          <span class="text-sm font-bold">Fixed-Scope Delivery</span>
         </div>
-        <div class="flex align-items-center gap-3">
-          <i class="pi pi-check-circle text-green-500"></i>
-          <span class="text-sm md:text-base">Built for scale, crawlability, and measurable business outcomes</span>
+        <div class="flex align-items-center gap-2">
+          <i class="pi pi-check-circle text-primary font-bold"></i>
+          <span class="text-sm font-bold">Zero-Risk First Week</span>
+        </div>
+        <div class="flex align-items-center gap-2">
+          <i class="pi pi-check-circle text-primary font-bold"></i>
+          <span class="text-sm font-bold">CTO-Level Oversight</span>
         </div>
       </div>
     </div>
-    <div class="col-12 lg:col-5 mt-6 lg:mt-0 hidden lg:block">
-      <div class="bento-hero-grid h-30rem">
-        <div class="bento-hero-item bento-hero-1 shadow-4 border-round-2xl overflow-hidden relative bento-hover">
-          <img src="/img/projects/ai-dynamic-crud-app/ai-gemini-app.webp" alt="AI & ML with Gemini" width="600" height="800" class="w-full" fetchpriority="high" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-90 via-black-alpha-40 to-transparent p-3 flex flex-column justify-content-end">
-            <div class="bg-black-alpha-60 p-2 border-round-md" style="backdrop-filter: blur(4px);">
-              <span class="text-xs font-bold text-primary-300 uppercase mb-1">Architecture 01</span>
-              <h4 class="text-white m-0 text-sm font-bold">AI & Machine Learning</h4>
+    <div class="col-12 lg:col-5 mt-8 lg:mt-0 hidden lg:block">
+      <div class="bento-hero-grid h-45rem relative">
+        <!-- Main Hero Card: Productized Benefit -->
+        <div class="bento-hero-item bento-hero-1 shadow-6 border-round-3xl overflow-hidden relative bento-hover border-1 border-white-alpha-10">
+          <img src="/img/projects/ai-dynamic-crud-app/ai-gemini-app.webp" alt="AI Automation" width="600" height="800" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-40 to-transparent flex flex-column justify-content-end">
+            <div class="glass-effect p-3 border-round-2xl">
+              <span class="text-xs font-bold text-primary-300 uppercase mb-1 block">Solution 01</span>
+              <h4 class="text-white m-0 text-lg font-bold">Intelligent Workflow Automation</h4>
             </div>
           </div>
         </div>
-        <div class="bento-hero-item bento-hero-2 shadow-4 border-round-2xl overflow-hidden relative bento-hover">
-          <img src="/img/home/projects/ABN_Amro.webp" alt="Enterprise" width="600" height="400" class="w-full object-cover" fetchpriority="high" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-90 via-black-alpha-40 to-transparent p-3 flex flex-column justify-content-end">
-            <div class="bg-black-alpha-60 p-2 border-round-md" style="backdrop-filter: blur(4px);">
-              <span class="text-xs font-bold text-primary-300 uppercase mb-1">Architecture 02</span>
-              <h4 class="text-white m-0 text-sm font-bold">Enterprise SaaS</h4>
+        <!-- Secondary Cards -->
+        <div class="bento-hero-item bento-hero-2 shadow-6 border-round-3xl overflow-hidden relative bento-hover border-1 border-white-alpha-10">
+          <img src="/img/home/projects/ABN_Amro.webp" alt="Enterprise SaaS" width="600" height="400" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-40 to-transparent flex flex-column justify-content-end">
+            <div class="glass-effect p-3 border-round-2xl">
+              <span class="text-xs font-bold text-primary-300 uppercase mb-1 block">Solution 02</span>
+              <h4 class="text-white m-0 text-base font-bold">Resilient SaaS Architecture</h4>
             </div>
           </div>
         </div>
-        <div class="bento-hero-item bento-hero-3 shadow-4 border-round-2xl overflow-hidden relative bento-hover">
-          <img src="/img/projects/localxr/localxr-cover.webp" alt="Growth" width="600" height="400" class="w-full object-fill" fetchpriority="high" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-90 via-black-alpha-40 to-transparent p-3 flex flex-column justify-content-end">
-            <div class="bg-black-alpha-60 p-2 border-round-md" style="backdrop-filter: blur(4px);">
-              <span class="text-xs font-bold text-primary-300 uppercase mb-1">Architecture 03</span>
-              <h4 class="text-white m-0 text-sm font-bold">Programmatic SEO</h4>
+        <div class="bento-hero-item bento-hero-3 shadow-6 border-round-3xl overflow-hidden relative bento-hover border-1 border-white-alpha-10">
+          <img src="/img/projects/localxr/localxr-cover.webp" alt="Programmatic SEO" width="600" height="400" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-40 to-transparent flex flex-column justify-content-end">
+            <div class="glass-effect p-3 border-round-2xl">
+              <span class="text-xs font-bold text-primary-300 uppercase mb-1 block">Solution 03</span>
+              <h4 class="text-white m-0 text-base font-bold">Autonomous Growth Engines</h4>
             </div>
           </div>
         </div>
@@ -163,11 +189,13 @@ copyright: false
         <div class="bg-purple-100 text-purple-600 border-circle w-3rem h-3rem flex align-items-center justify-content-center mb-4"><i class="pi pi-code text-xl"></i></div>
         <h3 class="m-0 mb-3 font-bold text-xl">The Scale Problem</h3>
         <p class="text-700 line-height-3 mb-4">You need to launch a complex SaaS MVP, or your legacy application is crumbling under traffic. You require flawless UI/UX, robust backend architecture, and high-concurrency capability.</p>
-        <div class="mt-auto pt-3 border-top-1 border-50">
-           <a href="/startup-stack-audit-checklist/" class="no-underline text-sm font-bold text-purple-600 flex align-items-center gap-2 hover:translate-x-2 transition-all">
-              Run a Tech Stack Self-Audit <i class="pi pi-arrow-right"></i>
-           </a>
-        </div>
+         <div class="mt-auto pt-3 border-top-1 border-50">
+            <GatedLink 
+               href="/startup-stack-audit-checklist/" 
+               label="Run a Tech Stack Self-Audit" 
+               customClass="no-underline text-sm font-bold text-purple-600 hover:translate-x-2 transition-all"
+            />
+         </div>
       </div>
     </div>
     <div class="col-12 md:col-6 p-3">
