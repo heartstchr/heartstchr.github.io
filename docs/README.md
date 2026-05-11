@@ -125,45 +125,45 @@ copyright: false
   </div>
 </div>
 
-<div class="mb-8 px-2 md:px-4 mt-4" style="max-width: 1240px;">
-  <div class="text-center mt-8">
-    <h2 class="text-3xl md:text-5xl font-bold mt-2">The ROI of Strategic Engineering</h2>
-    <p class="text-lg md:text-xl text-600 max-w-40rem mx-auto">Measurable outcomes delivered for global leaders and fast-moving startups.</p>
+<div class="mb-12 px-2 md:px-4 mt-8" style="max-width: 1300px; margin: 0 auto;">
+  <div class="text-center mb-8">
+    <h2 class="text-4xl md:text-6xl font-bold mt-2 tracking-tight">The <span class="text-gradient">ROI</span> of Strategic Engineering</h2>
+    <p class="text-xl md:text-2xl text-600 max-w-40rem mx-auto opacity-80">Measurable outcomes delivered for global leaders and fast-moving startups.</p>
   </div>
   <div class="grid">
     <div class="col-12 md:col-4 p-3" v-for="win in highImpactWins" :key="win.title">
       <a :href="win.link" class="no-underline block h-full color-inherit">
-        <div class="surface-0 border-round-3xl shadow-4 p-5 h-full flex flex-column border-1 border-100 bento-hover relative overflow-hidden text-left text-color">
+        <div class="glass-effect-light border-round-3xl shadow-4 p-5 h-full flex flex-column border-1 border-white-alpha-10 bento-hover relative overflow-hidden text-left text-color">
           <!-- Accent Glow -->
-          <div class="absolute top-0 right-0 w-8rem h-8rem opacity-10 border-circle" :style="{ background: `var(--${win.color}-500)`, filter: 'blur(40px)', transform: 'translate(30%, -30%)' }"></div>   
-          <div class="text-4xl md:text-5xl font-bold text-900 mb-2 tracking-tight">
+          <div class="absolute top-0 right-0 w-8rem h-8rem opacity-20 border-circle" :style="{ background: `var(--${win.color}-500)`, filter: 'blur(40px)', transform: 'translate(30%, -30%)' }"></div>   
+          <div class="text-5xl md:text-6xl font-bold text-900 mb-2 tracking-tight">
             {{ win.metric }}
           </div>
-          <div class="text-sm font-bold text-500 uppercase tracking-widest mb-5">
+          <div class="text-sm font-bold text-500 uppercase tracking-widest mb-6">
              {{ win.title }}
           </div>
-          <div class="flex-grow-1 flex flex-column gap-4">
+          <div class="flex-grow-1 flex flex-column gap-5">
              <div class="flex align-items-start gap-3">
-                <div class="w-2rem h-2rem border-circle bg-gray-100 flex align-items-center justify-content-center flex-shrink-0">
+                <div class="w-2rem h-2rem border-circle bg-white-alpha-10 flex align-items-center justify-content-center flex-shrink-0 shadow-1">
                    <i class="pi pi-arrow-down text-xs text-500"></i>
                 </div>
                 <div class="text-sm text-600 line-height-3">
-                   <span class="font-bold text-900 block mb-1">Challenge</span>
-                   <span class="text-700">{{ win.before }}</span>
+                   <span class="font-bold text-900 block mb-1 uppercase letter-spacing-wide opacity-50">Challenge</span>
+                   <span class="text-700 text-base">{{ win.before }}</span>
                 </div>
              </div>
              <div class="flex align-items-start gap-3">
-                <div class="w-2rem h-2rem border-circle bg-green-100 flex align-items-center justify-content-center flex-shrink-0">
-                   <i class="pi pi-bolt text-xs text-green-600"></i>
+                <div class="w-2rem h-2rem border-circle bg-green-500 text-white flex align-items-center justify-content-center flex-shrink-0 shadow-2">
+                   <i class="pi pi-bolt text-xs"></i>
                 </div>
                 <div class="text-sm line-height-3">
-                   <span class="font-bold text-green-600 block mb-1">Impact</span>
-                   <span class="text-700" v-html="win.description"></span>
+                   <span class="font-bold text-green-500 block mb-1 uppercase letter-spacing-wide">Impact</span>
+                   <span class="text-700 text-base" v-html="win.description"></span>
                 </div>
              </div>
           </div>
-          <div class="mt-4 flex justify-content-end opacity-40">
-             <i class="pi pi-arrow-up-right text-sm text-900"></i>
+          <div class="mt-6 flex justify-content-end opacity-40">
+             <i class="pi pi-arrow-up-right text-lg text-900"></i>
           </div>
         </div>
       </a>
@@ -171,46 +171,49 @@ copyright: false
   </div>
 </div>
 
-<div class="mb-8 px-2 md:px-4 py-6 md:py-8 surface-50 border-round-3xl" style="max-width: 1200px; margin: 0 auto;">
-  <div class="text-center mb-6">
-    <h2 class="text-3xl md:text-5xl font-bold line-height-2 m-0 p-0 mb-3">Where is Your Architecture Failing You?</h2>
-    <p class="text-lg md:text-xl text-600 max-w-30rem mx-auto">We engineer specialized solutions that break through your company's deepest technical and operational bottlenecks.</p>
+<div class="mb-8 px-2 md:px-4 py-8 md:py-12 surface-50 border-round-3xl relative overflow-hidden" style="max-width: 1300px; margin: 0 auto;">
+  <!-- Abstract background glow -->
+  <div class="absolute top-0 left-0 w-30rem h-30rem bg-primary opacity-5 border-circle" style="filter: blur(120px); transform: translate(-30%, -30%);"></div>
+  
+  <div class="text-center mb-8 relative z-1">
+    <h2 class="text-4xl md:text-6xl font-bold line-height-1 mb-3 tracking-tight">Where is Your Architecture <span class="text-gradient">Failing You?</span></h2>
+    <p class="text-xl md:text-2xl text-600 max-w-40rem mx-auto opacity-80">We engineer specialized solutions that break through your company's deepest technical and operational bottlenecks.</p>
   </div>
   
-  <div class="grid">
+  <div class="grid relative z-1">
     <div class="col-12 md:col-6 p-3">
-      <div class="surface-0 p-4 border-round-xl shadow-2 h-full border-top-3 border-green-500">
-        <div class="bg-green-100 text-green-600 border-circle w-3rem h-3rem flex align-items-center justify-content-center mb-2"><i class="pi pi-sparkles text-xl"></i></div>
-        <h3 class="m-0 mb-3 font-bold text-xl">The Intelligence Problem</h3>
-        <p class="text-700 line-height-3">You are spending hundreds of hours on manual content creation or matching processes. You need custom AI integration (like Gemini/OpenAI interfaces) to automate intelligence safely within your own app.</p>
+      <div class="glass-effect-light p-5 border-round-3xl shadow-4 h-full border-top-3 border-green-500 bento-hover">
+        <div class="bg-green-100 text-green-600 border-circle w-4rem h-4rem flex align-items-center justify-content-center mb-4 shadow-2"><i class="pi pi-sparkles text-2xl"></i></div>
+        <h3 class="m-0 mb-3 font-bold text-2xl tracking-tight">The Intelligence Problem</h3>
+        <p class="text-700 text-lg line-height-3">You are spending hundreds of hours on manual processes. We integrate custom AI (Gemini/OpenAI) to automate intelligence safely within your own secure infrastructure.</p>
       </div>
     </div>
     <div class="col-12 md:col-6 p-3">
-      <div class="surface-0 p-4 border-round-xl shadow-2 h-full border-top-3 border-purple-500 flex flex-column">
-        <div class="bg-purple-100 text-purple-600 border-circle w-3rem h-3rem flex align-items-center justify-content-center mb-4"><i class="pi pi-code text-xl"></i></div>
-        <h3 class="m-0 mb-3 font-bold text-xl">The Scale Problem</h3>
-        <p class="text-700 line-height-3 mb-4">You need to launch a complex SaaS MVP, or your legacy application is crumbling under traffic. You require flawless UI/UX, robust backend architecture, and high-concurrency capability.</p>
-         <div class="mt-auto pt-3 border-top-1 border-50">
+      <div class="glass-effect-light p-5 border-round-3xl shadow-4 h-full border-top-3 border-purple-500 flex flex-column bento-hover">
+        <div class="bg-purple-100 text-purple-600 border-circle w-4rem h-4rem flex align-items-center justify-content-center mb-4 shadow-2"><i class="pi pi-code text-2xl"></i></div>
+        <h3 class="m-0 mb-3 font-bold text-2xl tracking-tight">The Scale Problem</h3>
+        <p class="text-700 text-lg line-height-3 mb-4">Your legacy application is crumbling under traffic. We architect flawless, high-concurrency SaaS platforms built for absolute resilience and growth.</p>
+         <div class="mt-auto pt-3 border-top-1 border-white-alpha-10">
             <GatedLink 
                href="/startup-stack-audit-checklist/" 
                label="Run a Tech Stack Self-Audit" 
-               customClass="no-underline text-sm font-bold text-purple-600 hover:translate-x-2 transition-all"
+               customClass="no-underline text-sm font-bold text-purple-500 flex align-items-center gap-2 hover:translate-x-2 transition-all"
             />
          </div>
       </div>
     </div>
     <div class="col-12 md:col-6 p-3">
-      <div class="surface-0 p-4 border-round-xl shadow-2 h-full border-top-3 border-orange-500">
-        <div class="bg-orange-100 text-orange-600 border-circle w-3rem h-3rem flex align-items-center justify-content-center mb-4"><i class="pi pi-users text-xl"></i></div>
-        <h3 class="m-0 mb-3 font-bold text-xl">The Traffic Problem</h3>
-        <p class="text-700 line-height-3">Manual SEO doesn't scale. You need thousands of lightning-fast, dynamically generated pages to capture long-tail local search traffic natively, but standard CMS platforms buckle under the weight.</p>
+      <div class="glass-effect-light p-5 border-round-3xl shadow-4 h-full border-top-3 border-orange-500 bento-hover">
+        <div class="bg-orange-100 text-orange-600 border-circle w-4rem h-4rem flex align-items-center justify-content-center mb-4 shadow-2"><i class="pi pi-users text-2xl"></i></div>
+        <h3 class="m-0 mb-3 font-bold text-2xl tracking-tight">The Traffic Problem</h3>
+        <p class="text-700 text-lg line-height-3">Manual SEO doesn't scale. We build database-driven directory platforms that dominate organic search by generating thousands of optimized pages natively.</p>
       </div>
     </div>
     <div class="col-12 md:col-6 p-3">
-      <div class="surface-0 p-4 border-round-xl shadow-2 h-full border-top-3 border-blue-500">
-        <div class="bg-blue-100 text-blue-600 border-circle w-3rem h-3rem flex align-items-center justify-content-center mb-4"><i class="pi pi-database text-xl"></i></div>
-        <h3 class="m-0 mb-3 font-bold text-xl">The Operational Problem</h3>
-        <p class="text-700 line-height-3">Your team is drowning in manual data entry. Your data is stuck in Notion or Spreadsheets, and building a custom portal from scratch seems too expensive and time-consuming.</p>
+      <div class="glass-effect-light p-5 border-round-3xl shadow-4 h-full border-top-3 border-blue-500 bento-hover">
+        <div class="bg-blue-100 text-blue-600 border-circle w-4rem h-4rem flex align-items-center justify-content-center mb-4 shadow-2"><i class="pi pi-database text-2xl"></i></div>
+        <h3 class="m-0 mb-3 font-bold text-2xl tracking-tight">The Operational Problem</h3>
+        <p class="text-700 text-lg line-height-3">Your team is drowning in manual data entry. We turn your existing operational data (Notion/Spreadsheets) into professional, automated web applications instantly.</p>
       </div>
     </div>
   </div>
@@ -224,32 +227,32 @@ copyright: false
   </div>
 
   <!-- Pillar 1 -->
-  <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1">
-    <div class="col-12 lg:col-5 relative">
-      <div class="absolute top-0 right-0 p-3 opacity-10 md:opacity-20">
-          <i class="pi pi-sparkles text-green-500" style="font-size: 2rem;"></i>
-      </div>
-      <h3 class="text-sm font-bold uppercase text-green-500 letter-spacing-wide mb-2">Autonomous Intelligence</h3>
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">AI & Machine Learning Systems</h2>
-      <p class="text-lg line-height-3 text-700 mb-4">Integrate Large Language Models (LLMs) deeply into your business logic. We build custom applications featuring AI-powered matching algorithms, text-to-speech generators, and native intelligence that eliminates manual overhead.</p>
-      <ul class="list-none p-0 m-0 mb-5 text-700">
-        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Advanced Matching Algorithms</li>
-        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Gemini / OpenAI API Integrations</li>
-        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Prompt Engineering & Context</li>
+  <div class="grid align-items-center mb-8 glass-effect p-6 md:p-8 border-round-3xl shadow-4 border-1 border-white-alpha-10 relative">
+    <div class="absolute top-0 right-0 p-5 opacity-10">
+        <i class="pi pi-sparkles text-green-500" style="font-size: 4rem;"></i>
+    </div>
+    <div class="col-12 lg:col-5 relative z-1">
+      <h3 class="text-sm font-bold uppercase text-green-500 letter-spacing-wide mb-3">Autonomous Intelligence</h3>
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 mt-0 tracking-tight">AI & Machine Learning Systems</h2>
+      <p class="text-lg line-height-3 text-700 mb-6 opacity-90">Integrate Large Language Models (LLMs) deeply into your business logic. We build custom applications featuring AI-powered matching algorithms, text-to-speech generators, and native intelligence that eliminates manual overhead.</p>
+      <ul class="list-none p-0 m-0 mb-6 text-700">
+        <li class="flex align-items-center mb-3"><i class="pi pi-check-circle text-green-500 mr-3"></i> Advanced Matching Algorithms</li>
+        <li class="flex align-items-center mb-3"><i class="pi pi-check-circle text-green-500 mr-3"></i> Gemini / OpenAI API Integrations</li>
+        <li class="flex align-items-center mb-3"><i class="pi pi-check-circle text-green-500 mr-3"></i> Prompt Engineering & Context</li>
       </ul>
     </div>
-    <div class="col-12 lg:col-7">
+    <div class="col-12 lg:col-7 relative z-1">
       <div class="grid">
         <div class="col-12 md:col-6 p-2">
-          <a href="/web-development-projects/ai-dynamic-crud-app/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
-            <img src="/img/projects/ai-dynamic-crud-app/ai-webapp-english.webp" alt="AI Dynamic CRUD App" width="400" height="300" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
-            <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">AI Dynamic CRUD</div>
+          <a href="/web-development-projects/ai-dynamic-crud-app/" class="block bento-hover relative border-round-3xl overflow-hidden shadow-6 no-underline border-1 border-white-alpha-10">
+            <img src="/img/projects/ai-dynamic-crud-app/ai-webapp-english.webp" alt="AI Dynamic CRUD App" width="400" height="300" class="w-full h-12rem md:h-15rem object-cover" loading="lazy" />
+            <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">AI Dynamic CRUD</div>
           </a>
         </div>
         <div class="col-12 md:col-6 p-2">
-          <a href="/web-development-projects/ai-voice-generator/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
-            <img src="/img/projects/ai-narrator/Google-docs-text-to-speech-ai-voice-ai-audio.webp" alt="AI Voice Generator" width="400" height="300" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
-             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">AI Voice Generator</div>
+          <a href="/web-development-projects/ai-voice-generator/" class="block bento-hover relative border-round-3xl overflow-hidden shadow-6 no-underline border-1 border-white-alpha-10">
+            <img src="/img/projects/ai-narrator/Google-docs-text-to-speech-ai-voice-ai-audio.webp" alt="AI Voice Generator" width="400" height="300" class="w-full h-12rem md:h-15rem object-cover" loading="lazy" />
+             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">AI Voice Generator</div>
           </a>
         </div>
       </div>
@@ -257,32 +260,32 @@ copyright: false
   </div>
 
   <!-- Pillar 2 -->
-  <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1 flex-column lg:flex-row-reverse">
-    <div class="col-12 lg:col-5 relative">
-      <div class="absolute top-0 right-0 p-3 opacity-10 md:opacity-20">
-          <i class="pi pi-code text-purple-500" style="font-size: 2rem;"></i>
-      </div>
-      <h3 class="text-sm font-bold uppercase text-purple-500 letter-spacing-wide mb-2">Resilient Infrastructure</h3>
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Enterprise SaaS & Scalable Apps</h2>
-      <p class="text-lg line-height-3 text-700 mb-4">Sophisticated web applications designed for absolute reliability. From high-complexity banking portal migrations to high-concurrency dashboards, we architect fast, resilient systems that grow with your user base.</p>
-      <ul class="list-none p-0 m-0 mb-5 text-700">
-        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Predictable, crash-resistant interfaces</li>
-        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Zero-downtime legacy modernisation</li>
-        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Systems built for 10× traffic spikes</li>
+  <div class="grid align-items-center mb-8 glass-effect p-6 md:p-8 border-round-3xl shadow-4 border-1 border-white-alpha-10 relative flex-column lg:flex-row-reverse">
+    <div class="absolute top-0 right-0 p-5 opacity-10">
+        <i class="pi pi-code text-purple-500" style="font-size: 4rem;"></i>
+    </div>
+    <div class="col-12 lg:col-5 relative z-1">
+      <h3 class="text-sm font-bold uppercase text-purple-500 letter-spacing-wide mb-3">Resilient Infrastructure</h3>
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 mt-0 tracking-tight">Enterprise SaaS & Scalable Apps</h2>
+      <p class="text-lg line-height-3 text-700 mb-6 opacity-90">Sophisticated web applications designed for absolute reliability. From high-complexity banking portal migrations to high-concurrency dashboards, we architect fast, resilient systems that grow with your user base.</p>
+      <ul class="list-none p-0 m-0 mb-6 text-700">
+        <li class="flex align-items-center mb-3"><i class="pi pi-check-circle text-green-500 mr-3"></i> Predictable, crash-resistant interfaces</li>
+        <li class="flex align-items-center mb-3"><i class="pi pi-check-circle text-green-500 mr-3"></i> Zero-downtime legacy modernisation</li>
+        <li class="flex align-items-center mb-3"><i class="pi pi-check-circle text-green-500 mr-3"></i> Systems built for 10× traffic spikes</li>
       </ul>
     </div>
-    <div class="col-12 lg:col-7">
+    <div class="col-12 lg:col-7 relative z-1">
       <div class="grid">
         <div class="col-12 md:col-6 p-2">
-          <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
-            <img src="/img/home/projects/ABN_Amro.webp" alt="ABN AMRO Migration" width="400" height="300" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
-            <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">ABN AMRO Enterprise</div>
+          <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="block bento-hover relative border-round-3xl overflow-hidden shadow-6 no-underline border-1 border-white-alpha-10">
+            <img src="/img/home/projects/ABN_Amro.webp" alt="ABN AMRO Migration" width="400" height="300" class="w-full h-12rem md:h-15rem object-cover" loading="lazy" />
+            <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">ABN AMRO Enterprise</div>
           </a>
         </div>
         <div class="col-12 md:col-6 p-2">
-          <a href="/web-development-projects/momentum/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
-            <img src="/img/home/projects/momentum_incident_management.webp" alt="Momentum" width="400" height="300" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
-             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">Momentum Incident Mgmt</div>
+          <a href="/web-development-projects/momentum/" class="block bento-hover relative border-round-3xl overflow-hidden shadow-6 no-underline border-1 border-white-alpha-10">
+            <img src="/img/home/projects/momentum_incident_management.webp" alt="Momentum" width="400" height="300" class="w-full h-12rem md:h-15rem object-cover" loading="lazy" />
+             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">Momentum Incident Mgmt</div>
           </a>
         </div>
       </div>
@@ -290,32 +293,32 @@ copyright: false
   </div>
 
   <!-- Pillar 3 -->
-  <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1">
-    <div class="col-12 lg:col-5 relative">
-      <div class="absolute top-0 right-0 p-3 opacity-10 md:opacity-20">
-          <i class="pi pi-chart-line text-orange-500" style="font-size: 2rem;"></i>
-      </div>
-      <h3 class="text-sm font-bold uppercase text-orange-500 letter-spacing-wide mb-2">Growth Engineering</h3>
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Programmatic SEO & Lead Generation</h2>
-      <p class="text-lg line-height-3 text-700 mb-4">We build massive, database-driven directory platforms that dominate organic search. Automatically generate thousands of optimized location and service pages to capture high-intent traffic natively.</p>
-      <ul class="list-none p-0 m-0 mb-5 text-700">
-        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Pages indexed & ranked from day one</li>
-        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Location-aware lead capture at scale</li>
-        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Thousands of city pages, zero manual work</li>
+  <div class="grid align-items-center mb-8 glass-effect p-6 md:p-8 border-round-3xl shadow-4 border-1 border-white-alpha-10 relative">
+    <div class="absolute top-0 right-0 p-5 opacity-10">
+        <i class="pi pi-chart-line text-orange-500" style="font-size: 4rem;"></i>
+    </div>
+    <div class="col-12 lg:col-5 relative z-1">
+      <h3 class="text-sm font-bold uppercase text-orange-500 letter-spacing-wide mb-3">Growth Engineering</h3>
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 mt-0 tracking-tight">Programmatic SEO & Lead Generation</h2>
+      <p class="text-lg line-height-3 text-700 mb-6 opacity-90">We build massive, database-driven directory platforms that dominate organic search. Automatically generate thousands of optimized location and service pages to capture high-intent traffic natively.</p>
+      <ul class="list-none p-0 m-0 mb-6 text-700">
+        <li class="flex align-items-center mb-3"><i class="pi pi-check-circle text-green-500 mr-3"></i> Pages indexed & ranked from day one</li>
+        <li class="flex align-items-center mb-3"><i class="pi pi-check-circle text-green-500 mr-3"></i> Location-aware lead capture at scale</li>
+        <li class="flex align-items-center mb-3"><i class="pi pi-check-circle text-green-500 mr-3"></i> Thousands of city pages, zero manual work</li>
       </ul>
     </div>
-    <div class="col-12 lg:col-7">
+    <div class="col-12 lg:col-7 relative z-1">
       <div class="grid">
         <div class="col-12 md:col-6 p-2">
-          <a href="/web-development-projects/local-home-services-pros/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
-            <img src="/img/projects/localxr/localxr-cover.webp" alt="LocalXR" width="400" height="300" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
-            <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">LocalXR Directory</div>
+          <a href="/web-development-projects/local-home-services-pros/" class="block bento-hover relative border-round-3xl overflow-hidden shadow-6 no-underline border-1 border-white-alpha-10">
+            <img src="/img/projects/localxr/localxr-cover.webp" alt="LocalXR" width="400" height="300" class="w-full h-12rem md:h-15rem object-cover" loading="lazy" />
+            <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">LocalXR Directory</div>
           </a>
         </div>
         <div class="col-12 md:col-6 p-2">
-          <a href="/web-development-projects/appliance-repair-service-platform/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
-            <img src="/img/home/projects/appliance_repair_cover.webp" alt="Appliance Repair" width="400" height="300" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
-             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">Appliance Repair Platform</div>
+          <a href="/web-development-projects/appliance-repair-service-platform/" class="block bento-hover relative border-round-3xl overflow-hidden shadow-6 no-underline border-1 border-white-alpha-10">
+            <img src="/img/home/projects/appliance_repair_cover.webp" alt="Appliance Repair" width="400" height="300" class="w-full h-12rem md:h-15rem object-cover" loading="lazy" />
+             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">Appliance Repair Platform</div>
           </a>
         </div>
       </div>
@@ -323,32 +326,32 @@ copyright: false
   </div>
 
   <!-- Pillar 4 -->
-  <div class="grid align-items-center mb-8 surface-0 p-4 md:p-6 border-round-3xl shadow-1 flex-column lg:flex-row-reverse">
-    <div class="col-12 lg:col-5 relative">
-      <div class="absolute top-0 right-0 p-3 opacity-10 md:opacity-20">
-          <i class="pi pi-sync text-blue-500" style="font-size: 2rem;"></i>
-      </div>
-      <h3 class="text-sm font-bold uppercase text-blue-500 letter-spacing-wide mb-2">Operational Velocity</h3>
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Custom Internal Tooling & Portals</h2>
-      <p class="text-lg line-height-3 text-700 mb-4">Turn your existing operational data (Notion, Spreadsheets) into full-fledged, professional web applications. We automate workflows and lead capture without the overhead of a months-long backend build.</p>
-      <ul class="list-none p-0 m-0 mb-5 text-700">
-        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Notion-to-Web Architecture</li>
-        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Dynamic Form Generators</li>
-        <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Automated Email & Sync Workflows</li>
+  <div class="grid align-items-center mb-8 glass-effect p-6 md:p-8 border-round-3xl shadow-4 border-1 border-white-alpha-10 relative flex-column lg:flex-row-reverse">
+    <div class="absolute top-0 right-0 p-5 opacity-10">
+        <i class="pi pi-sync text-blue-500" style="font-size: 4rem;"></i>
+    </div>
+    <div class="col-12 lg:col-5 relative z-1">
+      <h3 class="text-sm font-bold uppercase text-blue-500 letter-spacing-wide mb-3">Operational Velocity</h3>
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 mt-0 tracking-tight">Custom Internal Tooling & Portals</h2>
+      <p class="text-lg line-height-3 text-700 mb-6 opacity-90">Turn your existing operational data (Notion, Spreadsheets) into full-fledged, professional web applications. We automate workflows and lead capture without the overhead of a months-long backend build.</p>
+      <ul class="list-none p-0 m-0 mb-6 text-700">
+        <li class="flex align-items-center mb-3"><i class="pi pi-check-circle text-green-500 mr-3"></i> Notion-to-Web Architecture</li>
+        <li class="flex align-items-center mb-3"><i class="pi pi-check-circle text-green-500 mr-3"></i> Dynamic Form Generators</li>
+        <li class="flex align-items-center mb-3"><i class="pi pi-check-circle text-green-500 mr-3"></i> Automated Email & Sync Workflows</li>
       </ul>
     </div>
-    <div class="col-12 lg:col-7">
+    <div class="col-12 lg:col-7 relative z-1">
       <div class="grid">
         <div class="col-12 md:col-6 p-2">
-          <a href="/web-development-projects/notion-crud/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
-            <img src="/img/projects/notion-crud-app/Notion-crud-app-free.webp" alt="Notion CRUD" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
-            <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">Dynamic CRUD App</div>
+          <a href="/web-development-projects/notion-crud/" class="block bento-hover relative border-round-3xl overflow-hidden shadow-6 no-underline border-1 border-white-alpha-10">
+            <img src="/img/projects/notion-crud-app/Notion-crud-app-free.webp" alt="Notion CRUD" class="w-full h-12rem md:h-15rem object-cover" loading="lazy" />
+            <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">Dynamic CRUD App</div>
           </a>
         </div>
         <div class="col-12 md:col-6 p-2">
-          <a href="/web-development-projects/service-request/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
-            <img src="/img/home/projects/notion_service_request.webp" alt="Service Request" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
-             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">Service Request Portal</div>
+          <a href="/web-development-projects/service-request/" class="block bento-hover relative border-round-3xl overflow-hidden shadow-6 no-underline border-1 border-white-alpha-10">
+            <img src="/img/home/projects/notion_service_request.webp" alt="Service Request" class="w-full h-12rem md:h-15rem object-cover" loading="lazy" />
+             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">Service Request Portal</div>
           </a>
         </div>
       </div>

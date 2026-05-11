@@ -5,19 +5,17 @@
         <div>
             <div class="text-center pb-4">
                 <h3>
-                    <div class="text-4xl font-bold">Need a full-stack web developer?</div>
+                    <div class="text-4xl font-bold">Partnering for Technical Excellence</div>
                 </h3>
-                <div class="my-4 text-md">Let's work together!</div>
+                <div class="my-4 text-md opacity-70">Strategic leadership for your next big build.</div>
             </div>
-            <div class="mx-4 text-center text-xl line-height-3">
-                I'm always excited to tackle new challenges and bring ideas to life. If you’re searching for a committed
-                full-stack developer to make your vision a reality, don’t hesitate to get in touch - I’d love to
-                collaborate!
+            <div class="mx-4 text-center text-xl line-height-3 opacity-90">
+                I specialize in turning complex technical challenges into scalable business assets. If you're looking for a dedicated architecture partner to lead your vision to reality, let's start the conversation.
             </div>
             <div class="my-4">
-                <a href="/contact/?subject=Inquiry:%20collaborate%20now" size="large"
-                    class="flex justify-content-center text-center no-underline" aria-label="Book a free discovery call">
-                    <Button label="Let's collaborate now!" icon="pi pi-briefcase" severity="primary" raised rounded />
+                <a href="/contact/?subject=Inquiry:%20Strategic%20Partnership" size="large"
+                    class="flex justify-content-center text-center no-underline" aria-label="Start the conversation">
+                    <Button label="Start the Conversation" icon="pi pi-comments" severity="primary" raised rounded />
                 </a>
             </div>
             <div class="flex flex-row justify-content-end flex-wrap gap-4 m-6 ">

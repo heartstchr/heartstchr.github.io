@@ -1,6 +1,6 @@
 ---
-title: Book Jiwan Ghosal | Enterprise Architecture Partner
-description: Book Jiwan Ghosal for fractional CTO support, AI automation, programmatic SEO systems, and scalable product architecture. Start with a technical roadmap call or project brief.
+title: Strategic Partnership | Jiwan Ghosal
+description: Start a strategic technical partnership. Fractional CTO support, AI automation, and enterprise architecture leadership for high-growth teams.
 order: 4
 editLink: false
 copyright: false
@@ -8,19 +8,55 @@ pageInfo: false
 contributors: false
 ---
 
-<div class="flex flex-column gap-4 my-6 line-height-4">
-  <div>
-    Use this page when you need senior technical help with product architecture, AI automation, programmatic SEO, cloud migration, or fractional CTO support.
+<section class="relative overflow-hidden">
+  <div class="max-w-screen-xl mx-auto">
+    <!-- CEO Perspective Intro -->
+    <div class="text-center mb-8 fade-in">
+      <h1 class="text-6xl md:text-8xl font-bold mb-4 tracking-tight">
+        Let’s Architect Your <span class="text-gradient">Next Phase</span> of Growth.
+      </h1>
+      <p class="text-xl md:text-2xl text-600 font-medium max-w-40rem mx-auto line-height-3 opacity-90">
+        Strategic engineering is the bridge between a business vision and a scalable reality. Whether you're navigating enterprise cloud migration or building the next AI-driven disruptor, let's establish the technical foundation for your growth.
+      </p>
+    </div>
+    <!-- Trust Matrix (Brief) -->
+    <div class="flex flex-wrap justify-content-center gap-4 mb-8 opacity-70 scale-90">
+       <div class="flex align-items-center gap-2 px-3 py-2 glass-effect border-round-xl border-1 border-white-alpha-10">
+          <i class="pi pi-shield text-primary"></i>
+          <span class="text-sm font-bold">Enterprise Resilience</span>
+       </div>
+       <div class="flex align-items-center gap-2 px-3 py-2 glass-effect border-round-xl border-1 border-white-alpha-10">
+          <i class="pi pi-bolt text-primary"></i>
+          <span class="text-sm font-bold">Automation Efficiency</span>
+       </div>
+       <div class="flex align-items-center gap-2 px-3 py-2 glass-effect border-round-xl border-1 border-white-alpha-10">
+          <i class="pi pi-chart-line text-primary"></i>
+          <span class="text-sm font-bold">Scalable Revenue</span>
+       </div>
+    </div>
+    <div class="grid align-items-stretch">
+      <!-- High-Stakes Inquiry: Form -->
+      <div class="col-12 lg:col-7 p-3">
+        <div class="">
+          <div class="mb-5">
+            <h2 class="text-3xl font-bold m-0 mb-2">Project Brief</h2>
+            <p class="text-500 m-0">Share your business goals, current stack, and timeline. I will use this context to recommend the most practical next step.</p>
+          </div>
+          <ProjectRequestForm/>
+        </div>
+      </div>
+      <!-- Direct Access & Socials -->
+      <div class="col-12 lg:col-5 p-3">
+        <div class="">
+          <div class="mb-8">
+            <h2 class="text-3xl font-bold m-0 mb-2">Strategic Consult</h2>
+            <p class="text-500 m-0">Need immediate technical leadership or a technical roadmap audit? Let's talk strategy.</p>
+          </div>
+          <div class="mt-auto">
+            <Contact/>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div>
-    Best fit: founders, product teams, and enterprise stakeholders with an active roadmap, a scaling problem, or a traffic and conversion bottleneck that needs hands-on engineering leadership.
-  </div>
-  <div>
-    Share the business goal, current stack, timeline, and budget range. I will use that context to recommend the most practical next step.
-  </div>
-</div>
-<div>
-    <ProjectRequestForm/>
-    <div class="text-center m-4 text-2xl font-bold">OR</div>
-    <Contact/>
-</div>
+</section>
