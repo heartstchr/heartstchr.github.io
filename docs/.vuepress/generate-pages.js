@@ -267,6 +267,21 @@ ${markdownContent}
       </div>
     </div>
 
+<section class="mt-8 pt-8 border-top-1 surface-border">
+  <div class="glass-effect p-6 md:p-8 border-round-3xl text-center relative overflow-hidden shadow-4">
+    <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary opacity-10 border-circle" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
+    <h2 class="text-3xl md:text-5xl font-bold mb-4 relative z-1">Need a similar <span class="text-gradient">strategic architecture</span>?</h2>
+    <p class="text-xl text-600 mb-6 max-w-30rem mx-auto relative z-1">If this project aligns with your current bottlenecks, let's discuss how to apply these same principles to your business.</p>
+    <div class="flex flex-wrap justify-content-center gap-3 relative z-1">
+      <a :href="'/contact/?subject=' + encodeURIComponent('Inquiry regarding ' + $frontmatter.project.name)" class="no-underline">
+        <Button label="Start Your Project Brief" icon="pi pi-file-edit" severity="primary" raised rounded />
+      </a>
+      <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+        <Button label="Book Technical Roadmap Audit" icon="pi pi-calendar-clock" severity="secondary" raised rounded />
+      </a>
+    </div>
+  </div>
+</section>
 
 <div class="flex justify-content-between align-items-center mt-8 pt-6 border-top-1 surface-border">
   <div class="flex-1">
@@ -501,6 +516,36 @@ service:
         <a href="/web-development-projects/" class="no-underline text-primary-400 font-bold hover:text-primary-300">
           View All Projects <i class="pi pi-arrow-right ml-2"></i>
         </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mt-8 pt-8">
+  <div class="surface-900 text-white p-6 md:p-8 border-round-3xl text-center relative overflow-hidden shadow-6">
+    <div class="absolute top-0 right-0 w-30rem h-30rem bg-primary opacity-20 border-circle" style="filter: blur(100px); transform: translate(30%, -30%)"></div>
+    <h2 class="text-3xl md:text-5xl font-bold mb-4 relative z-1">Stop the <span class="text-primary-400">Technical Bottlenecks</span>.</h2>
+    <p class="text-xl text-300 mb-6 max-w-40rem mx-auto relative z-1">Don't let legacy debt or manual workflows stall your growth. Get the strategic engineering leadership your brand deserves.</p>
+    <div class="flex flex-wrap justify-content-center gap-4 relative z-1">
+      <a :href="'/contact/?subject=' + encodeURIComponent($frontmatter.service.name + ' Strategic Inquiry')" class="no-underline">
+        <Button label="Request Strategic Partnership" icon="pi pi-shield" severity="primary" raised rounded />
+      </a>
+      <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+        <Button label="Book Roadmap Call" icon="pi pi-calendar-clock" severity="secondary" raised rounded />
+      </a>
+    </div>
+    <div class="mt-8 flex flex-wrap justify-content-center gap-6 opacity-50">
+      <div class="flex align-items-center gap-2">
+        <i class="pi pi-check text-xs"></i>
+        <span class="text-xs font-bold uppercase tracking-widest">Fractional CTO Support</span>
+      </div>
+      <div class="flex align-items-center gap-2">
+        <i class="pi pi-check text-xs"></i>
+        <span class="text-xs font-bold uppercase tracking-widest">Scalable Revenue Systems</span>
+      </div>
+      <div class="flex align-items-center gap-2">
+        <i class="pi pi-check text-xs"></i>
+        <span class="text-xs font-bold uppercase tracking-widest">AI Intelligence Integration</span>
       </div>
     </div>
   </div>

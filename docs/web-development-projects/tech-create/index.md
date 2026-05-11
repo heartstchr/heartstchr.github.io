@@ -1045,6 +1045,21 @@ export default defineConfig({
       </div>
     </div>
 
+<section class="mt-8 pt-8 border-top-1 surface-border">
+  <div class="glass-effect p-6 md:p-8 border-round-3xl text-center relative overflow-hidden shadow-4">
+    <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary opacity-10 border-circle" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
+    <h2 class="text-3xl md:text-5xl font-bold mb-4 relative z-1">Need a similar <span class="text-gradient">strategic architecture</span>?</h2>
+    <p class="text-xl text-600 mb-6 max-w-30rem mx-auto relative z-1">If this project aligns with your current bottlenecks, let's discuss how to apply these same principles to your business.</p>
+    <div class="flex flex-wrap justify-content-center gap-3 relative z-1">
+      <a :href="'/contact/?subject=' + encodeURIComponent('Inquiry regarding ' + $frontmatter.project.name)" class="no-underline">
+        <Button label="Start Your Project Brief" icon="pi pi-file-edit" severity="primary" raised rounded />
+      </a>
+      <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+        <Button label="Book Technical Roadmap Audit" icon="pi pi-calendar-clock" severity="secondary" raised rounded />
+      </a>
+    </div>
+  </div>
+</section>
 
 <div class="flex justify-content-between align-items-center mt-8 pt-6 border-top-1 surface-border">
   <div class="flex-1">

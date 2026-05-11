@@ -12,7 +12,7 @@ contributors: false
   <div class="max-w-screen-xl mx-auto">
     <!-- CEO Perspective Intro -->
     <div class="text-center mb-8 fade-in">
-      <h1 class="text-6xl md:text-8xl font-bold mb-4 tracking-tight">
+      <h1 class="text-4xl md:text-7xl font-bold mb-4 tracking-tight">
         Let’s Architect Your <span class="text-gradient">Next Phase</span> of Growth.
       </h1>
       <p class="text-xl md:text-2xl text-600 font-medium max-w-40rem mx-auto line-height-3 opacity-90">
