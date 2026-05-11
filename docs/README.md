@@ -49,7 +49,7 @@ copyright: false
           <Button label="Book Strategy Call" icon="pi pi-calendar-clock" severity="primary" size="large" rounded raised class="px-6 py-4 font-bold text-lg shadow-pill hover:scale-102 transition-transform transition-duration-200" />
         </a>
         <Button 
-          label="View Roadmap" 
+          label="Explore Services" 
           icon="pi pi-compass" 
           class="p-button-outlined p-button-secondary px-6 py-4 font-bold text-lg" 
           size="large" 
