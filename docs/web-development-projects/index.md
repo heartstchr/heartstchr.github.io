@@ -158,7 +158,7 @@ copyright: false
   border: 1px solid rgba(255,255,255,0.1);
   transition: all 0.3s ease;
 }
-.impact-card:hover { transform: translateY(-5px); border-color: var(--primary-color); }
+.impact-card:hover { transform: translateY(-5px); }
 
 .category-pill {
   display: inline-flex;
