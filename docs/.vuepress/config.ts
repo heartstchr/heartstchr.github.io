@@ -48,6 +48,8 @@ export default defineUserConfig({
         content: "public, max-age=31536000, immutable", // Cache static assets
       },
     ],
+    ["link", { rel: "icon", href: "/favicon.ico" }],
+    ["link", { rel: "apple-touch-icon", href: "/img/stackseekers.webp" }],
     ["meta", { property: "og:image", content: "https://stackseekers.com/img/home/jiwanghosal.webp" }],
     ["meta", { property: "og:site_name", content: "Stack Seekers" }],
     ["meta", { name: "twitter:card", content: "summary_large_image" }],
@@ -63,7 +65,7 @@ export default defineUserConfig({
       "link",
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Inter&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap",
       },
     ],
     ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
@@ -80,7 +82,7 @@ export default defineUserConfig({
       {
         rel: "preload",
         as: "image",
-        href: "pattern.webp",
+        href: "/pattern.webp",
         type: "image/webp",
         fetchpriority: "high",
       },

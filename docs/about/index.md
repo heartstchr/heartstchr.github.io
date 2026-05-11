@@ -60,7 +60,7 @@ contributors: false
       </p>
     </div>
     <div class="col-12 lg:col-6 p-4">
-      <img src="/img/about/connectedManager.webp" alt="Stack Seekers Mission" class="w-full border-round-3xl shadow-4 object-cover" style="max-height: 450px;" />
+      <img src="/img/about/connectedManager.webp" alt="Stack Seekers Mission" width="600" height="450" class="w-full border-round-3xl shadow-4 object-cover" style="max-height: 450px;" loading="lazy" />
     </div>
   </div>
 </div>
@@ -92,7 +92,7 @@ contributors: false
   <div class="grid align-items-center">
     <div class="col-12 lg:col-5 p-4 text-center">
       <div class="relative inline-block">
-        <img src="/img/home/jiwanghosal.webp" alt="Jiwan Ghosal — Founder of Stack Seekers" class="border-round-3xl shadow-4 w-full" style="max-width: 380px; aspect-ratio: 1/1; object-fit: cover;" />
+        <img src="/img/home/jiwanghosal.webp" alt="Jiwan Ghosal — Founder of Stack Seekers" width="400" height="400" class="border-round-3xl shadow-4 w-full" style="max-width: 380px; aspect-ratio: 1/1; object-fit: cover;" loading="lazy" />
         <div class="absolute -bottom-2 -right-2 bg-primary text-white p-3 border-round-lg shadow-4 hidden lg:block">
           <i class="pi pi-verified text-2xl"></i>
         </div>
@@ -153,10 +153,15 @@ contributors: false
   <p class="text-lg text-700 line-height-3 mb-6">
     Stack Seekers was founded on a single principle: great engineering should be measured by business outcomes, not lines of code or hours billed. Every system we build is designed to reduce your operational burden, not create dependency on us.
   </p>
-  <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
-    <Button label="Book Free Discovery Call" icon="pi pi-bolt" severity="primary" size="large" raised rounded class="px-6" />
-  </a>
-  <div class="text-sm text-500 mt-4">No commitment. You'll leave with a technical roadmap regardless.</div>
+  <div class="flex flex-wrap justify-content-center gap-3">
+    <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+      <Button label="Book Free Discovery Call" icon="pi pi-bolt" severity="primary" size="large" raised rounded class="px-6" />
+    </a>
+    <a href="/startup-stack-audit-checklist/" class="no-underline">
+      <Button label="Run Technical Health Check" icon="pi pi-check-square" severity="secondary" size="large" raised rounded outlined class="px-6" />
+    </a>
+  </div>
+  <div class="text-sm text-500 mt-4">Both paths provide a prioritized technical roadmap for your business.</div>
 </div>
 
 <script setup lang="ts">
@@ -201,7 +206,6 @@ contributors: false
 .stat-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
-  border-color: var(--primary-color) !important;
 }
 .model-card {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

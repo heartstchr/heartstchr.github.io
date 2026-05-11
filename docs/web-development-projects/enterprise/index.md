@@ -33,6 +33,12 @@ home: true
   </div>
 </section>
 
+<!-- SEO Content Block -->
+<div class="mb-8 px-4 md:px-6 text-700 line-height-3" style="max-width: 900px;">
+  <p>Our <strong>Enterprise development</strong> focus is on building resilient, mission-critical systems that can handle high loads and strict security requirements. We bridge the gap between <strong>legacy infrastructure</strong> and <strong>modern cloud architecture</strong>.</p>
+  <p>Having worked with global giants like <strong>ABN AMRO</strong> and <strong>Qatar Airways</strong>, we bring banking-grade engineering standards to every project. We focus on <strong>system observability</strong>, <strong>zero-downtime migrations</strong>, and <strong>high-availability deployments</strong> to ensure your business operations never stop.</p>
+</div>
+
 <div class="grid mb-8">
   <div v-for="project in enterpriseProjects" :key="project.name" class="col-12 md:col-6 lg:col-4 p-3">
     <a :href="'/web-development-projects/' + toKebabCase(project.name) + '/'" class="no-underline block h-full">
@@ -102,6 +108,5 @@ home: true
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(0,0,0,0.12);
-  border-color: #6366f1 !important;
 }
 </style>
