@@ -60,7 +60,7 @@ contributors: false
       </p>
     </div>
     <div class="col-12 lg:col-6 p-4">
-      <img src="/img/about/connectedManager.webp" alt="Stack Seekers Mission" class="w-full border-round-3xl shadow-4 object-cover" style="max-height: 450px;" />
+      <img src="/img/about/connectedManager.webp" alt="Stack Seekers Mission" width="600" height="450" class="w-full border-round-3xl shadow-4 object-cover" style="max-height: 450px;" loading="lazy" />
     </div>
   </div>
 </div>
@@ -92,7 +92,7 @@ contributors: false
   <div class="grid align-items-center">
     <div class="col-12 lg:col-5 p-4 text-center">
       <div class="relative inline-block">
-        <img src="/img/home/jiwanghosal.webp" alt="Jiwan Ghosal — Founder of Stack Seekers" class="border-round-3xl shadow-4 w-full" style="max-width: 380px; aspect-ratio: 1/1; object-fit: cover;" />
+        <img src="/img/home/jiwanghosal.webp" alt="Jiwan Ghosal — Founder of Stack Seekers" width="400" height="400" class="border-round-3xl shadow-4 w-full" style="max-width: 380px; aspect-ratio: 1/1; object-fit: cover;" loading="lazy" />
         <div class="absolute -bottom-2 -right-2 bg-primary text-white p-3 border-round-lg shadow-4 hidden lg:block">
           <i class="pi pi-verified text-2xl"></i>
         </div>

@@ -146,7 +146,7 @@ contributors: false
       class="gallery-item mb-4"
     >
       <a :href="project.link" class="text-l gap-2 font-medium text-center no-underline" :aria-label="project.name">
-        <img :src="project.images[0].itemImageSrc" :alt="project.images[0].alt" loading="eager" fetchpriority="high" />
+        <img :src="project.images[0].itemImageSrc" :alt="project.images[0].alt" width="400" height="250" loading="lazy" />
         <h3 class="p-0 m-2">{{ project.name }}</h3>
       </a>
     </div>

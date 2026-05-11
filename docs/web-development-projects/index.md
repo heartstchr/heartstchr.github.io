@@ -90,8 +90,11 @@ copyright: false
               v-if="project.images && project.images.length"
               :src="project.images[0].itemImageSrc"
               :alt="project.images[0].alt"
+              width="400"
+              height="250"
               class="w-full h-full"
               style="object-fit: cover; display: block;"
+              loading="lazy"
             />
             <div v-else class="w-full h-full flex align-items-center justify-content-center" :style="{ background: 'linear-gradient(135deg, ' + cat.color + '18, ' + cat.color + '40)' }">
               <i class="pi pi-image text-4xl opacity-30"></i>

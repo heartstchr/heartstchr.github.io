@@ -23,7 +23,7 @@ copyright: false
         From migrating global banking infrastructure for <strong>ABN AMRO</strong> to reducing lead turnaround from <strong>4 days to 2 hours</strong> for <strong>Upstox</strong>. I help founders and product teams turn technical bottlenecks into scalable revenue systems.
       </div>
       <div class="text-xl mt-4 line-height-3 text-700 block md:hidden">
-        Proven work for **ABN AMRO** and **Upstox**. Senior architecture, automation, and growth systems for teams that need momentum.
+        Proven work for <strong>ABN AMRO</strong> and <strong>Upstox</strong>. Senior architecture, automation, and growth systems for teams that need momentum.
       </div>
       <div class="flex flex-column md:flex-row gap-3 mt-5">
         <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
@@ -52,7 +52,7 @@ copyright: false
     <div class="col-12 lg:col-5 mt-6 lg:mt-0 hidden lg:block">
       <div class="bento-hero-grid h-30rem">
         <div class="bento-hero-item bento-hero-1 shadow-4 border-round-2xl overflow-hidden relative bento-hover">
-          <img src="/img/projects/ai-dynamic-crud-app/ai-gemini-app.webp" alt="AI & ML with Gemini" class="w-full" />
+          <img src="/img/projects/ai-dynamic-crud-app/ai-gemini-app.webp" alt="AI & ML with Gemini" width="600" height="800" class="w-full" fetchpriority="high" />
           <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-90 via-black-alpha-40 to-transparent p-3 flex flex-column justify-content-end">
             <div class="bg-black-alpha-60 p-2 border-round-md" style="backdrop-filter: blur(4px);">
               <span class="text-xs font-bold text-primary-300 uppercase mb-1">Architecture 01</span>
@@ -61,7 +61,7 @@ copyright: false
           </div>
         </div>
         <div class="bento-hero-item bento-hero-2 shadow-4 border-round-2xl overflow-hidden relative bento-hover">
-          <img src="/img/home/projects/ABN_Amro.webp" alt="Enterprise" class="w-full  object-cover" />
+          <img src="/img/home/projects/ABN_Amro.webp" alt="Enterprise" width="600" height="400" class="w-full object-cover" fetchpriority="high" />
           <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-90 via-black-alpha-40 to-transparent p-3 flex flex-column justify-content-end">
             <div class="bg-black-alpha-60 p-2 border-round-md" style="backdrop-filter: blur(4px);">
               <span class="text-xs font-bold text-primary-300 uppercase mb-1">Architecture 02</span>
@@ -70,7 +70,7 @@ copyright: false
           </div>
         </div>
         <div class="bento-hero-item bento-hero-3 shadow-4 border-round-2xl overflow-hidden relative bento-hover">
-          <img src="/img/projects/localxr/localxr-cover.webp" alt="Growth" class="w-full object-fill" />
+          <img src="/img/projects/localxr/localxr-cover.webp" alt="Growth" width="600" height="400" class="w-full object-fill" fetchpriority="high" />
           <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-90 via-black-alpha-40 to-transparent p-3 flex flex-column justify-content-end">
             <div class="bg-black-alpha-60 p-2 border-round-md" style="backdrop-filter: blur(4px);">
               <span class="text-xs font-bold text-primary-300 uppercase mb-1">Architecture 03</span>
@@ -85,7 +85,6 @@ copyright: false
 
 <!-- Trusted By Marquee -->
 <div class="mb-12 mt-6">
-  <div class="text-center font-bold text-500 mb-4 text-xs md:text-sm uppercase letter-spacing-wide opacity-60">Verified Technical Partnerships</div>
   <div class="marquee overflow-hidden">
     <div class="marquee-track">
       <div class="marquee-item flex align-items-center gap-2" v-for="org in orgs" :key="`org-1-${org.title}`">
@@ -100,32 +99,47 @@ copyright: false
   </div>
 </div>
 
-<div class="mb-8 px-2 md:px-4" style="max-width: 1200px; margin: 0 auto;">
-  <div class="text-center mb-6">
-    <span class="text-sm font-bold text-primary tracking-widest uppercase">The Transformation Effect</span>
-    <h2 class="text-3xl font-bold mt-2">Turning Technical Debt into Competitive Advantage</h2>
+<div class="mb-8 px-2 md:px-4 mt-4" style="max-width: 1240px;">
+  <div class="text-center mt-8">
+    <h2 class="text-3xl md:text-5xl font-bold mt-2">Engineering High-Stakes Transformations</h2>
   </div>
   <div class="grid">
     <div class="col-12 md:col-4 p-3" v-for="win in highImpactWins" :key="win.title">
-      <div class="surface-0 border-round-2xl shadow-3 overflow-hidden border-1 border-100 h-full flex flex-column">
-        <div class="p-4 bg-gray-50 border-bottom-1 border-100">
-          <div class="text-sm text-600 font-italic">
-            {{ win.title === 'Upstox' ? '4-day manual lead processing' : (win.title === 'ABN Amro' ? 'Fragmented legacy frontend' : 'Slow manual booking engine') }}
+      <a :href="win.link" class="no-underline block h-full color-inherit">
+        <div class="surface-0 border-round-3xl shadow-4 p-5 h-full flex flex-column border-1 border-100 bento-hover relative overflow-hidden text-left text-color">
+          <!-- Accent Glow -->
+          <div class="absolute top-0 right-0 w-8rem h-8rem opacity-10 border-circle" :style="{ background: `var(--${win.color}-500)`, filter: 'blur(40px)', transform: 'translate(30%, -30%)' }"></div>   
+          <div class="text-4xl md:text-5xl font-bold text-900 mb-2 tracking-tight">
+            {{ win.metric }}
+          </div>
+          <div class="text-sm font-bold text-500 uppercase tracking-widest mb-5">
+             {{ win.title }}
+          </div>
+          <div class="flex-grow-1 flex flex-column gap-4">
+             <div class="flex align-items-start gap-3">
+                <div class="w-2rem h-2rem border-circle bg-gray-100 flex align-items-center justify-content-center flex-shrink-0">
+                   <i class="pi pi-arrow-down text-xs text-500"></i>
+                </div>
+                <div class="text-sm text-600 line-height-3">
+                   <span class="font-bold text-900 block mb-1">Challenge</span>
+                   <span class="text-700">{{ win.before }}</span>
+                </div>
+             </div>
+             <div class="flex align-items-start gap-3">
+                <div class="w-2rem h-2rem border-circle bg-green-100 flex align-items-center justify-content-center flex-shrink-0">
+                   <i class="pi pi-bolt text-xs text-green-600"></i>
+                </div>
+                <div class="text-sm line-height-3">
+                   <span class="font-bold text-green-600 block mb-1">Impact</span>
+                   <span class="text-700" v-html="win.description"></span>
+                </div>
+             </div>
+          </div>
+          <div class="mt-4 flex justify-content-end opacity-40">
+             <i class="pi pi-arrow-up-right text-sm text-900"></i>
           </div>
         </div>
-        <div class="p-4 flex-grow-1 flex flex-column gap-3 relative">
-          <div class="absolute top-0 right-0 p-3">
-             <i class="pi" :class="[win.icon, `text-${win.color}-500`]" style="font-size: 2rem; opacity: 0.1"></i>
-          </div>
-          <div>
-            <div class="flex align-items-center gap-2 mb-2">
-              <span class="bg-green-100 text-green-700 text-xs px-2 py-1 border-round-md font-bold uppercase tracking-wider">The Architecture</span>
-            </div>
-            <div class="text-3xl font-bold text-900 mb-1">{{ win.metric }}</div>
-            <p class="text-sm text-700 line-height-3 m-0" v-html="win.description" />
-          </div>
-        </div>
-      </div>
+      </a>
     </div>
   </div>
 </div>
@@ -180,7 +194,6 @@ copyright: false
     <div class="col-12 lg:col-5 relative">
       <div class="absolute top-0 right-0 p-3 opacity-10 md:opacity-20">
           <i class="pi pi-sparkles text-green-500" style="font-size: 2rem;"></i>
-          <span class="text-md font-bold uppercase text-green-500 letter-spacing-wide mb-2 block" style="font-size: 2rem;">Pillar 1</span>
       </div>
       <h3 class="text-sm font-bold uppercase text-green-500 letter-spacing-wide mb-2">Intelligence Automation</h3>
       <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">AI & Machine Learning Apps</h2>
@@ -195,13 +208,13 @@ copyright: false
       <div class="grid">
         <div class="col-12 md:col-6 p-2">
           <a href="/web-development-projects/ai-dynamic-crud-app/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
-            <img src="/img/projects/ai-dynamic-crud-app/ai-webapp-english.webp" alt="AI Dynamic CRUD App" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
+            <img src="/img/projects/ai-dynamic-crud-app/ai-webapp-english.webp" alt="AI Dynamic CRUD App" width="400" height="300" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">AI Dynamic CRUD</div>
           </a>
         </div>
         <div class="col-12 md:col-6 p-2">
           <a href="/web-development-projects/ai-voice-generator/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
-            <img src="/img/projects/ai-narrator/Google-docs-text-to-speech-ai-voice-ai-audio.webp" alt="AI Voice Generator" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
+            <img src="/img/projects/ai-narrator/Google-docs-text-to-speech-ai-voice-ai-audio.webp" alt="AI Voice Generator" width="400" height="300" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
              <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">AI Voice Generator</div>
           </a>
         </div>
@@ -214,7 +227,6 @@ copyright: false
     <div class="col-12 lg:col-5 relative">
       <div class="absolute top-0 right-0 p-3 opacity-10 md:opacity-20">
           <i class="pi pi-code text-purple-500" style="font-size: 2rem;"></i>
-          <span class="text-md font-bold uppercase text-purple-500 letter-spacing-wide mb-2 block" style="font-size: 2rem;">Pillar 2</span>
       </div>
       <h3 class="text-sm font-bold uppercase text-purple-500 letter-spacing-wide mb-2">Scalable Infrastructure</h3>
       <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Custom SaaS & Enterprise Apps</h2>
@@ -229,13 +241,13 @@ copyright: false
       <div class="grid">
         <div class="col-12 md:col-6 p-2">
           <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
-            <img src="/img/home/projects/ABN_Amro.webp" alt="ABN AMRO Migration" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
+            <img src="/img/home/projects/ABN_Amro.webp" alt="ABN AMRO Migration" width="400" height="300" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">ABN AMRO Enterprise</div>
           </a>
         </div>
         <div class="col-12 md:col-6 p-2">
           <a href="/web-development-projects/momentum/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
-            <img src="/img/home/projects/momentum_incident_management.webp" alt="Momentum" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
+            <img src="/img/home/projects/momentum_incident_management.webp" alt="Momentum" width="400" height="300" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
              <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">Momentum Incident Mgmt</div>
           </a>
         </div>
@@ -248,7 +260,6 @@ copyright: false
     <div class="col-12 lg:col-5 relative">
       <div class="absolute top-0 right-0 p-3 opacity-10 md:opacity-20">
           <i class="pi pi-chart-line text-orange-500" style="font-size: 2rem;"></i>
-          <span class="text-md font-bold uppercase text-orange-500 letter-spacing-wide mb-2 block" style="font-size: 2rem;">Pillar 3</span>
       </div>
       <h3 class="text-sm font-bold uppercase text-orange-500 letter-spacing-wide mb-2">Database-Driven Growth</h3>
       <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Programmatic SEO & Lead Gen</h2>
@@ -263,13 +274,13 @@ copyright: false
       <div class="grid">
         <div class="col-12 md:col-6 p-2">
           <a href="/web-development-projects/local-home-services-pros/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
-            <img src="/img/projects/localxr/localxr-cover.webp" alt="LocalXR" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
+            <img src="/img/projects/localxr/localxr-cover.webp" alt="LocalXR" width="400" height="300" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">LocalXR Directory</div>
           </a>
         </div>
         <div class="col-12 md:col-6 p-2">
           <a href="/web-development-projects/appliance-repair-service-platform/" class="block hover-zoom relative border-round-xl overflow-hidden shadow-2 no-underline">
-            <img src="/img/home/projects/appliance_repair_cover.webp" alt="Appliance Repair" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
+            <img src="/img/home/projects/appliance_repair_cover.webp" alt="Appliance Repair" width="400" height="300" class="w-full h-10rem md:h-12rem object-cover" loading="lazy" />
              <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-2 text-sm font-bold backdrop-blur-sm">Appliance Repair Platform</div>
           </a>
         </div>
@@ -282,7 +293,6 @@ copyright: false
     <div class="col-12 lg:col-5 relative">
       <div class="absolute top-0 right-0 p-3 opacity-10 md:opacity-20">
           <i class="pi pi-sync text-blue-500" style="font-size: 2rem;"></i>
-          <span class="text-md font-bold uppercase text-blue-500 letter-spacing-wide mb-2 block" style="font-size: 2rem;">Pillar 4</span>
       </div>
       <h3 class="text-sm font-bold uppercase text-blue-500 letter-spacing-wide mb-2">Operational Efficiency</h3>
       <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Internal Tooling & Portals</h2>

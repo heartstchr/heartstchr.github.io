@@ -33,6 +33,12 @@ home: true
   </div>
 </section>
 
+<!-- SEO Content Block -->
+<div class="mb-8 px-4 md:px-6 text-700 line-height-3" style="max-width: 900px;">
+  <p>Our <strong>SaaS development</strong> expertise spans from micro-SaaS widgets to full-scale multi-tenant platforms. We specialise in building <strong>subscription-based software</strong> that manages high-concurrency traffic while maintaining data isolation and security.</p>
+  <p>Whether you are building a B2B productivity tool or a B2C marketplace, we architect the core pillars of your product: <strong>secure authentication</strong>, <strong>automated billing</strong>, and <strong>performant database schemas</strong>. Our solutions are built to grow with your MRR goals.</p>
+</div>
+
 <div class="grid mb-8">
   <div v-for="project in saasProjects" :key="project.name" class="col-12 md:col-6 lg:col-4 p-3">
     <a :href="'/web-development-projects/' + toKebabCase(project.name) + '/'" class="no-underline block h-full">

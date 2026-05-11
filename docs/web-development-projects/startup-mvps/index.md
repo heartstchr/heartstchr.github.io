@@ -33,6 +33,12 @@ home: true
   </div>
 </section>
 
+<!-- SEO Content Block -->
+<div class="mb-8 px-4 md:px-6 text-700 line-height-3" style="max-width: 900px;">
+  <p>Building a successful startup requires more than just code; it requires a <strong>Minimum Viable Product (MVP)</strong> that proves your business thesis while remaining scalable. Our approach to startup development focuses on <strong>speed to market</strong> and <strong>architectural integrity</strong>.</p>
+  <p>We've helped founders launch platforms ranging from niche home service marketplaces to high-traffic programmatic lead generation engines. By leveraging a battle-tested stack of React, Node.js, and automated infrastructure, we ensure your MVP doesn't just launch—it survives its first 10,000 users without a rewrite.</p>
+</div>
+
 <div class="grid mb-8">
   <div v-for="project in mvpProjects" :key="project.name" class="col-12 md:col-6 lg:col-4 p-3">
     <a :href="'/web-development-projects/' + toKebabCase(project.name) + '/'" class="no-underline block h-full">

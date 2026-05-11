@@ -52,24 +52,30 @@ export const orgs = [
 export const highImpactWins = [
   {
     title: "Upstox",
+    before: "4-day manual lead processing turnaround",
     metric: "98% Speed Increase",
-    description: "Reduced lead conversion turnaround from **4 days to 2 hours** with high-velocity engineering.",
+    description: "Architected a high-velocity event engine reducing lead conversion from <strong>4 days to 2 hours</strong>.",
     icon: "pi-chart-line",
-    color: "green"
+    color: "green",
+    link: "/web-development-projects/partner-dashboard-upstox/"
   },
   {
     title: "ABN Amro",
+    before: "Fragmented legacy frontend across global teams",
     metric: "Enterprise Scale",
-    description: "Architected the global frontend migration to the **Emerald Design System** for millions of users.",
+    description: "Standardized global engineering by architecting the <strong>Emerald Design System</strong> for millions of users.",
     icon: "pi-shield",
-    color: "blue"
+    color: "blue",
+    link: "/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/"
   },
   {
     title: "Qatar Airways",
+    before: "Slow, manual legacy travel booking engine",
     metric: "Global Impact",
-    description: "Built high-performance travel booking modular engines for one of the **world's leading airlines**.",
+    description: "Built high-performance, modular booking engines for one of the <strong>world's leading airlines</strong>.",
     icon: "pi-globe",
-    color: "purple"
+    color: "purple",
+    link: "/web-development-projects/qatar-airways-widget/"
   }
 ];
 
