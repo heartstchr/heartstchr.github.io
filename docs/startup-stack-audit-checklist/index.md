@@ -76,7 +76,7 @@ head:
   </div>
 
   <!-- Results Section -->
-  <div class="mt-8 border-top-1 border-100 pt-8 pb-8">
+  <div class="mt-2 border-top-1 border-100 pt-2 pb-2">
     <div v-if="scoreRevealed" class="surface-card p-6 border-round-3xl shadow-4 border-1 border-primary-100 animate-fadein">
       <!-- ... (keep existing results UI but ensure it's clean) ... -->
       <div class="text-center">
@@ -131,7 +131,7 @@ head:
   </div>
 
   <!-- SEO Semantic Content Block -->
-  <div class="mt-8 pt-8 border-top-1 border-100">
+  <div class="mt-2 pt-2 border-top-1 border-100">
     <div class="grid">
        <div class="col-12 lg:col-8 pr-0 lg:pr-6">
           <h2 class="text-3xl font-bold text-900 mb-4">Why an Infrastructure Audit is Critical for Startup Founders</h2>
@@ -186,7 +186,7 @@ head:
 
   <!-- Strategic Resource Footer -->
   <div class="mt-8 mb-8 pt-8 border-top-1 border-100">
-     <div class="surface-900 text-white p-6 md:p-8 border-round-3xl shadow-4 relative overflow-hidden">
+     <div class="surface-900 text-white p-2 md:p-4 border-round-3xl shadow-4 relative overflow-hidden">
         <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary-900 border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
         <div class="grid relative z-1">
            <div class="col-12 lg:col-4 mb-5 lg:mb-0">

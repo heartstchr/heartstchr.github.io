@@ -1,20 +1,7 @@
 ---
-title: Posts tagged with notion
-description: Explore our collection of articles, tutorials, and insights about notion. Stay updated with the latest trends and best practices in notion.
+title: "Tag: notion"
+description: "Browse articles and projects tagged with notion"
 layout: Layout
-tag: notion
-head:
-  - - meta
-    - name: keywords
-      content: notion, web development, programming, tech, tutorial
-  - - meta
-    - property: og:title
-      content: Posts tagged with notion
-  - - meta
-    - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about notion. Stay updated with the latest trends and best practices in notion.
-  - - meta
-    - property: og:type
-      content: website
 ---
-<TagPage />
+
+<TagPage :tag="'notion'" :items='[{"type":"Project","title":"Service Request System","description":"Build a complete customer service request management system using Notion database and Netlify functions. Features automated email notifications, file uploads, real-time sync, and professional web forms - all completely free with no coding required.","link":"/web-development-projects/service-request-system/"}]' />

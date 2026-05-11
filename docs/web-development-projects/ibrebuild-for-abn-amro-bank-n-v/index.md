@@ -36,7 +36,7 @@ project:
       <p class="text-xl opacity-70 line-height-4 max-w-50rem mb-4">{{$frontmatter.project.description}}</p>
       <div class="surface-card p-4 md:p-5 border-round-3xl shadow-2 border-1 border-100 mb-4">
         <div class="grid align-items-center">
-          <div class="col-12 md:col-4 border-bottom-1 md:border-bottom-none md:border-right-1 border-100 mb-3 md:mb-0 pb-3 md:pb-0">
+          <div class="col-12 md:col-6 border-bottom-1 md:border-bottom-none md:border-right-1 border-100 mb-3 md:mb-0 pb-3 md:pb-0">
              <div class="flex align-items-center gap-3">
                 <i class="pi pi-briefcase text-primary text-2xl"></i>
                 <div>
@@ -45,7 +45,7 @@ project:
                 </div>
              </div>
           </div>
-          <div class="col-12 md:col-4 border-bottom-1 md:border-bottom-none md:border-right-1 border-100 mb-3 md:mb-0 pb-3 md:pb-0">
+          <div class="col-12 md:col-6 border-bottom-1 md:border-bottom-none border-100 mb-3 md:mb-0 pb-3 md:pb-0">
              <div class="flex align-items-center gap-3">
                 <i class="pi pi-bolt text-primary text-2xl"></i>
                 <div>
@@ -54,7 +54,7 @@ project:
                 </div>
              </div>
           </div>
-          <div class="col-12 md:col-4 pt-3 md:pt-0">
+          <div class="col-12 pt-3 md:pt-0">
              <Stacks :stack="$frontmatter.project.stack" :other-skills="$frontmatter.project.otherSkills" />
           </div>
         </div>
@@ -181,6 +181,26 @@ project:
 
 </div>
 <ConsultingBridge />
+
+<section class="mb-8 mt-6">
+  <div class="surface-900 text-white p-6 md:p-8 border-round-3xl shadow-4 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-30rem h-30rem bg-primary border-circle opacity-10" style="filter: blur(100px); transform: translate(30%, -30%)"></div>
+    <div class="absolute bottom-0 left-0 w-20rem h-20rem bg-purple-500 border-circle opacity-10" style="filter: blur(80px); transform: translate(-30%, 30%)"></div>
+    <div class="grid align-items-center relative z-1">
+      <div class="col-12 lg:col-8">
+        <h2 class="text-3xl md:text-5xl font-bold mb-3 line-height-2">Claim Your Technical Risk Audit</h2>
+        <p class="text-xl text-white-alpha-70 line-height-3 max-w-40rem mb-0">
+          Before you go, let's identify the hidden bottlenecks stalling your growth. Get a proprietary architecture teardown and a 25-minute roadmap session.
+        </p>
+      </div>
+      <div class="col-12 lg:col-4 text-center lg:text-right mt-4 lg:mt-0">
+        <a href="/startup-stack-audit-checklist/" class="no-underline">
+          <Button label="Claim My Audit" icon="pi pi-shield" severity="primary" size="large" raised rounded class="px-6 py-3 text-xl font-bold w-full lg:w-auto" />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 <div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
       <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">
         <i class="pi pi-cog text-primary"></i>

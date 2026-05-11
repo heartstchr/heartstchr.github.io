@@ -1,20 +1,7 @@
 ---
-title: Posts tagged with git
-description: Explore our collection of articles, tutorials, and insights about git. Stay updated with the latest trends and best practices in git.
+title: "Tag: Git"
+description: "Browse articles and projects tagged with Git"
 layout: Layout
-tag: git
-head:
-  - - meta
-    - name: keywords
-      content: git, web development, programming, tech, tutorial
-  - - meta
-    - property: og:title
-      content: Posts tagged with git
-  - - meta
-    - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about git. Stay updated with the latest trends and best practices in git.
-  - - meta
-    - property: og:type
-      content: website
 ---
-<TagPage />
+
+<TagPage :tag="'Git'" :items='[{"type":"Project","title":"Marketplace Booking Platform","description":"A multi-sided booking marketplace with search, listing management, reservations, and payments that can be adapted to other inventory-led domains.","link":"/web-development-projects/marketplace-booking-platform/"},{"type":"Project","title":"IBRebuild for ABN AMRO BANK N.V.","description":"ABN AMRO Bank N.V. is a Dutch bank with headquarters in Amsterdam. The internet banking (IB) application for the bank customers which is migrating from old Angular JS to Vue.js integrated with Microsoft Azure cloud services as IBRebuild.","link":"/web-development-projects/ibrebuild-for-abn-amro-bank-nv/"},{"type":"Project","title":"Emerald Design System","description":"Our innovative digital strategy emphasizes efficiency through a 'build once, deploy multiple times' approach. Utilizing the Emerald design system, we ensure a consistent and seamless user experience across platforms. Significant investments in this system, coupled with an expanded team, have enhanced productivity and scalability, delivering cohesive digital solutions for optimal user engagement.","link":"/web-development-projects/emerald-design-system/"},{"type":"Project","title":"Yit Plus","description":"YIT Plus is a modern digital service helping you to monitor data related to your home and apartment association.","link":"/web-development-projects/yit-plus/"},{"type":"Project","title":"Qatar Airways widget","description":"Book flights to destinations around the world with Qatar Airways and fly on board an award-winning airline. Enjoy special fares, collect Avios, and more.","link":"/web-development-projects/qatar-airways-widget/"},{"type":"Project","title":"Recipes","description":"A community-driven platform where food lovers share, discover, and discuss recipes from around the world. Connect, cook, and create with fellow culinary enthusiasts.","link":"/web-development-projects/recipes/"},{"type":"Project","title":"Frontend of Tv Maze API","description":"TVmaze- Add TV information to your website or app.","link":"/web-development-projects/frontend-of-tv-maze-api/"},{"type":"Project","title":"Trokka Attraction","description":"Book Attractions and Tours for Your Next Holiday","link":"/web-development-projects/trokka-attraction/"},{"type":"Project","title":"Catch That Bus","description":"Book Malaysia and Singapore bus tickets online.","link":"/web-development-projects/catch-that-bus/"}]' />

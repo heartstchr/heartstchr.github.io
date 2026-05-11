@@ -163,11 +163,13 @@ copyright: false
         <div class="bg-purple-100 text-purple-600 border-circle w-3rem h-3rem flex align-items-center justify-content-center mb-4"><i class="pi pi-code text-xl"></i></div>
         <h3 class="m-0 mb-3 font-bold text-xl">The Scale Problem</h3>
         <p class="text-700 line-height-3 mb-4">You need to launch a complex SaaS MVP, or your legacy application is crumbling under traffic. You require flawless UI/UX, robust backend architecture, and high-concurrency capability.</p>
-        <div class="mt-auto pt-3 border-top-1 border-50">
-           <a href="/startup-stack-audit-checklist/" class="no-underline text-sm font-bold text-purple-600 flex align-items-center gap-2 hover:translate-x-2 transition-all">
-              Run a Tech Stack Self-Audit <i class="pi pi-arrow-right"></i>
-           </a>
-        </div>
+         <div class="mt-auto pt-3 border-top-1 border-50">
+            <GatedLink 
+               href="/startup-stack-audit-checklist/" 
+               label="Run a Tech Stack Self-Audit" 
+               customClass="no-underline text-sm font-bold text-purple-600 hover:translate-x-2 transition-all"
+            />
+         </div>
       </div>
     </div>
     <div class="col-12 md:col-6 p-3">

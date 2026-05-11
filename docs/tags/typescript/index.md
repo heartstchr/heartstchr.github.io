@@ -1,20 +1,7 @@
 ---
-title: Posts tagged with typescript
-description: Explore our collection of articles, tutorials, and insights about typescript. Stay updated with the latest trends and best practices in typescript.
+title: "Tag: typescript"
+description: "Browse articles and projects tagged with typescript"
 layout: Layout
-tag: typescript
-head:
-  - - meta
-    - name: keywords
-      content: typescript, web development, programming, tech, tutorial
-  - - meta
-    - property: og:title
-      content: Posts tagged with typescript
-  - - meta
-    - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about typescript. Stay updated with the latest trends and best practices in typescript.
-  - - meta
-    - property: og:type
-      content: website
 ---
-<TagPage />
+
+<TagPage :tag="'typescript'" :items='[{"type":"Project","title":"AI-Powered Influencer Platform - Vibe3","description":"A cutting-edge AI-powered influencer marketing platform built with modern frontend technologies. Features a sophisticated React-based user interface that connects content creators with premium brands through intelligent matching algorithms. Built as a Progressive Web App (PWA) with Web3 integration, delivering seamless user experience across all devices.","link":"/web-development-projects/ai-powered-influencer-platform---vibe3/"}]' />

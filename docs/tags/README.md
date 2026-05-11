@@ -1,26 +1,7 @@
 ---
-title: Explore Topics | Stack Seekers
-description: Browse all technical topics, tutorials, and insights by category and tags.
+title: All Tags
+description: Browse projects and articles by category
 layout: Layout
 ---
 
-<section class="p-4 surface-900 text-white border-round-3xl mb-8 overflow-hidden relative">
-  <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary-900 border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
-  <div class="relative z-1 text-center py-6">
-    <div class="flex align-items-center justify-content-center gap-2 text-primary font-bold mb-3 uppercase tracking-wider text-xs">
-      <i class="pi pi-tag"></i>
-      Knowledge Map
-    </div>
-    <h1 class="text-4xl md:text-6xl font-bold mb-4 mt-0 line-height-2">Explore <span class="text-primary-400">Topics</span>.</h1>
-    <p class="text-xl opacity-70 max-w-30rem mx-auto mb-5">Technical deep-dives and strategic breakdowns across the stack.</p>
-  </div>
-</section>
-
-<TagIndex />
-
-<div class="mt-8 text-center">
-  <h3 class="text-2xl font-bold mb-4">Want more insights?</h3>
-  <a href="/posts/" class="no-underline">
-    <Button label="Back to Playbook" icon="pi pi-arrow-left" severity="secondary" rounded text />
-  </a>
-</div>
+<TagIndex :tags='["Angular/black/white","Axios","Axios/black/white","Bitbucket","CSS3","DigitalOcean","ESLint","Eslint","Express/black/white","Git","JSON/black/white","JavaScript","Javascript","Lit","MongoDB","MySQL","Node.js","NodedotJS","Nodedotjs","Prettier","PrimeVue","Quasar/black/white","React","Socket.io/black/white","Vite","Vite/black/white","VuedotJs","Vuedotjs","Webpack","amazonEC2","amazonec2","angular/black/white","axios","bitbucket","css","d3","digitalocean","express/black/white","github/black/white","googleads","googleappsscript","googledocs","googledrive","googlesheets","gulp","html5","javascript","json/black/white","jsonwebtokens/black/white","kentico","lighthouse","lit","loopback","mailgun","markdown/black/white","mongodb","mysql","netlify","nextdotjs/black/white","nodedotjs","notion","notion/black/white","npm","pm2","pm2/black/white","pnpm","pwa","quasar/black/white","react","sass","solana","storybook","stripe","swagger","tailwindcss","ton","twilio","typescript","vercel/black/white","vite","vite/black/white","vitepress","vuedotjs","webpack"]' />
