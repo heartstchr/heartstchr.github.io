@@ -22,10 +22,10 @@ copyright: false
         </span>
       </div>
       <!-- Headline: Strategic Positioning Pivot -->
-      <h1 class="m-0 p-0 line-height-1 text-6xl md:text-7xl lg:text-7xl font-bold tracking-tight">
+      <h1 class="m-0 p-0 line-height-1 text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight">
         Engineering <span class="text-gradient">Scalable Revenue</span> Systems.
       </h1>
-      <p class="text-xl md:text-3xl mt-4 text-600 font-medium opacity-90 max-w-40rem line-height-3">Fractional CTO Leadership, AI Automation & Programmatic SEO Engineering.</p>
+      <p class="text-xl md:text-3xl mt-4 text-600 font-medium opacity-90 max-w-45rem line-height-3">Fractional CTO Leadership, AI Automation & Programmatic SEO Engineering for brands that need execution.</p>
       <!-- Trust-Asset Acceleration: Impact Matrix -->
       <div class="grid mt-5 gap-3">
         <div class="col-12 md:col-auto">
@@ -127,7 +127,8 @@ copyright: false
 
 <div class="mb-8 px-2 md:px-4 mt-4" style="max-width: 1240px;">
   <div class="text-center mt-8">
-    <h2 class="text-3xl md:text-5xl font-bold mt-2">Engineering High-Stakes Transformations</h2>
+    <h2 class="text-3xl md:text-5xl font-bold mt-2">The ROI of Strategic Engineering</h2>
+    <p class="text-lg md:text-xl text-600 max-w-40rem mx-auto">Measurable outcomes delivered for global leaders and fast-moving startups.</p>
   </div>
   <div class="grid">
     <div class="col-12 md:col-4 p-3" v-for="win in highImpactWins" :key="win.title">
@@ -172,8 +173,8 @@ copyright: false
 
 <div class="mb-8 px-2 md:px-4 py-6 md:py-8 surface-50 border-round-3xl" style="max-width: 1200px; margin: 0 auto;">
   <div class="text-center mb-6">
-    <h2 class="text-3xl md:text-5xl font-bold line-height-2 m-0 p-0 mb-3">Which bottleneck is holding you back?</h2>
-    <p class="text-lg md:text-xl text-600 max-w-30rem mx-auto">I engineer specialized solutions that break through your company's deepest technical challenges.</p>
+    <h2 class="text-3xl md:text-5xl font-bold line-height-2 m-0 p-0 mb-3">Where is Your Architecture Failing You?</h2>
+    <p class="text-lg md:text-xl text-600 max-w-30rem mx-auto">We engineer specialized solutions that break through your company's deepest technical and operational bottlenecks.</p>
   </div>
   
   <div class="grid">
@@ -218,8 +219,8 @@ copyright: false
 <!-- Solutions & Case Studies -->
 <div id="solutions" class="mb-8">
   <div class="text-center pb-6">
-    <h2 class="text-4xl font-bold mb-2">My Engineering Pillars</h2>
-    <p class="text-xl text-600">Proven architectures deployed for real businesses.</p>
+    <h2 class="text-4xl font-bold mb-2">Our Engineering Pillars</h2>
+    <p class="text-xl text-600">Battle-tested architectures built for resilience and growth.</p>
   </div>
 
   <!-- Pillar 1 -->
@@ -228,9 +229,9 @@ copyright: false
       <div class="absolute top-0 right-0 p-3 opacity-10 md:opacity-20">
           <i class="pi pi-sparkles text-green-500" style="font-size: 2rem;"></i>
       </div>
-      <h3 class="text-sm font-bold uppercase text-green-500 letter-spacing-wide mb-2">Intelligence Automation</h3>
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">AI & Machine Learning Apps</h2>
-      <p class="text-lg line-height-3 text-700 mb-4">Integrate Large Language Models (LLMs) deeply into your user experience. I build custom applications featuring AI-powered matching algorithms, text-to-speech generators, and native intelligence that saves thousands of manual hours.</p>
+      <h3 class="text-sm font-bold uppercase text-green-500 letter-spacing-wide mb-2">Autonomous Intelligence</h3>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">AI & Machine Learning Systems</h2>
+      <p class="text-lg line-height-3 text-700 mb-4">Integrate Large Language Models (LLMs) deeply into your business logic. We build custom applications featuring AI-powered matching algorithms, text-to-speech generators, and native intelligence that eliminates manual overhead.</p>
       <ul class="list-none p-0 m-0 mb-5 text-700">
         <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Advanced Matching Algorithms</li>
         <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Gemini / OpenAI API Integrations</li>
@@ -261,9 +262,9 @@ copyright: false
       <div class="absolute top-0 right-0 p-3 opacity-10 md:opacity-20">
           <i class="pi pi-code text-purple-500" style="font-size: 2rem;"></i>
       </div>
-      <h3 class="text-sm font-bold uppercase text-purple-500 letter-spacing-wide mb-2">Scalable Infrastructure</h3>
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Custom SaaS & Enterprise Apps</h2>
-      <p class="text-lg line-height-3 text-700 mb-4">Sophisticated web applications designed for scale. From highly complex banking portal migrations to high-concurrency dashboards, I architect fast, resilient systems that grow with your business and never slow down.</p>
+      <h3 class="text-sm font-bold uppercase text-purple-500 letter-spacing-wide mb-2">Resilient Infrastructure</h3>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Enterprise SaaS & Scalable Apps</h2>
+      <p class="text-lg line-height-3 text-700 mb-4">Sophisticated web applications designed for absolute reliability. From high-complexity banking portal migrations to high-concurrency dashboards, we architect fast, resilient systems that grow with your user base.</p>
       <ul class="list-none p-0 m-0 mb-5 text-700">
         <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Predictable, crash-resistant interfaces</li>
         <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Zero-downtime legacy modernisation</li>
@@ -294,9 +295,9 @@ copyright: false
       <div class="absolute top-0 right-0 p-3 opacity-10 md:opacity-20">
           <i class="pi pi-chart-line text-orange-500" style="font-size: 2rem;"></i>
       </div>
-      <h3 class="text-sm font-bold uppercase text-orange-500 letter-spacing-wide mb-2">Database-Driven Growth</h3>
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Programmatic SEO & Lead Gen</h2>
-      <p class="text-lg line-height-3 text-700 mb-4">I build massive, database-driven directory platforms. Automatically generate thousands of highly optimized location and service pages that dominate organic search and convert traffic via dynamic lead capture.</p>
+      <h3 class="text-sm font-bold uppercase text-orange-500 letter-spacing-wide mb-2">Growth Engineering</h3>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Programmatic SEO & Lead Generation</h2>
+      <p class="text-lg line-height-3 text-700 mb-4">We build massive, database-driven directory platforms that dominate organic search. Automatically generate thousands of optimized location and service pages to capture high-intent traffic natively.</p>
       <ul class="list-none p-0 m-0 mb-5 text-700">
         <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Pages indexed & ranked from day one</li>
         <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Location-aware lead capture at scale</li>
@@ -327,9 +328,9 @@ copyright: false
       <div class="absolute top-0 right-0 p-3 opacity-10 md:opacity-20">
           <i class="pi pi-sync text-blue-500" style="font-size: 2rem;"></i>
       </div>
-      <h3 class="text-sm font-bold uppercase text-blue-500 letter-spacing-wide mb-2">Operational Efficiency</h3>
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Internal Tooling & Portals</h2>
-      <p class="text-lg line-height-3 text-700 mb-4">I turn your existing systems (Notion databases, spreadsheets) into full-fledged, professional web applications instantly. Automate workflows, capture leads securely, without waiting months for a backend build.</p>
+      <h3 class="text-sm font-bold uppercase text-blue-500 letter-spacing-wide mb-2">Operational Velocity</h3>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 mt-0">Custom Internal Tooling & Portals</h2>
+      <p class="text-lg line-height-3 text-700 mb-4">Turn your existing operational data (Notion, Spreadsheets) into full-fledged, professional web applications. We automate workflows and lead capture without the overhead of a months-long backend build.</p>
       <ul class="list-none p-0 m-0 mb-5 text-700">
         <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Notion-to-Web Architecture</li>
         <li class="flex align-items-center mb-2"><i class="pi pi-check text-green-500 mr-2"></i> Dynamic Form Generators</li>
