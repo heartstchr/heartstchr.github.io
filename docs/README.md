@@ -17,7 +17,10 @@ copyright: false
         </span>
       </div>
       <h1 class="m-0 p-0 line-height-2 text-4xl md:text-7xl font-bold">
-        Fractional CTO, <span class="text-gradient">AI automation</span>, and <span class="text-gradient-2">programmatic SEO systems</span> for brands that need execution.
+        Fractional CTO,<br />
+        <span class="text-gradient">AI automation</span>, and<br />
+        <span class="text-gradient-2">programmatic SEO systems</span><br />
+        for brands that need execution.
       </h1>
       <div class="text-xl md:text-2xl mt-4 line-height-3 text-700 hidden md:block">
         From migrating global banking infrastructure for <strong>ABN AMRO</strong> to reducing lead turnaround from <strong>4 days to 2 hours</strong> for <strong>Upstox</strong>. I help founders and product teams turn technical bottlenecks into scalable revenue systems.
@@ -52,7 +55,7 @@ copyright: false
     <div class="col-12 lg:col-5 mt-6 lg:mt-0 hidden lg:block">
       <div class="bento-hero-grid h-30rem">
         <div class="bento-hero-item bento-hero-1 shadow-4 border-round-2xl overflow-hidden relative bento-hover">
-          <img src="/img/projects/ai-dynamic-crud-app/ai-gemini-app.webp" alt="AI & ML with Gemini" width="600" height="800" class="w-full" fetchpriority="high" />
+          <img src="/img/projects/ai-dynamic-crud-app/ai-gemini-app.webp" alt="AI & ML with Gemini" width="600" height="800" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
           <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-90 via-black-alpha-40 to-transparent p-3 flex flex-column justify-content-end">
             <div class="bg-black-alpha-60 p-2 border-round-md" style="backdrop-filter: blur(4px);">
               <span class="text-xs font-bold text-primary-300 uppercase mb-1">Architecture 01</span>
@@ -61,7 +64,7 @@ copyright: false
           </div>
         </div>
         <div class="bento-hero-item bento-hero-2 shadow-4 border-round-2xl overflow-hidden relative bento-hover">
-          <img src="/img/home/projects/ABN_Amro.webp" alt="Enterprise" width="600" height="400" class="w-full object-cover" fetchpriority="high" />
+          <img src="/img/home/projects/ABN_Amro.webp" alt="Enterprise" width="600" height="400" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
           <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-90 via-black-alpha-40 to-transparent p-3 flex flex-column justify-content-end">
             <div class="bg-black-alpha-60 p-2 border-round-md" style="backdrop-filter: blur(4px);">
               <span class="text-xs font-bold text-primary-300 uppercase mb-1">Architecture 02</span>
@@ -70,7 +73,7 @@ copyright: false
           </div>
         </div>
         <div class="bento-hero-item bento-hero-3 shadow-4 border-round-2xl overflow-hidden relative bento-hover">
-          <img src="/img/projects/localxr/localxr-cover.webp" alt="Growth" width="600" height="400" class="w-full object-fill" fetchpriority="high" />
+          <img src="/img/projects/localxr/localxr-cover.webp" alt="Growth" width="600" height="400" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
           <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-90 via-black-alpha-40 to-transparent p-3 flex flex-column justify-content-end">
             <div class="bg-black-alpha-60 p-2 border-round-md" style="backdrop-filter: blur(4px);">
               <span class="text-xs font-bold text-primary-300 uppercase mb-1">Architecture 03</span>
