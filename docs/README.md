@@ -22,7 +22,7 @@ copyright: false
         </span>
       </div>
       <!-- Headline: Strategic Positioning Pivot -->
-      <h1 class="m-0 p-0 line-height-1 text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight">
+      <h1 class="m-0 p-0 line-height-1 text-6xl md:text-7xl lg:text-7xl font-bold tracking-tight">
         Engineering <span class="text-gradient">Scalable Revenue</span> Systems.
       </h1>
       <p class="text-xl md:text-3xl mt-4 text-600 font-medium opacity-90 max-w-40rem line-height-3">Fractional CTO Leadership, AI Automation & Programmatic SEO Engineering.</p>
