@@ -991,6 +991,13 @@ export const freelance = [
     year: "2022",
     domain: "Banking",
     schema: "https://schema.org/SoftwareApplication",
+    link: "https://www.abnamro.com/en/home",
+    contact: "https://wa.me/917026217029?text=Hi%20there%2C%20I'm%20interested%20in%20building%20a%20modern%20Design%20System",
+    details: "./details/emerald-design-system.md",
+    perspective: {
+      executive: "A strategic investment in design consistency and development velocity. The Emerald Design System provides a unified language for ABN AMRO's digital ecosystem, significantly reducing time-to-market for new features while ensuring a seamless, banking-grade user experience across all platforms. It represents a shift from bespoke development to a scalable, component-driven digital strategy.",
+      technical: "Built using Lit (Web Components) for maximum interoperability and performance. The system utilizes a tokens-first approach to manage theming and visual variables, integrated with a robust Storybook documentation suite. The architecture emphasizes modularity and tree-shaking, ensuring that enterprise applications remain lightweight and fast while consuming complex design patterns."
+    },
     stack: [
       "JavaScript",
       "Lit",

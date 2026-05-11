@@ -29,34 +29,47 @@ project:
 ---
 
 <section class="mt-4 mb-6">
-  <div class="grid align-items-center">
-    <div class="col-12 lg:col-8">
+  <div class="grid">
+    <div class="col-12">
       <div class="text-primary font-bold mb-2 uppercase tracking-widest text-xs">Project Case Study</div>
       <h1 class="text-4xl md:text-6xl font-bold mb-3 mt-0 line-height-2">{{$frontmatter.project.name}}</h1>
-      <p class="text-xl opacity-70 line-height-3 max-w-30rem">{{$frontmatter.project.description}}</p>
-    </div>
-    <div class="col-12 lg:col-4">
-      <div class="surface-card p-4 border-round-2xl shadow-2 border-1 border-100">
-        <div class="flex align-items-center gap-3 mb-3">
-          <i class="pi pi-clock text-primary"></i>
-          <div>
-            <div class="text-xs opacity-50 uppercase font-bold">Timeline</div>
-            <div class="font-bold">{{$frontmatter.project.year}}</div>
+      <p class="text-xl opacity-70 line-height-4 max-w-50rem mb-4">{{$frontmatter.project.description}}</p>
+      <div class="surface-card p-4 md:p-5 border-round-3xl shadow-2 border-1 border-100 mb-4">
+        <div class="grid align-items-center">
+          <div class="col-12 md:col-4 border-bottom-1 md:border-bottom-none md:border-right-1 border-100 mb-3 md:mb-0 pb-3 md:pb-0">
+             <div class="flex align-items-center gap-3">
+                <i class="pi pi-briefcase text-primary text-2xl"></i>
+                <div>
+                  <div class="text-xs opacity-50 uppercase font-bold">Industry</div>
+                  <div class="font-bold text-lg text-900">{{$frontmatter.project.domain}}</div>
+                </div>
+             </div>
+          </div>
+          <div class="col-12 md:col-4 border-bottom-1 md:border-bottom-none md:border-right-1 border-100 mb-3 md:mb-0 pb-3 md:pb-0">
+             <div class="flex align-items-center gap-3">
+                <i class="pi pi-bolt text-primary text-2xl"></i>
+                <div>
+                  <div class="text-xs opacity-50 uppercase font-bold">Project Status</div>
+                  <div class="font-bold text-lg text-900">Scale & Growth</div>
+                </div>
+             </div>
+          </div>
+          <div class="col-12 md:col-4 pt-3 md:pt-0">
+             <Stacks :stack="$frontmatter.project.stack" :other-skills="$frontmatter.project.otherSkills" />
           </div>
         </div>
-        <div class="flex align-items-center gap-3 mb-3">
-          <i class="pi pi-briefcase text-primary"></i>
-          <div>
-            <div class="text-xs opacity-50 uppercase font-bold">Industry</div>
-            <div class="font-bold">{{$frontmatter.project.domain}}</div>
-          </div>
-        </div>
-        <div class="flex align-items-center gap-3">
-          <i class="pi pi-bolt text-primary"></i>
-          <div>
-            <div class="text-xs opacity-50 uppercase font-bold">Status</div>
-            <div class="font-bold">Scale & Growth</div>
-          </div>
+        <div class="mt-4 pt-4 border-top-1 border-100">
+           <div class="flex flex-column md:flex-row align-items-stretch gap-3">
+              <a v-if="$frontmatter.project.link" :href="$frontmatter.project.link" target="_blank" class="no-underline flex-1">
+                <Button label="View Live Demo" icon="pi pi-external-link" severity="primary" class="w-full font-bold py-3" raised rounded />
+              </a>
+              <a v-if="$frontmatter.project.codeLink" :href="$frontmatter.project.codeLink" target="_blank" class="no-underline flex-1">
+                <Button label="View Source Code" icon="pi pi-github" severity="secondary" class="w-full font-bold py-3" raised rounded />
+              </a>
+              <a v-if="$frontmatter.project.contact" :href="'/contact/?subject=' + encodeURIComponent('Scale Request: ' + $frontmatter.project.name)" class="no-underline flex-1">
+                <Button label="Architect Similar Solution" icon="pi pi-bolt" severity="secondary" class="w-full font-bold py-3" raised rounded />
+              </a>
+           </div>
         </div>
       </div>
     </div>
@@ -87,56 +100,57 @@ project:
   </div>
 </section>
 
-<TabView class="project-perspective-tabs mb-8" v-if="$frontmatter.project.perspective?.executive">
-  <TabPanel>
-    <template #header>
-      <div class="flex align-items-center gap-2">
-        <i class="pi pi-briefcase"></i>
-        <span>Strategic Executive</span>
-      </div>
-    </template>
-    <div class="p-4 md:p-6 surface-card border-round-3xl shadow-1 mt-4">
-      <div class="flex align-items-center gap-2 text-primary font-bold mb-4 uppercase tracking-wider text-sm">
-        <i class="pi pi-verified"></i>
-        Business Impact & ROI
-      </div>
-      <div class="text-xl line-height-4 text-700 mb-6">
-        {{ $frontmatter.project.perspective.executive }}
-      </div>
-      <div class="grid">
-        <div class="col-12">
-           <h4 class="text-lg font-bold mb-4 flex align-items-center gap-2">
-              <i class="pi pi-list text-primary"></i> Strategic Playbook Features
-           </h4>
-           <div class="grid">
-              <div v-for="feature in $frontmatter.project.features" :key="feature.text" class="col-12 md:col-6 mb-3">
-                 <div class="flex align-items-start gap-3">
-                    <i class="pi pi-check text-primary mt-1"></i>
-                    <div class="text-sm font-medium line-height-3" v-html="feature.text"></div>
-                 </div>
-              </div>
-           </div>
+<div class="grid mb-8">
+  <div class="col-12">
+    <TabView class="project-perspective-tabs" v-if="$frontmatter.project.perspective?.executive">
+      <TabPanel>
+        <template #header>
+          <div class="flex align-items-center gap-2">
+            <i class="pi pi-briefcase"></i>
+            <span>Strategic Executive</span>
+          </div>
+        </template>
+        <div class="p-4 md:p-6 surface-card border-round-3xl shadow-1 mt-4">
+          <div class="flex align-items-center gap-2 text-primary font-bold mb-4 uppercase tracking-wider text-sm">
+            <i class="pi pi-verified"></i>
+            Business Impact & ROI
+          </div>
+          <div class="text-xl line-height-4 text-700 mb-6">
+            {{ $frontmatter.project.perspective.executive }}
+          </div>
+          <div class="grid">
+            <div class="col-12">
+               <h4 class="text-lg font-bold mb-4 flex align-items-center gap-2">
+                  <i class="pi pi-list text-primary"></i> Strategic Playbook Features
+               </h4>
+               <div class="grid">
+                  <div v-for="feature in $frontmatter.project.features" :key="feature.text" class="col-12 md:col-6 mb-3">
+                     <div class="flex align-items-start gap-3">
+                        <i class="pi pi-check text-primary mt-1"></i>
+                        <div class="text-sm font-medium line-height-3" v-html="feature.text"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </TabPanel>
-  <TabPanel>
-    <template #header>
-      <div class="flex align-items-center gap-2">
-        <i class="pi pi-cog"></i>
-        <span>Engineering Architecture</span>
-      </div>
-    </template>
-    <div class="p-4 md:p-6 surface-card border-round-3xl shadow-1 mt-4">
-      <div class="flex align-items-center gap-2 text-primary font-bold mb-4 uppercase tracking-wider text-sm">
-        <i class="pi pi-code"></i>
-        Technical Deep-Dive
-      </div>
-      <div class="text-xl line-height-4 text-700 mb-6">
-        {{ $frontmatter.project.perspective.technical }}
-      </div>
-      <Stacks :stack="$frontmatter.project.stack" :other-skills="$frontmatter.project.otherSkills" />
-      <div v-pre class="project-markdown-content text-lg line-height-4">
+      </TabPanel>
+      <TabPanel>
+        <template #header>
+          <div class="flex align-items-center gap-2">
+            <i class="pi pi-cog"></i>
+            <span>Engineering Architecture</span>
+          </div>
+        </template>
+        <div class="p-4 md:p-6 surface-card border-round-3xl shadow-1 mt-4">
+          <div class="flex align-items-center gap-2 text-primary font-bold mb-4 uppercase tracking-wider text-sm">
+            <i class="pi pi-code"></i>
+            Technical Deep-Dive
+          </div>
+          <div class="text-xl line-height-4 text-700 mb-6">
+            {{ $frontmatter.project.perspective.technical }}
+          </div>
+          <div v-pre class="project-markdown-content text-lg line-height-4">
 
 ## Project Overview
 A comprehensive **SR22 insurance platform** built with **Next.js 13** that helps users understand SR22 requirements and connect with insurance providers.
@@ -627,47 +641,24 @@ The main content file (493KB) contains:
 </TabPanel>
 </TabView>
 
-<div v-else>
-  <div class="grid mb-8">
-    <div class="col-12 lg:col-8">
-       <div class="surface-card p-4 md:p-6 border-round-3xl shadow-2 h-full">
-          <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">
-             <i class="pi pi-list text-primary"></i> Playbook Features
-          </h3>
-          <div class="grid">
-             <div v-for="feature in $frontmatter.project.features" :key="feature.text" class="col-12 md:col-6 mb-3">
-                <div class="flex align-items-start gap-3">
-                   <i class="pi pi-verified text-primary mt-1"></i>
-                   <div class="text-sm font-medium line-height-3" v-html="feature.text"></div>
-                </div>
-             </div>
-          </div>
-       </div>
-    </div>
-    <div class="col-12 lg:col-4">
-       <div class="surface-900 text-white p-4 border-round-3xl shadow-4 h-full relative overflow-hidden">
-          <div class="absolute top-0 right-0 w-10rem h-10rem border-circle bg-primary opacity-20" style="filter: blur(40px); transform: translate(30%, -30%);"></div>
-          <div class="relative z-1">
-            <Stacks :stack="$frontmatter.project.stack" :other-skills="$frontmatter.project.otherSkills" />
-            <div class="flex flex-column gap-2 mt-6">
-              <div class="flex align-items-stretch gap-2 w-full">
-                <a v-if="$frontmatter.project.link" :href="$frontmatter.project.link" target="_blank" class="flex-1 no-underline flex align-items-stretch">
-                  <Button label="View Demo" icon="pi pi-external-link" severity="primary" class="w-full h-full font-bold" raised rounded />
-                </a>
-                 <a v-if="$frontmatter.project.codeLink" :href="$frontmatter.project.codeLink" target="_blank" class="flex-1 no-underline flex align-items-stretch">
-                  <Button label="Source" icon="pi pi-github" severity="secondary" class="w-full h-full font-bold" raised rounded />
-                </a>
-              </div>
-              <a v-if="$frontmatter.project.contact" :href="'/contact/?subject=' + encodeURIComponent('Scale Request: ' + $frontmatter.project.name)" class="no-underline w-full">
-                <Button label="Architect Similar Solution" icon="pi pi-bolt" severity="secondary" class="w-full font-bold" raised rounded />
-              </a>
-            </div>
-          </div>
-       </div>
-    </div>
+<div v-else class="surface-card p-4 md:p-6 border-round-3xl shadow-2 h-full">
+  <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">
+     <i class="pi pi-list text-primary"></i> Playbook Features
+  </h3>
+  <div class="grid">
+     <div v-for="feature in $frontmatter.project.features" :key="feature.text" class="col-12 md:col-6 mb-3">
+        <div class="flex align-items-start gap-3">
+           <i class="pi pi-verified text-primary mt-1"></i>
+           <div class="text-sm font-medium line-height-3" v-html="feature.text"></div>
+        </div>
+     </div>
   </div>
+</div>
+</div>
 
-  <div v-pre class="project-markdown-content text-lg line-height-4 mb-8">
+</div>
+
+<div v-if="!$frontmatter.project.perspective?.executive" v-pre class="project-markdown-content text-lg line-height-4 mb-8">
 
 ## Project Overview
 A comprehensive **SR22 insurance platform** built with **Next.js 13** that helps users understand SR22 requirements and connect with insurance providers.
@@ -1152,7 +1143,6 @@ The main content file (493KB) contains:
 **Content**: 493KB comprehensive SR22 database  
 **Coverage**: 50 states + 20+ insurance providers
 
-</div>
 </div>
 <ConsultingBridge />
 <div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
