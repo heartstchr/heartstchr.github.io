@@ -20,9 +20,11 @@
             <h3 class="text-2xl font-bold mb-1 text-900 text-center lg:text-left">{{ step.title }}</h3>
             <p class="text-600 line-height-3 text-sm mb-4 text-center lg:text-left">{{ step.desc }}</p>
             <div v-if="idx === 1 && showAudit" class="mt-1 mb-4 text-center lg:text-left">
-               <a href="/startup-stack-audit-checklist/" class="no-underline text-xs font-bold text-primary flex align-items-center justify-content-center lg:justify-content-start gap-2 hover:text-primary-700 transition-colors">
-                  Try Self-Audit <i class="pi pi-arrow-right"></i>
-               </a>
+               <GatedLink 
+                  href="/startup-stack-audit-checklist/" 
+                  label="Try Self-Audit" 
+                  customClass="no-underline text-xs font-bold text-primary hover:text-primary-700 transition-colors"
+               />
             </div>
             <div class="mt-auto px-3 py-2 bg-primary-50 dark:bg-white-alpha-10 border-round-lg inline-flex align-items-center gap-2 w-max mx-auto lg:mx-0 border-1 border-primary-100 dark:border-none">
                <i class="pi pi-verified text-primary"></i>

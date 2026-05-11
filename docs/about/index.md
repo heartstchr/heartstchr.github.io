@@ -157,9 +157,9 @@ contributors: false
     <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
       <Button label="Book Free Discovery Call" icon="pi pi-bolt" severity="primary" size="large" raised rounded class="px-6" />
     </a>
-    <a href="/startup-stack-audit-checklist/" class="no-underline">
+    <GatedLink href="/startup-stack-audit-checklist/">
       <Button label="Run Technical Health Check" icon="pi pi-check-square" severity="secondary" size="large" raised rounded outlined class="px-6" />
-    </a>
+    </GatedLink>
   </div>
   <div class="text-sm text-500 mt-4">Both paths provide a prioritized technical roadmap for your business.</div>
 </div>

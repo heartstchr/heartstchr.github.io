@@ -1,20 +1,7 @@
 ---
-title: Posts tagged with javascript
-description: Explore our collection of articles, tutorials, and insights about javascript. Stay updated with the latest trends and best practices in javascript.
+title: "Tag: JavaScript"
+description: "Browse articles and projects tagged with JavaScript"
 layout: Layout
-tag: javascript
-head:
-  - - meta
-    - name: keywords
-      content: javascript, web development, programming, tech, tutorial
-  - - meta
-    - property: og:title
-      content: Posts tagged with javascript
-  - - meta
-    - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about javascript. Stay updated with the latest trends and best practices in javascript.
-  - - meta
-    - property: og:type
-      content: website
 ---
-<TagPage />
+
+<TagPage :tag="'JavaScript'" :items='[{"type":"Project","title":"Emerald Design System","description":"Our innovative digital strategy emphasizes efficiency through a 'build once, deploy multiple times' approach. Utilizing the Emerald design system, we ensure a consistent and seamless user experience across platforms. Significant investments in this system, coupled with an expanded team, have enhanced productivity and scalability, delivering cohesive digital solutions for optimal user engagement.","link":"/web-development-projects/emerald-design-system/"}]' />

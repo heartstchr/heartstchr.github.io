@@ -114,9 +114,9 @@ pageInfo: false
     <a href="https://cal.com/stackseekers" class="no-underline">
       <Button label="Book Roadmap Session" icon="pi pi-calendar" severity="secondary" raised rounded class="text-lg font-bold px-5 py-3" />
     </a>
-    <a href="/startup-stack-audit-checklist/" class="no-underline">
+    <GatedLink href="/startup-stack-audit-checklist/">
       <Button label="Run 5-Min Self Audit" icon="pi pi-check-square" severity="primary" raised rounded outlined class="text-lg font-bold px-5 py-3" />
-    </a>
+    </GatedLink>
   </div>
   <div class="text-sm mt-4 opacity-70">Best fit for founders, product owners, and engineering teams with active delivery goals.</div>
 </div>
