@@ -1,0 +1,36 @@
+# Stack Seekers
+
+> Stack Seekers is an independent engineering consultancy led by Jiwan Ghosal. The firm helps startups and enterprise teams with fractional CTO support, AI automation, programmatic SEO systems, scalable product architecture, enterprise cloud migration, and API performance work.
+
+## Best Pages
+
+- [Home](https://stackseekers.com/) - Primary overview of positioning, proof, and commercial fit.
+- [Services](https://stackseekers.com/web-development-services/) - Service catalog and engagement entry point.
+- [Contact](https://stackseekers.com/contact/) - Project inquiry and technical roadmap call.
+
+## Core Services
+
+- [Product Architecture & Scale](https://stackseekers.com/web-development-services/product-architecture-and-scaling/) - Architecture strategy for SaaS products, platform rebuilds, and scale-readiness.
+- [ROI-Driven AI Automation](https://stackseekers.com/web-development-services/ai-and-automation-strategy/) - LLM integrations, automation workflows, and AI-enabled internal tools.
+- [Fractional CTO Strategy](https://stackseekers.com/web-development-services/fractional-cto-and-advisory/) - Technical roadmap, delivery oversight, and senior engineering leadership without a full-time CTO hire.
+- [Enterprise Cloud Migration](https://stackseekers.com/web-development-services/enterprise-cloud-migration/) - Legacy modernization and phased migration strategy for mission-critical systems.
+- [Programmatic Growth Engines](https://stackseekers.com/web-development-services/programmatic-seo-and-growth/) - Scalable landing-page systems for long-tail organic acquisition and lead generation.
+- [High-Performance API Design](https://stackseekers.com/web-development-services/api-performance-and-integration/) - Faster APIs, cleaner integrations, and backend architecture improvements.
+
+## Proof
+
+- ABN AMRO: enterprise-grade platform and migration work.
+- Upstox: lead-response turnaround improved from 4 days to 2 hours.
+- Qatar Airways: high-performance travel-booking interface work.
+
+## Relevant Case Studies
+
+- [Local Home Services Pros](https://stackseekers.com/web-development-projects/local-home-services-pros/) - Programmatic SEO and lead-generation architecture.
+- [AI Dynamic CRUD App](https://stackseekers.com/web-development-projects/ai-dynamic-crud-app/) - AI-assisted web application generation and workflow automation.
+- [Momentum Incident Management](https://stackseekers.com/web-development-projects/momentum-incident-management/) - Operational software and workflow management.
+- [ABN AMRO Enterprise Migration](https://stackseekers.com/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/) - Enterprise frontend migration and system modernization.
+
+## Contact
+
+- [Book a Technical Roadmap Call](https://cal.com/stackseekers)
+- [Project Inquiry Form](https://stackseekers.com/contact/)

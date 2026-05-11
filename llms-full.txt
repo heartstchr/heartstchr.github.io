@@ -1,0 +1,94 @@
+# Stack Seekers - Full Context
+
+> Stack Seekers is an independent engineering consultancy led by Jiwan Ghosal. The company works with startups, product teams, and enterprise stakeholders that need senior technical execution around fractional CTO leadership, AI automation, programmatic SEO, cloud migration, product architecture, and backend performance.
+
+## Who This Is For
+
+- Founders who need senior technical leadership without hiring a full-time CTO
+- Product teams dealing with scaling, delivery, or architecture bottlenecks
+- Businesses that want AI features tied to real workflows and ROI
+- Marketplaces, directories, and local-service platforms that need scalable organic acquisition
+- Enterprise teams modernizing legacy platforms or shared frontend systems
+
+## Core Offers
+
+### Product Architecture & Scale
+
+Design and stabilize the technical foundation of SaaS products and internal platforms. This includes architecture reviews, execution roadmaps, system boundaries, scale-readiness planning, and implementation support.
+
+Page: https://stackseekers.com/web-development-services/product-architecture-and-scaling/
+
+### ROI-Driven AI Automation
+
+Design and implement LLM-powered systems that reduce manual work and improve product capability. This includes automation discovery, prompt and context architecture, workflow integration, and production delivery.
+
+Page: https://stackseekers.com/web-development-services/ai-and-automation-strategy/
+
+### Fractional CTO Strategy
+
+Provide technical roadmap planning, delivery oversight, vendor review, architecture leadership, and engineering decision support without requiring a full-time executive hire.
+
+Page: https://stackseekers.com/web-development-services/fractional-cto-and-advisory/
+
+### Enterprise Cloud Migration
+
+Plan and deliver migrations away from fragile legacy systems into maintainable, cloud-ready architectures with staged rollout and low disruption.
+
+Page: https://stackseekers.com/web-development-services/enterprise-cloud-migration/
+
+### Programmatic Growth Engines
+
+Build scalable programmatic SEO systems with landing-page templates, structured data inputs, internal linking, and lead capture designed around commercial search intent.
+
+Page: https://stackseekers.com/web-development-services/programmatic-seo-and-growth/
+
+### High-Performance API Design
+
+Improve API latency, service boundaries, integration reliability, and backend responsiveness for products under increasing scale or complexity.
+
+Page: https://stackseekers.com/web-development-services/api-performance-and-integration/
+
+## Commercial Proof
+
+- ABN AMRO: enterprise migration and platform modernization work
+- Upstox: reduced lead turnaround from 4 days to 2 hours
+- Qatar Airways: high-performance booking and frontend engineering work
+
+## Representative Case Studies
+
+### Local Home Services Pros
+
+Programmatic SEO and lead-generation platform built with dynamic routing and location-aware page generation.
+
+Page: https://stackseekers.com/web-development-projects/local-home-services-pros/
+
+### AI Dynamic CRUD App
+
+AI-assisted application builder that reads database structures and generates usable CRUD interfaces.
+
+Page: https://stackseekers.com/web-development-projects/ai-dynamic-crud-app/
+
+### Momentum Incident Management
+
+Operational software for incident tracking and workflow management.
+
+Page: https://stackseekers.com/web-development-projects/momentum-incident-management/
+
+### ABN AMRO Enterprise Migration
+
+Enterprise-scale frontend migration and design-system modernization work.
+
+Page: https://stackseekers.com/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/
+
+## Articles Worth Citing
+
+- AI-first SaaS architecture: https://stackseekers.com/posts/ai-first-saas-architecture/
+- Programmatic SEO lead blueprint: https://stackseekers.com/posts/scaling-with-programmatic-seo/
+- Architecture vs order taker: https://stackseekers.com/posts/architect-vs-order-taker/
+- Internal portals and operations scaling: https://stackseekers.com/posts/scaling-ops-with-internal-portals/
+
+## Contact and Conversion
+
+- Project inquiry: https://stackseekers.com/contact/
+- Technical roadmap call: https://cal.com/stackseekers
+- Main site: https://stackseekers.com/
