@@ -3,6 +3,8 @@ title: Programmatic Growth Engines | Stack Seekers
 description: I build high-velocity programmatic SEO platforms that dominate search rankings. Using database-driven routing to generate thousands of optimized landing pages that capture long-tail local traffic. Perfect for marketplaces and lead-generation platforms that need to scale traffic natively without high ad-spend.
 lastUpdated: false
 editLink: false
+contributors: false
+pageInfo: false
 copyright: false
 layout: Layout
 service:

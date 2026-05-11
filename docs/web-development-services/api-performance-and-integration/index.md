@@ -3,6 +3,8 @@ title: High-Performance API Design | Stack Seekers
 description: Design and optimization of high-concurrency RESTful and GraphQL APIs. I specialize in making your data move faster and more securely through sophisticated microservices architecture. I build the 'internal plumbing' that allows your application to react instantly, no matter how complex the data logic.
 lastUpdated: false
 editLink: false
+contributors: false
+pageInfo: false
 copyright: false
 layout: Layout
 service:

@@ -3,6 +3,8 @@ title: Fractional CTO Strategy | Stack Seekers
 description: For international partners seeking an elite technical lead. I provide roadmap planning, architectural oversight, and team mentorship without the overhead of a full-time executive. I bridge the gap between business goals and technical execution, ensuring every sprint delivers maximum value to your bottom line.
 lastUpdated: false
 editLink: false
+contributors: false
+pageInfo: false
 copyright: false
 layout: Layout
 service:

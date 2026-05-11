@@ -321,6 +321,8 @@ title: ${service.name} | Stack Seekers
 description: ${service.descriptions.join(" ")}
 lastUpdated: false
 editLink: false
+contributors: false
+pageInfo: false
 copyright: false
 layout: Layout
 service:

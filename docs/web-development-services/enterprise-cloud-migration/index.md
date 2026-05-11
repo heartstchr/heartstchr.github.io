@@ -3,6 +3,8 @@ title: Enterprise Cloud Migration | Stack Seekers
 description: Specialized in the 'High-Stakes' migration of legacy systems to modern, cloud-native architectures. I ensure zero-downtime transitions for mission-critical banking and fintech applications. Proven experience in managing complex frontend migrations and integrating global design systems like the Emerald Design System.
 lastUpdated: false
 editLink: false
+contributors: false
+pageInfo: false
 copyright: false
 layout: Layout
 service:

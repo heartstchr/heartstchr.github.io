@@ -3,6 +3,8 @@ title: Product Architecture & Scale | Stack Seekers
 description: I architect high-performance digital products designed for extreme scale. Whether you are building a new SaaS MVP or scaling an existing platform, I ensure your foundation is secure and robust (ABN AMRO standards). My solutions focus on long-term maintainability, ensuring your product grows as fast as your business does without technical debt.
 lastUpdated: false
 editLink: false
+contributors: false
+pageInfo: false
 copyright: false
 layout: Layout
 service:
