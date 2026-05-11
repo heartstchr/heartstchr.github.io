@@ -1,4 +1,4 @@
-# Jiwan Ghosal Portfolio Website (Stack Seekers)
+# Stack Seekers (Jiwan Ghosal Portfolio Website)
 
 ## 🎯 Project Purpose
 
