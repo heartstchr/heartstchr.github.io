@@ -119,41 +119,7 @@ copyright: false
 </div>
 
 <!-- Bottom Strategy Section -->
-<section class="mt-8 mb-8 px-4 py-8 surface-section border-round-3xl shadow-4 overflow-hidden relative border-1 border-100">
-  <div class="absolute top-0 right-0 w-30rem h-30rem bg-primary-900 border-circle opacity-10" style="filter: blur(100px); transform: translate(30%, -30%)"></div>
-  
-  <div class="text-center mb-8 relative z-1">
-    <div class="flex align-items-center justify-content-center gap-2 text-primary font-bold mb-3 uppercase tracking-widest text-xs">
-       <i class="pi pi-map"></i> The Success Playbook
-    </div>
-    <h2 class="text-4xl md:text-5xl font-bold mb-3 text-900">The Architectural <span class="text-primary">Logic Flow</span>.</h2>
-    <p class="text-xl text-600 max-w-30rem mx-auto">A proven, non-linear framework for scaling high-stakes software.</p>
-  </div>
-
-  <div class="grid relative z-1 max-w-1000 mx-auto mb-6">
-    <div class="hidden lg:block absolute w-full" style="z-index: 0; top: 3.15rem; width: 75%; left: 12.5%; height: 2px; background-image: linear-gradient(to right, var(--primary-400) 50%, transparent 50%); background-size: 16px 100%; opacity: 0.2;"></div>
-    <div class="col-12 lg:col-3 p-4" v-for="(step, idx) in roadmapSteps" :key="step.title">
-      <div class="flex flex-column h-full relative" style="z-index: 2;">
-        <div class="w-4rem h-4rem border-circle bg-primary-50 dark:bg-primary-900 border-2 border-primary-500 flex align-items-center justify-content-center text-2xl font-bold text-primary mb-4 shadow-pill mx-auto lg:mx-0 relative" style="z-index: 3;">
-           0{{ idx + 1 }}
-        </div>
-        <h3 class="text-2xl font-bold mb-3 text-900 text-center lg:text-left">{{ step.title }}</h3>
-        <p class="text-600 line-height-4 text-sm mb-4 text-center lg:text-left">{{ step.desc }}</p>
-        <div v-if="idx === 1" class="mt-auto text-center lg:text-left">
-           <a href="/startup-stack-audit-checklist/" class="no-underline text-xs font-bold text-primary flex align-items-center justify-content-center lg:justify-content-start gap-2 hover:text-primary-700 transition-colors">
-              Try Self-Audit <i class="pi pi-arrow-right"></i>
-           </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="text-center mt-8 relative z-1">
-    <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
-      <Button label="Book Free Discovery Call" icon="pi pi-bolt" severity="primary" size="large" raised rounded class="px-6 text-xl white-space-nowrap" />
-    </a>
-  </div>
-</section>
+<ConsultingBridge :showAudit="true" />
 
 <!-- Sticky Mobile CTA -->
 <div class="fixed bottom-0 left-0 w-full p-3 z-5 lg:hidden glass-sticky-cta shadow-6 flex gap-3 border-top-1 border-white-alpha-10">
@@ -182,13 +148,6 @@ copyright: false
     }
     return groups;
   });
-
-  const roadmapSteps = [
-    { title: "Discovery Call",        desc: "Technical diagnosis and scaling strategy." },
-    { title: "Architecture Audit",    desc: "Deep dive into infra and technical debt." },
-    { title: "Fixed-Scope Roadmap",   desc: "Detailed milestone-based blueprint." },
-    { title: "Senior Execution",      desc: "High-integrity build & velocity." }
-  ];
 </script>
 
 <style scoped>
@@ -225,7 +184,6 @@ copyright: false
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(0,0,0,0.12);
-  border-color: var(--cat-color) !important;
 }
 
 .category-section {

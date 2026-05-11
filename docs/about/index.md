@@ -206,7 +206,6 @@ contributors: false
 .stat-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
-  border-color: var(--primary-color) !important;
 }
 .model-card {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
