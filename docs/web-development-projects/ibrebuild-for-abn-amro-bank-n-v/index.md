@@ -110,7 +110,7 @@ project:
             <span>Strategic Executive</span>
           </div>
         </template>
-        <div class="p-4 md:p-6 surface-card border-round-3xl shadow-1 mt-4">
+        <div class="p-2 md:p-4 surface-card border-round-3xl shadow-1 mt-4">
           <div class="flex align-items-center gap-2 text-primary font-bold mb-4 uppercase tracking-wider text-sm">
             <i class="pi pi-verified"></i>
             Business Impact & ROI
@@ -150,7 +150,7 @@ project:
           <div class="text-xl line-height-4 text-700 mb-6">
             {{ $frontmatter.project.perspective.technical }}
           </div>
-          <div v-pre class="project-markdown-content text-lg line-height-4">
+          <div class="project-markdown-content text-lg line-height-4">
 
 
 
@@ -173,11 +173,6 @@ project:
   </div>
 </div>
 </div>
-
-</div>
-
-<div v-if="!$frontmatter.project.perspective?.executive" v-pre class="project-markdown-content text-lg line-height-4 mb-8">
-
 
 </div>
 <ConsultingBridge />

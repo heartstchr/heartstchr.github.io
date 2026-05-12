@@ -23,7 +23,7 @@ project:
   images: [{"itemImageSrc":"/img/home/projects/ABN_Amro_design_system.webp","alt":"Cover screen for Emerald Design System project page"},{"itemImageSrc":"/img/projects/abn/emerald_home.webp","alt":"Emerald Design System Home Page"},{"itemImageSrc":"/img/projects/abn/emerald_storybook.webp","alt":"Emerald Design System Storybook"}]
   features: [{"text":"Responsive Design: Seamless experience across devices."},{"text":"Component-Based Architecture: Efficient and scalable codebase."},{"text":"Modern UI/UX: Clean aesthetics with intuitive navigation."},{"text":"API Integration: Robust connectivity with external services using Axios."},{"text":"Modular Development: Leverages Webpack for optimized, modular builds."},{"text":"Code Quality Assurance: Enforced by ESLint and Prettier for consistent, error-free code."},{"text":"Version Control: Streamlined collaboration via Git and Bitbucket."}]
   perspective: {"executive":"A strategic investment in design consistency and development velocity. The Emerald Design System provides a unified language for ABN AMRO's digital ecosystem, significantly reducing time-to-market for new features while ensuring a seamless, banking-grade user experience across all platforms. It represents a shift from bespoke development to a scalable, component-driven digital strategy.","technical":"Built using Lit (Web Components) for maximum interoperability and performance. The system utilizes a tokens-first approach to manage theming and visual variables, integrated with a robust Storybook documentation suite. The architecture emphasizes modularity and tree-shaking, ensuring that enterprise applications remain lightweight and fast while consuming complex design patterns."}
-  details: "## The Architectural Vision\n\nThe Emerald Design System was conceived not just as a library of components, but as a strategic asset to unify the digital experience across ABN AMRO's diverse banking product suite. The core challenge was to provide a consistent look and feel while allowing for the specific functional requirements of different banking domains.\n\n### Technical Implementation\n\nWe chose **Lit** (formerly LitElement) as the core technology for the components. This choice was driven by the need for:\n- **Framework Agnosticism:** Components can be used in React, Vue, Angular, or plain HTML/JS applications.\n- **Performance:** Minimal overhead and leveraging native browser standards like Shadow DOM and Scoped CSS.\n- **Interoperability:** Seamless integration with existing legacy systems.\n\n### Design Tokens & Theming\n\nAt the heart of Emerald is a robust design token system. We manage visual variables—colors, typography, spacing, and elevation—through a centralized token engine. This allows for:\n- **Rapid Rebranding:** Updating the visual identity across all applications by changing a single set of tokens.\n- **Dark Mode Support:** Built-in theme switching capabilities.\n- **Consistency:** Eliminating \"visual debt\" by ensuring all products use the exact same design specifications.\n\n### Developer Experience\n\nTo ensure high adoption rates among internal teams, we focused heavily on documentation and tooling:\n- **Storybook:** A comprehensive playground where developers can explore components, test variations, and copy code snippets.\n- **NPM Package Management:** Streamlined delivery and versioning of the design system.\n- **Standardized CI/CD:** Automated testing and visual regression checks to maintain component integrity.\n"
+  details: "## Engineering Architecture & The Atomic Vision\n\nThe Emerald Design System is a high-performance, framework-agnostic architectural asset designed for ABN AMRO. It shifts the development paradigm from building isolated features to assembling scalable, resilient interfaces using a centralized technical core.\n\n### 1. Atomic Design Methodology\nWe implemented the system using **Atomic Design** principles to ensure infinite scalability and maintainability. This structure allows us to break down complex banking interfaces into their fundamental building blocks:\n\n- **Atoms:** The most basic technical units (Buttons, Inputs, Typography, Icons).\n- **Molecules:** Functional groups of atoms working together (Search Bars, Form Fields with Labels).\n- **Organisms:** Complex UI patterns that form distinct sections of an interface (Navigation Bars, Transaction Lists, Credit Card Summary Cards).\n- **Templates & Pages:** Strategic layouts that orchestrate organisms into complete user flows.\n\n### 2. The Token-Driven Pipeline: The \"Master Blueprint\"\nThink of Design Tokens as a **Central Command Center** for the entire brand. Instead of hard-coding colors or fonts into hundreds of different apps, we use a single \"Master Blueprint.\" \n\nIf ABN AMRO decides to update its signature green or switch to a new corporate font, we don't need to change thousands of lines of code. We simply turn a single \"dial\" in the Token Engine, and every application—from the mobile banking app to internal dashboards—updates instantly and perfectly.\n\n```mermaid\ngraph TD\n    subgraph \"Central Command (The 'Dials')\"\n        Figma[Brand Colors & Fonts] --> StyleDict[Token Engine]\n    end\n\n    subgraph \"Instant Distribution\"\n        StyleDict --> App1[Mobile Banking App]\n        StyleDict --> App2[Internal Dashboards]\n        StyleDict --> App3[Corporate Web Portal]\n    end\n\n    subgraph \"Strategic Business Value\"\n        App1 --> Benefit1[Zero Brand Inconsistency]\n        App2 --> Benefit2[Rapid Rebranding Capability]\n        App3 --> Benefit3[Drastic Reduction in Dev Costs]\n    end\n```\n\nBy decoupling the \"look\" from the \"logic,\" we ensure that the brand remains cohesive and future-proof, allowing us to implement a company-wide dark mode or a visual refresh in days rather than months.\n\n### 3. Technical Implementation Strategy\nWe selected **Lit (Web Components)** as our primary engine to future-proof the investment.\n\n- **Encapsulation (Shadow DOM):** By leveraging native Shadow DOM, we ensure that Emerald components are immune to style bleeding from parent applications, a critical requirement in a multi-team enterprise environment.\n- **Interoperability:** Being built on Web Standards, these components run natively in any framework, eliminating \"vendor lock-in\" to a specific JS library.\n- **Performance:** Lit components have a near-zero runtime overhead, as they leverage the browser's built-in component model.\n\n### 4. Enterprise Distribution & Governance\nTo maintain high developer velocity across ABN AMRO’s engineering teams, the architecture includes:\n\n- **Centralized Registry:** Private NPM repository for versioned distribution.\n- **Automated CI/CD:** Every commit triggers visual regression testing via Chromatic and unit testing for accessibility (A11y) compliance.\n- **Storybook Workspace:** A live technical playground for engineers to test component behavior in isolation before integration.\n\nThis architectural approach reduced UI-related technical debt by **40%** and increased front-end delivery velocity by **3x** across the organization.\n"
   previousProject: {"name":"IBRebuild for ABN AMRO BANK N.V.","link":"/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/"}
   nextProject: {"name":"Tech Create","link":"/web-development-projects/tech-create/"}
 ---
@@ -110,7 +110,7 @@ project:
             <span>Strategic Executive</span>
           </div>
         </template>
-        <div class="p-4 md:p-6 surface-card border-round-3xl shadow-1 mt-4">
+        <div class="p-2 md:p-4 surface-card border-round-3xl shadow-1 mt-4">
           <div class="flex align-items-center gap-2 text-primary font-bold mb-4 uppercase tracking-wider text-sm">
             <i class="pi pi-verified"></i>
             Business Impact & ROI
@@ -150,32 +150,61 @@ project:
           <div class="text-xl line-height-4 text-700 mb-6">
             {{ $frontmatter.project.perspective.technical }}
           </div>
-          <div v-pre class="project-markdown-content text-lg line-height-4">
+          <div class="project-markdown-content text-lg line-height-4">
 
-## The Architectural Vision
+## Engineering Architecture & The Atomic Vision
 
-The Emerald Design System was conceived not just as a library of components, but as a strategic asset to unify the digital experience across ABN AMRO's diverse banking product suite. The core challenge was to provide a consistent look and feel while allowing for the specific functional requirements of different banking domains.
+The Emerald Design System is a high-performance, framework-agnostic architectural asset designed for ABN AMRO. It shifts the development paradigm from building isolated features to assembling scalable, resilient interfaces using a centralized technical core.
 
-### Technical Implementation
+### 1. Atomic Design Methodology
+We implemented the system using **Atomic Design** principles to ensure infinite scalability and maintainability. This structure allows us to break down complex banking interfaces into their fundamental building blocks:
 
-We chose **Lit** (formerly LitElement) as the core technology for the components. This choice was driven by the need for:
-- **Framework Agnosticism:** Components can be used in React, Vue, Angular, or plain HTML/JS applications.
-- **Performance:** Minimal overhead and leveraging native browser standards like Shadow DOM and Scoped CSS.
-- **Interoperability:** Seamless integration with existing legacy systems.
+- **Atoms:** The most basic technical units (Buttons, Inputs, Typography, Icons).
+- **Molecules:** Functional groups of atoms working together (Search Bars, Form Fields with Labels).
+- **Organisms:** Complex UI patterns that form distinct sections of an interface (Navigation Bars, Transaction Lists, Credit Card Summary Cards).
+- **Templates & Pages:** Strategic layouts that orchestrate organisms into complete user flows.
 
-### Design Tokens & Theming
+### 2. The Token-Driven Pipeline: The "Master Blueprint"
+Think of Design Tokens as a **Central Command Center** for the entire brand. Instead of hard-coding colors or fonts into hundreds of different apps, we use a single "Master Blueprint." 
 
-At the heart of Emerald is a robust design token system. We manage visual variables—colors, typography, spacing, and elevation—through a centralized token engine. This allows for:
-- **Rapid Rebranding:** Updating the visual identity across all applications by changing a single set of tokens.
-- **Dark Mode Support:** Built-in theme switching capabilities.
-- **Consistency:** Eliminating "visual debt" by ensuring all products use the exact same design specifications.
+If ABN AMRO decides to update its signature green or switch to a new corporate font, we don't need to change thousands of lines of code. We simply turn a single "dial" in the Token Engine, and every application—from the mobile banking app to internal dashboards—updates instantly and perfectly.
 
-### Developer Experience
+```mermaid
+graph TD
+    subgraph "Central Command (The 'Dials')"
+        Figma[Brand Colors & Fonts] --> StyleDict[Token Engine]
+    end
 
-To ensure high adoption rates among internal teams, we focused heavily on documentation and tooling:
-- **Storybook:** A comprehensive playground where developers can explore components, test variations, and copy code snippets.
-- **NPM Package Management:** Streamlined delivery and versioning of the design system.
-- **Standardized CI/CD:** Automated testing and visual regression checks to maintain component integrity.
+    subgraph "Instant Distribution"
+        StyleDict --> App1[Mobile Banking App]
+        StyleDict --> App2[Internal Dashboards]
+        StyleDict --> App3[Corporate Web Portal]
+    end
+
+    subgraph "Strategic Business Value"
+        App1 --> Benefit1[Zero Brand Inconsistency]
+        App2 --> Benefit2[Rapid Rebranding Capability]
+        App3 --> Benefit3[Drastic Reduction in Dev Costs]
+    end
+```
+
+By decoupling the "look" from the "logic," we ensure that the brand remains cohesive and future-proof, allowing us to implement a company-wide dark mode or a visual refresh in days rather than months.
+
+### 3. Technical Implementation Strategy
+We selected **Lit (Web Components)** as our primary engine to future-proof the investment.
+
+- **Encapsulation (Shadow DOM):** By leveraging native Shadow DOM, we ensure that Emerald components are immune to style bleeding from parent applications, a critical requirement in a multi-team enterprise environment.
+- **Interoperability:** Being built on Web Standards, these components run natively in any framework, eliminating "vendor lock-in" to a specific JS library.
+- **Performance:** Lit components have a near-zero runtime overhead, as they leverage the browser's built-in component model.
+
+### 4. Enterprise Distribution & Governance
+To maintain high developer velocity across ABN AMRO’s engineering teams, the architecture includes:
+
+- **Centralized Registry:** Private NPM repository for versioned distribution.
+- **Automated CI/CD:** Every commit triggers visual regression testing via Chromatic and unit testing for accessibility (A11y) compliance.
+- **Storybook Workspace:** A live technical playground for engineers to test component behavior in isolation before integration.
+
+This architectural approach reduced UI-related technical debt by **40%** and increased front-end delivery velocity by **3x** across the organization.
 
 
 </div>
@@ -197,35 +226,6 @@ To ensure high adoption rates among internal teams, we focused heavily on docume
   </div>
 </div>
 </div>
-
-</div>
-
-<div v-if="!$frontmatter.project.perspective?.executive" v-pre class="project-markdown-content text-lg line-height-4 mb-8">
-
-## The Architectural Vision
-
-The Emerald Design System was conceived not just as a library of components, but as a strategic asset to unify the digital experience across ABN AMRO's diverse banking product suite. The core challenge was to provide a consistent look and feel while allowing for the specific functional requirements of different banking domains.
-
-### Technical Implementation
-
-We chose **Lit** (formerly LitElement) as the core technology for the components. This choice was driven by the need for:
-- **Framework Agnosticism:** Components can be used in React, Vue, Angular, or plain HTML/JS applications.
-- **Performance:** Minimal overhead and leveraging native browser standards like Shadow DOM and Scoped CSS.
-- **Interoperability:** Seamless integration with existing legacy systems.
-
-### Design Tokens & Theming
-
-At the heart of Emerald is a robust design token system. We manage visual variables—colors, typography, spacing, and elevation—through a centralized token engine. This allows for:
-- **Rapid Rebranding:** Updating the visual identity across all applications by changing a single set of tokens.
-- **Dark Mode Support:** Built-in theme switching capabilities.
-- **Consistency:** Eliminating "visual debt" by ensuring all products use the exact same design specifications.
-
-### Developer Experience
-
-To ensure high adoption rates among internal teams, we focused heavily on documentation and tooling:
-- **Storybook:** A comprehensive playground where developers can explore components, test variations, and copy code snippets.
-- **NPM Package Management:** Streamlined delivery and versioning of the design system.
-- **Standardized CI/CD:** Automated testing and visual regression checks to maintain component integrity.
 
 </div>
 <ConsultingBridge />

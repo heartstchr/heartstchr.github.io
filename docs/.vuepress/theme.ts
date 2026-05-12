@@ -57,6 +57,9 @@ export default hopeTheme(
       },
       pwa: false, // Disable PWA completely to avoid service worker caching issues
       backToTop: false, // Remove back to top functionality
+      mdEnhance: {
+        mermaid: true,
+      },
     },
   },
   { custom: true }

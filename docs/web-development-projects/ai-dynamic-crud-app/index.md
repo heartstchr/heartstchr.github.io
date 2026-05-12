@@ -110,7 +110,7 @@ project:
             <span>Strategic Executive</span>
           </div>
         </template>
-        <div class="p-4 md:p-6 surface-card border-round-3xl shadow-1 mt-4">
+        <div class="p-2 md:p-4 surface-card border-round-3xl shadow-1 mt-4">
           <div class="flex align-items-center gap-2 text-primary font-bold mb-4 uppercase tracking-wider text-sm">
             <i class="pi pi-verified"></i>
             Business Impact & ROI
@@ -150,7 +150,7 @@ project:
           <div class="text-xl line-height-4 text-700 mb-6">
             {{ $frontmatter.project.perspective.technical }}
           </div>
-          <div v-pre class="project-markdown-content text-lg line-height-4">
+          <div class="project-markdown-content text-lg line-height-4">
 
 # AI Dynamic CRUD App - Powered by Gemini & Notion
 
@@ -262,100 +262,6 @@ Once you add the environment variables, your frontend application immediately tr
   </div>
 </div>
 </div>
-
-</div>
-
-<div v-if="!$frontmatter.project.perspective?.executive" v-pre class="project-markdown-content text-lg line-height-4 mb-8">
-
-# AI Dynamic CRUD App - Powered by Gemini & Notion
-
-Turn your text prompts into a professional database-driven web application in less than a minute! This tool leverages **Google Gemini** and **Notion** to instantly generate customized, multi-source CRUD (Create, Read, Update, Delete) portals without writing a single line of code.
-
-## Executive Summary
-
-This project demonstrates how AI can move beyond chat and directly generate usable business software. It turns natural-language instructions into structured database architecture and a working CRUD interface, making it a strong proof point for **AI automation**, **internal tools**, and **rapid product prototyping**.
-
-## Business Problem
-
-Most teams lose weeks mapping database schemas, planning forms, and building admin interfaces before they can even validate the workflow. That slows down internal tool delivery, client portal launches, and experiments around new operational systems.
-
-## What I Built
-
-- A prompt-driven app generator powered by Gemini and Notion
-- AI-assisted schema generation with a review step before database creation
-- Automatic UI generation for cards, tables, CRUD flows, and routing
-- Multi-language prompt support for broader usability and adoption
-
-## Why It Matters
-
-The business value is speed. Instead of starting every system from scratch, this approach compresses discovery, schema design, and interface generation into a much faster workflow. It is especially relevant for founders or ops teams that need custom internal software without absorbing a full traditional build cycle.
-
-## Best Fit If You Need Something Similar
-
-This case study supports [ROI-Driven AI Automation](/web-development-services/ai-and-automation-strategy/) and [Product Architecture & Scale](/web-development-services/product-architecture-and-scaling/). It is a strong fit if you want AI-powered internal tools, generated admin panels, or workflow automation tied to structured business data.
-
-## 🚀 What This Does
-
-The AI Dynamic CRUD App is a revolutionary boilerplate generator. Instead of manually mapping schemas and creating database structures:
-
-1. **Describe what you want** (in English, Hindi, or Japanese).
-2. **Review the AI-generated database schema** perfectly structured for your needs.
-3. **Instantly deploy** a fully functional web interface connected to a Notion backend.
-
-Perfect for rapidly bootstrapping internal tools, client portals, inventory systems, or e-commerce backends!
-
-## 🌟 Key Features
-
-### 1. Natural Language to Full-Stack App
-Simply describe the system you need (e.g., "I need a customer management system") or use **Template Mode** to select from pre-configured systems like:
-- Event System
-- Inventory System
-- Learning System
-- Wellness System
-- E-Com System
-- Project Management System
-
-### 2. Multi-Language Support
-The AI interface fully supports localization. Whether you prompt in English, Hindi (*Gemini के साथ बनाएं*), or Japanese (*作成する Gemini*), the LLM dynamically understands the context and generates the correct database architecture.
-
-### 3. Review & Edit Database Structure
-Before any database is committed to Notion, the app provides a **Review Custom Modal**. 
-- View the proposed System Title and Description.
-- Add or modify Data Sources (e.g., linking multiple tables like "Products", "Orders", and "Customers" for an E-Commerce system).
-- Perfect your schema before creating it.
-
-### 4. Dynamic UI Generation
-Once created, the app automatically generates a responsive user interface:
-- **Automatic routing:** Sidebar navigation is instantly created corresponding to your data tables (e.g., *Content Management System - Articles*, *Categories*, *Authors*).
-- **Responsive Views:** Easily toggle between "Card" and "Table" views depending on how you want to interact with your data.
-- **Full CRUD operations:** Add, edit, or delete items natively from the generated Vue.js interface perfectly syncing back to Notion in real-time.
-
-***
-
-## 🛠️ How to Deploy Your Own Generated App
-
-Because the AI does the heavy lifting, deployment takes minutes.
-
-### Step 1: Generate Your Schema
-1. Connect your Notion workspace to the AI App.
-2. Enter your prompt or select a template.
-3. Let Gemini generate and configure the tables inside your Notion workspace perfectly.
-
-### Step 2: Configure Your Next.js/Vue App
-Take the deployed Notion Database ID and integrate it into your Netlify environment variables:
-- `NOTION_API_KEY`: Your secure integration secret.
-- `NOTION_DATABASE_ID`: The root ID of the system generated by the AI.
-
-### Step 3: Launch
-Once you add the environment variables, your frontend application immediately transforms. The dynamic forms, tables, and file uploads are handled entirely by analyzing the Notion schema. If you add a new column in Notion, your web app updates with a new form field instantly.
-
-## 💰 The Benefit
-
-- **Save Hundreds of Hours:** Skip the UX/UI design phase, database architecture planning, and backend API routing.
-- **Zero Cost Infrastructure:** Built to be hosted entirely free on Netlify and Notion.
-- **Easily Extensible:** Since the data lives in Notion, non-technical team members can easily interact with the raw data if they don't want to use the web portal.
-
-> **💡 Technical Note:** This platform uses strict Prompt Engineering bounds to ensure Gemini only outputs valid, heavily structured JSON schemas that perfectly map to Notion's Database API constraints.
 
 </div>
 <ConsultingBridge />
