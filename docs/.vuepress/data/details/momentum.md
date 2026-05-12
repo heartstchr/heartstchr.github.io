@@ -1,213 +1,60 @@
-## Project Overview
-This is a **full-stack web application** that is called "momentum" internally and aims to replicate ServiceNow's IT service management capabilities.
+## Engineering Architecture: Enterprise Incident Management Engine
 
-## Executive Summary
+Momentum is a high-performance **Full-Stack ITSM (IT Service Management) platform** designed to replicate the core functionality of enterprise tools like ServiceNow without the associated bloat. It demonstrates a sophisticated **Incident-to-Resolution Lifecycle** powered by a robust role-based workflow engine.
 
-This project demonstrates how to build internal operational software that replaces expensive or bloated enterprise tooling with a focused, modern workflow system. It is a strong proof point for custom internal tools, process-heavy dashboards, and product architecture for business operations.
+### 1. The Operations Engine (Layman's Perspective)
+Think of Momentum as an **Automated Digital Dispatcher**. 
 
-## Business Problem
+In a busy office, when something breaks (an "Incident"), you normally have to call around, send emails, and hope someone fixes it. This platform acts as the "Dispatcher" who takes the call, instantly categorizes the problem, assigns it to the right "Repair Team" (based on their role), and tracks every step until the job is done. It ensures that nothing falls through the cracks and provides a "Master Dashboard" for management to see exactly how the office is performing in real-time.
 
-Many teams outgrow spreadsheets and lightweight ticket tools but do not want the cost, complexity, or rigidity of large enterprise platforms. They need a system that fits their workflow, not a generic product that forces them to adapt around it.
+### 2. Technical Architecture & Incident Lifecycle
+The system utilizes a modern Monorepo architecture, bridging a Vue 3/PrimeVue frontend with a secure Node.js/MongoDB backend.
 
-## What I Built
+```mermaid
+graph TD
+    subgraph "Intake & Identification"
+        User[End User] --> TicketForm[Incident Submission]
+        TicketForm --> Auth[JWT Role Validation]
+    end
 
-- A full-stack incident and task management platform
-- Role-based workflows for operations and internal teams
-- File management, export capability, and structured form handling
-- API-backed architecture that can support future automation and integrations
+    subgraph "Workflow Orchestration (Server)"
+        Auth --> StateEngine[Incident State Machine]
+        StateEngine --> CI[Configuration Item Linkage]
+        CI --> Assign[Automatic Team Assignment]
+    end
 
-## Why It Matters
+    subgraph "Resolution & Management"
+        Assign --> Task[Task Breakdown]
+        Task --> Collaboration[Rich Text & File Attachments]
+        Collaboration --> Resolve[Resolution & Closure]
+    end
 
-Internal software is often where a lot of business inefficiency hides. This project shows how targeted product architecture can create a cleaner operational system with less friction, better visibility, and room for future scaling.
-
-## Best Fit If You Need Something Similar
-
-This case study supports [Product Architecture & Scale](/web-development-services/product-architecture-and-scaling/), [Fractional CTO Strategy](/web-development-services/fractional-cto-and-advisory/), and [High-Performance API Design](/web-development-services/api-performance-and-integration/). It is especially relevant for internal portals, workflow tools, and operations software.
-
-## Architecture
-The project follows a **client-server architecture** with clear separation of concerns:
-
-### **Root Level Structure**
-- **Monorepo setup** with both client and server in the same repository
-- **Package management**: Uses `pnpm` for dependency management
-- **Development tools**: Includes Husky for git hooks, ESLint/Prettier for code formatting
-- **Deployment**: Configured for Vercel deployment
-
-```
-momentum/
-├── client/                 # Frontend Vue.js application
-├── server/                 # Backend Node.js API
-├── .github/               # GitHub workflows and templates
-├── .husky/                # Git hooks configuration
-├── .vercel/               # Vercel deployment config
-├── .vscode/               # VS Code workspace settings
-├── package.json           # Root package configuration
-├── pnpm-lock.yaml         # Package lock file
-├── vercel.json            # Vercel deployment settings
-└── README.md              # Project documentation
+    subgraph "Governance & Reporting"
+        Resolve --> Audit[Full Audit Trail]
+        Audit --> Export[Excel/XLSX Reporting]
+        Admin[Admin Dashboard] --> Audit
+    end
 ```
 
-### **Frontend (Client Directory)**
+### 3. Key Engineering Pillars
 
-#### **Technology Stack:**
-- **Vue.js 3** with TypeScript
-- **PrimeVue** UI component library (modern ServiceNow-like interface)
-- **Vite** for fast development and building
-- **Pinia** for state management
-- **Vue Router** for navigation
-- **Playwright** for end-to-end testing
-- **Vitest** for unit testing
+#### A. State-Driven Workflow Automation
+The core of Momentum is a strictly defined **Incident State Machine**. 
+- **Deterministic Transitions:** Every ticket follows a validated path (e.g., New -> Assigned -> In Progress -> Resolved). The system prevents "illegal" state jumps, ensuring data integrity for operational audits.
+- **Role-Based Visibility:** Using Vue 3 and Pinia, the UI dynamically reconfigures itself based on the user's role. An "End User" sees a simplified submission form, while an "Operations Engineer" sees a complex management console.
 
-#### **Key Features:**
-- Authentication system (Login/Register components)
-- Incident/Ticket management forms
-- Task management
-- File upload capabilities (with file-saver)
-- Data export functionality (xlsx)
-- Form validation (vee-validate with yup schemas)
-- Rich text editing (Quill editor)
-- Modern responsive UI with PrimeFlex
+#### B. The "Lighter ServiceNow" Pattern
+We architected the system to prioritize **Developer Velocity** and **Runtime Performance**.
+- **PrimeVue Component Architecture:** By leveraging enterprise-grade components, we delivered a "ServiceNow-like" UX in a fraction of the time, focusing our engineering effort on the business logic rather than the UI primitives.
+- **Decoupled API Design:** The backend is built as a RESTful API with full Swagger documentation, allowing for future integrations with third-party automation tools or custom Slack/Teams bots.
 
-#### **Client Directory Structure:**
-```
-client/
-├── src/
-│   ├── components/
-│   │   ├── auth/           # Login/Register components
-│   │   ├── layout/         # Header/Footer components
-│   │   ├── shared/         # Reusable components
-│   │   ├── TicketForm.vue  # Incident ticket form
-│   │   └── TaskForm.vue    # Task management form
-│   ├── stores/             # Pinia state management
-│   │   ├── auth.module.ts
-│   │   ├── incidents.module.ts
-│   │   ├── user.module.ts
-│   │   └── ...
-│   ├── service/            # API service layer
-│   ├── utils/              # Utility functions
-│   ├── App.vue             # Main application component
-│   └── main.ts             # Application entry point
-├── public/                 # Static assets
-├── package.json            # Frontend dependencies
-├── vite.config.ts          # Vite configuration
-├── tsconfig.json           # TypeScript configuration
-└── playwright.config.ts    # E2E test configuration
-```
+#### C. Integrated Configuration Management (CMDB)
+Unlike simple task lists, Momentum includes a lightweight **Configuration Item (CI) Model**.
+- **Asset Linkage:** Incidents are linked to specific IT assets (Servers, Software, Hardware). This allows for "Impact Analysis"—identifying how a single server failure might affect multiple business services.
 
-### **Backend (Server Directory)**
+### 4. Strategic Business Value (ROI)
+- **Enterprise Capabilities, Startup Speed:** Provides the structure of an enterprise ITSM tool with the agility of a custom-built solution.
+- **Operational Transparency:** Replaces fragmented emails and spreadsheets with a single, searchable "Source of Truth" for all business operations.
+- **Cost Efficiency:** Eliminates the high licensing fees of enterprise platforms while providing a system that is 100% tailored to the company's specific workflows.
 
-#### **Technology Stack:**
-- **Node.js** with Express.js
-- **MongoDB** with Mongoose ODM
-- **JWT** authentication with refresh tokens
-- **Swagger** API documentation
-- **CommonJS modules** (`.cjs` files)
-
-#### **Key Features:**
-- **Models**: User, Incident, CI (Configuration Items), Roles, Refresh Tokens
-- **Authentication**: JWT-based with bcrypt password hashing
-- **File uploads**: Multer for handling image uploads
-- **Email functionality**: Nodemailer integration
-- **API documentation**: Swagger UI available
-- **CORS enabled** for cross-origin requests
-
-#### **Server Directory Structure:**
-```
-server/
-├── controllers/            # Request handlers
-│   ├── auth.controller.cjs
-│   ├── user.controller.cjs
-│   └── shared/
-├── models/                 # Database models
-│   ├── user.model.cjs
-│   ├── incident.model.cjs
-│   ├── ci.model.cjs
-│   ├── role.model.cjs
-│   └── refreshToken.model.cjs
-├── routes/                 # API route definitions
-├── middlewares/            # Custom middleware
-├── database/               # Database configuration
-├── helpers/                # Utility functions
-├── validations/            # Input validation schemas
-├── configs/                # Application configuration
-├── uploadedImages/         # File upload storage
-├── build/                  # Compiled output
-├── server.cjs              # Main server file
-├── swagger.cjs             # API documentation setup
-└── package.json            # Backend dependencies
-```
-
-### **Development Workflow**
-
-#### **Available Scripts:**
-```bash
-# Install dependencies for both client and server
-pnpm install
-
-# Start both client and server concurrently
-pnpm start
-
-# Start only the server (runs on backend port)
-pnpm start:server
-
-# Start only the client (runs on http://localhost:5173/)
-pnpm start:client
-
-# Format code in both directories
-pnpm format
-
-# Copy environment variables
-pnpm copy:env
-
-# Clean all node_modules and build files
-pnpm clean
-```
-
-#### **Environment Setup:**
-1. Clone the repository
-2. Run `pnpm install` to install all dependencies
-3. Run `pnpm copy:env` to set up environment variables
-4. Run `pnpm start` to start both client and server
-5. Access the application at `http://localhost:5173/`
-
-### **DevOps & Quality**
-- **Git hooks**: Husky for pre-commit actions
-- **Linting**: ESLint configuration for both frontend and backend
-- **Code formatting**: Prettier for consistent code style
-- **Commit standards**: Commitlint for conventional commits
-- **Testing**: Unit tests (Vitest) and E2E tests (Playwright)
-- **Deployment**: Vercel configuration for production deployment
-
-## ServiceNow-like Features
-
-Based on the structure, this clone implements:
-
-1. **Incident Management**: Ticket creation and tracking
-2. **Task Management**: Work item handling
-3. **Configuration Items (CI)**: IT asset management
-4. **User Management**: Role-based access control
-5. **Authentication**: Secure login/registration system
-6. **File Management**: Document/image upload capabilities
-7. **Reporting**: Data export and analysis features
-8. **API Documentation**: Swagger UI for API exploration
-
-## Technology Highlights
-
-### **Frontend Technologies:**
-- Vue 3 Composition API
-- TypeScript for type safety
-- PrimeVue for enterprise UI components
-- Pinia for reactive state management
-- Vite for fast development builds
-- Playwright for reliable E2E testing
-
-### **Backend Technologies:**
-- Express.js for robust API development
-- MongoDB for flexible document storage
-- Mongoose for elegant object modeling
-- JWT for secure authentication
-- Swagger for comprehensive API documentation
-- Multer for efficient file handling
-
-This is a well-structured, production-ready application that demonstrates modern full-stack development practices while replicating core ServiceNow functionality for educational/demonstration purposes.
-
+Momentum proves that **Targeted Product Architecture** can outperform generic enterprise software by focusing on the specific operational needs of the business.

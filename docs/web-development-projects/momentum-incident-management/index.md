@@ -21,9 +21,10 @@ project:
   contact: "https://wa.me/917026217029?text=Hi%20there%2C%20I'm%20interested%20in%20a%20custom%20code%20solution%20for%20"
   stack: ["vuedotjs","PrimeVue","vite/black/white","tailwindcss","nodedotjs","express/black/white","pnpm","swagger","mongodb","vercel/black/white","Eslint","Prettier","github/black/white"]
   images: [{"itemImageSrc":"/img/home/projects/momentum_incident_management.webp","alt":"Incident Management"},{"itemImageSrc":"/img/projects/momentum/swagger.webp","alt":"Momentum Incident Management - Swagger API documentation"},{"itemImageSrc":"/img/projects/momentum/expanded_incident.webp","alt":"Momentum Incident Management - Expanded incident view"},{"itemImageSrc":"/img/projects/momentum/sorting_searching.webp","alt":"Momentum Incident Management - Sorting and searching functionality"},{"itemImageSrc":"/img/projects/momentum/download_incidents.webp","alt":"Momentum Incident Management - Download incidents feature"},{"itemImageSrc":"/img/projects/momentum/incident_notes_task.webp","alt":"Momentum Incident Management - Incident notes and task management"},{"itemImageSrc":"/img/projects/momentum/edit_notes.webp","alt":"Momentum Incident Management - Edit notes functionality"},{"itemImageSrc":"/img/projects/momentum/view_notes.webp","alt":"Momentum Incident Management - View notes interface"},{"itemImageSrc":"/img/projects/momentum/edit_task.webp","alt":"Momentum Incident Management - Edit task functionality"},{"itemImageSrc":"/img/projects/momentum/edit_incident.webp","alt":"Momentum Incident Management - Edit incident interface"},{"itemImageSrc":"/img/projects/momentum/login.webp","alt":"Momentum Incident Management - Login page"},{"itemImageSrc":"/img/projects/momentum/register.webp","alt":"Momentum Incident Management - Registration page"}]
+  video: ""
   features: [{"text":"No More Clunky UI – Nested tables & column-based filtering (text, date, select) make incident tracking effortless."},{"text":"Nested CRUD for Incidents & Tasks – Create, update, and manage tasks seamlessly, with an option to add notes."},{"text":"Choose & Create CIs – Define and manage configuration items with ease."},{"text":"Automate with Swagger APIs – Ready for CI/CD pipelines, making integrations a breeze."},{"text":"Seamless Deployment – Frontend & backend deployed on Vercel for high performance."},{"text":"MongoDB Seeding – Easily set up initial data for a smooth start."},{"text":"Swagger Documentation – <a href='https://momentum-chi-brown.vercel.app/api-docs' target='_blank'>Well-documented APIs</a> for easy collaboration and scaling."},{"text":"No Costly Subscriptions – A powerful alternative to expensive service management platforms"}]
   perspective: {"executive":"","technical":""}
-  details: "## Project Overview\nThis is a **full-stack web application** that is called \"momentum\" internally and aims to replicate ServiceNow's IT service management capabilities.\n\n## Executive Summary\n\nThis project demonstrates how to build internal operational software that replaces expensive or bloated enterprise tooling with a focused, modern workflow system. It is a strong proof point for custom internal tools, process-heavy dashboards, and product architecture for business operations.\n\n## Business Problem\n\nMany teams outgrow spreadsheets and lightweight ticket tools but do not want the cost, complexity, or rigidity of large enterprise platforms. They need a system that fits their workflow, not a generic product that forces them to adapt around it.\n\n## What I Built\n\n- A full-stack incident and task management platform\n- Role-based workflows for operations and internal teams\n- File management, export capability, and structured form handling\n- API-backed architecture that can support future automation and integrations\n\n## Why It Matters\n\nInternal software is often where a lot of business inefficiency hides. This project shows how targeted product architecture can create a cleaner operational system with less friction, better visibility, and room for future scaling.\n\n## Best Fit If You Need Something Similar\n\nThis case study supports [Product Architecture & Scale](/web-development-services/product-architecture-and-scaling/), [Fractional CTO Strategy](/web-development-services/fractional-cto-and-advisory/), and [High-Performance API Design](/web-development-services/api-performance-and-integration/). It is especially relevant for internal portals, workflow tools, and operations software.\n\n## Architecture\nThe project follows a **client-server architecture** with clear separation of concerns:\n\n### **Root Level Structure**\n- **Monorepo setup** with both client and server in the same repository\n- **Package management**: Uses `pnpm` for dependency management\n- **Development tools**: Includes Husky for git hooks, ESLint/Prettier for code formatting\n- **Deployment**: Configured for Vercel deployment\n\n```\nmomentum/\n├── client/                 # Frontend Vue.js application\n├── server/                 # Backend Node.js API\n├── .github/               # GitHub workflows and templates\n├── .husky/                # Git hooks configuration\n├── .vercel/               # Vercel deployment config\n├── .vscode/               # VS Code workspace settings\n├── package.json           # Root package configuration\n├── pnpm-lock.yaml         # Package lock file\n├── vercel.json            # Vercel deployment settings\n└── README.md              # Project documentation\n```\n\n### **Frontend (Client Directory)**\n\n#### **Technology Stack:**\n- **Vue.js 3** with TypeScript\n- **PrimeVue** UI component library (modern ServiceNow-like interface)\n- **Vite** for fast development and building\n- **Pinia** for state management\n- **Vue Router** for navigation\n- **Playwright** for end-to-end testing\n- **Vitest** for unit testing\n\n#### **Key Features:**\n- Authentication system (Login/Register components)\n- Incident/Ticket management forms\n- Task management\n- File upload capabilities (with file-saver)\n- Data export functionality (xlsx)\n- Form validation (vee-validate with yup schemas)\n- Rich text editing (Quill editor)\n- Modern responsive UI with PrimeFlex\n\n#### **Client Directory Structure:**\n```\nclient/\n├── src/\n│   ├── components/\n│   │   ├── auth/           # Login/Register components\n│   │   ├── layout/         # Header/Footer components\n│   │   ├── shared/         # Reusable components\n│   │   ├── TicketForm.vue  # Incident ticket form\n│   │   └── TaskForm.vue    # Task management form\n│   ├── stores/             # Pinia state management\n│   │   ├── auth.module.ts\n│   │   ├── incidents.module.ts\n│   │   ├── user.module.ts\n│   │   └── ...\n│   ├── service/            # API service layer\n│   ├── utils/              # Utility functions\n│   ├── App.vue             # Main application component\n│   └── main.ts             # Application entry point\n├── public/                 # Static assets\n├── package.json            # Frontend dependencies\n├── vite.config.ts          # Vite configuration\n├── tsconfig.json           # TypeScript configuration\n└── playwright.config.ts    # E2E test configuration\n```\n\n### **Backend (Server Directory)**\n\n#### **Technology Stack:**\n- **Node.js** with Express.js\n- **MongoDB** with Mongoose ODM\n- **JWT** authentication with refresh tokens\n- **Swagger** API documentation\n- **CommonJS modules** (`.cjs` files)\n\n#### **Key Features:**\n- **Models**: User, Incident, CI (Configuration Items), Roles, Refresh Tokens\n- **Authentication**: JWT-based with bcrypt password hashing\n- **File uploads**: Multer for handling image uploads\n- **Email functionality**: Nodemailer integration\n- **API documentation**: Swagger UI available\n- **CORS enabled** for cross-origin requests\n\n#### **Server Directory Structure:**\n```\nserver/\n├── controllers/            # Request handlers\n│   ├── auth.controller.cjs\n│   ├── user.controller.cjs\n│   └── shared/\n├── models/                 # Database models\n│   ├── user.model.cjs\n│   ├── incident.model.cjs\n│   ├── ci.model.cjs\n│   ├── role.model.cjs\n│   └── refreshToken.model.cjs\n├── routes/                 # API route definitions\n├── middlewares/            # Custom middleware\n├── database/               # Database configuration\n├── helpers/                # Utility functions\n├── validations/            # Input validation schemas\n├── configs/                # Application configuration\n├── uploadedImages/         # File upload storage\n├── build/                  # Compiled output\n├── server.cjs              # Main server file\n├── swagger.cjs             # API documentation setup\n└── package.json            # Backend dependencies\n```\n\n### **Development Workflow**\n\n#### **Available Scripts:**\n```bash\n# Install dependencies for both client and server\npnpm install\n\n# Start both client and server concurrently\npnpm start\n\n# Start only the server (runs on backend port)\npnpm start:server\n\n# Start only the client (runs on http://localhost:5173/)\npnpm start:client\n\n# Format code in both directories\npnpm format\n\n# Copy environment variables\npnpm copy:env\n\n# Clean all node_modules and build files\npnpm clean\n```\n\n#### **Environment Setup:**\n1. Clone the repository\n2. Run `pnpm install` to install all dependencies\n3. Run `pnpm copy:env` to set up environment variables\n4. Run `pnpm start` to start both client and server\n5. Access the application at `http://localhost:5173/`\n\n### **DevOps & Quality**\n- **Git hooks**: Husky for pre-commit actions\n- **Linting**: ESLint configuration for both frontend and backend\n- **Code formatting**: Prettier for consistent code style\n- **Commit standards**: Commitlint for conventional commits\n- **Testing**: Unit tests (Vitest) and E2E tests (Playwright)\n- **Deployment**: Vercel configuration for production deployment\n\n## ServiceNow-like Features\n\nBased on the structure, this clone implements:\n\n1. **Incident Management**: Ticket creation and tracking\n2. **Task Management**: Work item handling\n3. **Configuration Items (CI)**: IT asset management\n4. **User Management**: Role-based access control\n5. **Authentication**: Secure login/registration system\n6. **File Management**: Document/image upload capabilities\n7. **Reporting**: Data export and analysis features\n8. **API Documentation**: Swagger UI for API exploration\n\n## Technology Highlights\n\n### **Frontend Technologies:**\n- Vue 3 Composition API\n- TypeScript for type safety\n- PrimeVue for enterprise UI components\n- Pinia for reactive state management\n- Vite for fast development builds\n- Playwright for reliable E2E testing\n\n### **Backend Technologies:**\n- Express.js for robust API development\n- MongoDB for flexible document storage\n- Mongoose for elegant object modeling\n- JWT for secure authentication\n- Swagger for comprehensive API documentation\n- Multer for efficient file handling\n\nThis is a well-structured, production-ready application that demonstrates modern full-stack development practices while replicating core ServiceNow functionality for educational/demonstration purposes.\n\n"
+  details: "## Engineering Architecture: Enterprise Incident Management Engine\n\nMomentum is a high-performance **Full-Stack ITSM (IT Service Management) platform** designed to replicate the core functionality of enterprise tools like ServiceNow without the associated bloat. It demonstrates a sophisticated **Incident-to-Resolution Lifecycle** powered by a robust role-based workflow engine.\n\n### 1. The Operations Engine (Layman's Perspective)\nThink of Momentum as an **Automated Digital Dispatcher**. \n\nIn a busy office, when something breaks (an \"Incident\"), you normally have to call around, send emails, and hope someone fixes it. This platform acts as the \"Dispatcher\" who takes the call, instantly categorizes the problem, assigns it to the right \"Repair Team\" (based on their role), and tracks every step until the job is done. It ensures that nothing falls through the cracks and provides a \"Master Dashboard\" for management to see exactly how the office is performing in real-time.\n\n### 2. Technical Architecture & Incident Lifecycle\nThe system utilizes a modern Monorepo architecture, bridging a Vue 3/PrimeVue frontend with a secure Node.js/MongoDB backend.\n\n```mermaid\ngraph TD\n    subgraph \"Intake & Identification\"\n        User[End User] --> TicketForm[Incident Submission]\n        TicketForm --> Auth[JWT Role Validation]\n    end\n\n    subgraph \"Workflow Orchestration (Server)\"\n        Auth --> StateEngine[Incident State Machine]\n        StateEngine --> CI[Configuration Item Linkage]\n        CI --> Assign[Automatic Team Assignment]\n    end\n\n    subgraph \"Resolution & Management\"\n        Assign --> Task[Task Breakdown]\n        Task --> Collaboration[Rich Text & File Attachments]\n        Collaboration --> Resolve[Resolution & Closure]\n    end\n\n    subgraph \"Governance & Reporting\"\n        Resolve --> Audit[Full Audit Trail]\n        Audit --> Export[Excel/XLSX Reporting]\n        Admin[Admin Dashboard] --> Audit\n    end\n```\n\n### 3. Key Engineering Pillars\n\n#### A. State-Driven Workflow Automation\nThe core of Momentum is a strictly defined **Incident State Machine**. \n- **Deterministic Transitions:** Every ticket follows a validated path (e.g., New -> Assigned -> In Progress -> Resolved). The system prevents \"illegal\" state jumps, ensuring data integrity for operational audits.\n- **Role-Based Visibility:** Using Vue 3 and Pinia, the UI dynamically reconfigures itself based on the user's role. An \"End User\" sees a simplified submission form, while an \"Operations Engineer\" sees a complex management console.\n\n#### B. The \"Lighter ServiceNow\" Pattern\nWe architected the system to prioritize **Developer Velocity** and **Runtime Performance**.\n- **PrimeVue Component Architecture:** By leveraging enterprise-grade components, we delivered a \"ServiceNow-like\" UX in a fraction of the time, focusing our engineering effort on the business logic rather than the UI primitives.\n- **Decoupled API Design:** The backend is built as a RESTful API with full Swagger documentation, allowing for future integrations with third-party automation tools or custom Slack/Teams bots.\n\n#### C. Integrated Configuration Management (CMDB)\nUnlike simple task lists, Momentum includes a lightweight **Configuration Item (CI) Model**.\n- **Asset Linkage:** Incidents are linked to specific IT assets (Servers, Software, Hardware). This allows for \"Impact Analysis\"—identifying how a single server failure might affect multiple business services.\n\n### 4. Strategic Business Value (ROI)\n- **Enterprise Capabilities, Startup Speed:** Provides the structure of an enterprise ITSM tool with the agility of a custom-built solution.\n- **Operational Transparency:** Replaces fragmented emails and spreadsheets with a single, searchable \"Source of Truth\" for all business operations.\n- **Cost Efficiency:** Eliminates the high licensing fees of enterprise platforms while providing a system that is 100% tailored to the company's specific workflows.\n\nMomentum proves that **Targeted Product Architecture** can outperform generic enterprise software by focusing on the specific operational needs of the business.\n"
   previousProject: {"name":"SR-22 Insurance Now","link":"/web-development-projects/sr-22-insurance-now/"}
   nextProject: {"name":"Marketplace Booking Platform","link":"/web-development-projects/marketplace-booking-platform/"}
 ---
@@ -92,13 +93,49 @@ project:
           </div>
        </div>
     </div>
-    <div v-for="(img, idx) in $frontmatter.project.images.slice(3)" :key="idx" class="col-12 md:col-6 lg:col-4 p-2">
+    <div v-for="(img, idx) in $frontmatter.project.images.slice(3, 5)" :key="idx" class="col-12 md:col-6 lg:col-4 p-2">
        <div class="border-round-3xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 h-full surface-card">
           <Image :src="img.itemImageSrc" :alt="img.alt" preview class="w-full h-full" imageClass="w-full h-full object-cover block min-h-15rem" />
        </div>
     </div>
+    <div v-if="$frontmatter.project.images.length >= 6" class="col-12 md:col-6 lg:col-4 p-2">
+       <div class="border-round-3xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 h-full surface-card relative" :class="{'cursor-pointer': $frontmatter.project.images.length > 6}" @click="$frontmatter.project.images.length > 6 ? displayModal = true : null">
+          <Image :src="$frontmatter.project.images[5].itemImageSrc" :alt="$frontmatter.project.images[5].alt" :preview="$frontmatter.project.images.length === 6" class="w-full h-full" imageClass="w-full h-full object-cover block min-h-15rem" />
+          <div v-if="$frontmatter.project.images.length > 6" class="absolute top-0 left-0 w-full h-full flex align-items-center justify-content-center bg-black-alpha-60 text-white hover:bg-black-alpha-40 transition-all transition-duration-300">
+             <div class="text-center">
+                <i class="pi pi-images text-4xl mb-2"></i>
+                <div class="text-xl font-bold uppercase tracking-widest">+{{ $frontmatter.project.images.length - 5 }} More</div>
+                <div class="text-xs opacity-70 mt-1">View All Media</div>
+             </div>
+          </div>
+       </div>
+    </div>
   </div>
 </section>
+
+<section v-if="$frontmatter.project.video" class="mb-8 overflow-hidden border-round-3xl shadow-4 surface-card border-1 border-100">
+  <div class="relative w-full overflow-hidden" style="padding-top: 56.25%;">
+     <iframe 
+       class="absolute top-0 left-0 w-full h-full border-none" 
+       :src="'https://www.youtube.com/embed/' + ($frontmatter.project.video.includes('v=') ? $frontmatter.project.video.split('v=')[1]?.split('&')[0] : $frontmatter.project.video.split('/').pop())" 
+       title="Project Video Showcase" 
+       frameborder="0" 
+       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+       referrerpolicy="strict-origin-when-cross-origin" 
+       allowfullscreen>
+     </iframe>
+  </div>
+</section>
+
+<Dialog v-model:visible="displayModal" modal header="Project Media Showcase" :style="{ width: '90vw', maxWidth: '1200px' }" class="p-0 overflow-hidden border-round-3xl" :breakpoints="{'960px': '95vw'}">
+  <div class="grid p-3 surface-ground">
+    <div v-for="(img, idx) in $frontmatter.project.images" :key="idx" class="col-12 md:col-6 lg:col-4 p-2">
+       <div class="border-round-2xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 surface-card h-full">
+          <Image :src="img.itemImageSrc" :alt="img.alt" preview class="w-full h-full" imageClass="w-full h-full object-cover block min-h-15rem" />
+       </div>
+    </div>
+  </div>
+</Dialog>
 
 <div class="grid mb-8">
   <div class="col-12">
@@ -142,7 +179,7 @@ project:
             <span>Engineering Architecture</span>
           </div>
         </template>
-        <div class="p-4 md:p-6 surface-card border-round-3xl shadow-1 mt-4">
+        <div class="p-2 md:p-4 surface-card border-round-3xl shadow-1 mt-4">
           <div class="flex align-items-center gap-2 text-primary font-bold mb-4 uppercase tracking-wider text-sm">
             <i class="pi pi-code"></i>
             Technical Deep-Dive
@@ -150,221 +187,68 @@ project:
           <div class="text-xl line-height-4 text-700 mb-6">
             {{ $frontmatter.project.perspective.technical }}
           </div>
-          <div class="project-markdown-content text-lg line-height-4">
+          <div v-pre class="project-markdown-content text-lg line-height-4">
 
-## Project Overview
-This is a **full-stack web application** that is called "momentum" internally and aims to replicate ServiceNow's IT service management capabilities.
+## Engineering Architecture: Enterprise Incident Management Engine
 
-## Executive Summary
+Momentum is a high-performance **Full-Stack ITSM (IT Service Management) platform** designed to replicate the core functionality of enterprise tools like ServiceNow without the associated bloat. It demonstrates a sophisticated **Incident-to-Resolution Lifecycle** powered by a robust role-based workflow engine.
 
-This project demonstrates how to build internal operational software that replaces expensive or bloated enterprise tooling with a focused, modern workflow system. It is a strong proof point for custom internal tools, process-heavy dashboards, and product architecture for business operations.
+### 1. The Operations Engine (Layman's Perspective)
+Think of Momentum as an **Automated Digital Dispatcher**. 
 
-## Business Problem
+In a busy office, when something breaks (an "Incident"), you normally have to call around, send emails, and hope someone fixes it. This platform acts as the "Dispatcher" who takes the call, instantly categorizes the problem, assigns it to the right "Repair Team" (based on their role), and tracks every step until the job is done. It ensures that nothing falls through the cracks and provides a "Master Dashboard" for management to see exactly how the office is performing in real-time.
 
-Many teams outgrow spreadsheets and lightweight ticket tools but do not want the cost, complexity, or rigidity of large enterprise platforms. They need a system that fits their workflow, not a generic product that forces them to adapt around it.
+### 2. Technical Architecture & Incident Lifecycle
+The system utilizes a modern Monorepo architecture, bridging a Vue 3/PrimeVue frontend with a secure Node.js/MongoDB backend.
 
-## What I Built
+```mermaid
+graph TD
+    subgraph "Intake & Identification"
+        User[End User] --> TicketForm[Incident Submission]
+        TicketForm --> Auth[JWT Role Validation]
+    end
 
-- A full-stack incident and task management platform
-- Role-based workflows for operations and internal teams
-- File management, export capability, and structured form handling
-- API-backed architecture that can support future automation and integrations
+    subgraph "Workflow Orchestration (Server)"
+        Auth --> StateEngine[Incident State Machine]
+        StateEngine --> CI[Configuration Item Linkage]
+        CI --> Assign[Automatic Team Assignment]
+    end
 
-## Why It Matters
+    subgraph "Resolution & Management"
+        Assign --> Task[Task Breakdown]
+        Task --> Collaboration[Rich Text & File Attachments]
+        Collaboration --> Resolve[Resolution & Closure]
+    end
 
-Internal software is often where a lot of business inefficiency hides. This project shows how targeted product architecture can create a cleaner operational system with less friction, better visibility, and room for future scaling.
-
-## Best Fit If You Need Something Similar
-
-This case study supports [Product Architecture & Scale](/web-development-services/product-architecture-and-scaling/), [Fractional CTO Strategy](/web-development-services/fractional-cto-and-advisory/), and [High-Performance API Design](/web-development-services/api-performance-and-integration/). It is especially relevant for internal portals, workflow tools, and operations software.
-
-## Architecture
-The project follows a **client-server architecture** with clear separation of concerns:
-
-### **Root Level Structure**
-- **Monorepo setup** with both client and server in the same repository
-- **Package management**: Uses `pnpm` for dependency management
-- **Development tools**: Includes Husky for git hooks, ESLint/Prettier for code formatting
-- **Deployment**: Configured for Vercel deployment
-
-```
-momentum/
-├── client/                 # Frontend Vue.js application
-├── server/                 # Backend Node.js API
-├── .github/               # GitHub workflows and templates
-├── .husky/                # Git hooks configuration
-├── .vercel/               # Vercel deployment config
-├── .vscode/               # VS Code workspace settings
-├── package.json           # Root package configuration
-├── pnpm-lock.yaml         # Package lock file
-├── vercel.json            # Vercel deployment settings
-└── README.md              # Project documentation
+    subgraph "Governance & Reporting"
+        Resolve --> Audit[Full Audit Trail]
+        Audit --> Export[Excel/XLSX Reporting]
+        Admin[Admin Dashboard] --> Audit
+    end
 ```
 
-### **Frontend (Client Directory)**
+### 3. Key Engineering Pillars
 
-#### **Technology Stack:**
-- **Vue.js 3** with TypeScript
-- **PrimeVue** UI component library (modern ServiceNow-like interface)
-- **Vite** for fast development and building
-- **Pinia** for state management
-- **Vue Router** for navigation
-- **Playwright** for end-to-end testing
-- **Vitest** for unit testing
+#### A. State-Driven Workflow Automation
+The core of Momentum is a strictly defined **Incident State Machine**. 
+- **Deterministic Transitions:** Every ticket follows a validated path (e.g., New -> Assigned -> In Progress -> Resolved). The system prevents "illegal" state jumps, ensuring data integrity for operational audits.
+- **Role-Based Visibility:** Using Vue 3 and Pinia, the UI dynamically reconfigures itself based on the user's role. An "End User" sees a simplified submission form, while an "Operations Engineer" sees a complex management console.
 
-#### **Key Features:**
-- Authentication system (Login/Register components)
-- Incident/Ticket management forms
-- Task management
-- File upload capabilities (with file-saver)
-- Data export functionality (xlsx)
-- Form validation (vee-validate with yup schemas)
-- Rich text editing (Quill editor)
-- Modern responsive UI with PrimeFlex
+#### B. The "Lighter ServiceNow" Pattern
+We architected the system to prioritize **Developer Velocity** and **Runtime Performance**.
+- **PrimeVue Component Architecture:** By leveraging enterprise-grade components, we delivered a "ServiceNow-like" UX in a fraction of the time, focusing our engineering effort on the business logic rather than the UI primitives.
+- **Decoupled API Design:** The backend is built as a RESTful API with full Swagger documentation, allowing for future integrations with third-party automation tools or custom Slack/Teams bots.
 
-#### **Client Directory Structure:**
-```
-client/
-├── src/
-│   ├── components/
-│   │   ├── auth/           # Login/Register components
-│   │   ├── layout/         # Header/Footer components
-│   │   ├── shared/         # Reusable components
-│   │   ├── TicketForm.vue  # Incident ticket form
-│   │   └── TaskForm.vue    # Task management form
-│   ├── stores/             # Pinia state management
-│   │   ├── auth.module.ts
-│   │   ├── incidents.module.ts
-│   │   ├── user.module.ts
-│   │   └── ...
-│   ├── service/            # API service layer
-│   ├── utils/              # Utility functions
-│   ├── App.vue             # Main application component
-│   └── main.ts             # Application entry point
-├── public/                 # Static assets
-├── package.json            # Frontend dependencies
-├── vite.config.ts          # Vite configuration
-├── tsconfig.json           # TypeScript configuration
-└── playwright.config.ts    # E2E test configuration
-```
+#### C. Integrated Configuration Management (CMDB)
+Unlike simple task lists, Momentum includes a lightweight **Configuration Item (CI) Model**.
+- **Asset Linkage:** Incidents are linked to specific IT assets (Servers, Software, Hardware). This allows for "Impact Analysis"—identifying how a single server failure might affect multiple business services.
 
-### **Backend (Server Directory)**
+### 4. Strategic Business Value (ROI)
+- **Enterprise Capabilities, Startup Speed:** Provides the structure of an enterprise ITSM tool with the agility of a custom-built solution.
+- **Operational Transparency:** Replaces fragmented emails and spreadsheets with a single, searchable "Source of Truth" for all business operations.
+- **Cost Efficiency:** Eliminates the high licensing fees of enterprise platforms while providing a system that is 100% tailored to the company's specific workflows.
 
-#### **Technology Stack:**
-- **Node.js** with Express.js
-- **MongoDB** with Mongoose ODM
-- **JWT** authentication with refresh tokens
-- **Swagger** API documentation
-- **CommonJS modules** (`.cjs` files)
-
-#### **Key Features:**
-- **Models**: User, Incident, CI (Configuration Items), Roles, Refresh Tokens
-- **Authentication**: JWT-based with bcrypt password hashing
-- **File uploads**: Multer for handling image uploads
-- **Email functionality**: Nodemailer integration
-- **API documentation**: Swagger UI available
-- **CORS enabled** for cross-origin requests
-
-#### **Server Directory Structure:**
-```
-server/
-├── controllers/            # Request handlers
-│   ├── auth.controller.cjs
-│   ├── user.controller.cjs
-│   └── shared/
-├── models/                 # Database models
-│   ├── user.model.cjs
-│   ├── incident.model.cjs
-│   ├── ci.model.cjs
-│   ├── role.model.cjs
-│   └── refreshToken.model.cjs
-├── routes/                 # API route definitions
-├── middlewares/            # Custom middleware
-├── database/               # Database configuration
-├── helpers/                # Utility functions
-├── validations/            # Input validation schemas
-├── configs/                # Application configuration
-├── uploadedImages/         # File upload storage
-├── build/                  # Compiled output
-├── server.cjs              # Main server file
-├── swagger.cjs             # API documentation setup
-└── package.json            # Backend dependencies
-```
-
-### **Development Workflow**
-
-#### **Available Scripts:**
-```bash
-# Install dependencies for both client and server
-pnpm install
-
-# Start both client and server concurrently
-pnpm start
-
-# Start only the server (runs on backend port)
-pnpm start:server
-
-# Start only the client (runs on http://localhost:5173/)
-pnpm start:client
-
-# Format code in both directories
-pnpm format
-
-# Copy environment variables
-pnpm copy:env
-
-# Clean all node_modules and build files
-pnpm clean
-```
-
-#### **Environment Setup:**
-1. Clone the repository
-2. Run `pnpm install` to install all dependencies
-3. Run `pnpm copy:env` to set up environment variables
-4. Run `pnpm start` to start both client and server
-5. Access the application at `http://localhost:5173/`
-
-### **DevOps & Quality**
-- **Git hooks**: Husky for pre-commit actions
-- **Linting**: ESLint configuration for both frontend and backend
-- **Code formatting**: Prettier for consistent code style
-- **Commit standards**: Commitlint for conventional commits
-- **Testing**: Unit tests (Vitest) and E2E tests (Playwright)
-- **Deployment**: Vercel configuration for production deployment
-
-## ServiceNow-like Features
-
-Based on the structure, this clone implements:
-
-1. **Incident Management**: Ticket creation and tracking
-2. **Task Management**: Work item handling
-3. **Configuration Items (CI)**: IT asset management
-4. **User Management**: Role-based access control
-5. **Authentication**: Secure login/registration system
-6. **File Management**: Document/image upload capabilities
-7. **Reporting**: Data export and analysis features
-8. **API Documentation**: Swagger UI for API exploration
-
-## Technology Highlights
-
-### **Frontend Technologies:**
-- Vue 3 Composition API
-- TypeScript for type safety
-- PrimeVue for enterprise UI components
-- Pinia for reactive state management
-- Vite for fast development builds
-- Playwright for reliable E2E testing
-
-### **Backend Technologies:**
-- Express.js for robust API development
-- MongoDB for flexible document storage
-- Mongoose for elegant object modeling
-- JWT for secure authentication
-- Swagger for comprehensive API documentation
-- Multer for efficient file handling
-
-This is a well-structured, production-ready application that demonstrates modern full-stack development practices while replicating core ServiceNow functionality for educational/demonstration purposes.
-
+Momentum proves that **Targeted Product Architecture** can outperform generic enterprise software by focusing on the specific operational needs of the business.
 
 
 </div>
@@ -445,5 +329,7 @@ This is a well-structured, production-ready application that demonstrates modern
 </div>
 
 <script setup>
+import { ref } from "vue"
 import { responsiveOptions } from "@data/responsive.js"
+const displayModal = ref(false)
 </script>

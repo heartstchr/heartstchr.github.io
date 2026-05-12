@@ -54,6 +54,7 @@ export const freelance = [
         alt: "AI Generated Dashboard Interface",
       }
     ],
+    video: "",
     perspective: {
       executive: "A game-changer for businesses using Notion as a backend. It eliminates the need for expensive custom development by automatically generating a professional web interface directly from your data. Ideal for internal tools, client portals, and rapid prototyping with zero friction.",
       technical: "Features a dynamic schema-driven UI engine. It parses Notion database properties in real-time to generate Vue components with appropriate validation and input types. Includes multi-language support through a custom i18n bridge and optimized API caching for smooth performance."
@@ -134,6 +135,7 @@ export const freelance = [
         alt: "LocalXR - Blog Section",
       },
     ],
+    video: "",
     perspective: {
       executive: "Engineered for high-volume lead generation. It solves the complexity of managing thousands of local service routes while maintaining lightning-fast performance and SEO dominance. Built to scale from a single city to a national platform with minimal operational overhead.",
       technical: "Built with Next.js 15 and React 19, utilizing Server-Side Rendering (SSR) for maximum SEO efficiency. Implements a hierarchical routing system for thousands of dynamic paths, optimized with incremental static regeneration (ISR) and advanced image processing for Core Web Vitals excellence."
@@ -215,6 +217,7 @@ export const freelance = [
         alt: "Contact Form Plugin - Live Demo",
       },
     ],
+    video: "",
     details: "./details/contact-form-plugin.md",
   },
   {
@@ -299,6 +302,7 @@ export const freelance = [
         alt: "Vibe3 Earnings Calculator Interface",
       },
     ],
+    video: "",
     perspective: {
       executive: "A Web3-ready marketing engine that bridges the gap between premium brands and content creators. It utilizes AI to ensure high-match accuracy, reducing campaign waste and increasing engagement ROI in the influencer space.",
       technical: "A sophisticated PWA implementation using Next.js and Tailwind CSS v4. Features a complex state management system for real-time analytics and Web3 wallet integration (Solana/TON). Utilizes glass-morphism effects and hardware-accelerated animations for a high-end feel."
@@ -380,6 +384,7 @@ export const freelance = [
         alt: "Dynamic CRUD App Home Page",
       },
     ],
+    video: "",
     details: "./details/notion-crud.md",
   },
   {
@@ -458,6 +463,7 @@ export const freelance = [
         alt: "AI Narrator Application Screenshot",
       },
     ],
+    video: "",
     perspective: {
       executive: "Strategic content automation that turns static documents into professional audio assets. It allows marketing and education teams to scale their content reach across platforms without the cost of professional voice actors.",
       technical: "Leverages Google Apps Script for deep integration with Google Workspace. It interfaces with the Gemini TTS API, handling complex text truncation and chunking to ensure stability with large documents. Includes a custom-built sidebar UI with real-time audio playback control."
@@ -542,6 +548,7 @@ export const freelance = [
         alt: "Email notification in Notion",
       },
     ],
+    video: "",
     perspective: {
       executive: "Automates customer service workflows by bridging professional web forms with Notion. It provides a zero-cost alternative to expensive ticketing systems while maintaining professional notification standards and data integrity.",
       technical: "Utilizes Netlify Functions (Serverless) as an intermediary to handle secure Notion API calls. Implements a sophisticated email templating engine and automated file processing pipeline for attachments, ensuring a seamless data flow from web to internal database."
@@ -657,6 +664,7 @@ export const freelance = [
         alt: "Appliance Repair Service Platform - Blog section",
       },
     ],
+    video: "",
     details: "./details/appliance-repair.md",
   },
   {
@@ -762,6 +770,7 @@ export const freelance = [
         alt: "SR-22 Insurance Now - JSON reader functionality",
       },
     ],
+    video: "",
     perspective: {
       executive: "A low-friction insurance lead engine designed for maximum conversion. It simplifies complex insurance compliance (SR-22) into a user-friendly experience, driving high-quality calls and form submissions for insurance providers.",
       technical: "A high-performance landing page engine driven by JSON configurations. Features advanced Google Places API integration for address autocomplete and location-based dynamic content injection, optimized for sub-second load times on mobile devices."
@@ -874,6 +883,7 @@ export const freelance = [
         alt: "Momentum Incident Management - Registration page",
       },
     ],
+    video: "",
     details: "./details/momentum.md",
   },
   {
@@ -946,6 +956,7 @@ export const freelance = [
         text: "Reusable marketplace architecture that can be replicated in another domain with different inventory, filters, and booking logic.",
       },
     ],
+    video: "",
     details: "./details/fts.md",
   },
   {
@@ -1083,6 +1094,7 @@ export const freelance = [
         alt: "Tech Create - Landing page",
       },
     ],
+    video: "",
     details: "./details/tech-create.md",
   },
   {
@@ -1213,6 +1225,7 @@ export const freelance = [
         alt: "Qatar Airways",
       },
     ],
+    video: "",
     details: "./details/qa.md",
   },
   {

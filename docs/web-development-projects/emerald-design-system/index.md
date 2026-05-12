@@ -21,6 +21,7 @@ project:
   contact: "https://wa.me/917026217029?text=Hi%20there%2C%20I'm%20interested%20in%20building%20a%20modern%20Design%20System"
   stack: ["JavaScript","Lit","Axios","Webpack","Bitbucket","npm","Node.js","Git","ESLint","Prettier","storybook","markdown/black/white","vitepress"]
   images: [{"itemImageSrc":"/img/home/projects/ABN_Amro_design_system.webp","alt":"Cover screen for Emerald Design System project page"},{"itemImageSrc":"/img/projects/abn/emerald_home.webp","alt":"Emerald Design System Home Page"},{"itemImageSrc":"/img/projects/abn/emerald_storybook.webp","alt":"Emerald Design System Storybook"}]
+  video: ""
   features: [{"text":"Responsive Design: Seamless experience across devices."},{"text":"Component-Based Architecture: Efficient and scalable codebase."},{"text":"Modern UI/UX: Clean aesthetics with intuitive navigation."},{"text":"API Integration: Robust connectivity with external services using Axios."},{"text":"Modular Development: Leverages Webpack for optimized, modular builds."},{"text":"Code Quality Assurance: Enforced by ESLint and Prettier for consistent, error-free code."},{"text":"Version Control: Streamlined collaboration via Git and Bitbucket."}]
   perspective: {"executive":"A strategic investment in design consistency and development velocity. The Emerald Design System provides a unified language for ABN AMRO's digital ecosystem, significantly reducing time-to-market for new features while ensuring a seamless, banking-grade user experience across all platforms. It represents a shift from bespoke development to a scalable, component-driven digital strategy.","technical":"Built using Lit (Web Components) for maximum interoperability and performance. The system utilizes a tokens-first approach to manage theming and visual variables, integrated with a robust Storybook documentation suite. The architecture emphasizes modularity and tree-shaking, ensuring that enterprise applications remain lightweight and fast while consuming complex design patterns."}
   details: "## Engineering Architecture & The Atomic Vision\n\nThe Emerald Design System is a high-performance, framework-agnostic architectural asset designed for ABN AMRO. It shifts the development paradigm from building isolated features to assembling scalable, resilient interfaces using a centralized technical core.\n\n### 1. Atomic Design Methodology\nWe implemented the system using **Atomic Design** principles to ensure infinite scalability and maintainability. This structure allows us to break down complex banking interfaces into their fundamental building blocks:\n\n- **Atoms:** The most basic technical units (Buttons, Inputs, Typography, Icons).\n- **Molecules:** Functional groups of atoms working together (Search Bars, Form Fields with Labels).\n- **Organisms:** Complex UI patterns that form distinct sections of an interface (Navigation Bars, Transaction Lists, Credit Card Summary Cards).\n- **Templates & Pages:** Strategic layouts that orchestrate organisms into complete user flows.\n\n### 2. The Token-Driven Pipeline: The \"Master Blueprint\"\nThink of Design Tokens as a **Central Command Center** for the entire brand. Instead of hard-coding colors or fonts into hundreds of different apps, we use a single \"Master Blueprint.\" \n\nIf ABN AMRO decides to update its signature green or switch to a new corporate font, we don't need to change thousands of lines of code. We simply turn a single \"dial\" in the Token Engine, and every application—from the mobile banking app to internal dashboards—updates instantly and perfectly.\n\n```mermaid\ngraph TD\n    subgraph \"Central Command (The 'Dials')\"\n        Figma[Brand Colors & Fonts] --> StyleDict[Token Engine]\n    end\n\n    subgraph \"Instant Distribution\"\n        StyleDict --> App1[Mobile Banking App]\n        StyleDict --> App2[Internal Dashboards]\n        StyleDict --> App3[Corporate Web Portal]\n    end\n\n    subgraph \"Strategic Business Value\"\n        App1 --> Benefit1[Zero Brand Inconsistency]\n        App2 --> Benefit2[Rapid Rebranding Capability]\n        App3 --> Benefit3[Drastic Reduction in Dev Costs]\n    end\n```\n\nBy decoupling the \"look\" from the \"logic,\" we ensure that the brand remains cohesive and future-proof, allowing us to implement a company-wide dark mode or a visual refresh in days rather than months.\n\n### 3. Technical Implementation Strategy\nWe selected **Lit (Web Components)** as our primary engine to future-proof the investment.\n\n- **Encapsulation (Shadow DOM):** By leveraging native Shadow DOM, we ensure that Emerald components are immune to style bleeding from parent applications, a critical requirement in a multi-team enterprise environment.\n- **Interoperability:** Being built on Web Standards, these components run natively in any framework, eliminating \"vendor lock-in\" to a specific JS library.\n- **Performance:** Lit components have a near-zero runtime overhead, as they leverage the browser's built-in component model.\n\n### 4. Enterprise Distribution & Governance\nTo maintain high developer velocity across ABN AMRO’s engineering teams, the architecture includes:\n\n- **Centralized Registry:** Private NPM repository for versioned distribution.\n- **Automated CI/CD:** Every commit triggers visual regression testing via Chromatic and unit testing for accessibility (A11y) compliance.\n- **Storybook Workspace:** A live technical playground for engineers to test component behavior in isolation before integration.\n\nThis architectural approach reduced UI-related technical debt by **40%** and increased front-end delivery velocity by **3x** across the organization.\n"
@@ -92,13 +93,49 @@ project:
           </div>
        </div>
     </div>
-    <div v-for="(img, idx) in $frontmatter.project.images.slice(3)" :key="idx" class="col-12 md:col-6 lg:col-4 p-2">
+    <div v-for="(img, idx) in $frontmatter.project.images.slice(3, 5)" :key="idx" class="col-12 md:col-6 lg:col-4 p-2">
        <div class="border-round-3xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 h-full surface-card">
           <Image :src="img.itemImageSrc" :alt="img.alt" preview class="w-full h-full" imageClass="w-full h-full object-cover block min-h-15rem" />
        </div>
     </div>
+    <div v-if="$frontmatter.project.images.length >= 6" class="col-12 md:col-6 lg:col-4 p-2">
+       <div class="border-round-3xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 h-full surface-card relative" :class="{'cursor-pointer': $frontmatter.project.images.length > 6}" @click="$frontmatter.project.images.length > 6 ? displayModal = true : null">
+          <Image :src="$frontmatter.project.images[5].itemImageSrc" :alt="$frontmatter.project.images[5].alt" :preview="$frontmatter.project.images.length === 6" class="w-full h-full" imageClass="w-full h-full object-cover block min-h-15rem" />
+          <div v-if="$frontmatter.project.images.length > 6" class="absolute top-0 left-0 w-full h-full flex align-items-center justify-content-center bg-black-alpha-60 text-white hover:bg-black-alpha-40 transition-all transition-duration-300">
+             <div class="text-center">
+                <i class="pi pi-images text-4xl mb-2"></i>
+                <div class="text-xl font-bold uppercase tracking-widest">+{{ $frontmatter.project.images.length - 5 }} More</div>
+                <div class="text-xs opacity-70 mt-1">View All Media</div>
+             </div>
+          </div>
+       </div>
+    </div>
   </div>
 </section>
+
+<section v-if="$frontmatter.project.video" class="mb-8 overflow-hidden border-round-3xl shadow-4 surface-card border-1 border-100">
+  <div class="relative w-full overflow-hidden" style="padding-top: 56.25%;">
+     <iframe 
+       class="absolute top-0 left-0 w-full h-full border-none" 
+       :src="'https://www.youtube.com/embed/' + ($frontmatter.project.video.includes('v=') ? $frontmatter.project.video.split('v=')[1]?.split('&')[0] : $frontmatter.project.video.split('/').pop())" 
+       title="Project Video Showcase" 
+       frameborder="0" 
+       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+       referrerpolicy="strict-origin-when-cross-origin" 
+       allowfullscreen>
+     </iframe>
+  </div>
+</section>
+
+<Dialog v-model:visible="displayModal" modal header="Project Media Showcase" :style="{ width: '90vw', maxWidth: '1200px' }" class="p-0 overflow-hidden border-round-3xl" :breakpoints="{'960px': '95vw'}">
+  <div class="grid p-3 surface-ground">
+    <div v-for="(img, idx) in $frontmatter.project.images" :key="idx" class="col-12 md:col-6 lg:col-4 p-2">
+       <div class="border-round-2xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 surface-card h-full">
+          <Image :src="img.itemImageSrc" :alt="img.alt" preview class="w-full h-full" imageClass="w-full h-full object-cover block min-h-15rem" />
+       </div>
+    </div>
+  </div>
+</Dialog>
 
 <div class="grid mb-8">
   <div class="col-12">
@@ -142,7 +179,7 @@ project:
             <span>Engineering Architecture</span>
           </div>
         </template>
-        <div class="p-4 md:p-6 surface-card border-round-3xl shadow-1 mt-4">
+        <div class="p-2 md:p-4 surface-card border-round-3xl shadow-1 mt-4">
           <div class="flex align-items-center gap-2 text-primary font-bold mb-4 uppercase tracking-wider text-sm">
             <i class="pi pi-code"></i>
             Technical Deep-Dive
@@ -150,7 +187,7 @@ project:
           <div class="text-xl line-height-4 text-700 mb-6">
             {{ $frontmatter.project.perspective.technical }}
           </div>
-          <div class="project-markdown-content text-lg line-height-4">
+          <div v-pre class="project-markdown-content text-lg line-height-4">
 
 ## Engineering Architecture & The Atomic Vision
 
@@ -285,5 +322,7 @@ This architectural approach reduced UI-related technical debt by **40%** and inc
 </div>
 
 <script setup>
+import { ref } from "vue"
 import { responsiveOptions } from "@data/responsive.js"
+const displayModal = ref(false)
 </script>

@@ -21,9 +21,10 @@ project:
   contact: "mailto:jiwan.cse@gmail.com?subject=LocalXR Inquiry"
   stack: ["nextdotjs/black/white","react","tailwindcss","sass","nodedotjs","axios","Eslint","Prettier"]
   images: [{"itemImageSrc":"/img/projects/localxr/localxr-cover.webp","alt":"LocalXR - Home Services Marketplace Cover"},{"itemImageSrc":"/img/projects/localxr/plumber-home.webp","alt":"LocalXR - Plumber Home Page"},{"itemImageSrc":"/img/projects/localxr/listing.webp","alt":"LocalXR - Service Listings"},{"itemImageSrc":"/img/projects/localxr/plumbing-services.webp","alt":"LocalXR - Plumbing Services Page"},{"itemImageSrc":"/img/projects/localxr/blog.webp","alt":"LocalXR - Blog Section"}]
+  video: ""
   features: [{"text":"Location-Aware Search: Google Places Integration, ZIP Code Search, and hierarchical State/City navigation with smart normalization."},{"text":"Dynamic Listings & Routing: Automatically generated listings for thousands of location-service combinations with SEO-optimized URLs."},{"text":"Lead Generation System: Secure callback and contact forms with input sanitization, validation, and rate limiting."},{"text":"Performance First: Optimized for Core Web Vitals with dynamic imports, image optimization, and server-side rendering."},{"text":"Comprehensive SEO: Dynamic meta tags, canonical URLs, and automated sitemap generation for maximum search visibility."},{"text":"Scalable Architecture: Built on Next.js 15 and React 19 with a modular component system and context-driven state management."}]
   perspective: {"executive":"Engineered for high-volume lead generation. It solves the complexity of managing thousands of local service routes while maintaining lightning-fast performance and SEO dominance. Built to scale from a single city to a national platform with minimal operational overhead.","technical":"Built with Next.js 15 and React 19, utilizing Server-Side Rendering (SSR) for maximum SEO efficiency. Implements a hierarchical routing system for thousands of dynamic paths, optimized with incremental static regeneration (ISR) and advanced image processing for Core Web Vitals excellence."}
-  details: "\n## Executive Summary\n\n**LocalXR** is a modern, SEO-optimized web platform that connects homeowners and property managers with verified local service providers across multiple home service categories. Built with Next.js 15 and React 19, the platform serves as a lead generation and matching service for home repair, maintenance, and improvement professionals.\n\n### Why This Matters for Buyers\n\nThis is one of the clearest examples in the portfolio of a system built to turn organic traffic into revenue. It combines programmatic SEO, location-aware routing, and lead-capture logic into a platform designed for long-tail acquisition at scale.\n\n## Business Problem\n\nLocal-service businesses need visibility across thousands of service and geography combinations, but manual landing-page creation does not scale. At the same time, they still need a conversion path that turns search visits into qualified leads.\n\n## What I Built\n\n- A Next.js lead-generation platform with location-aware routing\n- Dynamic listing architecture for thousands of location-service combinations\n- SEO infrastructure around metadata, canonicals, and sitemap generation\n- Forms and tracking workflows designed to convert traffic into provider leads\n\n## Best Fit If You Need Something Similar\n\nThis case study strongly supports [Programmatic Growth Engines](/web-development-services/programmatic-seo-and-growth/) and [Product Architecture & Scale](/web-development-services/product-architecture-and-scaling/). It is a best-fit example for directories, service marketplaces, and search-led lead engines.\n\n### Core Business Model\n\nLocalXR operates as a **free matching service** that facilitates connections between homeowners seeking services and independent local professionals. The platform generates revenue through lead generation, where service providers pay for qualified leads and phone connections. Homeowners can either call listed professionals directly or contact LocalXR agents for immediate assistance.\n\n***\n\n## Business Value & Benefits\n\n### For Homeowners\n- **Quick Access**: Find verified local service providers within minutes\n- **Trust & Verification**: Connect with vetted, professional service providers\n- **24/7 Availability**: Emergency services available around the clock\n- **Multiple Service Categories**: Single platform for all home service needs\n- **No Cost to Users**: Free matching service with no hidden fees\n- **Location-Aware**: Personalized results based on geographic location\n\n### For Service Providers\n- **Lead Generation**: Access to qualified, location-specific leads\n- **Direct Connections**: Phone-based lead capture for immediate contact\n- **Geographic Targeting**: Reach customers in specific states and cities\n- **Service-Specific Listings**: Targeted visibility for specialized services\n\n### For Business Stakeholders\n- **Scalable Revenue Model**: Lead-based monetization with high conversion potential\n- **SEO-Optimized**: Dynamic page generation for thousands of location-service combinations\n- **Performance-First**: Fast page loads and mobile optimization for better user experience\n- **Analytics Integration**: Comprehensive tracking via Google Tag Manager for data-driven decisions\n- **Compliance Ready**: CCPA compliance features (Do Not Sell page) and secure form handling\n\n***\n\n## Technical Architecture\n\n### Framework & Core Technologies\n\n- **Next.js 15.2.4**: Server-side rendering (SSR), static site generation (SSG), and dynamic routing\n- **React 19.1.0**: Modern React with hooks and context API for state management\n- **Tailwind CSS 4.1.4**: Utility-first CSS framework for responsive, mobile-first design\n- **Sass/SCSS**: Component-level styling with modular CSS architecture\n- **Sharp 0.34.4**: Image optimization and WebP conversion for performance\n\n### Key Technical Features\n\n#### 1. Dynamic Routing System\n- **Location-Based URLs**: `/locations/[service]/[state]/[city]` structure\n- **State Normalization**: Automatic conversion of state codes (e.g., \"OH\" → \"Ohio\") to full names\n- **Slug Validation**: Whitelist-based validation prevents invalid URLs\n- **Smart Redirects**: Handles ZIP code suffixes, state code variations, and reserved words\n\n#### 2. Context-Driven State Management\n- **LocationContext**: Manages user location, address, and geographic data\n- **PhoneNumberContext**: Dynamic phone number assignment based on location/service\n- **SlugContext**: Tracks current page slug for analytics and personalization\n\n#### 3. SEO Optimization\n- **Dynamic Meta Tags**: Page-specific titles, descriptions, and Open Graph tags\n- **Canonical URLs**: Prevents duplicate content issues\n- **Sitemap Generation**: Automated sitemap creation via `next-sitemap`\n- **Structured Data Ready**: Semantic HTML and meta tag structure\n\n#### 4. Performance Optimizations\n- **Dynamic Imports**: Code splitting for reduced initial bundle size\n- **Image Optimization**: Next.js Image component with WebP format and lazy loading\n- **Bundle Analysis**: Built-in bundle analyzer for performance monitoring\n- **Scroll Restoration**: Maintains scroll position on navigation\n\n#### 5. Lead Generation System\n- **Callback Forms**: Secure form submission with validation and sanitization\n- **Contact Forms**: Multi-purpose contact forms with consent mechanisms\n- **API Integration**: RESTful API endpoints for form submissions and data retrieval\n- **Traffic Source Tracking**: Session-based tracking for marketing attribution\n\n***\n\n## Service Categories\n\nThe platform supports **20+ home service categories** organized into logical groups:\n\n### Core Home Systems & Emergency\n- Plumbing\n- HVAC (Heating, Ventilation, Air Conditioning)\n- Electrical\n- Handyman Services\n- Appliance Repair\n- Damage Restoration\n- Garage Door Repair & Installation\n\n### Flooring & Interior Finishing\n- Tiling\n- Hardwood Flooring\n- Carpet Installation\n- Laminate & Vinyl Flooring\n- Drywall & Painting\n\n### Exterior, Roofing & Siding\n- Roofing\n- Siding\n- Windows & Doors\n- Gutter Cleaning\n\n### Outdoors, Yard & Fencing\n- Landscaping\n- Deck & Patio\n- Fencing\n\n### Pest Control & Exterminators\n- Pest Control\n\n***\n\n## Key Features & Functionality\n\n### 1. Location-Aware Search\n- **Google Places Integration**: Autocomplete address search with place details API\n- **ZIP Code Search**: Quick location lookup by ZIP code\n- **State/City Navigation**: Hierarchical location-based routing\n- **Smart Normalization**: Converts state codes to full names, handles variations\n\n### 2. Service Provider Listings\n- **Dynamic Listings**: Generated listings based on location and service type\n- **Listing Cards**: Display provider information, ratings, and contact details\n- **Pagination**: Efficient handling of large listing sets\n- **Category Filtering**: Filter listings by service category\n\n### 3. Lead Capture Forms\n- **Callback Request Form**: Primary lead generation form with validation\n- **Contact Form**: General inquiry form with consent mechanisms\n- **Form Security**: Input sanitization, XSS prevention, validation\n- **Confirmation Popups**: User consent and confirmation dialogs\n\n### 4. Content Management\n- **JSON-Based Content**: Service descriptions and content stored in JSON files\n- **Blog System**: Guides and advice section with filtering\n- **Dynamic Content Rendering**: Component-based content rendering system\n- **SEO Content**: Location and service-specific content generation\n\n### 5. Analytics & Tracking\n- **Google Tag Manager**: Comprehensive event tracking\n- **Traffic Source Attribution**: Session-based marketing attribution\n- **Scroll Tracking**: User engagement metrics\n- **Form Submission Tracking**: Lead generation analytics\n\n### 6. Mobile Optimization\n- **Responsive Design**: Tailwind CSS mobile-first approach\n- **Touch-Friendly UI**: Optimized for mobile interactions\n- **Performance**: Fast load times on mobile networks\n- **Progressive Enhancement**: Works across all device types\n\n***\n\n## SEO Strategy\n\n### Technical SEO\n- **Server-Side Rendering**: All pages rendered on server for better crawlability\n- **Dynamic Meta Tags**: Unique titles and descriptions for each page variant\n- **Canonical URLs**: Prevents duplicate content penalties\n- **Sitemap Generation**: Automated XML sitemap for search engines\n- **Semantic HTML**: Proper heading hierarchy and semantic markup\n\n### Content SEO\n- **Location-Specific Pages**: Thousands of unique pages for location-service combinations\n- **Service Landing Pages**: Dedicated pages for each service category\n- **Blog Content**: SEO-optimized guides and advice content\n- **Internal Linking**: Strategic internal link structure\n\n### Performance SEO\n- **Core Web Vitals**: Optimized for Google's Core Web Vitals metrics\n- **Image Optimization**: WebP format, lazy loading, responsive images\n- **Code Splitting**: Reduced bundle sizes for faster loads\n- **CDN Ready**: Static asset optimization for CDN delivery\n\n***\n\n## Technology Stack Summary\n\n### Frontend\n- **Next.js 15.2.4** - React framework with SSR/SSG\n- **React 19.1.0** - UI library\n- **Tailwind CSS 4.1.4** - Utility-first CSS\n- **Sass 1.86.3** - CSS preprocessor\n\n### Backend/API\n- **Next.js API Routes** - Serverless API endpoints\n- **Axios 1.9.0** - HTTP client\n- **Google Places API** - Location autocomplete and details\n\n### Build & Development\n- **ESLint 9.24.0** - Code linting\n- **Prettier 3.6.2** - Code formatting\n- **@next/bundle-analyzer** - Bundle size analysis\n- **next-sitemap 4.2.3** - Sitemap generation\n\n### Image Processing\n- **Sharp 0.34.4** - Image optimization\n- **Next.js Image** - Optimized image component\n\n***\n\n## Security Features\n\n- **Input Sanitization**: XSS prevention in all user inputs\n- **Form Validation**: Client and server-side validation\n- **Reserved Word Protection**: Prevents URL injection attacks\n- **HTTPS Enforcement**: Secure connections for all API calls\n- **CCPA Compliance**: \"Do Not Sell\" page and privacy controls\n- **Content Security Policy**: CSP headers for additional security\n\n***\n\n## Performance Metrics\n\n### Optimization Strategies\n- **Dynamic Imports**: Code splitting for reduced initial load\n- **Image Optimization**: WebP format, lazy loading, responsive images\n- **Bundle Analysis**: Regular monitoring of bundle sizes\n- **Static Generation**: Pre-rendered pages for instant loads\n- **CDN Ready**: Optimized for content delivery networks\n\n### Expected Performance\n- Fast First Contentful Paint (FCP)\n- Optimized Largest Contentful Paint (LCP)\n- Minimal Cumulative Layout Shift (CLS)\n- Efficient Time to Interactive (TTI)\n\n***\n\n## Future Enhancement Opportunities\n\n1. **User Accounts**: Registration and saved searches\n2. **Reviews & Ratings**: User-generated content for service providers\n3. **Real-Time Chat**: In-app messaging between users and providers\n4. **Payment Integration**: Direct payment processing for services\n5. **Mobile App**: Native iOS/Android applications\n6. **Provider Dashboard**: Self-service portal for service providers\n7. **Advanced Analytics**: Enhanced reporting and insights\n8. **Multi-Language Support**: Internationalization capabilities\n\n***\n\n## Compliance & Legal\n\n- **Privacy Policy**: Comprehensive privacy policy page\n- **Terms of Service**: Legal terms and conditions\n- **CCPA Compliance**: California Consumer Privacy Act compliance\n- **Do Not Sell**: Opt-out mechanism for data sales\n- **Cookie Consent**: User consent mechanisms (if implemented)\n\n***\n\n## Contact & Support\n\nFor technical questions, feature requests, or business inquiries, refer to the project's contact form at `/contact` or the about page at `/about`.\n\n***\n\n## Document Metadata\n\n**Last Updated**: 2025  \n**Project Version**: 1.0.0  \n**Framework**: Next.js 15.2.4  \n**Primary Language**: JavaScript (React)  \n**Maintainer**: Stack Seekers\n"
+  details: "## Engineering Architecture: Geo-Distributed Lead Acquisition Engine\n\nLocalXR is an enterprise-grade **Programmatic SEO (pSEO) platform** designed for high-scale geographic lead generation. It leverages a sophisticated dynamic routing system and location-aware orchestration to deliver hyper-relevant landing pages for over 20+ service categories across thousands of US cities.\n\n### 1. The Growth Engine (Layman's Perspective)\nThink of LocalXR as a **GPS-Guided Digital Directory**. \n\nInstead of a single \"Plumbing\" page that tries to serve everyone, LocalXR creates a custom \"Front Door\" for every specific neighborhood in America. If you are in Austin searching for a plumber, the system detects your location and instantly \"builds\" a page that features local Austin plumbers, specific Austin service numbers, and content tailored to your city. It's like having a local expert standing on every street corner, ready to help the moment someone asks.\n\n### 2. Technical Architecture & Geographic Orchestration\nThe platform utilizes Next.js 15 and React 19 to manage a massive hierarchical URL structure while maintaining sub-second page loads.\n\n```mermaid\ngraph TD\n    subgraph \"Ingestion Layer\"\n        Search[User Search / ZIP] --> GeoDB[Google Places / GeoJSON]\n        GeoDB --> Normalizer[State & City Normalizer]\n    end\n\n    subgraph \"Path Synthesis Engine\"\n        Normalizer --> Router[Recursive Dynamic Router]\n        ServiceDB[20+ Service Categories] --> Router\n        SEOModel[Dynamic Meta & Schema] --> Router\n    end\n\n    subgraph \"Location-Aware UI\"\n        Router --> Page[Hyper-Local Landing Page]\n        Page --> PhoneCtx[Dynamic Phone Number Injection]\n        Page --> FormCtx[Context-Aware Lead Form]\n    end\n\n    subgraph \"Conversion & Analytics\"\n        PhoneCtx --> CallTrack[Call Attribution]\n        FormCtx --> LeadStore[Lead Centralization]\n        LeadStore --> GTM[Google Tag Manager Tracking]\n    end\n```\n\n### 3. Key Engineering Pillars\n\n#### A. Recursive Path Synthesis & Normalization\nManaging thousands of location combinations (`/locations/[service]/[state]/[city]`) requires a robust path-handling layer.\n- **Semantic Normalization:** We implemented an automated layer that converts state codes (OH) to full names (Ohio) and handles complex URL slugs with whitelist-based validation, ensuring 100% crawlable, SEO-friendly paths.\n- **Reserved Word Protection:** A sophisticated validation layer prevents URL injection and ensures that system paths (like `/about` or `/contact`) are never overwritten by generated location slugs.\n\n#### B. Context-Driven Lead Routing\nThe platform's profitability depends on connecting the right user to the right service provider.\n- **Dynamic Phone Injection:** Using a `PhoneNumberContext`, the system injects unique tracking numbers based on the specific service category and geographic region, allowing for precise marketing attribution.\n- **Location Context:** A centralized React Context manages the user's geographic state across the entire session, ensuring that once a user selects a city, the entire platform (from header to footer) stays synchronized with that location.\n\n#### C. Performance-Optimized pSEO\nLarge-scale programmatic sites often suffer from \"Crawl Budget\" and performance issues. We solved this via:\n- **SSG with Dynamic Hydration:** Core content is pre-rendered for SEO, while interactive elements (like the local phone numbers and provider listings) are hydrated dynamically to ensure content is always fresh.\n- **Sharp-Powered Image Pipeline:** Every service category image is automatically optimized and converted to WebP format at build time, reducing page weight by up to 60%.\n\n### 4. Strategic Business Value (ROI)\n- **Zero-Cost Acquisition:** By ranking for long-tail \"Service + City\" keywords, the platform generates high-intent leads without the high cost of Google Ads.\n- **Rapid Market Expansion:** New service categories or states can be \"launched\" simply by updating the JSON configuration, allowing the business to test new markets in hours.\n- **High-Trust Conversion:** Hyper-local content (mentioning specific cities and states) significantly increases user trust and lead-form completion rates compared to generic national sites.\n\nLocalXR demonstrates how **Advanced Geographic Orchestration** can turn a simple directory into a powerful, automated revenue machine.\n"
   previousProject: {"name":"AI Dynamic CRUD App","link":"/web-development-projects/ai-dynamic-crud-app/"}
   nextProject: {"name":"Contact Form Plugin","link":"/web-development-projects/contact-form-plugin/"}
 ---
@@ -92,13 +93,49 @@ project:
           </div>
        </div>
     </div>
-    <div v-for="(img, idx) in $frontmatter.project.images.slice(3)" :key="idx" class="col-12 md:col-6 lg:col-4 p-2">
+    <div v-for="(img, idx) in $frontmatter.project.images.slice(3, 5)" :key="idx" class="col-12 md:col-6 lg:col-4 p-2">
        <div class="border-round-3xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 h-full surface-card">
           <Image :src="img.itemImageSrc" :alt="img.alt" preview class="w-full h-full" imageClass="w-full h-full object-cover block min-h-15rem" />
        </div>
     </div>
+    <div v-if="$frontmatter.project.images.length >= 6" class="col-12 md:col-6 lg:col-4 p-2">
+       <div class="border-round-3xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 h-full surface-card relative" :class="{'cursor-pointer': $frontmatter.project.images.length > 6}" @click="$frontmatter.project.images.length > 6 ? displayModal = true : null">
+          <Image :src="$frontmatter.project.images[5].itemImageSrc" :alt="$frontmatter.project.images[5].alt" :preview="$frontmatter.project.images.length === 6" class="w-full h-full" imageClass="w-full h-full object-cover block min-h-15rem" />
+          <div v-if="$frontmatter.project.images.length > 6" class="absolute top-0 left-0 w-full h-full flex align-items-center justify-content-center bg-black-alpha-60 text-white hover:bg-black-alpha-40 transition-all transition-duration-300">
+             <div class="text-center">
+                <i class="pi pi-images text-4xl mb-2"></i>
+                <div class="text-xl font-bold uppercase tracking-widest">+{{ $frontmatter.project.images.length - 5 }} More</div>
+                <div class="text-xs opacity-70 mt-1">View All Media</div>
+             </div>
+          </div>
+       </div>
+    </div>
   </div>
 </section>
+
+<section v-if="$frontmatter.project.video" class="mb-8 overflow-hidden border-round-3xl shadow-4 surface-card border-1 border-100">
+  <div class="relative w-full overflow-hidden" style="padding-top: 56.25%;">
+     <iframe 
+       class="absolute top-0 left-0 w-full h-full border-none" 
+       :src="'https://www.youtube.com/embed/' + ($frontmatter.project.video.includes('v=') ? $frontmatter.project.video.split('v=')[1]?.split('&')[0] : $frontmatter.project.video.split('/').pop())" 
+       title="Project Video Showcase" 
+       frameborder="0" 
+       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+       referrerpolicy="strict-origin-when-cross-origin" 
+       allowfullscreen>
+     </iframe>
+  </div>
+</section>
+
+<Dialog v-model:visible="displayModal" modal header="Project Media Showcase" :style="{ width: '90vw', maxWidth: '1200px' }" class="p-0 overflow-hidden border-round-3xl" :breakpoints="{'960px': '95vw'}">
+  <div class="grid p-3 surface-ground">
+    <div v-for="(img, idx) in $frontmatter.project.images" :key="idx" class="col-12 md:col-6 lg:col-4 p-2">
+       <div class="border-round-2xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 surface-card h-full">
+          <Image :src="img.itemImageSrc" :alt="img.alt" preview class="w-full h-full" imageClass="w-full h-full object-cover block min-h-15rem" />
+       </div>
+    </div>
+  </div>
+</Dialog>
 
 <div class="grid mb-8">
   <div class="col-12">
@@ -142,7 +179,7 @@ project:
             <span>Engineering Architecture</span>
           </div>
         </template>
-        <div class="p-4 md:p-6 surface-card border-round-3xl shadow-1 mt-4">
+        <div class="p-2 md:p-4 surface-card border-round-3xl shadow-1 mt-4">
           <div class="flex align-items-center gap-2 text-primary font-bold mb-4 uppercase tracking-wider text-sm">
             <i class="pi pi-code"></i>
             Technical Deep-Dive
@@ -150,294 +187,69 @@ project:
           <div class="text-xl line-height-4 text-700 mb-6">
             {{ $frontmatter.project.perspective.technical }}
           </div>
-          <div class="project-markdown-content text-lg line-height-4">
-
-
-## Executive Summary
-
-**LocalXR** is a modern, SEO-optimized web platform that connects homeowners and property managers with verified local service providers across multiple home service categories. Built with Next.js 15 and React 19, the platform serves as a lead generation and matching service for home repair, maintenance, and improvement professionals.
-
-### Why This Matters for Buyers
-
-This is one of the clearest examples in the portfolio of a system built to turn organic traffic into revenue. It combines programmatic SEO, location-aware routing, and lead-capture logic into a platform designed for long-tail acquisition at scale.
-
-## Business Problem
-
-Local-service businesses need visibility across thousands of service and geography combinations, but manual landing-page creation does not scale. At the same time, they still need a conversion path that turns search visits into qualified leads.
-
-## What I Built
-
-- A Next.js lead-generation platform with location-aware routing
-- Dynamic listing architecture for thousands of location-service combinations
-- SEO infrastructure around metadata, canonicals, and sitemap generation
-- Forms and tracking workflows designed to convert traffic into provider leads
-
-## Best Fit If You Need Something Similar
-
-This case study strongly supports [Programmatic Growth Engines](/web-development-services/programmatic-seo-and-growth/) and [Product Architecture & Scale](/web-development-services/product-architecture-and-scaling/). It is a best-fit example for directories, service marketplaces, and search-led lead engines.
-
-### Core Business Model
-
-LocalXR operates as a **free matching service** that facilitates connections between homeowners seeking services and independent local professionals. The platform generates revenue through lead generation, where service providers pay for qualified leads and phone connections. Homeowners can either call listed professionals directly or contact LocalXR agents for immediate assistance.
-
-***
-
-## Business Value & Benefits
-
-### For Homeowners
-- **Quick Access**: Find verified local service providers within minutes
-- **Trust & Verification**: Connect with vetted, professional service providers
-- **24/7 Availability**: Emergency services available around the clock
-- **Multiple Service Categories**: Single platform for all home service needs
-- **No Cost to Users**: Free matching service with no hidden fees
-- **Location-Aware**: Personalized results based on geographic location
-
-### For Service Providers
-- **Lead Generation**: Access to qualified, location-specific leads
-- **Direct Connections**: Phone-based lead capture for immediate contact
-- **Geographic Targeting**: Reach customers in specific states and cities
-- **Service-Specific Listings**: Targeted visibility for specialized services
-
-### For Business Stakeholders
-- **Scalable Revenue Model**: Lead-based monetization with high conversion potential
-- **SEO-Optimized**: Dynamic page generation for thousands of location-service combinations
-- **Performance-First**: Fast page loads and mobile optimization for better user experience
-- **Analytics Integration**: Comprehensive tracking via Google Tag Manager for data-driven decisions
-- **Compliance Ready**: CCPA compliance features (Do Not Sell page) and secure form handling
-
-***
-
-## Technical Architecture
-
-### Framework & Core Technologies
-
-- **Next.js 15.2.4**: Server-side rendering (SSR), static site generation (SSG), and dynamic routing
-- **React 19.1.0**: Modern React with hooks and context API for state management
-- **Tailwind CSS 4.1.4**: Utility-first CSS framework for responsive, mobile-first design
-- **Sass/SCSS**: Component-level styling with modular CSS architecture
-- **Sharp 0.34.4**: Image optimization and WebP conversion for performance
-
-### Key Technical Features
-
-#### 1. Dynamic Routing System
-- **Location-Based URLs**: `/locations/[service]/[state]/[city]` structure
-- **State Normalization**: Automatic conversion of state codes (e.g., "OH" → "Ohio") to full names
-- **Slug Validation**: Whitelist-based validation prevents invalid URLs
-- **Smart Redirects**: Handles ZIP code suffixes, state code variations, and reserved words
-
-#### 2. Context-Driven State Management
-- **LocationContext**: Manages user location, address, and geographic data
-- **PhoneNumberContext**: Dynamic phone number assignment based on location/service
-- **SlugContext**: Tracks current page slug for analytics and personalization
-
-#### 3. SEO Optimization
-- **Dynamic Meta Tags**: Page-specific titles, descriptions, and Open Graph tags
-- **Canonical URLs**: Prevents duplicate content issues
-- **Sitemap Generation**: Automated sitemap creation via `next-sitemap`
-- **Structured Data Ready**: Semantic HTML and meta tag structure
-
-#### 4. Performance Optimizations
-- **Dynamic Imports**: Code splitting for reduced initial bundle size
-- **Image Optimization**: Next.js Image component with WebP format and lazy loading
-- **Bundle Analysis**: Built-in bundle analyzer for performance monitoring
-- **Scroll Restoration**: Maintains scroll position on navigation
-
-#### 5. Lead Generation System
-- **Callback Forms**: Secure form submission with validation and sanitization
-- **Contact Forms**: Multi-purpose contact forms with consent mechanisms
-- **API Integration**: RESTful API endpoints for form submissions and data retrieval
-- **Traffic Source Tracking**: Session-based tracking for marketing attribution
-
-***
-
-## Service Categories
-
-The platform supports **20+ home service categories** organized into logical groups:
-
-### Core Home Systems & Emergency
-- Plumbing
-- HVAC (Heating, Ventilation, Air Conditioning)
-- Electrical
-- Handyman Services
-- Appliance Repair
-- Damage Restoration
-- Garage Door Repair & Installation
-
-### Flooring & Interior Finishing
-- Tiling
-- Hardwood Flooring
-- Carpet Installation
-- Laminate & Vinyl Flooring
-- Drywall & Painting
-
-### Exterior, Roofing & Siding
-- Roofing
-- Siding
-- Windows & Doors
-- Gutter Cleaning
-
-### Outdoors, Yard & Fencing
-- Landscaping
-- Deck & Patio
-- Fencing
-
-### Pest Control & Exterminators
-- Pest Control
-
-***
-
-## Key Features & Functionality
-
-### 1. Location-Aware Search
-- **Google Places Integration**: Autocomplete address search with place details API
-- **ZIP Code Search**: Quick location lookup by ZIP code
-- **State/City Navigation**: Hierarchical location-based routing
-- **Smart Normalization**: Converts state codes to full names, handles variations
-
-### 2. Service Provider Listings
-- **Dynamic Listings**: Generated listings based on location and service type
-- **Listing Cards**: Display provider information, ratings, and contact details
-- **Pagination**: Efficient handling of large listing sets
-- **Category Filtering**: Filter listings by service category
-
-### 3. Lead Capture Forms
-- **Callback Request Form**: Primary lead generation form with validation
-- **Contact Form**: General inquiry form with consent mechanisms
-- **Form Security**: Input sanitization, XSS prevention, validation
-- **Confirmation Popups**: User consent and confirmation dialogs
-
-### 4. Content Management
-- **JSON-Based Content**: Service descriptions and content stored in JSON files
-- **Blog System**: Guides and advice section with filtering
-- **Dynamic Content Rendering**: Component-based content rendering system
-- **SEO Content**: Location and service-specific content generation
-
-### 5. Analytics & Tracking
-- **Google Tag Manager**: Comprehensive event tracking
-- **Traffic Source Attribution**: Session-based marketing attribution
-- **Scroll Tracking**: User engagement metrics
-- **Form Submission Tracking**: Lead generation analytics
-
-### 6. Mobile Optimization
-- **Responsive Design**: Tailwind CSS mobile-first approach
-- **Touch-Friendly UI**: Optimized for mobile interactions
-- **Performance**: Fast load times on mobile networks
-- **Progressive Enhancement**: Works across all device types
-
-***
-
-## SEO Strategy
-
-### Technical SEO
-- **Server-Side Rendering**: All pages rendered on server for better crawlability
-- **Dynamic Meta Tags**: Unique titles and descriptions for each page variant
-- **Canonical URLs**: Prevents duplicate content penalties
-- **Sitemap Generation**: Automated XML sitemap for search engines
-- **Semantic HTML**: Proper heading hierarchy and semantic markup
-
-### Content SEO
-- **Location-Specific Pages**: Thousands of unique pages for location-service combinations
-- **Service Landing Pages**: Dedicated pages for each service category
-- **Blog Content**: SEO-optimized guides and advice content
-- **Internal Linking**: Strategic internal link structure
-
-### Performance SEO
-- **Core Web Vitals**: Optimized for Google's Core Web Vitals metrics
-- **Image Optimization**: WebP format, lazy loading, responsive images
-- **Code Splitting**: Reduced bundle sizes for faster loads
-- **CDN Ready**: Static asset optimization for CDN delivery
-
-***
-
-## Technology Stack Summary
-
-### Frontend
-- **Next.js 15.2.4** - React framework with SSR/SSG
-- **React 19.1.0** - UI library
-- **Tailwind CSS 4.1.4** - Utility-first CSS
-- **Sass 1.86.3** - CSS preprocessor
-
-### Backend/API
-- **Next.js API Routes** - Serverless API endpoints
-- **Axios 1.9.0** - HTTP client
-- **Google Places API** - Location autocomplete and details
-
-### Build & Development
-- **ESLint 9.24.0** - Code linting
-- **Prettier 3.6.2** - Code formatting
-- **@next/bundle-analyzer** - Bundle size analysis
-- **next-sitemap 4.2.3** - Sitemap generation
-
-### Image Processing
-- **Sharp 0.34.4** - Image optimization
-- **Next.js Image** - Optimized image component
-
-***
-
-## Security Features
-
-- **Input Sanitization**: XSS prevention in all user inputs
-- **Form Validation**: Client and server-side validation
-- **Reserved Word Protection**: Prevents URL injection attacks
-- **HTTPS Enforcement**: Secure connections for all API calls
-- **CCPA Compliance**: "Do Not Sell" page and privacy controls
-- **Content Security Policy**: CSP headers for additional security
-
-***
-
-## Performance Metrics
-
-### Optimization Strategies
-- **Dynamic Imports**: Code splitting for reduced initial load
-- **Image Optimization**: WebP format, lazy loading, responsive images
-- **Bundle Analysis**: Regular monitoring of bundle sizes
-- **Static Generation**: Pre-rendered pages for instant loads
-- **CDN Ready**: Optimized for content delivery networks
-
-### Expected Performance
-- Fast First Contentful Paint (FCP)
-- Optimized Largest Contentful Paint (LCP)
-- Minimal Cumulative Layout Shift (CLS)
-- Efficient Time to Interactive (TTI)
-
-***
-
-## Future Enhancement Opportunities
-
-1. **User Accounts**: Registration and saved searches
-2. **Reviews & Ratings**: User-generated content for service providers
-3. **Real-Time Chat**: In-app messaging between users and providers
-4. **Payment Integration**: Direct payment processing for services
-5. **Mobile App**: Native iOS/Android applications
-6. **Provider Dashboard**: Self-service portal for service providers
-7. **Advanced Analytics**: Enhanced reporting and insights
-8. **Multi-Language Support**: Internationalization capabilities
-
-***
-
-## Compliance & Legal
-
-- **Privacy Policy**: Comprehensive privacy policy page
-- **Terms of Service**: Legal terms and conditions
-- **CCPA Compliance**: California Consumer Privacy Act compliance
-- **Do Not Sell**: Opt-out mechanism for data sales
-- **Cookie Consent**: User consent mechanisms (if implemented)
-
-***
-
-## Contact & Support
-
-For technical questions, feature requests, or business inquiries, refer to the project's contact form at `/contact` or the about page at `/about`.
-
-***
-
-## Document Metadata
-
-**Last Updated**: 2025  
-**Project Version**: 1.0.0  
-**Framework**: Next.js 15.2.4  
-**Primary Language**: JavaScript (React)  
-**Maintainer**: Stack Seekers
+          <div v-pre class="project-markdown-content text-lg line-height-4">
+
+## Engineering Architecture: Geo-Distributed Lead Acquisition Engine
+
+LocalXR is an enterprise-grade **Programmatic SEO (pSEO) platform** designed for high-scale geographic lead generation. It leverages a sophisticated dynamic routing system and location-aware orchestration to deliver hyper-relevant landing pages for over 20+ service categories across thousands of US cities.
+
+### 1. The Growth Engine (Layman's Perspective)
+Think of LocalXR as a **GPS-Guided Digital Directory**. 
+
+Instead of a single "Plumbing" page that tries to serve everyone, LocalXR creates a custom "Front Door" for every specific neighborhood in America. If you are in Austin searching for a plumber, the system detects your location and instantly "builds" a page that features local Austin plumbers, specific Austin service numbers, and content tailored to your city. It's like having a local expert standing on every street corner, ready to help the moment someone asks.
+
+### 2. Technical Architecture & Geographic Orchestration
+The platform utilizes Next.js 15 and React 19 to manage a massive hierarchical URL structure while maintaining sub-second page loads.
+
+```mermaid
+graph TD
+    subgraph "Ingestion Layer"
+        Search[User Search / ZIP] --> GeoDB[Google Places / GeoJSON]
+        GeoDB --> Normalizer[State & City Normalizer]
+    end
+
+    subgraph "Path Synthesis Engine"
+        Normalizer --> Router[Recursive Dynamic Router]
+        ServiceDB[20+ Service Categories] --> Router
+        SEOModel[Dynamic Meta & Schema] --> Router
+    end
+
+    subgraph "Location-Aware UI"
+        Router --> Page[Hyper-Local Landing Page]
+        Page --> PhoneCtx[Dynamic Phone Number Injection]
+        Page --> FormCtx[Context-Aware Lead Form]
+    end
+
+    subgraph "Conversion & Analytics"
+        PhoneCtx --> CallTrack[Call Attribution]
+        FormCtx --> LeadStore[Lead Centralization]
+        LeadStore --> GTM[Google Tag Manager Tracking]
+    end
+```
+
+### 3. Key Engineering Pillars
+
+#### A. Recursive Path Synthesis & Normalization
+Managing thousands of location combinations (`/locations/[service]/[state]/[city]`) requires a robust path-handling layer.
+- **Semantic Normalization:** We implemented an automated layer that converts state codes (OH) to full names (Ohio) and handles complex URL slugs with whitelist-based validation, ensuring 100% crawlable, SEO-friendly paths.
+- **Reserved Word Protection:** A sophisticated validation layer prevents URL injection and ensures that system paths (like `/about` or `/contact`) are never overwritten by generated location slugs.
+
+#### B. Context-Driven Lead Routing
+The platform's profitability depends on connecting the right user to the right service provider.
+- **Dynamic Phone Injection:** Using a `PhoneNumberContext`, the system injects unique tracking numbers based on the specific service category and geographic region, allowing for precise marketing attribution.
+- **Location Context:** A centralized React Context manages the user's geographic state across the entire session, ensuring that once a user selects a city, the entire platform (from header to footer) stays synchronized with that location.
+
+#### C. Performance-Optimized pSEO
+Large-scale programmatic sites often suffer from "Crawl Budget" and performance issues. We solved this via:
+- **SSG with Dynamic Hydration:** Core content is pre-rendered for SEO, while interactive elements (like the local phone numbers and provider listings) are hydrated dynamically to ensure content is always fresh.
+- **Sharp-Powered Image Pipeline:** Every service category image is automatically optimized and converted to WebP format at build time, reducing page weight by up to 60%.
+
+### 4. Strategic Business Value (ROI)
+- **Zero-Cost Acquisition:** By ranking for long-tail "Service + City" keywords, the platform generates high-intent leads without the high cost of Google Ads.
+- **Rapid Market Expansion:** New service categories or states can be "launched" simply by updating the JSON configuration, allowing the business to test new markets in hours.
+- **High-Trust Conversion:** Hyper-local content (mentioning specific cities and states) significantly increases user trust and lead-form completion rates compared to generic national sites.
+
+LocalXR demonstrates how **Advanced Geographic Orchestration** can turn a simple directory into a powerful, automated revenue machine.
 
 
 </div>
@@ -518,5 +330,7 @@ For technical questions, feature requests, or business inquiries, refer to the p
 </div>
 
 <script setup>
+import { ref } from "vue"
 import { responsiveOptions } from "@data/responsive.js"
+const displayModal = ref(false)
 </script>

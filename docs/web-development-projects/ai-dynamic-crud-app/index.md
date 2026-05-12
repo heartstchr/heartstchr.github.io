@@ -21,9 +21,10 @@ project:
   contact: "mailto:jiwan.cse@gmail.com?subject=AI Dynamic CRUD App Inquiry"
   stack: ["javascript","vuedotjs","notion/black/white","html5","css","json/black/white"]
   images: [{"itemImageSrc":"/img/projects/ai-dynamic-crud-app/ai-webapp-english.webp","alt":"AI Dynamic CRUD App - Create with Gemini"},{"itemImageSrc":"/img/projects/ai-dynamic-crud-app/ai-webapp-hindi.webp","alt":"AI Dynamic CRUD App - Hindi Translation"},{"itemImageSrc":"/img/projects/ai-dynamic-crud-app/ai-webapp-japanese.webp","alt":"AI Dynamic CRUD App - Japanese Translation"},{"itemImageSrc":"/img/projects/ai-dynamic-crud-app/ai-webapp-schema-review.webp","alt":"AI Database Schema Review"},{"itemImageSrc":"/img/projects/ai-dynamic-crud-app/ai-webapp-crud-ui.webp","alt":"AI Generated Dashboard Interface"}]
+  video: ""
   features: [{"text":"AI Schema Detection: Automatically detects and adapts to your Notion database structure."},{"text":"Dynamic Form Generation: Creates perfect forms based on field types."},{"text":"Professional Interface: Clean, modern design with card and table views."}]
   perspective: {"executive":"A game-changer for businesses using Notion as a backend. It eliminates the need for expensive custom development by automatically generating a professional web interface directly from your data. Ideal for internal tools, client portals, and rapid prototyping with zero friction.","technical":"Features a dynamic schema-driven UI engine. It parses Notion database properties in real-time to generate Vue components with appropriate validation and input types. Includes multi-language support through a custom i18n bridge and optimized API caching for smooth performance."}
-  details: "# AI Dynamic CRUD App - Powered by Gemini & Notion\n\nTurn your text prompts into a professional database-driven web application in less than a minute! This tool leverages **Google Gemini** and **Notion** to instantly generate customized, multi-source CRUD (Create, Read, Update, Delete) portals without writing a single line of code.\n\n## Executive Summary\n\nThis project demonstrates how AI can move beyond chat and directly generate usable business software. It turns natural-language instructions into structured database architecture and a working CRUD interface, making it a strong proof point for **AI automation**, **internal tools**, and **rapid product prototyping**.\n\n## Business Problem\n\nMost teams lose weeks mapping database schemas, planning forms, and building admin interfaces before they can even validate the workflow. That slows down internal tool delivery, client portal launches, and experiments around new operational systems.\n\n## What I Built\n\n- A prompt-driven app generator powered by Gemini and Notion\n- AI-assisted schema generation with a review step before database creation\n- Automatic UI generation for cards, tables, CRUD flows, and routing\n- Multi-language prompt support for broader usability and adoption\n\n## Why It Matters\n\nThe business value is speed. Instead of starting every system from scratch, this approach compresses discovery, schema design, and interface generation into a much faster workflow. It is especially relevant for founders or ops teams that need custom internal software without absorbing a full traditional build cycle.\n\n## Best Fit If You Need Something Similar\n\nThis case study supports [ROI-Driven AI Automation](/web-development-services/ai-and-automation-strategy/) and [Product Architecture & Scale](/web-development-services/product-architecture-and-scaling/). It is a strong fit if you want AI-powered internal tools, generated admin panels, or workflow automation tied to structured business data.\n\n## 🚀 What This Does\n\nThe AI Dynamic CRUD App is a revolutionary boilerplate generator. Instead of manually mapping schemas and creating database structures:\n\n1. **Describe what you want** (in English, Hindi, or Japanese).\n2. **Review the AI-generated database schema** perfectly structured for your needs.\n3. **Instantly deploy** a fully functional web interface connected to a Notion backend.\n\nPerfect for rapidly bootstrapping internal tools, client portals, inventory systems, or e-commerce backends!\n\n## 🌟 Key Features\n\n### 1. Natural Language to Full-Stack App\nSimply describe the system you need (e.g., \"I need a customer management system\") or use **Template Mode** to select from pre-configured systems like:\n- Event System\n- Inventory System\n- Learning System\n- Wellness System\n- E-Com System\n- Project Management System\n\n### 2. Multi-Language Support\nThe AI interface fully supports localization. Whether you prompt in English, Hindi (*Gemini के साथ बनाएं*), or Japanese (*作成する Gemini*), the LLM dynamically understands the context and generates the correct database architecture.\n\n### 3. Review & Edit Database Structure\nBefore any database is committed to Notion, the app provides a **Review Custom Modal**. \n- View the proposed System Title and Description.\n- Add or modify Data Sources (e.g., linking multiple tables like \"Products\", \"Orders\", and \"Customers\" for an E-Commerce system).\n- Perfect your schema before creating it.\n\n### 4. Dynamic UI Generation\nOnce created, the app automatically generates a responsive user interface:\n- **Automatic routing:** Sidebar navigation is instantly created corresponding to your data tables (e.g., *Content Management System - Articles*, *Categories*, *Authors*).\n- **Responsive Views:** Easily toggle between \"Card\" and \"Table\" views depending on how you want to interact with your data.\n- **Full CRUD operations:** Add, edit, or delete items natively from the generated Vue.js interface perfectly syncing back to Notion in real-time.\n\n***\n\n## 🛠️ How to Deploy Your Own Generated App\n\nBecause the AI does the heavy lifting, deployment takes minutes.\n\n### Step 1: Generate Your Schema\n1. Connect your Notion workspace to the AI App.\n2. Enter your prompt or select a template.\n3. Let Gemini generate and configure the tables inside your Notion workspace perfectly.\n\n### Step 2: Configure Your Next.js/Vue App\nTake the deployed Notion Database ID and integrate it into your Netlify environment variables:\n- `NOTION_API_KEY`: Your secure integration secret.\n- `NOTION_DATABASE_ID`: The root ID of the system generated by the AI.\n\n### Step 3: Launch\nOnce you add the environment variables, your frontend application immediately transforms. The dynamic forms, tables, and file uploads are handled entirely by analyzing the Notion schema. If you add a new column in Notion, your web app updates with a new form field instantly.\n\n## 💰 The Benefit\n\n- **Save Hundreds of Hours:** Skip the UX/UI design phase, database architecture planning, and backend API routing.\n- **Zero Cost Infrastructure:** Built to be hosted entirely free on Netlify and Notion.\n- **Easily Extensible:** Since the data lives in Notion, non-technical team members can easily interact with the raw data if they don't want to use the web portal.\n\n> **💡 Technical Note:** This platform uses strict Prompt Engineering bounds to ensure Gemini only outputs valid, heavily structured JSON schemas that perfectly map to Notion's Database API constraints.\n"
+  details: "## Engineering Architecture: AI-Driven Software Synthesis\n\nThe AI Dynamic CRUD App is an advanced implementation of **Generative Software Engineering**. It moves beyond standard \"Chat-based AI\" to a system that synthesizes functional software architectures, database schemas, and user interfaces directly from natural language specifications.\n\n### 1. The Generative Pipeline (Layman's Perspective)\nThink of this system as a **Digital Architect**. Instead of hiring a team to spend weeks drawing blueprints (Database Schemas) and building the house (User Interface), you simply describe what you need. \n\nThe \"Architect\" (Gemini AI) draws the technical blueprint in seconds, connects it to a \"Foundational Utility\" (Notion), and hands you the keys to a fully furnished, functional house (The Web App). If you want to add a room later, you just tell the AI, and the house expands instantly.\n\n### 2. Technical Architecture & Data Flow\nThe system utilizes a decoupled architecture where the LLM acts as a compiler, turning human intent into machine-readable schema definitions.\n\n```mermaid\ngraph TD\n    subgraph \"Input Layer\"\n        Prompt[Natural Language Prompt] --> Gemini[Gemini LLM Engine]\n        Template[Pre-configured Templates] --> Gemini\n    end\n\n    subgraph \"Schema Orchestration\"\n        Gemini --> JSON[Structured JSON Schema]\n        JSON --> Validator[Schema Validator]\n        Validator --> NotionAPI[Notion Database API]\n    end\n\n    subgraph \"Dynamic UI Engine\"\n        NotionAPI --> Metadata[Database Metadata]\n        Metadata --> UIOrchestrator[Runtime UI Orchestrator]\n        UIOrchestrator --> App[Generated Vue/Next.js Portal]\n    end\n\n    subgraph \"Capabilities\"\n        App --> CRUD[Full CRUD Operations]\n        App --> Logic[Dynamic Form Generation]\n        App --> Search[Real-time Global Search]\n    end\n```\n\n### 3. Key Engineering Pillars\n\n#### A. LLM-as-a-Compiler (Prompt Engineering)\nThe core of the system is a sophisticated prompt-chaining engine. We use strict output constraints to ensure Gemini produces 100% valid, typed JSON. This JSON isn't just data; it's a **Functional Specification** that includes:\n- Field Types (Text, Number, Date, Multi-select, Files)\n- Relationship Mapping (Notion Relations/Rollups)\n- Iconography & Categorization logic\n\n#### B. Dynamic UI Orchestration (Runtime Synthesis)\nUnlike traditional apps with hard-coded forms, this frontend is **completely reactive to the backend schema**. \n- **Introspection:** The app \"inspects\" the Notion database structure at runtime.\n- **Component Mapping:** If it detects a \"Date\" field in Notion, it instantly renders a Date-Picker in the UI. If it sees a \"Status\" field, it builds a specialized Kanban or Select dropdown.\n- **Zero-Code Updates:** Adding a column in the Notion database immediately updates the web portal without a single line of code or a new deployment.\n\n#### C. Multi-Language Intent Parsing\nBy leveraging LLM semantic understanding, the system supports multi-lingual intent. A prompt in Hindi or Japanese is parsed into the same structured JSON schema, ensuring global accessibility for non-technical users while maintaining strict data integrity.\n\n### 4. Strategic Business Value (ROI)\n- **Time-to-Market:** Reduces the \"Idea-to-Product\" cycle from weeks to minutes.\n- **Operational Agility:** Allows ops teams to build and modify their own internal tools without consuming core engineering resources.\n- **Zero-Maintenance Infrastructure:** By using Notion as the database and Netlify for the frontend, the system is virtually \"serverless\" and requires zero backend maintenance.\n\nThis project serves as a technical proof-of-concept for **Automated Internal Tooling**, demonstrating how AI can effectively manage the entire lifecycle of a standard business application.\n"
   previousProject: null
   nextProject: {"name":"Local Home Services Pros","link":"/web-development-projects/local-home-services-pros/"}
 ---
@@ -92,13 +93,49 @@ project:
           </div>
        </div>
     </div>
-    <div v-for="(img, idx) in $frontmatter.project.images.slice(3)" :key="idx" class="col-12 md:col-6 lg:col-4 p-2">
+    <div v-for="(img, idx) in $frontmatter.project.images.slice(3, 5)" :key="idx" class="col-12 md:col-6 lg:col-4 p-2">
        <div class="border-round-3xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 h-full surface-card">
           <Image :src="img.itemImageSrc" :alt="img.alt" preview class="w-full h-full" imageClass="w-full h-full object-cover block min-h-15rem" />
        </div>
     </div>
+    <div v-if="$frontmatter.project.images.length >= 6" class="col-12 md:col-6 lg:col-4 p-2">
+       <div class="border-round-3xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 h-full surface-card relative" :class="{'cursor-pointer': $frontmatter.project.images.length > 6}" @click="$frontmatter.project.images.length > 6 ? displayModal = true : null">
+          <Image :src="$frontmatter.project.images[5].itemImageSrc" :alt="$frontmatter.project.images[5].alt" :preview="$frontmatter.project.images.length === 6" class="w-full h-full" imageClass="w-full h-full object-cover block min-h-15rem" />
+          <div v-if="$frontmatter.project.images.length > 6" class="absolute top-0 left-0 w-full h-full flex align-items-center justify-content-center bg-black-alpha-60 text-white hover:bg-black-alpha-40 transition-all transition-duration-300">
+             <div class="text-center">
+                <i class="pi pi-images text-4xl mb-2"></i>
+                <div class="text-xl font-bold uppercase tracking-widest">+{{ $frontmatter.project.images.length - 5 }} More</div>
+                <div class="text-xs opacity-70 mt-1">View All Media</div>
+             </div>
+          </div>
+       </div>
+    </div>
   </div>
 </section>
+
+<section v-if="$frontmatter.project.video" class="mb-8 overflow-hidden border-round-3xl shadow-4 surface-card border-1 border-100">
+  <div class="relative w-full overflow-hidden" style="padding-top: 56.25%;">
+     <iframe 
+       class="absolute top-0 left-0 w-full h-full border-none" 
+       :src="'https://www.youtube.com/embed/' + ($frontmatter.project.video.includes('v=') ? $frontmatter.project.video.split('v=')[1]?.split('&')[0] : $frontmatter.project.video.split('/').pop())" 
+       title="Project Video Showcase" 
+       frameborder="0" 
+       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+       referrerpolicy="strict-origin-when-cross-origin" 
+       allowfullscreen>
+     </iframe>
+  </div>
+</section>
+
+<Dialog v-model:visible="displayModal" modal header="Project Media Showcase" :style="{ width: '90vw', maxWidth: '1200px' }" class="p-0 overflow-hidden border-round-3xl" :breakpoints="{'960px': '95vw'}">
+  <div class="grid p-3 surface-ground">
+    <div v-for="(img, idx) in $frontmatter.project.images" :key="idx" class="col-12 md:col-6 lg:col-4 p-2">
+       <div class="border-round-2xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 surface-card h-full">
+          <Image :src="img.itemImageSrc" :alt="img.alt" preview class="w-full h-full" imageClass="w-full h-full object-cover block min-h-15rem" />
+       </div>
+    </div>
+  </div>
+</Dialog>
 
 <div class="grid mb-8">
   <div class="col-12">
@@ -142,7 +179,7 @@ project:
             <span>Engineering Architecture</span>
           </div>
         </template>
-        <div class="p-4 md:p-6 surface-card border-round-3xl shadow-1 mt-4">
+        <div class="p-2 md:p-4 surface-card border-round-3xl shadow-1 mt-4">
           <div class="flex align-items-center gap-2 text-primary font-bold mb-4 uppercase tracking-wider text-sm">
             <i class="pi pi-code"></i>
             Technical Deep-Dive
@@ -150,97 +187,69 @@ project:
           <div class="text-xl line-height-4 text-700 mb-6">
             {{ $frontmatter.project.perspective.technical }}
           </div>
-          <div class="project-markdown-content text-lg line-height-4">
+          <div v-pre class="project-markdown-content text-lg line-height-4">
 
-# AI Dynamic CRUD App - Powered by Gemini & Notion
+## Engineering Architecture: AI-Driven Software Synthesis
 
-Turn your text prompts into a professional database-driven web application in less than a minute! This tool leverages **Google Gemini** and **Notion** to instantly generate customized, multi-source CRUD (Create, Read, Update, Delete) portals without writing a single line of code.
+The AI Dynamic CRUD App is an advanced implementation of **Generative Software Engineering**. It moves beyond standard "Chat-based AI" to a system that synthesizes functional software architectures, database schemas, and user interfaces directly from natural language specifications.
 
-## Executive Summary
+### 1. The Generative Pipeline (Layman's Perspective)
+Think of this system as a **Digital Architect**. Instead of hiring a team to spend weeks drawing blueprints (Database Schemas) and building the house (User Interface), you simply describe what you need. 
 
-This project demonstrates how AI can move beyond chat and directly generate usable business software. It turns natural-language instructions into structured database architecture and a working CRUD interface, making it a strong proof point for **AI automation**, **internal tools**, and **rapid product prototyping**.
+The "Architect" (Gemini AI) draws the technical blueprint in seconds, connects it to a "Foundational Utility" (Notion), and hands you the keys to a fully furnished, functional house (The Web App). If you want to add a room later, you just tell the AI, and the house expands instantly.
 
-## Business Problem
+### 2. Technical Architecture & Data Flow
+The system utilizes a decoupled architecture where the LLM acts as a compiler, turning human intent into machine-readable schema definitions.
 
-Most teams lose weeks mapping database schemas, planning forms, and building admin interfaces before they can even validate the workflow. That slows down internal tool delivery, client portal launches, and experiments around new operational systems.
+```mermaid
+graph TD
+    subgraph "Input Layer"
+        Prompt[Natural Language Prompt] --> Gemini[Gemini LLM Engine]
+        Template[Pre-configured Templates] --> Gemini
+    end
 
-## What I Built
+    subgraph "Schema Orchestration"
+        Gemini --> JSON[Structured JSON Schema]
+        JSON --> Validator[Schema Validator]
+        Validator --> NotionAPI[Notion Database API]
+    end
 
-- A prompt-driven app generator powered by Gemini and Notion
-- AI-assisted schema generation with a review step before database creation
-- Automatic UI generation for cards, tables, CRUD flows, and routing
-- Multi-language prompt support for broader usability and adoption
+    subgraph "Dynamic UI Engine"
+        NotionAPI --> Metadata[Database Metadata]
+        Metadata --> UIOrchestrator[Runtime UI Orchestrator]
+        UIOrchestrator --> App[Generated Vue/Next.js Portal]
+    end
 
-## Why It Matters
+    subgraph "Capabilities"
+        App --> CRUD[Full CRUD Operations]
+        App --> Logic[Dynamic Form Generation]
+        App --> Search[Real-time Global Search]
+    end
+```
 
-The business value is speed. Instead of starting every system from scratch, this approach compresses discovery, schema design, and interface generation into a much faster workflow. It is especially relevant for founders or ops teams that need custom internal software without absorbing a full traditional build cycle.
+### 3. Key Engineering Pillars
 
-## Best Fit If You Need Something Similar
+#### A. LLM-as-a-Compiler (Prompt Engineering)
+The core of the system is a sophisticated prompt-chaining engine. We use strict output constraints to ensure Gemini produces 100% valid, typed JSON. This JSON isn't just data; it's a **Functional Specification** that includes:
+- Field Types (Text, Number, Date, Multi-select, Files)
+- Relationship Mapping (Notion Relations/Rollups)
+- Iconography & Categorization logic
 
-This case study supports [ROI-Driven AI Automation](/web-development-services/ai-and-automation-strategy/) and [Product Architecture & Scale](/web-development-services/product-architecture-and-scaling/). It is a strong fit if you want AI-powered internal tools, generated admin panels, or workflow automation tied to structured business data.
+#### B. Dynamic UI Orchestration (Runtime Synthesis)
+Unlike traditional apps with hard-coded forms, this frontend is **completely reactive to the backend schema**. 
+- **Introspection:** The app "inspects" the Notion database structure at runtime.
+- **Component Mapping:** If it detects a "Date" field in Notion, it instantly renders a Date-Picker in the UI. If it sees a "Status" field, it builds a specialized Kanban or Select dropdown.
+- **Zero-Code Updates:** Adding a column in the Notion database immediately updates the web portal without a single line of code or a new deployment.
 
-## 🚀 What This Does
+#### C. Multi-Language Intent Parsing
+By leveraging LLM semantic understanding, the system supports multi-lingual intent. A prompt in Hindi or Japanese is parsed into the same structured JSON schema, ensuring global accessibility for non-technical users while maintaining strict data integrity.
 
-The AI Dynamic CRUD App is a revolutionary boilerplate generator. Instead of manually mapping schemas and creating database structures:
+### 4. Strategic Business Value (ROI)
+- **Time-to-Market:** Reduces the "Idea-to-Product" cycle from weeks to minutes.
+- **Operational Agility:** Allows ops teams to build and modify their own internal tools without consuming core engineering resources.
+- **Zero-Maintenance Infrastructure:** By using Notion as the database and Netlify for the frontend, the system is virtually "serverless" and requires zero backend maintenance.
 
-1. **Describe what you want** (in English, Hindi, or Japanese).
-2. **Review the AI-generated database schema** perfectly structured for your needs.
-3. **Instantly deploy** a fully functional web interface connected to a Notion backend.
-
-Perfect for rapidly bootstrapping internal tools, client portals, inventory systems, or e-commerce backends!
-
-## 🌟 Key Features
-
-### 1. Natural Language to Full-Stack App
-Simply describe the system you need (e.g., "I need a customer management system") or use **Template Mode** to select from pre-configured systems like:
-- Event System
-- Inventory System
-- Learning System
-- Wellness System
-- E-Com System
-- Project Management System
-
-### 2. Multi-Language Support
-The AI interface fully supports localization. Whether you prompt in English, Hindi (*Gemini के साथ बनाएं*), or Japanese (*作成する Gemini*), the LLM dynamically understands the context and generates the correct database architecture.
-
-### 3. Review & Edit Database Structure
-Before any database is committed to Notion, the app provides a **Review Custom Modal**. 
-- View the proposed System Title and Description.
-- Add or modify Data Sources (e.g., linking multiple tables like "Products", "Orders", and "Customers" for an E-Commerce system).
-- Perfect your schema before creating it.
-
-### 4. Dynamic UI Generation
-Once created, the app automatically generates a responsive user interface:
-- **Automatic routing:** Sidebar navigation is instantly created corresponding to your data tables (e.g., *Content Management System - Articles*, *Categories*, *Authors*).
-- **Responsive Views:** Easily toggle between "Card" and "Table" views depending on how you want to interact with your data.
-- **Full CRUD operations:** Add, edit, or delete items natively from the generated Vue.js interface perfectly syncing back to Notion in real-time.
-
-***
-
-## 🛠️ How to Deploy Your Own Generated App
-
-Because the AI does the heavy lifting, deployment takes minutes.
-
-### Step 1: Generate Your Schema
-1. Connect your Notion workspace to the AI App.
-2. Enter your prompt or select a template.
-3. Let Gemini generate and configure the tables inside your Notion workspace perfectly.
-
-### Step 2: Configure Your Next.js/Vue App
-Take the deployed Notion Database ID and integrate it into your Netlify environment variables:
-- `NOTION_API_KEY`: Your secure integration secret.
-- `NOTION_DATABASE_ID`: The root ID of the system generated by the AI.
-
-### Step 3: Launch
-Once you add the environment variables, your frontend application immediately transforms. The dynamic forms, tables, and file uploads are handled entirely by analyzing the Notion schema. If you add a new column in Notion, your web app updates with a new form field instantly.
-
-## 💰 The Benefit
-
-- **Save Hundreds of Hours:** Skip the UX/UI design phase, database architecture planning, and backend API routing.
-- **Zero Cost Infrastructure:** Built to be hosted entirely free on Netlify and Notion.
-- **Easily Extensible:** Since the data lives in Notion, non-technical team members can easily interact with the raw data if they don't want to use the web portal.
-
-> **💡 Technical Note:** This platform uses strict Prompt Engineering bounds to ensure Gemini only outputs valid, heavily structured JSON schemas that perfectly map to Notion's Database API constraints.
+This project serves as a technical proof-of-concept for **Automated Internal Tooling**, demonstrating how AI can effectively manage the entire lifecycle of a standard business application.
 
 
 </div>
@@ -321,5 +330,7 @@ Once you add the environment variables, your frontend application immediately tr
 </div>
 
 <script setup>
+import { ref } from "vue"
 import { responsiveOptions } from "@data/responsive.js"
+const displayModal = ref(false)
 </script>

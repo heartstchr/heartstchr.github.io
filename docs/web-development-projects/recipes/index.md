@@ -21,6 +21,7 @@ project:
   contact: 
   stack: ["Javascript","Vuedotjs","quasar/black/white","Vite","Axios","Express/black/white","MongoDB","Git","amazonec2","Eslint","Prettier"]
   images: [{"itemImageSrc":"/img/home/projects/Recipe.webp","alt":"Recipes - Login page"},{"itemImageSrc":"/img/projects/recipe/login.webp","alt":"Recipes - Login page"},{"itemImageSrc":"/img/projects/recipe/register.webp","alt":"Recipes - Registration page"},{"itemImageSrc":"/img/projects/recipe/home.webp","alt":"Recipes - Home page"},{"itemImageSrc":"/img/projects/recipe/direction.webp","alt":"Recipes - Directions page"},{"itemImageSrc":"/img/projects/recipe/ingredients.webp","alt":"Recipes - Ingredients page"},{"itemImageSrc":"/img/projects/recipe/addrecipe.webp","alt":"Recipes - Add Recipe page"},{"itemImageSrc":"/img/projects/recipe/search.webp","alt":"Recipes - Search page"},{"itemImageSrc":"/img/projects/recipe/share.webp","alt":"Recipes - Share screen"}]
+  video: ""
   features: [{"text":"Authentication with Incognigo pool"},{"text":"Create and Share recipes with friends"},{"text":"Search recipes"},{"text":"List and share your recipes direction or ingradients"},{"text":"Rate and review for recipe"}]
   perspective: {"executive":"","technical":""}
   details: ""
@@ -92,13 +93,49 @@ project:
           </div>
        </div>
     </div>
-    <div v-for="(img, idx) in $frontmatter.project.images.slice(3)" :key="idx" class="col-12 md:col-6 lg:col-4 p-2">
+    <div v-for="(img, idx) in $frontmatter.project.images.slice(3, 5)" :key="idx" class="col-12 md:col-6 lg:col-4 p-2">
        <div class="border-round-3xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 h-full surface-card">
           <Image :src="img.itemImageSrc" :alt="img.alt" preview class="w-full h-full" imageClass="w-full h-full object-cover block min-h-15rem" />
        </div>
     </div>
+    <div v-if="$frontmatter.project.images.length >= 6" class="col-12 md:col-6 lg:col-4 p-2">
+       <div class="border-round-3xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 h-full surface-card relative" :class="{'cursor-pointer': $frontmatter.project.images.length > 6}" @click="$frontmatter.project.images.length > 6 ? displayModal = true : null">
+          <Image :src="$frontmatter.project.images[5].itemImageSrc" :alt="$frontmatter.project.images[5].alt" :preview="$frontmatter.project.images.length === 6" class="w-full h-full" imageClass="w-full h-full object-cover block min-h-15rem" />
+          <div v-if="$frontmatter.project.images.length > 6" class="absolute top-0 left-0 w-full h-full flex align-items-center justify-content-center bg-black-alpha-60 text-white hover:bg-black-alpha-40 transition-all transition-duration-300">
+             <div class="text-center">
+                <i class="pi pi-images text-4xl mb-2"></i>
+                <div class="text-xl font-bold uppercase tracking-widest">+{{ $frontmatter.project.images.length - 5 }} More</div>
+                <div class="text-xs opacity-70 mt-1">View All Media</div>
+             </div>
+          </div>
+       </div>
+    </div>
   </div>
 </section>
+
+<section v-if="$frontmatter.project.video" class="mb-8 overflow-hidden border-round-3xl shadow-4 surface-card border-1 border-100">
+  <div class="relative w-full overflow-hidden" style="padding-top: 56.25%;">
+     <iframe 
+       class="absolute top-0 left-0 w-full h-full border-none" 
+       :src="'https://www.youtube.com/embed/' + ($frontmatter.project.video.includes('v=') ? $frontmatter.project.video.split('v=')[1]?.split('&')[0] : $frontmatter.project.video.split('/').pop())" 
+       title="Project Video Showcase" 
+       frameborder="0" 
+       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+       referrerpolicy="strict-origin-when-cross-origin" 
+       allowfullscreen>
+     </iframe>
+  </div>
+</section>
+
+<Dialog v-model:visible="displayModal" modal header="Project Media Showcase" :style="{ width: '90vw', maxWidth: '1200px' }" class="p-0 overflow-hidden border-round-3xl" :breakpoints="{'960px': '95vw'}">
+  <div class="grid p-3 surface-ground">
+    <div v-for="(img, idx) in $frontmatter.project.images" :key="idx" class="col-12 md:col-6 lg:col-4 p-2">
+       <div class="border-round-2xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 surface-card h-full">
+          <Image :src="img.itemImageSrc" :alt="img.alt" preview class="w-full h-full" imageClass="w-full h-full object-cover block min-h-15rem" />
+       </div>
+    </div>
+  </div>
+</Dialog>
 
 <div class="grid mb-8">
   <div class="col-12">
@@ -142,7 +179,7 @@ project:
             <span>Engineering Architecture</span>
           </div>
         </template>
-        <div class="p-4 md:p-6 surface-card border-round-3xl shadow-1 mt-4">
+        <div class="p-2 md:p-4 surface-card border-round-3xl shadow-1 mt-4">
           <div class="flex align-items-center gap-2 text-primary font-bold mb-4 uppercase tracking-wider text-sm">
             <i class="pi pi-code"></i>
             Technical Deep-Dive
@@ -150,7 +187,7 @@ project:
           <div class="text-xl line-height-4 text-700 mb-6">
             {{ $frontmatter.project.perspective.technical }}
           </div>
-          <div class="project-markdown-content text-lg line-height-4">
+          <div v-pre class="project-markdown-content text-lg line-height-4">
 
 
 
@@ -232,5 +269,7 @@ project:
 </div>
 
 <script setup>
+import { ref } from "vue"
 import { responsiveOptions } from "@data/responsive.js"
+const displayModal = ref(false)
 </script>

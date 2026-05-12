@@ -21,9 +21,10 @@ project:
   contact: "mailto:jiwan.cse@gmail.com?subject=Vibe3 Platform Inquiry"
   stack: ["nextdotjs/black/white","react","typescript","tailwindcss","pwa","nodedotjs","mongodb","github/black/white","solana","ton"]
   images: [{"itemImageSrc":"/img/projects/vibesquade/vibe3-platform-overview.webp","alt":"Vibe3 Modern React-Based User Interface"},{"itemImageSrc":"/img/projects/vibesquade/creator-dashboard.webp","alt":"Vibe3 Interactive Creator Dashboard with Real-time Analytics"},{"itemImageSrc":"/img/projects/vibesquade/campaign-management.webp","alt":"Vibe3 Campaign Management Interface with Drag-and-Drop Features"},{"itemImageSrc":"/img/projects/vibesquade/web3-payments.webp","alt":"Vibe3 Web3 Wallet Integration UI Components"},{"itemImageSrc":"/img/projects/vibesquade/ai-matching.webp","alt":"Vibe3 AI-Powered Creator Matching Interface"},{"itemImageSrc":"/img/projects/vibesquade/pwa-mobile.webp","alt":"Vibe3 PWA Mobile User Experience"},{"itemImageSrc":"/img/projects/vibesquade/user-profile-management.webp","alt":"Vibe3 User Profile Management Interface"},{"itemImageSrc":"/img/projects/vibesquade/earnings-calculator.webp","alt":"Vibe3 Earnings Calculator Interface"}]
+  video: ""
   features: [{"text":"Responsive Design Excellence: Built with mobile-first approach using Tailwind CSS v4 with adaptive layouts, custom glass-morphism effects, and cyber-themed animations for premium UX"},{"text":"Modern UI/UX Design: Cyberpunk-inspired design system with neon accents, custom gradient animations, floating elements, glass-effect components with backdrop blur, and responsive grid layouts"},{"text":"AI-Powered Matching System: Intelligent brand-influencer matching algorithm analyzing audience engagement patterns and content style with compatibility scoring system showing 94% match rates"},{"text":"Progressive Web App (PWA): Full PWA implementation with service workers, install prompts for mobile and desktop, offline capabilities, and custom manifest with shortcuts to Dashboard and Campaigns"}]
   perspective: {"executive":"A Web3-ready marketing engine that bridges the gap between premium brands and content creators. It utilizes AI to ensure high-match accuracy, reducing campaign waste and increasing engagement ROI in the influencer space.","technical":"A sophisticated PWA implementation using Next.js and Tailwind CSS v4. Features a complex state management system for real-time analytics and Web3 wallet integration (Solana/TON). Utilizes glass-morphism effects and hardware-accelerated animations for a high-end feel."}
-  details: "# Vibe3 - AI-Powered Web3 Influencer Marketing Platform\n\n## Project Overview\n\n**Vibe3** is a cutting-edge AI-powered influencer marketing platform built with modern frontend technologies. The platform features a sophisticated React-based user interface that connects content creators with premium brands through intelligent matching algorithms. Built as a Progressive Web App (PWA) with Web3 integration, it delivers a seamless user experience across all devices.\n\n## Executive Summary\n\nThis project demonstrates a premium consumer-grade frontend wrapped around a commercially ambitious product model. It combines AI-assisted matching, modern React architecture, progressive web app behavior, and high-polish UI execution in a single platform.\n\n## Business Problem\n\nInfluencer platforms have to balance marketplace complexity, onboarding friction, mobile behavior, and trust signals for both brands and creators. If the product feels generic or clumsy, user acquisition and retention suffer quickly.\n\n## What I Built\n\n- A React and Next.js frontend for an AI-powered influencer platform\n- Responsive dashboards and marketplace flows for multiple user types\n- PWA behavior for installability and cross-device continuity\n- A strong visual system aligned with premium digital-product positioning\n\n## Why It Matters\n\nThis project shows that serious product execution is not only backend logic. Frontend clarity, performance, and product feel are often decisive in whether a marketplace gets adoption. It is a valuable proof point for startups building user-facing SaaS or marketplace products.\n\n## Best Fit If You Need Something Similar\n\nThis case study supports [ROI-Driven AI Automation](/web-development-services/ai-and-automation-strategy/) and [Product Architecture & Scale](/web-development-services/product-architecture-and-scaling/). It is relevant for AI products, marketplace frontends, consumer SaaS, and mobile-first web experiences.\n\n### Frontend Value Proposition\n- **Responsive Design Excellence**: Built with mobile-first approach using Tailwind CSS v4 with adaptive layouts, custom glass-morphism effects, and cyber-themed animations for premium UX\n- **Modern UI/UX Design**: Cyberpunk-inspired design system with neon accents, custom gradient animations, floating elements, glass-effect components with backdrop blur, and responsive grid layouts\n- **AI-Powered Matching System**: Intelligent brand-influencer matching algorithm analyzing audience engagement patterns and content style with compatibility scoring system showing 94% match rates\n- **Progressive Web App (PWA)**: Full PWA implementation with service workers, install prompts for mobile and desktop, offline capabilities, and custom manifest with shortcuts to Dashboard and Campaigns\n\n***\n\n## Frontend Technology Stack\n\n### Core Frontend Framework\n- **Next.js 15** - React framework with App Router, SSR/SSG capabilities, and optimized performance\n- **React 19** - Latest React with concurrent features, improved performance, and enhanced developer experience\n- **TypeScript** - Full type safety, enhanced developer experience, and robust component development\n- **Tailwind CSS v4** - CSS-first approach with modern utility classes and responsive design system\n\n### UI/UX Libraries & Components\n- **Custom Component Library**: Modular React components for consistent design system\n- **Responsive Design Excellence**: Mobile-first approach with Tailwind CSS v4, adaptive layouts, and custom glass-morphism effects\n- **Cyberpunk Design System**: Neon accents, custom gradient animations, floating elements, and glass-effect components with backdrop blur\n- **Premium Animations**: Smooth transitions, hover effects, and cyber-themed animations for enhanced user experience\n\n### PWA & Mobile Frontend\n- **Progressive Web App**: Full PWA implementation with service workers, install prompts for mobile and desktop, offline capabilities, and custom manifest with shortcuts to Dashboard and Campaigns\n- **Mobile Optimization**: Touch-friendly interfaces, gesture support, and responsive grid layouts\n- **Cross-Platform Installation**: Support for installation on mobile and desktop with native app-like experience\n- **Performance**: Optimized loading times, smooth scrolling experiences, and real-time campaign management\n\n***\n\n## Frontend Features & User Interface\n\n### 1. AI Suggested Post Creation Interface\n- **Content Generation**: Interactive content editor with AI-powered suggestions and real-time preview\n- **Platform Optimization**: Dynamic post format adapters for different social media platforms\n- **Engagement Prediction**: Visual analytics dashboard predicting post performance and engagement rates\n- **Brand Voice Matching**: Style guide interface with brand tone indicators and content adaptation tools\n- **Trend Integration**: Real-time trend feed integration with suggested content incorporation\n\n### 2. Campaign Management Interface\n- **Campaign Creation**: Intuitive form interfaces for campaign setup with drag-and-drop budget configuration\n- **Multi-Token Support**: Interactive token selection interface with real-time conversion rates\n- **Platform Integration**: Visual platform selector with social media account linking interfaces\n- **Category Management**: Dynamic category selection with visual icons and descriptions\n\n### 3. User Profile Management\n- **Profile Editor**: Comprehensive profile management interface with personal information, bio, and avatar customization\n- **Social Account Linking**: Seamless integration with social media platforms.\n\n### 4. Creator Dashboard Interface\n- **Campaign History**: Timeline view with campaign participation and performance tracking\n- **Social Analytics**: Integrated social media analytics widgets and engagement metrics\n- **Profile Management**: Comprehensive profile editor with social account linking interfaces\n\n### 5. Organization Management UI\n- **Brand Profiles**: Detailed organization profile editor with campaign management interfaces\n- **Campaign Analytics**: Interactive dashboard with performance tracking and ROI visualization\n- **Creator Discovery**: AI-powered creator search interface with filtering and recommendation cards\n\n***\n\n## Frontend Architecture & Component Structure\n\n### Key Frontend Dependencies\n- **Next.js 15.4.2** - React framework with App Router and real-time campaign management\n- **React 19.1.0** - UI library with concurrent features and enhanced developer experience\n- **TypeScript** - Type safety for robust component development and better developer experience\n- **@solana/web3.js** - Solana blockchain frontend integration\n- **@tonconnect/ui-react** - TON wallet UI integration\n- **next-auth 5.0.0-beta.29** - Authentication UI with secure session management\n- **next-pwa 5.6.0** - PWA functionality with service workers and offline capabilities\n\n### Frontend Performance Optimization\n- **Code Splitting**: Dynamic imports and lazy loading for optimal bundle sizes\n- **Caching Strategy**: Service worker implementation for offline functionality\n- **Bundle Analysis**: Webpack bundle analyzer for performance monitoring\n\n***\n\n## Frontend Performance & User Experience\n\n### Browser Support & Compatibility\n- **Modern Browsers**: Chrome 90+, Firefox 88+, Safari 14+, Edge 90+\n- **Mobile Browsers**: iOS Safari 14+, Chrome Mobile 90+\n- **PWA Support**: Full PWA support on all modern browsers with installation prompts\n- **Web3 Compatibility**: Wallet integration support across all major browsers\n\n### Frontend Scalability\n- **Component Architecture**: Modular React components for easy maintenance and scaling\n- **State Management**: Efficient context providers and custom hooks for optimal performance\n- **Code Organization**: Clean separation of concerns with TypeScript for better developer experience\n- **Responsive Design**: Mobile-first approach ensuring consistent experience across all devices\n"
+  details: "## Engineering Architecture: Web3 Social-Commerce Orchestration\n\nVibe3 is a high-performance **AI-powered Marketplace Architecture** designed to bridge the gap between premium brands and Web3 content creators. It demonstrates a sophisticated integration of **Next.js 15**, **Blockchain Wallets**, and **PWA (Progressive Web App)** technology to deliver a mobile-first, transactionally secure influencer economy.\n\n### 1. The Marketing Engine (Layman's Perspective)\nThink of Vibe3 as an **Automated Digital Talent Agent**. \n\nIn the old world, a brand would spend weeks searching for the right influencer, negotiating deals, and worrying about payments. Vibe3 does all of this in seconds. Our \"Digital Agent\" (AI) analyzes thousands of creators, finds the perfect match for a brand's specific \"vibe,\" and handles the entire contract and payment process instantly using secure \"Digital Handshakes\" (Blockchain). It's a high-speed, high-trust marketplace that lives right on your phone's home screen like a native app.\n\n### 2. Technical Architecture & Blockchain Flow\nThe platform utilizes a modern React 19 / Next.js 15 stack, orchestrating a complex set of decentralized identity and payment protocols.\n\n```mermaid\ngraph TD\n    subgraph \"Identity & Auth Layer\"\n        User[Creator / Brand] --> Auth[Next-Auth + Web3 Wallet]\n        Auth --> Solana[Solana Wallet Integration]\n        Auth --> TON[TON Connect Integration]\n    end\n\n    subgraph \"AI Matching Engine\"\n        Data[Social Engagement Data] --> AIMatch[Matching Algorithm]\n        AIMatch --> Score[Compatibility Scoring]\n    end\n\n    subgraph \"Campaign Orchestration (PWA)\"\n        Score --> Dashboard[Interactive Creator Dashboard]\n        Dashboard --> Campaign[Campaign Smart Contract]\n        Campaign --> PWA[Service Worker / Offline Sync]\n    end\n\n    subgraph \"Payment & Settlement\"\n        Campaign --> MultiToken[Multi-Token Payment Bridge]\n        MultiToken --> Settlement[Automated Payouts]\n    end\n```\n\n### 3. Key Engineering Pillars\n\n#### A. Multi-Chain Identity Architecture\nIntegrating Web3 wallets (Solana and TON) into a standard SaaS workflow requires a robust **Identity Layer**.\n- **Unified Session Management:** We implemented a custom Next-Auth adapter that bridges traditional OAuth (Social Login) with Wallet-based authentication, allowing users to transition seamlessly between \"Web2\" convenience and \"Web3\" security.\n- **Cross-Chain Interoperability:** The frontend manages multiple blockchain providers (`@solana/web3.js` and `@tonconnect/ui-react`) within a single reactive state, ensuring that transaction signatures and wallet statuses are synchronized across the entire app.\n\n#### B. High-Fidelity Cyber-Design System\nTo compete in the influencer space, the UI must be \"Consumer-Grade.\"\n- **Glassmorphism & Neon Layering:** Built with Tailwind CSS v4, the design system utilizes advanced backdrop-filters and gradient animations to create a \"Cyber-Themed\" aesthetic that resonates with tech-native creators.\n- **PWA Mobility:** The platform is architected as a full Progressive Web App. By leveraging Service Workers and a custom manifest, Vibe3 achieves \"Installability,\" allowing it to bypass app store friction while maintaining a native-app feel and offline accessibility.\n\n#### C. AI-Assisted Content Orchestration\nThe \"Suggested Post\" interface is a technical showcase of **LLM-UI Integration**.\n- **Real-Time Synthesis:** The UI dynamically adapts AI-generated content suggestions into platform-specific previews (Instagram vs. X vs. TikTok) at runtime, allowing creators to iterate on campaign briefs in seconds.\n- **Engagement Prediction UI:** We built interactive ROI visualization widgets that translate complex data models into simple, actionable insights for brands.\n\n### 4. Strategic Business Value (ROI)\n- **Reduced Onboarding Friction:** By offering both Social and Wallet login, Vibe3 captures a broader audience than pure-crypto platforms.\n- **Enterprise-Scale Security:** Blockchain-based campaign settlements eliminate \"Payment Risk\" and reduce administrative overhead by up to 90%.\n- **High Retention PWA:** Being \"installed\" on a user's home screen significantly increases campaign participation rates and platform engagement compared to traditional web portals.\n\nVibe3 proves that **Modern Product Architecture** is about the elegant fusion of AI, Blockchain, and premium Frontend engineering.\n"
   previousProject: {"name":"Contact Form Plugin","link":"/web-development-projects/contact-form-plugin/"}
   nextProject: {"name":"Dynamic CRUD App Free","link":"/web-development-projects/dynamic-crud-app-free/"}
 ---
@@ -92,13 +93,49 @@ project:
           </div>
        </div>
     </div>
-    <div v-for="(img, idx) in $frontmatter.project.images.slice(3)" :key="idx" class="col-12 md:col-6 lg:col-4 p-2">
+    <div v-for="(img, idx) in $frontmatter.project.images.slice(3, 5)" :key="idx" class="col-12 md:col-6 lg:col-4 p-2">
        <div class="border-round-3xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 h-full surface-card">
           <Image :src="img.itemImageSrc" :alt="img.alt" preview class="w-full h-full" imageClass="w-full h-full object-cover block min-h-15rem" />
        </div>
     </div>
+    <div v-if="$frontmatter.project.images.length >= 6" class="col-12 md:col-6 lg:col-4 p-2">
+       <div class="border-round-3xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 h-full surface-card relative" :class="{'cursor-pointer': $frontmatter.project.images.length > 6}" @click="$frontmatter.project.images.length > 6 ? displayModal = true : null">
+          <Image :src="$frontmatter.project.images[5].itemImageSrc" :alt="$frontmatter.project.images[5].alt" :preview="$frontmatter.project.images.length === 6" class="w-full h-full" imageClass="w-full h-full object-cover block min-h-15rem" />
+          <div v-if="$frontmatter.project.images.length > 6" class="absolute top-0 left-0 w-full h-full flex align-items-center justify-content-center bg-black-alpha-60 text-white hover:bg-black-alpha-40 transition-all transition-duration-300">
+             <div class="text-center">
+                <i class="pi pi-images text-4xl mb-2"></i>
+                <div class="text-xl font-bold uppercase tracking-widest">+{{ $frontmatter.project.images.length - 5 }} More</div>
+                <div class="text-xs opacity-70 mt-1">View All Media</div>
+             </div>
+          </div>
+       </div>
+    </div>
   </div>
 </section>
+
+<section v-if="$frontmatter.project.video" class="mb-8 overflow-hidden border-round-3xl shadow-4 surface-card border-1 border-100">
+  <div class="relative w-full overflow-hidden" style="padding-top: 56.25%;">
+     <iframe 
+       class="absolute top-0 left-0 w-full h-full border-none" 
+       :src="'https://www.youtube.com/embed/' + ($frontmatter.project.video.includes('v=') ? $frontmatter.project.video.split('v=')[1]?.split('&')[0] : $frontmatter.project.video.split('/').pop())" 
+       title="Project Video Showcase" 
+       frameborder="0" 
+       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+       referrerpolicy="strict-origin-when-cross-origin" 
+       allowfullscreen>
+     </iframe>
+  </div>
+</section>
+
+<Dialog v-model:visible="displayModal" modal header="Project Media Showcase" :style="{ width: '90vw', maxWidth: '1200px' }" class="p-0 overflow-hidden border-round-3xl" :breakpoints="{'960px': '95vw'}">
+  <div class="grid p-3 surface-ground">
+    <div v-for="(img, idx) in $frontmatter.project.images" :key="idx" class="col-12 md:col-6 lg:col-4 p-2">
+       <div class="border-round-2xl overflow-hidden shadow-2 hover:shadow-4 transition-all transition-duration-300 surface-card h-full">
+          <Image :src="img.itemImageSrc" :alt="img.alt" preview class="w-full h-full" imageClass="w-full h-full object-cover block min-h-15rem" />
+       </div>
+    </div>
+  </div>
+</Dialog>
 
 <div class="grid mb-8">
   <div class="col-12">
@@ -142,7 +179,7 @@ project:
             <span>Engineering Architecture</span>
           </div>
         </template>
-        <div class="p-4 md:p-6 surface-card border-round-3xl shadow-1 mt-4">
+        <div class="p-2 md:p-4 surface-card border-round-3xl shadow-1 mt-4">
           <div class="flex align-items-center gap-2 text-primary font-bold mb-4 uppercase tracking-wider text-sm">
             <i class="pi pi-code"></i>
             Technical Deep-Dive
@@ -150,129 +187,68 @@ project:
           <div class="text-xl line-height-4 text-700 mb-6">
             {{ $frontmatter.project.perspective.technical }}
           </div>
-          <div class="project-markdown-content text-lg line-height-4">
+          <div v-pre class="project-markdown-content text-lg line-height-4">
 
-# Vibe3 - AI-Powered Web3 Influencer Marketing Platform
+## Engineering Architecture: Web3 Social-Commerce Orchestration
 
-## Project Overview
+Vibe3 is a high-performance **AI-powered Marketplace Architecture** designed to bridge the gap between premium brands and Web3 content creators. It demonstrates a sophisticated integration of **Next.js 15**, **Blockchain Wallets**, and **PWA (Progressive Web App)** technology to deliver a mobile-first, transactionally secure influencer economy.
 
-**Vibe3** is a cutting-edge AI-powered influencer marketing platform built with modern frontend technologies. The platform features a sophisticated React-based user interface that connects content creators with premium brands through intelligent matching algorithms. Built as a Progressive Web App (PWA) with Web3 integration, it delivers a seamless user experience across all devices.
+### 1. The Marketing Engine (Layman's Perspective)
+Think of Vibe3 as an **Automated Digital Talent Agent**. 
 
-## Executive Summary
+In the old world, a brand would spend weeks searching for the right influencer, negotiating deals, and worrying about payments. Vibe3 does all of this in seconds. Our "Digital Agent" (AI) analyzes thousands of creators, finds the perfect match for a brand's specific "vibe," and handles the entire contract and payment process instantly using secure "Digital Handshakes" (Blockchain). It's a high-speed, high-trust marketplace that lives right on your phone's home screen like a native app.
 
-This project demonstrates a premium consumer-grade frontend wrapped around a commercially ambitious product model. It combines AI-assisted matching, modern React architecture, progressive web app behavior, and high-polish UI execution in a single platform.
+### 2. Technical Architecture & Blockchain Flow
+The platform utilizes a modern React 19 / Next.js 15 stack, orchestrating a complex set of decentralized identity and payment protocols.
 
-## Business Problem
+```mermaid
+graph TD
+    subgraph "Identity & Auth Layer"
+        User[Creator / Brand] --> Auth[Next-Auth + Web3 Wallet]
+        Auth --> Solana[Solana Wallet Integration]
+        Auth --> TON[TON Connect Integration]
+    end
 
-Influencer platforms have to balance marketplace complexity, onboarding friction, mobile behavior, and trust signals for both brands and creators. If the product feels generic or clumsy, user acquisition and retention suffer quickly.
+    subgraph "AI Matching Engine"
+        Data[Social Engagement Data] --> AIMatch[Matching Algorithm]
+        AIMatch --> Score[Compatibility Scoring]
+    end
 
-## What I Built
+    subgraph "Campaign Orchestration (PWA)"
+        Score --> Dashboard[Interactive Creator Dashboard]
+        Dashboard --> Campaign[Campaign Smart Contract]
+        Campaign --> PWA[Service Worker / Offline Sync]
+    end
 
-- A React and Next.js frontend for an AI-powered influencer platform
-- Responsive dashboards and marketplace flows for multiple user types
-- PWA behavior for installability and cross-device continuity
-- A strong visual system aligned with premium digital-product positioning
+    subgraph "Payment & Settlement"
+        Campaign --> MultiToken[Multi-Token Payment Bridge]
+        MultiToken --> Settlement[Automated Payouts]
+    end
+```
 
-## Why It Matters
+### 3. Key Engineering Pillars
 
-This project shows that serious product execution is not only backend logic. Frontend clarity, performance, and product feel are often decisive in whether a marketplace gets adoption. It is a valuable proof point for startups building user-facing SaaS or marketplace products.
+#### A. Multi-Chain Identity Architecture
+Integrating Web3 wallets (Solana and TON) into a standard SaaS workflow requires a robust **Identity Layer**.
+- **Unified Session Management:** We implemented a custom Next-Auth adapter that bridges traditional OAuth (Social Login) with Wallet-based authentication, allowing users to transition seamlessly between "Web2" convenience and "Web3" security.
+- **Cross-Chain Interoperability:** The frontend manages multiple blockchain providers (`@solana/web3.js` and `@tonconnect/ui-react`) within a single reactive state, ensuring that transaction signatures and wallet statuses are synchronized across the entire app.
 
-## Best Fit If You Need Something Similar
+#### B. High-Fidelity Cyber-Design System
+To compete in the influencer space, the UI must be "Consumer-Grade."
+- **Glassmorphism & Neon Layering:** Built with Tailwind CSS v4, the design system utilizes advanced backdrop-filters and gradient animations to create a "Cyber-Themed" aesthetic that resonates with tech-native creators.
+- **PWA Mobility:** The platform is architected as a full Progressive Web App. By leveraging Service Workers and a custom manifest, Vibe3 achieves "Installability," allowing it to bypass app store friction while maintaining a native-app feel and offline accessibility.
 
-This case study supports [ROI-Driven AI Automation](/web-development-services/ai-and-automation-strategy/) and [Product Architecture & Scale](/web-development-services/product-architecture-and-scaling/). It is relevant for AI products, marketplace frontends, consumer SaaS, and mobile-first web experiences.
+#### C. AI-Assisted Content Orchestration
+The "Suggested Post" interface is a technical showcase of **LLM-UI Integration**.
+- **Real-Time Synthesis:** The UI dynamically adapts AI-generated content suggestions into platform-specific previews (Instagram vs. X vs. TikTok) at runtime, allowing creators to iterate on campaign briefs in seconds.
+- **Engagement Prediction UI:** We built interactive ROI visualization widgets that translate complex data models into simple, actionable insights for brands.
 
-### Frontend Value Proposition
-- **Responsive Design Excellence**: Built with mobile-first approach using Tailwind CSS v4 with adaptive layouts, custom glass-morphism effects, and cyber-themed animations for premium UX
-- **Modern UI/UX Design**: Cyberpunk-inspired design system with neon accents, custom gradient animations, floating elements, glass-effect components with backdrop blur, and responsive grid layouts
-- **AI-Powered Matching System**: Intelligent brand-influencer matching algorithm analyzing audience engagement patterns and content style with compatibility scoring system showing 94% match rates
-- **Progressive Web App (PWA)**: Full PWA implementation with service workers, install prompts for mobile and desktop, offline capabilities, and custom manifest with shortcuts to Dashboard and Campaigns
+### 4. Strategic Business Value (ROI)
+- **Reduced Onboarding Friction:** By offering both Social and Wallet login, Vibe3 captures a broader audience than pure-crypto platforms.
+- **Enterprise-Scale Security:** Blockchain-based campaign settlements eliminate "Payment Risk" and reduce administrative overhead by up to 90%.
+- **High Retention PWA:** Being "installed" on a user's home screen significantly increases campaign participation rates and platform engagement compared to traditional web portals.
 
-***
-
-## Frontend Technology Stack
-
-### Core Frontend Framework
-- **Next.js 15** - React framework with App Router, SSR/SSG capabilities, and optimized performance
-- **React 19** - Latest React with concurrent features, improved performance, and enhanced developer experience
-- **TypeScript** - Full type safety, enhanced developer experience, and robust component development
-- **Tailwind CSS v4** - CSS-first approach with modern utility classes and responsive design system
-
-### UI/UX Libraries & Components
-- **Custom Component Library**: Modular React components for consistent design system
-- **Responsive Design Excellence**: Mobile-first approach with Tailwind CSS v4, adaptive layouts, and custom glass-morphism effects
-- **Cyberpunk Design System**: Neon accents, custom gradient animations, floating elements, and glass-effect components with backdrop blur
-- **Premium Animations**: Smooth transitions, hover effects, and cyber-themed animations for enhanced user experience
-
-### PWA & Mobile Frontend
-- **Progressive Web App**: Full PWA implementation with service workers, install prompts for mobile and desktop, offline capabilities, and custom manifest with shortcuts to Dashboard and Campaigns
-- **Mobile Optimization**: Touch-friendly interfaces, gesture support, and responsive grid layouts
-- **Cross-Platform Installation**: Support for installation on mobile and desktop with native app-like experience
-- **Performance**: Optimized loading times, smooth scrolling experiences, and real-time campaign management
-
-***
-
-## Frontend Features & User Interface
-
-### 1. AI Suggested Post Creation Interface
-- **Content Generation**: Interactive content editor with AI-powered suggestions and real-time preview
-- **Platform Optimization**: Dynamic post format adapters for different social media platforms
-- **Engagement Prediction**: Visual analytics dashboard predicting post performance and engagement rates
-- **Brand Voice Matching**: Style guide interface with brand tone indicators and content adaptation tools
-- **Trend Integration**: Real-time trend feed integration with suggested content incorporation
-
-### 2. Campaign Management Interface
-- **Campaign Creation**: Intuitive form interfaces for campaign setup with drag-and-drop budget configuration
-- **Multi-Token Support**: Interactive token selection interface with real-time conversion rates
-- **Platform Integration**: Visual platform selector with social media account linking interfaces
-- **Category Management**: Dynamic category selection with visual icons and descriptions
-
-### 3. User Profile Management
-- **Profile Editor**: Comprehensive profile management interface with personal information, bio, and avatar customization
-- **Social Account Linking**: Seamless integration with social media platforms.
-
-### 4. Creator Dashboard Interface
-- **Campaign History**: Timeline view with campaign participation and performance tracking
-- **Social Analytics**: Integrated social media analytics widgets and engagement metrics
-- **Profile Management**: Comprehensive profile editor with social account linking interfaces
-
-### 5. Organization Management UI
-- **Brand Profiles**: Detailed organization profile editor with campaign management interfaces
-- **Campaign Analytics**: Interactive dashboard with performance tracking and ROI visualization
-- **Creator Discovery**: AI-powered creator search interface with filtering and recommendation cards
-
-***
-
-## Frontend Architecture & Component Structure
-
-### Key Frontend Dependencies
-- **Next.js 15.4.2** - React framework with App Router and real-time campaign management
-- **React 19.1.0** - UI library with concurrent features and enhanced developer experience
-- **TypeScript** - Type safety for robust component development and better developer experience
-- **@solana/web3.js** - Solana blockchain frontend integration
-- **@tonconnect/ui-react** - TON wallet UI integration
-- **next-auth 5.0.0-beta.29** - Authentication UI with secure session management
-- **next-pwa 5.6.0** - PWA functionality with service workers and offline capabilities
-
-### Frontend Performance Optimization
-- **Code Splitting**: Dynamic imports and lazy loading for optimal bundle sizes
-- **Caching Strategy**: Service worker implementation for offline functionality
-- **Bundle Analysis**: Webpack bundle analyzer for performance monitoring
-
-***
-
-## Frontend Performance & User Experience
-
-### Browser Support & Compatibility
-- **Modern Browsers**: Chrome 90+, Firefox 88+, Safari 14+, Edge 90+
-- **Mobile Browsers**: iOS Safari 14+, Chrome Mobile 90+
-- **PWA Support**: Full PWA support on all modern browsers with installation prompts
-- **Web3 Compatibility**: Wallet integration support across all major browsers
-
-### Frontend Scalability
-- **Component Architecture**: Modular React components for easy maintenance and scaling
-- **State Management**: Efficient context providers and custom hooks for optimal performance
-- **Code Organization**: Clean separation of concerns with TypeScript for better developer experience
-- **Responsive Design**: Mobile-first approach ensuring consistent experience across all devices
+Vibe3 proves that **Modern Product Architecture** is about the elegant fusion of AI, Blockchain, and premium Frontend engineering.
 
 
 </div>
@@ -353,5 +329,7 @@ This case study supports [ROI-Driven AI Automation](/web-development-services/ai
 </div>
 
 <script setup>
+import { ref } from "vue"
 import { responsiveOptions } from "@data/responsive.js"
+const displayModal = ref(false)
 </script>
