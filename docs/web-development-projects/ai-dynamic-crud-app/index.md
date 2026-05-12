@@ -36,7 +36,7 @@ project:
       <p class="text-xl opacity-70 line-height-4 max-w-50rem mb-4">{{$frontmatter.project.description}}</p>
       <div class="surface-card p-4 md:p-5 border-round-3xl shadow-2 border-1 border-100 mb-4">
         <div class="grid align-items-center">
-          <div class="col-12 md:col-4 border-bottom-1 md:border-bottom-none md:border-right-1 border-100 mb-3 md:mb-0 pb-3 md:pb-0">
+          <div class="col-12 md:col-6 border-bottom-1 md:border-bottom-none md:border-right-1 border-100 mb-3 md:mb-0 pb-3 md:pb-0">
              <div class="flex align-items-center gap-3">
                 <i class="pi pi-briefcase text-primary text-2xl"></i>
                 <div>
@@ -45,7 +45,7 @@ project:
                 </div>
              </div>
           </div>
-          <div class="col-12 md:col-4 border-bottom-1 md:border-bottom-none md:border-right-1 border-100 mb-3 md:mb-0 pb-3 md:pb-0">
+          <div class="col-12 md:col-6 border-bottom-1 md:border-bottom-none border-100 mb-3 md:mb-0 pb-3 md:pb-0">
              <div class="flex align-items-center gap-3">
                 <i class="pi pi-bolt text-primary text-2xl"></i>
                 <div>
@@ -54,7 +54,7 @@ project:
                 </div>
              </div>
           </div>
-          <div class="col-12 md:col-4 pt-3 md:pt-0">
+          <div class="col-12 md:col-12 pt-3 md:pt-0">
              <Stacks :stack="$frontmatter.project.stack" :other-skills="$frontmatter.project.otherSkills" />
           </div>
         </div>
