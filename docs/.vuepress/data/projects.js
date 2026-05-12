@@ -54,7 +54,7 @@ export const freelance = [
         alt: "AI Generated Dashboard Interface",
       }
     ],
-    video: "",
+    video: "https://www.youtube.com/watch?v=jrkwxLkICRY",
     perspective: {
       executive: "A game-changer for businesses using Notion as a backend. It eliminates the need for expensive custom development by automatically generating a professional web interface directly from your data. Ideal for internal tools, client portals, and rapid prototyping with zero friction.",
       technical: "Features a dynamic schema-driven UI engine. It parses Notion database properties in real-time to generate Vue components with appropriate validation and input types. Includes multi-language support through a custom i18n bridge and optimized API caching for smooth performance."

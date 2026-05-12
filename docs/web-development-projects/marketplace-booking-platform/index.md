@@ -59,7 +59,7 @@ project:
              <Stacks :stack="$frontmatter.project.stack" :other-skills="$frontmatter.project.otherSkills" />
           </div>
         </div>
-        <div class="mt-4 pt-4 border-top-1 border-100">
+        <div class="mt-4 pt-4">
            <div class="flex flex-column md:flex-row align-items-stretch gap-3">
               <a v-if="$frontmatter.project.link" :href="$frontmatter.project.link" target="_blank" class="no-underline flex-1">
                 <Button label="View Live Demo" icon="pi pi-external-link" severity="primary" class="w-full font-bold py-3" raised rounded />
@@ -126,6 +126,16 @@ project:
      </iframe>
   </div>
 </section>
+
+<div v-if="$frontmatter.project.video" class="flex flex-wrap justify-content-center gap-3 mb-8">
+  <a :href="'/contact/?subject=' + encodeURIComponent('Architectural Consultation: ' + $frontmatter.project.name)" class="no-underline">
+    <Button label="Architect Similar Solution" icon="pi pi-bolt" severity="primary" raised rounded class="font-bold px-6 py-3" />
+  </a>
+  <a :href="'https://wa.me/917026217029?text=' + encodeURIComponent('Hi Jiwan! I saw your ' + $frontmatter.project.name + ' project and would like to discuss a similar strategic architecture.')" target="_blank" rel="noopener noreferrer" class="no-underline">
+    <Button label="WhatsApp Connect" icon="pi pi-whatsapp" severity="success" raised rounded class="font-bold px-6 py-3" />
+  </a>
+</div>
+
 
 <Dialog v-model:visible="displayModal" modal header="Project Media Showcase" :style="{ width: '90vw', maxWidth: '1200px' }" class="p-0 overflow-hidden border-round-3xl" :breakpoints="{'960px': '95vw'}">
   <div class="grid p-3 surface-ground">
@@ -287,7 +297,7 @@ This marketplace foundation is a technical blueprint for **Scalable Transactiona
       </div>
     </div>
 
-<section class="mt-8 pt-8 border-top-1 surface-border">
+<section class="mt-8">
   <div class="glass-effect p-6 md:p-8 border-round-3xl text-center relative overflow-hidden shadow-4">
     <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary opacity-10 border-circle" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
     <h2 class="text-3xl md:text-5xl font-bold mb-4 relative z-1">Need a similar <span class="text-gradient">strategic architecture</span>?</h2>

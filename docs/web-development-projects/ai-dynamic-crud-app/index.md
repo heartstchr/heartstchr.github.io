@@ -21,7 +21,7 @@ project:
   contact: "mailto:jiwan.cse@gmail.com?subject=AI Dynamic CRUD App Inquiry"
   stack: ["javascript","vuedotjs","notion/black/white","html5","css","json/black/white"]
   images: [{"itemImageSrc":"/img/projects/ai-dynamic-crud-app/ai-webapp-english.webp","alt":"AI Dynamic CRUD App - Create with Gemini"},{"itemImageSrc":"/img/projects/ai-dynamic-crud-app/ai-webapp-hindi.webp","alt":"AI Dynamic CRUD App - Hindi Translation"},{"itemImageSrc":"/img/projects/ai-dynamic-crud-app/ai-webapp-japanese.webp","alt":"AI Dynamic CRUD App - Japanese Translation"},{"itemImageSrc":"/img/projects/ai-dynamic-crud-app/ai-webapp-schema-review.webp","alt":"AI Database Schema Review"},{"itemImageSrc":"/img/projects/ai-dynamic-crud-app/ai-webapp-crud-ui.webp","alt":"AI Generated Dashboard Interface"}]
-  video: ""
+  video: "https://www.youtube.com/watch?v=jrkwxLkICRY"
   features: [{"text":"AI Schema Detection: Automatically detects and adapts to your Notion database structure."},{"text":"Dynamic Form Generation: Creates perfect forms based on field types."},{"text":"Professional Interface: Clean, modern design with card and table views."}]
   perspective: {"executive":"A game-changer for businesses using Notion as a backend. It eliminates the need for expensive custom development by automatically generating a professional web interface directly from your data. Ideal for internal tools, client portals, and rapid prototyping with zero friction.","technical":"Features a dynamic schema-driven UI engine. It parses Notion database properties in real-time to generate Vue components with appropriate validation and input types. Includes multi-language support through a custom i18n bridge and optimized API caching for smooth performance."}
   details: "## Engineering Architecture: AI-Driven Software Synthesis\n\nThe AI Dynamic CRUD App is an advanced implementation of **Generative Software Engineering**. It moves beyond standard \"Chat-based AI\" to a system that synthesizes functional software architectures, database schemas, and user interfaces directly from natural language specifications.\n\n### 1. The Generative Pipeline (Layman's Perspective)\nThink of this system as a **Digital Architect**. Instead of hiring a team to spend weeks drawing blueprints (Database Schemas) and building the house (User Interface), you simply describe what you need. \n\nThe \"Architect\" (Gemini AI) draws the technical blueprint in seconds, connects it to a \"Foundational Utility\" (Notion), and hands you the keys to a fully furnished, functional house (The Web App). If you want to add a room later, you just tell the AI, and the house expands instantly.\n\n### 2. Technical Architecture & Data Flow\nThe system utilizes a decoupled architecture where the LLM acts as a compiler, turning human intent into machine-readable schema definitions.\n\n```mermaid\ngraph TD\n    subgraph \"Input Layer\"\n        Prompt[Natural Language Prompt] --> Gemini[Gemini LLM Engine]\n        Template[Pre-configured Templates] --> Gemini\n    end\n\n    subgraph \"Schema Orchestration\"\n        Gemini --> JSON[Structured JSON Schema]\n        JSON --> Validator[Schema Validator]\n        Validator --> NotionAPI[Notion Database API]\n    end\n\n    subgraph \"Dynamic UI Engine\"\n        NotionAPI --> Metadata[Database Metadata]\n        Metadata --> UIOrchestrator[Runtime UI Orchestrator]\n        UIOrchestrator --> App[Generated Vue/Next.js Portal]\n    end\n\n    subgraph \"Capabilities\"\n        App --> CRUD[Full CRUD Operations]\n        App --> Logic[Dynamic Form Generation]\n        App --> Search[Real-time Global Search]\n    end\n```\n\n### 3. Key Engineering Pillars\n\n#### A. LLM-as-a-Compiler (Prompt Engineering)\nThe core of the system is a sophisticated prompt-chaining engine. We use strict output constraints to ensure Gemini produces 100% valid, typed JSON. This JSON isn't just data; it's a **Functional Specification** that includes:\n- Field Types (Text, Number, Date, Multi-select, Files)\n- Relationship Mapping (Notion Relations/Rollups)\n- Iconography & Categorization logic\n\n#### B. Dynamic UI Orchestration (Runtime Synthesis)\nUnlike traditional apps with hard-coded forms, this frontend is **completely reactive to the backend schema**. \n- **Introspection:** The app \"inspects\" the Notion database structure at runtime.\n- **Component Mapping:** If it detects a \"Date\" field in Notion, it instantly renders a Date-Picker in the UI. If it sees a \"Status\" field, it builds a specialized Kanban or Select dropdown.\n- **Zero-Code Updates:** Adding a column in the Notion database immediately updates the web portal without a single line of code or a new deployment.\n\n#### C. Multi-Language Intent Parsing\nBy leveraging LLM semantic understanding, the system supports multi-lingual intent. A prompt in Hindi or Japanese is parsed into the same structured JSON schema, ensuring global accessibility for non-technical users while maintaining strict data integrity.\n\n### 4. Strategic Business Value (ROI)\n- **Time-to-Market:** Reduces the \"Idea-to-Product\" cycle from weeks to minutes.\n- **Operational Agility:** Allows ops teams to build and modify their own internal tools without consuming core engineering resources.\n- **Zero-Maintenance Infrastructure:** By using Notion as the database and Netlify for the frontend, the system is virtually \"serverless\" and requires zero backend maintenance.\n\nThis project serves as a technical proof-of-concept for **Automated Internal Tooling**, demonstrating how AI can effectively manage the entire lifecycle of a standard business application.\n"
@@ -59,7 +59,7 @@ project:
              <Stacks :stack="$frontmatter.project.stack" :other-skills="$frontmatter.project.otherSkills" />
           </div>
         </div>
-        <div class="mt-4 pt-4 border-top-1 border-100">
+        <div class="mt-4 pt-4">
            <div class="flex flex-column md:flex-row align-items-stretch gap-3">
               <a v-if="$frontmatter.project.link" :href="$frontmatter.project.link" target="_blank" class="no-underline flex-1">
                 <Button label="View Live Demo" icon="pi pi-external-link" severity="primary" class="w-full font-bold py-3" raised rounded />
@@ -126,6 +126,16 @@ project:
      </iframe>
   </div>
 </section>
+
+<div v-if="$frontmatter.project.video" class="flex flex-wrap justify-content-center gap-3 mb-8">
+  <a :href="'/contact/?subject=' + encodeURIComponent('Architectural Consultation: ' + $frontmatter.project.name)" class="no-underline">
+    <Button label="Architect Similar Solution" icon="pi pi-bolt" severity="primary" raised rounded class="font-bold px-6 py-3" />
+  </a>
+  <a :href="'https://wa.me/917026217029?text=' + encodeURIComponent('Hi Jiwan! I saw your ' + $frontmatter.project.name + ' project and would like to discuss a similar strategic architecture.')" target="_blank" rel="noopener noreferrer" class="no-underline">
+    <Button label="WhatsApp Connect" icon="pi pi-whatsapp" severity="success" raised rounded class="font-bold px-6 py-3" />
+  </a>
+</div>
+
 
 <Dialog v-model:visible="displayModal" modal header="Project Media Showcase" :style="{ width: '90vw', maxWidth: '1200px' }" class="p-0 overflow-hidden border-round-3xl" :breakpoints="{'960px': '95vw'}">
   <div class="grid p-3 surface-ground">
@@ -286,7 +296,7 @@ This project serves as a technical proof-of-concept for **Automated Internal Too
       </div>
     </div>
 
-<section class="mt-8 pt-8 border-top-1 surface-border">
+<section class="mt-8">
   <div class="glass-effect p-6 md:p-8 border-round-3xl text-center relative overflow-hidden shadow-4">
     <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary opacity-10 border-circle" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
     <h2 class="text-3xl md:text-5xl font-bold mb-4 relative z-1">Need a similar <span class="text-gradient">strategic architecture</span>?</h2>
