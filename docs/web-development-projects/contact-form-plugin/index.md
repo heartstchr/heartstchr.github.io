@@ -18,7 +18,7 @@ project:
   currency: "USD"
   link: "https://contact-form-app.stackseekers.com/"
   codeLink: 
-  contact: "mailto:jiwan.cse@gmail.com?subject=Contact Form Plugin Inquiry"
+  contact: "mailto:support@stackseekers.com?subject=Contact Form Plugin Inquiry"
   stack: ["javascript","notion/black/white","html5","css","netlify","json/black/white","github/black/white"]
   images: [{"itemImageSrc":"/img/projects/contact-form-plugin/contact-form-widget-cover.webp","alt":"Contact Form Plugin - Embeddable Contact Form"},{"itemImageSrc":"/img/projects/contact-form-plugin/business-contact-form-widget-cover.webp","alt":"Contact Form Plugin - Business Contact Form"},{"itemImageSrc":"/img/projects/contact-form-plugin/simple-contact-form-widget.webp","alt":"Contact Form Plugin - Simple Contact Form"},{"itemImageSrc":"/img/projects/contact-form-plugin/live-demo-contact-form-widget.webp","alt":"Contact Form Plugin - Live Demo"}]
   video: ""

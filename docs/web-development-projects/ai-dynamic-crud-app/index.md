@@ -18,7 +18,7 @@ project:
   currency: "USD"
   link: "https://ai-dynamic-crud-app.stackseekers.com/"
   codeLink: 
-  contact: "mailto:jiwan.cse@gmail.com?subject=AI Dynamic CRUD App Inquiry"
+  contact: "mailto:support@stackseekers.com?subject=AI Dynamic CRUD App Inquiry"
   stack: ["javascript","vuedotjs","notion/black/white","html5","css","json/black/white"]
   images: [{"itemImageSrc":"/img/projects/ai-dynamic-crud-app/ai-webapp-english.webp","alt":"AI Dynamic CRUD App - Create with Gemini"},{"itemImageSrc":"/img/projects/ai-dynamic-crud-app/ai-webapp-hindi.webp","alt":"AI Dynamic CRUD App - Hindi Translation"},{"itemImageSrc":"/img/projects/ai-dynamic-crud-app/ai-webapp-japanese.webp","alt":"AI Dynamic CRUD App - Japanese Translation"},{"itemImageSrc":"/img/projects/ai-dynamic-crud-app/ai-webapp-schema-review.webp","alt":"AI Database Schema Review"},{"itemImageSrc":"/img/projects/ai-dynamic-crud-app/ai-webapp-crud-ui.webp","alt":"AI Generated Dashboard Interface"}]
   video: "https://www.youtube.com/watch?v=jrkwxLkICRY"

@@ -10,6 +10,8 @@ import { globalSchemas, pageSpecificSchemas } from "./data/schemas.js";
 const mode = process.env.NODE_ENV || "development";
 process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
 
+const SUPPORT_EMAIL = "support@stackseekers.com";
+
 export default defineUserConfig({
   title: "Freelancer Jiwan Ghosal",
   description:
@@ -157,5 +159,6 @@ export default defineUserConfig({
     __VITE_NOTION_ENDPOINT__: process.env.VITE_NOTION_ENDPOINT || "",
     __VITE_NOTION_DATABASE_ID__: process.env.VITE_NOTION_DATABASE_ID || "",
     __WHATSAPP_NUMBER__: process.env.VITE_WHATSAPP_NUMBER || "917026217029",
+    __VITE_SUPPORT_EMAIL__: JSON.stringify(SUPPORT_EMAIL),
   },
 });

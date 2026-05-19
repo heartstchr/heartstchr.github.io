@@ -18,7 +18,7 @@ project:
   currency: "USD"
   link: "https://notion-p.netlify.app/"
   codeLink: 
-  contact: "mailto:jiwan.cse@gmail.com?subject=Inquiry : "
+  contact: "mailto:support@stackseekers.com?subject=Inquiry : "
   stack: ["nodedotjs","json/black/white","tailwindcss","axios","npm","netlify","notion","Eslint","Prettier","github/black/white"]
   images: [{"itemImageSrc":"/img/home/projects/notion_service_request.webp","alt":"Service Request System - Cover page"},{"itemImageSrc":"/img/projects/service-request/customer_service_form.webp","alt":"Customer service form interface"},{"itemImageSrc":"/img/projects/service-request/chart_by_issue_type.webp","alt":"Chart showing issues by type"},{"itemImageSrc":"/img/projects/service-request/service_by_status.webp","alt":"Service requests by status"},{"itemImageSrc":"/img/projects/service-request/service_by_priority.webp","alt":"Service requests by priority"},{"itemImageSrc":"/img/projects/service-request/email_notification_notion.webp","alt":"Email notification in Notion"}]
   video: ""

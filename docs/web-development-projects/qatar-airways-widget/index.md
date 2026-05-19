@@ -18,7 +18,7 @@ project:
   currency: USD
   link: "https://holidays.qatarairways.com/en-in/avios"
   codeLink: 
-  contact: 
+  contact: "mailto:support@stackseekers.com?subject=Qatar Airways widget Inquiry"
   stack: ["Javascript","Vuedotjs","Vite/black/white","Axios/black/white","Express/black/white","MongoDB","Git","amazonec2","Eslint","Prettier","github/black/white"]
   images: [{"itemImageSrc":"/img/projects/qatar/placeholder.webp","alt":"Qatar Airways"},{"itemImageSrc":"/img/projects/qatar/qatar-airways.webp","alt":"Qatar Airways"},{"itemImageSrc":"/img/projects/qatar/thumbnail.webp","alt":"Qatar Airways"},{"itemImageSrc":"/img/projects/qatar/qatar.webp","alt":"Qatar Airways"}]
   video: ""

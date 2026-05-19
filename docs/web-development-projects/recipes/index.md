@@ -18,7 +18,7 @@ project:
   currency: USD
   link: "http://recipes-client.s3-website.ap-south-1.amazonaws.com/"
   codeLink: "https://github.com/heartstchr/recipe"
-  contact: 
+  contact: "mailto:support@stackseekers.com?subject=Recipes Inquiry"
   stack: ["Javascript","Vuedotjs","quasar/black/white","Vite","Axios","Express/black/white","MongoDB","Git","amazonec2","Eslint","Prettier"]
   images: [{"itemImageSrc":"/img/home/projects/Recipe.webp","alt":"Recipes - Login page"},{"itemImageSrc":"/img/projects/recipe/login.webp","alt":"Recipes - Login page"},{"itemImageSrc":"/img/projects/recipe/register.webp","alt":"Recipes - Registration page"},{"itemImageSrc":"/img/projects/recipe/home.webp","alt":"Recipes - Home page"},{"itemImageSrc":"/img/projects/recipe/direction.webp","alt":"Recipes - Directions page"},{"itemImageSrc":"/img/projects/recipe/ingredients.webp","alt":"Recipes - Ingredients page"},{"itemImageSrc":"/img/projects/recipe/addrecipe.webp","alt":"Recipes - Add Recipe page"},{"itemImageSrc":"/img/projects/recipe/search.webp","alt":"Recipes - Search page"},{"itemImageSrc":"/img/projects/recipe/share.webp","alt":"Recipes - Share screen"}]
   video: ""

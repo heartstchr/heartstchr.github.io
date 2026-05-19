@@ -42,6 +42,7 @@ jobs:
           VITE_NOTION_ENDPOINT: ${{secrets.VITE_NOTION_ENDPOINT}}
           VITE_NOTION_DATABASE_ID: ${{secrets.VITE_NOTION_DATABASE_ID}}
           VITE_WHATSAPP_NUMBER: ${{secrets.VITE_WHATSAPP_NUMBER}}
+          VITE_SUPPORT_EMAIL: ${{secrets.VITE_SUPPORT_EMAIL}}
         run: |-
           # Clear any existing cache
           rm -rf docs/.vuepress/.temp docs/.vuepress/.cache docs/.vuepress/dist

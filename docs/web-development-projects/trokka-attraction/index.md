@@ -18,7 +18,7 @@ project:
   currency: USD
   link: "https://m.trokka.com/attraction"
   codeLink: 
-  contact: 
+  contact: "mailto:support@stackseekers.com?subject=Trokka Attraction Inquiry"
   stack: ["Javascript","VuedotJs","Axios/black/white","Express/black/white","MongoDB","Git","amazonEC2","Eslint","Prettier","github/black/white"]
   images: [{"itemImageSrc":"/img/projects/trokka.webp","alt":"Trokka.com | Book Attractions and Tours for Your Next Holiday"}]
   video: ""

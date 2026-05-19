@@ -469,7 +469,7 @@ For questions, concerns, or requests regarding these Terms of Service, please co
 
 ### Primary Contact
 
-- **Email:** [jiwan.cse@gmail.com](mailto:jiwan.cse@gmail.com)
+- **Email:** <a :href="'mailto:' + VITE_SUPPORT_EMAIL">{{ VITE_SUPPORT_EMAIL }}</a>
 - **Website:** [https://stackseekers.com](https://stackseekers.com)
 - **Response Time:** We typically respond within 24-48 hours
 
@@ -477,7 +477,7 @@ For questions, concerns, or requests regarding these Terms of Service, please co
 
 For legal matters or formal notices:
 
-- **Email:** [jiwan.cse@gmail.com](mailto:jiwan.cse@gmail.com) (Subject: Legal Notice)
+- **Email:** <a :href="'mailto:' + VITE_SUPPORT_EMAIL + '?subject=Legal%20Notice'">{{ VITE_SUPPORT_EMAIL }} (Subject: Legal Notice)</a>
 - **Written Notice:** Send formal legal notices to the email address above
 
 ### What to Include

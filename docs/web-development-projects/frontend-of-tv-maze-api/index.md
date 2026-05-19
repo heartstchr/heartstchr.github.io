@@ -18,7 +18,7 @@ project:
   currency: USD
   link: "https://heartstchr.github.io/tvmaze/"
   codeLink: "https://github.com/heartstchr/tvshows"
-  contact: 
+  contact: "mailto:support@stackseekers.com?subject=Frontend of Tv Maze API Inquiry"
   stack: ["Javascript","Vuedotjs","Quasar/black/white","Axios","Git","amazonec2","Eslint","Prettier"]
   images: [{"itemImageSrc":"/img/home/projects/tvmaze.webp","alt":"TVmaze - Home page"},{"itemImageSrc":"/img/projects/tvmaze/home.webp","alt":"TVmaze - Home page"},{"itemImageSrc":"/img/projects/tvmaze/search.webp","alt":"TVmaze - Search page"},{"itemImageSrc":"/img/projects/tvmaze/episodes.webp","alt":"TVmaze - Episodes tab"},{"itemImageSrc":"/img/projects/tvmaze/cast.webp","alt":"TVmaze - Cast tab"},{"itemImageSrc":"/img/projects/tvmaze/genres.webp","alt":"TVmaze - Genres"}]
   video: ""

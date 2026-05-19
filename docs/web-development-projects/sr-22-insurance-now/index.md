@@ -18,7 +18,7 @@ project:
   currency: USD
   link: "https://sr22insurancenow.com/"
   codeLink: 
-  contact: "mailto:jiwan.cse@gmail.com?subject=Inquiry : "
+  contact: "mailto:support@stackseekers.com?subject=Inquiry : "
   stack: ["nextdotjs/black/white","React","Nodedotjs","JSON/black/white","Axios/black/white","npm","pm2/black/white","digitalocean","lighthouse","bitbucket"]
   images: [{"itemImageSrc":"/img/home/projects/sr22.webp","alt":"SR-22 insurance Now"},{"itemImageSrc":"/img/projects/sr22/desktop_web_performance.webp","alt":"SR-22 Insurance Now - Desktop web performance metrics"},{"itemImageSrc":"/img/projects/sr22/mobile_web_performance.webp","alt":"SR-22 Insurance Now - Mobile web performance metrics"},{"itemImageSrc":"/img/projects/sr22/why_need_sr22.webp","alt":"SR-22 Insurance Now - Why you need SR-22 insurance"},{"itemImageSrc":"/img/projects/sr22/how_to_get_sr22.webp","alt":"SR-22 Insurance Now - How to get SR-22 insurance"},{"itemImageSrc":"/img/projects/sr22/landing_page.webp","alt":"SR-22 Insurance Now - Landing page"},{"itemImageSrc":"/img/projects/sr22/states_map.webp","alt":"SR-22 Insurance Now - States map"},{"itemImageSrc":"/img/projects/sr22/sr22_city.webp","alt":"SR-22 Insurance Now - City list"},{"itemImageSrc":"/img/projects/sr22/auto_complete_zip_code.webp","alt":"SR-22 Insurance Now - Auto-complete zip code functionality"},{"itemImageSrc":"/img/projects/sr22/render_json.webp","alt":"SR-22 Insurance Now - JSON reader functionality"}]
   video: ""

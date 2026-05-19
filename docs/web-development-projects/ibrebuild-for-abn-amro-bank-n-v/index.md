@@ -18,7 +18,7 @@ project:
   currency: USD
   link: "https://www.abnamro.nl/en/personal/index.html"
   codeLink: 
-  contact: 
+  contact: "mailto:support@stackseekers.com?subject=IBRebuild for ABN AMRO BANK N.V. Inquiry"
   stack: ["Javascript","Angular/black/white","Vuedotjs","Axios","webpack","lit","bitbucket","npm","nodedotjs","Git","Eslint","Prettier"]
   images: [{"itemImageSrc":"/img/home/projects/ABN_Amro.webp","alt":"IBRebuild for ABN AMRO BANK N.V. - Cover page"}]
   video: ""

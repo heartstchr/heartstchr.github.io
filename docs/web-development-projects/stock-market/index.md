@@ -18,7 +18,7 @@ project:
   currency: USD
   link: 
   codeLink: "https://github.com/heartstchr/StockMarket"
-  contact: 
+  contact: "mailto:support@stackseekers.com?subject=Stock Market Inquiry"
   stack: ["Socket.io/black/white","d3","angular/black/white","NodedotJS","gulp","Eslint","Prettier","github/black/white"]
   images: [{"itemImageSrc":"/img/projects/stocks.webp","alt":"Consuming socket data and plotting a real-time D3 graph"}]
   video: ""

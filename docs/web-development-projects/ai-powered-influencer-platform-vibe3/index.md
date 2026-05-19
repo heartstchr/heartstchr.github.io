@@ -18,7 +18,7 @@ project:
   currency: USD
   link: "https://vibe3.vibesquad.co"
   codeLink: 
-  contact: "mailto:jiwan.cse@gmail.com?subject=Vibe3 Platform Inquiry"
+  contact: "mailto:support@stackseekers.com?subject=Vibe3 Platform Inquiry"
   stack: ["nextdotjs/black/white","react","typescript","tailwindcss","pwa","nodedotjs","mongodb","github/black/white","solana","ton"]
   images: [{"itemImageSrc":"/img/projects/vibesquade/vibe3-platform-overview.webp","alt":"Vibe3 Modern React-Based User Interface"},{"itemImageSrc":"/img/projects/vibesquade/creator-dashboard.webp","alt":"Vibe3 Interactive Creator Dashboard with Real-time Analytics"},{"itemImageSrc":"/img/projects/vibesquade/campaign-management.webp","alt":"Vibe3 Campaign Management Interface with Drag-and-Drop Features"},{"itemImageSrc":"/img/projects/vibesquade/web3-payments.webp","alt":"Vibe3 Web3 Wallet Integration UI Components"},{"itemImageSrc":"/img/projects/vibesquade/ai-matching.webp","alt":"Vibe3 AI-Powered Creator Matching Interface"},{"itemImageSrc":"/img/projects/vibesquade/pwa-mobile.webp","alt":"Vibe3 PWA Mobile User Experience"},{"itemImageSrc":"/img/projects/vibesquade/user-profile-management.webp","alt":"Vibe3 User Profile Management Interface"},{"itemImageSrc":"/img/projects/vibesquade/earnings-calculator.webp","alt":"Vibe3 Earnings Calculator Interface"}]
   video: ""

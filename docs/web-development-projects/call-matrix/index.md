@@ -18,7 +18,7 @@ project:
   currency: USD
   link: "https://callmatrix.io/"
   codeLink: 
-  contact: 
+  contact: "mailto:support@stackseekers.com?subject=Call Matrix Inquiry"
   stack: ["Angular/black/white","Nodedotjs","d3","MongoDB","MySQL","Express/black/white","googleads","googlesheets","twilio","DigitalOcean"]
   images: [{"itemImageSrc":"/img/projects/callmatrix/callmatrix.webp","alt":"CallMatrix - Call Intelligence, Marketing, and Analytics Platform"},{"itemImageSrc":"/img/projects/callmatrix/mobistreak.webp","alt":"CallMatrix - Call Intelligence, Marketing, and Analytics Platform"}]
   video: ""

@@ -18,7 +18,7 @@ project:
   currency: "USD"
   link: "https://localxr.com"
   codeLink: 
-  contact: "mailto:jiwan.cse@gmail.com?subject=LocalXR Inquiry"
+  contact: "mailto:support@stackseekers.com?subject=LocalXR Inquiry"
   stack: ["nextdotjs/black/white","react","tailwindcss","sass","nodedotjs","axios","Eslint","Prettier"]
   images: [{"itemImageSrc":"/img/projects/localxr/localxr-cover.webp","alt":"LocalXR - Home Services Marketplace Cover"},{"itemImageSrc":"/img/projects/localxr/plumber-home.webp","alt":"LocalXR - Plumber Home Page"},{"itemImageSrc":"/img/projects/localxr/listing.webp","alt":"LocalXR - Service Listings"},{"itemImageSrc":"/img/projects/localxr/plumbing-services.webp","alt":"LocalXR - Plumbing Services Page"},{"itemImageSrc":"/img/projects/localxr/blog.webp","alt":"LocalXR - Blog Section"}]
   video: ""

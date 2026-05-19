@@ -18,7 +18,7 @@ project:
   currency: USD
   link: "https://upstox.com/open-demat-account/"
   codeLink: 
-  contact: 
+  contact: "mailto:support@stackseekers.com?subject=Demat Account Open Inquiry"
   stack: ["Angular/black/white","MongoDB","mysql","loopback","npm","Eslint","Prettier","github/black/white"]
   images: [{"itemImageSrc":"/img/projects/openDemat.webp","alt":"Open a Demat Account Online: Demat Account Opening at Upstox"}]
   video: ""

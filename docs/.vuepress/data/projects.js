@@ -1,5 +1,9 @@
 import { toKebabCase } from "../utils/index.js";
 
+export const SUPPORT_EMAIL = typeof __VITE_SUPPORT_EMAIL__ !== "undefined"
+  ? __VITE_SUPPORT_EMAIL__
+  : "support@stackseekers.com";
+
 export const freelance = [
   {
     name: "AI Dynamic CRUD App",
@@ -13,7 +17,7 @@ export const freelance = [
     link: "https://ai-dynamic-crud-app.stackseekers.com/",
     price: "0",
     currency: "USD",
-    contact: "mailto:jiwan.cse@gmail.com?subject=AI Dynamic CRUD App Inquiry",
+    contact: `mailto:${SUPPORT_EMAIL}?subject=AI Dynamic CRUD App Inquiry`,
     stack: [
       "javascript",
       "vuedotjs",
@@ -74,7 +78,7 @@ export const freelance = [
     link: "https://localxr.com",
     price: "0",
     currency: "USD",
-    contact: "mailto:jiwan.cse@gmail.com?subject=LocalXR Inquiry",
+    contact: `mailto:${SUPPORT_EMAIL}?subject=LocalXR Inquiry`,
     stack: [
       "nextdotjs/black/white",
       "react",
@@ -155,7 +159,7 @@ export const freelance = [
     link: "https://contact-form-app.stackseekers.com/",
     price: "0",
     currency: "USD",
-    contact: "mailto:jiwan.cse@gmail.com?subject=Contact Form Plugin Inquiry",
+    contact: `mailto:${SUPPORT_EMAIL}?subject=Contact Form Plugin Inquiry`,
     stack: [
       "javascript",
       "notion/black/white",
@@ -231,7 +235,7 @@ export const freelance = [
     domain: "Web3 & Influencer Marketing",
     schema: "https://schema.org/WebApplication",
     link: "https://vibe3.vibesquad.co",
-    contact: "mailto:jiwan.cse@gmail.com?subject=Vibe3 Platform Inquiry",
+    contact: `mailto:${SUPPORT_EMAIL}?subject=Vibe3 Platform Inquiry`,
     stack: [
       "nextdotjs/black/white",
       "react",
@@ -322,7 +326,7 @@ export const freelance = [
     link: "https://notion-crud.netlify.app/",
     price: "0",
     currency: "USD",
-    contact: "mailto:jiwan.cse@gmail.com?subject=Notion CRUD App Inquiry",
+    contact: `mailto:${SUPPORT_EMAIL}?subject=Notion CRUD App Inquiry`,
     stack: [
       "javascript",
       "vuedotjs",
@@ -401,7 +405,7 @@ export const freelance = [
     link: "https://ainarrator.stackseekers.com/",
     price: "0",
     currency: "USD",
-    contact: "mailto:jiwan.cse@gmail.com?subject=AI Narrator Inquiry",
+    contact: `mailto:${SUPPORT_EMAIL}?subject=AI Narrator Inquiry`,
     stack: [
       "javascript",
       "googleappsscript",
@@ -484,7 +488,7 @@ export const freelance = [
     link: "https://notion-p.netlify.app/",
     price: "0",
     currency: "USD",
-    contact: "mailto:jiwan.cse@gmail.com?subject=Inquiry : ",
+    contact: `mailto:${SUPPORT_EMAIL}?subject=Inquiry : `,
     stack: [
       "nodedotjs",
       "json/black/white",
@@ -567,7 +571,7 @@ export const freelance = [
     domain: "Digital Marketing",
     schema: "https://schema.org/WebApplication",
     link: "https://appliancerepairly.com",
-    contact: "mailto:jiwan.cse@gmail.com?subject=Inquiry : ",
+    contact: `mailto:${SUPPORT_EMAIL}?subject=Inquiry : `,
     stack: [
       "nextdotjs/black/white",
       "react",
@@ -679,7 +683,7 @@ export const freelance = [
     domain: "Digital Marketing",
     schema: "https://schema.org/BusinessApplication",
     link: "https://sr22insurancenow.com/",
-    contact: "mailto:jiwan.cse@gmail.com?subject=Inquiry : ",
+    contact: `mailto:${SUPPORT_EMAIL}?subject=Inquiry : `,
     features: [
       {
         text: "Campaign owners need fast, dynamic, and conversion-focused websites to maximize ROI from ad campaigns.",

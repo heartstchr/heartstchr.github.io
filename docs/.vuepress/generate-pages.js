@@ -1,13 +1,24 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import { freelance } from "./data/projects.js";
-import { services } from "./data/services.js";
-import { posts } from "./data/posts.js";
 import { toKebabCase } from "./utils/index.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// Read and extract SUPPORT_EMAIL from config.ts
+const configContent = fs.readFileSync(path.resolve(__dirname, "config.ts"), "utf-8");
+const match = configContent.match(/const\s+SUPPORT_EMAIL\s*=\s*["']([^"']+)["']/);
+const supportEmailFromConfig = match ? match[1] : "support@stackseekers.com";
+
+// Set on global so projects.js can evaluate it safely during dynamic import in Node
+global.VITE_SUPPORT_EMAIL = supportEmailFromConfig;
+
+// Dynamically import the data modules to ensure global is populated first
+const { freelance, SUPPORT_EMAIL } = await import("./data/projects.js");
+const { services } = await import("./data/services.js");
+const { posts } = await import("./data/posts.js");
+
 const docsRoot = path.resolve(__dirname, "..");
 const publicDir = path.resolve(__dirname, "./public");
 const outProjectDir = path.resolve(docsRoot, "web-development-projects");
@@ -92,7 +103,7 @@ project:
   currency: ${JSON.stringify(project.currency) || "USD"}
   link: ${JSON.stringify(project.link) || ""}
   codeLink: ${JSON.stringify(project.codeLink) || ""}
-  contact: ${JSON.stringify(project.contact) || ""}
+  contact: ${JSON.stringify(project.contact || `mailto:${SUPPORT_EMAIL}?subject=${project.name} Inquiry`)}
   stack: ${JSON.stringify(project.stack)}
   images: ${JSON.stringify(project.images)}
   video: ${JSON.stringify(project.video || "")}

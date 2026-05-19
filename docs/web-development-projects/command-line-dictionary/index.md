@@ -18,7 +18,7 @@ project:
   currency: USD
   link: 
   codeLink: "https://github.com/heartstchr/dic"
-  contact: 
+  contact: "mailto:support@stackseekers.com?subject=Command Line Dictionary Inquiry"
   stack: ["npm","Eslint","Prettier"]
   images: [{"itemImageSrc":"/img/projects/dictionary.webp","alt":"CLI for Dictionary"}]
   video: ""

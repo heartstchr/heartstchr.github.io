@@ -18,7 +18,7 @@ project:
   currency: USD
   link: "https://upstox.com/sub-broker/"
   codeLink: 
-  contact: 
+  contact: "mailto:support@stackseekers.com?subject=Partner Dashboard Upstox Inquiry"
   stack: ["Angular/black/white","MongoDB","mysql","loopback","npm","Eslint","Prettier","github/black/white"]
   images: [{"itemImageSrc":"/img/projects/partnerUpstox/partnerUpstox.webp","alt":"Partner Dashboard Upstox - Cover page"},{"itemImageSrc":"/img/projects/partnerUpstox/dashboard.webp","alt":"Partner Dashboard Upstox - Dashboard"},{"itemImageSrc":"/img/projects/partnerUpstox/leads.webp","alt":"Partner Dashboard Upstox - Leads management"},{"itemImageSrc":"/img/projects/partnerUpstox/customer.webp","alt":"Partner Dashboard Upstox - Customer management"},{"itemImageSrc":"/img/projects/partnerUpstox/earning.webp","alt":"Partner Dashboard Upstox - Earnings report"}]
   video: ""

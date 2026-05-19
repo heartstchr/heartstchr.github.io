@@ -18,7 +18,7 @@ project:
   currency: USD
   link: "https://plus.yitgroup.com/"
   codeLink: 
-  contact: 
+  contact: "mailto:support@stackseekers.com?subject=Yit Plus Inquiry"
   stack: ["Javascript","Vuedotjs","Axios","Express/black/white","nodedotjs","MongoDB","mysql","Git","mailgun","kentico","amazonec2","Eslint","Prettier"]
   images: [{"itemImageSrc":"/img/home/projects/YIT_plus.webp","alt":"YIT Plus - Login page"},{"itemImageSrc":"/img/projects/yitplus/login.webp","alt":"YIT Plus - Login page"},{"itemImageSrc":"/img/projects/yitplus/home.webp","alt":"YIT Plus - Home page"},{"itemImageSrc":"/img/projects/yitplus/discussion_board.webp","alt":"YIT Plus - Discussion board"},{"itemImageSrc":"/img/projects/yitplus/document.webp","alt":"YIT Plus - Document management page"},{"itemImageSrc":"/img/projects/yitplus/one_year_warranty.webp","alt":"YIT Plus - One year warranty page"},{"itemImageSrc":"/img/projects/yitplus/service_lounge.webp","alt":"YIT Plus - Service lounge page"},{"itemImageSrc":"/img/projects/yitplus/service_request.webp","alt":"YIT Plus - Service request category"},{"itemImageSrc":"/img/projects/yitplus/service_request_category.webp","alt":"YIT Plus - Service request category management"},{"itemImageSrc":"/img/projects/yitplus/admin.webp","alt":"YIT Plus - Admin dashboard"}]
   video: ""

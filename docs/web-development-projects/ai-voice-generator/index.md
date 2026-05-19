@@ -18,7 +18,7 @@ project:
   currency: "USD"
   link: "https://ainarrator.stackseekers.com/"
   codeLink: 
-  contact: "mailto:jiwan.cse@gmail.com?subject=AI Narrator Inquiry"
+  contact: "mailto:support@stackseekers.com?subject=AI Narrator Inquiry"
   stack: ["javascript","googleappsscript","googledocs","googledrive","html5","css","json/black/white"]
   images: [{"itemImageSrc":"/img/projects/ai-narrator/Google-docs-text-to-speech-ai-voice-ai-audio.webp","alt":"AI Narrator Google Docs Add-on Interface"},{"itemImageSrc":"/img/projects/ai-narrator/app-screenshot.webp","alt":"AI Narrator Application Screenshot"}]
   video: ""

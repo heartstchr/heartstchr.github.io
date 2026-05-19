@@ -18,7 +18,7 @@ project:
   currency: "USD"
   link: "https://notion-crud.netlify.app/"
   codeLink: 
-  contact: "mailto:jiwan.cse@gmail.com?subject=Notion CRUD App Inquiry"
+  contact: "mailto:support@stackseekers.com?subject=Notion CRUD App Inquiry"
   stack: ["javascript","vuedotjs","notion/black/white","html5","css","json/black/white","netlify","github/black/white"]
   images: [{"itemImageSrc":"/img/projects/notion-crud-app/Notion-crud-app-free.webp","alt":"Dynamic Form Generation from Notion Database"},{"itemImageSrc":"/img/projects/notion-crud-app/CRUD-app-free.webp","alt":"CRUD App Free Interface"},{"itemImageSrc":"/img/projects/notion-crud-app/edit-talent-pool.webp","alt":"Edit Talent Pool Interface"},{"itemImageSrc":"/img/projects/notion-crud-app/home-page.webp","alt":"Dynamic CRUD App Home Page"}]
   video: ""
