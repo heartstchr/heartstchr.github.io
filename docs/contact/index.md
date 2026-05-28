@@ -16,7 +16,7 @@ contributors: false
         Let’s Architect Your <span class="text-gradient">Next Phase</span> of Growth.
       </h1>
       <p class="text-xl md:text-2xl text-600 font-medium max-w-40rem mx-auto line-height-3 opacity-90">
-        Strategic engineering is the bridge between a business vision and a scalable reality. Whether you're navigating enterprise cloud migration or building the next AI-driven disruptor, let's establish the technical foundation for your growth.
+        Strategic engineering is the bridge between a business vision and a scalable reality. Whether you're scaling your core platform or building the next AI-driven disruptor, let's establish the technical foundation for your growth.
       </p>
     </div>
     <!-- Trust Matrix (Brief) -->

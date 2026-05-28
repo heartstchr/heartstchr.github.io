@@ -301,9 +301,8 @@ contributors: false
             I offer a variety of specialized engineering services including 
             <a href="/web-development-services/product-architecture-and-scaling/" class="no-underline text-xl" aria-label="Product Architecture">Product Architecture</a>, 
             <a href="/web-development-services/ai-and-automation-strategy/" class="no-underline text-xl" aria-label="AI Automation">AI & Automation</a>, 
-            <a href="/web-development-services/api-performance-and-integration/" class="no-underline text-xl" aria-label="API Design">High-Performance API Design</a>, 
-            <a href="/web-development-services/programmatic-seo-and-growth/" class="no-underline text-xl" aria-label="Programmatic SEO">Programmatic SEO</a>, and 
-            <a href="/web-development-services/enterprise-cloud-migration/" class="no-underline text-xl" aria-label="Cloud Migration">Enterprise Cloud Migration</a>. 
+            <a href="/web-development-services/api-performance-and-integration/" class="no-underline text-xl" aria-label="API Design">High-Performance API Design</a>, and 
+            <a href="/web-development-services/programmatic-seo-and-growth/" class="no-underline text-xl" aria-label="Programmatic SEO">Programmatic SEO</a>. 
             <p class="mt-2">Let’s find the best solution for your technical bottlenecks!</p>
           </div>
         </div>

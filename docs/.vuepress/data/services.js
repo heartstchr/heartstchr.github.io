@@ -114,44 +114,6 @@ export const services = [
     ],
   },
   {
-    name: "Enterprise Cloud Migration",
-    icon: "azure",
-    code: "enterprise-cloud-migration",
-    outcome: "Infrastructure Modernization",
-    metric: "Zero-Downtime",
-    keywords: ["cloud migration consultant", "legacy modernization", "enterprise frontend migration"],
-    idealFor: [
-      "Enterprises modernizing legacy applications",
-      "Teams moving to cloud-native architecture with minimal disruption",
-      "Organizations standardizing design systems and shared platforms",
-    ],
-    problems: [
-      "Legacy systems slowing delivery and increasing operational risk",
-      "Migration plans that create downtime or fragmented user experiences",
-      "Cross-team modernization efforts with no clean rollout strategy",
-    ],
-    deliverables: [
-      "Migration strategy with phased rollout plan",
-      "Modern frontend and platform architecture blueprint",
-      "Execution guidance to reduce regressions and downtime risk",
-    ],
-    proof: "Includes migration work for global banking interfaces and enterprise-grade frontend systems.",
-    faq: [
-      {
-        question: "Can you help migrate only part of a platform?",
-        answer: "Yes. I can design incremental migration paths that reduce risk and keep delivery moving while legacy systems are retired in stages.",
-      },
-      {
-        question: "Do you support frontend-only migrations too?",
-        answer: "Yes. Many migration engagements focus on frontend platforms, design systems, routing, performance, and shared component strategy.",
-      },
-    ],
-    descriptions: [
-      "Specialized in the 'High-Stakes' migration of legacy systems to modern, cloud-native architectures. I ensure zero-downtime transitions for mission-critical banking and fintech applications.",
-      "Proven experience in managing complex frontend migrations and integrating global design systems like the Emerald Design System.",
-    ],
-  },
-  {
     name: "Programmatic Growth Engines",
     icon: "googlechrome",
     code: "programmatic-seo-and-growth",

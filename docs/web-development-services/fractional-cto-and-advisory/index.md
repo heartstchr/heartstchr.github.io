@@ -22,7 +22,7 @@ service:
   proof: "Trusted by enterprise and high-growth teams as an architect who can connect roadmap, execution, and long-term platform health."
   faq: [{"question":"Is this advisory only, or will you get hands-on too?","answer":"It can be either. Many engagements start with advisory and expand into architecture reviews, delivery support, and selected implementation."},{"question":"What stage companies benefit most from fractional CTO support?","answer":"Usually pre-scale startups, post-MVP teams, and companies going through a platform transition or technical reset."}]
   previousService: {"name":"ROI-Driven AI Automation","link":"/web-development-services/ai-and-automation-strategy/"}
-  nextService: {"name":"Enterprise Cloud Migration","link":"/web-development-services/enterprise-cloud-migration/"}
+  nextService: {"name":"Programmatic Growth Engines","link":"/web-development-services/programmatic-seo-and-growth/"}
 ---
 <article class="service-sales-page">
   <section class="mb-6">
@@ -173,7 +173,7 @@ service:
         </div>
         <div class="col-12 md:col-4">
           <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="no-underline block p-4 surface-800 border-round-2xl hover:surface-700 transition-all border-1 border-white-alpha-10 h-full">
-            <div class="text-primary-400 font-bold text-xs mb-2 uppercase">Enterprise Migration</div>
+            <div class="text-primary-400 font-bold text-xs mb-2 uppercase">Enterprise Platform</div>
             <div class="text-white font-bold mb-2">ABN AMRO Rebuild</div>
             <div class="text-400 text-sm">Global banking infrastructure.</div>
           </a>

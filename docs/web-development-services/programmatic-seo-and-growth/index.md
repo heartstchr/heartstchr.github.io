@@ -21,7 +21,7 @@ service:
   deliverables: ["Search architecture for scalable location and category pages","Fast page-generation system with templates, data, and internal linking","Lead capture flows tied directly to commercial search intent"]
   proof: "Built directory and lead-generation platforms with dynamic routing, strong crawlability, and conversion-focused page structures."
   faq: [{"question":"Is programmatic SEO just AI content at scale?","answer":"No. The core is structured data, useful page templates, clean internal linking, performance, and commercial intent. AI can help, but it is not the strategy by itself."},{"question":"Can you build both the SEO system and the lead funnel?","answer":"Yes. The strongest results come when information architecture, page generation, forms, and routing are designed together."}]
-  previousService: {"name":"Enterprise Cloud Migration","link":"/web-development-services/enterprise-cloud-migration/"}
+  previousService: {"name":"Fractional CTO Strategy","link":"/web-development-services/fractional-cto-and-advisory/"}
   nextService: {"name":"High-Performance API Design","link":"/web-development-services/api-performance-and-integration/"}
 ---
 <article class="service-sales-page">
@@ -173,7 +173,7 @@ service:
         </div>
         <div class="col-12 md:col-4">
           <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="no-underline block p-4 surface-800 border-round-2xl hover:surface-700 transition-all border-1 border-white-alpha-10 h-full">
-            <div class="text-primary-400 font-bold text-xs mb-2 uppercase">Enterprise Migration</div>
+            <div class="text-primary-400 font-bold text-xs mb-2 uppercase">Enterprise Platform</div>
             <div class="text-white font-bold mb-2">ABN AMRO Rebuild</div>
             <div class="text-400 text-sm">Global banking infrastructure.</div>
           </a>

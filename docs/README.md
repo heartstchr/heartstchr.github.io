@@ -38,8 +38,8 @@ copyright: false
         <div class="col-12 md:col-auto">
           <div class="glass-effect px-4 py-3 border-round-2xl border-left-3 border-blue-500 shadow-4">
              <div class="text-xs font-bold text-500 uppercase mb-1">ABN AMRO Scale</div>
-             <div class="text-2xl font-bold text-900 line-height-1">Global Migration</div>
-             <div class="text-xs text-600 mt-1">Enterprise Cloud Architecture</div>
+             <div class="text-2xl font-bold text-900 line-height-1">Global Platform</div>
+             <div class="text-xs text-600 mt-1">Enterprise SaaS Architecture</div>
           </div>
         </div>
       </div>
@@ -267,7 +267,7 @@ copyright: false
     <div class="col-12 lg:col-5 relative z-1">
       <h3 class="text-sm font-bold uppercase text-purple-500 letter-spacing-wide mb-3">Resilient Infrastructure</h3>
       <h2 class="text-4xl md:text-5xl font-bold mb-4 mt-0 tracking-tight">Enterprise SaaS & Scalable Apps</h2>
-      <p class="text-lg line-height-3 text-700 mb-6 opacity-90">Sophisticated web applications designed for absolute reliability. From high-complexity banking portal migrations to high-concurrency dashboards, we architect fast, resilient systems that grow with your user base.</p>
+      <p class="text-lg line-height-3 text-700 mb-6 opacity-90">Sophisticated web applications designed for absolute reliability. From high-complexity banking portal engineering to high-concurrency dashboards, we architect fast, resilient systems that grow with your user base.</p>
       <ul class="list-none p-0 m-0 mb-6 text-700">
         <li class="flex align-items-center mb-3"><i class="pi pi-check-circle text-green-500 mr-3"></i> Predictable, crash-resistant interfaces</li>
         <li class="flex align-items-center mb-3"><i class="pi pi-check-circle text-green-500 mr-3"></i> Zero-downtime legacy modernisation</li>
@@ -500,7 +500,7 @@ copyright: false
       </AccordionTab>
       <AccordionTab header="Q. What if our current codebase is a 'legacy mess'?">
         <p class="m-0 text-700 line-height-3">
-          That is where I do my best work. I specialize in phased migrations and architectural resets — fixing the structural debt while keeping the product running, ensuring zero downtime during the modernization.
+          That is where I do my best work. I specialize in phased modernizations and architectural resets — fixing the structural debt while keeping the product running, ensuring zero downtime during the modernization.
         </p>
       </AccordionTab>
     </Accordion>

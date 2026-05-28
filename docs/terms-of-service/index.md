@@ -40,8 +40,8 @@ Stack Seekers provides comprehensive web development and digital solutions servi
 
 - **Technical Consulting and Advisory:** Architecture planning, technology selection, and best practices guidance
 - **Code Review and Quality Assurance:** Code auditing, testing, and performance optimization
-- **Hosting and Deployment Services:** Server setup, deployment, and maintenance
-- **Database Design and Management:** Database architecture, optimization, and migration services
+- **Deployment Configuration:** Environment and deployment setup
+- **Database Design and Management:** Database architecture and optimization
 - **Security Implementation:** Security audits, vulnerability assessments, and security best practices
 
 ### Support and Maintenance
@@ -89,7 +89,7 @@ As a client engaging our services, you agree to fulfill the following responsibi
 
 - **Resource Availability:** Ensure key stakeholders are available for meetings, reviews, and decision-making
 - **Environment Setup:** Provide necessary development environments, staging servers, or testing platforms
-- **Domain and Hosting:** Provide domain access, hosting credentials, or arrange for hosting services as needed
+- **Domain and Platform Access:** Provide domain access or deployment platform access as needed
 - **Third-Party Services:** Coordinate with third-party service providers when required for project completion
 
 ## Our Responsibilities
@@ -135,7 +135,7 @@ Intellectual property ownership is clearly defined to protect both parties' inte
 - **Custom Code:** Client-specific code, configurations, and customizations become client property
 - **Content Ownership:** Clients retain ownership of all content, images, text, and materials they provide
 - **Brand Assets:** Client logos, trademarks, and brand elements remain client property
-- **Domain and Hosting:** Clients maintain ownership of their domain names and hosting accounts
+- **Domain and Platform Accounts:** Clients maintain ownership of their domain names and third-party platform accounts
 
 ### Our Retained Rights
 

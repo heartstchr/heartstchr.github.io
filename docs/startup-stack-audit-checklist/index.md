@@ -146,7 +146,7 @@ head:
              </li>
              <li class="mb-3 flex align-items-start gap-2">
                 <i class="pi pi-check text-primary mt-1"></i>
-                <span><strong>Data Integrity & Security:</strong> Protecting customer data and ensuring your <a href="/web-development-services/enterprise-cloud-migration/" class="text-primary font-bold">cloud architecture</a> is resilient against data loss.</span>
+                <span><strong>Data Integrity & Security:</strong> Protecting customer data and ensuring your system architecture is resilient against data loss.</span>
              </li>
              <li class="mb-3 flex align-items-start gap-2">
                 <i class="pi pi-check text-primary mt-1"></i>
@@ -213,8 +213,8 @@ head:
               <div class="text-primary-400 font-bold uppercase tracking-widest text-sm mb-4">Security & Reliability</div>
               <ul class="list-none p-0 m-0">
                  <li class="mb-3">
-                    <a href="/web-development-services/enterprise-cloud-migration/" class="no-underline text-300 hover:text-white transition-colors flex align-items-center gap-2">
-                       <i class="pi pi-arrow-right text-xs"></i> Cloud Infrastructure Audit
+                    <a href="/web-development-services/product-architecture-and-scaling/" class="no-underline text-300 hover:text-white transition-colors flex align-items-center gap-2">
+                       <i class="pi pi-arrow-right text-xs"></i> Infrastructure Scalability Audit
                     </a>
                  </li>
                  <li class="mb-3">

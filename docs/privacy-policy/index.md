@@ -176,7 +176,7 @@ We use the following third-party services that may collect information:
 
 **Technical Infrastructure**
 
-- VuePress hosting and deployment services
+- Static site deployment platforms
 
 All third-party integrations are carefully selected for their security standards and privacy compliance.
 
