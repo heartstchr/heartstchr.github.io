@@ -27,6 +27,7 @@ project:
   details: ""
   previousProject: {"name":"Call Matrix","link":"/web-development-projects/call-matrix/"}
   nextProject: {"name":"Stock Market","link":"/web-development-projects/stock-market/"}
+  relatedCaseStudy: null
 ---
 
 <section class="mt-4 mb-6">
@@ -222,6 +223,24 @@ project:
 </div>
 
 </div>
+
+<div v-if="$frontmatter.project.relatedCaseStudy" class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100 mb-6">
+  <div class="flex flex-column md:flex-row align-items-center justify-content-between gap-4">
+    <div>
+      <h3 class="text-2xl font-bold m-0 flex align-items-center gap-2">
+        <i class="pi pi-building text-primary"></i>
+        {{ $frontmatter.project.relatedCaseStudy.title }}
+      </h3>
+      <p class="text-700 m-0 mt-2 line-height-3">{{ $frontmatter.project.relatedCaseStudy.description }}</p>
+    </div>
+    <div>
+      <a :href="$frontmatter.project.relatedCaseStudy.link" class="no-underline">
+        <Button :label="$frontmatter.project.relatedCaseStudy.buttonText" icon="pi pi-arrow-right" iconPos="right" severity="primary" raised rounded class="font-bold white-space-nowrap" />
+      </a>
+    </div>
+  </div>
+</div>
+
 <ConsultingBridge />
 <div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
       <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">

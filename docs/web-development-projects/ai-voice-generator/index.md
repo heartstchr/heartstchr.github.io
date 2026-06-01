@@ -27,6 +27,7 @@ project:
   details: "## Engineering Architecture: Ambient AI & Media Synthesis\n\nAI Narrator is a sophisticated **Google Workspace Integration** that transforms Google Docs from a static text editor into an AI-powered media production studio. It demonstrates how to orchestrate distributed cloud services (Gemini, Google Drive, and Apps Script) into a cohesive, zero-friction user workflow.\n\n### 1. The Workflow Engine (Layman's Perspective)\nImagine you have a **Professional Narrator** sitting inside your Google Doc. Instead of copying your script, opening a separate recording app, and manually saving files, you just highlight a paragraph and click a button. \n\nThe \"Narrator\" (Gemini AI) reads your text, applies your specific instructions (like \"speak excitedly\" or \"use a calm teaching tone\"), and instantly places a high-quality audio file into a folder on your desk (Google Drive). It turns your document into a living, breathing media asset without you ever leaving the page.\n\n### 2. Technical Architecture & Media Pipeline\nThe system is built on an event-driven architecture using Google Apps Script (GAS) to bridge the gap between the document UI and the Gemini Media API.\n\n```mermaid\ngraph LR\n    subgraph \"Workspace Environment\"\n        Doc[Google Doc] --> Sidebar[Custom Vue/HTML Sidebar]\n        Sidebar --> GAS[Google Apps Script Engine]\n    end\n\n    subgraph \"AI Processing Layer\"\n        GAS --> GeminiTTS[Gemini TTS API]\n        GAS --> GeminiAnalysis[Gemini Content Analysis]\n    end\n\n    subgraph \"Media & Storage\"\n        GeminiTTS --> AudioBuffer[Base64 Audio Data]\n        AudioBuffer --> Drive[Google Drive Storage]\n        Drive --> UIPlayer[In-Sidebar Audio Player]\n    end\n\n    subgraph \"Analytics & Reporting\"\n        GeminiAnalysis --> HTMLReport[HTML Performance Report]\n        HTMLReport --> Drive\n    end\n```\n\n### 3. Key Engineering Pillars\n\n#### A. The \"Direct-to-Drive\" Media Pipeline\nOne of the core technical challenges was handling binary audio data within the constraints of Google Apps Script. We implemented a seamless pipeline where:\n- **Text Extraction:** GAS intelligently extracts text, handling complex document structures like tables and lists.\n- **Base64 Orchestration:** Binary audio streams from Gemini are converted and passed through the GAS bridge.\n- **Automatic Filing:** The system automatically manages a persistent \"AI Narrator\" folder structure in the user's Drive, ensuring media assets are organized and accessible for post-production.\n\n#### B. Context-Aware Speech Generation\nUnlike standard Text-to-Speech (TTS) tools, AI Narrator allows for **Adverbial Instruction Injection**. We don't just send text to the API; we send a \"Performance Brief.\" By wrapping the text with AI-driven tone and style modifiers, we produce audio that matches the *intent* of the content, whether it's an excitable YouTube script or a gentle educational guide.\n\n#### C. Embedded Workflow Architecture\nThis project is a prime example of **Ambient AI**. Instead of a standalone portal, the logic lives where the content is created. This required:\n- **Optimized UI (HTML Service):** A high-performance sidebar that manages state (API keys, voice selections) across multiple document sessions.\n- **Asynchronous Processing:** Using `google.script.run` to handle long-running audio generation without freezing the document interface.\n\n### 4. Strategic Business Value (ROI)\n- **Reduced Production Overhead:** Lowers the cost of professional narration to nearly zero for educators and creators.\n- **Workflow Consolidation:** Eliminates \"App Fatigue\" by keeping the entire production cycle (Scripting -> Analysis -> Recording) inside Google Docs.\n- **Content Accessibility:** Enables rapid generation of audio versions for all written materials, improving compliance and reaching broader audiences.\n\nAI Narrator proves that the most valuable AI tools are not the ones that require new habits, but the ones that **enhance existing ones**.\n"
   previousProject: {"name":"Dynamic CRUD App Free","link":"/web-development-projects/dynamic-crud-app-free/"}
   nextProject: {"name":"Service Request System","link":"/web-development-projects/service-request-system/"}
+  relatedCaseStudy: null
 ---
 
 <section class="mt-4 mb-6">
@@ -280,6 +281,24 @@ AI Narrator proves that the most valuable AI tools are not the ones that require
 </div>
 
 </div>
+
+<div v-if="$frontmatter.project.relatedCaseStudy" class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100 mb-6">
+  <div class="flex flex-column md:flex-row align-items-center justify-content-between gap-4">
+    <div>
+      <h3 class="text-2xl font-bold m-0 flex align-items-center gap-2">
+        <i class="pi pi-building text-primary"></i>
+        {{ $frontmatter.project.relatedCaseStudy.title }}
+      </h3>
+      <p class="text-700 m-0 mt-2 line-height-3">{{ $frontmatter.project.relatedCaseStudy.description }}</p>
+    </div>
+    <div>
+      <a :href="$frontmatter.project.relatedCaseStudy.link" class="no-underline">
+        <Button :label="$frontmatter.project.relatedCaseStudy.buttonText" icon="pi pi-arrow-right" iconPos="right" severity="primary" raised rounded class="font-bold white-space-nowrap" />
+      </a>
+    </div>
+  </div>
+</div>
+
 <ConsultingBridge />
 <div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
       <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">

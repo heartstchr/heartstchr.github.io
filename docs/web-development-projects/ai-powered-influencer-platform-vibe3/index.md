@@ -27,6 +27,7 @@ project:
   details: "## Engineering Architecture: Web3 Social-Commerce Orchestration\n\nVibe3 is a high-performance **AI-powered Marketplace Architecture** designed to bridge the gap between premium brands and Web3 content creators. It demonstrates a sophisticated integration of **Next.js 15**, **Blockchain Wallets**, and **PWA (Progressive Web App)** technology to deliver a mobile-first, transactionally secure influencer economy.\n\n### 1. The Marketing Engine (Layman's Perspective)\nThink of Vibe3 as an **Automated Digital Talent Agent**. \n\nIn the old world, a brand would spend weeks searching for the right influencer, negotiating deals, and worrying about payments. Vibe3 does all of this in seconds. Our \"Digital Agent\" (AI) analyzes thousands of creators, finds the perfect match for a brand's specific \"vibe,\" and handles the entire contract and payment process instantly using secure \"Digital Handshakes\" (Blockchain). It's a high-speed, high-trust marketplace that lives right on your phone's home screen like a native app.\n\n### 2. Technical Architecture & Blockchain Flow\nThe platform utilizes a modern React 19 / Next.js 15 stack, orchestrating a complex set of decentralized identity and payment protocols.\n\n```mermaid\ngraph TD\n    subgraph \"Identity & Auth Layer\"\n        User[Creator / Brand] --> Auth[Next-Auth + Web3 Wallet]\n        Auth --> Solana[Solana Wallet Integration]\n        Auth --> TON[TON Connect Integration]\n    end\n\n    subgraph \"AI Matching Engine\"\n        Data[Social Engagement Data] --> AIMatch[Matching Algorithm]\n        AIMatch --> Score[Compatibility Scoring]\n    end\n\n    subgraph \"Campaign Orchestration (PWA)\"\n        Score --> Dashboard[Interactive Creator Dashboard]\n        Dashboard --> Campaign[Campaign Smart Contract]\n        Campaign --> PWA[Service Worker / Offline Sync]\n    end\n\n    subgraph \"Payment & Settlement\"\n        Campaign --> MultiToken[Multi-Token Payment Bridge]\n        MultiToken --> Settlement[Automated Payouts]\n    end\n```\n\n### 3. Key Engineering Pillars\n\n#### A. Multi-Chain Identity Architecture\nIntegrating Web3 wallets (Solana and TON) into a standard SaaS workflow requires a robust **Identity Layer**.\n- **Unified Session Management:** We implemented a custom Next-Auth adapter that bridges traditional OAuth (Social Login) with Wallet-based authentication, allowing users to transition seamlessly between \"Web2\" convenience and \"Web3\" security.\n- **Cross-Chain Interoperability:** The frontend manages multiple blockchain providers (`@solana/web3.js` and `@tonconnect/ui-react`) within a single reactive state, ensuring that transaction signatures and wallet statuses are synchronized across the entire app.\n\n#### B. High-Fidelity Cyber-Design System\nTo compete in the influencer space, the UI must be \"Consumer-Grade.\"\n- **Glassmorphism & Neon Layering:** Built with Tailwind CSS v4, the design system utilizes advanced backdrop-filters and gradient animations to create a \"Cyber-Themed\" aesthetic that resonates with tech-native creators.\n- **PWA Mobility:** The platform is architected as a full Progressive Web App. By leveraging Service Workers and a custom manifest, Vibe3 achieves \"Installability,\" allowing it to bypass app store friction while maintaining a native-app feel and offline accessibility.\n\n#### C. AI-Assisted Content Orchestration\nThe \"Suggested Post\" interface is a technical showcase of **LLM-UI Integration**.\n- **Real-Time Synthesis:** The UI dynamically adapts AI-generated content suggestions into platform-specific previews (Instagram vs. X vs. TikTok) at runtime, allowing creators to iterate on campaign briefs in seconds.\n- **Engagement Prediction UI:** We built interactive ROI visualization widgets that translate complex data models into simple, actionable insights for brands.\n\n### 4. Strategic Business Value (ROI)\n- **Reduced Onboarding Friction:** By offering both Social and Wallet login, Vibe3 captures a broader audience than pure-crypto platforms.\n- **Enterprise-Scale Security:** Blockchain-based campaign settlements eliminate \"Payment Risk\" and reduce administrative overhead by up to 90%.\n- **High Retention PWA:** Being \"installed\" on a user's home screen significantly increases campaign participation rates and platform engagement compared to traditional web portals.\n\nVibe3 proves that **Modern Product Architecture** is about the elegant fusion of AI, Blockchain, and premium Frontend engineering.\n"
   previousProject: {"name":"Contact Form Plugin","link":"/web-development-projects/contact-form-plugin/"}
   nextProject: {"name":"Dynamic CRUD App Free","link":"/web-development-projects/dynamic-crud-app-free/"}
+  relatedCaseStudy: null
 ---
 
 <section class="mt-4 mb-6">
@@ -282,6 +283,24 @@ Vibe3 proves that **Modern Product Architecture** is about the elegant fusion of
 </div>
 
 </div>
+
+<div v-if="$frontmatter.project.relatedCaseStudy" class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100 mb-6">
+  <div class="flex flex-column md:flex-row align-items-center justify-content-between gap-4">
+    <div>
+      <h3 class="text-2xl font-bold m-0 flex align-items-center gap-2">
+        <i class="pi pi-building text-primary"></i>
+        {{ $frontmatter.project.relatedCaseStudy.title }}
+      </h3>
+      <p class="text-700 m-0 mt-2 line-height-3">{{ $frontmatter.project.relatedCaseStudy.description }}</p>
+    </div>
+    <div>
+      <a :href="$frontmatter.project.relatedCaseStudy.link" class="no-underline">
+        <Button :label="$frontmatter.project.relatedCaseStudy.buttonText" icon="pi pi-arrow-right" iconPos="right" severity="primary" raised rounded class="font-bold white-space-nowrap" />
+      </a>
+    </div>
+  </div>
+</div>
+
 <ConsultingBridge />
 <div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
       <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">

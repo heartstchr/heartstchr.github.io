@@ -27,6 +27,7 @@ project:
   details: "## Engineering Architecture: Serverless Lead-Capture Infrastructure\n\nThe Contact Form Plugin is a high-reliability, **Widget-as-a-Service (WaaS)** architecture. It demonstrates how to package complex backend logic (validation, security, and storage) into a lightweight, embeddable JavaScript asset that can be deployed across any web environment with zero infrastructure overhead.\n\n### 1. The Intake Engine (Layman's Perspective)\nThink of this plugin as a **Self-Serve Postbox** that you can place on any street corner (website). \n\nNormally, a postbox needs a complex system to verify the sender, check for \"junk mail\" (spam), and ensure the letter gets to the right filing cabinet (database). This plugin does all that automatically. You just \"drop\" the postbox onto your site, and it handles the heavy lifting of checking IDs, filtering out trash, and neatly organizing every message in your digital office (Notion) so you never miss a lead.\n\n### 2. Technical Architecture & Security Flow\nThe system utilizes a decoupled, serverless architecture to ensure maximum uptime and security without the need for a dedicated backend server.\n\n```mermaid\ngraph TD\n    subgraph \"Client Environment (Any Website)\"\n        Widget[ContactWidget.js] --> Config[User Configuration]\n        Config --> UI[Dynamic Form Generator]\n        UI --> Validation[Client-side Validation]\n    end\n\n    subgraph \"Security & Processing Layer (Netlify Functions)\"\n        Validation --> RateLimit[IP-based Rate Limiter]\n        RateLimit --> CAPTCHA[reCAPTCHA Verification]\n        CAPTCHA --> Sanitizer[XSS/HTML Sanitization]\n        Sanitizer --> Payload[Secure JSON Payload]\n    end\n\n    subgraph \"Persistence Layer (Notion)\"\n        Payload --> NotionAPI[Notion Integration]\n        NotionAPI --> CRM[Structured Notion Database]\n    end\n\n    subgraph \"System Feedback\"\n        CRM --> GASuccess[Success Response]\n        GASuccess --> UINotification[Toast/Success Message]\n    end\n```\n\n### 3. Key Engineering Pillars\n\n#### A. The \"Generator\" Pattern (Configuration-Driven UI)\nThe core of the plugin is a class-based generator that synthesizes the UI at runtime.\n- **Dynamic Synthesis:** The widget \"builds\" itself based on a JSON configuration object. It injects specific field types (select, tel, email) and applies custom themes (colors, radii) without requiring hard-coded HTML.\n- **Deep-Merge Configuration:** Supports a robust \"Defaults vs. User-Overrides\" pattern, making it highly customizable for developers while remaining simple for basic use.\n\n#### B. Multi-Layered Security Architecture\nTo prevent spam and injection attacks in a public-facing widget, we implemented a strict security stack:\n- **Rate Limiting:** A sliding-window IP monitor prevents automated bot submissions from overwhelming the system.\n- **Input Sanitization:** Every field is processed through a server-side sanitizer that strips dangerous tags (`<script>`, `<iframe>`) and event handlers, protecting the backend storage from XSS.\n- **Double-Validation:** Validation logic is mirrored on both the client (for UX speed) and the server (for data integrity).\n\n#### C. Build-Time Environment Injection\nTo keep the widget lightweight and avoid hard-coding secrets, the build pipeline (`build-inject-env.js`) dynamically injects environment-specific variables like API endpoints and CAPTCHA keys. This allows the same source code to be deployed across different staging and production environments seamlessly.\n\n### 4. Strategic Business Value (ROI)\n- **Reduced Implementation Time:** Deploying a custom, secure lead-capture form takes minutes instead of hours of backend development.\n- **Zero Maintenance:** By using serverless functions and Notion, there are no databases to manage or servers to patch.\n- **Scalable Data Intake:** All leads are centralized in a structured Notion database, allowing teams to use it as a lightweight CRM without paying for expensive enterprise software.\n\nThis project is a technical blueprint for **Productizing Reusable Components**, turning a common development task into a scalable architectural asset.\n"
   previousProject: {"name":"Local Home Services Pros","link":"/web-development-projects/local-home-services-pros/"}
   nextProject: {"name":"AI-Powered Influencer Platform - Vibe3","link":"/web-development-projects/ai-powered-influencer-platform-vibe3/"}
+  relatedCaseStudy: null
 ---
 
 <section class="mt-4 mb-6">
@@ -282,6 +283,24 @@ This project is a technical blueprint for **Productizing Reusable Components**, 
 </div>
 
 </div>
+
+<div v-if="$frontmatter.project.relatedCaseStudy" class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100 mb-6">
+  <div class="flex flex-column md:flex-row align-items-center justify-content-between gap-4">
+    <div>
+      <h3 class="text-2xl font-bold m-0 flex align-items-center gap-2">
+        <i class="pi pi-building text-primary"></i>
+        {{ $frontmatter.project.relatedCaseStudy.title }}
+      </h3>
+      <p class="text-700 m-0 mt-2 line-height-3">{{ $frontmatter.project.relatedCaseStudy.description }}</p>
+    </div>
+    <div>
+      <a :href="$frontmatter.project.relatedCaseStudy.link" class="no-underline">
+        <Button :label="$frontmatter.project.relatedCaseStudy.buttonText" icon="pi pi-arrow-right" iconPos="right" severity="primary" raised rounded class="font-bold white-space-nowrap" />
+      </a>
+    </div>
+  </div>
+</div>
+
 <ConsultingBridge />
 <div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
       <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">

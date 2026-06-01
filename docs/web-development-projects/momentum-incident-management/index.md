@@ -27,6 +27,7 @@ project:
   details: "## Engineering Architecture: Enterprise Incident Management Engine\n\nMomentum is a high-performance **Full-Stack ITSM (IT Service Management) platform** designed to replicate the core functionality of enterprise tools like ServiceNow without the associated bloat. It demonstrates a sophisticated **Incident-to-Resolution Lifecycle** powered by a robust role-based workflow engine.\n\n### 1. The Operations Engine (Layman's Perspective)\nThink of Momentum as an **Automated Digital Dispatcher**. \n\nIn a busy office, when something breaks (an \"Incident\"), you normally have to call around, send emails, and hope someone fixes it. This platform acts as the \"Dispatcher\" who takes the call, instantly categorizes the problem, assigns it to the right \"Repair Team\" (based on their role), and tracks every step until the job is done. It ensures that nothing falls through the cracks and provides a \"Master Dashboard\" for management to see exactly how the office is performing in real-time.\n\n### 2. Technical Architecture & Incident Lifecycle\nThe system utilizes a modern Monorepo architecture, bridging a Vue 3/PrimeVue frontend with a secure Node.js/MongoDB backend.\n\n```mermaid\ngraph TD\n    subgraph \"Intake & Identification\"\n        User[End User] --> TicketForm[Incident Submission]\n        TicketForm --> Auth[JWT Role Validation]\n    end\n\n    subgraph \"Workflow Orchestration (Server)\"\n        Auth --> StateEngine[Incident State Machine]\n        StateEngine --> CI[Configuration Item Linkage]\n        CI --> Assign[Automatic Team Assignment]\n    end\n\n    subgraph \"Resolution & Management\"\n        Assign --> Task[Task Breakdown]\n        Task --> Collaboration[Rich Text & File Attachments]\n        Collaboration --> Resolve[Resolution & Closure]\n    end\n\n    subgraph \"Governance & Reporting\"\n        Resolve --> Audit[Full Audit Trail]\n        Audit --> Export[Excel/XLSX Reporting]\n        Admin[Admin Dashboard] --> Audit\n    end\n```\n\n### 3. Key Engineering Pillars\n\n#### A. State-Driven Workflow Automation\nThe core of Momentum is a strictly defined **Incident State Machine**. \n- **Deterministic Transitions:** Every ticket follows a validated path (e.g., New -> Assigned -> In Progress -> Resolved). The system prevents \"illegal\" state jumps, ensuring data integrity for operational audits.\n- **Role-Based Visibility:** Using Vue 3 and Pinia, the UI dynamically reconfigures itself based on the user's role. An \"End User\" sees a simplified submission form, while an \"Operations Engineer\" sees a complex management console.\n\n#### B. The \"Lighter ServiceNow\" Pattern\nWe architected the system to prioritize **Developer Velocity** and **Runtime Performance**.\n- **PrimeVue Component Architecture:** By leveraging enterprise-grade components, we delivered a \"ServiceNow-like\" UX in a fraction of the time, focusing our engineering effort on the business logic rather than the UI primitives.\n- **Decoupled API Design:** The backend is built as a RESTful API with full Swagger documentation, allowing for future integrations with third-party automation tools or custom Slack/Teams bots.\n\n#### C. Integrated Configuration Management (CMDB)\nUnlike simple task lists, Momentum includes a lightweight **Configuration Item (CI) Model**.\n- **Asset Linkage:** Incidents are linked to specific IT assets (Servers, Software, Hardware). This allows for \"Impact Analysis\"—identifying how a single server failure might affect multiple business services.\n\n### 4. Strategic Business Value (ROI)\n- **Enterprise Capabilities, Startup Speed:** Provides the structure of an enterprise ITSM tool with the agility of a custom-built solution.\n- **Operational Transparency:** Replaces fragmented emails and spreadsheets with a single, searchable \"Source of Truth\" for all business operations.\n- **Cost Efficiency:** Eliminates the high licensing fees of enterprise platforms while providing a system that is 100% tailored to the company's specific workflows.\n\nMomentum proves that **Targeted Product Architecture** can outperform generic enterprise software by focusing on the specific operational needs of the business.\n"
   previousProject: {"name":"SR-22 Insurance Now","link":"/web-development-projects/sr-22-insurance-now/"}
   nextProject: {"name":"Marketplace Booking Platform","link":"/web-development-projects/marketplace-booking-platform/"}
+  relatedCaseStudy: null
 ---
 
 <section class="mt-4 mb-6">
@@ -282,6 +283,24 @@ Momentum proves that **Targeted Product Architecture** can outperform generic en
 </div>
 
 </div>
+
+<div v-if="$frontmatter.project.relatedCaseStudy" class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100 mb-6">
+  <div class="flex flex-column md:flex-row align-items-center justify-content-between gap-4">
+    <div>
+      <h3 class="text-2xl font-bold m-0 flex align-items-center gap-2">
+        <i class="pi pi-building text-primary"></i>
+        {{ $frontmatter.project.relatedCaseStudy.title }}
+      </h3>
+      <p class="text-700 m-0 mt-2 line-height-3">{{ $frontmatter.project.relatedCaseStudy.description }}</p>
+    </div>
+    <div>
+      <a :href="$frontmatter.project.relatedCaseStudy.link" class="no-underline">
+        <Button :label="$frontmatter.project.relatedCaseStudy.buttonText" icon="pi pi-arrow-right" iconPos="right" severity="primary" raised rounded class="font-bold white-space-nowrap" />
+      </a>
+    </div>
+  </div>
+</div>
+
 <ConsultingBridge />
 <div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
       <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">

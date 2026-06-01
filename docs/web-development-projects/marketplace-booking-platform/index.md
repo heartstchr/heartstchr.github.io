@@ -27,6 +27,7 @@ project:
   details: "## Engineering Architecture: Multi-Tenant Marketplace Foundation\n\nFTS (Full-Text Search Marketplace) is a robust, **Full-Stack Booking Engine** designed as a highly reusable foundation for any inventory-led business. It demonstrates a sophisticated **Multi-Sided Transactional Architecture** that handles complex role-based workflows, real-time availability, and secure payment settlements.\n\n### 1. The Marketplace Engine (Layman's Perspective)\nThink of this platform as a **Virtual Shopping Mall**. \n\nIn a physical mall, you have the **Mall Manager** (Admin) who ensures everything is running smoothly, the **Shop Owners** (Providers) who list their products and manage their own inventory, and the **Shoppers** (Customers) who browse, compare, and buy. \n\nThis platform handles all those interactions digitally. It ensures that when a Shopper buys something, the Shop Owner is notified instantly, the payment is handled securely at the \"Front Desk\" (Stripe), and the Mall Manager can oversee everything to ensure a high-quality experience for everyone.\n\n### 2. Technical Architecture & Transactional Flow\nThe system is built on a modern Monorepo architecture, separating concerns between a highly reactive Vue 3 frontend and a resilient Node.js micro-service backend.\n\n```mermaid\ngraph TD\n    subgraph \"The Demand Side (Customers)\"\n        Search[Search & Discovery] --> Filter[Availability Filters]\n        Filter --> Booking[Booking Request]\n    end\n\n    subgraph \"The Transactional Core (Server)\"\n        Booking --> Auth[JWT Role Verification]\n        Auth --> Inventory[Inventory Lock & Calendar Check]\n        Inventory --> Payment[Stripe Checkout Session]\n        Payment --> Webhook[Payment Settlement Webhook]\n    end\n\n    subgraph \"The Supply Side (Providers)\"\n        Webhook --> Notify[Provider Notification]\n        Notify --> Dashboard[Listing & Order Management]\n        Dashboard --> Avail[Availability Sync]\n    end\n\n    subgraph \"Platform Governance (Admins)\"\n        Admin[Admin Portal] --> Moderate[User & Listing Moderation]\n        Moderate --> Audit[Transaction Logs]\n    end\n```\n\n### 3. Key Engineering Pillars\n\n#### A. Role-Based Access Control (RBAC) Orchestration\nThe architecture implements a strict **RBAC Model** that ensures data isolation and security across three distinct user personas.\n- **State-Driven Permissions:** Using Pinia (Frontend) and JWT (Backend), the system dynamically toggles features and API access based on the user's role, preventing unauthorized inventory or financial data access.\n- **Multi-Tenant Listing Logic:** Providers can only manage their own \"stores\" (listings), while Admins maintain global oversight of the entire ecosystem.\n\n#### B. Distributed Booking & Calendar Logic\nTo prevent \"double-booking\" in a high-concurrency environment, we implemented a sophisticated reservation engine:\n- **Atomic Locks:** During the Stripe checkout phase, the system \"soft-locks\" the inventory to prevent overlapping requests.\n- **Real-Time Sync:** Availability is calculated dynamically based on existing booking records, ensuring that the customer only sees truly bookable dates.\n\n#### C. Universal Inventory Schema\nThe platform uses a **Polymorphic Inventory Model**. This means the \"Item\" being booked is not hard-coded as a specific product.\n- **Domain Agnostic:** By defining inventory through attributes rather than fixed fields, the same engine can power a rental marketplace, a professional service booking site, or an equipment reservation portal with minimal schema changes.\n\n### 4. Strategic Business Value (ROI)\n- **Time-to-Market:** Provides a 70% \"Head Start\" for any new marketplace venture by offering pre-built auth, payment, and booking flows.\n- **Operational Scalability:** Automates the most complex parts of marketplace management—payments and notifications—allowing founders to focus on growth rather than operations.\n- **Architectural Flexibility:** The clean separation between the inventory model and the booking logic allows the business to pivot to new verticals without rebuilding the core infrastructure.\n\nThis marketplace foundation is a technical blueprint for **Scalable Transactional Systems**, designed to grow from a niche portal to a global enterprise platform.\n"
   previousProject: {"name":"Momentum Incident Management","link":"/web-development-projects/momentum-incident-management/"}
   nextProject: {"name":"IBRebuild for ABN AMRO BANK N.V.","link":"/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/"}
+  relatedCaseStudy: null
 ---
 
 <section class="mt-4 mb-6">
@@ -284,6 +285,24 @@ This marketplace foundation is a technical blueprint for **Scalable Transactiona
 </div>
 
 </div>
+
+<div v-if="$frontmatter.project.relatedCaseStudy" class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100 mb-6">
+  <div class="flex flex-column md:flex-row align-items-center justify-content-between gap-4">
+    <div>
+      <h3 class="text-2xl font-bold m-0 flex align-items-center gap-2">
+        <i class="pi pi-building text-primary"></i>
+        {{ $frontmatter.project.relatedCaseStudy.title }}
+      </h3>
+      <p class="text-700 m-0 mt-2 line-height-3">{{ $frontmatter.project.relatedCaseStudy.description }}</p>
+    </div>
+    <div>
+      <a :href="$frontmatter.project.relatedCaseStudy.link" class="no-underline">
+        <Button :label="$frontmatter.project.relatedCaseStudy.buttonText" icon="pi pi-arrow-right" iconPos="right" severity="primary" raised rounded class="font-bold white-space-nowrap" />
+      </a>
+    </div>
+  </div>
+</div>
+
 <ConsultingBridge />
 <div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
       <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">

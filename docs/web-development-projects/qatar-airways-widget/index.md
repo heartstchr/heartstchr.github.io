@@ -27,6 +27,7 @@ project:
   details: "## Engineering Architecture: Modular Embeddable Widget Suite\n\nQA (TUI Travel Widgets) is an enterprise-grade **Modular Frontend System** built to deliver high-conversion travel booking experiences across a distributed network of partner websites. It demonstrates how to architect complex, multi-product search flows into lightweight, embeddable assets that maintain perfect brand consistency and operational reliability.\n\n### 1. The Booking Engine (Layman's Perspective)\nThink of these widgets as **Portable Travel Desks**. \n\nInstead of forcing a customer to go to a physical travel agency or one specific website, you can place a \"Travel Desk\" (Widget) on any digital street corner—a partner's blog, a news site, or an airline portal. Each desk is fully equipped to handle anything from booking a flight to reserving a car or a hotel. It's smart enough to know exactly which product the customer is looking for and processes the entire request instantly, connecting them to a global network of travel providers without them ever leaving the page.\n\n### 2. Technical Architecture & Integration Flow\nThe system utilizes a decoupled Vue.js architecture designed for cross-domain embedding, ensuring that the widget logic never conflicts with the host website's scripts or styles.\n\n```mermaid\ngraph TD\n    subgraph \"Host Environment (Partner Site)\"\n        Embed[Script Tag & Container] --> Lifecycle[Vue Instance Initialization]\n        Lifecycle --> ShadowDOM[Isolated Styling & HTML]\n    end\n\n    subgraph \"Product Orchestration Layer (Vue.js)\"\n        ShadowDOM --> TabManager[Universal Tab Orchestrator]\n        TabManager --> FlightForm[Flight Module]\n        TabManager --> HotelForm[Hotel Module]\n        TabManager --> PackageForm[Package Module]\n    end\n\n    subgraph \"The Abstraction Layer (Mixins)\"\n        FlightForm --> API[Unified API Mixin]\n        HotelForm --> API\n        PackageForm --> API\n        API --> Validator[Global Validation Engine]\n        API --> I18n[Internationalization Engine]\n    end\n\n    subgraph \"Enterprise Data (GoQuo Platform)\"\n        Validator --> GDS[Global Distribution System]\n        I18n --> TranslationDB[Regional Language Sets]\n    end\n```\n\n### 3. Key Engineering Pillars\n\n#### A. The \"Universal Product\" Abstraction\nTo manage 25+ different travel forms (Flights, Hotels, Transfers, etc.) without massive code duplication, we implemented a robust **Mixin-Based Architecture**.\n- **Shared Logic:** Core features like API communication, error handling, and form validation are abstracted into reusable mixins.\n- **Product Specialization:** Individual components (e.g., `SearchFlightForm.vue`) only contain the specific UI and data requirements for their product type, while inheriting all the heavy-lifting logic from the shared mixins.\n\n#### B. Zero-Conflict Embedding Strategy\nTravel widgets must run on a variety of partner websites with unpredictable CSS and JS environments. \n- **Scoped Styling:** We used a combination of PostCSS and SASS to ensure that the widget's styles never \"bleed\" out into the host page, and that the host page's styles don't break the widget's UI.\n- **Lifecycle Isolation:** Each widget operates as an independent Vue instance, allowing multiple widgets (e.g., a \"Flight Search\" and a \"Deal Banner\") to coexist on the same page without state collision.\n\n#### C. High-Efficiency Internationalization (i18n)\nServing the Malaysia market required support for multiple languages and currencies.\n- **Dynamic Translation Mapping:** The system uses a centralized translation engine that re-maps the entire UI based on the user's \"Culture Code\" at runtime.\n- **Regional Formatting:** Everything from date pickers to currency symbols is automatically localized, ensuring a seamless experience for diverse regional users.\n\n### 4. Strategic Business Value (ROI)\n- **Market Reach Expansion:** Allows TUI to place booking entry points on thousands of partner sites, drastically increasing the top of the sales funnel.\n- **Reduced Maintenance Overhead:** Fixes or feature updates in the core mixins are instantly propagated across all 25+ widget types, ensuring a single source of truth for the entire product suite.\n- **Conversion Optimization:** By providing a fast, responsive, and product-specific search experience directly in the user's current context, the widgets minimize \"Drop-off\" and maximize booking intent.\n\nQA proves that **Modular Frontend Architecture** is the key to scaling complex commercial offerings across a fragmented digital landscape.\n"
   previousProject: {"name":"Yit Plus","link":"/web-development-projects/yit-plus/"}
   nextProject: {"name":"Recipes","link":"/web-development-projects/recipes/"}
+  relatedCaseStudy: null
 ---
 
 <section class="mt-4 mb-6">
@@ -285,6 +286,24 @@ QA proves that **Modular Frontend Architecture** is the key to scaling complex c
 </div>
 
 </div>
+
+<div v-if="$frontmatter.project.relatedCaseStudy" class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100 mb-6">
+  <div class="flex flex-column md:flex-row align-items-center justify-content-between gap-4">
+    <div>
+      <h3 class="text-2xl font-bold m-0 flex align-items-center gap-2">
+        <i class="pi pi-building text-primary"></i>
+        {{ $frontmatter.project.relatedCaseStudy.title }}
+      </h3>
+      <p class="text-700 m-0 mt-2 line-height-3">{{ $frontmatter.project.relatedCaseStudy.description }}</p>
+    </div>
+    <div>
+      <a :href="$frontmatter.project.relatedCaseStudy.link" class="no-underline">
+        <Button :label="$frontmatter.project.relatedCaseStudy.buttonText" icon="pi pi-arrow-right" iconPos="right" severity="primary" raised rounded class="font-bold white-space-nowrap" />
+      </a>
+    </div>
+  </div>
+</div>
+
 <ConsultingBridge />
 <div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
       <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">

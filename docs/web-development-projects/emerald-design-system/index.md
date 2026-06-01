@@ -27,6 +27,7 @@ project:
   details: "## Engineering Architecture & The Atomic Vision\n\nThe Emerald Design System is a high-performance, framework-agnostic architectural asset designed for ABN AMRO. It shifts the development paradigm from building isolated features to assembling scalable, resilient interfaces using a centralized technical core.\n\n### 1. Atomic Design Methodology\nWe implemented the system using **Atomic Design** principles to ensure infinite scalability and maintainability. This structure allows us to break down complex banking interfaces into their fundamental building blocks:\n\n- **Atoms:** The most basic technical units (Buttons, Inputs, Typography, Icons).\n- **Molecules:** Functional groups of atoms working together (Search Bars, Form Fields with Labels).\n- **Organisms:** Complex UI patterns that form distinct sections of an interface (Navigation Bars, Transaction Lists, Credit Card Summary Cards).\n- **Templates & Pages:** Strategic layouts that orchestrate organisms into complete user flows.\n\n### 2. The Token-Driven Pipeline: The \"Master Blueprint\"\nThink of Design Tokens as a **Central Command Center** for the entire brand. Instead of hard-coding colors or fonts into hundreds of different apps, we use a single \"Master Blueprint.\" \n\nIf ABN AMRO decides to update its signature green or switch to a new corporate font, we don't need to change thousands of lines of code. We simply turn a single \"dial\" in the Token Engine, and every application—from the mobile banking app to internal dashboards—updates instantly and perfectly.\n\n```mermaid\ngraph TD\n    subgraph \"Central Command (The 'Dials')\"\n        Figma[Brand Colors & Fonts] --> StyleDict[Token Engine]\n    end\n\n    subgraph \"Instant Distribution\"\n        StyleDict --> App1[Mobile Banking App]\n        StyleDict --> App2[Internal Dashboards]\n        StyleDict --> App3[Corporate Web Portal]\n    end\n\n    subgraph \"Strategic Business Value\"\n        App1 --> Benefit1[Zero Brand Inconsistency]\n        App2 --> Benefit2[Rapid Rebranding Capability]\n        App3 --> Benefit3[Drastic Reduction in Dev Costs]\n    end\n```\n\nBy decoupling the \"look\" from the \"logic,\" we ensure that the brand remains cohesive and future-proof, allowing us to implement a company-wide dark mode or a visual refresh in days rather than months.\n\n### 3. Technical Implementation Strategy\nWe selected **Lit (Web Components)** as our primary engine to future-proof the investment.\n\n- **Encapsulation (Shadow DOM):** By leveraging native Shadow DOM, we ensure that Emerald components are immune to style bleeding from parent applications, a critical requirement in a multi-team enterprise environment.\n- **Interoperability:** Being built on Web Standards, these components run natively in any framework, eliminating \"vendor lock-in\" to a specific JS library.\n- **Performance:** Lit components have a near-zero runtime overhead, as they leverage the browser's built-in component model.\n\n### 4. Enterprise Distribution & Governance\nTo maintain high developer velocity across ABN AMRO’s engineering teams, the architecture includes:\n\n- **Centralized Registry:** Private NPM repository for versioned distribution.\n- **Automated CI/CD:** Every commit triggers visual regression testing via Chromatic and unit testing for accessibility (A11y) compliance.\n- **Storybook Workspace:** A live technical playground for engineers to test component behavior in isolation before integration.\n\nThis architectural approach reduced UI-related technical debt by **40%** and increased front-end delivery velocity by **3x** across the organization.\n"
   previousProject: {"name":"IBRebuild for ABN AMRO BANK N.V.","link":"/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/"}
   nextProject: {"name":"Tech Create","link":"/web-development-projects/tech-create/"}
+  relatedCaseStudy: {"title":"See it in Action: ABN AMRO Corporate Rebuild","description":"Discover how the Emerald Design System was deployed to modernize ABN AMRO's primary web portal, driving massive performance and UX gains.","link":"/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/","buttonText":"Read the Rebuild Case Study"}
 ---
 
 <section class="mt-4 mb-6">
@@ -273,20 +274,21 @@ This architectural approach reduced UI-related technical debt by **40%** and inc
   </div>
 </div>
 </div>
+
 </div>
 
-<div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100 mb-6">
+<div v-if="$frontmatter.project.relatedCaseStudy" class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100 mb-6">
   <div class="flex flex-column md:flex-row align-items-center justify-content-between gap-4">
     <div>
       <h3 class="text-2xl font-bold m-0 flex align-items-center gap-2">
         <i class="pi pi-building text-primary"></i>
-        See it in Action: ABN AMRO Corporate Rebuild
+        {{ $frontmatter.project.relatedCaseStudy.title }}
       </h3>
-      <p class="text-700 m-0 mt-2 line-height-3">Discover how the Emerald Design System was deployed to modernize ABN AMRO's primary web portal, driving massive performance and UX gains.</p>
+      <p class="text-700 m-0 mt-2 line-height-3">{{ $frontmatter.project.relatedCaseStudy.description }}</p>
     </div>
     <div>
-      <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="no-underline">
-        <Button label="Read the Rebuild Case Study" icon="pi pi-arrow-right" iconPos="right" severity="primary" raised rounded class="font-bold white-space-nowrap" />
+      <a :href="$frontmatter.project.relatedCaseStudy.link" class="no-underline">
+        <Button :label="$frontmatter.project.relatedCaseStudy.buttonText" icon="pi pi-arrow-right" iconPos="right" severity="primary" raised rounded class="font-bold white-space-nowrap" />
       </a>
     </div>
   </div>

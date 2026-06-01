@@ -1061,6 +1061,12 @@ export const freelance = [
         alt: "Emerald Design System Storybook",
       },
     ],
+    relatedCaseStudy: {
+      title: "See it in Action: ABN AMRO Corporate Rebuild",
+      description: "Discover how the Emerald Design System was deployed to modernize ABN AMRO's primary web portal, driving massive performance and UX gains.",
+      link: "/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/",
+      buttonText: "Read the Rebuild Case Study"
+    }
   },
   {
     name: "Tech Create",

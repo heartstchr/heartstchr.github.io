@@ -27,6 +27,7 @@ project:
   details: "## Engineering Architecture: High-Performance Creative Service Portal\n\nTechCreate (Koro) is a premium **Vue-based Brand Architecture** designed for a high-end creative agency. It demonstrates how to combine immersive media (4K video backgrounds, high-density galleries) with a lightweight, component-driven frontend that maintains sub-second performance and perfect responsiveness.\n\n### 1. The Presentation Engine (Layman's Perspective)\nThink of TechCreate as a **High-End Digital Showroom**. \n\nWhen a customer walks into a luxury car showroom, the lighting, the layout, and the visuals all signal quality before a single word is spoken. This website does the same for a creative business. It uses \"Cinematic Backgrounds\" and \"Interactive Displays\" (Video Portfolios) to instantly show the customer that we are experts in cutting-edge technology. It's built to look expensive and premium while being incredibly fast and easy to navigate on any device.\n\n### 2. Technical Architecture & Asset Orchestration\nThe platform utilizes a modern SPA (Single Page Application) architecture, prioritizing asset optimization and reactive UI states for an \"App-like\" feel.\n\n```mermaid\ngraph TD\n    subgraph \"The Visual Shell (Frontend)\"\n        Layout[AppLayoutWrapper] --> Nav[Sticky Dynamic Header]\n        Layout --> Main[Hero Section + Video Engine]\n        Layout --> Footer[Footer Module]\n    end\n\n    subgraph \"Media Delivery Engine\"\n        Main --> Video[Auto-playing Background Video]\n        Video --> Fallback[Low-Bandwidth Image Fallback]\n        Main --> Gallery[Lazy-Loaded Portfolio Grid]\n    end\n\n    subgraph \"Component Library (PrimeVue)\"\n        Gallery --> Card[Responsive Service Card]\n        Card --> Style[PrimeFlex Utility Layer]\n        Nav --> Scroll[Intersection Observer Logic]\n    end\n\n    subgraph \"Performance Pipeline\"\n        Style --> Vite[Vite Optimized Bundle]\n        Vite --> Sharp[Sharp Asset Optimization]\n    end\n```\n\n### 3. Key Engineering Pillars\n\n#### A. Cinematic Performance Architecture\nIntegrating high-resolution video into a web portal often degrades performance. We solved this via:\n- **Asynchronous Media Loading:** Background videos are loaded after the critical \"First Meaningful Paint,\" ensuring the user sees the content instantly while the heavy media hydrates in the background.\n- **Intelligent Error Fallbacks:** Using Vue 3's reactive `handleVideoError` logic, the system automatically switches to static high-resolution WebP images if a video fails to load or the user is on a slow connection.\n\n#### B. Component-Driven Branding (The PrimeVue Stack)\nInstead of building a \"one-off\" website, we created a **Scalable UI System**.\n- **Utility-First Layouts:** By using PrimeFlex (a CSS utility framework), we ensured that every section—from the 4-column service grid to the contact form—is 100% responsive and maintainable without complex custom CSS.\n- **Theme Orchestration:** The site uses the \"Aura\" theme preset, allowing for global brand updates (colors, typography, spacing) to be made in a single configuration file.\n\n#### C. Interaction & State Management\nThe UI feels \"alive\" due to sophisticated event handling:\n- **Scroll-Aware Navigation:** The header dynamically reconfigures its branding (color, transparency, size) based on the user's scroll position, providing a high-end \"app\" feel.\n- **Reactive Portfolio Engine:** The \"Featured Work\" section uses reactive arrays to manage complex media types (Video vs. Image), ensuring that the layout remains stable regardless of the content being served.\n\n### 4. Strategic Business Value (ROI)\n- **Instant Brand Authority:** Signals technical expertise through high-end UI execution, allowing the agency to command higher project fees.\n- **Maintenance Scalability:** The component-based structure allows the team to add new services or portfolio items in minutes, not days.\n- **Multi-Device Conversion:** Ensures a premium experience on mobile devices (where 50%+ of traffic originates), preventing \"Lead Leakage\" from poorly optimized mobile sites.\n\nTechCreate proves that **Strategic Frontend Engineering** is the foundation of a modern, high-trust digital brand.\n"
   previousProject: {"name":"Emerald Design System","link":"/web-development-projects/emerald-design-system/"}
   nextProject: {"name":"Yit Plus","link":"/web-development-projects/yit-plus/"}
+  relatedCaseStudy: null
 ---
 
 <section class="mt-4 mb-6">
@@ -283,6 +284,24 @@ TechCreate proves that **Strategic Frontend Engineering** is the foundation of a
 </div>
 
 </div>
+
+<div v-if="$frontmatter.project.relatedCaseStudy" class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100 mb-6">
+  <div class="flex flex-column md:flex-row align-items-center justify-content-between gap-4">
+    <div>
+      <h3 class="text-2xl font-bold m-0 flex align-items-center gap-2">
+        <i class="pi pi-building text-primary"></i>
+        {{ $frontmatter.project.relatedCaseStudy.title }}
+      </h3>
+      <p class="text-700 m-0 mt-2 line-height-3">{{ $frontmatter.project.relatedCaseStudy.description }}</p>
+    </div>
+    <div>
+      <a :href="$frontmatter.project.relatedCaseStudy.link" class="no-underline">
+        <Button :label="$frontmatter.project.relatedCaseStudy.buttonText" icon="pi pi-arrow-right" iconPos="right" severity="primary" raised rounded class="font-bold white-space-nowrap" />
+      </a>
+    </div>
+  </div>
+</div>
+
 <ConsultingBridge />
 <div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
       <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">

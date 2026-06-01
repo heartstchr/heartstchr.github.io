@@ -27,6 +27,7 @@ project:
   details: "## Engineering Architecture: Programmatic SEO & Lead-Gen Systems\n\nAppliance Repairly is not just a website; it is a **Programmatic Growth Engine**. It is designed to capture high-intent local search demand at scale by automatically generating thousands of search-optimized landing pages across cities, appliance types, and specific technical problems.\n\n### 1. The Growth Engine (Layman's Perspective)\nThink of this platform as an **Automated Sales Team** that can be in 10,000 places at once. \n\nIn a traditional setup, you'd have to write a new page for every city (e.g., \"Fridge Repair in Austin,\" \"Dryer Repair in Miami\"). This system does that automatically. It takes a **Central Knowledge Base** of appliance problems and \"mixes\" it with a **Database of Locations**. In seconds, it creates thousands of tailored pages that look like they were handcrafted for every specific neighbor in every specific city, ensuring that whenever someone searches for help, we are there to meet them.\n\n### 2. Technical Architecture & Dynamic Routing\nThe system leverages Next.js 15 for high-performance static generation (SSG) with on-demand revalidation.\n\n```mermaid\ngraph TD\n    subgraph \"Core Data Layers\"\n        ApplianceDB[Appliance & Problem JSON]\n        LocationDB[City & State JSON]\n        SEOConfig[SEO & Meta Mapping]\n    end\n\n    subgraph \"Path Synthesis Engine\"\n        ApplianceDB --> PageRouter[Dynamic Route Generator]\n        LocationDB --> PageRouter\n        SEOConfig --> PageRouter\n    end\n\n    subgraph \"Programmatic Page Generation\"\n        PageRouter --> LocalService[City-Specific Service Pages]\n        PageRouter --> TroubleShoot[Nested Troubleshooting Guides]\n        PageRouter --> StateListing[State-Level Provider Directories]\n    end\n\n    subgraph \"Conversion Funnel\"\n        LocalService --> LeadGen[ZIP-Based Matching]\n        TroubleShoot --> LeadGen\n        LeadGen --> PhoneRouting[Call-to-Action / Lead Capture]\n    end\n```\n\n### 3. Key Engineering Pillars\n\n#### A. Content-as-Data (JSON Orchestration)\nThe architecture completely decouples the **Content Strategy** from the **Codebase**. All technical knowledge (symptoms, troubleshooting steps, tools required) is stored in highly structured JSON files. \n- **Scalability:** Adding a new appliance category requires zero code changes—only a JSON update.\n- **Consistency:** Ensures that technical terminology and troubleshooting advice remain uniform across 5,000+ generated routes.\n\n#### B. Recursive Dynamic Routing\nWe implemented a multi-level dynamic routing structure (`[repairSlug]/[problemSlug]/[...troubleshootingSlug]`) that allows for deep, hierarchical search coverage.\n- **Path Synthesis:** The system automatically calculates and generates valid URL paths based on the cross-product of appliances and problems.\n- **Contextual SEO:** Every page dynamically generates its own Metadata (Title, Description, Schema.org) by combining location data with technical appliance data.\n\n#### C. Performance-First Lead Capture\nIn local services, speed is the primary driver of conversion.\n- **Static Site Generation (SSG):** Pages are pre-rendered at build time, resulting in near-instant load speeds (Lighthouse scores of 95+).\n- **Client-Side Location Detection:** Custom hooks manage real-time ZIP code validation and service area matching to ensure the user is connected to a relevant local professional instantly.\n\n### 4. Strategic Business Value (ROI)\n- **Zero Cost per Page:** Once the engine is built, the cost of adding 1,000 new pages (new cities/appliances) is negligible.\n- **Durable Organic Moat:** By capturing \"Long-Tail\" search queries (e.g., \"leaking LG dishwasher repair in Seattle\"), the platform avoids expensive PPC competition and builds long-term organic authority.\n- **Conversion Efficiency:** The user journey is strictly engineered to move from *Problem Discovery* (Troubleshooting) to *Transaction* (Provider Matching) in under 3 clicks.\n\nAppliance Repairly demonstrates how **Programmatic SEO** can transform a service business into a high-leverage digital acquisition machine.\n"
   previousProject: {"name":"Service Request System","link":"/web-development-projects/service-request-system/"}
   nextProject: {"name":"SR-22 Insurance Now","link":"/web-development-projects/sr-22-insurance-now/"}
+  relatedCaseStudy: null
 ---
 
 <section class="mt-4 mb-6">
@@ -284,6 +285,24 @@ Appliance Repairly demonstrates how **Programmatic SEO** can transform a service
 </div>
 
 </div>
+
+<div v-if="$frontmatter.project.relatedCaseStudy" class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100 mb-6">
+  <div class="flex flex-column md:flex-row align-items-center justify-content-between gap-4">
+    <div>
+      <h3 class="text-2xl font-bold m-0 flex align-items-center gap-2">
+        <i class="pi pi-building text-primary"></i>
+        {{ $frontmatter.project.relatedCaseStudy.title }}
+      </h3>
+      <p class="text-700 m-0 mt-2 line-height-3">{{ $frontmatter.project.relatedCaseStudy.description }}</p>
+    </div>
+    <div>
+      <a :href="$frontmatter.project.relatedCaseStudy.link" class="no-underline">
+        <Button :label="$frontmatter.project.relatedCaseStudy.buttonText" icon="pi pi-arrow-right" iconPos="right" severity="primary" raised rounded class="font-bold white-space-nowrap" />
+      </a>
+    </div>
+  </div>
+</div>
+
 <ConsultingBridge />
 <div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
       <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">

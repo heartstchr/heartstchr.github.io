@@ -27,6 +27,7 @@ project:
   details: "## Engineering Architecture: Serverless Middle-Layer for No-Code Ecosystems\n\nThe Notion Web App is a sophisticated **Data-to-Interface Orchestrator**. It demonstrates how to build a high-performance, secure web portal that uses Notion as a \"Headless CMS\" while maintaining enterprise-grade security, custom UI branding, and advanced features like file uploads that Notion's native sharing doesn't support.\n\n### 1. The Sync Engine (Layman's Perspective)\nThink of this app as a **Universal Translator**. \n\nNotion is like a great filing cabinet (database), but it's built for internal office use. If you want to show that data to the public in a beautiful, branded way, you need a \"Translator.\" This app takes the raw data from your Notion cabinet, \"translates\" it into a professional website format, and puts it in a \"Digital Storefront\" (The Web App). When someone outside adds a letter to the storefront's mailbox, the translator neatly files it back into your Notion cabinet instantly.\n\n### 2. Technical Architecture & Data Proxying\nThe platform utilizes a serverless architecture to bridge the gap between the public internet and the private Notion API, ensuring that your secret keys are never exposed to the user's browser.\n\n```mermaid\ngraph TD\n    subgraph \"External Web Portal\"\n        UI[Dynamic Vue/Next.js UI] --> SchemaParser[Runtime Schema Parser]\n        SchemaParser --> Render[Form & Table Renderer]\n    end\n\n    subgraph \"Secure Proxy Layer (Netlify Functions)\"\n        Render --> Proxy[Serverless API Proxy]\n        Proxy --> Auth[Secret Key Injection]\n        Auth --> Sanitizer[Input Sanitizer & Validator]\n    end\n\n    subgraph \"Data Storage (Notion & Blobs)\"\n        Sanitizer --> NotionAPI[Notion Database API]\n        Sanitizer --> NetlifyBlobs[File Upload Storage]\n        NotionAPI --> Database[Master Notion Database]\n    end\n\n    subgraph \"Bidirectional Sync\"\n        Database --> Webhook[Update Listener]\n        Webhook --> UI\n    end\n```\n\n### 3. Key Engineering Pillars\n\n#### A. The \"Schema-on-Read\" Pattern\nUnlike traditional apps that require manual coding for every new form field, this system uses **Dynamic Introspection**.\n- **Live Metadata Analysis:** The app \"reads\" the Notion database structure at runtime. If you add a \"Status\" dropdown in Notion, the web app instantly detects the change and renders a corresponding `<select>` menu in the UI.\n- **Zero-Code Maintenance:** This decoupling allows non-technical users to modify the application's data structure entirely within Notion without ever touching the source code.\n\n#### B. Secure Middleware Proxying\nDirectly connecting a frontend to the Notion API is a major security risk (as it exposes API keys). We implemented a **Secure Proxy Layer**:\n- **Environment Isolation:** API keys are stored in secure Netlify environment variables, accessible only to the serverless backend.\n- **Payload Sanitization:** Every \"Write\" request from the web portal is intercepted, sanitized for XSS, and validated against the expected schema before being committed to Notion.\n\n#### C. Hybrid Storage (Notion + Netlify Blobs)\nNotion's API has strict limitations on direct file uploads. To overcome this, we architected a **Hybrid Storage System**:\n- **Blob Storage:** Files (images, PDFs) are uploaded to high-performance Netlify Blobs.\n- **Reference Mapping:** The system then stores a secure, public URL reference back in the Notion database, effectively turning Notion into a media-rich asset manager.\n\n### 4. Strategic Business Value (ROI)\n- **Eliminate \"App Bloat\":** Allows businesses to use their existing Notion workspace as a backend, reducing the number of tools they need to manage.\n- **Instant Deployment:** The \"Clone-and-Deploy\" workflow reduces the cost of launching new internal tools or client portals from thousands of dollars to nearly zero.\n- **Universal Accessibility:** Provides a high-performance, mobile-optimized interface for data that is otherwise difficult to navigate in the native Notion mobile app.\n\nThis project serves as a technical blueprint for **Headless No-Code Integration**, showing how to build professional software on top of flexible, user-friendly data sources.\n"
   previousProject: {"name":"AI-Powered Influencer Platform - Vibe3","link":"/web-development-projects/ai-powered-influencer-platform-vibe3/"}
   nextProject: {"name":"AI Voice Generator","link":"/web-development-projects/ai-voice-generator/"}
+  relatedCaseStudy: null
 ---
 
 <section class="mt-4 mb-6">
@@ -282,6 +283,24 @@ This project serves as a technical blueprint for **Headless No-Code Integration*
 </div>
 
 </div>
+
+<div v-if="$frontmatter.project.relatedCaseStudy" class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100 mb-6">
+  <div class="flex flex-column md:flex-row align-items-center justify-content-between gap-4">
+    <div>
+      <h3 class="text-2xl font-bold m-0 flex align-items-center gap-2">
+        <i class="pi pi-building text-primary"></i>
+        {{ $frontmatter.project.relatedCaseStudy.title }}
+      </h3>
+      <p class="text-700 m-0 mt-2 line-height-3">{{ $frontmatter.project.relatedCaseStudy.description }}</p>
+    </div>
+    <div>
+      <a :href="$frontmatter.project.relatedCaseStudy.link" class="no-underline">
+        <Button :label="$frontmatter.project.relatedCaseStudy.buttonText" icon="pi pi-arrow-right" iconPos="right" severity="primary" raised rounded class="font-bold white-space-nowrap" />
+      </a>
+    </div>
+  </div>
+</div>
+
 <ConsultingBridge />
 <div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
       <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">

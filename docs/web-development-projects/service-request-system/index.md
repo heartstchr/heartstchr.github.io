@@ -27,6 +27,7 @@ project:
   details: "## Engineering Architecture: Serverless Service Intake & Notification Engine\n\nService Request (Notion-P) is a high-reliability **Service Intake System** designed to bridge the gap between public customer requests and internal operational workflows. It demonstrates a sophisticated **Event-Driven Notification Architecture** that uses Notion as both a database and a trigger for automated customer communication.\n\n### 1. The Operations Engine (Layman's Perspective)\nThink of this system as a **Virtual Service Desk** that never sleeps. \n\nWhen a customer has a problem, they \"drop off\" their request at your digital desk (The Web Form). The system instantly logs it in your \"Master Ledger\" (Notion). But here's the smart part: Whenever you update the status of that request in your ledger (e.g., from \"Pending\" to \"Completed\"), the system notice the change and instantly sends a professional email to the customer to let them know. It's like having a dedicated assistant who spends all day watching your notes and keeping your customers perfectly informed.\n\n### 2. Technical Architecture & Automation Loop\nThe platform utilizes a serverless architecture with a scheduled \"Cron\" trigger to monitor data changes and orchestrate transactional emails.\n\n```mermaid\ngraph TD\n    subgraph \"Intake Layer (Public-Facing)\"\n        UI[Vue/HTML Form] --> Validate[Input Validation]\n        Validate --> Media[Netlify Blobs File Upload]\n    end\n\n    subgraph \"Transactional Core (Netlify Functions)\"\n        Media --> Proxy[Notion API Proxy]\n        Proxy --> Database[(Master Notion Database)]\n    end\n\n    subgraph \"Automation Engine (The Loop)\"\n        Database --> Cron[Scheduled Status Monitor]\n        Cron --> Diff[Status Change Detector]\n        Diff --> Mailer[SMTP/Gmail Mailer]\n    end\n\n    subgraph \"Customer Feedback\"\n        Mailer --> Email[Branded Notification Email]\n        Email --> Receipt[Customer Satisfaction]\n    end\n```\n\n### 3. Key Engineering Pillars\n\n#### A. Event-Driven Notification Engine (The \"Cron\" Loop)\nUnlike traditional \"Push\" systems that require complex webhook setups, this system uses an **Intelligent Polling Pattern**.\n- **State Monitoring:** A scheduled Netlify Function runs every few minutes to \"scan\" the Notion database for status changes.\n- **Idempotency Logic:** By tracking \"Email Sent\" flags within Notion, the system ensures that notifications are only sent once per status change, preventing duplicate emails and ensuring a professional customer experience.\n\n#### B. Dynamic Schema Synthesis\nThe intake form is designed to be **Metadata-Aware**. \n- **Dynamic Select Fields:** The \"Issue Type\" dropdown on the web form is not hard-coded; it is fetched directly from the Notion database's \"Select\" property metadata. This allows business owners to update their service categories in Notion and see the web form update instantly.\n- **Typed Data Mapping:** Every form field is strictly mapped to a Notion property type (Date, Email, Status, Files), ensuring 100% data integrity between the public UI and the private database.\n\n#### C. Secure Transactional Emailing\nHandling email notifications through a serverless environment requires secure handling of SMTP credentials.\n- **App Password Orchestration:** The system uses Gmail's App Password protocol, with all credentials stored in encrypted environment variables, ensuring that no sensitive passwords ever enter the client-side code.\n- **HTML Template Engine:** We implemented a responsive HTML email generator (`email-templates.js`) that produces professional, branded emails that look perfect on both mobile and desktop devices.\n\n### 4. Strategic Business Value (ROI)\n- **Eliminate Manual Communication:** Automates up to 80% of routine customer status updates, freeing up staff for actual service work.\n- **Professional Brand Presence:** Provides a clean, custom-branded interface that is significantly more trustworthy than a standard Google Form or email thread.\n- **Zero-Cost Operations:** Built entirely on \"Free Tier\" services (Netlify, Notion, Gmail), allowing small businesses to run an enterprise-grade service desk for $0/month.\n\nService Request proves that **Strategic Serverless Orchestration** can transform a simple workspace like Notion into a powerful, automated service operation.\n"
   previousProject: {"name":"AI Voice Generator","link":"/web-development-projects/ai-voice-generator/"}
   nextProject: {"name":"Appliance Repair Service Platform","link":"/web-development-projects/appliance-repair-service-platform/"}
+  relatedCaseStudy: null
 ---
 
 <section class="mt-4 mb-6">
@@ -281,6 +282,24 @@ Service Request proves that **Strategic Serverless Orchestration** can transform
 </div>
 
 </div>
+
+<div v-if="$frontmatter.project.relatedCaseStudy" class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100 mb-6">
+  <div class="flex flex-column md:flex-row align-items-center justify-content-between gap-4">
+    <div>
+      <h3 class="text-2xl font-bold m-0 flex align-items-center gap-2">
+        <i class="pi pi-building text-primary"></i>
+        {{ $frontmatter.project.relatedCaseStudy.title }}
+      </h3>
+      <p class="text-700 m-0 mt-2 line-height-3">{{ $frontmatter.project.relatedCaseStudy.description }}</p>
+    </div>
+    <div>
+      <a :href="$frontmatter.project.relatedCaseStudy.link" class="no-underline">
+        <Button :label="$frontmatter.project.relatedCaseStudy.buttonText" icon="pi pi-arrow-right" iconPos="right" severity="primary" raised rounded class="font-bold white-space-nowrap" />
+      </a>
+    </div>
+  </div>
+</div>
+
 <ConsultingBridge />
 <div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
       <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">
