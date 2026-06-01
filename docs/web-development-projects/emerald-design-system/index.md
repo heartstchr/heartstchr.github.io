@@ -273,8 +273,25 @@ This architectural approach reduced UI-related technical debt by **40%** and inc
   </div>
 </div>
 </div>
-
 </div>
+
+<div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100 mb-6">
+  <div class="flex flex-column md:flex-row align-items-center justify-content-between gap-4">
+    <div>
+      <h3 class="text-2xl font-bold m-0 flex align-items-center gap-2">
+        <i class="pi pi-building text-primary"></i>
+        See it in Action: ABN AMRO Corporate Rebuild
+      </h3>
+      <p class="text-700 m-0 mt-2 line-height-3">Discover how the Emerald Design System was deployed to modernize ABN AMRO's primary web portal, driving massive performance and UX gains.</p>
+    </div>
+    <div>
+      <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="no-underline">
+        <Button label="Read the Rebuild Case Study" icon="pi pi-arrow-right" iconPos="right" severity="primary" raised rounded class="font-bold white-space-nowrap" />
+      </a>
+    </div>
+  </div>
+</div>
+
 <ConsultingBridge />
 <div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
       <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">

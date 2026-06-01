@@ -6,7 +6,6 @@ tags: [GitHub, Blog]
 ---
 
 <MetaContent :date="$frontmatter.date" :category="$frontmatter.tags"/>
-
 As a developer or freelancer, managing your GitHub repositories efficiently is crucial for collaboration and organization. Transferring a repository to a GitHub organization allows you to centralize projects under a team or brand, streamline access, and maintain commit history. In this guide, I’ll walk you through the steps to transfer a GitHub repository to an organization using the GitHub interface, clone the transferred repository, and open it in Visual Studio Code (VS Code). This SEO-optimized tutorial is perfect for developers looking to manage their GitHub repositories effectively.
 
 <YouTubePlayers videoId="9LPnNNLFSko"/>
@@ -48,6 +47,21 @@ Follow these steps to transfer a GitHub repository to an organization, clone it 
    - **Password**: Enter your GitHub password if 2FA is not enabled.
 3. Click **I understand, transfer this repository** to initiate the transfer.
 4. Wait a few minutes for the process to complete. You’ll see a confirmation popup once the transfer is successful.
+
+<div class="my-6 p-5 surface-50 border-round-2xl border-1 border-100 flex flex-column md:flex-row align-items-center justify-content-between gap-4">
+  <div>
+    <h3 class="text-xl font-bold m-0 flex align-items-center gap-2">
+      <i class="pi pi-envelope text-primary"></i>
+      Want more Engineering Guides?
+    </h3>
+    <p class="text-600 m-0 mt-2 text-sm">Join the Stack Seekers newsletter for weekly insights on DevOps, architecture, and developer productivity.</p>
+  </div>
+  <div>
+    <a href="/stackcast-podcast-mini/" class="no-underline">
+      <Button label="Subscribe Now" icon="pi pi-send" severity="primary" raised rounded class="font-bold white-space-nowrap" />
+    </a>
+  </div>
+</div>
 
 ### Step 4: Verify the Transfer
 1. Navigate to your organization’s GitHub page (e.g., `stack-seekers`).
