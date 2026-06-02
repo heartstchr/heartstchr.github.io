@@ -36,21 +36,6 @@ Stack Seekers provides comprehensive web development and digital solutions servi
 - **UI/UX Design and Implementation:** User interface design, user experience optimization, and responsive design
 - **Mobile-Responsive Development:** Cross-platform compatibility and mobile optimization
 
-### Technical Services
-
-- **Technical Consulting and Advisory:** Architecture planning, technology selection, and best practices guidance
-- **Code Review and Quality Assurance:** Code auditing, testing, and performance optimization
-- **Deployment Configuration:** Environment and deployment setup
-- **Database Design and Management:** Database architecture and optimization
-- **Security Implementation:** Security audits, vulnerability assessments, and security best practices
-
-### Support and Maintenance
-
-- **Ongoing Maintenance:** Regular updates, bug fixes, and performance monitoring
-- **Technical Support:** Troubleshooting, issue resolution, and technical assistance
-- **Training and Documentation:** User training, technical documentation, and knowledge transfer
-- **Performance Optimization:** Speed improvements, SEO optimization, and scalability enhancements
-
 ### Specialized Services
 
 - **Figma to Web Conversion:** Converting design mockups into functional web applications
