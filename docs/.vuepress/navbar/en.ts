@@ -51,10 +51,6 @@ export const enNavbar = navbar([
         link: "/web-development-services/fractional-cto-and-advisory/",
       },
       {
-        text: "Cloud Migration",
-        link: "/web-development-services/enterprise-cloud-migration/",
-      },
-      {
         text: "Programmatic SEO",
         link: "/web-development-services/programmatic-seo-and-growth/",
       },
