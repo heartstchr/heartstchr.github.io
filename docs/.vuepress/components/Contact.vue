@@ -13,8 +13,8 @@
                 I specialize in turning complex technical challenges into scalable business assets. If you're looking for a dedicated architecture partner to lead your vision to reality, let's start the conversation.
             </div>
             <div class="my-4 flex flex-column align-items-center">
-                <Button as="a" href="mailto:support@stackseekers.com?subject=Inquiry:%20Strategic%20Partnership" label="Start the Conversation" icon="pi pi-comments" severity="primary" raised rounded size="large" class="no-underline" />
-                <div class="mt-3 text-sm opacity-70 font-medium">or support@stackseekers.com</div>
+                <Button as="a" :href="'mailto:' + supportEmail + '?subject=Inquiry:%20Strategic%20Partnership'" label="Start the Conversation" icon="pi pi-comments" severity="primary" raised rounded size="large" class="no-underline" />
+                <div class="mt-3 text-sm opacity-70 font-medium">or <a :href="'mailto:' + supportEmail + '?subject=Inquiry:%20Strategic%20Partnership'" class="no-underline">{{ supportEmail }}</a></div>
             </div>
             <div class="flex flex-row justify-content-end flex-wrap gap-4 m-6 ">
                 <a v-for="(socialElement, socialIndex) in social" :key="socialIndex" :href="socialElement.url"
@@ -28,4 +28,5 @@
 
 <script setup>
 import { social } from "@data/social.js";
+const supportEmail = __VITE_SUPPORT_EMAIL__;
 </script>
