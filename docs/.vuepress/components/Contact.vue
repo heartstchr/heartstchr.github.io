@@ -12,11 +12,9 @@
             <div class="mx-4 text-center text-xl line-height-3 opacity-90">
                 I specialize in turning complex technical challenges into scalable business assets. If you're looking for a dedicated architecture partner to lead your vision to reality, let's start the conversation.
             </div>
-            <div class="my-4">
-                <a href="/contact/?subject=Inquiry:%20Strategic%20Partnership" size="large"
-                    class="flex justify-content-center text-center no-underline" aria-label="Start the conversation">
-                    <Button label="Start the Conversation" icon="pi pi-comments" severity="primary" raised rounded />
-                </a>
+            <div class="my-4 flex flex-column align-items-center">
+                <Button as="a" href="mailto:support@stackseekers.com?subject=Inquiry:%20Strategic%20Partnership" label="Start the Conversation" icon="pi pi-comments" severity="primary" raised rounded size="large" class="no-underline" />
+                <div class="mt-3 text-sm opacity-70 font-medium">or support@stackseekers.com</div>
             </div>
             <div class="flex flex-row justify-content-end flex-wrap gap-4 m-6 ">
                 <a v-for="(socialElement, socialIndex) in social" :key="socialIndex" :href="socialElement.url"
