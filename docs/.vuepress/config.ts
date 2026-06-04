@@ -26,6 +26,20 @@ export default defineUserConfig({
       ssr: {
         noExternal: ["primevue"],
       },
+      build: {
+        rollupOptions: {
+          output: {
+            manualChunks(id) {
+              if (id.includes("node_modules/primevue")) {
+                return "vendor-primevue";
+              }
+              if (id.includes("node_modules/vue-router") || id.includes("node_modules/vue/")) {
+                return "vendor-vue";
+              }
+            },
+          },
+        },
+      },
     },
     vuePluginOptions: {},
   }),

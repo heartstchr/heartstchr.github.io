@@ -1,5 +1,6 @@
 import { posts } from "./posts.js";
 import { services } from "./services.js";
+import { freelance } from "./projects.js";
 import { toKebabCase } from "../utils/index.js";
 
 const DOMAIN = "https://stackseekers.com";
@@ -214,10 +215,65 @@ const postSchemas = Object.fromEntries(
   ])
 );
 
+const projectsHubSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${DOMAIN}/web-development-projects/#collection`,
+    url: `${DOMAIN}/web-development-projects/`,
+    name: "Engineering Portfolio",
+    description:
+      "Explore the software engineering portfolio of Stack Seekers. Case studies, startup MVPs, AI automation tools, and enterprise architecture designs.",
+    about: { "@id": `${DOMAIN}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Stack Seekers Projects Portfolio",
+    itemListElement: freelance.map((project, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: `${DOMAIN}/web-development-projects/${toKebabCase(project.name)}/`,
+    })),
+  },
+];
+
+const projectSchemas = Object.fromEntries(
+  freelance.map((project) => {
+    const pagePath = `/web-development-projects/${toKebabCase(project.name)}/`;
+    const schemaType = project.schema ? project.schema.split("/").pop() : "CreativeWork";
+    
+    return [
+      pagePath,
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": schemaType,
+          "@id": `${absoluteUrl(pagePath)}#project`,
+          name: project.name,
+          url: absoluteUrl(pagePath),
+          description: project.description,
+          applicationCategory: project.category || "DeveloperApplication",
+          operatingSystem: "All",
+          creator: { "@id": `${DOMAIN}/#person` },
+          publisher: { "@id": `${DOMAIN}/#organization` },
+        },
+        breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Projects", path: "/web-development-projects/" },
+          { name: project.name, path: pagePath },
+        ]),
+      ],
+    ];
+  })
+);
+
 export const pageSpecificSchemas: Record<string, any[]> = {
   "/": homepageSchemas,
   "/web-development-services/": servicesHubSchemas,
+  "/web-development-projects/": projectsHubSchemas,
   "/contact/": contactSchemas,
   ...serviceSchemas,
+  ...projectSchemas,
   ...postSchemas,
 };
