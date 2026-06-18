@@ -1,6 +1,6 @@
 ---
-title: AI Dynamic CRUD App
-description: Transform your Notion database into a professional web application in minutes with the power of AI. Automatically reads your Notion structure, suggests field relationships, and creates beautiful, responsive interfaces with intelligent forms, search, and multi-language support.
+title: Premium Furniture Landing Page & Catalog
+description: A luxury, full-featured furniture landing page, lookbook, and product catalog platform built with Vue.js, powered by a Notion Headless CMS, and deployed on Netlify. Perfect for custom furniture showrooms, interior design catalogs, or any premium retail catalog.
 lastUpdated: false
 editLink: false
 contributors: false
@@ -8,25 +8,25 @@ pageInfo: false
 copyright: false
 layout: Layout
 project:
-  name: "AI Dynamic CRUD App"
-  description: "Transform your Notion database into a professional web application in minutes with the power of AI. Automatically reads your Notion structure, suggests field relationships, and creates beautiful, responsive interfaces with intelligent forms, search, and multi-language support."
+  name: "Premium Furniture Landing Page & Catalog"
+  description: "A luxury, full-featured furniture landing page, lookbook, and product catalog platform built with Vue.js, powered by a Notion Headless CMS, and deployed on Netlify. Perfect for custom furniture showrooms, interior design catalogs, or any premium retail catalog."
   software: "Web Application"
   schema: "https://schema.org/WebApplication"
-  domain: "Database Management & AI Automation"
+  domain: "Headless Commerce & CMS Integration"
   year: "2025"
   price: "0"
   currency: "USD"
-  link: "https://ai-dynamic-crud-app.stackseekers.com/"
+  link: ""
   codeLink: 
-  contact: "mailto:support@stackseekers.com?subject=AI Dynamic CRUD App Inquiry"
-  stack: ["javascript","vuedotjs","notion/black/white","html5","css","json/black/white"]
-  images: [{"itemImageSrc":"/img/projects/ai-dynamic-crud-app/ai-webapp-english.webp","alt":"AI Dynamic CRUD App - Create with Gemini"},{"itemImageSrc":"/img/projects/ai-dynamic-crud-app/ai-webapp-hindi.webp","alt":"AI Dynamic CRUD App - Hindi Translation"},{"itemImageSrc":"/img/projects/ai-dynamic-crud-app/ai-webapp-japanese.webp","alt":"AI Dynamic CRUD App - Japanese Translation"},{"itemImageSrc":"/img/projects/ai-dynamic-crud-app/ai-webapp-schema-review.webp","alt":"AI Database Schema Review"},{"itemImageSrc":"/img/projects/ai-dynamic-crud-app/ai-webapp-crud-ui.webp","alt":"AI Generated Dashboard Interface"}]
-  video: "https://www.youtube.com/watch?v=jrkwxLkICRY"
-  features: [{"text":"AI Schema Detection: Automatically detects and adapts to your Notion database structure."},{"text":"Dynamic Form Generation: Creates perfect forms based on field types."},{"text":"Professional Interface: Clean, modern design with card and table views."}]
-  perspective: {"executive":"A game-changer for businesses using Notion as a backend. It eliminates the need for expensive custom development by automatically generating a professional web interface directly from your data. Ideal for internal tools, client portals, and rapid prototyping with zero friction.","technical":"Features a dynamic schema-driven UI engine. It parses Notion database properties in real-time to generate Vue components with appropriate validation and input types. Includes multi-language support through a custom i18n bridge and optimized API caching for smooth performance."}
-  details: "## Engineering Architecture: AI-Driven Software Synthesis\n\nThe AI Dynamic CRUD App is an advanced implementation of **Generative Software Engineering**. It moves beyond standard \"Chat-based AI\" to a system that synthesizes functional software architectures, database schemas, and user interfaces directly from natural language specifications.\n\n### 1. The Generative Pipeline (Layman's Perspective)\nThink of this system as a **Digital Architect**. Instead of hiring a team to spend weeks drawing blueprints (Database Schemas) and building the house (User Interface), you simply describe what you need. \n\nThe \"Architect\" (Gemini AI) draws the technical blueprint in seconds, connects it to a \"Foundational Utility\" (Notion), and hands you the keys to a fully furnished, functional house (The Web App). If you want to add a room later, you just tell the AI, and the house expands instantly.\n\n### 2. Technical Architecture & Data Flow\nThe system utilizes a decoupled architecture where the LLM acts as a compiler, turning human intent into machine-readable schema definitions.\n\n```mermaid\ngraph TD\n    subgraph \"Input Layer\"\n        Prompt[Natural Language Prompt] --> Gemini[Gemini LLM Engine]\n        Template[Pre-configured Templates] --> Gemini\n    end\n\n    subgraph \"Schema Orchestration\"\n        Gemini --> JSON[Structured JSON Schema]\n        JSON --> Validator[Schema Validator]\n        Validator --> NotionAPI[Notion Database API]\n    end\n\n    subgraph \"Dynamic UI Engine\"\n        NotionAPI --> Metadata[Database Metadata]\n        Metadata --> UIOrchestrator[Runtime UI Orchestrator]\n        UIOrchestrator --> App[Generated Vue/Next.js Portal]\n    end\n\n    subgraph \"Capabilities\"\n        App --> CRUD[Full CRUD Operations]\n        App --> Logic[Dynamic Form Generation]\n        App --> Search[Real-time Global Search]\n    end\n```\n\n### 3. Key Engineering Pillars\n\n#### A. LLM-as-a-Compiler (Prompt Engineering)\nThe core of the system is a sophisticated prompt-chaining engine. We use strict output constraints to ensure Gemini produces 100% valid, typed JSON. This JSON isn't just data; it's a **Functional Specification** that includes:\n- Field Types (Text, Number, Date, Multi-select, Files)\n- Relationship Mapping (Notion Relations/Rollups)\n- Iconography & Categorization logic\n\n#### B. Dynamic UI Orchestration (Runtime Synthesis)\nUnlike traditional apps with hard-coded forms, this frontend is **completely reactive to the backend schema**. \n- **Introspection:** The app \"inspects\" the Notion database structure at runtime.\n- **Component Mapping:** If it detects a \"Date\" field in Notion, it instantly renders a Date-Picker in the UI. If it sees a \"Status\" field, it builds a specialized Kanban or Select dropdown.\n- **Zero-Code Updates:** Adding a column in the Notion database immediately updates the web portal without a single line of code or a new deployment.\n\n#### C. Multi-Language Intent Parsing\nBy leveraging LLM semantic understanding, the system supports multi-lingual intent. A prompt in Hindi or Japanese is parsed into the same structured JSON schema, ensuring global accessibility for non-technical users while maintaining strict data integrity.\n\n### 4. Strategic Business Value (ROI)\n- **Time-to-Market:** Reduces the \"Idea-to-Product\" cycle from weeks to minutes.\n- **Operational Agility:** Allows ops teams to build and modify their own internal tools without consuming core engineering resources.\n- **Zero-Maintenance Infrastructure:** By using Notion as the database and Netlify for the frontend, the system is virtually \"serverless\" and requires zero backend maintenance.\n\nThis project serves as a technical proof-of-concept for **Automated Internal Tooling**, demonstrating how AI can effectively manage the entire lifecycle of a standard business application.\n"
-  previousProject: {"name":"Premium Furniture Landing Page & Catalog","link":"/web-development-projects/premium-furniture-landing-page-catalog/"}
-  nextProject: {"name":"Local Home Services Pros","link":"/web-development-projects/local-home-services-pros/"}
+  contact: "mailto:support@stackseekers.com?subject=Notion Furniture Catalog Inquiry"
+  stack: ["javascript","vuedotjs","notion/black/white","html5","css","tailwindcss","PrimeVue","netlify","vite/black/white","github/black/white"]
+  images: [{"itemImageSrc":"/img/projects/furniture-landing-page/furniture-cover.webp","alt":"Notion-Powered Furniture Landing Page Showcase"},{"itemImageSrc":"/img/projects/furniture-landing-page/product-catalog.webp","alt":"Premium Furniture Catalog and Filtering Interface"},{"itemImageSrc":"/img/projects/furniture-landing-page/interactive-lookbook.webp","alt":"Interactive Lookbook Scene with Hoverable Hotspots"},{"itemImageSrc":"/img/projects/furniture-landing-page/product-detail.webp","alt":"Product Detail Page with Rich Image Gallery"},{"itemImageSrc":"/img/projects/furniture-landing-page/product-detail-complete-look.webp","alt":"Related Products Recommendation Section"},{"itemImageSrc":"/img/projects/furniture-landing-page/product-specifications.webp","alt":"Dynamic Product Specifications and Support Actions"},{"itemImageSrc":"/img/projects/furniture-landing-page/admin-dashboard.webp","alt":"Notion CMS Admin Panel Dashboard Overview"},{"itemImageSrc":"/img/projects/furniture-landing-page/admin-products-list.webp","alt":"Showroom Product Inventory Management Interface"},{"itemImageSrc":"/img/projects/furniture-landing-page/admin-hotspot-mapper.webp","alt":"Admin Coordinate Hotspot Mapper Panel"},{"itemImageSrc":"/img/projects/furniture-landing-page/admin-image-upload.webp","alt":"Drag & Drop Netlify Blobs Media Uploader"},{"itemImageSrc":"/img/projects/furniture-landing-page/admin-content-editor.webp","alt":"Notion Page Content and Banners Editor"},{"itemImageSrc":"/img/projects/furniture-landing-page/admin-vip-leads.webp","alt":"Real-time VIP Leads and Inquiries Pipeline"}]
+  video: ""
+  features: [{"text":"Dynamic DB Auto-Discovery: Automatically maps database schema by scanning titles in your Notion page."},{"text":"Interactive Visual Lookbook: Map coordinates visually to direct catalog items with hoverable pricing tags."},{"text":"Admin Hotspot Mapper: An intuitive admin panel overlay that lets users click images to place product hotspots."},{"text":"Full Content Customization: Edit hero headlines, team members, contact coordinates, and styles from Notion."},{"text":"VIP Leads Pipeline: Form submissions and WhatsApp click logs are stored directly back into Notion."}]
+  perspective: {"executive":"Transforms Notion from a simple productivity workspace into a high-performance, headless catalog CMS. It empowers showroom owners and marketers to publish new collections, update pricing, map lookbooks, and capture leads with zero code and zero maintenance overhead.","technical":"Features a dynamic Vue 3 component architecture driven by Notion database schemas. Integrates Netlify Serverless Functions as a secure API bridge, Netlify Blobs for persistent image asset uploads, and Pinia for reactive global state management. Includes local caching of database schemas to prevent rate limits."}
+  details: "## Engineering Architecture: Notion-Powered Headless Commerce\n\nThe Premium Furniture Landing Page & Catalog (Livwood) represents a highly optimized implementation of a **Headless CMS eCommerce Architecture**. By leveraging Notion as a database backend and Netlify serverless functions as a secure middleware layer, it provides a cost-effective, zero-maintenance admin interface for client showrooms.\n\n### 1. Architectural Overview (Layman's Perspective)\nThink of this system as a **Self-Updating Storefront**. Normally, updating a catalog or mapping interactive price tags requires database administration or code deployments. \n\nWith this architecture, showroom managers simply use Notion—a tool they already use for daily tasks—to add products, edit copy, or look at customer inquiries. The website automatically detects these changes, maps product pins onto showroom images, and streams lead data back to Notion. The store virtually runs itself without any custom database hosting costs.\n\n### 2. Technical Data Flow & Infrastructure\nThe system uses a decoupled three-tier structure that connects the client frontend, serverless API gateway, and Notion headless CMS.\n\n```mermaid\ngraph TD\n    subgraph \"Headless CMS Layer (Notion)\"\n        ProductsDB[(Products Database)]\n        PagesDB[(Pages/Content Database)]\n        LookbookDB[(Lookbooks Database)]\n        LeadsDB[(Leads/Contact Database)]\n    end\n\n    subgraph \"Middleware API Layer (Netlify Serverless)\"\n        NotionCRUD[notion-crud.js API]\n        UploadFile[upload-file.js API]\n        SubmitContact[submit-contact.js API]\n        VerifyAdmin[verify-admin.js API]\n        NetlifyBlobs[(Netlify Blobs Storage)]\n    end\n\n    subgraph \"Frontend Client Layer (Vue 3 SPA)\"\n        Router[Vue Router] --> Pages[Pages: Home, Lookbook, Catalog, ProductDetail, Admin]\n        Stores[Pinia Stores: itemStore, authStore, settingsStore]\n        UI[PrimeVue & Tailwind CSS Components]\n        AdminPanel[Admin Hotspot Mapper & Dashboard]\n    end\n\n    %% Relationships\n    ProductsDB <--> NotionCRUD\n    PagesDB <--> NotionCRUD\n    LookbookDB <--> NotionCRUD\n    LeadsDB <--> SubmitContact\n    \n    NotionCRUD <--> Stores\n    SubmitContact <--> Stores\n    VerifyAdmin <--> Stores\n    UploadFile <--> NetlifyBlobs\n    UploadFile <--> AdminPanel\n    \n    Stores --> Pages\n    UI --> Pages\n```\n\n### 3. Key Engineering Pillars\n\n#### A. Dynamic DB Auto-Discovery\nUnlike standard implementations requiring hardcoded database IDs in environment variables, the backend features a **dynamic schema resolver**. By passing a single parent page ID, the Netlify Functions query the parent page blocks to auto-discover child inline databases based on semantic keyword matching (`product`, `lookbook`, `page`, `lead`). This makes workspace setup trivial and permits seamless schema versioning.\n\n#### B. Interactive Hotspot Mapper (HTML5 Canvas)\nTo solve the friction of mapping coordinates on high-resolution photos, the admin panel embeds an interactive canvas.\n- **Coordinate Normalization**: Translates raw client-side click events into percentage-based `(x, y)` coordinates relative to the image aspect ratio.\n- **Relational Mapping**: Associated products are linked using Notion's relation property types, allowing the frontend lookbook to dynamically fetch live pricing, descriptions, and slugs.\n- **Dynamic CSS Tooltips**: Mapped percentages are rendered on the frontend using responsive tooltips that scale cleanly across mobile and desktop.\n\n#### C. Serverless Security & Gateway Proxy\nNetlify Serverless Functions serve as a proxy layer to ensure security and performance:\n- **Token Obfuscation**: Hides Notion API integration tokens and reCAPTCHA private keys from client-side network inspectors.\n- **API Rate Limiting & Verification**: Protects lead ingestion endpoints with server-side Google reCAPTCHA v2 verification and request rate limiters to prevent bot spam.\n- **Data Sanitization**: Normalizes Notion rich-text outputs and sanitizes customer inputs before writing back to the databases to prevent XSS.\n\n#### D. Image Pipeline & Netlify Blobs Ingestion\nBecause Notion's file hosting limits external API write operations, we engineered a custom file-upload pipeline:\n- **Blobs Ingestion**: The admin panel uses serverless handlers to ingest image assets directly into Netlify Blobs storage.\n- **URL Synchronization**: The returned public asset URLs are stored in the Notion database properties, bypassing upload restrictions and ensuring high availability.\n\n### 4. Strategic Business Value (ROI)\n- **Zero Database Infrastructure Cost**: Replaces expensive database clusters (PostgreSQL/MongoDB) with Notion, running completely on free tier serverless nodes.\n- **Empowered Non-Technical Teams**: Showroom owners edit catalogs, homepage headlines, and lookbooks without needing a developer or a CMS dashboard license (e.g. Contentful/Sanity).\n- **Consolidated CRM Operations**: Bypasses the need for third-party CRM tools by logging leads directly into Notion, keeping business ops centralized.\n"
+  previousProject: null
+  nextProject: {"name":"AI Dynamic CRUD App","link":"/web-development-projects/ai-dynamic-crud-app/"}
   relatedCaseStudy: null
 ---
 
@@ -200,67 +200,84 @@ project:
           </div>
           <div v-pre class="project-markdown-content text-lg line-height-4">
 
-## Engineering Architecture: AI-Driven Software Synthesis
+## Engineering Architecture: Notion-Powered Headless Commerce
 
-The AI Dynamic CRUD App is an advanced implementation of **Generative Software Engineering**. It moves beyond standard "Chat-based AI" to a system that synthesizes functional software architectures, database schemas, and user interfaces directly from natural language specifications.
+The Premium Furniture Landing Page & Catalog (Livwood) represents a highly optimized implementation of a **Headless CMS eCommerce Architecture**. By leveraging Notion as a database backend and Netlify serverless functions as a secure middleware layer, it provides a cost-effective, zero-maintenance admin interface for client showrooms.
 
-### 1. The Generative Pipeline (Layman's Perspective)
-Think of this system as a **Digital Architect**. Instead of hiring a team to spend weeks drawing blueprints (Database Schemas) and building the house (User Interface), you simply describe what you need. 
+### 1. Architectural Overview (Layman's Perspective)
+Think of this system as a **Self-Updating Storefront**. Normally, updating a catalog or mapping interactive price tags requires database administration or code deployments. 
 
-The "Architect" (Gemini AI) draws the technical blueprint in seconds, connects it to a "Foundational Utility" (Notion), and hands you the keys to a fully furnished, functional house (The Web App). If you want to add a room later, you just tell the AI, and the house expands instantly.
+With this architecture, showroom managers simply use Notion—a tool they already use for daily tasks—to add products, edit copy, or look at customer inquiries. The website automatically detects these changes, maps product pins onto showroom images, and streams lead data back to Notion. The store virtually runs itself without any custom database hosting costs.
 
-### 2. Technical Architecture & Data Flow
-The system utilizes a decoupled architecture where the LLM acts as a compiler, turning human intent into machine-readable schema definitions.
+### 2. Technical Data Flow & Infrastructure
+The system uses a decoupled three-tier structure that connects the client frontend, serverless API gateway, and Notion headless CMS.
 
 ```mermaid
 graph TD
-    subgraph "Input Layer"
-        Prompt[Natural Language Prompt] --> Gemini[Gemini LLM Engine]
-        Template[Pre-configured Templates] --> Gemini
+    subgraph "Headless CMS Layer (Notion)"
+        ProductsDB[(Products Database)]
+        PagesDB[(Pages/Content Database)]
+        LookbookDB[(Lookbooks Database)]
+        LeadsDB[(Leads/Contact Database)]
     end
 
-    subgraph "Schema Orchestration"
-        Gemini --> JSON[Structured JSON Schema]
-        JSON --> Validator[Schema Validator]
-        Validator --> NotionAPI[Notion Database API]
+    subgraph "Middleware API Layer (Netlify Serverless)"
+        NotionCRUD[notion-crud.js API]
+        UploadFile[upload-file.js API]
+        SubmitContact[submit-contact.js API]
+        VerifyAdmin[verify-admin.js API]
+        NetlifyBlobs[(Netlify Blobs Storage)]
     end
 
-    subgraph "Dynamic UI Engine"
-        NotionAPI --> Metadata[Database Metadata]
-        Metadata --> UIOrchestrator[Runtime UI Orchestrator]
-        UIOrchestrator --> App[Generated Vue/Next.js Portal]
+    subgraph "Frontend Client Layer (Vue 3 SPA)"
+        Router[Vue Router] --> Pages[Pages: Home, Lookbook, Catalog, ProductDetail, Admin]
+        Stores[Pinia Stores: itemStore, authStore, settingsStore]
+        UI[PrimeVue & Tailwind CSS Components]
+        AdminPanel[Admin Hotspot Mapper & Dashboard]
     end
 
-    subgraph "Capabilities"
-        App --> CRUD[Full CRUD Operations]
-        App --> Logic[Dynamic Form Generation]
-        App --> Search[Real-time Global Search]
-    end
+    %% Relationships
+    ProductsDB <--> NotionCRUD
+    PagesDB <--> NotionCRUD
+    LookbookDB <--> NotionCRUD
+    LeadsDB <--> SubmitContact
+    
+    NotionCRUD <--> Stores
+    SubmitContact <--> Stores
+    VerifyAdmin <--> Stores
+    UploadFile <--> NetlifyBlobs
+    UploadFile <--> AdminPanel
+    
+    Stores --> Pages
+    UI --> Pages
 ```
 
 ### 3. Key Engineering Pillars
 
-#### A. LLM-as-a-Compiler (Prompt Engineering)
-The core of the system is a sophisticated prompt-chaining engine. We use strict output constraints to ensure Gemini produces 100% valid, typed JSON. This JSON isn't just data; it's a **Functional Specification** that includes:
-- Field Types (Text, Number, Date, Multi-select, Files)
-- Relationship Mapping (Notion Relations/Rollups)
-- Iconography & Categorization logic
+#### A. Dynamic DB Auto-Discovery
+Unlike standard implementations requiring hardcoded database IDs in environment variables, the backend features a **dynamic schema resolver**. By passing a single parent page ID, the Netlify Functions query the parent page blocks to auto-discover child inline databases based on semantic keyword matching (`product`, `lookbook`, `page`, `lead`). This makes workspace setup trivial and permits seamless schema versioning.
 
-#### B. Dynamic UI Orchestration (Runtime Synthesis)
-Unlike traditional apps with hard-coded forms, this frontend is **completely reactive to the backend schema**. 
-- **Introspection:** The app "inspects" the Notion database structure at runtime.
-- **Component Mapping:** If it detects a "Date" field in Notion, it instantly renders a Date-Picker in the UI. If it sees a "Status" field, it builds a specialized Kanban or Select dropdown.
-- **Zero-Code Updates:** Adding a column in the Notion database immediately updates the web portal without a single line of code or a new deployment.
+#### B. Interactive Hotspot Mapper (HTML5 Canvas)
+To solve the friction of mapping coordinates on high-resolution photos, the admin panel embeds an interactive canvas.
+- **Coordinate Normalization**: Translates raw client-side click events into percentage-based `(x, y)` coordinates relative to the image aspect ratio.
+- **Relational Mapping**: Associated products are linked using Notion's relation property types, allowing the frontend lookbook to dynamically fetch live pricing, descriptions, and slugs.
+- **Dynamic CSS Tooltips**: Mapped percentages are rendered on the frontend using responsive tooltips that scale cleanly across mobile and desktop.
 
-#### C. Multi-Language Intent Parsing
-By leveraging LLM semantic understanding, the system supports multi-lingual intent. A prompt in Hindi or Japanese is parsed into the same structured JSON schema, ensuring global accessibility for non-technical users while maintaining strict data integrity.
+#### C. Serverless Security & Gateway Proxy
+Netlify Serverless Functions serve as a proxy layer to ensure security and performance:
+- **Token Obfuscation**: Hides Notion API integration tokens and reCAPTCHA private keys from client-side network inspectors.
+- **API Rate Limiting & Verification**: Protects lead ingestion endpoints with server-side Google reCAPTCHA v2 verification and request rate limiters to prevent bot spam.
+- **Data Sanitization**: Normalizes Notion rich-text outputs and sanitizes customer inputs before writing back to the databases to prevent XSS.
+
+#### D. Image Pipeline & Netlify Blobs Ingestion
+Because Notion's file hosting limits external API write operations, we engineered a custom file-upload pipeline:
+- **Blobs Ingestion**: The admin panel uses serverless handlers to ingest image assets directly into Netlify Blobs storage.
+- **URL Synchronization**: The returned public asset URLs are stored in the Notion database properties, bypassing upload restrictions and ensuring high availability.
 
 ### 4. Strategic Business Value (ROI)
-- **Time-to-Market:** Reduces the "Idea-to-Product" cycle from weeks to minutes.
-- **Operational Agility:** Allows ops teams to build and modify their own internal tools without consuming core engineering resources.
-- **Zero-Maintenance Infrastructure:** By using Notion as the database and Netlify for the frontend, the system is virtually "serverless" and requires zero backend maintenance.
-
-This project serves as a technical proof-of-concept for **Automated Internal Tooling**, demonstrating how AI can effectively manage the entire lifecycle of a standard business application.
+- **Zero Database Infrastructure Cost**: Replaces expensive database clusters (PostgreSQL/MongoDB) with Notion, running completely on free tier serverless nodes.
+- **Empowered Non-Technical Teams**: Showroom owners edit catalogs, homepage headlines, and lookbooks without needing a developer or a CMS dashboard license (e.g. Contentful/Sanity).
+- **Consolidated CRM Operations**: Bypasses the need for third-party CRM tools by logging leads directly into Notion, keeping business ops centralized.
 
 
 </div>

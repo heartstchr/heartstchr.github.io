@@ -6,8 +6,105 @@ export const SUPPORT_EMAIL = typeof __VITE_SUPPORT_EMAIL__ !== "undefined"
 
 export const freelance = [
   {
+    name: "Premium Furniture Landing Page & Catalog",
+    category: "Ready-made SaaS & Apps",
+    description: "A luxury, full-featured furniture landing page, lookbook, and product catalog platform built with Vue.js, powered by a Notion Headless CMS, and deployed on Netlify. Perfect for custom furniture showrooms, interior design catalogs, or any premium retail catalog.",
+    software: "Web Application",
+    org: "Stack Seekers",
+    year: "2025",
+    domain: "Headless Commerce & CMS Integration",
+    schema: "https://schema.org/WebApplication",
+    link: "",
+    price: "0",
+    currency: "USD",
+    contact: `mailto:${SUPPORT_EMAIL}?subject=Notion Furniture Catalog Inquiry`,
+    stack: [
+      "javascript",
+      "vuedotjs",
+      "notion/black/white",
+      "html5",
+      "css",
+      "tailwindcss",
+      "PrimeVue",
+      "netlify",
+      "vite/black/white",
+      "github/black/white"
+    ],
+    otherSkills: [
+      "Headless CMS Integration",
+      "Notion API Syncing",
+      "Interactive Hotspot Mapping",
+      "Serverless Functions",
+      "Asset Storage via Blobs",
+      "SEO Optimization"
+    ],
+    features: [
+      { text: "Dynamic DB Auto-Discovery: Automatically maps database schema by scanning titles in your Notion page." },
+      { text: "Interactive Visual Lookbook: Map coordinates visually to direct catalog items with hoverable pricing tags." },
+      { text: "Admin Hotspot Mapper: An intuitive admin panel overlay that lets users click images to place product hotspots." },
+      { text: "Full Content Customization: Edit hero headlines, team members, contact coordinates, and styles from Notion." },
+      { text: "VIP Leads Pipeline: Form submissions and WhatsApp click logs are stored directly back into Notion." }
+    ],
+    images: [
+      {
+        itemImageSrc: "/img/projects/furniture-landing-page/furniture-cover.webp",
+        alt: "Notion-Powered Furniture Landing Page Showcase"
+      },
+      {
+        itemImageSrc: "/img/projects/furniture-landing-page/product-catalog.webp",
+        alt: "Premium Furniture Catalog and Filtering Interface"
+      },
+      {
+        itemImageSrc: "/img/projects/furniture-landing-page/interactive-lookbook.webp",
+        alt: "Interactive Lookbook Scene with Hoverable Hotspots"
+      },
+      {
+        itemImageSrc: "/img/projects/furniture-landing-page/product-detail.webp",
+        alt: "Product Detail Page with Rich Image Gallery"
+      },
+      {
+        itemImageSrc: "/img/projects/furniture-landing-page/product-detail-complete-look.webp",
+        alt: "Related Products Recommendation Section"
+      },
+      {
+        itemImageSrc: "/img/projects/furniture-landing-page/product-specifications.webp",
+        alt: "Dynamic Product Specifications and Support Actions"
+      },
+      {
+        itemImageSrc: "/img/projects/furniture-landing-page/admin-dashboard.webp",
+        alt: "Notion CMS Admin Panel Dashboard Overview"
+      },
+      {
+        itemImageSrc: "/img/projects/furniture-landing-page/admin-products-list.webp",
+        alt: "Showroom Product Inventory Management Interface"
+      },
+      {
+        itemImageSrc: "/img/projects/furniture-landing-page/admin-hotspot-mapper.webp",
+        alt: "Admin Coordinate Hotspot Mapper Panel"
+      },
+      {
+        itemImageSrc: "/img/projects/furniture-landing-page/admin-image-upload.webp",
+        alt: "Drag & Drop Netlify Blobs Media Uploader"
+      },
+      {
+        itemImageSrc: "/img/projects/furniture-landing-page/admin-content-editor.webp",
+        alt: "Notion Page Content and Banners Editor"
+      },
+      {
+        itemImageSrc: "/img/projects/furniture-landing-page/admin-vip-leads.webp",
+        alt: "Real-time VIP Leads and Inquiries Pipeline"
+      }
+    ],
+    video: "",
+    perspective: {
+      executive: "Transforms Notion from a simple productivity workspace into a high-performance, headless catalog CMS. It empowers showroom owners and marketers to publish new collections, update pricing, map lookbooks, and capture leads with zero code and zero maintenance overhead.",
+      technical: "Features a dynamic Vue 3 component architecture driven by Notion database schemas. Integrates Netlify Serverless Functions as a secure API bridge, Netlify Blobs for persistent image asset uploads, and Pinia for reactive global state management. Includes local caching of database schemas to prevent rate limits."
+    },
+    details: "./details/furniture-landing-page.md"
+  },
+  {
     name: "AI Dynamic CRUD App",
-    category: "AI",
+    category: "Ready-made SaaS & Apps",
     description: "Transform your Notion database into a professional web application in minutes with the power of AI. Automatically reads your Notion structure, suggests field relationships, and creates beautiful, responsive interfaces with intelligent forms, search, and multi-language support.",
     software: "Web Application",
     org: "Stack Seekers",
@@ -148,7 +245,7 @@ export const freelance = [
   },
   {
     name: "Contact Form Plugin",
-    category: "SaaS",
+    category: "Ready-made SaaS & Apps",
     description:
       "A lightweight, embeddable contact form widget that can be integrated into any website and automatically forwards submissions to a Notion database. Generator-based architecture allowing multiple form configurations with various field combinations - completely free and easy to customize.",
     software: "Widget",
@@ -315,7 +412,7 @@ export const freelance = [
   },
   {
     name: "Dynamic CRUD App Free",
-    category: "Automation",
+    category: "Ready-made SaaS & Apps",
     description:
       "Transform your Notion database into a professional web application in minutes. Automatically reads your Notion structure and creates beautiful, responsive interfaces with intelligent forms, search, and multi-language support - completely free and no-code required.",
     software: "Web Application",
@@ -393,7 +490,7 @@ export const freelance = [
   },
   {
     name: "AI Voice Generator",
-    category: "AI",
+    category: "Ready-made SaaS & Apps",
     details: "./details/ai-narrator.md",
     description:
       "Transform your Google Docs into high-quality audio with this free AI voice generator and text to audio converter. Powered by Gemini TTS, it offers natural-sounding speech generation for YouTubers, teachers, and creators. Experience the best free text to speech AI directly in your documents.",
@@ -471,12 +568,11 @@ export const freelance = [
     perspective: {
       executive: "Strategic content automation that turns static documents into professional audio assets. It allows marketing and education teams to scale their content reach across platforms without the cost of professional voice actors.",
       technical: "Leverages Google Apps Script for deep integration with Google Workspace. It interfaces with the Gemini TTS API, handling complex text truncation and chunking to ensure stability with large documents. Includes a custom-built sidebar UI with real-time audio playback control."
-    },
-    details: "./details/ai-narrator.md",
+    }
   },
   {
     name: "Service Request System",
-    category: "Automation",
+    category: "Ready-made SaaS & Apps",
     details: "./details/service-request.md",
     description:
       "Build a complete customer service request management system using Notion database and Netlify functions. Features automated email notifications, file uploads, real-time sync, and professional web forms - all completely free with no coding required.",
@@ -556,8 +652,7 @@ export const freelance = [
     perspective: {
       executive: "Automates customer service workflows by bridging professional web forms with Notion. It provides a zero-cost alternative to expensive ticketing systems while maintaining professional notification standards and data integrity.",
       technical: "Utilizes Netlify Functions (Serverless) as an intermediary to handle secure Notion API calls. Implements a sophisticated email templating engine and automated file processing pipeline for attachments, ensuring a seamless data flow from web to internal database."
-    },
-    details: "./details/service-request.md",
+    }
   },
   {
     name: "Appliance Repair Service Platform",
@@ -668,8 +763,7 @@ export const freelance = [
         alt: "Appliance Repair Service Platform - Blog section",
       },
     ],
-    video: "",
-    details: "./details/appliance-repair.md",
+    video: ""
   },
   {
     name: "SR-22 Insurance Now",
@@ -778,8 +872,7 @@ export const freelance = [
     perspective: {
       executive: "A low-friction insurance lead engine designed for maximum conversion. It simplifies complex insurance compliance (SR-22) into a user-friendly experience, driving high-quality calls and form submissions for insurance providers.",
       technical: "A high-performance landing page engine driven by JSON configurations. Features advanced Google Places API integration for address autocomplete and location-based dynamic content injection, optimized for sub-second load times on mobile devices."
-    },
-    details: "./details/sr22.md",
+    }
   },
   {
     name: "Momentum Incident Management",
@@ -887,8 +980,7 @@ export const freelance = [
         alt: "Momentum Incident Management - Registration page",
       },
     ],
-    video: "",
-    details: "./details/momentum.md",
+    video: ""
   },
   {
     name: "Marketplace Booking Platform",
@@ -1104,8 +1196,7 @@ export const freelance = [
         alt: "Tech Create - Landing page",
       },
     ],
-    video: "",
-    details: "./details/tech-create.md",
+    video: ""
   },
   {
     name: "Yit Plus",
@@ -1235,8 +1326,7 @@ export const freelance = [
         alt: "Qatar Airways",
       },
     ],
-    video: "",
-    details: "./details/qa.md",
+    video: ""
   },
   {
     name: "Recipes",

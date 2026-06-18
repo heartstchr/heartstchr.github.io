@@ -134,6 +134,7 @@ copyright: false
   import { computed } from 'vue';
 
   const categories = [
+    { id: 'ready-made-saas-apps', label: 'Ready-made SaaS & Apps', icon: 'pi-shopping-bag', color: '#3b82f6', desc: 'Ready-to-deploy digital products, SaaS templates, and embeddable widgets.' },
     { id: 'enterprise',    label: 'Enterprise',    icon: 'pi-building',      color: '#6366f1', desc: 'Large-scale platforms, banking systems, and mission-critical applications.' },
     { id: 'ai',            label: 'AI',            icon: 'pi-microchip-ai',  color: '#a855f7', desc: 'AI-powered tools, intelligent automation, and machine learning integrations.' },
     { id: 'saas',          label: 'SaaS',          icon: 'pi-server',        color: '#0ea5e9', desc: 'Multi-tenant platforms, marketplaces, and subscription-based software.' },

@@ -268,6 +268,75 @@ const projectSchemas = Object.fromEntries(
   })
 );
 
+const categoryMeta = {
+  "ready-made-saas-apps": {
+    name: "Ready-made SaaS & Web Apps",
+    desc: "Premium, production-ready SaaS templates, AI tools, widgets, and business applications.",
+    categoryName: "Ready-made SaaS & Apps"
+  },
+  "enterprise": {
+    name: "Enterprise Web Development Projects",
+    desc: "Large-scale enterprise platforms, banking systems, and mission-critical applications.",
+    categoryName: "Enterprise"
+  },
+  "ai": {
+    name: "AI Web Development Projects",
+    desc: "AI-powered tools, intelligent automation, and machine learning integrations.",
+    categoryName: "AI"
+  },
+  "saas": {
+    name: "SaaS Web Development Projects",
+    desc: "Multi-tenant SaaS platforms, marketplaces, and subscription software.",
+    categoryName: "SaaS"
+  },
+  "automation": {
+    name: "Automation Web Development Projects",
+    desc: "Workflow automation, no-code tooling, and process efficiency systems.",
+    categoryName: "Automation"
+  },
+  "startup-mvps": {
+    name: "Startup MVP Web Development Projects",
+    desc: "Fast-to-market products, niche platforms, and proof-of-concept launches.",
+    categoryName: "Startup MVPs"
+  }
+};
+
+const categorySchemas = Object.fromEntries(
+  Object.entries(categoryMeta).map(([slug, meta]) => {
+    const pagePath = `/web-development-projects/${slug}/`;
+    const filteredProjects = freelance.filter((p: any) => p.category === meta.categoryName);
+    return [
+      pagePath,
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": `${absoluteUrl(pagePath)}#collection`,
+          url: absoluteUrl(pagePath),
+          name: meta.name,
+          description: meta.desc,
+          about: { "@id": `${DOMAIN}/#organization` },
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: `${meta.name} List`,
+          itemListElement: filteredProjects.map((project, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            url: `${DOMAIN}/web-development-projects/${toKebabCase(project.name)}/`,
+          })),
+        },
+        breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Projects", path: "/web-development-projects/" },
+          { name: meta.categoryName, path: pagePath },
+        ]),
+      ]
+    ];
+  })
+);
+
 export const pageSpecificSchemas: Record<string, any[]> = {
   "/": homepageSchemas,
   "/web-development-services/": servicesHubSchemas,
@@ -276,4 +345,5 @@ export const pageSpecificSchemas: Record<string, any[]> = {
   ...serviceSchemas,
   ...projectSchemas,
   ...postSchemas,
+  ...categorySchemas,
 };
