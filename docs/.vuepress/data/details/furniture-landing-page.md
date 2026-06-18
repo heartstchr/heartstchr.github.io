@@ -12,42 +12,49 @@ The system uses a decoupled three-tier structure that connects the client fronte
 
 ```mermaid
 graph TD
-    subgraph "Headless CMS Layer (Notion)"
-        ProductsDB[(Products Database)]
-        PagesDB[(Pages/Content Database)]
-        LookbookDB[(Lookbooks Database)]
-        LeadsDB[(Leads/Contact Database)]
+    subgraph "1. Storefront (What Users See)"
+        Router[Page Navigator]
+        Pages[Store Pages: Home, Lookbook, Catalog, Admin]
+        Stores[Data Sync Engine]
+        UI[Design & UI Components]
+        AdminPanel[Admin Dashboard & Photo Pinning Tool]
     end
 
-    subgraph "Middleware API Layer (Netlify Serverless)"
-        NotionCRUD[notion-crud.js API]
-        UploadFile[upload-file.js API]
-        SubmitContact[submit-contact.js API]
-        VerifyAdmin[verify-admin.js API]
-        NetlifyBlobs[(Netlify Blobs Storage)]
+    subgraph "2. Smart Bridge (Behind the Scenes)"
+        NotionCRUD[Notion Database Connector]
+        UploadFile[Image Upload Handler]
+        SubmitContact[Customer Contact Gateway]
+        VerifyAdmin[Security Checker]
     end
 
-    subgraph "Frontend Client Layer (Vue 3 SPA)"
-        Router[Vue Router] --> Pages[Pages: Home, Lookbook, Catalog, ProductDetail, Admin]
-        Stores[Pinia Stores: itemStore, authStore, settingsStore]
-        UI[PrimeVue & Tailwind CSS Components]
-        AdminPanel[Admin Hotspot Mapper & Dashboard]
+    subgraph "3. Admin Cabinet (Where Data Lives)"
+        ProductsDB[(Products Database - Notion)]
+        PagesDB[(Copy & Content Database - Notion)]
+        LookbookDB[(Lookbooks Database - Notion)]
+        LeadsDB[(Inquiries Database - Notion)]
+        NetlifyBlobs[(Asset Files Storage - Netlify)]
     end
 
     %% Relationships
-    ProductsDB <--> NotionCRUD
-    PagesDB <--> NotionCRUD
-    LookbookDB <--> NotionCRUD
-    LeadsDB <--> SubmitContact
+    Router --> Pages
+    Pages --> Stores
+    Pages --> UI
+    Pages --> AdminPanel
     
-    NotionCRUD <--> Stores
-    SubmitContact <--> Stores
-    VerifyAdmin <--> Stores
-    UploadFile <--> NetlifyBlobs
-    UploadFile <--> AdminPanel
+    Stores --> NotionCRUD
+    Stores --> SubmitContact
+    Stores --> VerifyAdmin
+    AdminPanel --> UploadFile
     
-    Stores --> Pages
-    UI --> Pages
+    NotionCRUD --> ProductsDB
+    NotionCRUD --> PagesDB
+    NotionCRUD --> LookbookDB
+    SubmitContact --> LeadsDB
+    UploadFile --> NetlifyBlobs
+    
+    %% Spacer links to force vertical alignment
+    UI ~~~ NotionCRUD
+    VerifyAdmin ~~~ LeadsDB
 ```
 
 ### 3. Key Engineering Pillars

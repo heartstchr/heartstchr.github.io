@@ -282,7 +282,7 @@ project:
           <div class="text-xl line-height-4 text-700 mb-6">
             {{ $frontmatter.project.perspective.technical }}
           </div>
-          <div v-pre class="project-markdown-content text-lg line-height-4">
+          <div class="project-markdown-content text-lg line-height-4">
 
 ${markdownContent}
 

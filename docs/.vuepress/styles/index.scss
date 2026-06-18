@@ -650,3 +650,24 @@ html[data-theme="dark"] .pi-github,
   background-color: var(--premium-charcoal) !important;
   border: 1px solid var(--premium-border);
 }
+
+/* Mermaid Diagram Sizing & Horizontal Scroll for Complex Charts */
+.project-markdown-content {
+  .mermaid {
+    width: 100%;
+    overflow-x: auto;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 1rem;
+    border: 1px solid var(--premium-border);
+    display: flex;
+    justify-content: flex-start; /* start from left for natural scrolling */
+    
+    svg {
+      min-height: 480px; /* Increased height as requested */
+      height: 100% !important;
+      width: auto !important;
+      max-width: none !important; /* prevent squishing */
+    }
+  }
+}

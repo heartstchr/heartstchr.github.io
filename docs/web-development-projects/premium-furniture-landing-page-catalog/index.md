@@ -24,7 +24,7 @@ project:
   video: ""
   features: [{"text":"Dynamic DB Auto-Discovery: Automatically maps database schema by scanning titles in your Notion page."},{"text":"Interactive Visual Lookbook: Map coordinates visually to direct catalog items with hoverable pricing tags."},{"text":"Admin Hotspot Mapper: An intuitive admin panel overlay that lets users click images to place product hotspots."},{"text":"Full Content Customization: Edit hero headlines, team members, contact coordinates, and styles from Notion."},{"text":"VIP Leads Pipeline: Form submissions and WhatsApp click logs are stored directly back into Notion."}]
   perspective: {"executive":"Transforms Notion from a simple productivity workspace into a high-performance, headless catalog CMS. It empowers showroom owners and marketers to publish new collections, update pricing, map lookbooks, and capture leads with zero code and zero maintenance overhead.","technical":"Features a dynamic Vue 3 component architecture driven by Notion database schemas. Integrates Netlify Serverless Functions as a secure API bridge, Netlify Blobs for persistent image asset uploads, and Pinia for reactive global state management. Includes local caching of database schemas to prevent rate limits."}
-  details: "## Engineering Architecture: Notion-Powered Headless Commerce\n\nThe Premium Furniture Landing Page & Catalog (Livwood) represents a highly optimized implementation of a **Headless CMS eCommerce Architecture**. By leveraging Notion as a database backend and Netlify serverless functions as a secure middleware layer, it provides a cost-effective, zero-maintenance admin interface for client showrooms.\n\n### 1. Architectural Overview (Layman's Perspective)\nThink of this system as a **Self-Updating Storefront**. Normally, updating a catalog or mapping interactive price tags requires database administration or code deployments. \n\nWith this architecture, showroom managers simply use Notion—a tool they already use for daily tasks—to add products, edit copy, or look at customer inquiries. The website automatically detects these changes, maps product pins onto showroom images, and streams lead data back to Notion. The store virtually runs itself without any custom database hosting costs.\n\n### 2. Technical Data Flow & Infrastructure\nThe system uses a decoupled three-tier structure that connects the client frontend, serverless API gateway, and Notion headless CMS.\n\n```mermaid\ngraph TD\n    subgraph \"Headless CMS Layer (Notion)\"\n        ProductsDB[(Products Database)]\n        PagesDB[(Pages/Content Database)]\n        LookbookDB[(Lookbooks Database)]\n        LeadsDB[(Leads/Contact Database)]\n    end\n\n    subgraph \"Middleware API Layer (Netlify Serverless)\"\n        NotionCRUD[notion-crud.js API]\n        UploadFile[upload-file.js API]\n        SubmitContact[submit-contact.js API]\n        VerifyAdmin[verify-admin.js API]\n        NetlifyBlobs[(Netlify Blobs Storage)]\n    end\n\n    subgraph \"Frontend Client Layer (Vue 3 SPA)\"\n        Router[Vue Router] --> Pages[Pages: Home, Lookbook, Catalog, ProductDetail, Admin]\n        Stores[Pinia Stores: itemStore, authStore, settingsStore]\n        UI[PrimeVue & Tailwind CSS Components]\n        AdminPanel[Admin Hotspot Mapper & Dashboard]\n    end\n\n    %% Relationships\n    ProductsDB <--> NotionCRUD\n    PagesDB <--> NotionCRUD\n    LookbookDB <--> NotionCRUD\n    LeadsDB <--> SubmitContact\n    \n    NotionCRUD <--> Stores\n    SubmitContact <--> Stores\n    VerifyAdmin <--> Stores\n    UploadFile <--> NetlifyBlobs\n    UploadFile <--> AdminPanel\n    \n    Stores --> Pages\n    UI --> Pages\n```\n\n### 3. Key Engineering Pillars\n\n#### A. Dynamic DB Auto-Discovery\nUnlike standard implementations requiring hardcoded database IDs in environment variables, the backend features a **dynamic schema resolver**. By passing a single parent page ID, the Netlify Functions query the parent page blocks to auto-discover child inline databases based on semantic keyword matching (`product`, `lookbook`, `page`, `lead`). This makes workspace setup trivial and permits seamless schema versioning.\n\n#### B. Interactive Hotspot Mapper (HTML5 Canvas)\nTo solve the friction of mapping coordinates on high-resolution photos, the admin panel embeds an interactive canvas.\n- **Coordinate Normalization**: Translates raw client-side click events into percentage-based `(x, y)` coordinates relative to the image aspect ratio.\n- **Relational Mapping**: Associated products are linked using Notion's relation property types, allowing the frontend lookbook to dynamically fetch live pricing, descriptions, and slugs.\n- **Dynamic CSS Tooltips**: Mapped percentages are rendered on the frontend using responsive tooltips that scale cleanly across mobile and desktop.\n\n#### C. Serverless Security & Gateway Proxy\nNetlify Serverless Functions serve as a proxy layer to ensure security and performance:\n- **Token Obfuscation**: Hides Notion API integration tokens and reCAPTCHA private keys from client-side network inspectors.\n- **API Rate Limiting & Verification**: Protects lead ingestion endpoints with server-side Google reCAPTCHA v2 verification and request rate limiters to prevent bot spam.\n- **Data Sanitization**: Normalizes Notion rich-text outputs and sanitizes customer inputs before writing back to the databases to prevent XSS.\n\n#### D. Image Pipeline & Netlify Blobs Ingestion\nBecause Notion's file hosting limits external API write operations, we engineered a custom file-upload pipeline:\n- **Blobs Ingestion**: The admin panel uses serverless handlers to ingest image assets directly into Netlify Blobs storage.\n- **URL Synchronization**: The returned public asset URLs are stored in the Notion database properties, bypassing upload restrictions and ensuring high availability.\n\n### 4. Strategic Business Value (ROI)\n- **Zero Database Infrastructure Cost**: Replaces expensive database clusters (PostgreSQL/MongoDB) with Notion, running completely on free tier serverless nodes.\n- **Empowered Non-Technical Teams**: Showroom owners edit catalogs, homepage headlines, and lookbooks without needing a developer or a CMS dashboard license (e.g. Contentful/Sanity).\n- **Consolidated CRM Operations**: Bypasses the need for third-party CRM tools by logging leads directly into Notion, keeping business ops centralized.\n"
+  details: "## Engineering Architecture: Notion-Powered Headless Commerce\n\nThe Premium Furniture Landing Page & Catalog (Livwood) represents a highly optimized implementation of a **Headless CMS eCommerce Architecture**. By leveraging Notion as a database backend and Netlify serverless functions as a secure middleware layer, it provides a cost-effective, zero-maintenance admin interface for client showrooms.\n\n### 1. Architectural Overview (Layman's Perspective)\nThink of this system as a **Self-Updating Storefront**. Normally, updating a catalog or mapping interactive price tags requires database administration or code deployments. \n\nWith this architecture, showroom managers simply use Notion—a tool they already use for daily tasks—to add products, edit copy, or look at customer inquiries. The website automatically detects these changes, maps product pins onto showroom images, and streams lead data back to Notion. The store virtually runs itself without any custom database hosting costs.\n\n### 2. Technical Data Flow & Infrastructure\nThe system uses a decoupled three-tier structure that connects the client frontend, serverless API gateway, and Notion headless CMS.\n\n```mermaid\ngraph TD\n    subgraph \"1. Storefront (What Users See)\"\n        Router[Page Navigator]\n        Pages[Store Pages: Home, Lookbook, Catalog, Admin]\n        Stores[Data Sync Engine]\n        UI[Design & UI Components]\n        AdminPanel[Admin Dashboard & Photo Pinning Tool]\n    end\n\n    subgraph \"2. Smart Bridge (Behind the Scenes)\"\n        NotionCRUD[Notion Database Connector]\n        UploadFile[Image Upload Handler]\n        SubmitContact[Customer Contact Gateway]\n        VerifyAdmin[Security Checker]\n    end\n\n    subgraph \"3. Admin Cabinet (Where Data Lives)\"\n        ProductsDB[(Products Database - Notion)]\n        PagesDB[(Copy & Content Database - Notion)]\n        LookbookDB[(Lookbooks Database - Notion)]\n        LeadsDB[(Inquiries Database - Notion)]\n        NetlifyBlobs[(Asset Files Storage - Netlify)]\n    end\n\n    %% Relationships\n    Router --> Pages\n    Pages --> Stores\n    Pages --> UI\n    Pages --> AdminPanel\n    \n    Stores --> NotionCRUD\n    Stores --> SubmitContact\n    Stores --> VerifyAdmin\n    AdminPanel --> UploadFile\n    \n    NotionCRUD --> ProductsDB\n    NotionCRUD --> PagesDB\n    NotionCRUD --> LookbookDB\n    SubmitContact --> LeadsDB\n    UploadFile --> NetlifyBlobs\n    \n    %% Spacer links to force vertical alignment\n    UI ~~~ NotionCRUD\n    VerifyAdmin ~~~ LeadsDB\n```\n\n### 3. Key Engineering Pillars\n\n#### A. Dynamic DB Auto-Discovery\nUnlike standard implementations requiring hardcoded database IDs in environment variables, the backend features a **dynamic schema resolver**. By passing a single parent page ID, the Netlify Functions query the parent page blocks to auto-discover child inline databases based on semantic keyword matching (`product`, `lookbook`, `page`, `lead`). This makes workspace setup trivial and permits seamless schema versioning.\n\n#### B. Interactive Hotspot Mapper (HTML5 Canvas)\nTo solve the friction of mapping coordinates on high-resolution photos, the admin panel embeds an interactive canvas.\n- **Coordinate Normalization**: Translates raw client-side click events into percentage-based `(x, y)` coordinates relative to the image aspect ratio.\n- **Relational Mapping**: Associated products are linked using Notion's relation property types, allowing the frontend lookbook to dynamically fetch live pricing, descriptions, and slugs.\n- **Dynamic CSS Tooltips**: Mapped percentages are rendered on the frontend using responsive tooltips that scale cleanly across mobile and desktop.\n\n#### C. Serverless Security & Gateway Proxy\nNetlify Serverless Functions serve as a proxy layer to ensure security and performance:\n- **Token Obfuscation**: Hides Notion API integration tokens and reCAPTCHA private keys from client-side network inspectors.\n- **API Rate Limiting & Verification**: Protects lead ingestion endpoints with server-side Google reCAPTCHA v2 verification and request rate limiters to prevent bot spam.\n- **Data Sanitization**: Normalizes Notion rich-text outputs and sanitizes customer inputs before writing back to the databases to prevent XSS.\n\n#### D. Image Pipeline & Netlify Blobs Ingestion\nBecause Notion's file hosting limits external API write operations, we engineered a custom file-upload pipeline:\n- **Blobs Ingestion**: The admin panel uses serverless handlers to ingest image assets directly into Netlify Blobs storage.\n- **URL Synchronization**: The returned public asset URLs are stored in the Notion database properties, bypassing upload restrictions and ensuring high availability.\n\n### 4. Strategic Business Value (ROI)\n- **Zero Database Infrastructure Cost**: Replaces expensive database clusters (PostgreSQL/MongoDB) with Notion, running completely on free tier serverless nodes.\n- **Empowered Non-Technical Teams**: Showroom owners edit catalogs, homepage headlines, and lookbooks without needing a developer or a CMS dashboard license (e.g. Contentful/Sanity).\n- **Consolidated CRM Operations**: Bypasses the need for third-party CRM tools by logging leads directly into Notion, keeping business ops centralized.\n"
   previousProject: null
   nextProject: {"name":"AI Dynamic CRUD App","link":"/web-development-projects/ai-dynamic-crud-app/"}
   relatedCaseStudy: null
@@ -197,7 +197,7 @@ project:
           <div class="text-xl line-height-4 text-700 mb-6">
             {{ $frontmatter.project.perspective.technical }}
           </div>
-          <div v-pre class="project-markdown-content text-lg line-height-4">
+          <div class="project-markdown-content text-lg line-height-4">
 
 ## Engineering Architecture: Notion-Powered Headless Commerce
 
@@ -213,42 +213,49 @@ The system uses a decoupled three-tier structure that connects the client fronte
 
 ```mermaid
 graph TD
-    subgraph "Headless CMS Layer (Notion)"
-        ProductsDB[(Products Database)]
-        PagesDB[(Pages/Content Database)]
-        LookbookDB[(Lookbooks Database)]
-        LeadsDB[(Leads/Contact Database)]
+    subgraph "1. Storefront (What Users See)"
+        Router[Page Navigator]
+        Pages[Store Pages: Home, Lookbook, Catalog, Admin]
+        Stores[Data Sync Engine]
+        UI[Design & UI Components]
+        AdminPanel[Admin Dashboard & Photo Pinning Tool]
     end
 
-    subgraph "Middleware API Layer (Netlify Serverless)"
-        NotionCRUD[notion-crud.js API]
-        UploadFile[upload-file.js API]
-        SubmitContact[submit-contact.js API]
-        VerifyAdmin[verify-admin.js API]
-        NetlifyBlobs[(Netlify Blobs Storage)]
+    subgraph "2. Smart Bridge (Behind the Scenes)"
+        NotionCRUD[Notion Database Connector]
+        UploadFile[Image Upload Handler]
+        SubmitContact[Customer Contact Gateway]
+        VerifyAdmin[Security Checker]
     end
 
-    subgraph "Frontend Client Layer (Vue 3 SPA)"
-        Router[Vue Router] --> Pages[Pages: Home, Lookbook, Catalog, ProductDetail, Admin]
-        Stores[Pinia Stores: itemStore, authStore, settingsStore]
-        UI[PrimeVue & Tailwind CSS Components]
-        AdminPanel[Admin Hotspot Mapper & Dashboard]
+    subgraph "3. Admin Cabinet (Where Data Lives)"
+        ProductsDB[(Products Database - Notion)]
+        PagesDB[(Copy & Content Database - Notion)]
+        LookbookDB[(Lookbooks Database - Notion)]
+        LeadsDB[(Inquiries Database - Notion)]
+        NetlifyBlobs[(Asset Files Storage - Netlify)]
     end
 
     %% Relationships
-    ProductsDB <--> NotionCRUD
-    PagesDB <--> NotionCRUD
-    LookbookDB <--> NotionCRUD
-    LeadsDB <--> SubmitContact
+    Router --> Pages
+    Pages --> Stores
+    Pages --> UI
+    Pages --> AdminPanel
     
-    NotionCRUD <--> Stores
-    SubmitContact <--> Stores
-    VerifyAdmin <--> Stores
-    UploadFile <--> NetlifyBlobs
-    UploadFile <--> AdminPanel
+    Stores --> NotionCRUD
+    Stores --> SubmitContact
+    Stores --> VerifyAdmin
+    AdminPanel --> UploadFile
     
-    Stores --> Pages
-    UI --> Pages
+    NotionCRUD --> ProductsDB
+    NotionCRUD --> PagesDB
+    NotionCRUD --> LookbookDB
+    SubmitContact --> LeadsDB
+    UploadFile --> NetlifyBlobs
+    
+    %% Spacer links to force vertical alignment
+    UI ~~~ NotionCRUD
+    VerifyAdmin ~~~ LeadsDB
 ```
 
 ### 3. Key Engineering Pillars
