@@ -100,9 +100,9 @@ copyright: false
               <i class="pi pi-image text-4xl opacity-30"></i>
             </div>
             <!-- Category badge overlay -->
-            <div class="absolute top-0 left-0 m-3">
+            <!-- <div class="absolute top-0 left-0 m-3">
               <span class="px-2 py-1 border-round-lg text-xs font-bold" :style="{ background: cat.color, color: '#fff' }">{{ project.domain }}</span>
-            </div>
+            </div> -->
           </div>
           <!-- Card Body -->
           <div class="p-4 flex flex-column flex-grow-1">

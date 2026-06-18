@@ -55,9 +55,9 @@ home: true
           <div v-else class="w-full h-full flex align-items-center justify-content-center" style="background: linear-gradient(135deg, #3b82f618, #3b82f640);">
             <i class="pi pi-image text-4xl opacity-30"></i>
           </div>
-          <div class="absolute top-0 left-0 m-3">
+          <!-- <div class="absolute top-0 left-0 m-3">
             <span class="px-2 py-1 border-round-lg text-xs font-bold" style="background: #3b82f6; color: #fff;">{{ project.domain }}</span>
-          </div>
+          </div> -->
         </div>
         <!-- Card Body -->
         <div class="p-4 flex flex-column flex-grow-1">
