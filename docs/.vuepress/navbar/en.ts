@@ -8,8 +8,8 @@ export const enNavbar = navbar([
     link: "/web-development-projects/",
     children: [
       {
-        text: "Ready-made SaaS & Apps",
-        link: "/web-development-projects/ready-made-saas-apps/",
+        text: "Ready-made Apps",
+        link: "/web-development-projects/ready-made-apps/",
       },
       {
         text: "Enterprise",

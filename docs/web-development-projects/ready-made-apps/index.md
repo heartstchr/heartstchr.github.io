@@ -1,6 +1,6 @@
 ---
-title: Ready-made SaaS & Web Apps | Stack Seekers
-description: "Premium, production-ready SaaS templates, AI tools, widgets, and business applications built by Stack Seekers."
+title: Ready-made Apps | Stack Seekers
+description: "Premium, production-ready templates, AI tools, widgets, and business applications built by Stack Seekers."
 lastUpdated: false
 editLink: false
 copyright: false
@@ -23,19 +23,19 @@ home: true
         <i class="pi pi-shopping-bag text-2xl"></i>
       </div>
       <div>
-        <h1 class="m-0 text-4xl md:text-5xl font-bold" style="color: #3b82f6;">Ready-made SaaS & Apps</h1>
-        <p class="m-0 text-lg opacity-60 mt-1">Ready-to-deploy digital products, SaaS templates, and embeddable widgets.</p>
+        <h1 class="m-0 text-4xl md:text-5xl font-bold" style="color: #3b82f6;">Ready-made Apps</h1>
+        <p class="m-0 text-lg opacity-60 mt-1">Ready-to-deploy digital products, templates, and embeddable widgets.</p>
       </div>
     </div>
     <p class="text-xl text-300 line-height-3 m-0" style="max-width: 720px;">
-      Fully functional software products and templates designed to jumpstart your SaaS business or automate workflows. Clean architecture, high-performance styling, and seamless integrations out of the box.
+      Fully functional software products and templates designed to jumpstart your business or automate workflows. Clean architecture, high-performance styling, and seamless integrations out of the box.
     </p>
   </div>
 </section>
 
 <!-- SEO Content Block -->
 <div class="mb-8 px-4 md:px-6 text-700 line-height-3" style="max-width: 900px;">
-  <p>Our <strong>Ready-made SaaS & Apps</strong> are designed to bypass months of development time and high agency costs. Every product in this collection is a fully-engineered solution ready for immediate deployment, built using modern stacks and industry best practices.</p>
+  <p>Our <strong>Ready-made Apps</strong> are designed to bypass months of development time and high agency costs. Every product in this collection is a fully-engineered solution ready for immediate deployment, built using modern stacks and industry best practices.</p>
   <p>Whether you need an <strong>AI-powered web app</strong>, an <strong>embeddable lead-capture widget</strong>, or a robust <strong>customer service request system</strong>, our products are built with performance, security, and scalability in mind. We provide complete setup guidance and professional customization services to align these solutions with your business needs.</p>
 </div>
 
@@ -99,7 +99,7 @@ home: true
   import { freelance } from "@data/projects.js";
   import { toKebabCase } from "@utils/index.js";
 
-  const readyMadeProjects = freelance.filter((p: any) => p.category === 'Ready-made SaaS & Apps');
+  const readyMadeProjects = freelance.filter((p: any) => p.category === 'Ready-made Apps');
 </script>
 
 <style scoped>

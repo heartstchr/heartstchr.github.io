@@ -269,10 +269,10 @@ const projectSchemas = Object.fromEntries(
 );
 
 const categoryMeta = {
-  "ready-made-saas-apps": {
-    name: "Ready-made SaaS & Web Apps",
-    desc: "Premium, production-ready SaaS templates, AI tools, widgets, and business applications.",
-    categoryName: "Ready-made SaaS & Apps"
+  "ready-made-apps": {
+    name: "Ready-made Apps",
+    desc: "Premium, production-ready templates, AI tools, widgets, and business applications.",
+    categoryName: "Ready-made Apps"
   },
   "enterprise": {
     name: "Enterprise Web Development Projects",

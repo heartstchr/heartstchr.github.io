@@ -7,7 +7,7 @@ export const SUPPORT_EMAIL = typeof __VITE_SUPPORT_EMAIL__ !== "undefined"
 export const freelance = [
   {
     name: "Premium Furniture Landing Page & Catalog",
-    category: "Ready-made SaaS & Apps",
+    category: "Ready-made Apps",
     description: "A luxury, full-featured furniture landing page, lookbook, and product catalog platform built with Vue.js, powered by a Notion Headless CMS, and deployed on Netlify. Perfect for custom furniture showrooms, interior design catalogs, or any premium retail catalog.",
     software: "Web Application",
     org: "Stack Seekers",
@@ -95,7 +95,7 @@ export const freelance = [
         alt: "Real-time VIP Leads and Inquiries Pipeline"
       }
     ],
-    video: "",
+    video: "https://youtu.be/55QSJ9nAheI",
     perspective: {
       executive: "Transforms Notion from a simple productivity workspace into a high-performance, headless catalog CMS. It empowers showroom owners and marketers to publish new collections, update pricing, map lookbooks, and capture leads with zero code and zero maintenance overhead.",
       technical: "Features a dynamic Vue 3 component architecture driven by Notion database schemas. Integrates Netlify Serverless Functions as a secure API bridge, Netlify Blobs for persistent image asset uploads, and Pinia for reactive global state management. Includes local caching of database schemas to prevent rate limits."
@@ -104,7 +104,7 @@ export const freelance = [
   },
   {
     name: "AI Dynamic CRUD App",
-    category: "Ready-made SaaS & Apps",
+    category: "Ready-made Apps",
     description: "Transform your Notion database into a professional web application in minutes with the power of AI. Automatically reads your Notion structure, suggests field relationships, and creates beautiful, responsive interfaces with intelligent forms, search, and multi-language support.",
     software: "Web Application",
     org: "Stack Seekers",
@@ -245,7 +245,7 @@ export const freelance = [
   },
   {
     name: "Contact Form Plugin",
-    category: "Ready-made SaaS & Apps",
+    category: "Ready-made Apps",
     description:
       "A lightweight, embeddable contact form widget that can be integrated into any website and automatically forwards submissions to a Notion database. Generator-based architecture allowing multiple form configurations with various field combinations - completely free and easy to customize.",
     software: "Widget",
@@ -412,7 +412,7 @@ export const freelance = [
   },
   {
     name: "Dynamic CRUD App Free",
-    category: "Ready-made SaaS & Apps",
+    category: "Ready-made Apps",
     description:
       "Transform your Notion database into a professional web application in minutes. Automatically reads your Notion structure and creates beautiful, responsive interfaces with intelligent forms, search, and multi-language support - completely free and no-code required.",
     software: "Web Application",
@@ -490,7 +490,7 @@ export const freelance = [
   },
   {
     name: "AI Voice Generator",
-    category: "Ready-made SaaS & Apps",
+    category: "Ready-made Apps",
     details: "./details/ai-narrator.md",
     description:
       "Transform your Google Docs into high-quality audio with this free AI voice generator and text to audio converter. Powered by Gemini TTS, it offers natural-sounding speech generation for YouTubers, teachers, and creators. Experience the best free text to speech AI directly in your documents.",
@@ -572,7 +572,7 @@ export const freelance = [
   },
   {
     name: "Service Request System",
-    category: "Ready-made SaaS & Apps",
+    category: "Ready-made Apps",
     details: "./details/service-request.md",
     description:
       "Build a complete customer service request management system using Notion database and Netlify functions. Features automated email notifications, file uploads, real-time sync, and professional web forms - all completely free with no coding required.",

@@ -73,7 +73,7 @@ home: true
     <i class="pi pi-th-large"></i> All Projects
   </a>
   <div class="flex gap-3 flex-wrap">
-    <a href="/web-development-projects/ready-made-saas-apps/" class="no-underline text-color-secondary hover:text-primary text-sm font-bold">Ready-made SaaS & Apps →</a>
+    <a href="/web-development-projects/ready-made-apps/" class="no-underline text-color-secondary hover:text-primary text-sm font-bold">Ready-made Apps →</a>
     <a href="/web-development-projects/enterprise/" class="no-underline text-color-secondary hover:text-primary text-sm font-bold">Enterprise →</a>
     <a href="/web-development-projects/ai/" class="no-underline text-color-secondary hover:text-primary text-sm font-bold">AI →</a>
     <a href="/web-development-projects/saas/" class="no-underline text-color-secondary hover:text-primary text-sm font-bold">SaaS →</a>
