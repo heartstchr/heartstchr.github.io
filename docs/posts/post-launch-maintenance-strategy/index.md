@@ -38,7 +38,7 @@ Don't treat your software like a house you build and then ignore. Treat it like 
 
 When you partner with me, you aren't just getting a developer for a "project." You are getting a technical lead who is invested in your long-term success.
 
-<div class="my-6 p-5 surface-0 border-round-3xl shadow-2 border-left-3 border-purple-500">
+<div class="my-6 p-4 surface-0 border-round-3xl shadow-2 border-left-3 border-purple-500">
   <h3 class="text-2xl font-bold mb-3">Does your product have a future?</h3>
   <p class="text-lg text-700 mb-4">I provide the fractional technical leadership you need to scale beyond the initial launch. Let's build a product that grows with your vision.</p>
   <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">

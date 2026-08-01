@@ -48,7 +48,7 @@ Follow these steps to transfer a GitHub repository to an organization, clone it 
 3. Click **I understand, transfer this repository** to initiate the transfer.
 4. Wait a few minutes for the process to complete. You’ll see a confirmation popup once the transfer is successful.
 
-<div class="my-6 p-5 surface-50 border-round-2xl border-1 border-100 flex flex-column md:flex-row align-items-center justify-content-between gap-4">
+<div class="my-6 p-4 surface-50 border-round-2xl border-1 border-100 flex flex-column md:flex-row align-items-center justify-content-between gap-4">
   <div>
     <h3 class="text-xl font-bold m-0 flex align-items-center gap-2">
       <i class="pi pi-envelope text-primary"></i>

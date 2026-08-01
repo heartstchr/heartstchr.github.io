@@ -37,7 +37,7 @@ contributors: false
 <div class="mb-10 px-2 md:px-4" style="max-width: 1200px; margin: 0 auto;">
   <div class="grid">
     <div v-for="stat in stats" :key="stat.label" class="col-12 sm:col-6 lg:col-3 p-3">
-      <div class="surface-0 border-round-2xl shadow-2 p-5 text-center border-1 border-100 h-full flex flex-column align-items-center justify-content-center stat-card">
+      <div class="surface-0 border-round-2xl shadow-2 p-4 text-center border-1 border-100 h-full flex flex-column align-items-center justify-content-center stat-card">
         <div class="text-5xl font-bold text-gradient mb-2">{{ stat.value }}</div>
         <div class="font-bold text-900 mb-1">{{ stat.label }}</div>
         <div class="text-500 text-sm line-height-3">{{ stat.sub }}</div>
@@ -75,7 +75,7 @@ contributors: false
     </div>
     <div class="grid">
       <div v-for="pillar in model" :key="pillar.title" class="col-12 md:col-6 lg:col-3 p-3">
-        <div class="surface-0 border-round-2xl p-5 h-full shadow-1 border-1 border-100 flex flex-column model-card">
+        <div class="surface-0 border-round-2xl p-4 h-full shadow-1 border-1 border-100 flex flex-column model-card">
           <div class="flex align-items-center justify-content-center border-round-xl mb-4" :style="{ background: pillar.color + '18', color: pillar.color, width: '3rem', height: '3rem' }">
             <i :class="'pi ' + pillar.icon + ' text-xl'"></i>
           </div>

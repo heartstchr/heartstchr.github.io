@@ -1,6 +1,6 @@
 <template>
   <div class="diagnostic-wrapper mb-8 mt-6">
-    <div class="surface-0 border-round-3xl p-5 md:p-7 shadow-4" style="max-width: 1000px; margin: 0 auto; position: relative; overflow: hidden; min-height: 600px;">
+    <div class="surface-0 border-round-3xl p-4 md:p-7 shadow-4" style="max-width: 1000px; margin: 0 auto; position: relative; overflow: hidden; min-height: 600px;">
       
       <!-- Progress Bar -->
       <div class="flex justify-content-between mb-4">

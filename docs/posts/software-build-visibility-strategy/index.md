@@ -36,7 +36,7 @@ When you work with me, you speak directly to the engineer building your product.
 
 Visibility isn't just about showing progress—it's about building trust. When you can see the product growing week by week, you can sleep better knowing your investment is being handled with precision.
 
-<div class="my-6 p-5 surface-0 border-round-3xl shadow-2 border-left-3 border-blue-500">
+<div class="my-6 p-4 surface-0 border-round-3xl shadow-2 border-left-3 border-blue-500">
   <h3 class="text-2xl font-bold mb-3">Tired of being left in the dark?</h3>
   <p class="text-lg text-700 mb-4">I offer a level of transparency that standard agencies can't match. Experience what it's like to have a technical partner who keeps you in the loop every step of the way.</p>
   <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">

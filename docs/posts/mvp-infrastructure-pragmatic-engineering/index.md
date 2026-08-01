@@ -38,7 +38,7 @@ Your infrastructure is not your "Moat." Your users, your data, and your solves f
 
 Every hour and every dollar you spend tinkering with complex server configurations is an hour and a dollar you aren't spending on talking to customers or refining your product. I build the technical roadmap that lets you focus on what actually matters: **Product-Market Fit.**
 
-<div class="my-6 p-5 surface-0 border-round-3xl shadow-2 border-left-3 border-teal-500">
+<div class="my-6 p-4 surface-0 border-round-3xl shadow-2 border-left-3 border-teal-500">
   <h3 class="text-2xl font-bold mb-3">Is your AWS bill killing your startup?</h3>
   <p class="text-lg text-700 mb-4">I help founders build lean, high-performance architectures that scale with their revenue, not ahead of it. Save your runway for the things that move the needle.</p>
   <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">

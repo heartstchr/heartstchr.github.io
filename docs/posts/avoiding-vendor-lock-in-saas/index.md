@@ -35,7 +35,7 @@ For a software company, the codebase is the most valuable asset in the company. 
 
 Whether you stay with me for five years or decide to build an internal team next month, your transition should be seamless. My goal is to build a product so good you *want* to stay, not so confusing that you *have* to.
 
-<div class="my-6 p-5 surface-0 border-round-3xl shadow-2 border-left-3 border-green-500">
+<div class="my-6 p-4 surface-0 border-round-3xl shadow-2 border-left-3 border-green-500">
   <h3 class="text-2xl font-bold mb-3">Do you truly own your source code?</h3>
   <p class="text-lg text-700 mb-4">I help founders reclaim their technical independence. I build clean, standard, and transparent systems that give you the freedom to choose your own path.</p>
   <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">

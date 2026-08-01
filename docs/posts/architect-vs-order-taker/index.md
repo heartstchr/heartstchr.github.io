@@ -38,7 +38,7 @@ If you are looking for someone to just "check off tickets," you can find that an
 
 A good architect says "No" more often than "Yes." Because every "No" to a bad feature is a "Yes" to your business's longevity.
 
-<div class="my-6 p-5 surface-0 border-round-3xl shadow-2 border-left-3 border-primary">
+<div class="my-6 p-4 surface-0 border-round-3xl shadow-2 border-left-3 border-primary">
   <h3 class="text-2xl font-bold mb-3">Are you building the right thing?</h3>
   <p class="text-lg text-700 mb-4">I help early-stage founders and enterprise teams validate their roadmap before they spend a dollar on development. Let's find your most efficient path to scale.</p>
   <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">

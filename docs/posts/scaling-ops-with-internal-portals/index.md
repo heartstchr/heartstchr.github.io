@@ -43,7 +43,7 @@ I recently architected a [Dynamic CRUD App](/web-development-projects/notion-cru
 
 A custom internal tool isn't an expense; it’s an investment in your team’s focus. Every hour saved from manual data entry is an hour spent on growth and strategy.
 
-<div class="my-6 p-5 surface-0 border-round-3xl shadow-2 border-left-3 border-blue-500">
+<div class="my-6 p-4 surface-0 border-round-3xl shadow-2 border-left-3 border-blue-500">
   <h3 class="text-2xl font-bold mb-3">Is your workflow slowing you down?</h3>
   <p class="text-lg text-700 mb-4">I help operational teams build professional internal portals that automate the boring stuff and secure their data.</p>
   <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">

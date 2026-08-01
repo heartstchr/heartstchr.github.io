@@ -74,7 +74,7 @@ home: true
   </div>
 </div>
 
-<section class="mt-4 mb-8 p-5 surface-50 border-round-2xl border-1 border-100 flex flex-column md:flex-row align-items-center justify-content-between gap-4">
+<section class="mt-4 mb-8 p-4 surface-50 border-round-2xl border-1 border-100 flex flex-column md:flex-row align-items-center justify-content-between gap-4">
   <div>
     <div class="text-lg font-bold mb-1">Have a startup idea?</div>
     <p class="text-sm text-500 m-0">I scope, architect, and ship production MVPs in weeks — not months.</p>

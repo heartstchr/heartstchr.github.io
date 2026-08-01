@@ -38,7 +38,7 @@ The businesses that win the next decade won't be the ones that used AI first, bu
 
 If you are just sending prompts to a text box, you are leaving 90% of AI's power on the table.
 
-<div class="my-6 p-5 surface-0 border-round-3xl shadow-2 border-left-3 border-green-500">
+<div class="my-6 p-4 surface-0 border-round-3xl shadow-2 border-left-3 border-green-500">
   <h3 class="text-2xl font-bold mb-3">Is your AI feature just a wrapper?</h3>
   <p class="text-lg text-700 mb-4">I help founders architect deep AI integrations that solve real business problems and create a durable competitive moat.</p>
   <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">

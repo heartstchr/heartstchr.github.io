@@ -1,6 +1,6 @@
 <template>
   <div v-if="isActivePage" class="mb-8 mt-4">
-    <section class="max-w-1200 mx-auto overflow-hidden relative surface-section border-round-3xl shadow-2 mb-8">
+    <section class="max-w-1200 mx-auto overflow-hidden relative surface-section border-round-3xl mb-8">
       <div class="absolute top-0 right-0 w-30rem h-30rem bg-primary-900 border-circle opacity-10" style="filter: blur(100px); transform: translate(30%, -30%)"></div>
       
       <div class="text-center mb-8 relative z-1">

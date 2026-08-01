@@ -155,7 +155,7 @@ head:
           </ul>
        </div>
        <div class="col-12 lg:col-4">
-          <div class="surface-50 p-5 border-round-3xl border-1 border-100">
+          <div class="surface-50 p-4 border-round-3xl border-1 border-100">
              <h3 class="text-lg font-bold text-900 mb-3">Audit FAQs</h3>
              <div class="mb-4">
                 <div class="font-bold text-sm text-900 mb-1">How long does a full audit take?</div>

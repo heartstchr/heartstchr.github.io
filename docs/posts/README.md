@@ -52,7 +52,7 @@ contributors: false
   </div>
   <div class="col-12 lg:col-3">
     <div class="sticky top-6rem">
-      <div class="surface-900 text-white p-5 border-round-2xl shadow-4 mb-4">
+      <div class="surface-900 text-white p-4 border-round-2xl shadow-4 mb-4">
         <h3 class="text-xl font-bold mb-3 text-primary-400">Solving Spaghetti Code?</h3>
         <p class="text-sm opacity-70 line-height-3 mb-4">I help startups audit their infrastructure and remove the bottlenecks stalling growth.</p>
         <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
