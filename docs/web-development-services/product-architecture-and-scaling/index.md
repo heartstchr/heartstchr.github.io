@@ -93,7 +93,7 @@ service:
   </section>
 
   <section class="mb-6">
-    <div class="surface-900 text-white border-round-3xl p-4 md:p-5 shadow-3">
+    <div class="surface-card text-900 border-round-3xl p-4 md:p-5 shadow-3">
       <div class="text-sm uppercase font-bold opacity-70 mb-2">Proof of Fit</div>
       <p class="text-lg line-height-3 m-0">{{$frontmatter.service.proof}}</p>
     </div>
@@ -150,37 +150,37 @@ service:
 </article>
 
 <!-- Related Case Studies -->
-<section class="mb-8">
-  <div class="surface-900 text-white p-6 md:p-8 border-round-3xl shadow-4 relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary-900 border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
+<section class="mb-6">
+  <div class="surface-card text-900 p-4 border-round-3xl relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
     <div class="relative z-1">
       <h3 class="text-3xl font-bold mb-4">Relevant Case Studies</h3>
-      <p class="text-xl text-300 mb-6 max-w-30rem">See how I've applied these principles to real-world business challenges.</p>
+      <p class="text-xl text-600 mb-6 max-w-30rem">See how I've applied these principles to real-world business challenges.</p>
       <div class="grid">
         <div class="col-12 md:col-4">
-          <a href="/web-development-projects/ai-dynamic-crud-app/" class="no-underline block p-4 surface-800 border-round-2xl hover:surface-700 transition-all border-1 border-white-alpha-10 h-full">
-            <div class="text-primary-400 font-bold text-xs mb-2 uppercase">AI Automation</div>
-            <div class="text-white font-bold mb-2">AI Dynamic CRUD</div>
-            <div class="text-400 text-sm">Enterprise Notion-to-App engine.</div>
+          <a href="/web-development-projects/ai-dynamic-crud-app/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
+            <div class="text-primary font-bold text-xs mb-2 uppercase">AI Automation</div>
+            <div class="font-bold text-900 mb-2">AI Dynamic CRUD</div>
+            <div class="text-600 text-sm">Enterprise Notion-to-App engine.</div>
           </a>
         </div>
         <div class="col-12 md:col-4">
-          <a href="/web-development-projects/local-home-services-pros/" class="no-underline block p-4 surface-800 border-round-2xl hover:surface-700 transition-all border-1 border-white-alpha-10 h-full">
-            <div class="text-primary-400 font-bold text-xs mb-2 uppercase">Scalable Web</div>
-            <div class="text-white font-bold mb-2">LocalXR Platform</div>
-            <div class="text-400 text-sm">10k+ dynamic service routes.</div>
+          <a href="/web-development-projects/local-home-services-pros/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
+            <div class="text-primary font-bold text-xs mb-2 uppercase">Scalable Web</div>
+            <div class="font-bold text-900 mb-2">LocalXR Platform</div>
+            <div class="text-600 text-sm">10k+ dynamic service routes.</div>
           </a>
         </div>
         <div class="col-12 md:col-4">
-          <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="no-underline block p-4 surface-800 border-round-2xl hover:surface-700 transition-all border-1 border-white-alpha-10 h-full">
-            <div class="text-primary-400 font-bold text-xs mb-2 uppercase">Enterprise Migration</div>
-            <div class="text-white font-bold mb-2">ABN AMRO Rebuild</div>
-            <div class="text-400 text-sm">Global banking infrastructure.</div>
+          <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
+            <div class="text-primary font-bold text-xs mb-2 uppercase">Enterprise Migration</div>
+            <div class="font-bold text-900 mb-2">ABN AMRO Rebuild</div>
+            <div class="text-600 text-sm">Global banking infrastructure.</div>
           </a>
         </div>
       </div>
       <div class="mt-6 text-center">
-        <a href="/web-development-projects/" class="no-underline text-primary-400 font-bold hover:text-primary-300">
+        <a href="/web-development-projects/" class="no-underline text-primary font-bold hover:text-primary-600">
           View All Projects <i class="pi pi-arrow-right ml-2"></i>
         </a>
       </div>
@@ -188,11 +188,11 @@ service:
   </div>
 </section>
 
-<section class="mt-8 pt-8">
-  <div class="surface-900 text-white p-6 md:p-8 border-round-3xl text-center relative overflow-hidden shadow-6">
+<section class="mt-6">
+  <div class="surface-card text-900 p-6 md:p-8 border-round-3xl text-center relative overflow-hidden shadow-6">
     <div class="absolute top-0 right-0 w-30rem h-30rem bg-primary opacity-20 border-circle" style="filter: blur(100px); transform: translate(30%, -30%)"></div>
-    <h2 class="text-3xl md:text-5xl font-bold mb-4 relative z-1">Stop the <span class="text-primary-400">Technical Bottlenecks</span>.</h2>
-    <p class="text-xl text-300 mb-6 max-w-40rem mx-auto relative z-1">Don't let legacy debt or manual workflows stall your growth. Get the strategic engineering leadership your brand deserves.</p>
+    <h2 class="text-3xl md:text-5xl font-bold mb-4 relative z-1">Stop the <span class="text-primary">Technical Bottlenecks</span>.</h2>
+    <p class="text-xl text-600 mb-6 max-w-40rem mx-auto relative z-1">Don't let legacy debt or manual workflows stall your growth. Get the strategic engineering leadership your brand deserves.</p>
     <div class="flex flex-wrap justify-content-center gap-4 relative z-1">
       <a :href="'/contact/?subject=' + encodeURIComponent($frontmatter.service.name + ' Strategic Inquiry')" class="no-underline">
         <Button label="Request Strategic Partnership" icon="pi pi-shield" severity="primary" raised rounded />
@@ -201,7 +201,7 @@ service:
         <Button label="Book Roadmap Call" icon="pi pi-calendar-clock" severity="secondary" raised rounded />
       </a>
     </div>
-    <div class="mt-8 flex flex-wrap justify-content-center gap-6 opacity-50">
+    <div class="mt-8 flex flex-wrap justify-content-center gap-6 opacity-60">
       <div class="flex align-items-center gap-2">
         <i class="pi pi-check text-xs"></i>
         <span class="text-xs font-bold uppercase tracking-widest">Fractional CTO Support</span>

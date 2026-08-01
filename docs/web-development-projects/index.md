@@ -9,7 +9,7 @@ copyright: false
 ---
 
 <!-- Hero Section -->
-<section class="hero-newage relative overflow-hidden p-4 md:p-8 mb-8">
+<section class="hero-newage relative overflow-hidden p-8 mb-4">
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
   <div class="relative z-1">
@@ -105,10 +105,20 @@ copyright: false
             </div> -->
           </div>
           <!-- Card Body -->
-          <div class="p-4 flex flex-column flex-grow-1">
+          <div class="app-card-body p-4 flex flex-column flex-grow-1">
             <h3 class="text-xl font-bold mt-0 mb-2 text-900">{{ project.name }}</h3>
             <p class="text-sm text-600 line-height-3 mb-0 flex-grow-1">{{ project.description }}</p>
-            <div class="pt-3 mt-3 border-top-1 border-50 flex align-items-center justify-content-end">
+            <div class="pt-3 mt-3 border-top-1 border-50 flex align-items-center justify-content-between">
+              <RazorpayButton v-if="project.category === 'Ready-made Apps' && parseFloat(project.price) > 0" :project="project" />
+              <Button
+                v-else-if="project.category === 'Ready-made Apps'"
+                label="Free"
+                icon="pi pi-download"
+                size="small"
+                raised
+                style="background: var(--theme-color); border-color: var(--theme-color); color: #fff;"
+                @click.stop.prevent="openWorkspace(project.workspace || project.link)"
+              />
               <i class="pi pi-arrow-right" :style="{ color: cat.color }"></i>
             </div>
           </div>
@@ -145,10 +155,23 @@ copyright: false
   const groupedProjects = computed(() => {
     const groups: Record<string, typeof freelance> = {};
     for (const cat of categories) {
-      groups[cat.label] = freelance.filter((p: any) => p.category === cat.label);
+      let items = freelance.filter((p: any) => p.category === cat.label);
+      if (cat.label === 'Ready-made Apps') {
+        items = [
+          ...items.filter((p: any) => p.name === 'AI Voice Generator'),
+          ...items.filter((p: any) => p.name !== 'AI Voice Generator'),
+        ];
+      }
+      groups[cat.label] = items;
     }
     return groups;
   });
+
+  const openWorkspace = (url: string) => {
+    if (typeof window !== 'undefined') {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+  };
 </script>
 
 <style scoped>
@@ -185,6 +208,12 @@ copyright: false
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+.app-card-body,
+.app-card-body p,
+.app-card-body h3 {
+  color: #000;
 }
 
 .category-section {

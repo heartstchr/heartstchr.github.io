@@ -5,9 +5,33 @@ lastUpdated: false
 editLink: false
 copyright: false
 home: true
+head:
+  - - script
+    - type: application/ld+json
+    - |-
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Ready-made Apps | Stack Seekers",
+        "description": "Premium, production-ready templates, AI tools, widgets, and business applications built by Stack Seekers.",
+        "url": "https://stackseekers.com/web-development-projects/ready-made-apps/",
+        "inLanguage": "en",
+        "mainEntity": {
+          "@type": "ItemList",
+          "name": "Ready-made Apps",
+          "itemListElement": [
+            { "@type": "SoftwareApplication", "position": 1, "name": "Premium Furniture Landing Page & Catalog", "offers": { "@type": "Offer", "price": "20", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } },
+            { "@type": "SoftwareApplication", "position": 2, "name": "AI Dynamic CRUD App", "offers": { "@type": "Offer", "price": "20", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } },
+            { "@type": "SoftwareApplication", "position": 3, "name": "Contact Form Plugin", "offers": { "@type": "Offer", "price": "20", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } },
+            { "@type": "SoftwareApplication", "position": 4, "name": "Dynamic CRUD App Free", "offers": { "@type": "Offer", "price": "20", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } },
+            { "@type": "SoftwareApplication", "position": 5, "name": "AI Voice Generator", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } },
+            { "@type": "SoftwareApplication", "position": 6, "name": "Service Request System", "offers": { "@type": "Offer", "price": "20", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } }
+          ]
+        }
+      }
 ---
 
-<section class="hero-newage relative overflow-hidden p-4 md:p-8 mb-8">
+<section class="hero-newage relative overflow-hidden p-8 mb-4">
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
   <div class="relative z-1">
@@ -28,16 +52,10 @@ home: true
       </div>
     </div>
     <p class="text-xl text-300 line-height-3 m-0" style="max-width: 720px;">
-      Fully functional software products and templates designed to jumpstart your business or automate workflows. Clean architecture, high-performance styling, and seamless integrations out of the box.
+      Fully functional, production-ready software products and templates designed to jumpstart your business or automate workflows — from <strong>AI-powered web apps</strong> and <strong>embeddable lead-capture widgets</strong> to a robust <strong>customer service request system</strong>. Built for performance, security, and scalability, with setup guidance and professional customization available.
     </p>
   </div>
 </section>
-
-<!-- SEO Content Block -->
-<div class="mb-8 px-4 md:px-6 text-700 line-height-3" style="max-width: 900px;">
-  <p>Our <strong>Ready-made Apps</strong> are designed to bypass months of development time and high agency costs. Every product in this collection is a fully-engineered solution ready for immediate deployment, built using modern stacks and industry best practices.</p>
-  <p>Whether you need an <strong>AI-powered web app</strong>, an <strong>embeddable lead-capture widget</strong>, or a robust <strong>customer service request system</strong>, our products are built with performance, security, and scalability in mind. We provide complete setup guidance and professional customization services to align these solutions with your business needs.</p>
-</div>
 
 <div class="grid mb-8">
   <div v-for="project in readyMadeProjects" :key="project.name" class="col-12 md:col-6 lg:col-4 p-3">
@@ -60,10 +78,20 @@ home: true
           </div> -->
         </div>
         <!-- Card Body -->
-        <div class="p-4 flex flex-column flex-grow-1">
+        <div class="app-card-body p-4 flex flex-column flex-grow-1">
           <h2 class="text-xl font-bold mt-0 mb-2 text-900">{{ project.name }}</h2>
           <p class="text-sm text-600 line-height-3 mb-0 flex-grow-1">{{ project.description }}</p>
-          <div class="pt-3 mt-3 border-top-1 border-50 flex align-items-center justify-content-end">
+          <div class="pt-3 mt-3 border-top-1 border-50 flex align-items-center justify-content-between">
+            <RazorpayButton v-if="parseFloat(project.price) > 0" :project="project" />
+            <Button
+              v-else
+              label="Free"
+              icon="pi pi-download"
+              size="small"
+              raised
+              style="background: var(--theme-color); border-color: var(--theme-color); color: #fff;"
+              @click.stop.prevent="openWorkspace(project.workspace || project.link)"
+            />
             <i class="pi pi-arrow-right" style="color: #3b82f6;"></i>
           </div>
         </div>
@@ -99,7 +127,16 @@ home: true
   import { freelance } from "@data/projects.js";
   import { toKebabCase } from "@utils/index.js";
 
-  const readyMadeProjects = freelance.filter((p: any) => p.category === 'Ready-made Apps');
+  const readyMadeProjects = [
+    ...freelance.filter((p: any) => p.category === 'Ready-made Apps' && p.name === 'AI Voice Generator'),
+    ...freelance.filter((p: any) => p.category === 'Ready-made Apps' && p.name !== 'AI Voice Generator'),
+  ];
+
+  const openWorkspace = (url: string) => {
+    if (typeof window !== 'undefined') {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+  };
 </script>
 
 <style scoped>
@@ -109,5 +146,10 @@ home: true
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+.app-card-body,
+.app-card-body p,
+.app-card-body h2 {
+  color: #000;
 }
 </style>

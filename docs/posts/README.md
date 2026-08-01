@@ -6,7 +6,7 @@ pageInfo: false
 contributors: false
 ---
 
-<section class="p-4 surface-900 text-white border-round-3xl mb-8 overflow-hidden relative">
+<section class="py-4 surface-900 text-black border-round-3xl mb-4 overflow-hidden relative">
   <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary-900 border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
   <div class="relative z-1">
     <div class="flex align-items-center gap-2 text-primary font-bold mb-3 uppercase tracking-wider text-xs">
@@ -41,7 +41,7 @@ contributors: false
 
 <div class="grid">
   <div class="col-12 lg:col-12">
-    <div class="surface-card border-round-2xl shadow-2">
+    <div class="surface-card border-round-2xl">
        <div v-if="!searchQuery" class="mb-4">
          <a :href="filteredPosts[0].link" class="border-2 border-black px-5 py-3 text-md text-black uppercase shadow-md inline-block no-underline font-bold hover:bg-black hover:text-white transition-all">
            What's New →
@@ -52,9 +52,9 @@ contributors: false
   </div>
   <div class="col-12 lg:col-3">
     <div class="sticky top-6rem">
-      <div class="surface-900 text-white p-4 border-round-2xl shadow-4 mb-4">
-        <h3 class="text-xl font-bold mb-3 text-primary-400">Solving Spaghetti Code?</h3>
-        <p class="text-sm opacity-70 line-height-3 mb-4">I help startups audit their infrastructure and remove the bottlenecks stalling growth.</p>
+      <div class="surface-card text-900 p-4 border-round-2xl shadow-4 mb-4">
+        <h3 class="text-xl font-bold mb-3 text-primary">Solving Spaghetti Code?</h3>
+        <p class="text-sm line-height-3 mb-4 text-black">I help startups audit their infrastructure and remove the bottlenecks stalling growth.</p>
         <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
           <Button label="Book Audit" icon="pi pi-bolt" severity="primary" class="w-full font-bold" raised rounded />
         </a>

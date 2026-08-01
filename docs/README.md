@@ -16,7 +16,7 @@ copyright: false
     <div class="col-12 lg:col-7">
       <!-- Premium Badge -->
       <div class="mb-2 flex align-items-center gap-2 fade-in">
-        <span class="inline-flex align-items-center px-3 py-1 border-round-3xl glass-effect text-xs font-bold uppercase letter-spacing-wide border-1 border-white-alpha-20 shadow-2">
+        <span class="inline-flex align-items-center px-3 py-1 border-round-3xl glass-effect text-xs font-bold uppercase letter-spacing-wide border-1 border-white-alpha-20 shadow-2 text-white">
           <i class="pi pi-verified text-primary-400 mr-2"></i> 
           <span class="text-color">Fractional CTO & Strategic Architecture Partnership</span>
         </span>
@@ -129,7 +129,7 @@ copyright: false
   </div>
 </div>
 
-<div class="mb-12 px-2 md:px-4 mt-8" style="max-width: 1300px; margin: 0 auto;">
+<div class="mb-12 mt-8" style="max-width: 1300px; margin: 0 auto;">
   <div class="text-center mb-8">
     <h2 class="text-4xl md:text-6xl font-bold mt-2 tracking-tight">The <span class="text-gradient">ROI</span> of Strategic Engineering</h2>
     <p class="text-xl md:text-2xl text-600 max-w-40rem mx-auto opacity-80">Measurable outcomes delivered for global leaders and fast-moving startups.</p>
@@ -137,7 +137,7 @@ copyright: false
   <div class="grid">
     <div class="col-12 md:col-4 p-3" v-for="win in highImpactWins" :key="win.title">
       <a :href="win.link" class="no-underline block h-full color-inherit">
-        <div class="glass-effect-light border-round-3xl shadow-4 p-4 h-full flex flex-column border-1 border-white-alpha-10 bento-hover relative overflow-hidden text-left text-color">
+        <div class="wins-card glass-effect-light border-round-3xl shadow-4 p-4 h-full flex flex-column border-1 border-white-alpha-10 bento-hover relative overflow-hidden text-left text-color">
           <!-- Accent Glow -->
           <div class="absolute top-0 right-0 w-8rem h-8rem opacity-20 border-circle" :style="{ background: `var(--${win.color}-500)`, filter: 'blur(40px)', transform: 'translate(30%, -30%)' }"></div>   
           <div class="text-2xl md:text-3xl font-bold text-900 mb-2 tracking-tight">
@@ -175,7 +175,7 @@ copyright: false
   </div>
 </div>
 
-<div class="mb-8 px-2 md:px-4 py-8 md:py-12 surface-50 border-round-3xl relative overflow-hidden" style="max-width: 1300px; margin: 0 auto;">
+<div class="mb-8 py-8 md:py-12 surface-50 border-round-3xl relative overflow-hidden" style="max-width: 1300px; margin: 0 auto;">
   <!-- Abstract background glow -->
   <div class="absolute top-0 left-0 w-30rem h-30rem bg-primary opacity-5 border-circle" style="filter: blur(120px); transform: translate(-30%, -30%);"></div>
   
@@ -231,7 +231,7 @@ copyright: false
   </div>
 
   <!-- Pillar 1 -->
-  <div class="grid align-items-center mb-8 glass-effect p-4 border-round-3xl shadow-4 border-1 border-white-alpha-10 relative">
+  <div class="grid align-items-center mb-8 p-4 border-round-3xl shadow-4 border-1 border-white-alpha-10 relative">
     <div class="absolute top-0 right-0 p-4 opacity-10">
         <i class="pi pi-sparkles text-green-500" style="font-size: 4rem;"></i>
     </div>
@@ -264,7 +264,7 @@ copyright: false
   </div>
 
   <!-- Pillar 2 -->
-  <div class="grid align-items-center mb-8 glass-effect p-4 border-round-3xl shadow-4 border-1 border-white-alpha-10 relative flex-column lg:flex-row-reverse">
+  <div class="grid align-items-center mb-8 p-4 border-round-3xl shadow-4 border-1 border-white-alpha-10 relative flex-column lg:flex-row-reverse">
     <div class="absolute top-0 right-0 p-4 opacity-10">
         <i class="pi pi-code text-purple-500" style="font-size: 4rem;"></i>
     </div>
@@ -297,7 +297,7 @@ copyright: false
   </div>
 
   <!-- Pillar 3 -->
-  <div class="grid align-items-center mb-8 glass-effect p-4 border-round-3xl shadow-4 border-1 border-white-alpha-10 relative">
+  <div class="grid align-items-center mb-8 p-4 border-round-3xl shadow-4 border-1 border-white-alpha-10 relative">
     <div class="absolute top-0 right-0 p-4 opacity-10">
         <i class="pi pi-chart-line text-orange-500" style="font-size: 4rem;"></i>
     </div>
@@ -330,7 +330,7 @@ copyright: false
   </div>
 
   <!-- Pillar 4 -->
-  <div class="grid align-items-center mb-8 glass-effect p-4 border-round-3xl shadow-4 border-1 border-white-alpha-10 relative flex-column lg:flex-row-reverse">
+  <div class="grid align-items-center mb-8 p-4 border-round-3xl shadow-4 border-1 border-white-alpha-10 relative flex-column lg:flex-row-reverse">
     <div class="absolute top-0 right-0 p-4 opacity-10">
         <i class="pi pi-sync text-blue-500" style="font-size: 4rem;"></i>
     </div>
@@ -439,7 +439,7 @@ copyright: false
     <p class="text-xl text-600 line-height-2">Don't just take my word for it. Trusted by leads at global organizations.</p>
   </div>
   
-  <div class="grid px-2 md:px-4" style="max-width: 1240px; margin: 0 auto;">
+  <div class="grid" style="max-width: 1240px; margin: 0 auto;">
     <div class="col-12 lg:col-4 p-3" v-for="slot in testimonials" :key="slot.name">
       <div class="surface-0 shadow-2 border-round-2xl p-4 h-full flex flex-column border-1 border-100 bento-hover">
         <div class="flex align-items-center mb-4 pb-3 border-bottom-1 border-50">
@@ -472,7 +472,7 @@ copyright: false
 </div>
 
 <!-- FAQ -->
-<div class="mb-8 surface-50 border-round-3xl p-4 md:p-6" style="max-width: 1000px; margin: 0 auto;">
+<div class="mb-8 surface-50 border-round-3xl" style="max-width: 1000px; margin: 0 0;">
   <div class="text-center pb-6">
     <h2 class="text-4xl font-bold m-0 p-0">Frequently asked <span class="text-primary">questions</span></h2>
   </div>  <div class="max-w-800 mx-auto">
@@ -518,7 +518,7 @@ copyright: false
 </div>
 
 <!-- Contact CTA -->
-<div class="mb-8 border-round-3xl p-6 md:p-8 text-center shadow-4 surface-section relative overflow-hidden" style="max-width: 1000px; margin: 0 auto;">
+<div class="mb-8 border-round-3xl p-4 text-center shadow-4 surface-section relative overflow-hidden" style="max-width: 1000px; margin: 0 0;">
   <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
   <h2 class="text-4xl md:text-5xl font-bold m-0 mb-3 text-900 relative z-1">Let's solve your hardest technical bottleneck</h2>
   <p class="text-xl line-height-3 mb-5 text-600 mx-auto relative z-1" style="max-width: 650px;">
@@ -569,6 +569,11 @@ copyright: false
   backdrop-filter: blur(12px); 
   -webkit-backdrop-filter: blur(12px);
 }
+.wins-card,
+.wins-card .text-500,
+.wins-card .text-600,
+.wins-card .text-700,
+.wins-card .text-900 { color: #000 !important; }
 
 @media (hover: hover) {
   .hover-zoom img { transition: transform 0.3s ease; }

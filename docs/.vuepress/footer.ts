@@ -4,7 +4,7 @@ export const footer = `
     <div class="grid w-full m-0 p-0">
       <div class="col-12 md:col-3 p-4 border-bottom-1 md:border-bottom-none border-50 pb-6 md:pb-4">
         <div class="flex flex-column gap-3 mb-6">
-          <img src="/img/whitelogo.webp" alt="Stack Seekers" class="h-3rem w-auto align-self-start" />
+          <img src="/img/stackseekers.webp" alt="Stack Seekers" class="h-3rem w-auto align-self-start" />
           <div class="text-xs font-bold text-primary uppercase tracking-widest opacity-80">Engineering Architecture. Scaling Growth.</div>
         </div>
       </div>

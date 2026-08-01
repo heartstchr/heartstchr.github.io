@@ -106,6 +106,9 @@ project:
               <a v-if="$frontmatter.project.contact" :href="'mailto:support@stackseekers.com?subject=' + encodeURIComponent('Scale Request: ' + $frontmatter.project.name)" class="no-underline flex-1">
                 <Button label="Architect Similar Solution" icon="pi pi-bolt" severity="secondary" class="w-full font-bold py-3" raised rounded />
               </a>
+              <div v-if="parseFloat($frontmatter.project.price) > 0" class="flex-1 flex align-items-center justify-content-center">
+                <RazorpayButton :project="$frontmatter.project" />
+              </div>
            </div>
         </div>
       </div>

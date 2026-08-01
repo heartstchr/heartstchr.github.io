@@ -13,7 +13,7 @@ export default hopeTheme(
     },
     repo: "heartstchr",
     docsDir: "/src",
-    darkmode: "auto",
+    darkmode: "disable",
     pageInfo: ["Category", "Tag", "ReadingTime", "Date"],
     sidebar: false,
     breadcrumb: true,

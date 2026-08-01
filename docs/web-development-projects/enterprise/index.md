@@ -5,9 +5,21 @@ lastUpdated: false
 editLink: false
 copyright: false
 home: true
+head:
+  - - script
+    - type: application/ld+json
+    - |-
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Enterprise Web Development Projects | Stack Seekers",
+        "description": "Large-scale enterprise platforms, banking systems, and mission-critical applications built by Stack Seekers — including ABN AMRO, Qatar Airways, Upstox, and more.",
+        "url": "https://stackseekers.com/web-development-projects/enterprise/",
+        "inLanguage": "en"
+      }
 ---
 
-<section class="hero-newage relative overflow-hidden p-4 md:p-8 mb-8">
+<section class="hero-newage relative overflow-hidden p-8 mb-4">
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
   <div class="relative z-1">
@@ -28,16 +40,10 @@ home: true
       </div>
     </div>
     <p class="text-xl text-300 line-height-3 m-0" style="max-width: 720px;">
-      Production systems trusted at global scale — from internet banking for 10M+ users at ABN AMRO to flight booking engines for Qatar Airways and FinTech dashboards for Upstox.
+      Production systems trusted at global scale — from internet banking for 10M+ users at ABN AMRO to flight booking engines for Qatar Airways and FinTech dashboards for Upstox. Our <strong>Enterprise development</strong> focus is on building resilient, mission-critical systems that can handle high loads and strict security requirements. We bridge the gap between <strong>legacy infrastructure</strong> and <strong>modern cloud architecture</strong>. Having worked with global giants like <strong>ABN AMRO</strong> and <strong>Qatar Airways</strong>, we bring banking-grade engineering standards to every project. We focus on <strong>system observability</strong>, <strong>zero-downtime migrations</strong>, and <strong>high-availability deployments</strong> to ensure your business operations never stop.
     </p>
   </div>
 </section>
-
-<!-- SEO Content Block -->
-<div class="mb-8 px-4 md:px-6 text-700 line-height-3" style="max-width: 900px;">
-  <p>Our <strong>Enterprise development</strong> focus is on building resilient, mission-critical systems that can handle high loads and strict security requirements. We bridge the gap between <strong>legacy infrastructure</strong> and <strong>modern cloud architecture</strong>.</p>
-  <p>Having worked with global giants like <strong>ABN AMRO</strong> and <strong>Qatar Airways</strong>, we bring banking-grade engineering standards to every project. We focus on <strong>system observability</strong>, <strong>zero-downtime migrations</strong>, and <strong>high-availability deployments</strong> to ensure your business operations never stop.</p>
-</div>
 
 <div class="grid mb-8">
   <div v-for="project in enterpriseProjects" :key="project.name" class="col-12 md:col-6 lg:col-4 p-3">

@@ -51,8 +51,8 @@ export default defineUserConfig({
       description:
         "Senior Full Stack Developer - Graphic Artist - UI/UX Designer",
       // extra keys are permitted by casting
-      logo: "/img/whitelogo.webp",
-      logoDark: "/img/stackseekers.webp",
+      logo: "/img/stackseekers.webp",
+      logoDark: "/img/whitelogo.webp",
       logoAlt: "Stack Seekers Logo – Web Development Experts",
     } as unknown as any,
   },
@@ -173,6 +173,7 @@ export default defineUserConfig({
     __VITE_NOTION_ENDPOINT__: process.env.VITE_NOTION_ENDPOINT || "",
     __VITE_NOTION_DATABASE_ID__: process.env.VITE_NOTION_DATABASE_ID || "",
     __WHATSAPP_NUMBER__: process.env.VITE_WHATSAPP_NUMBER || "917026217029",
+    __VITE_RAZORPAY_KEY_ID__: process.env.VITE_RAZORPAY_KEY_ID || "",
     __VITE_SUPPORT_EMAIL__: JSON.stringify(SUPPORT_EMAIL),
   },
 });

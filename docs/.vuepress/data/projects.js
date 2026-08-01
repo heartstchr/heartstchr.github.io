@@ -15,7 +15,7 @@ export const freelance = [
     domain: "Headless Commerce & CMS Integration",
     schema: "https://schema.org/WebApplication",
     link: "",
-    price: "0",
+    price: "20",
     currency: "USD",
     contact: `mailto:${SUPPORT_EMAIL}?subject=Notion Furniture Catalog Inquiry`,
     stack: [
@@ -112,7 +112,7 @@ export const freelance = [
     domain: "Database Management & AI Automation",
     schema: "https://schema.org/WebApplication",
     link: "https://ai-dynamic-crud-app.stackseekers.com/",
-    price: "0",
+    price: "20",
     currency: "USD",
     contact: `mailto:${SUPPORT_EMAIL}?subject=AI Dynamic CRUD App Inquiry`,
     stack: [
@@ -254,7 +254,7 @@ export const freelance = [
     domain: "Contact Forms & Lead Capture",
     schema: "https://schema.org/WebApplication",
     link: "https://contact-form-app.stackseekers.com/",
-    price: "0",
+    price: "20",
     currency: "USD",
     contact: `mailto:${SUPPORT_EMAIL}?subject=Contact Form Plugin Inquiry`,
     stack: [
@@ -421,7 +421,7 @@ export const freelance = [
     domain: "Database Management & No-Code",
     schema: "https://schema.org/WebApplication",
     link: "https://notion-crud.netlify.app/",
-    price: "0",
+    price: "20",
     currency: "USD",
     contact: `mailto:${SUPPORT_EMAIL}?subject=Notion CRUD App Inquiry`,
     stack: [
@@ -500,6 +500,7 @@ export const freelance = [
     domain: "AI & Content Creation",
     schema: "https://schema.org/WebApplication",
     link: "https://ainarrator.stackseekers.com/",
+    workspace: "https://workspace.google.com/marketplace/app/ai_narrator_ai_voice_generator/70473820113?utm_source=ainarrator&utm_medium=website&utm_campaign=free_version&utm_content=get_free_addon",
     price: "0",
     currency: "USD",
     contact: `mailto:${SUPPORT_EMAIL}?subject=AI Narrator Inquiry`,
@@ -582,7 +583,7 @@ export const freelance = [
     domain: "Service Request",
     schema: "https://schema.org/WebApplication",
     link: "https://notion-p.netlify.app/",
-    price: "0",
+    price: "20",
     currency: "USD",
     contact: `mailto:${SUPPORT_EMAIL}?subject=Inquiry : `,
     stack: [

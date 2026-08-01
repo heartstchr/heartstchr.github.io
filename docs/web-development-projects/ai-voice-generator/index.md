@@ -17,6 +17,7 @@ project:
   price: "0"
   currency: "USD"
   link: "https://ainarrator.stackseekers.com/"
+  workspace: "https://workspace.google.com/marketplace/app/ai_narrator_ai_voice_generator/70473820113?utm_source=ainarrator&utm_medium=website&utm_campaign=free_version&utm_content=get_free_addon"
   codeLink: 
   contact: "mailto:support@stackseekers.com?subject=AI Narrator Inquiry"
   stack: ["javascript","googleappsscript","googledocs","googledrive","html5","css","json/black/white"]
@@ -105,6 +106,12 @@ project:
               </a>
               <a v-if="$frontmatter.project.contact" :href="'mailto:support@stackseekers.com?subject=' + encodeURIComponent('Scale Request: ' + $frontmatter.project.name)" class="no-underline flex-1">
                 <Button label="Architect Similar Solution" icon="pi pi-bolt" severity="secondary" class="w-full font-bold py-3" raised rounded />
+              </a>
+              <div v-if="parseFloat($frontmatter.project.price) > 0" class="flex-1 flex align-items-center justify-content-center">
+                <RazorpayButton :project="$frontmatter.project" />
+              </div>
+              <a v-else-if="$frontmatter.project.workspace || $frontmatter.project.link" :href="$frontmatter.project.workspace || $frontmatter.project.link" target="_blank" rel="noopener noreferrer" class="no-underline flex-1">
+                <Button label="Free" icon="pi pi-download" severity="primary" class="w-full font-bold py-3" raised rounded />
               </a>
            </div>
         </div>

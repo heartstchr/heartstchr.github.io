@@ -7,7 +7,7 @@ copyright: false
 home: true
 ---
 
-<section class="hero-newage relative overflow-hidden p-4 md:p-8 mb-8">
+<section class="hero-newage relative overflow-hidden p-8 mb-4">
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
   <div class="relative z-1">
