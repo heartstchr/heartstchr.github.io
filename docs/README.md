@@ -30,7 +30,7 @@ copyright: false
       <div class="grid mt-5">
         <div class="col-6 md:col-6">
           <a href="/web-development-projects/partner-dashboard-upstox/" class="no-underline block h-full transition-opacity opacity-100 hover:opacity-80">
-            <div class="px-4 py-3 border-round-2xl shadow-4 h-full">
+            <div class="px-4 py-3 border-round-2xl h-full">
                <div class="text-xs font-bold text-500 uppercase mb-1">Upstox Impact</div>
                <div class="text-2xl font-bold text-900 line-height-1">4 Days <i class="pi pi-arrow-right mx-1 text-sm opacity-50"></i> 2 Hours</div>
                <div class="text-xs text-600 mt-1">Lead turnaround automation</div>
@@ -39,7 +39,7 @@ copyright: false
         </div>
         <div class="col-6 md:col-6">
           <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="no-underline block h-full transition-opacity opacity-100 hover:opacity-80">
-            <div class="px-4 py-3 border-round-2xl shadow-4 h-full">
+            <div class="px-4 py-3 border-round-2xl h-full">
                <div class="text-xs font-bold text-500 uppercase mb-1">ABN AMRO Scale</div>
                <div class="text-2xl font-bold text-900 line-height-1">Global Platform</div>
                <div class="text-xs text-600 mt-1">Enterprise SaaS Architecture</div>
@@ -80,7 +80,7 @@ copyright: false
     <div class="col-12 lg:col-5 mt-8 lg:mt-0 hidden lg:block">
       <div class="bento-hero-grid h-45rem relative">
         <!-- Main Hero Card: Productized Benefit -->
-        <div class="bento-hero-item bento-hero-1 shadow-6 border-round-3xl overflow-hidden relative bento-hover border-1 border-white-alpha-10">
+        <div class="bento-hero-item bento-hero-1  border-round-3xl overflow-hidden relative bento-hover border-1 border-white-alpha-10">
           <img src="/img/projects/ai-dynamic-crud-app/ai-gemini-app.webp" alt="AI Automation" width="600" height="800" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
           <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-40 to-transparent flex flex-column justify-content-end">
             <div class="glass-effect p-3 border-round-2xl">
@@ -90,7 +90,7 @@ copyright: false
           </div>
         </div>
         <!-- Secondary Cards -->
-        <div class="bento-hero-item bento-hero-2 shadow-6 border-round-3xl overflow-hidden relative bento-hover border-1 border-white-alpha-10">
+        <div class="bento-hero-item bento-hero-2  border-round-3xl overflow-hidden relative bento-hover border-1 border-white-alpha-10">
           <img src="/img/home/projects/ABN_Amro.webp" alt="Enterprise SaaS" width="600" height="400" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
           <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-40 to-transparent flex flex-column justify-content-end">
             <div class="glass-effect p-3 border-round-2xl">
@@ -99,7 +99,7 @@ copyright: false
             </div>
           </div>
         </div>
-        <div class="bento-hero-item bento-hero-3 shadow-6 border-round-3xl overflow-hidden relative bento-hover border-1 border-white-alpha-10">
+        <div class="bento-hero-item bento-hero-3  border-round-3xl overflow-hidden relative bento-hover border-1 border-white-alpha-10">
           <img src="/img/projects/localxr/localxr-cover.webp" alt="Programmatic SEO" width="600" height="400" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
           <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-40 to-transparent flex flex-column justify-content-end">
             <div class="glass-effect p-3 border-round-2xl">
@@ -166,9 +166,6 @@ copyright: false
                 </div>
              </div>
           </div>
-          <div class="mt-2 flex justify-content-end opacity-40">
-             <i class="pi pi-arrow-up-right text-lg text-900"></i>
-          </div>
         </div>
       </a>
     </div>
@@ -186,15 +183,15 @@ copyright: false
   
   <div class="grid relative z-1">
     <div class="col-12 md:col-6 p-3">
-      <div class="glass-effect-light p-4 border-round-3xl shadow-4 h-full border-top-3 border-green-500 bento-hover">
-        <div class="bg-green-100 text-green-600 border-circle w-4rem h-4rem flex align-items-center justify-content-center mb-4 shadow-2"><i class="pi pi-sparkles text-2xl"></i></div>
+      <div class="glass-effect-light p-4 border-round-3xl h-full">
+        <div class="bg-green-100 text-green-600 border-circle w-4rem h-4rem flex align-items-center justify-content-center mb-4"><i class="pi pi-sparkles text-2xl"></i></div>
         <h3 class="m-0 mb-3 font-bold text-2xl tracking-tight">The Intelligence Problem</h3>
         <p class="text-700 text-lg line-height-3">You are spending hundreds of hours on manual processes. We integrate custom AI (Gemini/OpenAI) to automate intelligence safely within your own secure infrastructure.</p>
       </div>
     </div>
     <div class="col-12 md:col-6 p-3">
-      <div class="glass-effect-light p-4 border-round-3xl shadow-4 h-full border-top-3 border-purple-500 flex flex-column bento-hover">
-        <div class="bg-purple-100 text-purple-600 border-circle w-4rem h-4rem flex align-items-center justify-content-center mb-4 shadow-2"><i class="pi pi-code text-2xl"></i></div>
+      <div class="glass-effect-light p-4 border-round-3xl h-full flex flex-column">
+        <div class="bg-purple-100 text-purple-600 border-circle w-4rem h-4rem flex align-items-center justify-content-center mb-4"><i class="pi pi-code text-2xl"></i></div>
         <h3 class="m-0 mb-3 font-bold text-2xl tracking-tight">The Scale Problem</h3>
         <p class="text-700 text-lg line-height-3 mb-4">Your legacy application is crumbling under traffic. We architect flawless, high-concurrency SaaS platforms built for absolute resilience and growth.</p>
          <div class="mt-auto pt-3 border-top-1 border-white-alpha-10">
@@ -207,15 +204,16 @@ copyright: false
       </div>
     </div>
     <div class="col-12 md:col-6 p-3">
-      <div class="glass-effect-light p-4 border-round-3xl shadow-4 h-full border-top-3 border-orange-500 bento-hover">
-        <div class="bg-orange-100 text-orange-600 border-circle w-4rem h-4rem flex align-items-center justify-content-center mb-4 shadow-2"><i class="pi pi-users text-2xl"></i></div>
+      <div class="glass-effect-light p-4 border-round-3xl h-full">
+        <div class="bg-orange-100 text-orange-600 border-circle w-4rem h-4rem flex align-items-center justify-content-center mb-4">
+        <i class="pi pi-users text-2xl"></i></div>
         <h3 class="m-0 mb-3 font-bold text-2xl tracking-tight">The Traffic Problem</h3>
         <p class="text-700 text-lg line-height-3">Manual SEO doesn't scale. We build database-driven directory platforms that dominate organic search by generating thousands of optimized pages natively.</p>
       </div>
     </div>
     <div class="col-12 md:col-6 p-3">
-      <div class="glass-effect-light p-4 border-round-3xl shadow-4 h-full border-top-3 border-blue-500 bento-hover">
-        <div class="bg-blue-100 text-blue-600 border-circle w-4rem h-4rem flex align-items-center justify-content-center mb-4 shadow-2"><i class="pi pi-database text-2xl"></i></div>
+      <div class="glass-effect-light p-4 border-round-3xl h-full">
+        <div class="bg-blue-100 text-blue-600 border-circle w-4rem h-4rem flex align-items-center justify-content-center mb-4"><i class="pi pi-database text-2xl"></i></div>
         <h3 class="m-0 mb-3 font-bold text-2xl tracking-tight">The Operational Problem</h3>
         <p class="text-700 text-lg line-height-3">Your team is drowning in manual data entry. We turn your existing operational data (Notion/Spreadsheets) into professional, automated web applications instantly.</p>
       </div>
@@ -231,7 +229,7 @@ copyright: false
   </div>
 
   <!-- Pillar 1 -->
-  <div class="grid align-items-center mb-8 p-4 border-round-3xl shadow-4 border-1 border-white-alpha-10 relative">
+  <div class="grid align-items-center mb-8 p-4 border-round-3xl border-1 border-white-alpha-10 relative">
     <div class="absolute top-0 right-0 p-4 opacity-10">
         <i class="pi pi-sparkles text-green-500" style="font-size: 4rem;"></i>
     </div>
@@ -248,13 +246,13 @@ copyright: false
     <div class="col-12 lg:col-7 relative z-1">
       <div class="grid">
         <div class="col-12 p-4">
-          <a href="/web-development-projects/ai-dynamic-crud-app/" class="block bento-hover relative border-round-3xl overflow-hidden shadow-6 no-underline border-1 border-white-alpha-10">
+          <a href="/web-development-projects/ai-dynamic-crud-app/" class="block bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-white-alpha-10">
             <img src="/img/projects/ai-dynamic-crud-app/ai-webapp-english.webp" alt="AI Dynamic CRUD App" width="400" height="300" class="w-full object-cover" loading="lazy" />
             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">AI Dynamic CRUD</div>
           </a>
         </div>
         <div class="col-12 p-4">
-          <a href="/web-development-projects/ai-voice-generator/" class="block bento-hover relative border-round-3xl overflow-hidden shadow-6 no-underline border-1 border-white-alpha-10">
+          <a href="/web-development-projects/ai-voice-generator/" class="block bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-white-alpha-10">
             <img src="/img/projects/ai-narrator/Google-docs-text-to-speech-ai-voice-ai-audio.webp" alt="AI Voice Generator" width="400" height="300" class="w-full object-cover" loading="lazy" />
              <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">AI Voice Generator</div>
           </a>
@@ -264,7 +262,7 @@ copyright: false
   </div>
 
   <!-- Pillar 2 -->
-  <div class="grid align-items-center mb-8 p-4 border-round-3xl shadow-4 border-1 border-white-alpha-10 relative flex-column lg:flex-row-reverse">
+  <div class="grid align-items-center mb-8 p-4 border-round-3xl border-1 border-white-alpha-10 relative flex-column lg:flex-row-reverse">
     <div class="absolute top-0 right-0 p-4 opacity-10">
         <i class="pi pi-code text-purple-500" style="font-size: 4rem;"></i>
     </div>
@@ -281,13 +279,13 @@ copyright: false
     <div class="col-12 lg:col-7 relative z-1">
       <div class="grid">
         <div class="col-12 p-4">
-          <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="block bento-hover relative border-round-3xl overflow-hidden shadow-6 no-underline border-1 border-white-alpha-10">
+          <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="block bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-white-alpha-10">
             <img src="/img/home/projects/ABN_Amro.webp" alt="ABN AMRO Migration" width="400" height="300" class="w-full  object-cover" loading="lazy" />
             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">ABN AMRO Enterprise</div>
           </a>
         </div>
         <div class="col-12 p-4">
-          <a href="/web-development-projects/momentum/" class="block bento-hover relative border-round-3xl overflow-hidden shadow-6 no-underline border-1 border-white-alpha-10">
+          <a href="/web-development-projects/momentum/" class="block bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-white-alpha-10">
             <img src="/img/home/projects/momentum_incident_management.webp" alt="Momentum" width="400" height="300" class="w-full  object-cover" loading="lazy" />
              <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">Momentum Incident Mgmt</div>
           </a>
@@ -297,7 +295,7 @@ copyright: false
   </div>
 
   <!-- Pillar 3 -->
-  <div class="grid align-items-center mb-8 p-4 border-round-3xl shadow-4 border-1 border-white-alpha-10 relative">
+  <div class="grid align-items-center mb-8 p-4 border-round-3xl border-1 border-white-alpha-10 relative">
     <div class="absolute top-0 right-0 p-4 opacity-10">
         <i class="pi pi-chart-line text-orange-500" style="font-size: 4rem;"></i>
     </div>
@@ -314,13 +312,13 @@ copyright: false
     <div class="col-12 lg:col-7 relative z-1">
       <div class="grid">
         <div class="col-12 p-4">
-          <a href="/web-development-projects/local-home-services-pros/" class="block bento-hover relative border-round-3xl overflow-hidden shadow-6 no-underline border-1 border-white-alpha-10">
+          <a href="/web-development-projects/local-home-services-pros/" class="block bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-white-alpha-10">
             <img src="/img/projects/localxr/localxr-cover.webp" alt="LocalXR" width="400" height="300" class="w-full  object-cover" loading="lazy" />
             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">LocalXR Directory</div>
           </a>
         </div>
         <div class="col-12 p-4">
-          <a href="/web-development-projects/appliance-repair-service-platform/" class="block bento-hover relative border-round-3xl overflow-hidden shadow-6 no-underline border-1 border-white-alpha-10">
+          <a href="/web-development-projects/appliance-repair-service-platform/" class="block bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-white-alpha-10">
             <img src="/img/home/projects/appliance_repair_cover.webp" alt="Appliance Repair" width="400" height="300" class="w-full  object-cover" loading="lazy" />
              <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">Appliance Repair Platform</div>
           </a>
@@ -330,7 +328,7 @@ copyright: false
   </div>
 
   <!-- Pillar 4 -->
-  <div class="grid align-items-center mb-8 p-4 border-round-3xl shadow-4 border-1 border-white-alpha-10 relative flex-column lg:flex-row-reverse">
+  <div class="grid align-items-center mb-8 p-4 border-round-3xl border-1 border-white-alpha-10 relative flex-column lg:flex-row-reverse">
     <div class="absolute top-0 right-0 p-4 opacity-10">
         <i class="pi pi-sync text-blue-500" style="font-size: 4rem;"></i>
     </div>
@@ -347,13 +345,13 @@ copyright: false
     <div class="col-12 lg:col-7 relative z-1">
       <div class="grid">
         <div class="col-12 p-4">
-          <a href="/web-development-projects/notion-crud/" class="block bento-hover relative border-round-3xl overflow-hidden shadow-6 no-underline border-1 border-white-alpha-10">
+          <a href="/web-development-projects/notion-crud/" class="block bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-white-alpha-10">
             <img src="/img/projects/notion-crud-app/Notion-crud-app-free.webp" alt="Notion CRUD" class="w-full  object-cover" loading="lazy" />
             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">Dynamic CRUD App</div>
           </a>
         </div>
         <div class="col-12 p-4">
-          <a href="/web-development-projects/service-request/" class="block bento-hover relative border-round-3xl overflow-hidden shadow-6 no-underline border-1 border-white-alpha-10">
+          <a href="/web-development-projects/service-request/" class="block bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-white-alpha-10">
             <img src="/img/home/projects/notion_service_request.webp" alt="Service Request" class="w-full  object-cover" loading="lazy" />
              <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">Service Request Portal</div>
           </a>
@@ -370,7 +368,7 @@ copyright: false
 <ConsultingBridge />
 
 <!-- Sticky Mobile CTA -->
-<div class="fixed bottom-0 left-0 w-full p-3 z-5 lg:hidden glass-sticky-cta shadow-6 flex gap-3 border-top-1 border-white-alpha-10">
+<div class="fixed bottom-0 left-0 w-full p-3 z-5 lg:hidden glass-sticky-cta  flex gap-3 border-top-1 border-white-alpha-10">
   <a href="https://cal.com/stackseekers" target="_blank" class="flex-grow-1 no-underline">
     <Button label="Book Call" icon="pi pi-calendar" severity="primary" class="w-full text-lg font-bold py-3" raised />
   </a>
@@ -387,7 +385,7 @@ copyright: false
   <div class="grid justify-content-center">
     <!-- Tier 1: Intelligence Integration -->
     <div class="col-12 lg:col-3 md:col-6 p-2">
-      <div class="surface-0 border-round-2xl shadow-6 p-4 h-full flex flex-column text-left relative overflow-hidden border-2 border-primary">
+      <div class="surface-0 border-round-2xl  p-4 h-full flex flex-column text-left relative overflow-hidden border-2 border-primary">
         <div class="absolute top-0 right-0 bg-primary text-900 text-xs font-bold px-2 py-1 border-round-bottom-left-md">POPULAR</div>
         <div class="text-base font-bold text-primary mb-2">Intelligence Integration</div>
         <div class="text-2xl font-bold mb-4">AI Feature Engineering</div>
@@ -433,7 +431,7 @@ copyright: false
   </div>
 </div>
 
-<div class="mb-8 py-4 surface-0">
+<div class="mb-8 py-4">
   <div class="text-center pb-6">
     <h2 class="text-4xl font-bold mb-2">Verified Professional Impact</h2>
     <p class="text-xl text-600 line-height-2">Don't just take my word for it. Trusted by leads at global organizations.</p>
@@ -441,7 +439,7 @@ copyright: false
   
   <div class="grid" style="max-width: 1240px; margin: 0 auto;">
     <div class="col-12 lg:col-4 p-3" v-for="slot in testimonials" :key="slot.name">
-      <div class="surface-0 shadow-2 border-round-2xl p-4 h-full flex flex-column border-1 border-100 bento-hover">
+      <div class="border-round-2xl p-4 h-full flex flex-column border-1 border-100 bento-hover">
         <div class="flex align-items-center mb-4 pb-3 border-bottom-1 border-50">
           <a :href="slot.link" target="_blank" class="no-underline flex align-items-center gap-3">
             <div class="relative">
@@ -518,7 +516,7 @@ copyright: false
 </div>
 
 <!-- Contact CTA -->
-<div class="mb-8 border-round-3xl p-4 text-center shadow-4 surface-section relative overflow-hidden" style="max-width: 1000px; margin: 0 0;">
+<div class="mb-8 border-round-3xl p-4 text-center surface-section relative overflow-hidden" style="max-width: 1000px; margin: 0 0;">
   <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
   <h2 class="text-4xl md:text-5xl font-bold m-0 mb-3 text-900 relative z-1">Let's solve your hardest technical bottleneck</h2>
   <p class="text-xl line-height-3 mb-5 text-600 mx-auto relative z-1" style="max-width: 650px;">
