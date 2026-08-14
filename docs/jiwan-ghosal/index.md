@@ -28,7 +28,7 @@ contributors: false
         <p class="mt-3">Whether you need a high-performance SaaS or an AI-driven automation engine, I provide the technical leadership to launch faster, scale reliably, and reduce operational pain.</p>
       </div>
       <div class="flex gap-3 mt-5 flex-wrap">
-        <a href="https://cal.com/stackseekers" target="_blank" class="no-underline mt-4">
+        <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline mt-4">
           <Button label="Book a 25‑min strategy call" icon="pi pi-calendar-clock" severity="primary" rounded raised />
         </a>
         <CustomButton href="/web-development-projects/" label="See Work">
@@ -273,7 +273,7 @@ contributors: false
     </div>
   </div>
   <div class="my-8">
-      <a href="https://cal.com/stackseekers" size="large"
+      <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" size="large"
           class="flex justify-content-center text-center no-underline -mt-4" aria-label="Send an Email">
       <Button label="Book a free call" icon="pi pi-briefcase" severity="primary" raised rounded />
       </a>
@@ -292,7 +292,7 @@ contributors: false
         <div class="p-4">
           <h3 class="m-0 p-0 font-bold">Q. How can I start a project with you?</h3>
           <p class="mx-3">
-              You can start by <a href="https://cal.com/stackseekers" class="no-underline text-xl" aria-label="schedule a meeting">scheduling a meeting</a> with me. I’ll connect with you promptly to discuss your requirements and plan the next steps.
+              You can start by <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" class="no-underline text-xl" aria-label="schedule a meeting">scheduling a meeting</a> with me. I’ll connect with you promptly to discuss your requirements and plan the next steps.
           </p>
         </div>
         <div class="p-4">
@@ -325,7 +325,7 @@ contributors: false
               </template>
             </Timeline>
             <div class="my-8">
-                <a href="https://cal.com/stackseekers" size="large"
+                <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" size="large"
                     class="flex justify-content-center text-center no-underline -mt-4" aria-label="Send an Email">
                 <Button label="Book a free call" icon="pi pi-briefcase" severity="primary" raised rounded />
                 </a>

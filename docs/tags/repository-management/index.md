@@ -5,6 +5,9 @@ layout: Layout
 tag: repository management
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: repository management, web development, programming, tech, tutorial
   - - meta

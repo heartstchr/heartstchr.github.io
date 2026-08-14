@@ -5,6 +5,9 @@ layout: Layout
 tag: github pages
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: github pages, web development, programming, tech, tutorial
   - - meta

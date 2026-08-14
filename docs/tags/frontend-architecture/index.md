@@ -5,6 +5,9 @@ layout: Layout
 tag: frontend architecture
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: frontend architecture, web development, programming, tech, tutorial
   - - meta

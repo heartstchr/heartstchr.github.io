@@ -5,6 +5,9 @@ layout: Layout
 tag: collaboration
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: collaboration, web development, programming, tech, tutorial
   - - meta

@@ -47,7 +47,7 @@ If your service or product has a geographic component (e.g., "Web Design in [Cit
 <div class="my-6 p-4 surface-0 border-round-3xl shadow-2 border-left-3 border-orange-500">
   <h3 class="text-2xl font-bold mb-3">Ready to Build Your Lead Engine?</h3>
   <p class="text-lg text-700 mb-4">I help businesses architect and deploy Programmatic SEO platforms that scale to thousands of pages without losing performance.</p>
-  <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+  <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
     <Button label="Book a pSEO Strategy Call" icon="pi pi-chart-line" size="large" rounded />
   </a>
 </div>

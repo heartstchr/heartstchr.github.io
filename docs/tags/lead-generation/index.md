@@ -5,6 +5,9 @@ layout: Layout
 tag: lead generation
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: lead generation, web development, programming, tech, tutorial
   - - meta

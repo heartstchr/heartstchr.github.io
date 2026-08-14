@@ -5,6 +5,9 @@ layout: Layout
 tag: scalability
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: scalability, web development, programming, tech, tutorial
   - - meta

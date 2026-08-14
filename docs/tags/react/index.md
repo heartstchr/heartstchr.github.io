@@ -5,6 +5,9 @@ layout: Layout
 tag: react
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: react, web development, programming, tech, tutorial
   - - meta

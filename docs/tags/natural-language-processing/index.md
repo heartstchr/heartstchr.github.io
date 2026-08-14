@@ -5,6 +5,9 @@ layout: Layout
 tag: natural language processing
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: natural language processing, web development, programming, tech, tutorial
   - - meta

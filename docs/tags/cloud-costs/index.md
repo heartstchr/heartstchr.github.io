@@ -5,6 +5,9 @@ layout: Layout
 tag: cloud costs
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: cloud costs, web development, programming, tech, tutorial
   - - meta

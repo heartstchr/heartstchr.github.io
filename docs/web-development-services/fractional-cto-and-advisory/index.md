@@ -1,5 +1,5 @@
 ---
-title: Fractional CTO Strategy | Stack Seekers
+title: Fractional CTO Strategy
 description: For international partners seeking an elite technical lead. I provide roadmap planning, architectural oversight, and team mentorship without the overhead of a full-time executive. I bridge the gap between business goals and technical execution, ensuring every sprint delivers maximum value to your bottom line.
 lastUpdated: false
 editLink: false
@@ -34,7 +34,7 @@ service:
           {{ description }}
         </p>
         <div class="flex flex-column md:flex-row gap-3">
-          <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+          <a :href="'https://cal.com/stackseekers?utm_source=website&utm_medium=service-page&utm_campaign=' + $frontmatter.service.code" target="_blank" class="no-underline">
             <Button label="Book Technical Roadmap Call" icon="pi pi-calendar-clock" severity="primary" raised rounded />
           </a>
           <a :href="'/contact/?subject=' + encodeURIComponent($frontmatter.service.name + ' inquiry') + '&service=' + encodeURIComponent($frontmatter.service.name)" class="no-underline">
@@ -128,7 +128,7 @@ service:
         <div class="surface-50 border-round-3xl p-4 md:p-5 h-full">
           <h2 class="text-2xl font-bold mt-0 mb-3">Best Next Step</h2>
           <p class="line-height-3 text-700">If this service matches your bottleneck, the fastest path is a short roadmap call with enough context to scope the technical direction and commercial fit.</p>
-          <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+          <a :href="'https://cal.com/stackseekers?utm_source=website&utm_medium=service-page&utm_campaign=' + $frontmatter.service.code" target="_blank" class="no-underline">
             <Button label="Book the Call" icon="pi pi-arrow-right" severity="primary" raised rounded class="w-full" />
           </a>
         </div>
@@ -197,7 +197,7 @@ service:
       <a :href="'/contact/?subject=' + encodeURIComponent($frontmatter.service.name + ' Strategic Inquiry')" class="no-underline">
         <Button label="Request Strategic Partnership" icon="pi pi-shield" severity="primary" raised rounded />
       </a>
-      <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+      <a :href="'https://cal.com/stackseekers?utm_source=website&utm_medium=service-page&utm_campaign=' + $frontmatter.service.code" target="_blank" class="no-underline">
         <Button label="Book Roadmap Call" icon="pi pi-calendar-clock" severity="secondary" raised rounded />
       </a>
     </div>

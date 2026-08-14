@@ -5,6 +5,9 @@ layout: Layout
 tag: growth
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: growth, web development, programming, tech, tutorial
   - - meta

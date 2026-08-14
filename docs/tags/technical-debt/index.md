@@ -5,6 +5,9 @@ layout: Layout
 tag: technical debt
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: technical debt, web development, programming, tech, tutorial
   - - meta

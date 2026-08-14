@@ -38,7 +38,7 @@ Whether you stay with me for five years or decide to build an internal team next
 <div class="my-6 p-4 surface-0 border-round-3xl shadow-2 border-left-3 border-green-500">
   <h3 class="text-2xl font-bold mb-3">Do you truly own your source code?</h3>
   <p class="text-lg text-700 mb-4">I help founders reclaim their technical independence. I build clean, standard, and transparent systems that give you the freedom to choose your own path.</p>
-  <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+  <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
     <Button label="Claim My Code Freedom" icon="pi pi-unlock" size="large" rounded />
   </a>
 </div>

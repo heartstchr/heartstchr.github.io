@@ -5,6 +5,9 @@ layout: Layout
 tag: version-control
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: version-control, web development, programming, tech, tutorial
   - - meta

@@ -5,6 +5,9 @@ layout: Layout
 tag: post-launch
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: post-launch, web development, programming, tech, tutorial
   - - meta

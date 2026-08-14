@@ -5,6 +5,9 @@ layout: Layout
 tag: prompt engineering
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: prompt engineering, web development, programming, tech, tutorial
   - - meta

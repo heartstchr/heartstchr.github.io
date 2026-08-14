@@ -5,6 +5,9 @@ layout: Layout
 tag: consultancy
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: consultancy, web development, programming, tech, tutorial
   - - meta

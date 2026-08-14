@@ -5,6 +5,9 @@ layout: Layout
 tag: coding
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: coding, web development, programming, tech, tutorial
   - - meta

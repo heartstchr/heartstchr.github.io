@@ -5,6 +5,9 @@ layout: Layout
 tag: cwebp
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: cwebp, web development, programming, tech, tutorial
   - - meta

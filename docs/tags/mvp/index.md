@@ -5,6 +5,9 @@ layout: Layout
 tag: mvp
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: mvp, web development, programming, tech, tutorial
   - - meta

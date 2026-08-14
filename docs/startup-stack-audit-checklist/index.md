@@ -100,7 +100,7 @@ head:
           <div class="relative z-1">
             <h3 class="text-2xl font-bold mb-3 text-white">Next Step: Turn Red Flags into Revenue</h3>
             <p class="text-300 line-height-3 mb-5">Your audit shows {{ totalScore('no') }} architectural bottlenecks that will hinder your next phase of growth. Let's build a fixed-scope roadmap to resolve them.</p>
-            <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+            <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
               <Button label="Book Technical Roadmap Call" icon="pi pi-calendar" severity="primary" size="large" rounded raised />
             </a>
           </div>
@@ -258,7 +258,7 @@ head:
               <div class="text-xs text-500 font-bold uppercase tracking-widest">Stack Seekers Architecture Lab</div>
            </div>
            <div class="flex gap-4">
-              <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+              <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
                 <Button label="Book Technical Call" icon="pi pi-calendar" severity="primary" size="small" rounded raised />
               </a>
            </div>

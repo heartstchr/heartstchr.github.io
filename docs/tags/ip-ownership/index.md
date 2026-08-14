@@ -5,6 +5,9 @@ layout: Layout
 tag: ip ownership
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: ip ownership, web development, programming, tech, tutorial
   - - meta

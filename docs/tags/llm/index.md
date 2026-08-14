@@ -5,6 +5,9 @@ layout: Layout
 tag: llm
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: llm, web development, programming, tech, tutorial
   - - meta

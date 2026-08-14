@@ -5,6 +5,9 @@ layout: Layout
 tag: large language models
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: large language models, web development, programming, tech, tutorial
   - - meta

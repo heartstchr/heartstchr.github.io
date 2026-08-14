@@ -5,6 +5,9 @@ layout: Layout
 tag: automation
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: automation, web development, programming, tech, tutorial
   - - meta

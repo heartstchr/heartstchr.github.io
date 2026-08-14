@@ -5,6 +5,9 @@ layout: Layout
 tag: maintenance
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: maintenance, web development, programming, tech, tutorial
   - - meta

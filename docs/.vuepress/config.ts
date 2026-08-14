@@ -13,7 +13,7 @@ process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
 const SUPPORT_EMAIL = "support@stackseekers.com";
 
 export default defineUserConfig({
-  title: "Freelancer Jiwan Ghosal",
+  title: "Stack Seekers",
   description:
     "Experienced full-stack freelance developer specializing in scalable web, mobile, and software solutions",
   bundler: viteBundler({
@@ -21,6 +21,7 @@ export default defineUserConfig({
       plugins: [
         Components({
           resolvers: [PrimeVueResolver()],
+          include: [/\.vue$/, /\.vue\?vue/, /\.md$/, /\.md\?vue/],
         }) as unknown as any,
       ],
       ssr: {
@@ -148,15 +149,15 @@ export default defineUserConfig({
   alias: {
     // Here you can redirect aliases to your own components
     // For example, here we change the theme's home page component to HomePage.vue under user .vuepress/components
-    "@theme-hope/modules/navbar/components/NavbarBrand": path.resolve(
+    "@theme-hope/components/navbar/NavbarBrand": path.resolve(
       __dirname,
       "./components/NavbarBrand.vue"
     ),
-    "@theme-hope/modules/navbar/components/RepoLink": path.resolve(
+    "@theme-hope/components/navbar/RepoLink": path.resolve(
       __dirname,
       "./components/RepoLink.vue"
     ),
-    "@theme-hope/modules/navbar/components/Sidebar": path.resolve(
+    "@theme-hope/components/sidebar/Sidebar": path.resolve(
       __dirname,
       "./components/Sidebar.vue"
     ),
@@ -174,6 +175,6 @@ export default defineUserConfig({
     __VITE_NOTION_DATABASE_ID__: process.env.VITE_NOTION_DATABASE_ID || "",
     __WHATSAPP_NUMBER__: process.env.VITE_WHATSAPP_NUMBER || "917026217029",
     __VITE_RAZORPAY_KEY_ID__: process.env.VITE_RAZORPAY_KEY_ID || "",
-    __VITE_SUPPORT_EMAIL__: JSON.stringify(SUPPORT_EMAIL),
+    __VITE_SUPPORT_EMAIL__: SUPPORT_EMAIL,
   },
 });

@@ -5,6 +5,9 @@ layout: Layout
 tag: saas
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: saas, web development, programming, tech, tutorial
   - - meta

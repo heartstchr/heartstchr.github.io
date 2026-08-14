@@ -5,6 +5,9 @@ layout: Layout
 tag: git
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: git, web development, programming, tech, tutorial
   - - meta

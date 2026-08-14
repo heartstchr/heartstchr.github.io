@@ -5,6 +5,9 @@ layout: Layout
 tag: clean code
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: clean code, web development, programming, tech, tutorial
   - - meta

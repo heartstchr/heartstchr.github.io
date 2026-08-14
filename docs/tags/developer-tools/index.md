@@ -5,6 +5,9 @@ layout: Layout
 tag: developer-tools
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: developer-tools, web development, programming, tech, tutorial
   - - meta

@@ -5,6 +5,9 @@ layout: Layout
 tag: internal tools
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: internal tools, web development, programming, tech, tutorial
   - - meta

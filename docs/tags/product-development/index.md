@@ -5,6 +5,9 @@ layout: Layout
 tag: product development
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: product development, web development, programming, tech, tutorial
   - - meta

@@ -5,6 +5,9 @@ layout: Layout
 tag: vuepress
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: vuepress, web development, programming, tech, tutorial
   - - meta

@@ -5,6 +5,9 @@ layout: Layout
 tag: vue 3
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: vue 3, web development, programming, tech, tutorial
   - - meta

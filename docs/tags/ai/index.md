@@ -5,6 +5,9 @@ layout: Layout
 tag: ai
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: ai, web development, programming, tech, tutorial
   - - meta

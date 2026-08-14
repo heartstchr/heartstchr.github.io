@@ -5,6 +5,9 @@ layout: Layout
 tag: architecture
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: architecture, web development, programming, tech, tutorial
   - - meta

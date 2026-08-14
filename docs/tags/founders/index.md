@@ -5,6 +5,9 @@ layout: Layout
 tag: founders
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: founders, web development, programming, tech, tutorial
   - - meta

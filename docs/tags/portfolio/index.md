@@ -5,6 +5,9 @@ layout: Layout
 tag: portfolio
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: portfolio, web development, programming, tech, tutorial
   - - meta

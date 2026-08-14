@@ -5,6 +5,9 @@ layout: Layout
 tag: machine learning
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: machine learning, web development, programming, tech, tutorial
   - - meta

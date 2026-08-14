@@ -5,6 +5,9 @@ layout: Layout
 tag: freelancing
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: freelancing, web development, programming, tech, tutorial
   - - meta

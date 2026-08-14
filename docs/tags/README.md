@@ -1,5 +1,5 @@
 ---
-title: Explore Topics | Stack Seekers
+title: Explore Topics
 description: Browse all technical topics, tutorials, and insights by category and tags.
 layout: Layout
 ---

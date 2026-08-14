@@ -5,6 +5,9 @@ layout: Layout
 tag: branch-management
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: branch-management, web development, programming, tech, tutorial
   - - meta

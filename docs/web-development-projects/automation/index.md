@@ -1,5 +1,5 @@
 ---
-title: Automation Web Development Projects | Stack Seekers
+title: Automation Web Development Projects
 description: "Workflow automation, no-code tooling, and process efficiency systems built by Stack Seekers — including Dynamic CRUD App, Service Request System, and CLI tools."
 lastUpdated: false
 editLink: false
@@ -63,7 +63,7 @@ home: true
     <div class="text-lg font-bold mb-1">Want to automate your workflows?</div>
     <p class="text-sm text-500 m-0">I build no-code bridges, serverless pipelines, and smart tooling to eliminate manual processes.</p>
   </div>
-  <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+  <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
     <Button label="Book Free Discovery Call" icon="pi pi-calendar" severity="primary" raised rounded />
   </a>
 </section>

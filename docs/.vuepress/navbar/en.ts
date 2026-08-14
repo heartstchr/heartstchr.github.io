@@ -63,6 +63,18 @@ export const enNavbar = navbar([
         link: "/web-development-services/api-performance-and-integration/",
       },
       {
+        text: "SaaS MVP Development",
+        link: "/web-development-services/saas-mvp-development/",
+      },
+      {
+        text: "Legacy Modernization",
+        link: "/web-development-services/legacy-modernization/",
+      },
+      {
+        text: "Internal Tools & Portals",
+        link: "/web-development-services/internal-tools-and-portals/",
+      },
+      {
         text: "All Services",
         link: "/web-development-services/",
       },

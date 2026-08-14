@@ -5,6 +5,9 @@ layout: Layout
 tag: node.js
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: node.js, web development, programming, tech, tutorial
   - - meta

@@ -5,6 +5,9 @@ layout: Layout
 tag: vue cli
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: vue cli, web development, programming, tech, tutorial
   - - meta

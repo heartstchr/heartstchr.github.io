@@ -5,6 +5,9 @@ layout: Layout
 tag: content marketing
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: content marketing, web development, programming, tech, tutorial
   - - meta

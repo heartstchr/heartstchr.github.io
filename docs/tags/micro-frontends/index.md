@@ -5,6 +5,9 @@ layout: Layout
 tag: micro frontends
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: micro frontends, web development, programming, tech, tutorial
   - - meta

@@ -5,6 +5,9 @@ layout: Layout
 tag: startup strategy
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: startup strategy, web development, programming, tech, tutorial
   - - meta

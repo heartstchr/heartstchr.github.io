@@ -5,6 +5,9 @@ layout: Layout
 tag: image optimization
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: image optimization, web development, programming, tech, tutorial
   - - meta

@@ -5,6 +5,9 @@ layout: Layout
 tag: webp
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: webp, web development, programming, tech, tutorial
   - - meta

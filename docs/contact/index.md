@@ -1,5 +1,5 @@
 ---
-title: Strategic Partnership | Jiwan Ghosal
+title: Contact Jiwan Ghosal
 description: Start a strategic technical partnership. Fractional CTO support, AI automation, and enterprise architecture leadership for high-growth teams.
 order: 4
 editLink: false

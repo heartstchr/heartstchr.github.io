@@ -5,6 +5,9 @@ layout: Layout
 tag: infrastructure
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: infrastructure, web development, programming, tech, tutorial
   - - meta

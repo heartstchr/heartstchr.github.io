@@ -5,6 +5,9 @@ layout: Layout
 tag: css
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: css, web development, programming, tech, tutorial
   - - meta

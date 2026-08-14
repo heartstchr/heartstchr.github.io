@@ -5,6 +5,9 @@ layout: Layout
 tag: next.js
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: next.js, web development, programming, tech, tutorial
   - - meta

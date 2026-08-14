@@ -1,5 +1,5 @@
 ---
-title: High-Performance API Design | Stack Seekers
+title: High-Performance API Design
 description: Design and optimization of high-concurrency RESTful and GraphQL APIs. I specialize in making your data move faster and more securely through sophisticated microservices architecture. I build the 'internal plumbing' that allows your application to react instantly, no matter how complex the data logic.
 lastUpdated: false
 editLink: false
@@ -22,7 +22,7 @@ service:
   proof: "Applied to high-concurrency systems and real-world product workflows where response time directly affects user outcomes."
   faq: [{"question":"Can you optimize an existing API without rebuilding everything?","answer":"Usually, yes. I start by identifying the hottest paths, removing waste, and fixing architecture issues before recommending major changes."},{"question":"Do you handle third-party integrations too?","answer":"Yes. I regularly work on API integrations, service orchestration, and the backend patterns needed to keep them reliable."}]
   previousService: {"name":"Programmatic Growth Engines","link":"/web-development-services/programmatic-seo-and-growth/"}
-  nextService: null
+  nextService: {"name":"SaaS MVP Development","link":"/web-development-services/saas-mvp-development/"}
 ---
 <article class="service-sales-page">
   <section class="mb-6">
@@ -34,7 +34,7 @@ service:
           {{ description }}
         </p>
         <div class="flex flex-column md:flex-row gap-3">
-          <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+          <a :href="'https://cal.com/stackseekers?utm_source=website&utm_medium=service-page&utm_campaign=' + $frontmatter.service.code" target="_blank" class="no-underline">
             <Button label="Book Technical Roadmap Call" icon="pi pi-calendar-clock" severity="primary" raised rounded />
           </a>
           <a :href="'/contact/?subject=' + encodeURIComponent($frontmatter.service.name + ' inquiry') + '&service=' + encodeURIComponent($frontmatter.service.name)" class="no-underline">
@@ -128,7 +128,7 @@ service:
         <div class="surface-50 border-round-3xl p-4 md:p-5 h-full">
           <h2 class="text-2xl font-bold mt-0 mb-3">Best Next Step</h2>
           <p class="line-height-3 text-700">If this service matches your bottleneck, the fastest path is a short roadmap call with enough context to scope the technical direction and commercial fit.</p>
-          <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+          <a :href="'https://cal.com/stackseekers?utm_source=website&utm_medium=service-page&utm_campaign=' + $frontmatter.service.code" target="_blank" class="no-underline">
             <Button label="Book the Call" icon="pi pi-arrow-right" severity="primary" raised rounded class="w-full" />
           </a>
         </div>
@@ -197,7 +197,7 @@ service:
       <a :href="'/contact/?subject=' + encodeURIComponent($frontmatter.service.name + ' Strategic Inquiry')" class="no-underline">
         <Button label="Request Strategic Partnership" icon="pi pi-shield" severity="primary" raised rounded />
       </a>
-      <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+      <a :href="'https://cal.com/stackseekers?utm_source=website&utm_medium=service-page&utm_campaign=' + $frontmatter.service.code" target="_blank" class="no-underline">
         <Button label="Book Roadmap Call" icon="pi pi-calendar-clock" severity="secondary" raised rounded />
       </a>
     </div>

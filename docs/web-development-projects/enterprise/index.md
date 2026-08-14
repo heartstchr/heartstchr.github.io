@@ -1,5 +1,5 @@
 ---
-title: Enterprise Web Development Projects | Stack Seekers
+title: Enterprise Web Development Projects
 description: "Large-scale enterprise platforms, banking systems, and mission-critical applications built by Stack Seekers — including ABN AMRO, Qatar Airways, Upstox, and more."
 lastUpdated: false
 editLink: false
@@ -83,7 +83,7 @@ head:
     <div class="text-lg font-bold mb-1">Need an enterprise-grade system?</div>
     <p class="text-sm text-500 m-0">I architect and build production systems that scale to millions of users.</p>
   </div>
-  <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+  <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
     <Button label="Book Free Discovery Call" icon="pi pi-calendar" severity="primary" raised rounded />
   </a>
 </section>

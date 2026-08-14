@@ -5,6 +5,9 @@ layout: Layout
 tag: communication
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - name: keywords
       content: communication, web development, programming, tech, tutorial
   - - meta
