@@ -82,31 +82,13 @@ copyright: false
         <!-- Main Hero Card: Productized Benefit -->
         <div class="bento-hero-item bento-hero-1  border-round-3xl overflow-hidden relative bento-hover border-1 border-white-alpha-10">
           <img src="/img/projects/ai-dynamic-crud-app/ai-gemini-app.webp" alt="AI Automation" width="600" height="800" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-40 to-transparent flex flex-column justify-content-end">
-            <div class="glass-effect p-3 border-round-2xl">
-              <span class="text-xs font-bold text-primary-300 uppercase mb-1 block">Solution 01</span>
-              <h4 class="text-white m-0 text-lg font-bold">Intelligent Workflow Automation</h4>
-            </div>
-          </div>
         </div>
         <!-- Secondary Cards -->
         <div class="bento-hero-item bento-hero-2  border-round-3xl overflow-hidden relative bento-hover border-1 border-white-alpha-10">
           <img src="/img/home/projects/ABN_Amro.webp" alt="Enterprise SaaS" width="600" height="400" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-40 to-transparent flex flex-column justify-content-end">
-            <div class="glass-effect p-3 border-round-2xl">
-              <span class="text-xs font-bold text-primary-300 uppercase mb-1 block">Solution 02</span>
-              <h4 class="text-white m-0 text-base font-bold">Resilient SaaS Architecture</h4>
-            </div>
-          </div>
         </div>
         <div class="bento-hero-item bento-hero-3  border-round-3xl overflow-hidden relative bento-hover border-1 border-white-alpha-10">
           <img src="/img/projects/localxr/localxr-cover.webp" alt="Programmatic SEO" width="600" height="400" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-40 to-transparent flex flex-column justify-content-end">
-            <div class="glass-effect p-3 border-round-2xl">
-              <span class="text-xs font-bold text-primary-300 uppercase mb-1 block">Solution 03</span>
-              <h4 class="text-white m-0 text-base font-bold">Autonomous Growth Engines</h4>
-            </div>
-          </div>
         </div>
       </div>
     </div>
