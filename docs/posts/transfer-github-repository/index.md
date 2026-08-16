@@ -1,8 +1,9 @@
 ---
 title: How to Transfer a GitHub Repository to an Organization
+description: "Learn how to transfer a GitHub repository to an organization to centralize projects, streamline access, and keep commit history intact."
 date: 2024-05-26
 category: [Tech]
-tags: [GitHub, Blog]
+tags: [GitHub, Repository Management, Collaboration, Freelancing]
 ---
 
 <MetaContent :date="$frontmatter.date" :category="$frontmatter.tags"/>

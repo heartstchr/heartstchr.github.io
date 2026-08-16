@@ -1,6 +1,6 @@
 ---
-title: Service Request System
-description: Build a complete customer service request management system using Notion database and Netlify functions. Features automated email notifications, file uploads, real-time sync, and professional web forms - all completely free with no coding required.
+title: "Service Request System with Notion"
+description: "Build a complete customer service request system with Notion and Netlify. Automated email notifications and file uploads — free, no coding required."
 lastUpdated: false
 editLink: false
 contributors: false

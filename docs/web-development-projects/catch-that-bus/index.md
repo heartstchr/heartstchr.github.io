@@ -1,6 +1,6 @@
 ---
-title: Catch That Bus
-description: Book Malaysia and Singapore bus tickets online.
+title: "Catch That Bus: Malaysia & Singapore Tickets"
+description: "Book Malaysia and Singapore bus tickets online with Catch That Bus — instant e-tickets, live schedules, and cross-border routes on web and iOS."
 lastUpdated: false
 editLink: false
 contributors: false

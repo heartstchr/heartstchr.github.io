@@ -1,9 +1,9 @@
 ---
-title: TypeScript - 5 Pro Tips to Cook Up Robust Code
-description: Learn 5 expert TypeScript tips to craft scalable code, from optional parameters to utility types and advanced tricks like loose autocomplete. Perfect for all developers!
+title: "TypeScript Mastery: 5 Pro Tips to Cook Up Robust Code"
+description: Learn 5 expert TypeScript tips to craft scalable code, from optional parameters to utility types and advanced tricks like loose autocomplete.
 date: 2025-06-09
 category: [Programming]
-tags: [TypeScript, JavaScript, Web Development, Coding Tips]
+tags: [TypeScript, JavaScript, Web Development]
 ---
 
 <MetaContent :date="$frontmatter.date" :category="$frontmatter.tags"/>

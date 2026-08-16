@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with automation
-description: Explore our collection of articles, tutorials, and insights about automation. Stay updated with the latest trends and best practices in automation.
+description: Explore articles, tutorials, and insights about automation — with best practices and latest trends.
 layout: Layout
 tag: automation
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with automation
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about automation. Stay updated with the latest trends and best practices in automation.
+      content: Explore articles, tutorials, and insights about automation — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

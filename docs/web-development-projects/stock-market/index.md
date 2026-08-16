@@ -1,6 +1,6 @@
 ---
-title: Stock Market
-description: A high-performance real-time data visualization platform that consumes socket-driven financial data and renders live, interactive D3.js charts with sub-second latency.
+title: "Real-Time Stock Market Dashboard"
+description: "A high-performance real-time data visualization platform that renders live, interactive D3.js charts from socket-driven financial data with sub-second latency."
 lastUpdated: false
 editLink: false
 contributors: false

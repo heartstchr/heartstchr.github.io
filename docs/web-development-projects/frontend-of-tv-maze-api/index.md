@@ -1,6 +1,6 @@
 ---
-title: Frontend of Tv Maze API
-description: TVmaze- Add TV information to your website or app.
+title: "TVmaze Frontend: TV Info for Your App"
+description: "A fast, responsive frontend built on the TVmaze API — add TV show information, schedules, and search to your website or app without a backend."
 lastUpdated: false
 editLink: false
 contributors: false

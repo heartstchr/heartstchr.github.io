@@ -1,6 +1,6 @@
 ---
-title: Dynamic CRUD App Free
-description: Transform your Notion database into a professional web application in minutes. Automatically reads your Notion structure and creates beautiful, responsive interfaces with intelligent forms, search, and multi-language support - completely free and no-code required.
+title: "Free CRUD App: Notion to Web App"
+description: "Transform your Notion database into a professional, responsive web app in minutes — free and no-code. Auto-generated forms, search, multi-language support."
 lastUpdated: false
 editLink: false
 contributors: false

@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with web design
-description: Explore our collection of articles, tutorials, and insights about web design. Stay updated with the latest trends and best practices in web design.
+description: Explore articles, tutorials, and insights about web design — with best practices and latest trends.
 layout: Layout
 tag: web design
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with web design
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about web design. Stay updated with the latest trends and best practices in web design.
+      content: Explore articles, tutorials, and insights about web design — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

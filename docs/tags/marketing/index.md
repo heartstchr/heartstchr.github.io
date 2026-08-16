@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with marketing
-description: Explore our collection of articles, tutorials, and insights about marketing. Stay updated with the latest trends and best practices in marketing.
+description: Explore articles, tutorials, and insights about marketing — with best practices and latest trends.
 layout: Layout
 tag: marketing
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with marketing
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about marketing. Stay updated with the latest trends and best practices in marketing.
+      content: Explore articles, tutorials, and insights about marketing — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

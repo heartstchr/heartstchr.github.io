@@ -1,6 +1,6 @@
 ---
 title: Automation Web Development Projects
-description: "Workflow automation, no-code tooling, and process efficiency systems built by Stack Seekers — including Dynamic CRUD App, Service Request System, and CLI tools."
+description: "Workflow automation, no-code tooling, and process efficiency systems built by Stack Seekers — including Dynamic CRUD App and Service Request System."
 lastUpdated: false
 editLink: false
 copyright: false

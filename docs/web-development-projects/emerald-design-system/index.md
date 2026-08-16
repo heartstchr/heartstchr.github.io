@@ -1,6 +1,6 @@
 ---
-title: Emerald Design System
-description: Our innovative digital strategy emphasizes efficiency through a 'build once, deploy multiple times' approach. Utilizing the Emerald design system, we ensure a consistent and seamless user experience across platforms. Significant investments in this system, coupled with an expanded team, have enhanced productivity and scalability, delivering cohesive digital solutions for optimal user engagement.
+title: "Emerald Design System | ABN AMRO"
+description: "A tokens-first, component-driven design system built on Lit Web Components for ABN AMRO — consistent, bank-grade UX with faster time-to-market."
 lastUpdated: false
 editLink: false
 contributors: false

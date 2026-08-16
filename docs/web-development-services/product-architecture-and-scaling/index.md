@@ -1,6 +1,6 @@
 ---
-title: Product Architecture & Scale
-description: I architect high-performance digital products designed for extreme scale. Whether you are building a new SaaS MVP or scaling an existing platform, I ensure your foundation is secure and robust (ABN AMRO standards). My solutions focus on long-term maintainability, ensuring your product grows as fast as your business does without technical debt.
+title: "Scalable SaaS Architecture Design & Audit"
+description: "Hire a senior product architecture consultant who has designed banking-grade systems for 10M+ users. Get a risk map, scalable design, and an execution roadmap."
 lastUpdated: false
 editLink: false
 contributors: false

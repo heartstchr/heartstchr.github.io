@@ -1,9 +1,9 @@
 ---
-title: How Vue 3 and Devtools Enhance Your Web Development - 7 Steps to Build and Debug
-description: Discover how Vue 3 and Vue Devtools streamline web development by enabling rapid project setup, component customization, and real-time debugging. Learn 7 actionable steps to create a Vue 3 application and optimize your development workflow.
+title: "How Vue 3 and Devtools Enhance Your Web Development: 7 Steps to Build and Debug"
+description: Discover how Vue 3 and Vue Devtools streamline web development with rapid project setup, component customization, and real-time debugging.
 date: 2025-05-29
 category: [Tech, Web Development, Vue]
-tags: [VuePress, Vue3, Blog, Devtools]
+tags: [Vue.js, Vue 3, Vue Devtools, Vue CLI, Portfolio]
 ---
 
 <MetaContent :date="$frontmatter.date" :category="$frontmatter.tags"/>

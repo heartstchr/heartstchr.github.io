@@ -1,6 +1,6 @@
 ---
-title: IBRebuild for ABN AMRO BANK N.V.
-description: ABN AMRO Bank N.V. is a Dutch bank with headquarters in Amsterdam. The internet banking (IB) application for the bank customers which is migrating from old Angular JS to Vue.js integrated with Microsoft Azure cloud services as IBRebuild.
+title: "IBRebuild: ABN AMRO Banking Migration"
+description: "ABN AMRO's internet banking application rebuilt from AngularJS to Vue.js on Microsoft Azure — a zero-downtime modernization of a mission-critical platform."
 lastUpdated: false
 editLink: false
 contributors: false

@@ -1,6 +1,6 @@
 ---
 title: "The Runway Killer: Why Your MVP Doesn't Need a $200k Infrastructure (Yet)"
-description: "Over-engineering your infrastructure is the fastest way to kill your startup's runway. Learn how to build for the scale you have, while architecting for the scale you want."
+description: "Over-engineering your infrastructure kills your startup's runway. Learn to build for the scale you have, and architect for the one you want."
 date: 2026-04-18
 category: "Cloud & DevOps"
 tags: ["Infrastructure", "Scalability", "Cloud Costs", "MVP", "DevOps"]

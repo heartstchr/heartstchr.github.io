@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with growth
-description: Explore our collection of articles, tutorials, and insights about growth. Stay updated with the latest trends and best practices in growth.
+description: Explore articles, tutorials, and insights about growth — with best practices and latest trends.
 layout: Layout
 tag: growth
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with growth
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about growth. Stay updated with the latest trends and best practices in growth.
+      content: Explore articles, tutorials, and insights about growth — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

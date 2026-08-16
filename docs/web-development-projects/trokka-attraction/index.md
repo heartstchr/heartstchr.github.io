@@ -1,6 +1,6 @@
 ---
-title: Trokka Attraction
-description: Book Attractions and Tours for Your Next Holiday
+title: "Trokka: Book Attractions & Tours"
+description: "Book attractions and tours for your next holiday on Trokka — curated experiences, instant confirmation, and mobile-friendly booking."
 lastUpdated: false
 editLink: false
 contributors: false

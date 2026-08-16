@@ -84,8 +84,8 @@ const projectTemplate = (project, projectIndex, allProjects) => {
       : null;
 
   return `---
-title: ${project.name}
-description: ${project.description}
+title: ${JSON.stringify(project.seoTitle || project.name)}
+description: ${JSON.stringify(project.seoDescription || project.description)}
 lastUpdated: false
 editLink: false
 contributors: false
@@ -405,8 +405,8 @@ const serviceTemplate = (service, serviceIndex, allServices) => {
       : null;
 
   return `---
-title: ${service.name}
-description: ${service.descriptions.join(" ")}
+title: ${JSON.stringify(service.seoTitle || service.name)}
+description: ${JSON.stringify(service.seoDescription || service.descriptions.join(" "))}
 lastUpdated: false
 editLink: false
 contributors: false
@@ -654,7 +654,7 @@ service:
 };
 
 const tagTemplate = (tag) => {
-  const description = `Explore our collection of articles, tutorials, and insights about ${tag}. Stay updated with the latest trends and best practices in ${tag}.`;
+  const description = `Explore articles, tutorials, and insights about ${tag} — with best practices and latest trends.`;
   return `---
 title: Posts tagged with ${tag}
 description: ${description}

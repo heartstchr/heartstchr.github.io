@@ -1,6 +1,6 @@
 ---
-title: Local Home Services Pros
-description: A modern, SEO-optimized web platform that connects homeowners and property managers with verified local service providers. Built with Next.js 15 and React 19, it serves as a lead generation and matching service with dynamic routing for thousands of location-service combinations.
+title: "Home Services Marketplace | Programmatic SEO"
+description: "A Next.js 15 home services marketplace with dynamic routing for thousands of location-service pages. Programmatic SEO and lead generation built in."
 lastUpdated: false
 editLink: false
 contributors: false

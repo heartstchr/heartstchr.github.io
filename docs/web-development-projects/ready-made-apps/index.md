@@ -1,5 +1,5 @@
 ---
-title: Ready-made Apps
+title: Ready-made Apps | Templates, AI Tools & Web Apps You Can Deploy Today
 description: "Premium, production-ready templates, AI tools, widgets, and business applications built by Stack Seekers."
 lastUpdated: false
 editLink: false

@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with static site
-description: Explore our collection of articles, tutorials, and insights about static site. Stay updated with the latest trends and best practices in static site.
+description: Explore articles, tutorials, and insights about static site — with best practices and latest trends.
 layout: Layout
 tag: static site
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with static site
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about static site. Stay updated with the latest trends and best practices in static site.
+      content: Explore articles, tutorials, and insights about static site — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

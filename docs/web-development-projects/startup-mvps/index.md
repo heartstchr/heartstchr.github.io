@@ -1,6 +1,6 @@
 ---
 title: Startup MVP Web Development Projects
-description: "Fast-to-market products, niche platforms, and proof-of-concept launches built by Stack Seekers — including Local Home Services, Appliance Repair, SR-22 Insurance, and more."
+description: "Fast-to-market products, niche platforms, and proof-of-concept launches built by Stack Seekers — including Local Home Services, SR-22 Insurance, and more."
 lastUpdated: false
 editLink: false
 copyright: false

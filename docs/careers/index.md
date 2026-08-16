@@ -1,6 +1,6 @@
 ---
 title: Partner Network
-description: Stack Seekers is a specialized architecture practice. I partner with exceptional designers and specialists for large-scale client projects. Explore collaboration opportunities.
+description: Stack Seekers is a specialized architecture practice. I partner with exceptional designers and specialists for large-scale client projects.
 order: 4
 editLink: false
 copyright: false

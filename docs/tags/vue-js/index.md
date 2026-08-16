@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with vue.js
-description: Explore our collection of articles, tutorials, and insights about vue.js. Stay updated with the latest trends and best practices in vue.js.
+description: Explore articles, tutorials, and insights about vue.js — with best practices and latest trends.
 layout: Layout
 tag: vue.js
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with vue.js
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about vue.js. Stay updated with the latest trends and best practices in vue.js.
+      content: Explore articles, tutorials, and insights about vue.js — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

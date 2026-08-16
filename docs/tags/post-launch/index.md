@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with post-launch
-description: Explore our collection of articles, tutorials, and insights about post-launch. Stay updated with the latest trends and best practices in post-launch.
+description: Explore articles, tutorials, and insights about post-launch — with best practices and latest trends.
 layout: Layout
 tag: post-launch
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with post-launch
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about post-launch. Stay updated with the latest trends and best practices in post-launch.
+      content: Explore articles, tutorials, and insights about post-launch — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

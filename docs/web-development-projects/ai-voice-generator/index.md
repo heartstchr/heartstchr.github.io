@@ -1,6 +1,6 @@
 ---
-title: AI Voice Generator
-description: Transform your Google Docs into high-quality audio with this free AI voice generator and text to audio converter. Powered by Gemini TTS, it offers natural-sounding speech generation for YouTubers, teachers, and creators. Experience the best free text to speech AI directly in your documents.
+title: "AI Voice Generator for Google Docs"
+description: "Turn Google Docs into natural-sounding AI audio with Gemini TTS. Free text-to-speech with 25+ professional voices and real-time preview."
 lastUpdated: false
 editLink: false
 contributors: false

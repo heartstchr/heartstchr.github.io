@@ -50,7 +50,7 @@ export default defineUserConfig({
       lang: "en-US",
       title: "Stack Seekers",
       description:
-        "Senior Full Stack Developer - Graphic Artist - UI/UX Designer",
+        "Stack Seekers helps startups and enterprise teams with fractional CTO leadership, AI automation, scalable SaaS architecture, and programmatic SEO.",
       // extra keys are permitted by casting
       logo: "/img/stackseekers.webp",
       logoDark: "/img/whitelogo.webp",

@@ -1,6 +1,6 @@
 ---
-title: Appliance Repair Service Platform
-description: A modern, content-driven platform for connecting users with local appliance repair professionals and providing troubleshooting guides for major home appliances
+title: "Appliance Repair Platform & Troubleshooting"
+description: "A content-driven platform connecting users with local appliance repair professionals, backed by free troubleshooting guides for major home appliances."
 lastUpdated: false
 editLink: false
 contributors: false

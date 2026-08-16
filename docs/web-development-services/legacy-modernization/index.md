@@ -1,6 +1,6 @@
 ---
-title: Legacy Modernization
-description: I modernize legacy systems through phased, zero-downtime migrations — paying down structural debt while your product stays live for customers. The result is a modular, cloud-native platform your team can finally ship on, without betting the company on a risky rewrite.
+title: "Legacy Modernization, Zero-Downtime Migration"
+description: "Modernize legacy systems with phased, zero-downtime migrations that pay down structural debt while your product stays live. Applied to banking-grade systems."
 lastUpdated: false
 editLink: false
 contributors: false

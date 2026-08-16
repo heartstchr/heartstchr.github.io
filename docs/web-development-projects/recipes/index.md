@@ -1,6 +1,6 @@
 ---
-title: Recipes
-description: A community-driven platform where food lovers share, discover, and discuss recipes from around the world. Connect, cook, and create with fellow culinary enthusiasts.
+title: "Recipes Platform: Share & Discover Food"
+description: "A community-driven recipe platform where food lovers share, discover, and cook dishes from around the world. Connect and create with fellow enthusiasts."
 lastUpdated: false
 editLink: false
 contributors: false

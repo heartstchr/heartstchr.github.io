@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with github pages
-description: Explore our collection of articles, tutorials, and insights about github pages. Stay updated with the latest trends and best practices in github pages.
+description: Explore articles, tutorials, and insights about github pages — with best practices and latest trends.
 layout: Layout
 tag: github pages
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with github pages
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about github pages. Stay updated with the latest trends and best practices in github pages.
+      content: Explore articles, tutorials, and insights about github pages — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

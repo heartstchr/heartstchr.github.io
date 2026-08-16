@@ -1,6 +1,6 @@
 ---
-title: Momentum Incident Management
-description: A structured process for identifying, analyzing, and resolving incidents that disrupt an organization's operations
+title: "Incident Management Software"
+description: "A structured process for identifying, analyzing, and resolving incidents that disrupt your operations — with clear workflows and post-incident review."
 lastUpdated: false
 editLink: false
 contributors: false

@@ -1,6 +1,6 @@
 ---
-title: Qatar Airways widget
-description: Book flights to destinations around the world with Qatar Airways and fly on board an award-winning airline. Enjoy special fares, collect Avios, and more.
+title: "Qatar Airways Flight Booking Widget"
+description: "Book flights to destinations worldwide with Qatar Airways — special fares, Avios collection, and award-winning service in a seamless booking widget."
 lastUpdated: false
 editLink: false
 contributors: false

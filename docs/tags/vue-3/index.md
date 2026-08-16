@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with vue 3
-description: Explore our collection of articles, tutorials, and insights about vue 3. Stay updated with the latest trends and best practices in vue 3.
+description: Explore articles, tutorials, and insights about vue 3 — with best practices and latest trends.
 layout: Layout
 tag: vue 3
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with vue 3
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about vue 3. Stay updated with the latest trends and best practices in vue 3.
+      content: Explore articles, tutorials, and insights about vue 3 — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

@@ -1,6 +1,6 @@
 ---
-title: Fractional CTO Strategy
-description: For international partners seeking an elite technical lead. I provide roadmap planning, architectural oversight, and team mentorship without the overhead of a full-time executive. I bridge the gap between business goals and technical execution, ensuring every sprint delivers maximum value to your bottom line.
+title: "Fractional CTO for Startups"
+description: "Get senior technical leadership at a fraction of a full-time CTO's cost. We build 6-month roadmaps, oversee architecture, review vendors, and mentor your team."
 lastUpdated: false
 editLink: false
 contributors: false

@@ -1,6 +1,6 @@
 ---
-title: Call Matrix
-description: Call Intelligence, Marketing, and Analytics Platform
+title: "Call Matrix: Call Intelligence & Analytics"
+description: "A SaaS platform for call intelligence, marketing attribution, and analytics — track calls from ad to close with D3-powered dashboards."
 lastUpdated: false
 editLink: false
 contributors: false

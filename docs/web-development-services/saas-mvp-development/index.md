@@ -1,6 +1,6 @@
 ---
-title: SaaS MVP Development
-description: I build production-ready SaaS MVPs on a fixed 4 to 8-week timeline — full-stack, deployed, and built to scale past your first 10,000 users without a rewrite. One senior engineer, full ownership, zero agency overhead. Your MVP ships as a real product, not a clickable demo.
+title: "SaaS MVP Development in 4-8 Weeks"
+description: "Ship a production-ready SaaS MVP in 4 to 8 weeks — full-stack, deployed, and built to scale past 10,000 users without a rewrite. Fixed scope, one engineer."
 lastUpdated: false
 editLink: false
 contributors: false

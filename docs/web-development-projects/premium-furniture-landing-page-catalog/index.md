@@ -1,6 +1,6 @@
 ---
-title: Premium Furniture Landing Page & Catalog
-description: A luxury, full-featured furniture landing page, lookbook, and product catalog platform built with Vue.js, powered by a Notion Headless CMS, and deployed on Netlify. Perfect for custom furniture showrooms, interior design catalogs, or any premium retail catalog.
+title: "Premium Furniture Landing Page & Catalog"
+description: "A luxury furniture landing page, lookbook, and product catalog built with Vue.js and a Notion headless CMS — perfect for premium retail showrooms."
 lastUpdated: false
 editLink: false
 contributors: false

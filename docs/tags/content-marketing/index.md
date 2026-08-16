@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with content marketing
-description: Explore our collection of articles, tutorials, and insights about content marketing. Stay updated with the latest trends and best practices in content marketing.
+description: Explore articles, tutorials, and insights about content marketing — with best practices and latest trends.
 layout: Layout
 tag: content marketing
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with content marketing
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about content marketing. Stay updated with the latest trends and best practices in content marketing.
+      content: Explore articles, tutorials, and insights about content marketing — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

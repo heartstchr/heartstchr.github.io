@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with git
-description: Explore our collection of articles, tutorials, and insights about git. Stay updated with the latest trends and best practices in git.
+description: Explore articles, tutorials, and insights about git — with best practices and latest trends.
 layout: Layout
 tag: git
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with git
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about git. Stay updated with the latest trends and best practices in git.
+      content: Explore articles, tutorials, and insights about git — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

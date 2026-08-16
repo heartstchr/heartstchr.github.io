@@ -1,6 +1,6 @@
 ---
 title: AI Web Development Projects
-description: "AI-powered tools, intelligent automation, and machine learning integrations built by Stack Seekers — including AI Dynamic CRUD App, Vibe3 Influencer Platform, and AI Voice Generator."
+description: "AI-powered tools, intelligent automation, and machine learning integrations built by Stack Seekers — including AI Dynamic CRUD App."
 lastUpdated: false
 editLink: false
 copyright: false

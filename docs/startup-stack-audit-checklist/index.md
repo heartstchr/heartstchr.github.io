@@ -1,6 +1,6 @@
 ---
 title: Startup Tech Stack Audit Checklist | Scalability & Risk Assessment
-description: Use this professional diagnostic tool to audit your startup's technical debt, SaaS infrastructure, and cloud scalability. Created by an Enterprise Architecture Partner for non-technical founders.
+description: Use this professional diagnostic tool to audit your startup's technical debt, SaaS infrastructure, and cloud scalability. Built for non-technical founders.
 editLink: false
 copyright: false
 pageInfo: false
@@ -223,7 +223,7 @@ head:
                     </a>
                  </li>
                  <li>
-                    <a href="/web-development-services/legacy-system-modernization/" class="no-underline text-300 hover:text-white transition-colors flex align-items-center gap-2">
+                    <a href="/web-development-services/legacy-modernization/" class="no-underline text-300 hover:text-white transition-colors flex align-items-center gap-2">
                        <i class="pi pi-arrow-right text-xs"></i> Legacy System Rebuilds
                     </a>
                  </li>

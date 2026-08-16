@@ -1,6 +1,6 @@
 ---
-title: Yit Plus
-description: YIT Plus is a modern digital service helping you to monitor data related to your home and apartment association.
+title: "YIT Plus: Monitor Home & Apartment Data"
+description: "YIT Plus is a modern digital service for monitoring data about your home and apartment association — energy, maintenance, and updates in one place."
 lastUpdated: false
 editLink: false
 contributors: false

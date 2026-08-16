@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with llm
-description: Explore our collection of articles, tutorials, and insights about llm. Stay updated with the latest trends and best practices in llm.
+description: Explore articles, tutorials, and insights about llm — with best practices and latest trends.
 layout: Layout
 tag: llm
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with llm
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about llm. Stay updated with the latest trends and best practices in llm.
+      content: Explore articles, tutorials, and insights about llm — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with product development
-description: Explore our collection of articles, tutorials, and insights about product development. Stay updated with the latest trends and best practices in product development.
+description: Explore articles, tutorials, and insights about product development — with best practices and latest trends.
 layout: Layout
 tag: product development
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with product development
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about product development. Stay updated with the latest trends and best practices in product development.
+      content: Explore articles, tutorials, and insights about product development — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

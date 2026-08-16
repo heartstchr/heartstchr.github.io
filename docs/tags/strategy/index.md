@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with strategy
-description: Explore our collection of articles, tutorials, and insights about strategy. Stay updated with the latest trends and best practices in strategy.
+description: Explore articles, tutorials, and insights about strategy — with best practices and latest trends.
 layout: Layout
 tag: strategy
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with strategy
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about strategy. Stay updated with the latest trends and best practices in strategy.
+      content: Explore articles, tutorials, and insights about strategy — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

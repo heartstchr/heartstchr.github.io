@@ -1,6 +1,6 @@
 ---
 title: SaaS Web Development Projects
-description: "Multi-tenant SaaS platforms, marketplaces, and subscription software built by Stack Seekers — including a Marketplace Booking Platform, Contact Form Plugin, and Call Matrix analytics."
+description: "Multi-tenant SaaS platforms, marketplaces, and subscription software built by Stack Seekers — including a Marketplace Booking Platform and Contact Form Plugin."
 lastUpdated: false
 editLink: false
 copyright: false

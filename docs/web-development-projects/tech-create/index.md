@@ -1,6 +1,6 @@
 ---
-title: Tech Create
-description: A landing page for digital solutions through innovative software development.
+title: "Tech Create: Digital Solutions Landing Page"
+description: "A high-converting landing page for digital solutions and innovative software development — built with Vue.js, PrimeVue, and deployed on Vercel."
 lastUpdated: false
 editLink: false
 contributors: false

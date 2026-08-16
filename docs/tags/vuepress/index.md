@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with vuepress
-description: Explore our collection of articles, tutorials, and insights about vuepress. Stay updated with the latest trends and best practices in vuepress.
+description: Explore articles, tutorials, and insights about vuepress — with best practices and latest trends.
 layout: Layout
 tag: vuepress
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with vuepress
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about vuepress. Stay updated with the latest trends and best practices in vuepress.
+      content: Explore articles, tutorials, and insights about vuepress — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

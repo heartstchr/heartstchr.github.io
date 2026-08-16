@@ -1,6 +1,6 @@
 ---
-title: High-Performance API Design
-description: Design and optimization of high-concurrency RESTful and GraphQL APIs. I specialize in making your data move faster and more securely through sophisticated microservices architecture. I build the 'internal plumbing' that allows your application to react instantly, no matter how complex the data logic.
+title: "High-Performance API Design & Audit"
+description: "Slow APIs killing your product? We audit latency, redesign hot paths, and build high-concurrency RESTful and GraphQL APIs that stay fast under growing load."
 lastUpdated: false
 editLink: false
 contributors: false

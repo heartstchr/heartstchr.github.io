@@ -1,6 +1,6 @@
 ---
-title: Contact Form Plugin
-description: A lightweight, embeddable contact form widget that can be integrated into any website and automatically forwards submissions to a Notion database. Generator-based architecture allowing multiple form configurations with various field combinations - completely free and easy to customize.
+title: "Free Contact Form Plugin with Notion"
+description: "Embed a secure contact form on any website with one script tag. Submissions auto-save to Notion, with CAPTCHA, rate limiting, and sanitization built in."
 lastUpdated: false
 editLink: false
 contributors: false

@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with frontend architecture
-description: Explore our collection of articles, tutorials, and insights about frontend architecture. Stay updated with the latest trends and best practices in frontend architecture.
+description: Explore articles, tutorials, and insights about frontend architecture — with best practices and latest trends.
 layout: Layout
 tag: frontend architecture
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with frontend architecture
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about frontend architecture. Stay updated with the latest trends and best practices in frontend architecture.
+      content: Explore articles, tutorials, and insights about frontend architecture — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with startup strategy
-description: Explore our collection of articles, tutorials, and insights about startup strategy. Stay updated with the latest trends and best practices in startup strategy.
+description: Explore articles, tutorials, and insights about startup strategy — with best practices and latest trends.
 layout: Layout
 tag: startup strategy
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with startup strategy
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about startup strategy. Stay updated with the latest trends and best practices in startup strategy.
+      content: Explore articles, tutorials, and insights about startup strategy — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

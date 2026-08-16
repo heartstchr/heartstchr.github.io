@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with web performance
-description: Explore our collection of articles, tutorials, and insights about web performance. Stay updated with the latest trends and best practices in web performance.
+description: Explore articles, tutorials, and insights about web performance — with best practices and latest trends.
 layout: Layout
 tag: web performance
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with web performance
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about web performance. Stay updated with the latest trends and best practices in web performance.
+      content: Explore articles, tutorials, and insights about web performance — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

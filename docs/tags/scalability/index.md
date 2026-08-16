@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with scalability
-description: Explore our collection of articles, tutorials, and insights about scalability. Stay updated with the latest trends and best practices in scalability.
+description: Explore articles, tutorials, and insights about scalability — with best practices and latest trends.
 layout: Layout
 tag: scalability
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with scalability
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about scalability. Stay updated with the latest trends and best practices in scalability.
+      content: Explore articles, tutorials, and insights about scalability — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

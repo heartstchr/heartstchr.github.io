@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with cwebp
-description: Explore our collection of articles, tutorials, and insights about cwebp. Stay updated with the latest trends and best practices in cwebp.
+description: Explore articles, tutorials, and insights about cwebp — with best practices and latest trends.
 layout: Layout
 tag: cwebp
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with cwebp
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about cwebp. Stay updated with the latest trends and best practices in cwebp.
+      content: Explore articles, tutorials, and insights about cwebp — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

@@ -1,6 +1,6 @@
 ---
-title: Internal Tools & Portals
-description: I turn Notion databases, spreadsheets, and manual workflows into professional internal tools — portals, dashboards, and automated processes your team actually wants to use. Custom-built for your operation, connected to your existing data, and delivered without the overhead of a months-long enterprise build.
+title: "Internal Tools Development: Notion to Portals"
+description: "We turn Notion databases, spreadsheets, and manual workflows into professional internal tools — portals, dashboards, and automation your team will use."
 lastUpdated: false
 editLink: false
 contributors: false

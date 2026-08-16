@@ -1,6 +1,6 @@
 ---
-title: ROI-Driven AI Automation
-description: I integrate Large Language Models (LLMs) and custom AI agents to drive measurable business results. From reducing lead response times from days to hours to automating complex manual data workflows. I don't just 'add a chatbot'; I build intelligent systems that move your core business metrics and save thousands of manual hours.
+title: "AI Automation That Cuts Lead Time 98%"
+description: "We build production AI automation, not chatbots. LLM architecture, guardrails, and tool integrations that cut lead turnaround from 4 days to 2 hours."
 lastUpdated: false
 editLink: false
 contributors: false

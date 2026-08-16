@@ -1,6 +1,6 @@
 ---
-title: Programmatic Growth Engines
-description: I build high-velocity programmatic SEO platforms that dominate search rankings. Using database-driven routing to generate thousands of optimized landing pages that capture long-tail local traffic. Perfect for marketplaces and lead-generation platforms that need to scale traffic natively without high ad-spend.
+title: "Programmatic SEO Development: 1,000+ Pages"
+description: "We build programmatic SEO platforms that generate thousands of optimized landing pages — capturing long-tail local traffic without ad spend."
 lastUpdated: false
 editLink: false
 contributors: false

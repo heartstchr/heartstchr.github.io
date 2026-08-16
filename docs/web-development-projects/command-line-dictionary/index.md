@@ -1,6 +1,6 @@
 ---
-title: Command Line Dictionary
-description: A fast, lightweight Command Line Interface (CLI) for looking up word definitions, synonyms, and examples. Built for developers who live in the terminal.
+title: "CLI Dictionary: Definitions in Your Terminal"
+description: "A fast, lightweight command line interface for looking up word definitions, synonyms, and examples — built for developers who live in the terminal."
 lastUpdated: false
 editLink: false
 contributors: false

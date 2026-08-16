@@ -1,6 +1,6 @@
 ---
 title: Enterprise Web Development Projects
-description: "Large-scale enterprise platforms, banking systems, and mission-critical applications built by Stack Seekers — including ABN AMRO, Qatar Airways, Upstox, and more."
+description: "Large-scale enterprise platforms, banking systems, and mission-critical applications built by Stack Seekers — including ABN AMRO, Qatar Airways, and more."
 lastUpdated: false
 editLink: false
 copyright: false

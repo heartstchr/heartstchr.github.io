@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with next.js
-description: Explore our collection of articles, tutorials, and insights about next.js. Stay updated with the latest trends and best practices in next.js.
+description: Explore articles, tutorials, and insights about next.js — with best practices and latest trends.
 layout: Layout
 tag: next.js
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with next.js
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about next.js. Stay updated with the latest trends and best practices in next.js.
+      content: Explore articles, tutorials, and insights about next.js — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

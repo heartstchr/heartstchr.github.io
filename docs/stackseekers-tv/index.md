@@ -1,6 +1,6 @@
 ---
 title: Code Tutorials by an Enterprise Architect
-description: Watch in-depth web development tutorials, app walkthroughs, and architectural demos. Real projects from an Enterprise Architecture Partner building with React & Node.js.
+description: Watch in-depth web development tutorials, app walkthroughs, and architectural demos from an Enterprise Architecture Partner building with React & Node.js.
 order: 4
 editLink: false
 copyright: false

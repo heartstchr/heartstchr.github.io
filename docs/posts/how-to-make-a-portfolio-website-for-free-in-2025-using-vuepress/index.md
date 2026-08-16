@@ -1,8 +1,9 @@
 ---
-title: How to Create a Stunning Freelancer Portfolio Website with VuePress
+title: "How to Make a Free Portfolio Website in 2025 with VuePress"
+description: "Build a free portfolio website for your business or freelance brand with VuePress. Write in Markdown, generate a static site, and host it on GitHub Pages."
 date: 2025-05-22
 category: [Tech]
-tags: [VuePress, Blog]
+tags: [VuePress, Portfolio, Static Site, GitHub Pages, Freelancing]
 ---
 
 <MetaContent :date="$frontmatter.date" :category="$frontmatter.tags"/>

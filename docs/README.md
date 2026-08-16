@@ -1,7 +1,7 @@
 ---
 home: true
 title: Senior Full-Stack Developer & Fractional CTO for Startups
-description: "Stack Seekers helps startups and enterprise teams with fractional CTO leadership, AI automation, scalable SaaS architecture, and programmatic SEO systems built for growth."
+description: "Stack Seekers helps startups and enterprise teams with fractional CTO leadership, AI automation, scalable SaaS architecture, and programmatic SEO."
 heroText: ""
 editLink: false
 copyright: false

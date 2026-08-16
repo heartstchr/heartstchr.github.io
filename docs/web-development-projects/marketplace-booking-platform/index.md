@@ -1,6 +1,6 @@
 ---
-title: Marketplace Booking Platform
-description: A multi-sided booking marketplace with search, listing management, reservations, and payments that can be adapted to other inventory-led domains.
+title: "Marketplace Booking Platform: Reservations & Payments"
+description: "A multi-sided booking marketplace with search, listing management, reservations, and payments — adaptable to any inventory-led domain."
 lastUpdated: false
 editLink: false
 contributors: false

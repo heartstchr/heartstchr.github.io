@@ -1,6 +1,6 @@
 ---
-title: AI Dynamic CRUD App
-description: Transform your Notion database into a professional web application in minutes with the power of AI. Automatically reads your Notion structure, suggests field relationships, and creates beautiful, responsive interfaces with intelligent forms, search, and multi-language support.
+title: "AI Dynamic CRUD App: Notion to Web App"
+description: "Transform any Notion database into a professional web application with AI. Automatic field detection, intelligent forms, search, and multi-language support."
 lastUpdated: false
 editLink: false
 contributors: false

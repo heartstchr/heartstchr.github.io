@@ -1,6 +1,6 @@
 ---
-title: Partner Dashboard Upstox
-description: Open a sub-broker account with Upstox.
+title: "Upstox Partner Dashboard: Sub-Broker Account"
+description: "Upstox's partner dashboard for opening a sub-broker account — onboard clients, track commissions, and run your brokerage business from one place."
 lastUpdated: false
 editLink: false
 contributors: false

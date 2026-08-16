@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with technology
-description: Explore our collection of articles, tutorials, and insights about technology. Stay updated with the latest trends and best practices in technology.
+description: Explore articles, tutorials, and insights about technology — with best practices and latest trends.
 layout: Layout
 tag: technology
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with technology
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about technology. Stay updated with the latest trends and best practices in technology.
+      content: Explore articles, tutorials, and insights about technology — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

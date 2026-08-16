@@ -1,6 +1,6 @@
 ---
-title: Demat Account Open
-description: Open a Demat Account Online at Upstox
+title: "Open a Demat Account Online | Upstox"
+description: "Open a Demat account online with Upstox in minutes — instant KYC, free equity delivery trading, and a smooth onboarding flow built with Angular."
 lastUpdated: false
 editLink: false
 contributors: false

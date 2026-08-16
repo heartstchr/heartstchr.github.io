@@ -1,6 +1,8 @@
 export const services = [
   {
     name: "Product Architecture & Scale",
+    seoTitle: "Scalable SaaS Architecture Design & Audit",
+    seoDescription: "Hire a senior product architecture consultant who has designed banking-grade systems for 10M+ users. Get a risk map, scalable design, and an execution roadmap.",
     icon: "blueprint",
     code: "product-architecture-and-scaling",
     outcome: "Banking-Grade Stability",
@@ -39,6 +41,8 @@ export const services = [
   },
   {
     name: "ROI-Driven AI Automation",
+    seoTitle: "AI Automation That Cuts Lead Time 98%",
+    seoDescription: "We build production AI automation, not chatbots. LLM architecture, guardrails, and tool integrations that cut lead turnaround from 4 days to 2 hours.",
     icon: "openai",
     code: "ai-and-automation-strategy",
     outcome: "Operational Efficiency",
@@ -77,6 +81,8 @@ export const services = [
   },
   {
     name: "Fractional CTO Strategy",
+    seoTitle: "Fractional CTO for Startups",
+    seoDescription: "Get senior technical leadership at a fraction of a full-time CTO's cost. We build 6-month roadmaps, oversee architecture, review vendors, and mentor your team.",
     icon: "googlemeet",
     code: "fractional-cto-and-advisory",
     outcome: "Strategic Technical Partnership",
@@ -115,6 +121,8 @@ export const services = [
   },
   {
     name: "Programmatic Growth Engines",
+    seoTitle: "Programmatic SEO Development: 1,000+ Pages",
+    seoDescription: "We build programmatic SEO platforms that generate thousands of optimized landing pages — capturing long-tail local traffic without ad spend.",
     icon: "googlechrome",
     code: "programmatic-seo-and-growth",
     outcome: "Organic Traffic Expansion",
@@ -153,6 +161,8 @@ export const services = [
   },
   {
     name: "High-Performance API Design",
+    seoTitle: "High-Performance API Design & Audit",
+    seoDescription: "Slow APIs killing your product? We audit latency, redesign hot paths, and build high-concurrency RESTful and GraphQL APIs that stay fast under growing load.",
     icon: "swagger",
     code: "api-performance-and-integration",
     imageCode: "API-performance-and-integration",
@@ -192,6 +202,8 @@ export const services = [
   },
   {
     name: "SaaS MVP Development",
+    seoTitle: "SaaS MVP Development in 4-8 Weeks",
+    seoDescription: "Ship a production-ready SaaS MVP in 4 to 8 weeks — full-stack, deployed, and built to scale past 10,000 users without a rewrite. Fixed scope, one engineer.",
     icon: "rocket",
     code: "saas-mvp-development",
     imageCode: "saas-mvp-development",
@@ -231,6 +243,8 @@ export const services = [
   },
   {
     name: "Legacy Modernization",
+    seoTitle: "Legacy Modernization, Zero-Downtime Migration",
+    seoDescription: "Modernize legacy systems with phased, zero-downtime migrations that pay down structural debt while your product stays live. Applied to banking-grade systems.",
     icon: "sync",
     code: "legacy-modernization",
     imageCode: "legacy-modernization",
@@ -270,6 +284,8 @@ export const services = [
   },
   {
     name: "Internal Tools & Portals",
+    seoTitle: "Internal Tools Development: Notion to Portals",
+    seoDescription: "We turn Notion databases, spreadsheets, and manual workflows into professional internal tools — portals, dashboards, and automation your team will use.",
     icon: "box",
     code: "internal-tools-and-portals",
     imageCode: "internal-tools-and-portals",

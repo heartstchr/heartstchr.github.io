@@ -1,9 +1,9 @@
 ---
-title: Deleting Local Git Branches Not on Remote Made Easy
-description: Discover how to safely delete local Git branches not in the remote repository with a simple script. Includes bonus tips, a video tutorial, and best practices for Git branch management.
+title: "How to Delete Local Git Branches Not on Remote (Auto Cleanup Script Included)"
+description: "Safely delete local Git branches no longer on the remote with an auto cleanup script. Includes best practices for a cleaner Git workflow."
 date: 2025-06-12
 category: Programming
-tags: [Git, Version Control, Developer Tools, Branch Management, Workflow Optimization]
+tags: [Git, Version Control, Developer Tools, Branch Management]
 ---
 
 <MetaContent :date="$frontmatter.date" :category="$frontmatter.tags"/>

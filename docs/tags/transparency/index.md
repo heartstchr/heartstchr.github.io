@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with transparency
-description: Explore our collection of articles, tutorials, and insights about transparency. Stay updated with the latest trends and best practices in transparency.
+description: Explore articles, tutorials, and insights about transparency — with best practices and latest trends.
 layout: Layout
 tag: transparency
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with transparency
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about transparency. Stay updated with the latest trends and best practices in transparency.
+      content: Explore articles, tutorials, and insights about transparency — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

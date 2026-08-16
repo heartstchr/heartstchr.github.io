@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with mvp
-description: Explore our collection of articles, tutorials, and insights about mvp. Stay updated with the latest trends and best practices in mvp.
+description: Explore articles, tutorials, and insights about mvp — with best practices and latest trends.
 layout: Layout
 tag: mvp
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with mvp
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about mvp. Stay updated with the latest trends and best practices in mvp.
+      content: Explore articles, tutorials, and insights about mvp — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

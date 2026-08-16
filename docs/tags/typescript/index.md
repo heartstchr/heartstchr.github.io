@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with typescript
-description: Explore our collection of articles, tutorials, and insights about typescript. Stay updated with the latest trends and best practices in typescript.
+description: Explore articles, tutorials, and insights about typescript — with best practices and latest trends.
 layout: Layout
 tag: typescript
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with typescript
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about typescript. Stay updated with the latest trends and best practices in typescript.
+      content: Explore articles, tutorials, and insights about typescript — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

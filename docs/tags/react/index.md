@@ -1,6 +1,6 @@
 ---
 title: Posts tagged with react
-description: Explore our collection of articles, tutorials, and insights about react. Stay updated with the latest trends and best practices in react.
+description: Explore articles, tutorials, and insights about react — with best practices and latest trends.
 layout: Layout
 tag: react
 head:
@@ -15,7 +15,7 @@ head:
       content: Posts tagged with react
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about react. Stay updated with the latest trends and best practices in react.
+      content: Explore articles, tutorials, and insights about react — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website
