@@ -86,8 +86,8 @@ copyright: false
         </div>
         <!-- Secondary Cards -->
         <div class="bento-hero-item bento-hero-2  border-round-3xl overflow-hidden relative bento-hover border-1 border-white-alpha-10">
-          <img src="/img/home/projects/ABN_Amro.webp" alt="Enterprise SaaS" width="600" height="400" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
-        </div>
+          <img src="/img/home/projects/notion_service_request.webp" alt="Service Request System" width="600" height="400" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
+      </div>
         <div class="bento-hero-item bento-hero-3  border-round-3xl overflow-hidden relative bento-hover border-1 border-white-alpha-10">
           <img src="/img/projects/localxr/localxr-cover.webp" alt="Programmatic SEO" width="600" height="400" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
         </div>
