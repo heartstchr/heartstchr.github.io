@@ -1,6 +1,6 @@
 ---
 title: "Marketplace Booking Platform: Reservations & Payments"
-description: "A multi-sided booking marketplace with search, listing management, reservations, and payments — adaptable to any inventory-led domain."
+description: "A multi-sided booking marketplace with search, listings, reservations, and Stripe payments — a 70% head start on new marketplace builds."
 lastUpdated: false
 editLink: false
 contributors: false

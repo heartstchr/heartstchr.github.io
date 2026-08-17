@@ -169,7 +169,7 @@ export const freelance = [
   {
     name: "Local Home Services Pros",
     seoTitle: "Home Services Marketplace | Programmatic SEO",
-    seoDescription: "A Next.js 15 home services marketplace with dynamic routing for thousands of location-service pages. Programmatic SEO and lead generation built in.",
+    seoDescription: "A Next.js 15 home services marketplace generating hyper-local pages for 20+ categories across thousands of US cities, with SEO and lead capture built in.",
     category: "Startup MVPs",
     description:
       "A modern, SEO-optimized web platform that connects homeowners and property managers with verified local service providers. Built with Next.js 15 and React 19, it serves as a lead generation and matching service with dynamic routing for thousands of location-service combinations.",
@@ -1008,7 +1008,7 @@ export const freelance = [
   {
     name: "Marketplace Booking Platform",
     seoTitle: "Marketplace Booking Platform: Reservations & Payments",
-    seoDescription: "A multi-sided booking marketplace with search, listing management, reservations, and payments — adaptable to any inventory-led domain.",
+    seoDescription: "A multi-sided booking marketplace with search, listings, reservations, and Stripe payments — a 70% head start on new marketplace builds.",
     category: "SaaS",
     description:
       "A multi-sided booking marketplace with search, listing management, reservations, and payments that can be adapted to other inventory-led domains.",

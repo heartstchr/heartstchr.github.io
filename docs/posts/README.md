@@ -7,7 +7,7 @@ pageInfo: false
 contributors: false
 ---
 
-<section class="py-4 surface-900 text-black border-round-3xl mb-4 overflow-hidden relative">
+<section class="py-4 text-black border-round-3xl mb-4 overflow-hidden relative">
   <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary-900 border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
   <div class="relative z-1">
     <div class="flex align-items-center gap-2 text-primary font-bold mb-3 uppercase tracking-wider text-xs">

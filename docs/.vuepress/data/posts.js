@@ -1,5 +1,29 @@
 export const posts = [
   {
+    title: "SaaS MVP Timeline in 2026: Real Scope, Effort & Decisions That Drive It",
+    link: "/posts/saas-mvp-cost-timeline-2026/",
+    date: "2026-08-17",
+    summary: "Stop guessing. Here's what a SaaS MVP actually takes in 2026 — by scope, team model, and hidden work — plus the 3 decisions that control your timeline.",
+    category: "Business Strategy",
+    tags: ["SaaS MVP", "MVP Development", "Startup Strategy", "Engineering Planning", "Founders"]
+  },
+  {
+    title: "How to Vet a Development Agency: A Non-Technical Founder's Checklist",
+    link: "/posts/how-to-vet-a-development-agency-partner/",
+    date: "2026-08-16",
+    summary: "Most vetting advice is written by salespeople. This is the technical checklist I'd run — from GitHub signals to reference calls that actually reveal quality.",
+    category: "Business Strategy",
+    tags: ["Vendor Vetting", "Outsourcing", "Agency Selection", "Technical Due Diligence", "Founders"]
+  },
+  {
+    title: "Fractional CTO vs Interim CTO vs Advisor: Which Model Do You Need?",
+    link: "/posts/fractional-cto-vs-interim-cto-vs-advisor/",
+    date: "2026-08-15",
+    summary: "Fractional CTO, interim CTO, advisor, or consultant — each solves a different problem. Learn the four models and how to pick the right one for your stage.",
+    category: "Technical Advisory",
+    tags: ["Fractional CTO", "Interim CTO", "Technical Advisor", "CTO Search", "Leadership"]
+  },
+  {
     title: "Why Your Software Project Needs an Architect, Not Just an 'Order Taker'",
     link: "/posts/architect-vs-order-taker/",
     date: "2026-04-18",

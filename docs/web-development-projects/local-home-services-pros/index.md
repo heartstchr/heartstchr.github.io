@@ -1,6 +1,6 @@
 ---
 title: "Home Services Marketplace | Programmatic SEO"
-description: "A Next.js 15 home services marketplace with dynamic routing for thousands of location-service pages. Programmatic SEO and lead generation built in."
+description: "A Next.js 15 home services marketplace generating hyper-local pages for 20+ categories across thousands of US cities, with SEO and lead capture built in."
 lastUpdated: false
 editLink: false
 contributors: false
