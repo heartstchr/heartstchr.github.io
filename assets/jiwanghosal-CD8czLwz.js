@@ -1,0 +1,1 @@
+var e=`/img/home/jiwanghosal.webp`;export{e as t};

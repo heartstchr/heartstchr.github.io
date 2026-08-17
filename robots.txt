@@ -5,7 +5,6 @@ Allow: /llms-full.txt
 
 Sitemap: https://stackseekers.com/sitemap.xml
 
+
 User-agent:*
 Disallow:
-
-Sitemap: https://stackseekers.com/sitemap.xml

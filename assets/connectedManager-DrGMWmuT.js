@@ -1,0 +1,1 @@
+var e=`/img/about/connectedManager.webp`;export{e as t};
