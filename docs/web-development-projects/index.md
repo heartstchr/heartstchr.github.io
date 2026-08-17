@@ -1,6 +1,6 @@
 ---
-title: The Architect's Playbook | Enterprise Engineering Portfolio | Stack Seekers
-description: "Strategic engineering insights and technical deep-dives for founders building high-stakes software. See how I solve complex technical bottlenecks and drive measurable business outcomes."
+title: The Architect's Playbook | Enterprise Engineering Portfolio
+description: "Strategic engineering insights and technical deep-dives for founders building high-stakes software — and how I solve complex bottlenecks."
 order: 2
 home: true
 lastUpdated: false
@@ -73,7 +73,7 @@ copyright: false
       <p class="m-0 text-sm text-500 mt-1">{{ cat.desc }}</p>
     </div>
     <div class="flex flex-column md:flex-row gap-3 mt-5 ml-auto hidden md:block">
-      <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+      <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
         <Button label="Book Free Discovery Call" icon="pi pi-calendar-clock" severity="primary" size="small" rounded raised class="w-full md:w-auto white-space-nowrap" />
       </a>
     </div>
@@ -133,7 +133,7 @@ copyright: false
 
 <!-- Sticky Mobile CTA -->
 <div class="fixed bottom-0 left-0 w-full p-3 z-5 lg:hidden glass-sticky-cta shadow-6 flex gap-3 border-top-1 border-white-alpha-10">
-  <a href="https://cal.com/stackseekers" target="_blank" class="flex-grow-1 no-underline">
+  <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="flex-grow-1 no-underline">
     <Button label="Consult Strategy" icon="pi pi-calendar" severity="primary" class="w-full text-lg font-bold py-3" raised />
   </a>
 </div>

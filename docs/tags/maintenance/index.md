@@ -1,9 +1,12 @@
 ---
 title: Posts tagged with maintenance
-description: Explore our collection of articles, tutorials, and insights about maintenance. Stay updated with the latest trends and best practices in maintenance.
+description: Explore articles, tutorials, and insights about maintenance — with best practices and latest trends.
 layout: Layout
 tag: maintenance
 head:
+  - - meta
+    - name: robots
+      content: noindex, follow
   - - meta
     - name: keywords
       content: maintenance, web development, programming, tech, tutorial
@@ -12,7 +15,7 @@ head:
       content: Posts tagged with maintenance
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about maintenance. Stay updated with the latest trends and best practices in maintenance.
+      content: Explore articles, tutorials, and insights about maintenance — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

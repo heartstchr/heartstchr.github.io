@@ -1,9 +1,12 @@
 ---
 title: Posts tagged with coding
-description: Explore our collection of articles, tutorials, and insights about coding. Stay updated with the latest trends and best practices in coding.
+description: Explore articles, tutorials, and insights about coding — with best practices and latest trends.
 layout: Layout
 tag: coding
 head:
+  - - meta
+    - name: robots
+      content: noindex, follow
   - - meta
     - name: keywords
       content: coding, web development, programming, tech, tutorial
@@ -12,7 +15,7 @@ head:
       content: Posts tagged with coding
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about coding. Stay updated with the latest trends and best practices in coding.
+      content: Explore articles, tutorials, and insights about coding — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

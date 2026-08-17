@@ -1,9 +1,12 @@
 ---
 title: Posts tagged with architecture
-description: Explore our collection of articles, tutorials, and insights about architecture. Stay updated with the latest trends and best practices in architecture.
+description: Explore articles, tutorials, and insights about architecture — with best practices and latest trends.
 layout: Layout
 tag: architecture
 head:
+  - - meta
+    - name: robots
+      content: noindex, follow
   - - meta
     - name: keywords
       content: architecture, web development, programming, tech, tutorial
@@ -12,7 +15,7 @@ head:
       content: Posts tagged with architecture
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about architecture. Stay updated with the latest trends and best practices in architecture.
+      content: Explore articles, tutorials, and insights about architecture — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

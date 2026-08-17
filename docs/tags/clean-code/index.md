@@ -1,9 +1,12 @@
 ---
 title: Posts tagged with clean code
-description: Explore our collection of articles, tutorials, and insights about clean code. Stay updated with the latest trends and best practices in clean code.
+description: Explore articles, tutorials, and insights about clean code — with best practices and latest trends.
 layout: Layout
 tag: clean code
 head:
+  - - meta
+    - name: robots
+      content: noindex, follow
   - - meta
     - name: keywords
       content: clean code, web development, programming, tech, tutorial
@@ -12,7 +15,7 @@ head:
       content: Posts tagged with clean code
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about clean code. Stay updated with the latest trends and best practices in clean code.
+      content: Explore articles, tutorials, and insights about clean code — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

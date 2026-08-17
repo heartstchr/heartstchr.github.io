@@ -7,6 +7,8 @@ export const SUPPORT_EMAIL = typeof __VITE_SUPPORT_EMAIL__ !== "undefined"
 export const freelance = [
   {
     name: "Premium Furniture Landing Page & Catalog",
+    seoTitle: "Premium Furniture Landing Page & Catalog",
+    seoDescription: "A luxury furniture landing page, lookbook, and product catalog built with Vue.js and a Notion headless CMS — perfect for premium retail showrooms.",
     category: "Ready-made Apps",
     description: "A luxury, full-featured furniture landing page, lookbook, and product catalog platform built with Vue.js, powered by a Notion Headless CMS, and deployed on Netlify. Perfect for custom furniture showrooms, interior design catalogs, or any premium retail catalog.",
     software: "Web Application",
@@ -104,6 +106,8 @@ export const freelance = [
   },
   {
     name: "AI Dynamic CRUD App",
+    seoTitle: "AI Dynamic CRUD App: Notion to Web App",
+    seoDescription: "Transform any Notion database into a professional web application with AI. Automatic field detection, intelligent forms, search, and multi-language support.",
     category: "Ready-made Apps",
     description: "Transform your Notion database into a professional web application in minutes with the power of AI. Automatically reads your Notion structure, suggests field relationships, and creates beautiful, responsive interfaces with intelligent forms, search, and multi-language support.",
     software: "Web Application",
@@ -164,6 +168,8 @@ export const freelance = [
   },
   {
     name: "Local Home Services Pros",
+    seoTitle: "Home Services Marketplace | Programmatic SEO",
+    seoDescription: "A Next.js 15 home services marketplace generating hyper-local pages for 20+ categories across thousands of US cities, with SEO and lead capture built in.",
     category: "Startup MVPs",
     description:
       "A modern, SEO-optimized web platform that connects homeowners and property managers with verified local service providers. Built with Next.js 15 and React 19, it serves as a lead generation and matching service with dynamic routing for thousands of location-service combinations.",
@@ -245,6 +251,8 @@ export const freelance = [
   },
   {
     name: "Contact Form Plugin",
+    seoTitle: "Free Contact Form Plugin with Notion",
+    seoDescription: "Embed a secure contact form on any website with one script tag. Submissions auto-save to Notion, with CAPTCHA, rate limiting, and sanitization built in.",
     category: "Ready-made Apps",
     description:
       "A lightweight, embeddable contact form widget that can be integrated into any website and automatically forwards submissions to a Notion database. Generator-based architecture allowing multiple form configurations with various field combinations - completely free and easy to customize.",
@@ -323,6 +331,8 @@ export const freelance = [
   },
   {
     name: "AI-Powered Influencer Platform - Vibe3",
+    seoTitle: "AI Influencer Platform | Vibe3 PWA",
+    seoDescription: "An AI-powered influencer marketing platform connecting creators with premium brands. React-based PWA with intelligent matching and Web3 integration.",
     category: "AI",
     description:
       "A cutting-edge AI-powered influencer marketing platform built with modern frontend technologies. Features a sophisticated React-based user interface that connects content creators with premium brands through intelligent matching algorithms. Built as a Progressive Web App (PWA) with Web3 integration, delivering seamless user experience across all devices.",
@@ -412,6 +422,8 @@ export const freelance = [
   },
   {
     name: "Dynamic CRUD App Free",
+    seoTitle: "Free CRUD App: Notion to Web App",
+    seoDescription: "Transform your Notion database into a professional, responsive web app in minutes — free and no-code. Auto-generated forms, search, multi-language support.",
     category: "Ready-made Apps",
     description:
       "Transform your Notion database into a professional web application in minutes. Automatically reads your Notion structure and creates beautiful, responsive interfaces with intelligent forms, search, and multi-language support - completely free and no-code required.",
@@ -490,6 +502,8 @@ export const freelance = [
   },
   {
     name: "AI Voice Generator",
+    seoTitle: "AI Voice Generator for Google Docs",
+    seoDescription: "Turn Google Docs into natural-sounding AI audio with Gemini TTS. Free text-to-speech with 25+ professional voices and real-time preview.",
     category: "Ready-made Apps",
     details: "./details/ai-narrator.md",
     description:
@@ -573,6 +587,8 @@ export const freelance = [
   },
   {
     name: "Service Request System",
+    seoTitle: "Service Request System with Notion",
+    seoDescription: "Build a complete customer service request system with Notion and Netlify. Automated email notifications and file uploads — free, no coding required.",
     category: "Ready-made Apps",
     details: "./details/service-request.md",
     description:
@@ -657,6 +673,8 @@ export const freelance = [
   },
   {
     name: "Appliance Repair Service Platform",
+    seoTitle: "Appliance Repair Platform & Troubleshooting",
+    seoDescription: "A content-driven platform connecting users with local appliance repair professionals, backed by free troubleshooting guides for major home appliances.",
     category: "Startup MVPs",
     details: "./details/appliance-repair.md",
     description:
@@ -768,6 +786,8 @@ export const freelance = [
   },
   {
     name: "SR-22 Insurance Now",
+    seoTitle: "Cheap SR-22 Insurance: Compare & Save",
+    seoDescription: "Need a cheap SR-22 insurance? Compare and save on SR22 coverage from top providers — instant quotes, state-by-state requirements, and hassle-free filing.",
     category: "Startup MVPs",
     details: "./details/sr22.md",
     description:
@@ -877,6 +897,8 @@ export const freelance = [
   },
   {
     name: "Momentum Incident Management",
+    seoTitle: "Incident Management Software",
+    seoDescription: "A structured process for identifying, analyzing, and resolving incidents that disrupt your operations — with clear workflows and post-incident review.",
     category: "Enterprise",
     details: "./details/momentum.md",
     description:
@@ -985,6 +1007,8 @@ export const freelance = [
   },
   {
     name: "Marketplace Booking Platform",
+    seoTitle: "Marketplace Booking Platform: Reservations & Payments",
+    seoDescription: "A multi-sided booking marketplace with search, listings, reservations, and Stripe payments — a 70% head start on new marketplace builds.",
     category: "SaaS",
     description:
       "A multi-sided booking marketplace with search, listing management, reservations, and payments that can be adapted to other inventory-led domains.",
@@ -1058,6 +1082,8 @@ export const freelance = [
   },
   {
     name: "IBRebuild for ABN AMRO BANK N.V.",
+    seoTitle: "IBRebuild: ABN AMRO Banking Migration",
+    seoDescription: "ABN AMRO's internet banking application rebuilt from AngularJS to Vue.js on Microsoft Azure — a zero-downtime modernization of a mission-critical platform.",
     category: "Enterprise",
     description:
       "ABN AMRO Bank N.V. is a Dutch bank with headquarters in Amsterdam. The internet banking (IB) application for the bank customers which is migrating from old Angular JS to Vue.js integrated with Microsoft Azure cloud services as IBRebuild.",
@@ -1091,6 +1117,8 @@ export const freelance = [
   },
   {
     name: "Emerald Design System",
+    seoTitle: "Emerald Design System | ABN AMRO",
+    seoDescription: "A tokens-first, component-driven design system built on Lit Web Components for ABN AMRO — consistent, bank-grade UX with faster time-to-market.",
     category: "Enterprise",
     description:
       "Our innovative digital strategy emphasizes efficiency through a 'build once, deploy multiple times' approach. Utilizing the Emerald design system, we ensure a consistent and seamless user experience across platforms. Significant investments in this system, coupled with an expanded team, have enhanced productivity and scalability, delivering cohesive digital solutions for optimal user engagement.",
@@ -1163,6 +1191,8 @@ export const freelance = [
   },
   {
     name: "Tech Create",
+    seoTitle: "Tech Create: Digital Solutions Landing Page",
+    seoDescription: "A high-converting landing page for digital solutions and innovative software development — built with Vue.js, PrimeVue, and deployed on Vercel.",
     category: "Startup MVPs",
     details: "./details/tech-create.md",
     description:
@@ -1201,6 +1231,8 @@ export const freelance = [
   },
   {
     name: "Yit Plus",
+    seoTitle: "YIT Plus: Monitor Home & Apartment Data",
+    seoDescription: "YIT Plus is a modern digital service for monitoring data about your home and apartment association — energy, maintenance, and updates in one place.",
     category: "Enterprise",
     description:
       "YIT Plus is a modern digital service helping you to monitor data related to your home and apartment association.",
@@ -1271,6 +1303,8 @@ export const freelance = [
   },
   {
     name: "Qatar Airways widget",
+    seoTitle: "Qatar Airways Flight Booking Widget",
+    seoDescription: "Book flights to destinations worldwide with Qatar Airways — special fares, Avios collection, and award-winning service in a seamless booking widget.",
     category: "Enterprise",
     details: "./details/qa.md",
     description:
@@ -1331,6 +1365,8 @@ export const freelance = [
   },
   {
     name: "Recipes",
+    seoTitle: "Recipes Platform: Share & Discover Food",
+    seoDescription: "A community-driven recipe platform where food lovers share, discover, and cook dishes from around the world. Connect and create with fellow enthusiasts.",
     category: "Startup MVPs",
     description:
       "A community-driven platform where food lovers share, discover, and discuss recipes from around the world. Connect, cook, and create with fellow culinary enthusiasts.",
@@ -1413,6 +1449,8 @@ export const freelance = [
   },
   {
     name: "Frontend of Tv Maze API",
+    seoTitle: "TVmaze Frontend: TV Info for Your App",
+    seoDescription: "A fast, responsive frontend built on the TVmaze API — add TV show information, schedules, and search to your website or app without a backend.",
     category: "Startup MVPs",
     description: "TVmaze- Add TV information to your website or app.",
     software: "Web",
@@ -1479,6 +1517,8 @@ export const freelance = [
   },
   {
     name: "Trokka Attraction",
+    seoTitle: "Trokka: Book Attractions & Tours",
+    seoDescription: "Book attractions and tours for your next holiday on Trokka — curated experiences, instant confirmation, and mobile-friendly booking.",
     category: "Startup MVPs",
     description: "Book Attractions and Tours for Your Next Holiday",
     software: "Web",
@@ -1532,6 +1572,8 @@ export const freelance = [
   },
   {
     name: "Catch That Bus",
+    seoTitle: "Catch That Bus: Malaysia & Singapore Tickets",
+    seoDescription: "Book Malaysia and Singapore bus tickets online with Catch That Bus — instant e-tickets, live schedules, and cross-border routes on web and iOS.",
     category: "Enterprise",
     description: "Book Malaysia and Singapore bus tickets online.",
     software: "Web / IOS APP",
@@ -1605,6 +1647,8 @@ export const freelance = [
   },
   {
     name: "Partner Dashboard Upstox",
+    seoTitle: "Upstox Partner Dashboard: Sub-Broker Account",
+    seoDescription: "Upstox's partner dashboard for opening a sub-broker account — onboard clients, track commissions, and run your brokerage business from one place.",
     category: "Enterprise",
     description: "Open a sub-broker account with Upstox.",
     software: "Web",
@@ -1675,6 +1719,8 @@ export const freelance = [
   },
   {
     name: "Demat Account Open",
+    seoTitle: "Open a Demat Account Online | Upstox",
+    seoDescription: "Open a Demat account online with Upstox in minutes — instant KYC, free equity delivery trading, and a smooth onboarding flow built with Angular.",
     category: "Enterprise",
     description: "Open a Demat Account Online at Upstox",
     stack: [
@@ -1723,6 +1769,8 @@ export const freelance = [
   },
   {
     name: "Call Matrix",
+    seoTitle: "Call Matrix: Call Intelligence & Analytics",
+    seoDescription: "A SaaS platform for call intelligence, marketing attribution, and analytics — track calls from ad to close with D3-powered dashboards.",
     category: "SaaS",
     description: "Call Intelligence, Marketing, and Analytics Platform",
     stack: [
@@ -1786,6 +1834,8 @@ export const freelance = [
   },
   {
     name: "Command Line Dictionary",
+    seoTitle: "CLI Dictionary: Definitions in Your Terminal",
+    seoDescription: "A fast, lightweight command line interface for looking up word definitions, synonyms, and examples — built for developers who live in the terminal.",
     category: "Automation",
     description: "A fast, lightweight Command Line Interface (CLI) for looking up word definitions, synonyms, and examples. Built for developers who live in the terminal.",
     software: "Terminal",
@@ -1825,6 +1875,8 @@ export const freelance = [
   },
   {
     name: "Stock Market",
+    seoTitle: "Real-Time Stock Market Dashboard",
+    seoDescription: "A high-performance real-time data visualization platform that renders live, interactive D3.js charts from socket-driven financial data with sub-second latency.",
     category: "Startup MVPs",
     description: "A high-performance real-time data visualization platform that consumes socket-driven financial data and renders live, interactive D3.js charts with sub-second latency.",
     stack: [

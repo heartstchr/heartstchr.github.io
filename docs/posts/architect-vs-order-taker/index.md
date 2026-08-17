@@ -1,6 +1,6 @@
 ---
 title: "Why Your Software Project Needs an Architect, Not Just an 'Order Taker'"
-description: "Most developers build exactly what you ask for, even if it is a bad business decision. Learn why hiring a strategic technical architect saves your project from costly failures."
+description: "Most developers build exactly what you ask for, even if it is a bad business decision. Learn why a strategic architect saves your project from costly failures."
 date: 2026-04-18
 category: "Technical Advisory"
 tags: ["Architecture", "Strategy", "Product Development", "Consultancy"]
@@ -41,7 +41,7 @@ A good architect says "No" more often than "Yes." Because every "No" to a bad fe
 <div class="my-6 p-4 surface-0 border-round-3xl shadow-2 border-left-3 border-primary">
   <h3 class="text-2xl font-bold mb-3">Are you building the right thing?</h3>
   <p class="text-lg text-700 mb-4">I help early-stage founders and enterprise teams validate their roadmap before they spend a dollar on development. Let's find your most efficient path to scale.</p>
-  <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+  <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
     <Button label="Book a Strategy Call" icon="pi pi-compass" size="large" rounded />
   </a>
 </div>

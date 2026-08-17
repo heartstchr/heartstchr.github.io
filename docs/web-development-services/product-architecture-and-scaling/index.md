@@ -1,6 +1,6 @@
 ---
-title: Product Architecture & Scale | Stack Seekers
-description: I architect high-performance digital products designed for extreme scale. Whether you are building a new SaaS MVP or scaling an existing platform, I ensure your foundation is secure and robust (ABN AMRO standards). My solutions focus on long-term maintainability, ensuring your product grows as fast as your business does without technical debt.
+title: "Scalable SaaS Architecture Design & Audit"
+description: "Hire a senior product architecture consultant who has designed banking-grade systems for 10M+ users. Get a risk map, scalable design, and an execution roadmap."
 lastUpdated: false
 editLink: false
 contributors: false
@@ -34,7 +34,7 @@ service:
           {{ description }}
         </p>
         <div class="flex flex-column md:flex-row gap-3">
-          <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+          <a :href="'https://cal.com/stackseekers?utm_source=website&utm_medium=service-page&utm_campaign=' + $frontmatter.service.code" target="_blank" class="no-underline">
             <Button label="Book Technical Roadmap Call" icon="pi pi-calendar-clock" severity="primary" raised rounded />
           </a>
           <a :href="'/contact/?subject=' + encodeURIComponent($frontmatter.service.name + ' inquiry') + '&service=' + encodeURIComponent($frontmatter.service.name)" class="no-underline">
@@ -128,7 +128,7 @@ service:
         <div class="surface-50 border-round-3xl p-4 md:p-5 h-full">
           <h2 class="text-2xl font-bold mt-0 mb-3">Best Next Step</h2>
           <p class="line-height-3 text-700">If this service matches your bottleneck, the fastest path is a short roadmap call with enough context to scope the technical direction and commercial fit.</p>
-          <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+          <a :href="'https://cal.com/stackseekers?utm_source=website&utm_medium=service-page&utm_campaign=' + $frontmatter.service.code" target="_blank" class="no-underline">
             <Button label="Book the Call" icon="pi pi-arrow-right" severity="primary" raised rounded class="w-full" />
           </a>
         </div>
@@ -197,7 +197,7 @@ service:
       <a :href="'/contact/?subject=' + encodeURIComponent($frontmatter.service.name + ' Strategic Inquiry')" class="no-underline">
         <Button label="Request Strategic Partnership" icon="pi pi-shield" severity="primary" raised rounded />
       </a>
-      <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+      <a :href="'https://cal.com/stackseekers?utm_source=website&utm_medium=service-page&utm_campaign=' + $frontmatter.service.code" target="_blank" class="no-underline">
         <Button label="Book Roadmap Call" icon="pi pi-calendar-clock" severity="secondary" raised rounded />
       </a>
     </div>

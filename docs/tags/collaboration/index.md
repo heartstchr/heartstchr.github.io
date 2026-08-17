@@ -1,9 +1,12 @@
 ---
 title: Posts tagged with collaboration
-description: Explore our collection of articles, tutorials, and insights about collaboration. Stay updated with the latest trends and best practices in collaboration.
+description: Explore articles, tutorials, and insights about collaboration — with best practices and latest trends.
 layout: Layout
 tag: collaboration
 head:
+  - - meta
+    - name: robots
+      content: noindex, follow
   - - meta
     - name: keywords
       content: collaboration, web development, programming, tech, tutorial
@@ -12,7 +15,7 @@ head:
       content: Posts tagged with collaboration
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about collaboration. Stay updated with the latest trends and best practices in collaboration.
+      content: Explore articles, tutorials, and insights about collaboration — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

@@ -1,6 +1,6 @@
 ---
-title: Programmatic Growth Engines | Stack Seekers
-description: I build high-velocity programmatic SEO platforms that dominate search rankings. Using database-driven routing to generate thousands of optimized landing pages that capture long-tail local traffic. Perfect for marketplaces and lead-generation platforms that need to scale traffic natively without high ad-spend.
+title: "Programmatic SEO Development: 1,000+ Pages"
+description: "We build programmatic SEO platforms that generate thousands of optimized landing pages — capturing long-tail local traffic without ad spend."
 lastUpdated: false
 editLink: false
 contributors: false
@@ -34,7 +34,7 @@ service:
           {{ description }}
         </p>
         <div class="flex flex-column md:flex-row gap-3">
-          <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+          <a :href="'https://cal.com/stackseekers?utm_source=website&utm_medium=service-page&utm_campaign=' + $frontmatter.service.code" target="_blank" class="no-underline">
             <Button label="Book Technical Roadmap Call" icon="pi pi-calendar-clock" severity="primary" raised rounded />
           </a>
           <a :href="'/contact/?subject=' + encodeURIComponent($frontmatter.service.name + ' inquiry') + '&service=' + encodeURIComponent($frontmatter.service.name)" class="no-underline">
@@ -128,7 +128,7 @@ service:
         <div class="surface-50 border-round-3xl p-4 md:p-5 h-full">
           <h2 class="text-2xl font-bold mt-0 mb-3">Best Next Step</h2>
           <p class="line-height-3 text-700">If this service matches your bottleneck, the fastest path is a short roadmap call with enough context to scope the technical direction and commercial fit.</p>
-          <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+          <a :href="'https://cal.com/stackseekers?utm_source=website&utm_medium=service-page&utm_campaign=' + $frontmatter.service.code" target="_blank" class="no-underline">
             <Button label="Book the Call" icon="pi pi-arrow-right" severity="primary" raised rounded class="w-full" />
           </a>
         </div>
@@ -197,7 +197,7 @@ service:
       <a :href="'/contact/?subject=' + encodeURIComponent($frontmatter.service.name + ' Strategic Inquiry')" class="no-underline">
         <Button label="Request Strategic Partnership" icon="pi pi-shield" severity="primary" raised rounded />
       </a>
-      <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+      <a :href="'https://cal.com/stackseekers?utm_source=website&utm_medium=service-page&utm_campaign=' + $frontmatter.service.code" target="_blank" class="no-underline">
         <Button label="Book Roadmap Call" icon="pi pi-calendar-clock" severity="secondary" raised rounded />
       </a>
     </div>

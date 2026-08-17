@@ -1,6 +1,6 @@
 ---
-title: Unlock the Power of AI Prompt Engineering A Comprehensive Guide
-description: Master the art of prompt engineering to get the most out of AI models. Learn techniques, best practices, and real-world examples.
+title: "AI Prompt Engineering: A Comprehensive Guide to Better Output"
+description: "Master prompt engineering to get more from AI models. Learn techniques, best practices, and real-world examples that consistently improve AI output."
 date: 2025-06-29
 category: Artificial Intelligence
 tags: [prompt engineering, AI, machine learning, natural language processing, large language models]

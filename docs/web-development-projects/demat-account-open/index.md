@@ -1,6 +1,6 @@
 ---
-title: Demat Account Open
-description: Open a Demat Account Online at Upstox
+title: "Open a Demat Account Online | Upstox"
+description: "Open a Demat account online with Upstox in minutes — instant KYC, free equity delivery trading, and a smooth onboarding flow built with Angular."
 lastUpdated: false
 editLink: false
 contributors: false
@@ -106,9 +106,6 @@ project:
               <a v-if="$frontmatter.project.contact" :href="'mailto:support@stackseekers.com?subject=' + encodeURIComponent('Scale Request: ' + $frontmatter.project.name)" class="no-underline flex-1">
                 <Button label="Architect Similar Solution" icon="pi pi-bolt" severity="secondary" class="w-full font-bold py-3" raised rounded />
               </a>
-              <div v-if="parseFloat($frontmatter.project.price) > 0" class="flex-1 flex align-items-center justify-content-center">
-                <RazorpayButton :project="$frontmatter.project" />
-              </div>
            </div>
         </div>
       </div>
@@ -250,8 +247,8 @@ project:
         Related Engineering Services
       </h3>
       <div class="flex flex-wrap gap-3">
-        <a href="/web-development-services/custom-software-engineering/" class="no-underline px-4 py-2 surface-0 shadow-1 border-round-xl text-700 font-bold hover:text-primary transition-all">Custom Software</a>
-        <a href="/web-development-services/mvp-development-for-startups/" class="no-underline px-4 py-2 surface-0 shadow-1 border-round-xl text-700 font-bold hover:text-primary transition-all">MVP Development</a>
+        <a href="/web-development-services/product-architecture-and-scaling/" class="no-underline px-4 py-2 surface-0 shadow-1 border-round-xl text-700 font-bold hover:text-primary transition-all">Custom Software</a>
+        <a href="/web-development-services/saas-mvp-development/" class="no-underline px-4 py-2 surface-0 shadow-1 border-round-xl text-700 font-bold hover:text-primary transition-all">MVP Development</a>
         <a href="/web-development-services/ai-and-automation-strategy/" class="no-underline px-4 py-2 surface-0 shadow-1 border-round-xl text-700 font-bold hover:text-primary transition-all">AI & Automation</a>
       </div>
     </div>
@@ -265,7 +262,7 @@ project:
       <a :href="'/contact/?subject=' + encodeURIComponent('Inquiry regarding ' + $frontmatter.project.name)" class="no-underline">
         <Button label="Start Your Project Brief" icon="pi pi-file-edit" severity="primary" raised rounded />
       </a>
-      <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+      <a :href="'https://cal.com/stackseekers?utm_source=website&utm_medium=portfolio&utm_campaign=' + $frontmatter.project.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')" target="_blank" class="no-underline">
         <Button label="Book Technical Roadmap Audit" icon="pi pi-calendar-clock" severity="secondary" raised rounded />
       </a>
     </div>

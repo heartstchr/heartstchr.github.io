@@ -1,9 +1,12 @@
 ---
 title: Posts tagged with notion
-description: Explore our collection of articles, tutorials, and insights about notion. Stay updated with the latest trends and best practices in notion.
+description: Explore articles, tutorials, and insights about notion — with best practices and latest trends.
 layout: Layout
 tag: notion
 head:
+  - - meta
+    - name: robots
+      content: noindex, follow
   - - meta
     - name: keywords
       content: notion, web development, programming, tech, tutorial
@@ -12,7 +15,7 @@ head:
       content: Posts tagged with notion
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about notion. Stay updated with the latest trends and best practices in notion.
+      content: Explore articles, tutorials, and insights about notion — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

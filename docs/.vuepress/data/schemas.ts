@@ -96,18 +96,50 @@ const homepageSchemas = [
     mainEntity: [
       {
         "@type": "Question",
-        name: "What kinds of companies hire Stack Seekers?",
+        name: "Why do I need Programmatic SEO over regular SEO?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Stack Seekers works with founders, product teams, and enterprise partners that need senior technical leadership, AI automation, scalable architecture, or programmatic SEO systems.",
+          text: "Regular SEO works for a blog post. Programmatic SEO works for building massive directories or local service marketplaces. If you need to target long-tail keywords natively across 1,000 cities, you need database-driven site architecture, not standard blogging tools.",
         },
       },
       {
         "@type": "Question",
-        name: "Do you handle strategy and implementation?",
+        name: "Do you handle both Frontend and Backend on custom SaaS builds?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Engagements can include architecture reviews, roadmap planning, hands-on implementation, delivery oversight, and advisory support.",
+          text: "Yes. As a full-stack engineering partner, I design the complete system — from fast, interactive user interfaces to high-performance server logic and secure, scalable cloud infrastructure. One partner, full ownership.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How fast can we launch our MVP?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Most production-ready MVPs are scoped for a 4 to 8-week delivery cycle. We focus on 'High-Integrity Velocity' — shipping a product that is fast to market but built on a foundation that won't require a total rewrite at 10k users.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can you work with our existing engineering team?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Absolutely. I often operate as a Fractional CTO or Architecture Lead, working directly with your developers to set standards, review code, and solve the hardest technical bottlenecks while upskilling the internal team.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is your preferred technology stack?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "I specialize in the 'Modern Enterprise Stack': React/Next.js, Node.js/TypeScript, and Cloud-Native Infrastructure (AWS/GCP/Azure). I choose tools based on your business constraints, not personal hype.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What if our current codebase is a legacy mess?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "That is where I do my best work. I specialize in phased modernizations and architectural resets — fixing the structural debt while keeping the product running, ensuring zero downtime during the modernization.",
         },
       },
     ],

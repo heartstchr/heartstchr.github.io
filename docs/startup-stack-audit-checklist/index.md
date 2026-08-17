@@ -1,6 +1,6 @@
 ---
 title: Startup Tech Stack Audit Checklist | Scalability & Risk Assessment
-description: Use this professional diagnostic tool to audit your startup's technical debt, SaaS infrastructure, and cloud scalability. Created by an Enterprise Architecture Partner for non-technical founders.
+description: Use this professional diagnostic tool to audit your startup's technical debt, SaaS infrastructure, and cloud scalability. Built for non-technical founders.
 editLink: false
 copyright: false
 pageInfo: false
@@ -100,7 +100,7 @@ head:
           <div class="relative z-1">
             <h3 class="text-2xl font-bold mb-3 text-white">Next Step: Turn Red Flags into Revenue</h3>
             <p class="text-300 line-height-3 mb-5">Your audit shows {{ totalScore('no') }} architectural bottlenecks that will hinder your next phase of growth. Let's build a fixed-scope roadmap to resolve them.</p>
-            <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+            <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
               <Button label="Book Technical Roadmap Call" icon="pi pi-calendar" severity="primary" size="large" rounded raised />
             </a>
           </div>
@@ -223,7 +223,7 @@ head:
                     </a>
                  </li>
                  <li>
-                    <a href="/web-development-services/legacy-system-modernization/" class="no-underline text-300 hover:text-white transition-colors flex align-items-center gap-2">
+                    <a href="/web-development-services/legacy-modernization/" class="no-underline text-300 hover:text-white transition-colors flex align-items-center gap-2">
                        <i class="pi pi-arrow-right text-xs"></i> Legacy System Rebuilds
                     </a>
                  </li>
@@ -258,7 +258,7 @@ head:
               <div class="text-xs text-500 font-bold uppercase tracking-widest">Stack Seekers Architecture Lab</div>
            </div>
            <div class="flex gap-4">
-              <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+              <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
                 <Button label="Book Technical Call" icon="pi pi-calendar" severity="primary" size="small" rounded raised />
               </a>
            </div>

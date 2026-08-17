@@ -1,6 +1,8 @@
 export const services = [
   {
     name: "Product Architecture & Scale",
+    seoTitle: "Scalable SaaS Architecture Design & Audit",
+    seoDescription: "Hire a senior product architecture consultant who has designed banking-grade systems for 10M+ users. Get a risk map, scalable design, and an execution roadmap.",
     icon: "blueprint",
     code: "product-architecture-and-scaling",
     outcome: "Banking-Grade Stability",
@@ -39,6 +41,8 @@ export const services = [
   },
   {
     name: "ROI-Driven AI Automation",
+    seoTitle: "AI Automation That Cuts Lead Time 98%",
+    seoDescription: "We build production AI automation, not chatbots. LLM architecture, guardrails, and tool integrations that cut lead turnaround from 4 days to 2 hours.",
     icon: "openai",
     code: "ai-and-automation-strategy",
     outcome: "Operational Efficiency",
@@ -77,6 +81,8 @@ export const services = [
   },
   {
     name: "Fractional CTO Strategy",
+    seoTitle: "Fractional CTO for Startups",
+    seoDescription: "Get senior technical leadership at a fraction of a full-time CTO's cost. We build 6-month roadmaps, oversee architecture, review vendors, and mentor your team.",
     icon: "googlemeet",
     code: "fractional-cto-and-advisory",
     outcome: "Strategic Technical Partnership",
@@ -115,6 +121,8 @@ export const services = [
   },
   {
     name: "Programmatic Growth Engines",
+    seoTitle: "Programmatic SEO Development: 1,000+ Pages",
+    seoDescription: "We build programmatic SEO platforms that generate thousands of optimized landing pages — capturing long-tail local traffic without ad spend.",
     icon: "googlechrome",
     code: "programmatic-seo-and-growth",
     outcome: "Organic Traffic Expansion",
@@ -153,6 +161,8 @@ export const services = [
   },
   {
     name: "High-Performance API Design",
+    seoTitle: "High-Performance API Design & Audit",
+    seoDescription: "Slow APIs killing your product? We audit latency, redesign hot paths, and build high-concurrency RESTful and GraphQL APIs that stay fast under growing load.",
     icon: "swagger",
     code: "api-performance-and-integration",
     imageCode: "API-performance-and-integration",
@@ -188,6 +198,129 @@ export const services = [
     descriptions: [
       "Design and optimization of high-concurrency RESTful and GraphQL APIs. I specialize in making your data move faster and more securely through sophisticated microservices architecture.",
       "I build the 'internal plumbing' that allows your application to react instantly, no matter how complex the data logic.",
+    ],
+  },
+  {
+    name: "SaaS MVP Development",
+    seoTitle: "SaaS MVP Development in 4-8 Weeks",
+    seoDescription: "Ship a production-ready SaaS MVP in 4 to 8 weeks — full-stack, deployed, and built to scale past 10,000 users without a rewrite. Fixed scope, one engineer.",
+    icon: "rocket",
+    code: "saas-mvp-development",
+    imageCode: "saas-mvp-development",
+    outcome: "Production-Ready Launch",
+    metric: "4-8 Week MVP",
+    keywords: ["SaaS MVP developer", "startup MVP development", "MVP product development"],
+    idealFor: [
+      "Founders with a validated idea who need a production-ready product, not a prototype",
+      "Non-technical founders who want a senior engineering partner from day one",
+      "Teams that already overpaid agencies and need a fast, fixed-scope build",
+    ],
+    problems: [
+      "Development timelines that stretch 6 to 12 months without a shipped product",
+      "MVPs built so poorly they collapse the moment real traffic or real users arrive",
+      "Scope creep, agency overhead, and no clear owner for technical decisions",
+    ],
+    deliverables: [
+      "Fixed-scope MVP build plan with a hard 4 to 8-week delivery window",
+      "Full-stack implementation on React, Node.js, and cloud-native infrastructure",
+      "Launch setup: deployment pipeline, monitoring, and a foundation that scales past 10k users",
+    ],
+    proof: "Shipped production MVPs on the modern enterprise stack that launch fast and scale cleanly instead of forcing a rewrite.",
+    faq: [
+      {
+        question: "Is this a prototype or a production-ready product?",
+        answer: "Production-ready. The MVP ships with real infrastructure, auth, data persistence, and deployment — built so it does not need a total rewrite when you reach your first 10,000 users.",
+      },
+      {
+        question: "Can you start without a fully spec'd product?",
+        answer: "Yes. Part of the first week is scoping: we turn your vision into a prioritized build plan, then execute it in fixed-scope sprints with weekly demos.",
+      },
+    ],
+    descriptions: [
+      "I build production-ready SaaS MVPs on a fixed 4 to 8-week timeline — full-stack, deployed, and built to scale past your first 10,000 users without a rewrite.",
+      "One senior engineer, full ownership, zero agency overhead. Your MVP ships as a real product, not a clickable demo.",
+    ],
+  },
+  {
+    name: "Legacy Modernization",
+    seoTitle: "Legacy Modernization, Zero-Downtime Migration",
+    seoDescription: "Modernize legacy systems with phased, zero-downtime migrations that pay down structural debt while your product stays live. Applied to banking-grade systems.",
+    icon: "sync",
+    code: "legacy-modernization",
+    imageCode: "legacy-modernization",
+    outcome: "Zero-Downtime Reset",
+    metric: "0 Downtime",
+    keywords: ["legacy system modernization", "legacy application migration", "technical debt refactoring"],
+    idealFor: [
+      "Teams on aging platforms that block every new feature release",
+      "Businesses migrating from monolithic or on-premise systems to modern cloud architecture",
+      "Products where the 'technical debt' conversation keeps getting postponed",
+    ],
+    problems: [
+      "Fragile legacy code that makes every change slow, risky, and expensive",
+      "Big-bang rewrites that fail, lose years of business logic, and scare stakeholders",
+      "Knowledge concentrated in a few people, so no one dares touch the system",
+    ],
+    deliverables: [
+      "Modernization assessment with a risk map and phased migration plan",
+      "Architecture reset to modular, testable, cloud-native components",
+      "Zero-downtime execution with rollback safety at every step",
+    ],
+    proof: "Applied to enterprise and banking-grade systems, including ABN AMRO migration work where downtime was not an option.",
+    faq: [
+      {
+        question: "Do you replace the whole system at once?",
+        answer: "No. Modernization is phased: we strangle the monolith incrementally, keeping the product live, tested, and rollback-safe at every step.",
+      },
+      {
+        question: "Can you modernize without losing existing business logic?",
+        answer: "Yes. The first phase is always understanding and codifying the current behavior, so migrations preserve functionality instead of guessing at it.",
+      },
+    ],
+    descriptions: [
+      "I modernize legacy systems through phased, zero-downtime migrations — paying down structural debt while your product stays live for customers.",
+      "The result is a modular, cloud-native platform your team can finally ship on, without betting the company on a risky rewrite.",
+    ],
+  },
+  {
+    name: "Internal Tools & Portals",
+    seoTitle: "Internal Tools Development: Notion to Portals",
+    seoDescription: "We turn Notion databases, spreadsheets, and manual workflows into professional internal tools — portals, dashboards, and automation your team will use.",
+    icon: "box",
+    code: "internal-tools-and-portals",
+    imageCode: "internal-tools-and-portals",
+    outcome: "Operational Velocity",
+    metric: "Hours Saved / Week",
+    keywords: ["internal tool development", "custom admin portal", "Notion to web application"],
+    idealFor: [
+      "Operations-heavy teams losing hours to manual data entry and email ping-pong",
+      "Companies running critical workflows out of Notion, spreadsheets, or inboxes",
+      "Teams that need admin dashboards and approval flows without a months-long build",
+    ],
+    problems: [
+      "Hours lost weekly to manual data entry, copy-paste, and status chasing",
+      "Business logic trapped in spreadsheets and email threads nobody can audit",
+      "Off-the-shelf tools that almost fit but force your team to adapt to them",
+    ],
+    deliverables: [
+      "Web-based internal portal built around your actual workflows",
+      "Automated sync from Notion, Sheets, or your existing data sources",
+      "Forms, approval flows, and dashboards with audit trails and role-based access",
+    ],
+    proof: "Built Notion-to-web systems and service request portals that replaced manual workflows with real-time, auditable applications.",
+    faq: [
+      {
+        question: "Do I need to rebuild how my team works?",
+        answer: "No. The portal is built around your current processes first, then improves them with automation — so adoption is natural instead of forced.",
+      },
+      {
+        question: "Can you connect it to Notion or Google Sheets?",
+        answer: "Yes. Most internal tooling starts by syncing existing Notion databases or spreadsheets into a real application layer with forms, search, and workflows.",
+      },
+    ],
+    descriptions: [
+      "I turn Notion databases, spreadsheets, and manual workflows into professional internal tools — portals, dashboards, and automated processes your team actually wants to use.",
+      "Custom-built for your operation, connected to your existing data, and delivered without the overhead of a months-long enterprise build.",
     ],
   },
 ];

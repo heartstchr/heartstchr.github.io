@@ -454,7 +454,7 @@ For questions, concerns, or requests regarding these Terms of Service, please co
 
 ### Primary Contact
 
-- **Email:** <a :href="'mailto:' + VITE_SUPPORT_EMAIL">{{ VITE_SUPPORT_EMAIL }}</a>
+- **Email:** <a :href="'mailto:' + 'support@stackseekers.com'">{{ 'support@stackseekers.com' }}</a>
 - **Website:** [https://stackseekers.com](https://stackseekers.com)
 - **Response Time:** We typically respond within 24-48 hours
 
@@ -462,7 +462,7 @@ For questions, concerns, or requests regarding these Terms of Service, please co
 
 For legal matters or formal notices:
 
-- **Email:** <a :href="'mailto:' + VITE_SUPPORT_EMAIL + '?subject=Legal%20Notice'">{{ VITE_SUPPORT_EMAIL }} (Subject: Legal Notice)</a>
+- **Email:** <a :href="'mailto:' + 'support@stackseekers.com' + '?subject=Legal%20Notice'">{{ 'support@stackseekers.com' }} (Subject: Legal Notice)</a>
 - **Written Notice:** Send formal legal notices to the email address above
 
 ### What to Include

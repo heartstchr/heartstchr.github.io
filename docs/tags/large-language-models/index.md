@@ -1,9 +1,12 @@
 ---
 title: Posts tagged with large language models
-description: Explore our collection of articles, tutorials, and insights about large language models. Stay updated with the latest trends and best practices in large language models.
+description: Explore articles, tutorials, and insights about large language models — with best practices and latest trends.
 layout: Layout
 tag: large language models
 head:
+  - - meta
+    - name: robots
+      content: noindex, follow
   - - meta
     - name: keywords
       content: large language models, web development, programming, tech, tutorial
@@ -12,7 +15,7 @@ head:
       content: Posts tagged with large language models
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about large language models. Stay updated with the latest trends and best practices in large language models.
+      content: Explore articles, tutorials, and insights about large language models — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

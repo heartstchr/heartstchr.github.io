@@ -1,9 +1,9 @@
 ---
-title: How CSS Impacts Your Brain- 7 Ways to Optimize Web Design
-description:  Discover how CSS (Cascading Style Sheets) enhances website design and improves user experience by optimizing typography, color contrast, white space, and more. Learn 7 actionable tips to make your site visually appealing and brain-friendly.
+title: "How CSS Impacts Your Brain: 7 Ways to Optimize Web Design"
+description: "Good CSS does more than look nice — it keeps visitors engaged. Learn 7 actionable ways to optimize typography, contrast, and white space."
 date: 2025-05-22
 category: [Tech, Web Design, CSS]
-tags: [VuePress, CSS, Blog, Web Design, Tech]
+tags: [CSS, Web Design, User Experience, UI/UX]
 ---
 
 <MetaContent :date="$frontmatter.date" :category="$frontmatter.tags"/>

@@ -1,5 +1,5 @@
 ---
-title: Ready-made Apps | Stack Seekers
+title: Ready-made Apps | Templates, AI Tools & Web Apps You Can Deploy Today
 description: "Premium, production-ready templates, AI tools, widgets, and business applications built by Stack Seekers."
 lastUpdated: false
 editLink: false
@@ -105,7 +105,7 @@ head:
     <div class="text-lg font-bold mb-1">Looking for custom adjustments?</div>
     <p class="text-sm text-500 m-0">I can customize and deploy any of these ready-made apps tailored specifically to your workflows.</p>
   </div>
-  <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+  <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
     <Button label="Book Free Discovery Call" icon="pi pi-calendar" severity="primary" raised rounded />
   </a>
 </section>

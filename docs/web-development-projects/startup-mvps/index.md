@@ -1,6 +1,6 @@
 ---
-title: Startup MVP Web Development Projects | Stack Seekers
-description: "Fast-to-market products, niche platforms, and proof-of-concept launches built by Stack Seekers — including Local Home Services, Appliance Repair, SR-22 Insurance, and more."
+title: Startup MVP Web Development Projects
+description: "Fast-to-market products, niche platforms, and proof-of-concept launches built by Stack Seekers — including Local Home Services, SR-22 Insurance, and more."
 lastUpdated: false
 editLink: false
 copyright: false
@@ -85,7 +85,7 @@ head:
     <div class="text-lg font-bold mb-1">Have a startup idea?</div>
     <p class="text-sm text-500 m-0">I scope, architect, and ship production MVPs in weeks — not months.</p>
   </div>
-  <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+  <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
     <Button label="Book Free Discovery Call" icon="pi pi-calendar" severity="primary" raised rounded />
   </a>
 </section>

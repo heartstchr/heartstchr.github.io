@@ -1,9 +1,12 @@
 ---
 title: Posts tagged with programmatic seo
-description: Explore our collection of articles, tutorials, and insights about programmatic seo. Stay updated with the latest trends and best practices in programmatic seo.
+description: Explore articles, tutorials, and insights about programmatic seo — with best practices and latest trends.
 layout: Layout
 tag: programmatic seo
 head:
+  - - meta
+    - name: robots
+      content: noindex, follow
   - - meta
     - name: keywords
       content: programmatic seo, web development, programming, tech, tutorial
@@ -12,7 +15,7 @@ head:
       content: Posts tagged with programmatic seo
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about programmatic seo. Stay updated with the latest trends and best practices in programmatic seo.
+      content: Explore articles, tutorials, and insights about programmatic seo — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

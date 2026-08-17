@@ -1,9 +1,12 @@
 ---
 title: Posts tagged with founders
-description: Explore our collection of articles, tutorials, and insights about founders. Stay updated with the latest trends and best practices in founders.
+description: Explore articles, tutorials, and insights about founders — with best practices and latest trends.
 layout: Layout
 tag: founders
 head:
+  - - meta
+    - name: robots
+      content: noindex, follow
   - - meta
     - name: keywords
       content: founders, web development, programming, tech, tutorial
@@ -12,7 +15,7 @@ head:
       content: Posts tagged with founders
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about founders. Stay updated with the latest trends and best practices in founders.
+      content: Explore articles, tutorials, and insights about founders — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

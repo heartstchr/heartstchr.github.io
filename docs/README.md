@@ -1,7 +1,8 @@
 ---
 home: true
-title: Fractional CTO, AI Automation, and Programmatic SEO Engineering
-description: "Stack Seekers helps startups and enterprise teams with fractional CTO leadership, AI automation, scalable SaaS architecture, and programmatic SEO systems built for growth."
+title: Senior Full-Stack Developer & Fractional CTO for Startups
+description: "Stack Seekers helps startups and enterprise teams with fractional CTO leadership, AI automation, scalable SaaS architecture, and programmatic SEO."
+heroText: ""
 editLink: false
 copyright: false
 ---
@@ -49,7 +50,7 @@ copyright: false
       </div>
       <!-- Action Center -->
       <div class="flex flex-column md:flex-row gap-3 mt-6">
-        <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+        <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=homepage&utm_campaign=homepage" target="_blank" class="no-underline">
           <Button label="Book Strategy Call" icon="pi pi-calendar-clock" severity="primary" size="large" rounded raised class="px-6 py-4 font-bold text-lg shadow-pill hover:scale-102 transition-transform transition-duration-200" />
         </a>
         <Button 
@@ -82,31 +83,13 @@ copyright: false
         <!-- Main Hero Card: Productized Benefit -->
         <div class="bento-hero-item bento-hero-1  border-round-3xl overflow-hidden relative bento-hover border-1 border-white-alpha-10">
           <img src="/img/projects/ai-dynamic-crud-app/ai-gemini-app.webp" alt="AI Automation" width="600" height="800" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-40 to-transparent flex flex-column justify-content-end">
-            <div class="glass-effect p-3 border-round-2xl">
-              <span class="text-xs font-bold text-primary-300 uppercase mb-1 block">Solution 01</span>
-              <h4 class="text-white m-0 text-lg font-bold">Intelligent Workflow Automation</h4>
-            </div>
-          </div>
         </div>
         <!-- Secondary Cards -->
         <div class="bento-hero-item bento-hero-2  border-round-3xl overflow-hidden relative bento-hover border-1 border-white-alpha-10">
-          <img src="/img/home/projects/ABN_Amro.webp" alt="Enterprise SaaS" width="600" height="400" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-40 to-transparent flex flex-column justify-content-end">
-            <div class="glass-effect p-3 border-round-2xl">
-              <span class="text-xs font-bold text-primary-300 uppercase mb-1 block">Solution 02</span>
-              <h4 class="text-white m-0 text-base font-bold">Resilient SaaS Architecture</h4>
-            </div>
-          </div>
-        </div>
+          <img src="/img/home/projects/notion_service_request.webp" alt="Service Request System" width="600" height="400" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
+      </div>
         <div class="bento-hero-item bento-hero-3  border-round-3xl overflow-hidden relative bento-hover border-1 border-white-alpha-10">
           <img src="/img/projects/localxr/localxr-cover.webp" alt="Programmatic SEO" width="600" height="400" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black-alpha-40 to-transparent flex flex-column justify-content-end">
-            <div class="glass-effect p-3 border-round-2xl">
-              <span class="text-xs font-bold text-primary-300 uppercase mb-1 block">Solution 03</span>
-              <h4 class="text-white m-0 text-base font-bold">Autonomous Growth Engines</h4>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -242,6 +225,7 @@ copyright: false
         <li class="flex align-items-center mb-3"><i class="pi pi-check-circle text-green-500 mr-3"></i> Gemini / OpenAI API Integrations</li>
         <li class="flex align-items-center mb-3"><i class="pi pi-check-circle text-green-500 mr-3"></i> Prompt Engineering & Context</li>
       </ul>
+      <a href="/web-development-services/ai-and-automation-strategy/" class="no-underline text-primary font-bold hover:underline">Explore AI Automation Services <i class="pi pi-arrow-right ml-1 text-sm"></i></a>
     </div>
     <div class="col-12 lg:col-7 relative z-1">
       <div class="grid">
@@ -275,6 +259,7 @@ copyright: false
         <li class="flex align-items-center mb-3"><i class="pi pi-check-circle text-green-500 mr-3"></i> Zero-downtime legacy modernisation</li>
         <li class="flex align-items-center mb-3"><i class="pi pi-check-circle text-green-500 mr-3"></i> Systems built for 10× traffic spikes</li>
       </ul>
+      <a href="/web-development-services/saas-mvp-development/" class="no-underline text-primary font-bold hover:underline">Explore SaaS MVP & Platform Build <i class="pi pi-arrow-right ml-1 text-sm"></i></a>
     </div>
     <div class="col-12 lg:col-7 relative z-1">
       <div class="grid">
@@ -285,7 +270,7 @@ copyright: false
           </a>
         </div>
         <div class="col-12 p-4">
-          <a href="/web-development-projects/momentum/" class="block bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-white-alpha-10">
+          <a href="/web-development-projects/momentum-incident-management/" class="block bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-white-alpha-10">
             <img src="/img/home/projects/momentum_incident_management.webp" alt="Momentum" width="400" height="300" class="w-full  object-cover" loading="lazy" />
              <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">Momentum Incident Mgmt</div>
           </a>
@@ -308,6 +293,7 @@ copyright: false
         <li class="flex align-items-center mb-3"><i class="pi pi-check-circle text-green-500 mr-3"></i> Location-aware lead capture at scale</li>
         <li class="flex align-items-center mb-3"><i class="pi pi-check-circle text-green-500 mr-3"></i> Thousands of city pages, zero manual work</li>
       </ul>
+      <a href="/web-development-services/programmatic-seo-and-growth/" class="no-underline text-primary font-bold hover:underline">Explore Programmatic SEO Engineering <i class="pi pi-arrow-right ml-1 text-sm"></i></a>
     </div>
     <div class="col-12 lg:col-7 relative z-1">
       <div class="grid">
@@ -341,17 +327,18 @@ copyright: false
         <li class="flex align-items-center mb-3"><i class="pi pi-check-circle text-green-500 mr-3"></i> Dynamic Form Generators</li>
         <li class="flex align-items-center mb-3"><i class="pi pi-check-circle text-green-500 mr-3"></i> Automated Email & Sync Workflows</li>
       </ul>
+      <a href="/web-development-services/internal-tools-and-portals/" class="no-underline text-primary font-bold hover:underline">Explore Internal Tools & Portal Development <i class="pi pi-arrow-right ml-1 text-sm"></i></a>
     </div>
     <div class="col-12 lg:col-7 relative z-1">
       <div class="grid">
         <div class="col-12 p-4">
-          <a href="/web-development-projects/notion-crud/" class="block bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-white-alpha-10">
+          <a href="/web-development-projects/dynamic-crud-app-free/" class="block bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-white-alpha-10">
             <img src="/img/projects/notion-crud-app/Notion-crud-app-free.webp" alt="Notion CRUD" class="w-full  object-cover" loading="lazy" />
             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">Dynamic CRUD App</div>
           </a>
         </div>
         <div class="col-12 p-4">
-          <a href="/web-development-projects/service-request/" class="block bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-white-alpha-10">
+          <a href="/web-development-projects/service-request-system/" class="block bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-white-alpha-10">
             <img src="/img/home/projects/notion_service_request.webp" alt="Service Request" class="w-full  object-cover" loading="lazy" />
              <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">Service Request Portal</div>
           </a>
@@ -369,7 +356,7 @@ copyright: false
 
 <!-- Sticky Mobile CTA -->
 <div class="fixed bottom-0 left-0 w-full p-3 z-5 lg:hidden glass-sticky-cta  flex gap-3 border-top-1 border-white-alpha-10">
-  <a href="https://cal.com/stackseekers" target="_blank" class="flex-grow-1 no-underline">
+  <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=homepage&utm_campaign=homepage" target="_blank" class="flex-grow-1 no-underline">
     <Button label="Book Call" icon="pi pi-calendar" severity="primary" class="w-full text-lg font-bold py-3" raised />
   </a>
   <div @click="scrollToSolutions" class="flex align-items-center justify-content-center bg-white-alpha-10 dark:bg-white-alpha-10 border-round-lg px-4 border-1 border-white-alpha-20 cursor-pointer">
@@ -390,7 +377,7 @@ copyright: false
         <div class="text-base font-bold text-primary mb-2">Intelligence Integration</div>
         <div class="text-2xl font-bold mb-4">AI Feature Engineering</div>
         <p class="text-sm line-height-3 mb-5 flex-grow-1">Embed custom LLMs and automated decision-making natively into your application to eliminate manual bottlenecks.</p>
-        <a href="https://cal.com/stackseekers" class="w-full line-height-1">
+        <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=homepage&utm_campaign=homepage" class="w-full line-height-1">
           <Button label="Discuss AI Strategy" class="w-full" size="small"/>
         </a>
       </div>
@@ -401,7 +388,7 @@ copyright: false
         <div class="text-base font-bold text-600 mb-2">Product Architecture</div>
         <div class="text-2xl font-bold mb-4">SaaS MVP & Platform Build</div>
         <p class="text-sm line-height-3 mb-5 flex-grow-1">End-to-end development of resilient business platforms, built to scale from launch to high-concurrency traffic.</p>
-        <a href="https://cal.com/stackseekers" class="w-full line-height-1">
+        <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=homepage&utm_campaign=homepage" class="w-full line-height-1">
           <Button label="Start MVP Scope" class="w-full p-button-outlined" size="small"/>
         </a>
       </div>
@@ -412,7 +399,7 @@ copyright: false
         <div class="text-base font-bold text-600 mb-2">Growth Engineering</div>
         <div class="text-2xl font-bold mb-4">Programmatic SEO Engine</div>
         <p class="text-sm line-height-3 mb-5 flex-grow-1">A database-driven acquisition framework to dominate local SEO and capture massive inbound traffic automatically.</p>
-        <a href="https://cal.com/stackseekers" class="w-full line-height-1">
+        <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=homepage&utm_campaign=homepage" class="w-full line-height-1">
           <Button label="Get a Custom Quote" class="w-full p-button-outlined" size="small" />
         </a>
       </div>
@@ -423,7 +410,7 @@ copyright: false
         <div class="text-base font-bold text-600 mb-2">Operational Automation</div>
         <div class="text-2xl font-bold mb-4">Internal Portals & Workflows</div>
         <p class="text-sm line-height-3 mb-5 flex-grow-1">Transform fragmented internal data (Notion, Sheets) into professional, high-integrity business tools.</p>
-        <a href="https://cal.com/stackseekers" class="w-full line-height-1">
+        <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=homepage&utm_campaign=homepage" class="w-full line-height-1">
           <Button label="Book a Scope Call" class="w-full p-button-outlined" size="small"/>
         </a>
       </div>
@@ -523,7 +510,7 @@ copyright: false
     Stop letting manual processes or weak infrastructure hold back your company's growth. Book a call to discuss architecture and solutions.
   </p>
   <div class="flex justify-content-center relative z-1">
-    <a href="https://cal.com/stackseekers" target="_blank" class="no-underline"> 
+    <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=homepage&utm_campaign=homepage" target="_blank" class="no-underline"> 
       <Button label="Book a Free Discovery Call" icon="pi pi-video" severity="primary" size="large" raised rounded class="px-5 py-3 font-bold" />
     </a>
   </div>

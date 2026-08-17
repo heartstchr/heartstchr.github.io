@@ -1,9 +1,12 @@
 ---
 title: Posts tagged with software lifecycle
-description: Explore our collection of articles, tutorials, and insights about software lifecycle. Stay updated with the latest trends and best practices in software lifecycle.
+description: Explore articles, tutorials, and insights about software lifecycle — with best practices and latest trends.
 layout: Layout
 tag: software lifecycle
 head:
+  - - meta
+    - name: robots
+      content: noindex, follow
   - - meta
     - name: keywords
       content: software lifecycle, web development, programming, tech, tutorial
@@ -12,7 +15,7 @@ head:
       content: Posts tagged with software lifecycle
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about software lifecycle. Stay updated with the latest trends and best practices in software lifecycle.
+      content: Explore articles, tutorials, and insights about software lifecycle — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

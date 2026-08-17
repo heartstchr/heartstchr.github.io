@@ -1,9 +1,12 @@
 ---
 title: Posts tagged with machine learning
-description: Explore our collection of articles, tutorials, and insights about machine learning. Stay updated with the latest trends and best practices in machine learning.
+description: Explore articles, tutorials, and insights about machine learning — with best practices and latest trends.
 layout: Layout
 tag: machine learning
 head:
+  - - meta
+    - name: robots
+      content: noindex, follow
   - - meta
     - name: keywords
       content: machine learning, web development, programming, tech, tutorial
@@ -12,7 +15,7 @@ head:
       content: Posts tagged with machine learning
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about machine learning. Stay updated with the latest trends and best practices in machine learning.
+      content: Explore articles, tutorials, and insights about machine learning — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website

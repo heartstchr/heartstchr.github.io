@@ -214,7 +214,7 @@ Depending on your location and applicable privacy laws, you may have the followi
 
 ### How to Exercise Your Rights
 
-To exercise any of these rights, please contact us at <a :href="'mailto:' + VITE_SUPPORT_EMAIL">{{ VITE_SUPPORT_EMAIL }}</a> with:
+To exercise any of these rights, please contact us at <a :href="'mailto:' + 'support@stackseekers.com'">{{ 'support@stackseekers.com' }}</a> with:
 
 - Your full name and contact information
 - Description of the right you wish to exercise
@@ -242,7 +242,7 @@ Parents or guardians who believe their child has provided personal information t
 - Request deletion of the information
 - Opt out of future collection
 
-If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately at <a :href="'mailto:' + VITE_SUPPORT_EMAIL">{{ VITE_SUPPORT_EMAIL }}</a>.
+If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately at <a :href="'mailto:' + 'support@stackseekers.com'">{{ 'support@stackseekers.com' }}</a>.
 
 ## International Data Transfers
 
@@ -259,7 +259,7 @@ As a web development service, your information may be transferred to and process
 - **Access Controls:** Strict access controls regardless of data location
 - **Legal Compliance:** Adherence to applicable international privacy laws
 
-If you have concerns about international data transfers, please contact us at <a :href="'mailto:' + VITE_SUPPORT_EMAIL">{{ VITE_SUPPORT_EMAIL }}</a>.
+If you have concerns about international data transfers, please contact us at <a :href="'mailto:' + 'support@stackseekers.com'">{{ 'support@stackseekers.com' }}</a>.
 
 ## Changes to This Privacy Policy
 
@@ -292,7 +292,7 @@ If you have any questions, concerns, or requests regarding this Privacy Policy o
 
 ### Primary Contact
 
-- **Email:** <a :href="'mailto:' + VITE_SUPPORT_EMAIL">{{ VITE_SUPPORT_EMAIL }}</a>
+- **Email:** <a :href="'mailto:' + 'support@stackseekers.com'">{{ 'support@stackseekers.com' }}</a>
 - **Website:** [https://stackseekers.com](https://stackseekers.com)
 - **Response Time:** We typically respond within 24-48 hours
 

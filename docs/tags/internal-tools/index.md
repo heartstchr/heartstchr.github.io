@@ -1,9 +1,12 @@
 ---
 title: Posts tagged with internal tools
-description: Explore our collection of articles, tutorials, and insights about internal tools. Stay updated with the latest trends and best practices in internal tools.
+description: Explore articles, tutorials, and insights about internal tools — with best practices and latest trends.
 layout: Layout
 tag: internal tools
 head:
+  - - meta
+    - name: robots
+      content: noindex, follow
   - - meta
     - name: keywords
       content: internal tools, web development, programming, tech, tutorial
@@ -12,7 +15,7 @@ head:
       content: Posts tagged with internal tools
   - - meta
     - property: og:description
-      content: Explore our collection of articles, tutorials, and insights about internal tools. Stay updated with the latest trends and best practices in internal tools.
+      content: Explore articles, tutorials, and insights about internal tools — with best practices and latest trends.
   - - meta
     - property: og:type
       content: website
