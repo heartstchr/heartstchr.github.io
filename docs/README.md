@@ -140,9 +140,6 @@ copyright: false
                 </div>
              </div>
              <div class="flex align-items-start gap-3">
-                <div class="w-2rem h-2rem border-circle bg-green-500 text-white flex align-items-center justify-content-center flex-shrink-0 shadow-2">
-                   <i class="pi pi-bolt text-xs"></i>
-                </div>
                 <div class="text-sm line-height-3">
                    <span class="font-bold text-green-500 block mb-1 uppercase letter-spacing-wide">Impact</span>
                    <span class="text-700 text-base" v-html="win.description"></span>
