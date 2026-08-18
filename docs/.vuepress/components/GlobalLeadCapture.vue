@@ -1,33 +1,71 @@
 <template>
   <div>
     <!-- Exit Intent Dialog -->
-    <Dialog v-model:visible="showExitIntent" modal header="Claim Your Technical Risk Audit" :style="{ width: '90vw', maxWidth: '400px' }">
-      <div class="flex flex-column gap-3 pt-3">
-        <p class="m-0 text-color-secondary line-height-3">Before you go, let's identify the hidden bottlenecks stalling your growth. Enter your email for a proprietary architecture teardown and a 25-minute roadmap session.</p>
-        <div class="flex flex-column gap-1">
-          <InputText id="exit-email" v-model="exitEmail" type="email" placeholder="Professional Email Address" class="w-full" :class="{'p-invalid': !!emailError}" />
-          <small v-if="emailError" class="p-error">{{ emailError }}</small>
+    <Dialog v-model:visible="showExitIntent" modal :style="{ width: '92vw', maxWidth: '420px' }">
+      <template #header>
+        <div class="flex align-items-center gap-3 w-full">
+          <div class="w-3rem h-3rem border-circle bg-primary-50 dark:bg-primary-900 flex align-items-center justify-content-center flex-shrink-0 shadow-1">
+            <i class="pi pi-bolt text-primary text-xl"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold m-0 text-900">Wait — Your Free Architecture Teardown</h3>
+            <p class="text-xs text-500 m-0 mt-1 font-medium">Most founders discover 3+ hidden bottlenecks</p>
+          </div>
         </div>
-        <div class="flex justify-content-end gap-2 mt-2">
-          <Button type="button" label="No thanks" severity="secondary" @click="closeExitIntent" :disabled="isSubmitting" text></Button>
-          <Button type="button" label="Claim My Audit" @click="submitExitIntent" :loading="isSubmitting" raised rounded></Button>
+      </template>
+      <div class="flex flex-column gap-3">
+        <p class="m-0 text-sm text-600 line-height-3">You're about to leave without the free teardown. Founders who skip this usually miss 3–5 critical bottlenecks draining engineering velocity.</p>
+        <div class="flex align-items-center gap-2 p-3 border-round-xl bg-primary-50 dark:bg-white-alpha-5 border-1 border-primary-100 dark:border-white-alpha-10">
+          <i class="pi pi-check-circle text-primary font-bold"></i>
+          <span class="text-xs font-semibold text-700 dark:text-white dark:opacity-80">Includes: Architecture audit + growth roadmap — delivered in 48 hours</span>
+        </div>
+        <div class="flex flex-column gap-1 mt-1">
+          <InputText id="exit-email" v-model="exitEmail" type="email" placeholder="you@company.com" class="w-full" :class="{ 'p-invalid': !!emailError }" @keyup.enter="submitExitIntent" />
+          <small v-if="emailError" class="p-error font-medium">{{ emailError }}</small>
         </div>
       </div>
+      <template #footer>
+        <div class="flex justify-content-between align-items-center w-full">
+          <button class="text-sm text-400 hover:text-600 transition-colors cursor-pointer bg-transparent border-none p-0" @click="closeExitIntent" :disabled="isSubmitting">
+            I'll figure it out myself
+          </button>
+          <Button label="Send Me the Teardown" icon="pi pi-arrow-right" iconPos="right" @click="submitExitIntent" :loading="isSubmitting" severity="primary" raised rounded class="px-5 font-bold" />
+        </div>
+      </template>
     </Dialog>
 
     <!-- Cal.com Intercept Dialog -->
-    <Dialog v-model:visible="showCalModal" modal header="Unlock Your Strategy Framework" :style="{ width: '90vw', maxWidth: '400px' }">
-      <div class="flex flex-column gap-3 pt-3">
-        <p class="m-0 text-color-secondary line-height-3">Where should we deliver your preliminary audit questions and strategic brief before our architectural consultation?</p>
-        <div class="flex flex-column gap-1">
-          <InputText id="cal-email" v-model="calEmail" type="email" placeholder="Professional Email Address" class="w-full" :class="{'p-invalid': !!calEmailError}" @keyup.enter="submitCalIntent" />
-          <small v-if="calEmailError" class="p-error">{{ calEmailError }}</small>
+    <Dialog v-model:visible="showCalModal" modal :style="{ width: '92vw', maxWidth: '420px' }">
+      <template #header>
+        <div class="flex align-items-center gap-3 w-full">
+          <div class="w-3rem h-3rem border-circle bg-primary-50 dark:bg-primary-900 flex align-items-center justify-content-center flex-shrink-0 shadow-1">
+            <i class="pi pi-shield text-primary text-xl"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold m-0 text-900">Before You Book — One Critical Thing</h3>
+            <p class="text-xs text-500 m-0 mt-1 font-medium">Founders who skip prep waste 60% of the call</p>
+          </div>
         </div>
-        <div class="flex justify-content-end gap-2 mt-2">
-          <Button type="button" label="Cancel" severity="secondary" @click="showCalModal = false" :disabled="isCalSubmitting" text></Button>
-          <Button type="button" label="Continue to Discovery" icon="pi pi-arrow-right" iconPos="right" @click="submitCalIntent" :loading="isCalSubmitting" raised rounded></Button>
+      </template>
+      <div class="flex flex-column gap-3">
+        <p class="m-0 text-sm text-600 line-height-3">We'll send your risk assessment + strategic brief ahead of time so we can skip the basics and go straight to solving your real problem.</p>
+        <div class="flex align-items-center gap-2 p-3 border-round-xl bg-primary-50 dark:bg-white-alpha-5 border-1 border-primary-100 dark:border-white-alpha-10">
+          <i class="pi pi-bolt text-primary font-bold"></i>
+          <span class="text-xs font-semibold text-700 dark:text-white dark:opacity-80">Pre-call prep means we cover 2x more ground in 25 minutes</span>
+        </div>
+        <div class="flex flex-column gap-1 mt-1">
+          <InputText id="cal-email" v-model="calEmail" type="email" placeholder="you@company.com" class="w-full" :class="{ 'p-invalid': !!calEmailError }" @keyup.enter="submitCalIntent" />
+          <small v-if="calEmailError" class="p-error font-medium">{{ calEmailError }}</small>
         </div>
       </div>
+      <template #footer>
+        <div class="flex justify-content-between align-items-center w-full">
+          <button class="text-sm text-400 hover:text-600 transition-colors cursor-pointer bg-transparent border-none p-0" @click="showCalModal = false" :disabled="isCalSubmitting">
+            Skip — book without prep
+          </button>
+          <Button label="Continue to Booking" icon="pi pi-arrow-right" iconPos="right" @click="submitCalIntent" :loading="isCalSubmitting" severity="primary" raised rounded class="px-5 font-bold" />
+        </div>
+      </template>
     </Dialog>
 
     <!-- Floating WhatsApp Button -->
@@ -41,20 +79,17 @@
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
 import { submitProjectRequest } from '../services/notionService';
 
-// WhatsApp Config (from config.ts define)
 const whatsappNumber = __WHATSAPP_NUMBER__;
 const whatsappLink = computed(() => {
     const text = encodeURIComponent("Hi Jiwan! I would like to consult about a project.");
     return `https://wa.me/${whatsappNumber}?text=${text}`;
 });
 
-// Exit Intent State
 const showExitIntent = ref(false);
 const exitEmail = ref('');
 const emailError = ref('');
 const isSubmitting = ref(false);
 
-// Cal Request State
 const showCalModal = ref(false);
 const calEmail = ref('');
 const calEmailError = ref('');
@@ -69,26 +104,24 @@ const closeExitIntent = () => {
 const submitExitIntent = async () => {
     emailError.value = '';
     if (!exitEmail.value || !/.+@.+\..+/.test(exitEmail.value)) {
-        emailError.value = 'Please enter a valid email address.';
+        emailError.value = 'Enter your work email to receive the teardown.';
         return;
     }
-    
     isSubmitting.value = true;
     try {
         await submitProjectRequest({
             name: 'Exit Intent Lead',
             email: exitEmail.value,
-            details: 'Requested Free 25-min Technical Audit via Exit Intent',
+            details: 'Requested Free Architecture Teardown via Exit Intent',
             service: 'Consulting',
             budget: '<1000'
         });
-        
         localStorage.setItem('exit_intent_shown', 'true');
-        localStorage.setItem('collected_email', exitEmail.value); 
+        localStorage.setItem('collected_email', exitEmail.value);
         showExitIntent.value = false;
     } catch (e) {
         console.error('Failed to submit exit intent email:', e);
-        emailError.value = 'An error occurred. Please try again.';
+        emailError.value = 'Something went wrong. Please try again.';
     } finally {
         isSubmitting.value = false;
     }
@@ -97,20 +130,18 @@ const submitExitIntent = async () => {
 const submitCalIntent = async () => {
     calEmailError.value = '';
     if (!calEmail.value || !/.+@.+\..+/.test(calEmail.value)) {
-        calEmailError.value = 'Please enter a valid email address.';
+        calEmailError.value = 'Enter your work email to receive pre-call prep.';
         return;
     }
-    
     isCalSubmitting.value = true;
     try {
         await submitProjectRequest({
             name: 'Booking Intent Lead',
             email: calEmail.value,
-            details: 'Intercepted before proceeding to booking page. (Form cal.com)',
+            details: 'Pre-call prep requested before booking page redirect.',
             service: 'Consulting',
             budget: '<1000'
         });
-        
         localStorage.setItem('collected_email', calEmail.value);
         showCalModal.value = false;
         if (pendingCalHref.value) {
@@ -118,7 +149,7 @@ const submitCalIntent = async () => {
         }
     } catch (e) {
         console.error('Failed to submit cal intent email:', e);
-        calEmailError.value = 'An error occurred. Please try again.';
+        calEmailError.value = 'Something went wrong. Please try again.';
     } finally {
         isCalSubmitting.value = false;
     }
@@ -128,16 +159,14 @@ const handleMouseLeave = (e) => {
     if (e.clientY <= 0) {
         if (!localStorage.getItem('exit_intent_shown') && !localStorage.getItem('collected_email')) {
             showExitIntent.value = true;
-            localStorage.setItem('exit_intent_shown', 'true'); // Only show once per session ideally
+            localStorage.setItem('exit_intent_shown', 'true');
         }
     }
 };
 
 const handleGlobalClick = (e) => {
-    // Look for link clicks
     const link = e.target.closest('a');
     if (link && link.href && link.href.includes('cal.com/stackseekers')) {
-        // If they already provided email, let them through
         if (!localStorage.getItem('collected_email')) {
             e.preventDefault();
             pendingCalHref.value = link.href;
@@ -176,6 +205,28 @@ onBeforeUnmount(() => {
     background-color: #128C7E;
     transform: scale(1.1) rotate(5deg);
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+</style>
+
+<style>
+/* Theme-matched Dialog overrides — scoped to global lead capture dialogs */
+.p-dialog {
+    border-radius: 1.5rem !important;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+    border: 1px solid var(--surface-200, rgba(0, 0, 0, 0.08)) !important;
+}
+.p-dialog .p-dialog-header {
+    padding: 1.25rem 1.5rem 0.5rem !important;
+    background: var(--surface-0, #fff);
+}
+.p-dialog .p-dialog-content {
+    padding: 0.5rem 1.5rem !important;
+    background: var(--surface-0, #fff);
+}
+.p-dialog .p-dialog-footer {
+    padding: 0.75rem 1.5rem 1.25rem !important;
+    background: var(--surface-0, #fff);
 }
 .p-error {
     color: var(--p-error, #e24c4b);
