@@ -42,6 +42,9 @@ export default defineClientConfig({
     app.use(PrimeVue, {
       theme: {
         preset: Aura,
+        options: {
+          darkModeSelector: false,
+        },
       },
     });
     app.component("Image", Image);

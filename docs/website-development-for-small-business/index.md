@@ -1,9 +1,11 @@
 ---
 title: Website Development for Small Business | Professional Web Design
 description: Professional website development for small businesses. Fast, mobile-friendly, SEO-optimized websites built by a senior developer — not an agency template. Custom design, real results.
+home: true
 editLink: false
 copyright: false
 pageInfo: false
+contributors: false
 head:
   - - meta
     - name: keywords
@@ -19,13 +21,13 @@ head:
       content: '{"@context":"https://schema.org","@type":"Service","name":"Website Development for Small Business","description":"Professional website development for small businesses with custom design and SEO optimization.","provider":{"@type":"Person","name":"Jiwan Ghosal","jobTitle":"Senior Web Developer"},"areaServed":"Global","serviceType":"Small Business Web Development"}'
 ---
 
-<section class="hero-newage relative overflow-hidden p-4 md:p-6 surface-0 border-round-3xl mb-8">
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
+<section class="hero-newage relative overflow-hidden px-4 py-8 md:px-8 md:py-12 lg:px-12 surface-0 mb-8">
+  <div class="orb orb-1 opacity-20"></div>
+  <div class="orb orb-2 opacity-20"></div>
   <div class="grid align-items-center">
     <div class="col-12 lg:col-8">
       <div class="mb-3 flex align-items-center gap-2">
-        <span class="inline-flex align-items-center px-2 py-1 border-round-xl bg-primary text-xs font-bold uppercase letter-spacing-wide">
+        <span class="inline-flex align-items-center px-2 py-1 border-round-xl bg-primary text-white text-xs font-bold uppercase letter-spacing-wide">
           <i class="pi pi-building mr-1"></i> Small Business Websites
         </span>
       </div>
@@ -267,43 +269,29 @@ head:
 </div>
 
 <!-- CTA -->
-<div class="mb-8 border-round-3xl p-6 text-center shadow-4 surface-900 text-white" style="max-width: 1000px; margin: 0 auto;">
-  <h2 class="text-3xl md:text-5xl font-bold m-0 mb-3">Ready for a Website That Works?</h2>
-  <p class="text-lg md:text-xl line-height-3 mb-5 opacity-90 mx-auto" style="max-width: 650px;">
+<div class="mb-8 border-round-3xl p-6 text-center surface-section relative overflow-hidden" style="max-width: 1000px; margin: 0 auto;">
+  <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
+  <h2 class="text-3xl md:text-5xl font-bold m-0 mb-3 relative z-1">Ready for a Website That Works?</h2>
+  <p class="text-lg md:text-xl line-height-3 mb-5 mx-auto relative z-1" style="max-width: 650px;">
     Stop losing customers to a slow, outdated, or invisible website. Get a professional, fast, SEO-optimized site that makes your business look as good as the service you provide.
   </p>
-  <div class="flex flex-column md:flex-row gap-3 justify-content-center">
+  <div class="flex flex-column md:flex-row gap-3 justify-content-center relative z-1">
     <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=small-biz-web" class="no-underline">
-      <Button label="Get a Free Quote" icon="pi pi-calculator" severity="secondary" raised rounded class="text-lg font-bold px-5 py-3" />
+      <Button label="Get a Free Quote" icon="pi pi-calculator" severity="primary" raised rounded class="text-lg font-bold px-5 py-3" />
     </a>
     <a href="/web-development-projects/" class="no-underline">
-      <Button label="View Case Studies" icon="pi pi-arrow-right" severity="primary" raised rounded outlined class="text-lg font-bold px-5 py-3" />
+      <Button label="View Case Studies" icon="pi pi-arrow-right" severity="secondary" raised rounded outlined class="text-lg font-bold px-5 py-3" />
     </a>
   </div>
-  <div class="text-sm mt-4 opacity-70">Best fit for local service businesses, retail stores, restaurants, and professional service firms.</div>
+  <div class="text-sm mt-4 text-500 relative z-1">Best fit for local service businesses, retail stores, restaurants, and professional service firms.</div>
 </div>
 
 <style scoped>
-.text-gradient {
-  background: linear-gradient(90deg, #3B82F6, #8B5CF6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.hero-newage h1,
+.hero-newage p,
+.hero-newage .grid {
+  position: relative;
+  z-index: 1;
 }
-.hero-newage {
-  background: #0a0a0a;
-  color: white;
-}
-.orb {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  filter: blur(80px);
-  z-index: 0;
-  opacity: 0.15;
-}
-.orb-1 { top: -200px; left: -100px; background: #3B82F6; }
-.orb-2 { bottom: -200px; right: -100px; background: #8B5CF6; }
-.hero-newage h1, .hero-newage p, .hero-newage .grid { position: relative; z-index: 1; }
 .letter-spacing-wide { letter-spacing: 0.1em; }
 </style>

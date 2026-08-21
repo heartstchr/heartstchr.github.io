@@ -2,6 +2,7 @@
 title: Contact Jiwan Ghosal
 description: Start a strategic technical partnership. Fractional CTO support, AI automation, and enterprise architecture leadership for high-growth teams.
 order: 4
+home: true
 editLink: false
 copyright: false
 pageInfo: false
@@ -21,15 +22,15 @@ contributors: false
     </div>
     <!-- Trust Matrix (Brief) -->
     <div class="flex flex-wrap justify-content-center gap-4 mb-8 opacity-70 scale-90">
-       <div class="flex align-items-center gap-2 px-3 py-2 glass-effect border-round-xl border-1 border-white-alpha-10">
+       <div class="flex align-items-center gap-2 px-3 py-2 border-round-xl border-1 border-white-alpha-10">
           <i class="pi pi-shield text-primary"></i>
           <span class="text-sm font-bold">Enterprise Resilience</span>
        </div>
-       <div class="flex align-items-center gap-2 px-3 py-2 glass-effect border-round-xl border-1 border-white-alpha-10">
+       <div class="flex align-items-center gap-2 px-3 py-2 border-round-xl border-1 border-white-alpha-10">
           <i class="pi pi-bolt text-primary"></i>
           <span class="text-sm font-bold">Automation Efficiency</span>
        </div>
-       <div class="flex align-items-center gap-2 px-3 py-2 glass-effect border-round-xl border-1 border-white-alpha-10">
+       <div class="flex align-items-center gap-2 px-3 py-2 border-round-xl border-1 border-white-alpha-10">
           <i class="pi pi-chart-line text-primary"></i>
           <span class="text-sm font-bold">Scalable Revenue</span>
        </div>
@@ -48,8 +49,8 @@ contributors: false
       <!-- Direct Access & Socials -->
       <div class="col-12 lg:col-5 p-3">
         <div class="">
-          <div class="mb-8">
-            <h2 class="text-3xl font-bold m-0 mb-2">Strategic Consult</h2>
+          <div class="mb-5">
+            <h2 class="text-3xl font-bold m-0 mb-2">Free Strategic Consult</h2>
             <p class="text-500 m-0">Need immediate technical leadership or a technical roadmap audit? Let's talk strategy.</p>
           </div>
           <div class="mt-auto">
