@@ -1,0 +1,1 @@
+var e=`/img/projects/furniture-landing-page/furniture-cover.webp`;export{e as t};

@@ -1,0 +1,1 @@
+var e=`/img/projects/ai-dynamic-crud-app/ai-webapp-english.webp`,t=`/img/projects/ai-narrator/Google-docs-text-to-speech-ai-voice-ai-audio.webp`;export{e as n,t};

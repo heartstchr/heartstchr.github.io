@@ -1,0 +1,1 @@
+var e=`/img/home/projects/appliance_repair_cover.webp`;export{e as t};

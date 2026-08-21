@@ -1,0 +1,1 @@
+var e=`/img/home/projects/momentum_incident_management.webp`;export{e as t};

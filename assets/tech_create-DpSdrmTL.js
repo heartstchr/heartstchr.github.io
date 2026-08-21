@@ -1,0 +1,1 @@
+var e=`/img/home/projects/tech_create.webp`;export{e as t};

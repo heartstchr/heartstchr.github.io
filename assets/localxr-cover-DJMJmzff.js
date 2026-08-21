@@ -1,0 +1,1 @@
+var e=`/img/projects/localxr/localxr-cover.webp`;export{e as t};
