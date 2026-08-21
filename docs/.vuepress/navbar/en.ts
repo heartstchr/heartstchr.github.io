@@ -81,6 +81,32 @@ export const enNavbar = navbar([
     ],
   },
   {
+    text: "Solutions",
+    icon: "pi pi-hashtag",
+    children: [
+      {
+        text: "Web Dev for Startups",
+        link: "/web-development-for-startups/",
+      },
+      {
+        text: "Figma to Vue.js",
+        link: "/figma-to-vue-development/",
+      },
+      {
+        text: "Hire Nuxt Developer",
+        link: "/hire-nuxt-developer/",
+      },
+      {
+        text: "Small Business Websites",
+        link: "/website-development-for-small-business/",
+      },
+      {
+        text: "AI SaaS Development",
+        link: "/ai-saas-development/",
+      },
+    ],
+  },
+  {
     text: "Resources",
     icon: "pi pi-code",
     link: "/web-development-services/",

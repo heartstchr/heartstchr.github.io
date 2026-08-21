@@ -1,0 +1,346 @@
+---
+title: Figma to Vue.js Development | Pixel-Perfect Design Implementation
+description: Transform your Figma designs into production-ready Vue.js applications. Pixel-perfect implementation, responsive components, and design system integration by a senior frontend engineer.
+editLink: false
+copyright: false
+pageInfo: false
+head:
+  - - meta
+    - name: keywords
+      content: figma to vue, figma to vuejs, design to code, figma developer, vue.js frontend developer, figma to code, ui implementation, design to development, figma to nuxt
+  - - meta
+    - property: og:title
+      content: "Figma to Vue.js Development | Pixel-Perfect Design Implementation"
+  - - meta
+    - property: og:description
+      content: "Transform your Figma designs into production-ready Vue.js applications. Pixel-perfect implementation by a senior frontend engineer."
+  - - script
+    - type: application/ld+json
+      content: '{"@context":"https://schema.org","@type":"Service","name":"Figma to Vue.js Development","description":"Transform Figma designs into production-ready Vue.js applications with pixel-perfect implementation.","provider":{"@type":"Person","name":"Jiwan Ghosal","jobTitle":"Senior Frontend Engineer"},"areaServed":"Global","serviceType":"Frontend Development"}'
+---
+
+<section class="hero-newage relative overflow-hidden p-4 md:p-6 surface-0 border-round-3xl mb-8">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="grid align-items-center">
+    <div class="col-12 lg:col-8">
+      <div class="mb-3 flex align-items-center gap-2">
+        <span class="inline-flex align-items-center px-2 py-1 border-round-xl bg-primary text-xs font-bold uppercase letter-spacing-wide">
+          <i class="pi pi-eye mr-1"></i> Figma to Vue.js
+        </span>
+      </div>
+      <h1 class="m-0 p-0 line-height-2 text-4xl md:text-6xl font-bold">
+        Your Figma designs deserve <span class="text-gradient">pixel-perfect Vue.js code</span>, not a compromised approximation.
+      </h1>
+      <p class="text-xl md:text-2xl mt-4 line-height-3 text-700">
+        I translate high-fidelity Figma designs into responsive, accessible, and performant Vue.js applications. Every component, every animation, every breakpoint — exactly as designed.
+      </p>
+      <div class="flex flex-column md:flex-row gap-3 mt-5">
+        <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=figma-vue" target="_blank" class="no-underline">
+          <Button label="Get a Free Estimate" icon="pi pi-calculator" severity="primary" size="large" rounded raised class="w-full md:w-auto" />
+        </a>
+        <a href="/web-development-projects/" class="no-underline">
+          <Button label="See My Work" icon="pi pi-arrow-right" severity="secondary" size="large" rounded outlined class="w-full md:w-auto" />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The Design-to-Code Problem -->
+<div class="mb-8 px-4 py-8 surface-50 border-round-3xl shadow-1">
+  <div class="grid align-items-center">
+    <div class="col-12 lg:col-6">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">The gap between design and code is costing you revenue.</h2>
+      <p class="text-lg line-height-3 text-700 mb-4">
+        Your designer spent weeks perfecting every interaction in Figma. Then the developer delivers something that "works" but looks nothing like the design. Margins are off, animations are missing, and the responsive behavior is an afterthought.
+      </p>
+      <div class="grid mt-4">
+        <div class="col-12 mb-3">
+          <div class="flex align-items-start gap-3">
+            <i class="pi pi-times-circle text-red-500 text-xl mt-1"></i>
+            <div>
+              <div class="font-bold mb-1">Design drift</div>
+              <div class="text-600 text-sm">The shipped product slowly diverges from the approved design as developers "interpret" the specs.</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mb-3">
+          <div class="flex align-items-start gap-3">
+            <i class="pi pi-times-circle text-red-500 text-xl mt-1"></i>
+            <div>
+              <div class="font-bold mb-1">Responsive afterthoughts</div>
+              <div class="text-600 text-sm">Mobile and tablet layouts bolted on after the desktop version, breaking the user experience.</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mb-3">
+          <div class="flex align-items-start gap-3">
+            <i class="pi pi-times-circle text-red-500 text-xl mt-1"></i>
+            <div>
+              <div class="font-bold mb-1">Component inconsistency</div>
+              <div class="text-600 text-sm">Buttons, inputs, and cards look slightly different on every page because there is no shared design system.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 lg:col-6 text-center">
+      <div class="surface-0 p-6 border-round-3xl shadow-4">
+        <div class="text-center mb-4">
+          <div class="text-6xl font-bold text-primary mb-2">100%</div>
+          <div class="text-xl font-bold text-900">Design Fidelity</div>
+        </div>
+        <div class="grid text-left">
+          <div class="col-12 mb-2 flex align-items-center gap-3">
+            <i class="pi pi-check-circle text-green-500"></i>
+            <span class="text-sm font-bold">Pixel-perfect component mapping</span>
+          </div>
+          <div class="col-12 mb-2 flex align-items-center gap-3">
+            <i class="pi pi-check-circle text-green-500"></i>
+            <span class="text-sm font-bold">Auto-layout preserved in code</span>
+          </div>
+          <div class="col-12 mb-2 flex align-items-center gap-3">
+            <i class="pi pi-check-circle text-green-500"></i>
+            <span class="text-sm font-bold">Interaction states and animations</span>
+          </div>
+          <div class="col-12 mb-2 flex align-items-center gap-3">
+            <i class="pi pi-check-circle text-green-500"></i>
+            <span class="text-sm font-bold">Responsive at every breakpoint</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Vue.js Expertise -->
+<div class="mb-8" id="vue-expertise">
+  <div class="text-center mb-6">
+    <h2 class="text-4xl font-bold mb-2">Why Vue.js for Design Implementation</h2>
+    <p class="text-xl text-600">The most efficient path from Figma to a production frontend.</p>
+  </div>
+  <div class="grid">
+    <div class="col-12 md:col-4 p-3">
+      <div class="surface-0 shadow-2 border-round-2xl p-5 h-full">
+        <i class="pi pi-box text-primary text-3xl mb-3"></i>
+        <h3 class="text-xl font-bold mb-2">Component-Driven Architecture</h3>
+        <p class="text-600 line-height-3 text-sm">Every Figma component becomes a reusable Vue component. Buttons, cards, modals — built once, used everywhere, styled exactly as designed.</p>
+      </div>
+    </div>
+    <div class="col-12 md:col-4 p-3">
+      <div class="surface-0 shadow-2 border-round-2xl p-5 h-full">
+        <i class="pi pi-mobile text-primary text-3xl mb-3"></i>
+        <h3 class="text-xl font-bold mb-2">Responsive by Default</h3>
+        <p class="text-600 line-height-3 text-sm">Mobile-first implementation using Tailwind CSS or PrimeVue. Every breakpoint from your Figma file is coded, not approximated.</p>
+      </div>
+    </div>
+    <div class="col-12 md:col-4 p-3">
+      <div class="surface-0 shadow-2 border-round-2xl p-5 h-full">
+        <i class="pi pi-sync text-primary text-3xl mb-3"></i>
+        <h3 class="text-xl font-bold mb-2">Design System Integration</h3>
+        <p class="text-600 line-height-3 text-sm">Colors, typography, spacing, shadows — extracted from Figma tokens into a consistent design system that your entire team can use.</p>
+      </div>
+    </div>
+    <div class="col-12 md:col-4 p-3">
+      <div class="surface-0 shadow-2 border-round-2xl p-5 h-full">
+        <i class="pi pi-bolt text-primary text-3xl mb-3"></i>
+        <h3 class="text-xl font-bold mb-2">Performance Optimized</h3>
+        <p class="text-600 line-height-3 text-sm">Lazy loading, code splitting, and optimized assets. Your beautiful design loads fast on every device and network condition.</p>
+      </div>
+    </div>
+    <div class="col-12 md:col-4 p-3">
+      <div class="surface-0 shadow-2 border-round-2xl p-5 h-full">
+        <i class="pi pi-star text-primary text-3xl mb-3"></i>
+        <h3 class="text-xl font-bold mb-2">Micro-Interactions</h3>
+        <p class="text-600 line-height-3 text-sm">Hover states, transitions, scroll animations — the details that make your design feel alive are implemented with Vue's transition system.</p>
+      </div>
+    </div>
+    <div class="col-12 md:col-4 p-3">
+      <div class="surface-0 shadow-2 border-round-2xl p-5 h-full">
+        <i class="pi pi-eye text-primary text-3xl mb-3"></i>
+        <h3 class="text-xl font-bold mb-2">Design QA Built In</h3>
+        <p class="text-600 line-height-3 text-sm">Side-by-side comparison at every stage. I catch spacing, color, and layout deviations before you do.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Case Studies -->
+<div class="mb-8 px-4 py-8 surface-50 border-round-3xl shadow-1" id="case-studies">
+  <div class="text-center mb-6">
+    <h2 class="text-4xl font-bold mb-2">Design-to-Code Case Studies</h2>
+    <p class="text-xl text-600">Figma to production — pixel-perfect, responsive, and performant.</p>
+  </div>
+  <div class="grid">
+    <div class="col-12 md:col-6 lg:col-4 p-3">
+      <a href="/web-development-projects/momentum-incident-management/" class="no-underline">
+        <div class="surface-0 shadow-2 border-round-2xl overflow-hidden h-full transition-all hover:shadow-6">
+          <div class="relative overflow-hidden h-10rem">
+            <img src="/img/home/projects/momentum_incident_management.webp" alt="Momentum Incident Management" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-bold text-primary uppercase">Enterprise UI</span>
+            <h3 class="text-lg font-bold mt-1 mb-2">Momentum Incident Management</h3>
+            <p class="text-600 text-sm line-height-3">Complex enterprise dashboard built from Figma designs. Nested CRUD, column filtering, and responsive data tables in Vue.js + PrimeVue.</p>
+            <div class="flex gap-2 mt-3 flex-wrap">
+              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">Vue.js</span>
+              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">PrimeVue</span>
+              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">MongoDB</span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-12 md:col-6 lg:col-4 p-3">
+      <a href="/web-development-projects/tech-create/" class="no-underline">
+        <div class="surface-0 shadow-2 border-round-2xl overflow-hidden h-full transition-all hover:shadow-6">
+          <div class="relative overflow-hidden h-10rem">
+            <img src="/img/home/projects/tech_create.webp" alt="Tech Create" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-bold text-primary uppercase">Landing Page</span>
+            <h3 class="text-lg font-bold mt-1 mb-2">Tech Create Digital Solutions</h3>
+            <p class="text-600 text-sm line-height-3">High-converting landing page translated from Figma to Vue.js + PrimeVue. Clean, modern design with responsive layout.</p>
+            <div class="flex gap-2 mt-3 flex-wrap">
+              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">Vue.js</span>
+              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">PrimeVue</span>
+              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">Vercel</span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-12 md:col-6 lg:col-4 p-3">
+      <a href="/web-development-projects/premium-furniture-landing-page-catalog/" class="no-underline">
+        <div class="surface-0 shadow-2 border-round-2xl overflow-hidden h-full transition-all hover:shadow-6">
+          <div class="relative overflow-hidden h-10rem">
+            <img src="/img/projects/furniture-landing-page/furniture-cover.webp" alt="Furniture Catalog" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-4">
+            <span class="text-xs font-bold text-primary uppercase">E-Commerce UI</span>
+            <h3 class="text-lg font-bold mt-1 mb-2">Premium Furniture Catalog</h3>
+            <p class="text-600 text-sm line-height-3">Luxury lookbook and product catalog with interactive hotspots, admin panel, and rich product detail pages — all from Figma designs.</p>
+            <div class="flex gap-2 mt-3 flex-wrap">
+              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">Vue.js</span>
+              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">Notion CMS</span>
+              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">Netlify</span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Process -->
+<div class="mb-8" id="process">
+  <div class="text-center mb-6">
+    <h2 class="text-4xl font-bold mb-2">My Design-to-Code Process</h2>
+    <p class="text-xl text-600">Structured handoff. Zero guesswork. Every pixel accounted for.</p>
+  </div>
+  <div class="grid">
+    <div class="col-12 md:col-4 p-3">
+      <div class="surface-0 shadow-2 border-round-2xl p-5 h-full text-center">
+        <div class="w-4rem h-4rem bg-primary border-circle flex align-items-center justify-content-center mx-auto mb-4">
+          <span class="text-2xl font-bold text-white">1</span>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Figma Audit & Mapping</h3>
+        <p class="text-600 line-height-3 text-sm">I review your Figma file, map every component to a Vue equivalent, identify reusable patterns, and flag any design decisions that need technical input.</p>
+      </div>
+    </div>
+    <div class="col-12 md:col-4 p-3">
+      <div class="surface-0 shadow-2 border-round-2xl p-5 h-full text-center">
+        <div class="w-4rem h-4rem bg-primary border-circle flex align-items-center justify-content-center mx-auto mb-4">
+          <span class="text-2xl font-bold text-white">2</span>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Component Build</h3>
+        <p class="text-600 line-height-3 text-sm">I build the Vue.js component library — base components first, then composite layouts. Every component is tested across breakpoints as it is built.</p>
+      </div>
+    </div>
+    <div class="col-12 md:col-4 p-3">
+      <div class="surface-0 shadow-2 border-round-2xl p-5 h-full text-center">
+        <div class="w-4rem h-4rem bg-primary border-circle flex align-items-center justify-content-center mx-auto mb-4">
+          <span class="text-2xl font-bold text-white">3</span>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Integration & QA</h3>
+        <p class="text-600 line-height-3 text-sm">Pages are assembled, interactions wired up, and a side-by-side design QA pass ensures every detail matches the original Figma before handoff.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="mb-8 px-4 py-8 surface-50 border-round-3xl shadow-1" id="faq">
+  <div class="text-center mb-6">
+    <h2 class="text-4xl font-bold mb-2">Frequently Asked Questions</h2>
+  </div>
+  <div class="grid">
+    <div class="col-12 md:col-6 p-3">
+      <div class="surface-0 p-4 border-round-2xl shadow-1 h-full">
+        <h3 class="text-lg font-bold mb-2">Do you work with Figma only, or other design tools?</h3>
+        <p class="text-600 line-height-3 text-sm m-0">Figma is my primary tool, but I can also work with Sketch, Adobe XD, or even well-organized design specs. Figma's developer handoff features make it the most efficient option.</p>
+      </div>
+    </div>
+    <div class="col-12 md:col-6 p-3">
+      <div class="surface-0 p-4 border-round-2xl shadow-1 h-full">
+        <h3 class="text-lg font-bold mb-2">Can you also handle the backend and API integration?</h3>
+        <p class="text-600 line-height-3 text-sm m-0">Yes. I am a full-stack developer. The frontend can be built independently from the Figma file, and I can also build the backend, APIs, and database layer.</p>
+      </div>
+    </div>
+    <div class="col-12 md:col-6 p-3">
+      <div class="surface-0 p-4 border-round-2xl shadow-1 h-full">
+        <h3 class="text-lg font-bold mb-2">Do you use a component library or build from scratch?</h3>
+        <p class="text-600 line-height-3 text-sm m-0">I use PrimeVue or Tailwind CSS as a foundation, then build custom components to match your Figma exactly. This gives you the speed of a library with the fidelity of a custom build.</p>
+      </div>
+    </div>
+    <div class="col-12 md:col-6 p-3">
+      <div class="surface-0 p-4 border-round-2xl shadow-1 h-full">
+        <h3 class="text-lg font-bold mb-2">How do you handle animations and micro-interactions?</h3>
+        <p class="text-600 line-height-3 text-sm m-0">Vue's transition system combined with CSS animations or libraries like GSAP for complex scroll-based effects. I match the timing curves and easing from your Figma prototype.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="mb-8 border-round-3xl p-6 text-center shadow-4 surface-900 text-white" style="max-width: 1000px; margin: 0 auto;">
+  <h2 class="text-3xl md:text-5xl font-bold m-0 mb-3">Have a Figma File Ready to Ship?</h2>
+  <p class="text-lg md:text-xl line-height-3 mb-5 opacity-90 mx-auto" style="max-width: 650px;">
+    Stop guessing at design specs. Get a senior frontend engineer who translates your Figma into production Vue.js code — pixel-perfect, responsive, and performant.
+  </p>
+  <div class="flex flex-column md:flex-row gap-3 justify-content-center">
+    <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=figma-vue" class="no-underline">
+      <Button label="Get a Free Estimate" icon="pi pi-calculator" severity="secondary" raised rounded class="text-lg font-bold px-5 py-3" />
+    </a>
+    <a href="/web-development-projects/" class="no-underline">
+      <Button label="View Case Studies" icon="pi pi-arrow-right" severity="primary" raised rounded outlined class="text-lg font-bold px-5 py-3" />
+    </a>
+  </div>
+  <div class="text-sm mt-4 opacity-70">Best fit for design teams, product managers, and startups with high-fidelity Figma designs ready for implementation.</div>
+</div>
+
+<style scoped>
+.text-gradient {
+  background: linear-gradient(90deg, #3B82F6, #8B5CF6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-newage {
+  background: #0a0a0a;
+  color: white;
+}
+.orb {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+  opacity: 0.15;
+}
+.orb-1 { top: -200px; left: -100px; background: #3B82F6; }
+.orb-2 { bottom: -200px; right: -100px; background: #8B5CF6; }
+.hero-newage h1, .hero-newage p, .hero-newage .grid { position: relative; z-index: 1; }
+.letter-spacing-wide { letter-spacing: 0.1em; }
+</style>
