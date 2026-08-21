@@ -17,13 +17,9 @@ export default hopeTheme(
     pageInfo: ["Category", "Tag", "ReadingTime", "Date"],
     sidebar: false,
     breadcrumb: true,
-    locales: {
-      "/": {
-        navbar: enNavbar,
-        footer: footer,
-        displayFooter: true,
-      },
-    },
+    navbar: enNavbar,
+    footer: footer,
+    displayFooter: true,
     plugins: {
       seo: {
         canonical: (page) => {

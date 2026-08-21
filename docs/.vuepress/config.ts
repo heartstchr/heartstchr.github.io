@@ -16,6 +16,8 @@ export default defineUserConfig({
   title: "Stack Seekers",
   description:
     "Experienced full-stack freelance developer specializing in scalable web, mobile, and software solutions",
+  lang: "en-US",
+  base: "/",
   bundler: viteBundler({
     viteOptions: {
       plugins: [
@@ -44,19 +46,6 @@ export default defineUserConfig({
     },
     vuePluginOptions: {},
   }),
-  base: "/",
-  locales: {
-    "/": {
-      lang: "en-US",
-      title: "Stack Seekers",
-      description:
-        "Stack Seekers helps startups and enterprise teams with fractional CTO leadership, AI automation, scalable SaaS architecture, and programmatic SEO.",
-      // extra keys are permitted by casting
-      logo: "/img/stackseekers.webp",
-      logoDark: "/img/whitelogo.webp",
-      logoAlt: "Stack Seekers Logo – Web Development Experts",
-    } as unknown as any,
-  },
   head: [
     [
       "meta",

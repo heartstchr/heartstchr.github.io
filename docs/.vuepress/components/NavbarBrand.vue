@@ -1,9 +1,9 @@
 <template>
     <ClientOnly>
         <RouterLink :to="logoLink" class="navbar-logo" aria-label="Home">
-            <div class="flex items-center space-x-3">
+            <div class="flex align-items-center gap-2">
                 <img v-if="logo" class="vp-nav-logo" :src="logo" :alt="logoAlt" />
-                <div class="text-lg font-semibold text-black transform translate-y-[2px]">{{ siteTitle }}</div>
+                <div class="text-lg font-semibold" style="color: #000000;">{{ siteTitle }}</div>
             </div>
         </RouterLink>
     </ClientOnly>
@@ -11,13 +11,16 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import { useSiteData } from "vuepress/client"; // Site data access (e.g., site title)
+import { useSiteData } from "vuepress/client";
+// Theme config (logo lives here, not in site locales)
+// eslint-disable-next-line
+import { themeData } from "@internal/themeData";
 
-const site = useSiteData();  // Access site data (including site title)
-const themeConfig = site.value.locales["/"];  // Access themeConfig directly
+const site = useSiteData();
+const theme: any = themeData;
 
-const logo = computed(() => themeConfig.logo);  // Access logo from themeConfig
-const logoAlt = computed(() => themeConfig.logoAlt || `${site.value.title} Logo`);  // Access logoAlt or fall back to site title
-const logoLink = computed(() => "/");  // Homepage link
-const siteTitle = computed(() => site.value.title);  // Site title
+const logo = computed(() => (theme?.value ?? theme)?.logo);
+const logoAlt = computed(() => (theme?.value ?? theme)?.logoAlt || `${site.value.title} Logo`);
+const logoLink = computed(() => "/");
+const siteTitle = computed(() => site.value.title);
 </script>

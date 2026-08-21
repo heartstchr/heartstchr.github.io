@@ -1,7 +1,7 @@
 <template>
   <div v-if="isActivePage" class="mb-8 mt-4">
     <section class="max-w-1200 mx-auto overflow-hidden relative surface-section border-round-3xl mb-8">
-      <div class="absolute top-0 right-0 w-30rem h-30rem bg-primary-900 border-circle opacity-10" style="filter: blur(100px); transform: translate(30%, -30%)"></div>
+      <div class="absolute top-0 right-0 w-30rem h-30rem bg-primary border-circle opacity-10" style="filter: blur(100px); transform: translate(30%, -30%)"></div>
       
       <div class="text-center mb-8 relative z-1">
         <h2 class="text-4xl md:text-5xl font-bold mb-3 text-900">Architecting Your Success</h2>
@@ -14,7 +14,7 @@
         
         <div class="col-12 lg:col-3 p-2" v-for="(step, idx) in roadmapSteps" :key="step.title">
           <div class="flex flex-column h-full relative" style="z-index: 2;">
-            <div class="w-4rem h-4rem border-circle bg-primary-50 dark:bg-primary-900 border-2 border-primary-500 flex align-items-center justify-content-center text-2xl font-bold text-primary mb-2 shadow-pill mx-auto lg:mx-0 relative" style="z-index: 3;">
+            <div class="w-4rem h-4rem border-circle bg-primary-50 border-2 border-primary-500 flex align-items-center justify-content-center text-2xl font-bold text-primary mb-2 shadow-pill mx-auto lg:mx-0 relative" style="z-index: 3;">
                0{{ idx + 1 }}
             </div>
             <h3 class="text-2xl font-bold mb-1 text-900 text-center lg:text-left">{{ step.title }}</h3>
@@ -24,9 +24,9 @@
                   Try Self-Audit <i class="pi pi-arrow-right"></i>
                </a>
             </div>
-            <div class="mt-auto px-3 py-2 bg-primary-50 dark:bg-white-alpha-10 border-round-lg inline-flex align-items-center gap-2 w-max mx-auto lg:mx-0 border-1 border-primary-100 dark:border-none">
+            <div class="mt-auto px-3 py-2 bg-primary-50 border-round-lg inline-flex align-items-center gap-2 w-max mx-auto lg:mx-0 border-1 border-primary-100">
                <i class="pi pi-verified text-primary"></i>
-               <span class="text-xs font-bold tracking-widest uppercase text-700 dark:text-white dark:opacity-80">{{ step.output }}</span>
+               <span class="text-xs font-bold tracking-widest uppercase text-700">{{ step.output }}</span>
             </div>
           </div>
         </div>
@@ -89,7 +89,7 @@ const isActivePage = computed(() => {
 .grayscale-100 { filter: grayscale(100%); transition: filter 0.3s ease; }
 .grayscale-100:hover { filter: grayscale(0%); }
 .glass-sticky-cta { 
-  background: rgba(15, 23, 42, 0.9); 
+  background: rgba(255, 255, 255, 0.92); 
   backdrop-filter: blur(12px); 
   -webkit-backdrop-filter: blur(12px);
 }

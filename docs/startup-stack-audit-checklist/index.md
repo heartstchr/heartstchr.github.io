@@ -95,11 +95,11 @@ head:
               <span class="text-red-800 font-medium">Critical Technical Debt (High Risk)</span>
            </div>
         </div>
-        <div class="mt-8 bg-gray-900 text-white p-6 border-round-3xl relative overflow-hidden text-left">
-          <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary-900 border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
+        <div class="mt-8 surface-section p-6 border-round-3xl border-1 border-100 relative overflow-hidden text-left">
+          <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
           <div class="relative z-1">
-            <h3 class="text-2xl font-bold mb-3 text-white">Next Step: Turn Red Flags into Revenue</h3>
-            <p class="text-300 line-height-3 mb-5">Your audit shows {{ totalScore('no') }} architectural bottlenecks that will hinder your next phase of growth. Let's build a fixed-scope roadmap to resolve them.</p>
+            <h3 class="text-2xl font-bold mb-3">Next Step: Turn Red Flags into Revenue</h3>
+            <p class="text-600 line-height-3 mb-5">Your audit shows {{ totalScore('no') }} architectural bottlenecks that will hinder your next phase of growth. Let's build a fixed-scope roadmap to resolve them.</p>
             <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
               <Button label="Book Technical Roadmap Call" icon="pi pi-calendar" severity="primary" size="large" rounded raised />
             </a>
@@ -186,75 +186,75 @@ head:
 
   <!-- Strategic Resource Footer -->
   <div class="mt-8 mb-8 pt-8 border-top-1 border-100">
-     <div class="surface-900 text-white p-6 md:p-8 border-round-3xl shadow-4 relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary-900 border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
+     <div class="surface-50 p-6 md:p-8 border-round-3xl border-1 border-100 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
         <div class="grid relative z-1">
            <div class="col-12 lg:col-4 mb-5 lg:mb-0">
-              <div class="text-primary-400 font-bold uppercase tracking-widest text-sm mb-4">Growth & Scaling</div>
+              <div class="text-primary font-bold uppercase tracking-widest text-sm mb-4">Growth & Scaling</div>
               <ul class="list-none p-0 m-0">
                  <li class="mb-3">
-                    <a href="/web-development-services/product-architecture-and-scaling/" class="no-underline text-300 hover:text-white transition-colors flex align-items-center gap-2">
+                    <a href="/web-development-services/product-architecture-and-scaling/" class="no-underline text-600 hover:text-primary transition-colors flex align-items-center gap-2">
                        <i class="pi pi-arrow-right text-xs"></i> Product Architecture Review
                     </a>
                  </li>
                  <li class="mb-3">
-                    <a href="/web-development-services/fractional-cto-and-advisory/" class="no-underline text-300 hover:text-white transition-colors flex align-items-center gap-2">
+                    <a href="/web-development-services/fractional-cto-and-advisory/" class="no-underline text-600 hover:text-primary transition-colors flex align-items-center gap-2">
                        <i class="pi pi-arrow-right text-xs"></i> Fractional CTO Strategy
                     </a>
                  </li>
                  <li>
-                    <a href="/web-development-services/ai-and-automation-strategy/" class="no-underline text-300 hover:text-white transition-colors flex align-items-center gap-2">
+                    <a href="/web-development-services/ai-and-automation-strategy/" class="no-underline text-600 hover:text-primary transition-colors flex align-items-center gap-2">
                        <i class="pi pi-arrow-right text-xs"></i> AI & Automation Roadmap
                     </a>
                  </li>
               </ul>
            </div>
            <div class="col-12 lg:col-4 mb-5 lg:mb-0">
-              <div class="text-primary-400 font-bold uppercase tracking-widest text-sm mb-4">Security & Reliability</div>
+              <div class="text-primary font-bold uppercase tracking-widest text-sm mb-4">Security & Reliability</div>
               <ul class="list-none p-0 m-0">
                  <li class="mb-3">
-                    <a href="/web-development-services/product-architecture-and-scaling/" class="no-underline text-300 hover:text-white transition-colors flex align-items-center gap-2">
+                    <a href="/web-development-services/product-architecture-and-scaling/" class="no-underline text-600 hover:text-primary transition-colors flex align-items-center gap-2">
                        <i class="pi pi-arrow-right text-xs"></i> Infrastructure Scalability Audit
                     </a>
                  </li>
                  <li class="mb-3">
-                    <a href="/web-development-projects/enterprise/" class="no-underline text-300 hover:text-white transition-colors flex align-items-center gap-2">
+                    <a href="/web-development-projects/enterprise/" class="no-underline text-600 hover:text-primary transition-colors flex align-items-center gap-2">
                        <i class="pi pi-arrow-right text-xs"></i> High-Concurrency Apps
                     </a>
                  </li>
                  <li>
-                    <a href="/web-development-services/legacy-modernization/" class="no-underline text-300 hover:text-white transition-colors flex align-items-center gap-2">
+                    <a href="/web-development-services/legacy-modernization/" class="no-underline text-600 hover:text-primary transition-colors flex align-items-center gap-2">
                        <i class="pi pi-arrow-right text-xs"></i> Legacy System Rebuilds
                     </a>
                  </li>
               </ul>
            </div>
            <div class="col-12 lg:col-4">
-              <div class="text-primary-400 font-bold uppercase tracking-widest text-sm mb-4">Technical Proof</div>
+              <div class="text-primary font-bold uppercase tracking-widest text-sm mb-4">Technical Proof</div>
               <ul class="list-none p-0 m-0">
                  <li class="mb-3">
-                    <a href="/web-development-projects/" class="no-underline text-300 hover:text-white transition-colors flex align-items-center gap-2">
+                    <a href="/web-development-projects/" class="no-underline text-600 hover:text-primary transition-colors flex align-items-center gap-2">
                        <i class="pi pi-arrow-right text-xs"></i> Case Studies & Outcomes
                     </a>
                  </li>
                  <li class="mb-3">
-                    <a href="/about/" class="no-underline text-300 hover:text-white transition-colors flex align-items-center gap-2">
+                    <a href="/about/" class="no-underline text-600 hover:text-primary transition-colors flex align-items-center gap-2">
                        <i class="pi pi-arrow-right text-xs"></i> The Architectural Philosophy
                     </a>
                  </li>
                  <li>
-                    <a href="/contact/" class="no-underline text-300 hover:text-white transition-colors flex align-items-center gap-2">
+                    <a href="/contact/" class="no-underline text-600 hover:text-primary transition-colors flex align-items-center gap-2">
                        <i class="pi pi-arrow-right text-xs"></i> Start a Custom Inquiry
                     </a>
                  </li>
               </ul>
            </div>
         </div>
-        <div class="mt-8 pt-6 border-top-1 border-white-alpha-10 flex flex-column md:flex-row align-items-center justify-content-between gap-4 relative z-1">
-           <div class="flex align-items-center gap-3">
-              <div class="w-2rem h-2rem bg-primary border-circle flex align-items-center justify-content-center">
-                 <i class="pi pi-shield text-xs"></i>
-              </div>
+        <div class="mt-8 pt-6 border-top-1 border-100 flex flex-column md:flex-row align-items-center justify-content-between gap-4 relative z-1">
+            <div class="flex align-items-center gap-3">
+               <div class="w-2rem h-2rem bg-primary border-circle flex align-items-center justify-content-center">
+                  <i class="pi pi-shield text-xs text-white"></i>
+               </div>
               <div class="text-xs text-500 font-bold uppercase tracking-widest">Stack Seekers Architecture Lab</div>
            </div>
            <div class="flex gap-4">

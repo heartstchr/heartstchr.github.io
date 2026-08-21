@@ -1,10 +1,10 @@
 <template>
   <div>
     <!-- Exit Intent Dialog -->
-    <Dialog v-model:visible="showExitIntent" modal :style="{ width: '92vw', maxWidth: '420px' }">
+    <Dialog v-model:visible="showExitIntent" modal class="lead-capture-dialog" :style="{ width: '92vw', maxWidth: '520px' }">
       <template #header>
         <div class="flex align-items-center gap-3 w-full">
-          <div class="w-3rem h-3rem border-circle bg-primary-50 dark:bg-primary-900 flex align-items-center justify-content-center flex-shrink-0 shadow-1">
+          <div class="w-3rem h-3rem border-circle bg-primary-50 flex align-items-center justify-content-center flex-shrink-0 shadow-1">
             <i class="pi pi-bolt text-primary text-xl"></i>
           </div>
           <div>
@@ -15,9 +15,9 @@
       </template>
       <div class="flex flex-column gap-3">
         <p class="m-0 text-sm text-600 line-height-3">You're about to leave without the free teardown. Founders who skip this usually miss 3–5 critical bottlenecks draining engineering velocity.</p>
-        <div class="flex align-items-center gap-2 p-3 border-round-xl bg-primary-50 dark:bg-white-alpha-5 border-1 border-primary-100 dark:border-white-alpha-10">
+        <div class="flex align-items-center gap-2 p-3 border-round-xl bg-primary-50 border-1 border-primary-100">
           <i class="pi pi-check-circle text-primary font-bold"></i>
-          <span class="text-xs font-semibold text-700 dark:text-white dark:opacity-80">Includes: Architecture audit + growth roadmap — delivered in 48 hours</span>
+          <span class="text-xs font-semibold text-700">Includes: Architecture audit + growth roadmap — delivered in 48 hours</span>
         </div>
         <div class="flex flex-column gap-1 mt-1">
           <InputText id="exit-email" v-model="exitEmail" type="email" placeholder="you@company.com" class="w-full" :class="{ 'p-invalid': !!emailError }" @keyup.enter="submitExitIntent" />
@@ -35,10 +35,10 @@
     </Dialog>
 
     <!-- Cal.com Intercept Dialog -->
-    <Dialog v-model:visible="showCalModal" modal :style="{ width: '92vw', maxWidth: '420px' }">
+    <Dialog v-model:visible="showCalModal" modal class="lead-capture-dialog" :style="{ width: '92vw', maxWidth: '520px' }">
       <template #header>
         <div class="flex align-items-center gap-3 w-full">
-          <div class="w-3rem h-3rem border-circle bg-primary-50 dark:bg-primary-900 flex align-items-center justify-content-center flex-shrink-0 shadow-1">
+          <div class="w-3rem h-3rem border-circle bg-primary-50 flex align-items-center justify-content-center flex-shrink-0 shadow-1">
             <i class="pi pi-shield text-primary text-xl"></i>
           </div>
           <div>
@@ -49,9 +49,9 @@
       </template>
       <div class="flex flex-column gap-3">
         <p class="m-0 text-sm text-600 line-height-3">We'll send your risk assessment + strategic brief ahead of time so we can skip the basics and go straight to solving your real problem.</p>
-        <div class="flex align-items-center gap-2 p-3 border-round-xl bg-primary-50 dark:bg-white-alpha-5 border-1 border-primary-100 dark:border-white-alpha-10">
+        <div class="flex align-items-center gap-2 p-3 border-round-xl bg-primary-50 border-1 border-primary-100">
           <i class="pi pi-bolt text-primary font-bold"></i>
-          <span class="text-xs font-semibold text-700 dark:text-white dark:opacity-80">Pre-call prep means we cover 2x more ground in 25 minutes</span>
+          <span class="text-xs font-semibold text-700">Pre-call prep means we cover 2x more ground in 25 minutes</span>
         </div>
         <div class="flex flex-column gap-1 mt-1">
           <InputText id="cal-email" v-model="calEmail" type="email" placeholder="you@company.com" class="w-full" :class="{ 'p-invalid': !!calEmailError }" @keyup.enter="submitCalIntent" />
@@ -109,19 +109,23 @@ const submitExitIntent = async () => {
     }
     isSubmitting.value = true;
     try {
-        await submitProjectRequest({
+        const result = await submitProjectRequest({
             name: 'Exit Intent Lead',
             email: exitEmail.value,
             details: 'Requested Free Architecture Teardown via Exit Intent',
             service: 'Consulting',
             budget: '<1000'
         });
+        if (!result.ok) {
+            throw new Error(result.error || 'Submission failed');
+        }
         localStorage.setItem('exit_intent_shown', 'true');
         localStorage.setItem('collected_email', exitEmail.value);
         showExitIntent.value = false;
     } catch (e) {
         console.error('Failed to submit exit intent email:', e);
         emailError.value = 'Something went wrong. Please try again.';
+        localStorage.removeItem('exit_intent_shown');
     } finally {
         isSubmitting.value = false;
     }
@@ -135,13 +139,16 @@ const submitCalIntent = async () => {
     }
     isCalSubmitting.value = true;
     try {
-        await submitProjectRequest({
+        const result = await submitProjectRequest({
             name: 'Booking Intent Lead',
             email: calEmail.value,
             details: 'Pre-call prep requested before booking page redirect.',
             service: 'Consulting',
             budget: '<1000'
         });
+        if (!result.ok) {
+            throw new Error(result.error || 'Submission failed');
+        }
         localStorage.setItem('collected_email', calEmail.value);
         showCalModal.value = false;
         if (pendingCalHref.value) {
@@ -230,5 +237,32 @@ onBeforeUnmount(() => {
 }
 .p-error {
     color: var(--p-error, #e24c4b);
+}
+/* Lead capture dialogs: always light — black text, white input boxes */
+.lead-capture-dialog,
+.lead-capture-dialog .p-dialog-header,
+.lead-capture-dialog .p-dialog-content,
+.lead-capture-dialog .p-dialog-footer {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+.lead-capture-dialog h3,
+.lead-capture-dialog p,
+.lead-capture-dialog span:not(.p-error),
+.lead-capture-dialog button:not(.p-button),
+.lead-capture-dialog .p-dialog-header-close-icon {
+    color: #000000 !important;
+}
+.lead-capture-dialog .p-inputtext {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #cbd5e1 !important;
+}
+.lead-capture-dialog .p-inputtext::placeholder {
+    color: #94a3b8 !important;
+}
+.lead-capture-dialog .p-inputtext:enabled:hover,
+.lead-capture-dialog .p-inputtext:enabled:focus {
+    border-color: #94a3b8 !important;
 }
 </style>
