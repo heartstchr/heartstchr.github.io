@@ -130,11 +130,7 @@ export const enNavbar = navbar([
       {
         text: "Podcast",
         link: "stackcast-podcast-mini/",
-      },
-      {
-        text: "Products",
-        link: "https://stackseekers.gumroad.com/",
-      },
+      }
     ],
   },
   {

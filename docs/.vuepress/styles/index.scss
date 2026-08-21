@@ -757,3 +757,9 @@ $dropdown-accent: var(--theme-color, #3b82f6);
     padding-left: 0.85rem;
   }
 }
+
+/* Kill first-paint dark flash: theme's build template injects a script that may set
+   data-theme="dark" from localStorage/OS preference before hydration. Force light bg. */
+[data-theme="dark"] {
+  --vp-c-bg: #fff;
+}
