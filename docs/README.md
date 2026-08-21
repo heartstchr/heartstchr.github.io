@@ -14,7 +14,8 @@ copyright: false
   <div class="orb orb-2 opacity-20"></div>
   <div class="orb orb-3 opacity-10 hidden lg:block"></div>
   <div class="grid align-items-center relative z-1 w-full max-w-screen-xl mx-auto py-4">
-    <div class="col-12 lg:col-7">
+    <div class="col-12 lg:col-6">
+      <!-- Headline: Strategic Positioning Pivot -->
       <!-- Premium Badge -->
       <div class="mb-2 flex align-items-center gap-2 fade-in">
         <span class="inline-flex align-items-center px-3 py-1 border-round-3xl glass-effect text-xs font-bold uppercase letter-spacing-wide shadow-2">
@@ -78,18 +79,18 @@ copyright: false
         </div>
       </div>
     </div>
-    <div class="col-12 lg:col-5 mt-8 lg:mt-0 hidden lg:block">
+    <div class="col-12 lg:col-6 mt-8 lg:mt-0 hidden lg:block">
       <div class="bento-hero-grid h-45rem relative">
         <!-- Main Hero Card: Productized Benefit -->
-        <div class="bento-hero-item bento-hero-1  border-round-3xl overflow-hidden relative bento-hover border-1 border-100">
+        <div class="bento-hero-item bento-hero-1  border-round-xl overflow-hidden relative bento-hover">
           <img src="/img/projects/ai-dynamic-crud-app/ai-gemini-app.webp" alt="AI Automation" width="600" height="800" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
         </div>
         <!-- Secondary Cards -->
-        <div class="bento-hero-item bento-hero-2  border-round-3xl overflow-hidden relative bento-hover border-1 border-100">
-          <img src="/img/home/projects/notion_service_request.webp" alt="Service Request System" width="600" height="400" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
-      </div>
-        <div class="bento-hero-item bento-hero-3  border-round-3xl overflow-hidden relative bento-hover border-1 border-100">
-          <img src="/img/projects/localxr/localxr-cover.webp" alt="Programmatic SEO" width="600" height="400" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
+        <div class="bento-hero-item bento-hero-2  border-round-xl overflow-hidden relative bento-hover surface-100 flex align-items-center justify-content-center">
+          <img src="/img/home/projects/notion_service_request.webp" alt="Service Request System" width="600" height="400" class="w-full h-full" style="object-fit: contain;" fetchpriority="high" />
+        </div>
+        <div class="bento-hero-item bento-hero-3  border-round-xl overflow-hidden relative bento-hover surface-100 flex align-items-center justify-content-center">
+          <img src="/img/projects/localxr/localxr-cover.webp" alt="Programmatic SEO" width="600" height="400" class="w-full h-full" style="object-fit: contain;" fetchpriority="high" />
         </div>
       </div>
     </div>
@@ -535,7 +536,7 @@ copyright: false
 .grayscale-filter { filter: grayscale(100%); opacity: 0.7; transition: all 0.3s ease; }
 .bento-hero-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 0.85fr 1.35fr;
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
 }

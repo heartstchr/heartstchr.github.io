@@ -97,6 +97,10 @@ export const enNavbar = navbar([
         link: "/hire-nuxt-developer/",
       },
       {
+        text: "Hire Next.js Developer",
+        link: "/hire-nextjs-developer/",
+      },
+      {
         text: "Small Business Websites",
         link: "/website-development-for-small-business/",
       },
