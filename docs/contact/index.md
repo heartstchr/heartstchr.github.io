@@ -22,15 +22,15 @@ contributors: false
     </div>
     <!-- Trust Matrix (Brief) -->
     <div class="flex flex-wrap justify-content-center gap-4 mb-8 opacity-70 scale-90">
-       <div class="flex align-items-center gap-2 px-3 py-2 border-round-xl border-1 border-white-alpha-10">
+       <div class="flex align-items-center gap-2 px-3 py-2 border-round-xl border-1 border-100">
           <i class="pi pi-shield text-primary"></i>
           <span class="text-sm font-bold">Enterprise Resilience</span>
        </div>
-       <div class="flex align-items-center gap-2 px-3 py-2 border-round-xl border-1 border-white-alpha-10">
+       <div class="flex align-items-center gap-2 px-3 py-2 border-round-xl border-1 border-100">
           <i class="pi pi-bolt text-primary"></i>
           <span class="text-sm font-bold">Automation Efficiency</span>
        </div>
-       <div class="flex align-items-center gap-2 px-3 py-2 border-round-xl border-1 border-white-alpha-10">
+       <div class="flex align-items-center gap-2 px-3 py-2 border-round-xl border-1 border-100">
           <i class="pi pi-chart-line text-primary"></i>
           <span class="text-sm font-bold">Scalable Revenue</span>
        </div>

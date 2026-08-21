@@ -50,7 +50,7 @@ head:
 </section>
 
 <!-- The Startup Problem -->
-<div class="mb-8 px-4 py-8 surface-50 border-round-3xl shadow-1">
+<div class="mb-8 px-4 py-8 surface-50 border-round-3xl">
   <div class="grid align-items-center">
     <div class="col-12 lg:col-6">
       <h2 class="text-3xl md:text-4xl font-bold mb-4">The agency model is broken for startups.</h2>
@@ -167,7 +167,7 @@ head:
 </div>
 
 <!-- Case Studies -->
-<div class="mb-8 px-4 py-8 surface-50 border-round-3xl shadow-1" id="case-studies">
+<div class="mb-8 px-4 py-8 surface-50 border-round-3xl" id="case-studies">
   <div class="text-center mb-6">
     <h2 class="text-4xl font-bold mb-2">Startup Case Studies</h2>
     <p class="text-xl text-600">From concept to production — shipped and scaling.</p>
@@ -271,7 +271,7 @@ head:
 </div>
 
 <!-- FAQ -->
-<div class="mb-8 px-4 py-8 surface-50 border-round-3xl shadow-1" id="faq">
+<div class="mb-8 px-4 py-8 surface-50 border-round-3xl" id="faq">
   <div class="text-center mb-6">
     <h2 class="text-4xl font-bold mb-2">Frequently Asked Questions</h2>
   </div>

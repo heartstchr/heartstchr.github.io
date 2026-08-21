@@ -15,11 +15,11 @@ Watch web development tutorials, app walkthroughs, and project demos by Stack Se
 </div>
 
 <!-- Ready to Build CTA -->
-<div class="mt-8 border-round-3xl p-6 text-center shadow-4 surface-900 text-white relative overflow-hidden">
-  <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary-900 border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
+<div class="mt-8 border-round-3xl p-6 text-center surface-section relative overflow-hidden">
+  <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
   <div class="relative z-1">
     <h2 class="text-3xl font-bold mb-3">Ready to build your own?</h2>
-    <p class="text-lg opacity-80 mb-5 max-w-30rem mx-auto">I help founders and teams take these technical concepts and turn them into scalable, production-ready systems.</p>
+    <p class="text-lg text-700 mb-5 max-w-30rem mx-auto">I help founders and teams take these technical concepts and turn them into scalable, production-ready systems.</p>
     <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
       <Button label="Book Free Strategy Call" icon="pi pi-video" severity="primary" size="large" rounded raised />
     </a>

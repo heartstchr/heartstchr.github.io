@@ -124,22 +124,22 @@ contributors: false
 </div>
 
 <!-- Not For Everyone -->
-<div class="mb-10 mx-2 md:mx-4 surface-900 text-white border-round-3xl p-6 md:p-8 relative overflow-hidden">
-  <div class="absolute top-0 right-0 w-30rem h-30rem bg-primary-900 border-circle opacity-10" style="filter: blur(100px); transform: translate(30%, -30%)"></div>
+<div class="mb-10 mx-2 md:mx-4 surface-50 border-round-3xl p-6 md:p-8 relative overflow-hidden">
+  <div class="absolute top-0 right-0 w-30rem h-30rem bg-primary border-circle opacity-10" style="filter: blur(100px); transform: translate(30%, -30%)"></div>
   <div class="relative z-1" style="max-width: 1200px; margin: 0 auto;">
-    <div class="text-sm font-bold text-primary-400 uppercase tracking-widest mb-3"><i class="pi pi-shield mr-2"></i>Honest Positioning</div>
+    <div class="text-sm font-bold text-primary uppercase tracking-widest mb-3"><i class="pi pi-shield mr-2"></i>Honest Positioning</div>
     <h2 class="text-3xl md:text-5xl font-bold mt-0 mb-8">Stack Seekers is not for everyone.</h2>
     <div class="grid">
       <div class="col-12 lg:col-6 mb-4">
         <div class="flex align-items-start gap-4 mb-5" v-for="no in notFor" :key="no">
-          <i class="pi pi-times-circle text-red-400 mt-1 text-xl flex-shrink-0"></i>
-          <span class="text-300 text-lg line-height-3">{{ no }}</span>
+          <i class="pi pi-times-circle text-red-500 mt-1 text-xl flex-shrink-0"></i>
+          <span class="text-600 text-lg line-height-3">{{ no }}</span>
         </div>
       </div>
       <div class="col-12 lg:col-6 mb-4">
         <div class="flex align-items-start gap-4 mb-5" v-for="yes in yesFor" :key="yes">
-          <i class="pi pi-check-circle text-green-400 mt-1 text-xl flex-shrink-0"></i>
-          <span class="text-100 text-lg line-height-3 font-bold">{{ yes }}</span>
+          <i class="pi pi-check-circle text-green-600 mt-1 text-xl flex-shrink-0"></i>
+          <span class="text-900 text-lg line-height-3 font-bold">{{ yes }}</span>
         </div>
       </div>
     </div>

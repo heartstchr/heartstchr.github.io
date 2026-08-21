@@ -7,8 +7,8 @@
   /* Premium Slate Palette */
   --premium-slate: #1e293b;
   --premium-charcoal: #0f172a;
-  --premium-border: rgba(255, 255, 255, 0.08);
-  --premium-hover-bg: rgba(255, 255, 255, 0.03);
+  --premium-border: rgba(0, 0, 0, 0.08);
+  --premium-hover-bg: rgba(0, 0, 0, 0.02);
 
   /* Accessibility Overrides */
   --p-text-muted-color: #71717a; /* Darker than default for better contrast */
@@ -562,18 +562,25 @@ html[data-theme="dark"] .pi-github,
 @media (hover: hover) {
   .surface-0:hover, .p-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12) !important;
     border-color: var(--theme-color) !important;
     background: var(--premium-hover-bg) !important;
   }
 }
 
-/* Glassmorphism utility */
+/* Glassmorphism utility (light theme) */
 .glass-effect {
-  background: rgba(15, 23, 42, 0.6) !important;
+  background: rgba(255, 255, 255, 0.72) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.glass-effect-light {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 /* Project Perspective Tabs Styling */
@@ -591,7 +598,7 @@ html[data-theme="dark"] .pi-github,
       margin: 0;
       
       .p-tabview-nav-link {
-        background: rgba(255, 255, 255, 0.03) !important;
+        background: rgba(0, 0, 0, 0.02) !important;
         border: 1px solid var(--premium-border) !important;
         border-radius: 50px !important;
         padding: 0.75rem 1.5rem !important;
@@ -642,12 +649,6 @@ html[data-theme="dark"] .pi-github,
       font-size: 0.85rem;
     }
   }
-}
-
-/* Roadmap Section Specific Polish */
-.surface-900 {
-  background-color: var(--premium-charcoal) !important;
-  border: 1px solid var(--premium-border);
 }
 
 /* Mermaid Diagram Sizing & Horizontal Scroll for Complex Charts */

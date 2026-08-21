@@ -21,7 +21,7 @@ copyright: false
     <h1 class="text-4xl md:text-6xl font-bold m-0 mb-4 line-height-2">
       Engineering that moves <span class="text-gradient">business metrics</span>, not just pixels.
     </h1>
-    <p class="text-xl text-300 line-height-3 m-0 mb-6" style="max-width: 700px;">
+    <p class="text-xl text-600 line-height-3 m-0 mb-6" style="max-width: 700px;">
       These are not side projects. Every case study below represents a client's critical system — rebuilt, migrated, or accelerated from scratch using banking-grade engineering standards.
     </p>
     <!-- Impact Bar -->
@@ -132,7 +132,7 @@ copyright: false
 <ConsultingBridge :showAudit="true" />
 
 <!-- Sticky Mobile CTA -->
-<div class="fixed bottom-0 left-0 w-full p-3 z-5 lg:hidden glass-sticky-cta shadow-6 flex gap-3 border-top-1 border-white-alpha-10">
+<div class="fixed bottom-0 left-0 w-full p-3 z-5 lg:hidden glass-sticky-cta shadow-6 flex gap-3 border-top-1 border-100">
   <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="flex-grow-1 no-underline">
     <Button label="Consult Strategy" icon="pi pi-calendar" severity="primary" class="w-full text-lg font-bold py-3" raised />
   </a>
@@ -176,10 +176,10 @@ copyright: false
 
 <style scoped>
 .impact-card {
-  color: white;
-  background: rgba(255,255,255,0.05);
+  color: #000;
+  background: rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
 }
 .impact-card:hover { transform: translateY(-5px); }
@@ -221,7 +221,7 @@ copyright: false
 }
 
 .glass-sticky-cta { 
-  background: rgba(15, 23, 42, 0.9); 
+  background: rgba(255, 255, 255, 0.92); 
   backdrop-filter: blur(12px); 
   -webkit-backdrop-filter: blur(12px);
 }

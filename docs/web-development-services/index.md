@@ -105,12 +105,13 @@ pageInfo: false
 </div>
 
 <!-- Zero-Risk Audit Section -->
-<div class="mb-8 border-round-3xl p-6 text-center shadow-4 surface-900 text-white" style="max-width: 1000px; margin: 0 auto;">
-  <h2 class="text-3xl md:text-5xl font-bold m-0 mb-3">The Zero-Risk Technical Audit</h2>
-  <p class="text-lg md:text-xl line-height-3 mb-5 opacity-90 mx-auto" style="max-width: 650px;">
+<div class="mb-8 border-round-3xl p-6 text-center surface-section relative overflow-hidden" style="max-width: 1000px; margin: 0 auto;">
+  <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
+  <h2 class="text-3xl md:text-5xl font-bold m-0 mb-3 relative z-1">The Zero-Risk Technical Audit</h2>
+  <p class="text-lg md:text-xl line-height-3 mb-5 mx-auto relative z-1" style="max-width: 650px;">
     Not sure which service fits? I use this short roadmap call to identify the bottleneck, pressure-test the architecture, and recommend the fastest path to revenue, reliability, or automation gains.
   </p>
-  <div class="flex flex-column md:flex-row gap-3 justify-content-center">
+  <div class="flex flex-column md:flex-row gap-3 justify-content-center relative z-1">
     <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" class="no-underline">
       <Button label="Book Roadmap Session" icon="pi pi-calendar" severity="secondary" raised rounded class="text-lg font-bold px-5 py-3" />
     </a>
@@ -118,7 +119,7 @@ pageInfo: false
       <Button label="Run 5-Min Self Audit" icon="pi pi-check-square" severity="primary" raised rounded outlined class="text-lg font-bold px-5 py-3" />
     </a>
   </div>
-  <div class="text-sm mt-4 opacity-70">Best fit for founders, product owners, and engineering teams with active delivery goals.</div>
+  <div class="text-sm mt-4 text-500 relative z-1">Best fit for founders, product owners, and engineering teams with active delivery goals.</div>
 </div>
 
 <script setup lang="ts">
