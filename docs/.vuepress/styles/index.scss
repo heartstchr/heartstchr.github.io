@@ -671,3 +671,89 @@ html[data-theme="dark"] .pi-github,
     }
   }
 }
+/* ================= Navbar Dropdown Menus ================= */
+$dropdown-accent: var(--theme-color, #3b82f6);
+
+/* Trigger pill */
+.vp-navbar .vp-dropdown-title {
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  .arrow {
+    transition: transform 0.25s ease;
+  }
+}
+
+.vp-navbar .vp-dropdown-wrapper:hover > .vp-dropdown-title,
+.vp-navbar .vp-dropdown-wrapper.open > .vp-dropdown-title {
+  background: rgba(59, 130, 246, 0.08);
+  color: $dropdown-accent;
+}
+
+.vp-navbar .vp-dropdown-wrapper:hover .arrow.down {
+  transform: rotate(0deg);
+}
+
+/* Panel */
+@media (min-width: 768px) {
+  .vp-navbar .vp-dropdown {
+    min-width: 15rem;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.14), 0 2px 8px rgba(0, 0, 0, 0.05);
+    transform: scale(0.96) translateY(-8px);
+    transform-origin: top center;
+    transition: opacity 0.22s ease, transform 0.22s cubic-bezier(0.34, 1.4, 0.64, 1), visibility 0.22s;
+  }
+
+  .vp-navbar .vp-dropdown-wrapper:hover .vp-dropdown,
+  .vp-navbar .vp-dropdown-wrapper.open .vp-dropdown {
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Items as soft pills */
+.vp-navbar .vp-dropdown-item {
+  margin: 0.125rem 0;
+
+  .auto-link {
+    display: block;
+    padding: 0.5rem 0.85rem;
+    border-radius: 0.65rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.45;
+    color: var(--vp-c-text);
+    transition: background-color 0.18s ease, color 0.18s ease, padding-left 0.18s ease;
+
+    &:hover {
+      background: rgba(59, 130, 246, 0.08);
+      color: $dropdown-accent;
+      padding-left: 1.1rem;
+    }
+
+    &.route-link-active {
+      background: rgba(59, 130, 246, 0.12);
+      color: $dropdown-accent;
+      font-weight: 600;
+    }
+  }
+}
+
+/* Mobile menu: comfortable stacked list, no floating panel effects */
+@media (max-width: 767.98px) {
+  .vp-navbar .vp-dropdown {
+    box-shadow: none;
+    border-inline-start: 2px solid rgba(59, 130, 246, 0.15);
+    border-radius: 0 0.75rem 0.75rem 0;
+    margin: 0.25rem 0 0.5rem 0.75rem;
+    padding: 0.25rem 0;
+  }
+
+  .vp-navbar .vp-dropdown-item .auto-link:hover {
+    padding-left: 0.85rem;
+  }
+}

@@ -4,7 +4,7 @@
     <Dialog v-model:visible="showExitIntent" modal class="lead-capture-dialog" :style="{ width: '92vw', maxWidth: '520px' }">
       <template #header>
         <div class="flex align-items-center gap-3 w-full">
-          <div class="w-3rem h-3rem border-circle bg-primary-50 flex align-items-center justify-content-center flex-shrink-0 shadow-1">
+          <div class="w-2rem h-2rem border-circle bg-primary-50 flex align-items-center justify-content-center flex-shrink-0 shadow-1">
             <i class="pi pi-bolt text-primary text-xl"></i>
           </div>
           <div>
@@ -15,7 +15,7 @@
       </template>
       <div class="flex flex-column gap-3">
         <p class="m-0 text-sm text-600 line-height-3">You're about to leave without the free teardown. Founders who skip this usually miss 3–5 critical bottlenecks draining engineering velocity.</p>
-        <div class="flex align-items-center gap-2 p-3 border-round-xl bg-primary-50 border-1 border-primary-100">
+        <div class="flex align-items-center gap-2 p-1 border-round-xl bg-primary-50 border-1 border-primary-100">
           <i class="pi pi-check-circle text-primary font-bold"></i>
           <span class="text-xs font-semibold text-700">Includes: Architecture audit + growth roadmap — delivered in 48 hours</span>
         </div>
@@ -38,7 +38,7 @@
     <Dialog v-model:visible="showCalModal" modal class="lead-capture-dialog" :style="{ width: '92vw', maxWidth: '520px' }">
       <template #header>
         <div class="flex align-items-center gap-3 w-full">
-          <div class="w-3rem h-3rem border-circle bg-primary-50 flex align-items-center justify-content-center flex-shrink-0 shadow-1">
+          <div class="w-2rem h-2rem border-circle bg-primary-50 flex align-items-center justify-content-center flex-shrink-0 shadow-1">
             <i class="pi pi-shield text-primary text-xl"></i>
           </div>
           <div>
@@ -49,7 +49,7 @@
       </template>
       <div class="flex flex-column gap-3">
         <p class="m-0 text-sm text-600 line-height-3">We'll send your risk assessment + strategic brief ahead of time so we can skip the basics and go straight to solving your real problem.</p>
-        <div class="flex align-items-center gap-2 p-3 border-round-xl bg-primary-50 border-1 border-primary-100">
+        <div class="flex align-items-center gap-2 p-1 border-round-xl bg-primary-50 border-1 border-primary-100">
           <i class="pi pi-bolt text-primary font-bold"></i>
           <span class="text-xs font-semibold text-700">Pre-call prep means we cover 2x more ground in 25 minutes</span>
         </div>
