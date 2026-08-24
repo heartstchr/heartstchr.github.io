@@ -14,6 +14,7 @@ project:
   schema: "https://schema.org/WebApplication"
   domain: "Headless Commerce & CMS Integration"
   year: "2025"
+  category: "Ready-made Apps"
   price: "20"
   currency: "USD"
   link: ""
@@ -97,6 +98,7 @@ project:
         </div>
         <div class="mt-4 pt-4">
            <div class="flex flex-column md:flex-row align-items-stretch gap-3">
+              <RazorpayButton v-if="$frontmatter.project.category === 'Ready-made Apps' && parseFloat($frontmatter.project.price) > 0" :project="$frontmatter.project" />
               <a v-if="$frontmatter.project.link" :href="$frontmatter.project.link" target="_blank" class="no-underline flex-1">
                 <Button label="View Live Demo" icon="pi pi-external-link" severity="primary" class="w-full font-bold py-3" raised rounded />
               </a>

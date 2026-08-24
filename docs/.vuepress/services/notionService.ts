@@ -241,6 +241,102 @@ export async function submitProjectRequest(
   }
 }
 
+// Record a ready-made app buyer email in the Notion DB before checkout
+export interface PurchaseLeadPayload {
+  email: string;
+  product: string;
+  price?: string;
+  currency?: string;
+}
+
+export async function submitPurchaseLead(
+  payload: PurchaseLeadPayload
+): Promise<NotionResponse> {
+  if (!payload.email || !payload.product) {
+    return { ok: false, error: "Missing required field: email or product" };
+  }
+
+  if (!endpoint) {
+    return {
+      ok: false,
+      error:
+        "Notion integration not configured. Please set VITE_NOTION_ENDPOINT.",
+    };
+  }
+
+  const now = new Date();
+  const priceLabel = payload.price
+    ? ` (${payload.currency || "USD"} ${payload.price})`
+    : "";
+
+  const notionPageRequest = {
+    parent: {
+      database_id: databaseId,
+    },
+    properties: {
+      "Client Name": {
+        title: [
+          {
+            text: { content: payload.email.split("@")[0] },
+          },
+        ],
+      },
+      Email: { email: payload.email },
+      "Project Details": {
+        rich_text: [
+          {
+            text: { content: `Ready-made app purchase: ${payload.product}${priceLabel}` },
+          },
+        ],
+      },
+      "Service Type": {
+        select: { name: "Ready-made App Purchase" },
+      },
+      Status: {
+        status: { name: "New" },
+      },
+      "Date Received": {
+        date: { start: now.toISOString() },
+      },
+      "Follow-up Date": {
+        date: {
+          start: new Date(now.getTime() + 2 * 24 * 60 * 60 * 1000).toISOString(),
+        },
+      },
+    },
+  };
+
+  try {
+    const response = await fetch(`${endpoint}/all`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        endpoint: `/v1/pages`,
+        options: {
+          method: "POST",
+          body: JSON.stringify(notionPageRequest),
+        },
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return { ok: true, data };
+  } catch (error: any) {
+    const message =
+      error?.response?.data?.error ||
+      error?.response?.data?.message ||
+      error?.message ||
+      "Unknown error";
+
+    console.error("❌ Purchase lead submission error:", message);
+    return { ok: false, error: message };
+  }
+}
+
 // Fetch database schema options for form dropdowns
 export async function fetchDatabaseSchemaOptions(): Promise<{
   serviceOptions: ServiceOption[];
