@@ -7,6 +7,10 @@ const props = defineProps({
         type: Object,
         required: true,
     },
+    pageTheme: {
+        type: Boolean,
+        default: false,
+    },
 });
 
 const RAZORPAY_KEY_ID = typeof __VITE_RAZORPAY_KEY_ID__ !== "undefined"
@@ -23,12 +27,14 @@ const buyerEmailInput = ref("");
 const buyerEmailError = ref("");
 const savingLead = ref(false);
 const checkoutActive = ref(false);
+const downloaded = ref(false);
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const price = computed(() => parseFloat(props.project.price || "0"));
 const currency = computed(() => props.project.currency || "USD");
 const purchasable = computed(() => price.value > 0 && !!RAZORPAY_KEY_ID);
+const workspaceUrl = computed(() => props.project.workspace || props.project.link || "");
 
 const priceLabel = computed(() => {
     if (!price.value) return "Free";
@@ -155,6 +161,35 @@ const onVisibleChange = (visible) => {
     }
 };
 
+const confirmFreeDownload = async () => {
+    if (!workspaceUrl.value || savingLead.value) return;
+    const email = buyerEmailInput.value.trim();
+    if (!EMAIL_RE.test(email)) {
+        buyerEmailError.value = "Please enter a valid email address.";
+        return;
+    }
+    buyerEmailError.value = "";
+    savingLead.value = true;
+    try {
+        const res = await submitPurchaseLead({
+            email,
+            product: props.project.name,
+            price: "0",
+            currency: currency.value,
+        });
+        if (!res.ok) {
+            console.warn("[Razorpay] Could not save lead:", res.error);
+        }
+        localStorage.setItem("collected_email", email);
+        window.open(workspaceUrl.value, "_blank", "noopener,noreferrer");
+        downloaded.value = true;
+    } catch (err) {
+        console.warn("[Razorpay] Could not save lead:", err);
+        buyerEmailError.value = "An error occurred. Please try again.";
+    }
+    savingLead.value = false;
+};
+
 const confirmBuyerEmail = async () => {
     if (!purchasable.value || opening.value || savingLead.value) return;
     const email = buyerEmailInput.value.trim();
@@ -184,16 +219,16 @@ const confirmBuyerEmail = async () => {
 
 <template>
     <div class="flex flex-column gap-1 w-full" @click.stop>
-        <div class="flex flex-nowrap align-items-center gap-2 w-full">
+        <div :class="pageTheme ? 'flex flex-column gap-2' : 'flex flex-nowrap align-items-center gap-2 w-full'">
             <template v-if="price > 0">
                 <template v-if="purchasable && !success">
                     <InputText
                         v-model="buyerEmailInput"
                         type="email"
-                        size="small"
+                        :size="pageTheme ? undefined : 'small'"
                         placeholder="you@example.com"
                         :disabled="savingLead"
-                        style="flex: 1 1 7rem; min-width: 0; width: auto;"
+                        :style="pageTheme ? 'width: 100%;' : 'flex: 1 1 7rem; min-width: 0; width: auto;'"
                         aria-label="Email address for purchase"
                         @keyup.enter="confirmBuyerEmail"
                     />
@@ -201,10 +236,14 @@ const confirmBuyerEmail = async () => {
                         type="button"
                         :label="savingLead ? 'Please wait...' : 'Buy Now · ' + priceLabel"
                         icon="pi pi-credit-card"
-                        size="small"
+                        :size="pageTheme ? undefined : 'small'"
+                        :severity="pageTheme ? 'primary' : undefined"
+                        :rounded="pageTheme"
                         raised
+                        class="white-space-nowrap"
+                        :class="{ 'font-bold': pageTheme, 'w-full': pageTheme }"
                         :loading="savingLead || opening"
-                        style="background: var(--theme-color); border-color: var(--theme-color); color: #fff;"
+                        :style="pageTheme ? null : 'background: var(--theme-color); border-color: var(--theme-color); color: #fff;'"
                         aria-label="Enter your email and buy this ready-made app securely via Razorpay"
                         @click.stop.prevent="confirmBuyerEmail"
                     />
@@ -214,9 +253,38 @@ const confirmBuyerEmail = async () => {
                 </span>
                 <span v-else class="font-bold text-900">{{ priceLabel }}</span>
             </template>
-            <span v-else class="text-xs font-bold uppercase" style="color: #16a34a;">
-                <i class="pi pi-download mr-1"></i> Free
-            </span>
+            <template v-else>
+                <template v-if="!downloaded">
+                    <InputText
+                        v-model="buyerEmailInput"
+                        type="email"
+                        :size="pageTheme ? undefined : 'small'"
+                        placeholder="you@example.com"
+                        :disabled="savingLead"
+                        :style="pageTheme ? 'width: 100%;' : 'flex: 1 1 7rem; min-width: 0; width: auto;'"
+                        aria-label="Email address to get this free app"
+                        @keyup.enter.stop="confirmFreeDownload"
+                    />
+                    <Button
+                        type="button"
+                        :label="savingLead ? 'Please wait...' : 'Get Free'"
+                        icon="pi pi-download"
+                        :size="pageTheme ? undefined : 'small'"
+                        :severity="pageTheme ? 'success' : undefined"
+                        :rounded="pageTheme"
+                        raised
+                        class="white-space-nowrap"
+                        :class="{ 'font-bold': pageTheme, 'w-full': pageTheme }"
+                        :loading="savingLead"
+                        :style="pageTheme ? null : 'background: #16a34a; border-color: #16a34a; color: #fff;'"
+                        aria-label="Enter your email and get this app for free"
+                        @click.stop.prevent="confirmFreeDownload"
+                    />
+                </template>
+                <span v-else class="text-sm font-bold" style="color: #16a34a;">
+                    <i class="pi pi-check-circle mr-1"></i>Download Opened
+                </span>
+            </template>
         </div>
         <small v-if="buyerEmailError && !success" class="p-error">{{ buyerEmailError }}</small>
     </div>
