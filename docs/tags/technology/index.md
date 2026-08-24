@@ -6,7 +6,7 @@ tag: technology
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: technology, web development, programming, tech, tutorial

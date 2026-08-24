@@ -6,7 +6,7 @@ tag: git
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: git, web development, programming, tech, tutorial

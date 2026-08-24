@@ -6,7 +6,7 @@ tag: productivity
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: productivity, web development, programming, tech, tutorial

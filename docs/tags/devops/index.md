@@ -6,7 +6,7 @@ tag: devops
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: devops, web development, programming, tech, tutorial

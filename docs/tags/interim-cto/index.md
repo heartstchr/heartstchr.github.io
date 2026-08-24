@@ -6,7 +6,7 @@ tag: interim cto
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: interim cto, web development, programming, tech, tutorial

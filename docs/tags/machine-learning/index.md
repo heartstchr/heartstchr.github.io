@@ -6,7 +6,7 @@ tag: machine learning
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: machine learning, web development, programming, tech, tutorial

@@ -6,7 +6,7 @@ tag: static site
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: static site, web development, programming, tech, tutorial

@@ -6,7 +6,7 @@ tag: strategy
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: strategy, web development, programming, tech, tutorial

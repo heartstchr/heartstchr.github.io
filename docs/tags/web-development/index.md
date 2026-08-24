@@ -6,7 +6,7 @@ tag: web development
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: web development, web development, programming, tech, tutorial

@@ -6,7 +6,7 @@ tag: user experience
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: user experience, web development, programming, tech, tutorial

@@ -6,7 +6,7 @@ tag: image optimization
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: image optimization, web development, programming, tech, tutorial

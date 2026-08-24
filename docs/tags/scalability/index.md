@@ -6,7 +6,7 @@ tag: scalability
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: scalability, web development, programming, tech, tutorial
