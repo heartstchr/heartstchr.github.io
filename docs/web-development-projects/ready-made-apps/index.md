@@ -59,8 +59,8 @@ head:
 
 <div class="grid mb-8">
   <div v-for="project in readyMadeProjects" :key="project.name" class="col-12 md:col-6 lg:col-4 p-3">
-    <a :href="'/web-development-projects/' + toKebabCase(project.name) + '/'" class="no-underline block h-full">
-      <div class="project-card surface-0 shadow-2 border-round-2xl overflow-hidden h-full border-1 border-100 flex flex-column">
+    <div class="project-card surface-0 shadow-2 border-round-2xl overflow-hidden h-full border-1 border-100 flex flex-column">
+      <a :href="'/web-development-projects/' + toKebabCase(project.name) + '/'" class="no-underline flex flex-column flex-grow-1" :aria-label="`View details of ${project.name}`">
         <!-- Cover Image -->
         <div class="relative overflow-hidden" style="height: 11rem;">
           <img
@@ -78,25 +78,19 @@ head:
           </div> -->
         </div>
         <!-- Card Body -->
-        <div class="app-card-body p-4 flex flex-column flex-grow-1">
+        <div class="app-card-body p-4 pb-0 flex flex-column flex-grow-1">
           <h2 class="text-xl font-bold mt-0 mb-2 text-900">{{ project.name }}</h2>
           <p class="text-sm text-600 line-height-3 mb-0 flex-grow-1">{{ project.description }}</p>
-          <div class="pt-3 mt-3 border-top-1 border-50 flex align-items-center justify-content-between">
-            <RazorpayButton v-if="parseFloat(project.price) > 0" :project="project" />
-            <Button
-              v-else
-              label="Free"
-              icon="pi pi-download"
-              size="small"
-              raised
-              style="background: var(--theme-color); border-color: var(--theme-color); color: #fff;"
-              @click.stop.prevent="openWorkspace(project.workspace || project.link)"
-            />
-            <i class="pi pi-arrow-right" style="color: #3b82f6;"></i>
-          </div>
         </div>
+      </a>
+      <!-- Actions row (outside the link so email input clicks never navigate) -->
+      <div class="app-card-body pt-3 mt-3 mx-4 mb-4 border-top-1 border-50 flex align-items-center justify-content-between gap-2">
+        <RazorpayButton :project="project" />
+        <a :href="'/web-development-projects/' + toKebabCase(project.name) + '/'" class="no-underline ml-auto" :aria-label="`View details of ${project.name}`">
+          <i class="pi pi-arrow-right" style="color: #3b82f6;"></i>
+        </a>
       </div>
-    </a>
+    </div>
   </div>
 </div>
 
@@ -131,12 +125,6 @@ head:
     ...freelance.filter((p: any) => p.category === 'Ready-made Apps' && p.name === 'AI Voice Generator'),
     ...freelance.filter((p: any) => p.category === 'Ready-made Apps' && p.name !== 'AI Voice Generator'),
   ];
-
-  const openWorkspace = (url: string) => {
-    if (typeof window !== 'undefined') {
-      window.open(url, '_blank', 'noopener,noreferrer');
-    }
-  };
 </script>
 
 <style scoped>

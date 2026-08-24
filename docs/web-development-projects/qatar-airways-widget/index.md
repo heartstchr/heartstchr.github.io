@@ -14,6 +14,7 @@ project:
   schema: "https://schema.org/DeveloperApplication"
   domain: "Leisure, travel, and tourism"
   year: "2021"
+  category: "Enterprise"
   price: 0
   currency: USD
   link: "https://holidays.qatarairways.com/en-in/avios"
@@ -29,6 +30,54 @@ project:
   nextProject: {"name":"Recipes","link":"/web-development-projects/recipes/"}
   relatedCaseStudy: null
 ---
+
+<div class="grid">
+  <div class="col-12 lg:col-4 project-side-col mb-4">
+    <div class="surface-card p-2 border-round-3xl shadow-2 border-1 border-100 project-action-card" style="position: sticky; top: 5rem;">
+      <div class="grid align-items-center">
+        <div class="col-12 border-bottom-1 border-100 mb-3 pb-3">
+          <div class="flex align-items-center gap-3">
+            <i class="pi pi-briefcase text-primary text-2xl"></i>
+            <div>
+              <div class="text-xs opacity-50 uppercase font-bold">Industry</div>
+              <div class="font-bold text-lg text-900">{{$frontmatter.project.domain}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="flex align-items-center gap-3">
+            <i class="pi pi-bolt text-primary text-2xl"></i>
+            <div>
+              <div class="text-xs opacity-50 uppercase font-bold">Project Status</div>
+              <div class="font-bold text-lg text-900">Scale & Growth</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 pt-3">
+          <Stacks :stack="$frontmatter.project.stack" :other-skills="$frontmatter.project.otherSkills" />
+        </div>
+      </div>
+      <div class="mt-4 pt-4">
+        <div class="flex flex-column gap-3">
+          <div v-if="$frontmatter.project.category === 'Ready-made Apps' && parseFloat($frontmatter.project.price) > 0" class="flex flex-column gap-3">
+            <RazorpayButton :project="$frontmatter.project" page-theme />
+          </div>
+          <div class="flex flex-column gap-3">
+            <a v-if="$frontmatter.project.link" :href="$frontmatter.project.link" target="_blank" class="no-underline">
+              <Button label="View Live Demo" icon="pi pi-external-link" severity="primary" class="w-full font-bold py-3" raised rounded />
+            </a>
+            <a v-if="$frontmatter.project.codeLink" :href="$frontmatter.project.codeLink" target="_blank" class="no-underline">
+              <Button label="View Source Code" icon="pi pi-github" severity="secondary" class="w-full font-bold py-3" raised rounded />
+            </a>
+            <a v-if="$frontmatter.project.contact" :href="'mailto:support@stackseekers.com?subject=' + encodeURIComponent('Scale Request: ' + $frontmatter.project.name)" class="no-underline">
+              <Button label="Architect Similar Solution" icon="pi pi-bolt" severity="secondary" class="w-full font-bold py-3" raised rounded />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 lg:col-8 project-main-col">
 
 <section v-if="$frontmatter.project.images && $frontmatter.project.images.length" class="mb-8" itemscope itemtype="https://schema.org/SoftwareApplication">
   <div class="grid m-0 p-0">
@@ -67,50 +116,8 @@ project:
 </section>
 
 <section class="mt-4 mb-6">
-  <div class="grid">
-    <div class="col-12">
-      <div class="text-primary font-bold mb-2 uppercase tracking-widest text-xs">Project Case Study</div>
-      <p class="text-xl opacity-70 line-height-4 max-w-50rem mb-4">{{$frontmatter.project.description}}</p>
-      <div class="surface-card p-4 md:p-5 border-round-3xl shadow-2 border-1 border-100 mb-4">
-        <div class="grid align-items-center">
-          <div class="col-12 md:col-6 border-bottom-1 md:border-bottom-none md:border-right-1 border-100 mb-3 md:mb-0 pb-3 md:pb-0">
-             <div class="flex align-items-center gap-3">
-                <i class="pi pi-briefcase text-primary text-2xl"></i>
-                <div>
-                  <div class="text-xs opacity-50 uppercase font-bold">Industry</div>
-                  <div class="font-bold text-lg text-900">{{$frontmatter.project.domain}}</div>
-                </div>
-             </div>
-          </div>
-          <div class="col-12 md:col-6 border-bottom-1 md:border-bottom-none border-100 mb-3 md:mb-0 pb-3 md:pb-0">
-             <div class="flex align-items-center gap-3">
-                <i class="pi pi-bolt text-primary text-2xl"></i>
-                <div>
-                  <div class="text-xs opacity-50 uppercase font-bold">Project Status</div>
-                  <div class="font-bold text-lg text-900">Scale & Growth</div>
-                </div>
-             </div>
-          </div>
-          <div class="col-12 md:col-12 pt-3 md:pt-0">
-             <Stacks :stack="$frontmatter.project.stack" :other-skills="$frontmatter.project.otherSkills" />
-          </div>
-        </div>
-        <div class="mt-4 pt-4">
-           <div class="flex flex-column md:flex-row align-items-stretch gap-3">
-              <a v-if="$frontmatter.project.link" :href="$frontmatter.project.link" target="_blank" class="no-underline flex-1">
-                <Button label="View Live Demo" icon="pi pi-external-link" severity="primary" class="w-full font-bold py-3" raised rounded />
-              </a>
-              <a v-if="$frontmatter.project.codeLink" :href="$frontmatter.project.codeLink" target="_blank" class="no-underline flex-1">
-                <Button label="View Source Code" icon="pi pi-github" severity="secondary" class="w-full font-bold py-3" raised rounded />
-              </a>
-              <a v-if="$frontmatter.project.contact" :href="'mailto:support@stackseekers.com?subject=' + encodeURIComponent('Scale Request: ' + $frontmatter.project.name)" class="no-underline flex-1">
-                <Button label="Architect Similar Solution" icon="pi pi-bolt" severity="secondary" class="w-full font-bold py-3" raised rounded />
-              </a>
-           </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="text-primary font-bold mb-2 uppercase tracking-widest text-xs">Project Case Study</div>
+  <p class="text-xl opacity-70 line-height-4 max-w-50rem mb-4">{{$frontmatter.project.description}}</p>
 </section>
 
 <section v-if="$frontmatter.project.video" class="mb-8 overflow-hidden border-round-3xl shadow-4 surface-card border-1 border-100">
@@ -315,6 +322,8 @@ QA proves that **Modular Frontend Architecture** is the key to scaling complex c
         <a href="/web-development-services/ai-and-automation-strategy/" class="no-underline px-4 py-2 surface-0 shadow-1 border-round-xl text-700 font-bold hover:text-primary transition-all">AI & Automation</a>
       </div>
     </div>
+  </div>
+</div>
 
 <section class="mt-8">
   <div class="glass-effect p-6 md:p-8 border-round-3xl text-center relative overflow-hidden shadow-4">

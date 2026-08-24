@@ -763,3 +763,17 @@ $dropdown-accent: var(--theme-color, #3b82f6);
 [data-theme="dark"] {
   --vp-c-bg: #fff;
 }
+
+/* Project page: sticky purchase card on the right of the gallery/content column.
+   DOM order is [side][main]; explicit ordering avoids relying on PrimeFlex responsive order utils. */
+.project-main-col {
+  order: 1;
+}
+
+.project-side-col {
+  order: 2;
+
+  @media (max-width: 991.98px) {
+    order: -1; /* card first on mobile/tablet, right after the intro */
+  }
+}
