@@ -6,7 +6,7 @@ tag: vendor vetting
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: vendor vetting, web development, programming, tech, tutorial

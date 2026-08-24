@@ -6,7 +6,7 @@ tag: micro frontends
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: micro frontends, web development, programming, tech, tutorial

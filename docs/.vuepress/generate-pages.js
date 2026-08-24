@@ -663,7 +663,7 @@ tag: ${tag}
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: ${tag}, web development, programming, tech, tutorial

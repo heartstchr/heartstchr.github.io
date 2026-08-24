@@ -6,7 +6,7 @@ tag: portfolio
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: portfolio, web development, programming, tech, tutorial

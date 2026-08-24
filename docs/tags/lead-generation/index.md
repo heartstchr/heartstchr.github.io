@@ -6,7 +6,7 @@ tag: lead generation
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: lead generation, web development, programming, tech, tutorial

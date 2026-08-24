@@ -6,7 +6,7 @@ tag: business
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: business, web development, programming, tech, tutorial

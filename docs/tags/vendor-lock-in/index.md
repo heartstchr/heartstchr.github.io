@@ -6,7 +6,7 @@ tag: vendor lock-in
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: vendor lock-in, web development, programming, tech, tutorial

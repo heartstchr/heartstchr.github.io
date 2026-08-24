@@ -6,7 +6,7 @@ tag: technical due diligence
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: technical due diligence, web development, programming, tech, tutorial

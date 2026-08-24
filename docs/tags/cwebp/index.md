@@ -6,7 +6,7 @@ tag: cwebp
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: cwebp, web development, programming, tech, tutorial

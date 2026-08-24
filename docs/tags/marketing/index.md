@@ -6,7 +6,7 @@ tag: marketing
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: marketing, web development, programming, tech, tutorial

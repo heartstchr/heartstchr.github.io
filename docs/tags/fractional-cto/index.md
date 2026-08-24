@@ -6,7 +6,7 @@ tag: fractional cto
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: fractional cto, web development, programming, tech, tutorial

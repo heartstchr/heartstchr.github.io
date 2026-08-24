@@ -6,7 +6,7 @@ tag: cto search
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: cto search, web development, programming, tech, tutorial

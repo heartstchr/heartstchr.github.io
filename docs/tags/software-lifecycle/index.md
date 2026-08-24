@@ -6,7 +6,7 @@ tag: software lifecycle
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: software lifecycle, web development, programming, tech, tutorial

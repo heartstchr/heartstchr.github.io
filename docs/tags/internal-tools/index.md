@@ -6,7 +6,7 @@ tag: internal tools
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: internal tools, web development, programming, tech, tutorial

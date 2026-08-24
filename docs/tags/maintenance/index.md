@@ -6,7 +6,7 @@ tag: maintenance
 head:
   - - meta
     - name: robots
-      content: noindex, follow
+      content: index, follow
   - - meta
     - name: keywords
       content: maintenance, web development, programming, tech, tutorial
