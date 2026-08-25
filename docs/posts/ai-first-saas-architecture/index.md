@@ -41,7 +41,7 @@ If you are just sending prompts to a text box, you are leaving 90% of AI's power
 <div class="my-6 p-4 surface-0 border-round-3xl shadow-2 border-left-3 border-green-500">
   <h3 class="text-2xl font-bold mb-3">Is your AI feature just a wrapper?</h3>
   <p class="text-lg text-700 mb-4">I help founders architect deep AI integrations that solve real business problems and create a durable competitive moat.</p>
-  <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
+  <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
     <Button label="Architect My AI Strategy" icon="pi pi-sparkles" size="large" rounded />
   </a>
 </div>

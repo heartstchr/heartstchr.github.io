@@ -85,7 +85,7 @@ head:
     <div class="text-lg font-bold mb-1">Building a SaaS product?</div>
     <p class="text-sm text-500 m-0">I architect multi-tenant systems, payment flows, and subscription models from scratch.</p>
   </div>
-  <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
+  <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
     <Button label="Book Free Discovery Call" icon="pi pi-calendar" severity="primary" raised rounded />
   </a>
 </section>

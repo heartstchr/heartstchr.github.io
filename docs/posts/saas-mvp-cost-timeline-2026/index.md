@@ -109,7 +109,7 @@ If you have a concept and need a realistic plan — not a sales pitch — book t
 <div class="my-6 p-4 surface-0 border-round-3xl shadow-2 border-left-3 border-primary">
   <h3 class="text-2xl font-bold mb-3">Want a real plan for your specific MVP</h3>
   <p class="text-lg text-700 mb-4">Book a 2-week Discovery Sprint. You get a technical spec, architecture plan, risk register, and fixed-scope build proposal — usable with any team</p>
-  <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=discovery-sprint" target="_blank" class="no-underline">
+  <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=discovery-sprint" target="_blank" class="no-underline">
     <Button label="Book Discovery Sprint" icon="pi pi-calculator" size="large" rounded />
  </a>
 </div>

@@ -218,17 +218,17 @@ const confirmBuyerEmail = async () => {
 </script>
 
 <template>
-    <div class="flex flex-column gap-1 w-full" @click.stop>
-        <div :class="pageTheme ? 'flex flex-column gap-2' : 'flex flex-nowrap align-items-center gap-2 w-full'">
+    <div class="w-full" @click.stop>
+        <div class="flex flex-nowrap align-items-stretch w-full">
             <template v-if="price > 0">
                 <template v-if="purchasable && !success">
                     <InputText
                         v-model="buyerEmailInput"
                         type="email"
                         :size="pageTheme ? undefined : 'small'"
-                        placeholder="you@example.com"
+                        placeholder="you@company.com"
                         :disabled="savingLead"
-                        :style="pageTheme ? 'width: 100%;' : 'flex: 1 1 7rem; min-width: 0; width: auto;'"
+                        class="flex-1 min-w-0"
                         aria-label="Email address for purchase"
                         @keyup.enter="confirmBuyerEmail"
                     />
@@ -238,11 +238,8 @@ const confirmBuyerEmail = async () => {
                         icon="pi pi-credit-card"
                         :size="pageTheme ? undefined : 'small'"
                         :severity="pageTheme ? 'primary' : undefined"
-                        :rounded="pageTheme"
                         raised
-                        class="white-space-nowrap"
-                        :class="{ 'font-bold': pageTheme, 'w-full': pageTheme }"
-                        :loading="savingLead || opening"
+                        class="white-space-nowrap flex-shrink-0"
                         :style="pageTheme ? null : 'background: var(--theme-color); border-color: var(--theme-color); color: #fff;'"
                         aria-label="Enter your email and buy this ready-made app securely via Razorpay"
                         @click.stop.prevent="confirmBuyerEmail"
@@ -259,9 +256,9 @@ const confirmBuyerEmail = async () => {
                         v-model="buyerEmailInput"
                         type="email"
                         :size="pageTheme ? undefined : 'small'"
-                        placeholder="you@example.com"
+                        placeholder="you@company.com"
                         :disabled="savingLead"
-                        :style="pageTheme ? 'width: 100%;' : 'flex: 1 1 7rem; min-width: 0; width: auto;'"
+                        class="flex-1 min-w-0"
                         aria-label="Email address to get this free app"
                         @keyup.enter.stop="confirmFreeDownload"
                     />
@@ -271,11 +268,8 @@ const confirmBuyerEmail = async () => {
                         icon="pi pi-download"
                         :size="pageTheme ? undefined : 'small'"
                         :severity="pageTheme ? 'success' : undefined"
-                        :rounded="pageTheme"
                         raised
-                        class="white-space-nowrap"
-                        :class="{ 'font-bold': pageTheme, 'w-full': pageTheme }"
-                        :loading="savingLead"
+                        class="white-space-nowrap flex-shrink-0"
                         :style="pageTheme ? null : 'background: #16a34a; border-color: #16a34a; color: #fff;'"
                         aria-label="Enter your email and get this app for free"
                         @click.stop.prevent="confirmFreeDownload"
@@ -286,7 +280,7 @@ const confirmBuyerEmail = async () => {
                 </span>
             </template>
         </div>
-        <small v-if="buyerEmailError && !success" class="p-error">{{ buyerEmailError }}</small>
+        <small v-if="buyerEmailError && !success" class="p-error mt-1 block">{{ buyerEmailError }}</small>
     </div>
 
     <Dialog
@@ -309,3 +303,15 @@ const confirmBuyerEmail = async () => {
         </template>
     </Dialog>
 </template>
+
+<style scoped>
+:deep(.p-inputtext) {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-right: 0 !important;
+}
+:deep(.p-button) {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+</style>

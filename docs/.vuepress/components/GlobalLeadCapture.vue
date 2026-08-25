@@ -122,6 +122,7 @@ const submitExitIntent = async () => {
         localStorage.setItem('exit_intent_shown', 'true');
         localStorage.setItem('collected_email', exitEmail.value);
         showExitIntent.value = false;
+        window.location.href = 'https://cal.com/stackseekers/25min';
     } catch (e) {
         console.error('Failed to submit exit intent email:', e);
         emailError.value = 'Something went wrong. Please try again.';

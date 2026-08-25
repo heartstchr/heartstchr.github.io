@@ -80,15 +80,11 @@ head:
         <!-- Card Body -->
         <div class="app-card-body p-4 pb-0 flex flex-column flex-grow-1">
           <h2 class="text-xl font-bold mt-0 mb-2 text-900">{{ project.name }}</h2>
-          <p class="text-sm text-600 line-height-3 mb-0 flex-grow-1">{{ project.description }}</p>
         </div>
       </a>
       <!-- Actions row (outside the link so email input clicks never navigate) -->
       <div class="app-card-body pt-3 mt-3 mx-4 mb-4 border-top-1 border-50 flex align-items-center justify-content-between gap-2">
         <RazorpayButton :project="project" />
-        <a :href="'/web-development-projects/' + toKebabCase(project.name) + '/'" class="no-underline ml-auto" :aria-label="`View details of ${project.name}`">
-          <i class="pi pi-arrow-right" style="color: #3b82f6;"></i>
-        </a>
       </div>
     </div>
   </div>
@@ -99,7 +95,7 @@ head:
     <div class="text-lg font-bold mb-1">Looking for custom adjustments?</div>
     <p class="text-sm text-500 m-0">I can customize and deploy any of these ready-made apps tailored specifically to your workflows.</p>
   </div>
-  <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
+  <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
     <Button label="Book Free Discovery Call" icon="pi pi-calendar" severity="primary" raised rounded />
   </a>
 </section>

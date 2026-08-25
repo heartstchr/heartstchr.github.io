@@ -155,7 +155,7 @@ This requires a fraction of a full engagement and gives you evidence, not hope.
 <div class="my-6 p-4 surface-0 border-round-3xl shadow-2 border-left-3 border-primary">
   <h3 class="text-2xl font-bold mb-3">Want a second opinion on a proposal or team?</h3>
   <p class="text-lg text-700 mb-4">I run Technical Diligence engagements for founders evaluating development partners — 2 weeks, fixed scope, deliverable is a go/no-go memo with specific risk findings. No obligation beyond the assessment.</p>
-  <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=technical-diligence" target="_blank" class="no-underline">
+  <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=technical-diligence" target="_blank" class="no-underline">
     <Button label="Book Technical Diligence" icon="pi pi-shield" size="large" rounded />
   </a>
 </div>

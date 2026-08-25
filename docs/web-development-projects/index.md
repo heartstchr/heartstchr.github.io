@@ -73,7 +73,7 @@ copyright: false
       <p class="m-0 text-sm text-500 mt-1">{{ cat.desc }}</p>
     </div>
     <div class="flex flex-column md:flex-row gap-3 mt-5 ml-auto hidden md:block">
-      <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
+      <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
         <Button label="Book Free Discovery Call" icon="pi pi-calendar-clock" severity="primary" size="small" rounded raised class="w-full md:w-auto white-space-nowrap" />
       </a>
     </div>
@@ -107,15 +107,11 @@ copyright: false
           <!-- Card Body -->
           <div class="app-card-body p-4 pb-0 flex flex-column flex-grow-1">
             <h3 class="text-xl font-bold mt-0 mb-2 text-900">{{ project.name }}</h3>
-            <p class="text-sm text-600 line-height-3 mb-0 flex-grow-1">{{ project.description }}</p>
           </div>
         </a>
         <!-- Actions row (outside the link so email input clicks never navigate) -->
-        <div class="app-card-body pt-3 mt-3 mx-4 mb-4 border-top-1 border-50 flex align-items-center justify-content-between gap-2">
-          <RazorpayButton v-if="project.category === 'Ready-made Apps'" :project="project" />
-          <a :href="'/web-development-projects/' + toKebabCase(project.name) + '/'" class="no-underline ml-auto" :aria-label="`View details of ${project.name}`">
-            <i class="pi pi-arrow-right" :style="{ color: cat.color }"></i>
-          </a>
+        <div v-if="project.category === 'Ready-made Apps'" class="app-card-body pt-3 mt-3 mx-4 mb-4 border-top-1 border-50 flex align-items-center justify-content-between gap-2">
+          <RazorpayButton :project="project" />
         </div>
       </div>
     </div>
@@ -127,7 +123,7 @@ copyright: false
 
 <!-- Sticky Mobile CTA -->
 <div class="fixed bottom-0 left-0 w-full p-3 z-5 lg:hidden glass-sticky-cta shadow-6 flex gap-3 border-top-1 border-100">
-  <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="flex-grow-1 no-underline">
+  <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="flex-grow-1 no-underline">
     <Button label="Consult Strategy" icon="pi pi-calendar" severity="primary" class="w-full text-lg font-bold py-3" raised />
   </a>
 </div>

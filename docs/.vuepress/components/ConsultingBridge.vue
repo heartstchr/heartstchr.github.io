@@ -33,7 +33,7 @@
       </div>
 
       <div class="text-center mt-8 relative z-1">
-        <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+        <a href="https://cal.com/stackseekers/25min" target="_blank" class="no-underline">
           <Button label="Book Free Discovery Call" icon="pi pi-bolt" severity="primary" size="large" raised rounded class="px-6 text-xl white-space-nowrap" />
         </a>
       </div>
@@ -42,7 +42,7 @@
 
   <!-- Sticky Mobile CTA -->
   <div v-if="isActivePage" class="fixed bottom-0 left-0 w-full p-3 z-5 lg:hidden glass-sticky-cta shadow-6 flex gap-3">
-    <a href="https://cal.com/stackseekers" target="_blank" class="flex-grow-1 no-underline">
+    <a href="https://cal.com/stackseekers/25min" target="_blank" class="flex-grow-1 no-underline">
       <Button label="Consult Strategy" icon="pi pi-calendar" severity="primary" class="w-full text-lg font-bold py-3" raised />
     </a>
   </div>

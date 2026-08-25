@@ -26,7 +26,7 @@ pageInfo: false
         I help founders and product teams solve architecture, automation, and acquisition problems with hands-on senior execution. From ABN AMRO-grade platform work to high-velocity AI and programmatic SEO systems.
       </p>
       <div class="flex flex-column md:flex-row gap-3 mt-5">
-        <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
+        <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
           <Button label="Book Technical Roadmap" icon="pi pi-map" severity="primary" size="large" rounded raised class="w-full md:w-auto" />
         </a>
       </div>
@@ -112,7 +112,7 @@ pageInfo: false
     Not sure which service fits? I use this short roadmap call to identify the bottleneck, pressure-test the architecture, and recommend the fastest path to revenue, reliability, or automation gains.
   </p>
   <div class="flex flex-column md:flex-row gap-3 justify-content-center relative z-1">
-    <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" class="no-underline">
+    <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=book-call" class="no-underline">
       <Button label="Book Roadmap Session" icon="pi pi-calendar" severity="secondary" raised rounded class="text-lg font-bold px-5 py-3" />
     </a>
     <a href="/startup-stack-audit-checklist/" class="no-underline">

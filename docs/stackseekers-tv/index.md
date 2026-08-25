@@ -20,7 +20,7 @@ Watch web development tutorials, app walkthroughs, and project demos by Stack Se
   <div class="relative z-1">
     <h2 class="text-3xl font-bold mb-3">Ready to build your own?</h2>
     <p class="text-lg text-700 mb-5 max-w-30rem mx-auto">I help founders and teams take these technical concepts and turn them into scalable, production-ready systems.</p>
-    <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
+    <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
       <Button label="Book Free Strategy Call" icon="pi pi-video" severity="primary" size="large" rounded raised />
     </a>
   </div>
