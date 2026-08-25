@@ -92,7 +92,7 @@
        <i class="pi pi-search text-4xl text-200 mb-4"></i>
        <h3 class="text-xl font-bold text-900 mb-2">No matching insights found.</h3>
        <p class="text-700 mb-4 max-w-20rem mx-auto">Looking for a specific technical playbook? Book a call for a personalized architectural audit of your codebase.</p>
-       <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+       <a href="https://cal.com/stackseekers/25min" target="_blank" class="no-underline">
          <Button label="Book Architecture Review" icon="pi pi-calendar" severity="primary" rounded raised />
        </a>
     </div>

@@ -46,7 +46,7 @@ A custom internal tool isn't an expense; it’s an investment in your team’s f
 <div class="my-6 p-4 surface-0 border-round-3xl shadow-2 border-left-3 border-blue-500">
   <h3 class="text-2xl font-bold mb-3">Is your workflow slowing you down?</h3>
   <p class="text-lg text-700 mb-4">I help operational teams build professional internal portals that automate the boring stuff and secure their data.</p>
-  <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
+  <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
     <Button label="Automate My Operations" icon="pi pi-sync" size="large" rounded />
   </a>
 </div>

@@ -38,7 +38,7 @@ head:
         From programmatic SEO platforms with thousands of dynamic routes to banking-grade dashboards — I architect and build Next.js applications that rank, load fast, and scale cleanly.
       </p>
       <div class="flex flex-column md:flex-row gap-3 mt-5">
-        <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=hire-nextjs" target="_blank" class="no-underline">
+        <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=hire-nextjs" target="_blank" class="no-underline">
           <Button label="Discuss Your Project" icon="pi pi-calendar" severity="primary" size="large" rounded raised class="w-full md:w-auto" />
         </a>
         <a href="/web-development-projects/" class="no-underline">
@@ -284,7 +284,7 @@ head:
     Whether you need SSR for SEO, SSG for performance, or a hybrid approach — I architect and build Next.js applications that rank and scale.
   </p>
   <div class="flex flex-column md:flex-row gap-3 justify-content-center relative z-1">
-    <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=hire-nextjs" class="no-underline">
+    <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=hire-nextjs" class="no-underline">
       <Button label="Discuss Your Project" icon="pi pi-calendar" severity="primary" raised rounded class="text-lg font-bold px-5 py-3" />
     </a>
     <a href="/web-development-projects/" class="no-underline">

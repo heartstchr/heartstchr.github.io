@@ -94,7 +94,7 @@ If you're unsure which model fits, book the audit. It's the lowest-risk way to g
 <div class="my-6 p-4 surface-0 border-round-3xl shadow-2 border-left-3 border-primary">
   <h3 class="text-2xl font-bold mb-3">Not sure which model fits your stage?</h3>
   <p class="text-lg text-700 mb-4">Start with a Technology Audit — a structured, independent read of your technical function in 2 weeks. No obligation to engage further.</p>
-  <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-audit" target="_blank" class="no-underline">
+  <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=book-audit" target="_blank" class="no-underline">
     <Button label="Book Technology Audit" icon="pi pi-compass" size="large" rounded />
   </a>
 </div>

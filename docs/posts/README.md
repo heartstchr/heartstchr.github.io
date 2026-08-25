@@ -55,7 +55,7 @@ contributors: false
       <div class="surface-card text-900 p-4 border-round-2xl shadow-4 mb-4">
         <h3 class="text-xl font-bold mb-3 text-primary">Solving Spaghetti Code?</h3>
         <p class="text-sm line-height-3 mb-4 text-700">I help startups audit their infrastructure and remove the bottlenecks stalling growth.</p>
-        <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+        <a href="https://cal.com/stackseekers/25min" target="_blank" class="no-underline">
           <Button label="Book Audit" icon="pi pi-bolt" severity="primary" class="w-full font-bold" raised rounded />
         </a>
       </div>
@@ -66,7 +66,7 @@ contributors: false
 
 <!-- Sticky Mobile CTA -->
 <div class="fixed bottom-0 left-0 w-full p-3 z-5 lg:hidden glass-sticky-cta shadow-6">
-  <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+  <a href="https://cal.com/stackseekers/25min" target="_blank" class="no-underline">
     <Button label="Book Strategy Call" icon="pi pi-calendar" severity="primary" class="w-full text-lg font-bold py-3" raised />
   </a>
 </div>

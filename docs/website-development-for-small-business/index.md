@@ -38,7 +38,7 @@ head:
         I build fast, mobile-friendly, SEO-optimized websites for small businesses that want to look professional, rank on Google, and convert visitors into customers — without agency overhead or cookie-cutter templates.
       </p>
       <div class="flex flex-column md:flex-row gap-3 mt-5">
-        <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=small-biz-web" target="_blank" class="no-underline">
+        <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=small-biz-web" target="_blank" class="no-underline">
           <Button label="Get a Free Quote" icon="pi pi-calculator" severity="primary" size="large" rounded raised class="w-full md:w-auto" />
         </a>
         <a href="/web-development-projects/" class="no-underline">
@@ -276,7 +276,7 @@ head:
     Stop losing customers to a slow, outdated, or invisible website. Get a professional, fast, SEO-optimized site that makes your business look as good as the service you provide.
   </p>
   <div class="flex flex-column md:flex-row gap-3 justify-content-center relative z-1">
-    <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=small-biz-web" class="no-underline">
+    <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=small-biz-web" class="no-underline">
       <Button label="Get a Free Quote" icon="pi pi-calculator" severity="primary" raised rounded class="text-lg font-bold px-5 py-3" />
     </a>
     <a href="/web-development-projects/" class="no-underline">

@@ -61,7 +61,7 @@
            <div class="flex align-items-center gap-2"><i class="pi pi-server text-blue-500"></i> <strong>Current Stack:</strong> {{ answers.stack }}</div>
         </div>
 
-        <a href="https://cal.com/stackseekers" target="_blank" class="no-underline">
+        <a href="https://cal.com/stackseekers/25min" target="_blank" class="no-underline">
           <Button label="Book Free Roadmap Session" icon="pi pi-calendar" severity="primary" size="large" raised rounded class="px-5 py-3 text-lg" />
         </a>
         <div class="text-sm mt-4 text-500">

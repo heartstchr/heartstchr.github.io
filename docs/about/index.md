@@ -27,7 +27,7 @@ contributors: false
     <p class="text-xl text-300 line-height-3 m-0 mb-6" style="max-width: 700px;">
       Stack Seekers is a boutique engineering consultancy built for founders and product teams who need senior technical leadership — not a 40-person agency with layers of project managers and junior developers.
     </p>
-    <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
+    <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
       <Button label="Book Free Discovery Call" icon="pi pi-calendar" severity="primary" size="large" raised rounded />
     </a>
   </div>
@@ -115,7 +115,7 @@ contributors: false
         <a href="https://www.linkedin.com/in/jiwanghosal/" target="_blank" class="no-underline">
           <Button label="LinkedIn" icon="pi pi-linkedin" severity="secondary" outlined rounded />
         </a>
-        <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
+        <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
           <Button label="Book a Call" icon="pi pi-calendar" severity="primary" raised rounded />
         </a>
       </div>
@@ -154,7 +154,7 @@ contributors: false
     Stack Seekers was founded on a single principle: great engineering should be measured by business outcomes, not lines of code or hours billed. Every system we build is designed to reduce your operational burden, not create dependency on us.
   </p>
   <div class="flex flex-wrap justify-content-center gap-3">
-    <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
+    <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
       <Button label="Book Free Discovery Call" icon="pi pi-bolt" severity="primary" size="large" raised rounded class="px-6" />
     </a>
     <a href="/startup-stack-audit-checklist/" class="no-underline">

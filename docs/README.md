@@ -51,7 +51,7 @@ copyright: false
       </div>
       <!-- Action Center -->
       <div class="flex flex-column md:flex-row gap-3 mt-6">
-        <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=homepage&utm_campaign=homepage" target="_blank" class="no-underline">
+        <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=homepage&utm_campaign=homepage" target="_blank" class="no-underline">
           <Button label="Book Strategy Call" icon="pi pi-calendar-clock" severity="primary" size="large" rounded raised class="px-6 py-4 font-bold text-lg shadow-pill hover:scale-102 transition-transform transition-duration-200" />
         </a>
         <Button 
@@ -354,7 +354,7 @@ copyright: false
 
 <!-- Sticky Mobile CTA -->
 <div class="fixed bottom-0 left-0 w-full p-3 z-5 lg:hidden glass-sticky-cta  flex gap-3 border-top-1 border-100">
-  <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=homepage&utm_campaign=homepage" target="_blank" class="flex-grow-1 no-underline">
+  <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=homepage&utm_campaign=homepage" target="_blank" class="flex-grow-1 no-underline">
     <Button label="Book Call" icon="pi pi-calendar" severity="primary" class="w-full text-lg font-bold py-3" raised />
   </a>
   <div @click="scrollToSolutions" class="flex align-items-center justify-content-center surface-100 border-round-lg px-4 border-1 border-100 cursor-pointer">
@@ -375,7 +375,7 @@ copyright: false
         <div class="text-base font-bold text-primary mb-2">Intelligence Integration</div>
         <div class="text-2xl font-bold mb-4">AI Feature Engineering</div>
         <p class="text-sm line-height-3 mb-5 flex-grow-1">Embed custom LLMs and automated decision-making natively into your application to eliminate manual bottlenecks.</p>
-        <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=homepage&utm_campaign=homepage" class="w-full line-height-1">
+        <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=homepage&utm_campaign=homepage" class="w-full line-height-1">
           <Button label="Discuss AI Strategy" class="w-full" size="small"/>
         </a>
       </div>
@@ -386,7 +386,7 @@ copyright: false
         <div class="text-base font-bold text-600 mb-2">Product Architecture</div>
         <div class="text-2xl font-bold mb-4">SaaS MVP & Platform Build</div>
         <p class="text-sm line-height-3 mb-5 flex-grow-1">End-to-end development of resilient business platforms, built to scale from launch to high-concurrency traffic.</p>
-        <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=homepage&utm_campaign=homepage" class="w-full line-height-1">
+        <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=homepage&utm_campaign=homepage" class="w-full line-height-1">
           <Button label="Start MVP Scope" class="w-full p-button-outlined" size="small"/>
         </a>
       </div>
@@ -397,7 +397,7 @@ copyright: false
         <div class="text-base font-bold text-600 mb-2">Growth Engineering</div>
         <div class="text-2xl font-bold mb-4">Programmatic SEO Engine</div>
         <p class="text-sm line-height-3 mb-5 flex-grow-1">A database-driven acquisition framework to dominate local SEO and capture massive inbound traffic automatically.</p>
-        <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=homepage&utm_campaign=homepage" class="w-full line-height-1">
+        <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=homepage&utm_campaign=homepage" class="w-full line-height-1">
           <Button label="Get a Custom Quote" class="w-full p-button-outlined" size="small" />
         </a>
       </div>
@@ -408,7 +408,7 @@ copyright: false
         <div class="text-base font-bold text-600 mb-2">Operational Automation</div>
         <div class="text-2xl font-bold mb-4">Internal Portals & Workflows</div>
         <p class="text-sm line-height-3 mb-5 flex-grow-1">Transform fragmented internal data (Notion, Sheets) into professional, high-integrity business tools.</p>
-        <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=homepage&utm_campaign=homepage" class="w-full line-height-1">
+        <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=homepage&utm_campaign=homepage" class="w-full line-height-1">
           <Button label="Book a Scope Call" class="w-full p-button-outlined" size="small"/>
         </a>
       </div>
@@ -508,7 +508,7 @@ copyright: false
     Stop letting manual processes or weak infrastructure hold back your company's growth. Book a call to discuss architecture and solutions.
   </p>
   <div class="flex justify-content-center relative z-1">
-    <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=homepage&utm_campaign=homepage" target="_blank" class="no-underline"> 
+    <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=homepage&utm_campaign=homepage" target="_blank" class="no-underline"> 
       <Button label="Book a Free Discovery Call" icon="pi pi-video" severity="primary" size="large" raised rounded class="px-5 py-3 font-bold" />
     </a>
   </div>

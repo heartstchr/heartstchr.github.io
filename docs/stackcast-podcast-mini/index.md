@@ -35,7 +35,7 @@ Mission here is to unpack the tools, trends, and strategies that power the softw
   <div class="relative z-1">
     <h2 class="text-3xl font-bold mb-3">Need a technical strategy partner?</h2>
     <p class="text-lg text-700 mb-5 max-w-30rem mx-auto">I help founders turn technical ideas into scalable architecture. Let's discuss your next milestone.</p>
-    <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
+    <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
       <Button label="Book Free Discovery Call" icon="pi pi-microphone" severity="primary" size="large" rounded raised />
     </a>
   </div>

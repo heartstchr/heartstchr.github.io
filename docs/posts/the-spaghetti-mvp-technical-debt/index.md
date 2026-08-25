@@ -39,7 +39,7 @@ The goal of an MVP is to find Product-Market Fit. If you find it, but your softw
 <div class="my-6 p-4 surface-0 border-round-3xl shadow-2 border-left-3 border-orange-500">
   <h3 class="text-2xl font-bold mb-3">Is your codebase holding you back?</h3>
   <p class="text-lg text-700 mb-4">I help founders refactor "Spaghetti MVPs" into scalable machines and build new foundations that are ready for the global stage. Don't let technical debt kill your runway.</p>
-  <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
+  <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
     <Button label="Audit My Codebase" icon="pi pi-search-plus" size="large" rounded />
   </a>
 </div>

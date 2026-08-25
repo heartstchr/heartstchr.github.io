@@ -38,7 +38,7 @@ head:
         I build production-ready MVPs for startup founders who need to launch fast, scale cleanly, and avoid the costly rewrite cycle. One engineer, full ownership, 4 to 8 weeks.
       </p>
       <div class="flex flex-column md:flex-row gap-3 mt-5">
-        <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=startup-web-dev" target="_blank" class="no-underline">
+        <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=startup-web-dev" target="_blank" class="no-underline">
           <Button label="Book MVP Planning Call" icon="pi pi-calendar" severity="primary" size="large" rounded raised class="w-full md:w-auto" />
         </a>
         <a href="/web-development-projects/" class="no-underline">
@@ -311,7 +311,7 @@ head:
     Stop burning runway on agencies that deliver demos. Book a free strategy call and get a fixed-scope build plan within 48 hours.
   </p>
   <div class="flex flex-column md:flex-row gap-3 justify-content-center relative z-1">
-    <a href="https://cal.com/stackseekers?utm_source=website&utm_medium=cta&utm_campaign=startup-web-dev" class="no-underline">
+    <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=startup-web-dev" class="no-underline">
       <Button label="Book MVP Planning Call" icon="pi pi-calendar" severity="primary" raised rounded class="text-lg font-bold px-5 py-3" />
     </a>
     <a href="/web-development-projects/" class="no-underline">
