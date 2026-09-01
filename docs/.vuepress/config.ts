@@ -150,6 +150,10 @@ export default defineUserConfig({
       __dirname,
       "./components/Sidebar.vue"
     ),
+    "@theme-hope/components/base/MainFadeInUpTransition": path.resolve(
+      __dirname,
+      "./components/MainFadeInUpTransition.vue"
+    ),
     "@data": path.resolve(__dirname, "./data"),
     "@utils": path.resolve(__dirname, "./utils"),
     "@services": path.resolve(__dirname, "./services"),
