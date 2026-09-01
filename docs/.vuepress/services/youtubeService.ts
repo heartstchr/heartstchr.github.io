@@ -40,12 +40,43 @@ const mapVideos = (items: any[]): Video[] => {
   }));
 };
 
+const isValidPlaylistId = (playlistId: string): boolean =>
+  // YouTube playlist IDs are "PL" followed by 32 [A-Za-z0-9_-] chars.
+  /^PL[A-Za-z0-9_-]{32}$/.test(playlistId);
+
 async function fetchPublicVideosFromPlaylist(
   playlistId: string,
   maxResults: number
 ): Promise<any[]> {
   const items = await getPlaylistItems(API_KEY, playlistId, maxResults);
   return items.filter((item: any) => item.status.privacyStatus === "public");
+}
+
+// Fetch a single playlist, tolerating failures so one bad/removed playlist
+// does not break the others.
+async function fetchPlaylistSafely(
+  playlistId: string,
+  label: string
+): Promise<any[]> {
+  if (!playlistId) {
+    console.warn(`Skipping ${label}: playlist id not configured.`);
+    return [];
+  }
+  if (!isValidPlaylistId(playlistId)) {
+    console.error(`Skipping ${label}: malformed playlist id "${playlistId}".`);
+    return [];
+  }
+  try {
+    return await fetchPublicVideosFromPlaylist(playlistId, 50);
+  } catch (error: any) {
+    const reason =
+      error?.response?.data?.error?.message || error?.message || String(error);
+    console.error(
+      `Failed to fetch ${label} playlist (${playlistId}): ${reason}`,
+      error
+    );
+    return [];
+  }
 }
 
 export const fetchAndSplitVideos = async (): Promise<{
@@ -59,8 +90,8 @@ export const fetchAndSplitVideos = async (): Promise<{
 
   try {
     const [uploadedVideoItems, podcastVideoItems] = await Promise.all([
-      fetchPublicVideosFromPlaylist(UPLOADS_PLAYLIST_ID, 50),
-      fetchPublicVideosFromPlaylist(PODCAST_PLAYLIST_ID, 50),
+      fetchPlaylistSafely(UPLOADS_PLAYLIST_ID, "uploads"),
+      fetchPlaylistSafely(PODCAST_PLAYLIST_ID, "podcast"),
     ]);
 
     const podcastVideoIds = new Set(
