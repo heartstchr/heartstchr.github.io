@@ -109,6 +109,7 @@ const openCheckout = async (buyerEmail) => {
     opening.value = true;
     showConfirm.value = true;
     checkoutActive.value = true;
+    saveScroll();
     try {
         await loadScript();
         embedCheckout();
@@ -126,12 +127,14 @@ const openCheckout = async (buyerEmail) => {
                 checkoutActive.value = false;
                 rzpRef.value = null;
                 showConfirm.value = false;
+                restoreScroll();
             },
             modal: {
                 ondismiss: () => {
                     checkoutActive.value = false;
                     rzpRef.value = null;
                     showConfirm.value = false;
+                    restoreScroll();
                 },
             },
         };
@@ -153,6 +156,26 @@ const closeDialog = () => {
     }
     checkoutActive.value = false;
     showConfirm.value = false;
+    restoreScroll();
+};
+
+const restoreScroll = () => {
+    if (typeof document !== 'undefined') {
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        if (typeof window !== 'undefined' && window.scrollTo) {
+            window.scrollTo(0, Number(localStorage.getItem('__scroll_pos') || 0));
+        }
+    }
+};
+
+const saveScroll = () => {
+    if (typeof window !== 'undefined' && window.scrollY !== undefined) {
+        localStorage.setItem('__scroll_pos', String(window.scrollY));
+    }
 };
 
 const onVisibleChange = (visible) => {
@@ -281,27 +304,27 @@ const confirmBuyerEmail = async () => {
             </template>
         </div>
         <small v-if="buyerEmailError && !success" class="p-error mt-1 block">{{ buyerEmailError }}</small>
-    </div>
 
-    <Dialog
-        v-model:visible="showConfirm"
-        modal
-        :header="props.project.name"
-        :style="{ width: '92vw', maxWidth: '1080px' }"
-        :draggable="false"
-        @update:visible="onVisibleChange"
-    >
-        <div ref="checkoutHost" class="w-full" style="height: min(62vh, 560px); position: relative; overflow: hidden;">
-            <div v-if="opening" class="absolute top-0 left-0 w-full h-full flex align-items-center justify-content-center surface-0 z-1">
-                <i class="pi pi-spin pi-spinner text-4xl"></i>
+        <Dialog
+            v-model:visible="showConfirm"
+            modal
+            :header="props.project.name"
+            :style="{ width: '92vw', maxWidth: '1080px' }"
+            :draggable="false"
+            @update:visible="onVisibleChange"
+        >
+            <div ref="checkoutHost" class="w-full" style="height: min(62vh, 560px); position: relative; overflow: hidden;">
+                <div v-if="opening" class="absolute top-0 left-0 w-full h-full flex align-items-center justify-content-center surface-0 z-1">
+                    <i class="pi pi-spin pi-spinner text-4xl"></i>
+                </div>
             </div>
-        </div>
-        <template #footer>
-            <div class="flex justify-content-end gap-2">
-                <Button label="Cancel" severity="secondary" text @click="closeDialog" :disabled="opening" />
-            </div>
-        </template>
-    </Dialog>
+            <template #footer>
+                <div class="flex justify-content-end gap-2">
+                    <Button label="Cancel" severity="secondary" text @click="closeDialog" :disabled="opening" />
+                </div>
+            </template>
+        </Dialog>
+    </div>
 </template>
 
 <style scoped>
