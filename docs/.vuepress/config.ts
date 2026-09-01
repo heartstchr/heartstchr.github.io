@@ -1,4 +1,5 @@
 import { defineUserConfig } from "vuepress";
+import fs from "node:fs";
 import { loadEnv } from "vite";
 import { viteBundler } from "@vuepress/bundler-vite";
 import Components from "unplugin-vue-components/vite";
@@ -25,6 +26,31 @@ export default defineUserConfig({
           resolvers: [PrimeVueResolver()],
           include: [/\.vue$/, /\.vue\?vue/, /\.md$/, /\.md\?vue/],
         }) as unknown as any,
+        {
+          name: "emit-build-version",
+          apply: "build",
+          closeBundle() {
+            const distDir = path.resolve(__dirname, "./dist");
+            const assetsDir = path.join(distDir, "assets");
+            const appFile = fs
+              .readdirSync(assetsDir)
+              .find((f: string) => /^app-[A-Za-z0-9_-]+\.js$/.test(f));
+            const bundleHash = appFile ? appFile.replace(/^app-/, "").replace(/\.js$/, "") : "";
+            const version = {
+              hash: bundleHash,
+              timestamp: Date.now(),
+            };
+            fs.writeFileSync(
+              path.join(distDir, "version.json"),
+              JSON.stringify(version)
+            );
+            // Also expose to the page head-injected version check
+            fs.writeFileSync(
+              path.join(distDir, "assets", "version.js"),
+              `window.__BUILD_VERSION__=${JSON.stringify(version)};`
+            );
+          },
+        } as any,
       ],
       ssr: {
         noExternal: ["primevue"],
@@ -106,6 +132,13 @@ export default defineUserConfig({
     ["meta", { name: "ai-category", content: "Enterprise Architecture Digital Transformation" }],
     ["meta", { name: "ai-specialty", content: "Fractional CTO, AI Automation, Scalable SaaS" }],
     ["script", { src: "/ga-loader.js" }],
+    ["script", { src: "/sw-register.js" }],
+    [
+      "script",
+      {
+        children: `(function(){if(document.querySelector('link[rel="stylesheet"][href*="version"]')){return}var reloaded=sessionStorage.getItem("ss_bs");if(reloaded){return}function getBundleHash(){var s=document.querySelector('script[src*="/assets/app-"]');if(s){var m=s.src.match(/\\/app-([A-Za-z0-9_-]+)\\.js/);if(m){return m[1]}}return""}try{fetch("/version.json"+location.search,{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).then(function(v){if(v&&v.hash){if(v.hash!==getBundleHash()){sessionStorage.setItem("ss_bs","1");location.reload(true)}}})}catch(e){}})();`,
+      },
+    ],
   ],
   theme,
   plugins: [
