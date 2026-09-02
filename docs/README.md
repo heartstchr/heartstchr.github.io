@@ -86,7 +86,7 @@ copyright: false
           <img src="/img/projects/ai-dynamic-crud-app/ai-gemini-app.webp" alt="AI Automation" width="600" height="800" class="w-full h-full" style="object-fit: cover;" fetchpriority="high" />
         </div>
         <!-- Secondary Cards -->
-        <div class="bento-hero-item bento-hero-2  border-round-xl overflow-hidden relative bento-hover surface-100 flex align-items-center justify-content-center">
+        <div class="bento-hero-item bento-hero-2  border-round-xl overflow-hidden relative bento-hover surface-100 flex align-items-center justify-content-center bg-white">
           <img src="/img/home/projects/notion_service_request.webp" alt="Service Request System" width="600" height="400" class="w-full h-full" style="object-fit: contain;" fetchpriority="high" />
         </div>
         <div class="bento-hero-item bento-hero-3  border-round-xl overflow-hidden relative bento-hover surface-100 flex align-items-center justify-content-center">

@@ -825,6 +825,90 @@ const getLastModified = (filePath, pagePath) => {
   return toIsoDate(stats.mtime);
 };
 
+// Fetch YouTube playlists at build time so the "Stack Seekers TV" page has
+// crawlable video content (titles/descriptions/links) in the SSR HTML rather
+// than only after a client-side API call. Gracefully degrades: on any failure
+// it writes an empty dataset and the page falls back to runtime fetching.
+const YT_API =
+  process.env.VITE_YOUTUBE_API_KEY ||
+  (function () {
+    const m = configContent.match(
+      /VITE_YOUTUBE_API_KEY.*?\|\|\s*"?([^"]*)"?/
+    );
+    return m ? m[1] : "";
+  })();
+
+const YT_UPLOADS =
+  process.env.VITE_YOUTUBE_UPLOADS_PLAYLIST_ID ||
+  "PLGK9Y5ibwm0-qWAUabrF387SEdcYzCL7s";
+const YT_PODCAST =
+  process.env.VITE_YOUTUBE_PODCAST_PLAYLIST_ID ||
+  "PLGK9Y5ibwm0-diGJKA69TmIGUQBIStzNw";
+
+const ytFetchJson = async (playlistId, maxResults) => {
+  const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,status&maxResults=${maxResults}&playlistId=${playlistId}&key=${encodeURIComponent(
+    YT_API
+  )}`;
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error(`YouTube API ${res.status} for playlist ${playlistId}`);
+  }
+  return res.json();
+};
+
+const mapYoutubeItem = (item) => ({
+  id: item.snippet.resourceId.videoId,
+  title: item.snippet.title || "",
+  description: item.snippet.description || "",
+  thumbnail: item.snippet.thumbnails?.medium?.url || "",
+  publishedAt: item.snippet.publishedAt || "",
+  privacyStatus: item.status?.privacyStatus || "private",
+  url: `https://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`,
+});
+
+const generateYouTubeVideos = async () => {
+  const outFile = path.resolve(__dirname, "./data/youtubeVideos.ts");
+  const empty = { channelVideos: [], podcastVideos: [], fetchedAt: null };
+  const write = (data) =>
+    fs.writeFileSync(
+      outFile,
+      `// GENERATED at build time. Do not edit.
+export const youtubeVideos = ${JSON.stringify(data, null, 2)};
+`
+    );
+  if (!YT_API) {
+    console.warn("[youtube] No VITE_YOUTUBE_API_KEY; writing empty data.");
+    write(empty);
+    return;
+  }
+  try {
+    const [uploads, podcast] = await Promise.all([
+      ytFetchJson(YT_UPLOADS, 50),
+      ytFetchJson(YT_PODCAST, 50),
+    ]);
+    const podcastIds = new Set(
+      (podcast.items || []).map((i) => i.snippet.resourceId.videoId)
+    );
+    const publicUploads = (uploads.items || [])
+      .filter((i) => i.status?.privacyStatus === "public")
+      .filter((i) => !podcastIds.has(i.snippet.resourceId.videoId));
+    const publicPodcast = (podcast.items || []).filter(
+      (i) => i.status?.privacyStatus === "public"
+    );
+    write({
+      channelVideos: publicUploads.map(mapYoutubeItem),
+      podcastVideos: publicPodcast.map(mapYoutubeItem),
+      fetchedAt: new Date().toISOString(),
+    });
+    console.log(
+      `Created youtubeVideos.ts (${publicUploads.length} channel, ${publicPodcast.length} podcast)`
+    );
+  } catch (error) {
+    console.warn("[youtube] Build-time fetch failed, writing empty data:", error.message);
+    write(empty);
+  }
+};
+
 const generateSitemap = () => {
   ensureDirectoryExists(publicDir);
 
@@ -867,3 +951,4 @@ generatePages(freelance, outProjectDir, "name", projectTemplate);
 generatePages(services, outServiceDir, "code", serviceTemplate);
 generateTagPages();
 generateSitemap();
+await generateYouTubeVideos();

@@ -27,13 +27,15 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
+import { youtubeVideos } from '@data/youtubeVideos.ts';
 import { fetchChannelVideos } from '../services/youtubeService';
 
-const videos = ref([]);
+const videos = ref((youtubeVideos.channelVideos || []).slice(0, 4).map((v) => ({ ...v })));
 
 onMounted(async () => {
     try {
-        videos.value = await fetchChannelVideos(4);
+        const fresh = await fetchChannelVideos(4);
+        if (fresh.length) videos.value = fresh;
     } catch (error) {
         console.error('Error loading videos:', error);
     }

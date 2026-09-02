@@ -41,6 +41,7 @@
 
 <script setup>
 import { ref, onMounted, computed } from 'vue';
+import { youtubeVideos } from '@data/youtubeVideos.ts';
 import { fetchAndSplitVideos } from '../services/youtubeService';
 
 const props = defineProps({
@@ -50,7 +51,7 @@ const props = defineProps({
     }
 });
 
-const videos = ref([]);
+const videos = ref((youtubeVideos.podcastVideos || []).map((v) => ({ ...v })));
 const currentPage = ref(0);
 const rowsPerPage = ref(3);
 
@@ -71,7 +72,7 @@ const onPageChange = (event) => {
 onMounted(async () => {
     try {
         const { podcastVideos } = await fetchAndSplitVideos();
-        videos.value = podcastVideos;
+        if (podcastVideos.length) videos.value = podcastVideos;
     } catch (error) {
         console.error('Error loading videos:', error);
     }

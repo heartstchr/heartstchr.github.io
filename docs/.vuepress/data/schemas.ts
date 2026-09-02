@@ -1,11 +1,48 @@
 import { posts } from "./posts.js";
 import { services } from "./services.js";
 import { freelance } from "./projects.js";
+import { youtubeVideos } from "./youtubeVideos.ts";
 import { toKebabCase } from "../utils/index.js";
 
 const DOMAIN = "https://stackseekers.com";
 
 const absoluteUrl = (pagePath: string) => `${DOMAIN}${pagePath}`;
+
+const videoSchema = (video: any, index: number) => ({
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": video.url,
+  name: video.title,
+  description: (video.description || "").slice(0, 300),
+  thumbnailUrl: video.thumbnail,
+  uploadDate: video.publishedAt,
+  contentUrl: video.url,
+  embedUrl: `https://www.youtube.com/embed/${video.id}`,
+  publisher: {
+    "@type": "Organization",
+    "@id": `${DOMAIN}/#organization`,
+    name: "Stack Seekers",
+  },
+  author: {
+    "@type": "Person",
+    "@id": `${DOMAIN}/#person`,
+  },
+});
+
+const tvHubSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${DOMAIN}/stackseekers-tv/`,
+    name: "Stack Seekers TV — Code Tutorials & Architecture Demos",
+    description:
+      "Watch web development tutorials, app walkthroughs, and architectural demos from an Enterprise Architect building with React, Node.js, and full-stack systems.",
+    url: absoluteUrl("/stackseekers-tv/"),
+    isPartOf: { "@id": `${DOMAIN}/#organization` },
+  },
+  ...(youtubeVideos.channelVideos || []).map(videoSchema),
+  ...(youtubeVideos.podcastVideos || []).map(videoSchema),
+];
 
 const breadcrumbSchema = (items: Array<{ name: string; path: string }>) => ({
   "@context": "https://schema.org",
@@ -374,6 +411,7 @@ export const pageSpecificSchemas: Record<string, any[]> = {
   "/web-development-services/": servicesHubSchemas,
   "/web-development-projects/": projectsHubSchemas,
   "/contact/": contactSchemas,
+  "/stackseekers-tv/": tvHubSchemas,
   ...serviceSchemas,
   ...projectSchemas,
   ...postSchemas,

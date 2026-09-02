@@ -6,3 +6,5 @@ docs/.vuepress/dist
 .env
 .env.local
 analytics
+# Generated at build time by generate-pages.js
+docs/.vuepress/data/youtubeVideos.ts
