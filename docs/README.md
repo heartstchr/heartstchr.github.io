@@ -176,11 +176,9 @@ copyright: false
         <h3 class="m-0 mb-3 font-bold text-2xl tracking-tight">The Scale Problem</h3>
         <p class="text-700 text-lg line-height-3 mb-4">Your legacy application is crumbling under traffic. We architect flawless, high-concurrency SaaS platforms built for absolute resilience and growth.</p>
           <div class="mt-auto pt-3 border-top-1 border-100">
-            <GatedLink 
-               href="/startup-stack-audit-checklist/" 
-               label="Run a Tech Stack Self-Audit" 
-               customClass="no-underline text-sm font-bold text-purple-500 flex align-items-center gap-2 hover:translate-x-2 transition-all"
-            />
+            <a href="/startup-stack-audit-checklist/" class="no-underline text-sm font-bold text-purple-500 inline-flex align-items-center gap-2 hover:translate-x-2 transition-all">
+              <i class="pi pi-arrow-right"></i> Run a Tech Stack Self-Audit
+            </a>
          </div>
       </div>
     </div>
