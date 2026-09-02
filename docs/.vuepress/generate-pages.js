@@ -6,6 +6,37 @@ import { toKebabCase } from "./utils/index.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Minimal .env loader. This script runs as a plain Node process during the
+// prebuild step (before Vite mounts), so it never sees the Vite-loaded env
+// files. Load the repo-root .env / .env.local ourselves so build-time values
+// (e.g. VITE_YOUTUBE_API_KEY) are available here. Mirrors Vite precedence:
+// .env.local wins over .env, and existing process.env values are never
+// overridden.
+const envDir = path.resolve(__dirname, "..", ".."); // repo root
+for (const envFile of ["env", "env.local"]) {
+  const envPath = path.join(envDir, `.${envFile}`);
+  if (fs.existsSync(envPath)) {
+    for (const line of fs.readFileSync(envPath, "utf-8").split("\n")) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith("#")) continue;
+      const eq = trimmed.indexOf("=");
+      if (eq === -1) continue;
+      const key = trimmed.slice(0, eq).trim();
+      if (!key) continue;
+      let value = trimmed.slice(eq + 1).trim();
+      if (
+        (value.startsWith('"') && value.endsWith('"')) ||
+        (value.startsWith("'") && value.endsWith("'"))
+      ) {
+        value = value.slice(1, -1);
+      }
+      if (process.env[key] === undefined) {
+        process.env[key] = value;
+      }
+    }
+  }
+}
+
 // Read and extract SUPPORT_EMAIL from config.ts
 const configContent = fs.readFileSync(path.resolve(__dirname, "config.ts"), "utf-8");
 const match = configContent.match(/const\s+SUPPORT_EMAIL\s*=\s*["']([^"']+)["']/);
