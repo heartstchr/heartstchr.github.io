@@ -4,7 +4,8 @@ description: "Fast-to-market products, niche platforms, and proof-of-concept lau
 lastUpdated: false
 editLink: false
 copyright: false
-home: true
+layout: Layout
+hidePageTitle: true
 head:
   - - script
     - type: application/ld+json

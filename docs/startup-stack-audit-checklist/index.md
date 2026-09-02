@@ -1,5 +1,5 @@
 ---
-title: Startup Tech Stack Audit Checklist | Scalability & Risk Assessment
+title: Startup Tech Stack Audit Checklist | Scalability & Risk
 description: Use this professional diagnostic tool to audit your startup's technical debt, SaaS infrastructure, and cloud scalability. Built for non-technical founders.
 editLink: false
 copyright: false

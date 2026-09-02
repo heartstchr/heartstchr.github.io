@@ -2,6 +2,7 @@
 title: Posts tagged with productivity
 description: Explore articles, tutorials, and insights about productivity — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: productivity
 head:
   - - meta

@@ -2,11 +2,12 @@
 title: Posts tagged with notion
 description: Explore articles, tutorials, and insights about notion — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: notion
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: notion, web development, programming, tech, tutorial

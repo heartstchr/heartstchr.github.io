@@ -2,11 +2,12 @@
 title: Posts tagged with react
 description: Explore articles, tutorials, and insights about react — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: react
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: react, web development, programming, tech, tutorial

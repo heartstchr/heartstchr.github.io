@@ -114,16 +114,6 @@ export default defineUserConfig({
       {
         rel: "preload",
         as: "image",
-        href: "/pattern.webp",
-        type: "image/webp",
-        fetchpriority: "high",
-      },
-    ],
-    [
-      "link",
-      {
-        rel: "preload",
-        as: "image",
         href: "/img/home/jiwanghosal.webp",
         type: "image/webp",
         fetchpriority: "high",
@@ -182,6 +172,10 @@ export default defineUserConfig({
     "@theme-hope/components/sidebar/Sidebar": path.resolve(
       __dirname,
       "./components/Sidebar.vue"
+    ),
+    "@theme-hope/components/base/PageTitle": path.resolve(
+      __dirname,
+      "./components/PageTitle.vue"
     ),
     "@theme-hope/components/base/MainFadeInUpTransition": path.resolve(
       __dirname,

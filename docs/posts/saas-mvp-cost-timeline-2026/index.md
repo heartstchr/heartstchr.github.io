@@ -1,5 +1,5 @@
 ---
-title: "SaaS MVP Timeline in 2026: Real Scope, Effort & Decisions That Drive It"
+title: "SaaS MVP Timeline in 2026: Scope, Effort, and Decisions"
 description: "Stop guessing. Here's what a SaaS MVP actually takes in 2026 — by scope, team model, and hidden work — plus the 3 decisions that control your timeline."
 date: 2026-08-17
 category: "Business Strategy"

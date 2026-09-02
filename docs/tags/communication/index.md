@@ -2,11 +2,12 @@
 title: Posts tagged with communication
 description: Explore articles, tutorials, and insights about communication — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: communication
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: communication, web development, programming, tech, tutorial

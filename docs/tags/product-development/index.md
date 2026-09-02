@@ -2,11 +2,12 @@
 title: Posts tagged with product development
 description: Explore articles, tutorials, and insights about product development — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: product development
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: product development, web development, programming, tech, tutorial

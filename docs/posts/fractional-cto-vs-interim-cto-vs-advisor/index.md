@@ -1,5 +1,5 @@
 ---
-title: "Fractional CTO vs Interim CTO vs Advisor: Which Model Do You Need?"
+title: "Fractional CTO vs Interim CTO vs Advisor: Which Model?"
 description: "Fractional CTO, interim CTO, advisor, or consultant — each solves a different problem. Learn the four models and how to pick the right one for your stage."
 date: 2026-08-15
 category: "Technical Advisory"

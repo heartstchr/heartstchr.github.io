@@ -2,11 +2,12 @@
 title: Posts tagged with repository management
 description: Explore articles, tutorials, and insights about repository management — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: repository management
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: repository management, web development, programming, tech, tutorial

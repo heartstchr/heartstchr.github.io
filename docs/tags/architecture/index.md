@@ -2,6 +2,7 @@
 title: Posts tagged with architecture
 description: Explore articles, tutorials, and insights about architecture — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: architecture
 head:
   - - meta

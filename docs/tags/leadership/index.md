@@ -2,11 +2,12 @@
 title: Posts tagged with leadership
 description: Explore articles, tutorials, and insights about leadership — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: leadership
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: leadership, web development, programming, tech, tutorial

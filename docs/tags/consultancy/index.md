@@ -2,11 +2,12 @@
 title: Posts tagged with consultancy
 description: Explore articles, tutorials, and insights about consultancy — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: consultancy
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: consultancy, web development, programming, tech, tutorial

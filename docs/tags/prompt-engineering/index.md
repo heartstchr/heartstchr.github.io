@@ -2,11 +2,12 @@
 title: Posts tagged with prompt engineering
 description: Explore articles, tutorials, and insights about prompt engineering — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: prompt engineering
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: prompt engineering, web development, programming, tech, tutorial

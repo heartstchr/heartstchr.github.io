@@ -2,11 +2,12 @@
 title: Posts tagged with user experience
 description: Explore articles, tutorials, and insights about user experience — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: user experience
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: user experience, web development, programming, tech, tutorial

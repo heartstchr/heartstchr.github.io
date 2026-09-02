@@ -2,6 +2,7 @@
 title: Posts tagged with seo
 description: Explore articles, tutorials, and insights about seo — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: seo
 head:
   - - meta

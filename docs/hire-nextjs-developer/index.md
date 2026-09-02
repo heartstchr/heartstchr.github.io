@@ -1,7 +1,8 @@
 ---
 title: Hire Next.js Developer | Senior React Engineer for SSR & SSG
 description: Hire an experienced Next.js developer for server-side rendering, App Router architecture, static generation, and SEO-optimized React applications. Senior-level execution, zero agency overhead.
-home: true
+layout: Layout
+hidePageTitle: true
 editLink: false
 copyright: false
 pageInfo: false

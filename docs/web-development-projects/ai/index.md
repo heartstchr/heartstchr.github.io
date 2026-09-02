@@ -4,7 +4,8 @@ description: "AI-powered tools, intelligent automation, and machine learning int
 lastUpdated: false
 editLink: false
 copyright: false
-home: true
+layout: Layout
+hidePageTitle: true
 ---
 
 <section class="hero-newage relative overflow-hidden p-8 mb-4">

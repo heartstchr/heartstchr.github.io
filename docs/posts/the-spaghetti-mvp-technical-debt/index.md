@@ -1,5 +1,5 @@
 ---
-title: "The Spaghetti MVP: Why Cheap Development is the Most Expensive Mistake for Startups"
+title: "The Spaghetti MVP: Why Cheap Development Costs More"
 description: "Rushing to market with messy code feels like speed, but it's actually technical debt. Learn how to build an MVP that scales without needing a total rewrite."
 date: 2026-04-18
 category: "Web Development"

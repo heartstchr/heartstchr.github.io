@@ -2,11 +2,12 @@
 title: Posts tagged with agile
 description: Explore articles, tutorials, and insights about agile — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: agile
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: agile, web development, programming, tech, tutorial

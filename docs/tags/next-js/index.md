@@ -2,11 +2,12 @@
 title: Posts tagged with next.js
 description: Explore articles, tutorials, and insights about next.js — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: next.js
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: next.js, web development, programming, tech, tutorial

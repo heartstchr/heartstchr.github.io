@@ -2,11 +2,12 @@
 title: Posts tagged with vuepress
 description: Explore articles, tutorials, and insights about vuepress — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: vuepress
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: vuepress, web development, programming, tech, tutorial

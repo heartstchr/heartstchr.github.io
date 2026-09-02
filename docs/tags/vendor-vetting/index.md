@@ -2,11 +2,12 @@
 title: Posts tagged with vendor vetting
 description: Explore articles, tutorials, and insights about vendor vetting — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: vendor vetting
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: vendor vetting, web development, programming, tech, tutorial

@@ -2,11 +2,12 @@
 title: Posts tagged with scalability
 description: Explore articles, tutorials, and insights about scalability — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: scalability
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: scalability, web development, programming, tech, tutorial

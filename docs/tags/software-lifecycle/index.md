@@ -2,11 +2,12 @@
 title: Posts tagged with software lifecycle
 description: Explore articles, tutorials, and insights about software lifecycle — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: software lifecycle
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: software lifecycle, web development, programming, tech, tutorial

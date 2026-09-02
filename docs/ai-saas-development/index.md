@@ -1,7 +1,8 @@
 ---
 title: AI SaaS Development | Build AI-Powered SaaS Products
 description: Build AI-powered SaaS products with LLM integration, intelligent automation, and production-grade architecture. From AI idea to shipped SaaS product in weeks.
-home: true
+layout: Layout
+hidePageTitle: true
 editLink: false
 copyright: false
 pageInfo: false

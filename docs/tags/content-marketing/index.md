@@ -2,11 +2,12 @@
 title: Posts tagged with content marketing
 description: Explore articles, tutorials, and insights about content marketing — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: content marketing
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: content marketing, web development, programming, tech, tutorial

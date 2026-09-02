@@ -2,11 +2,12 @@
 title: Posts tagged with ui/ux
 description: Explore articles, tutorials, and insights about ui/ux — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: ui/ux
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: ui/ux, web development, programming, tech, tutorial

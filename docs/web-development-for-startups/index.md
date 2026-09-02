@@ -1,7 +1,8 @@
 ---
 title: Web Development for Startups | Ship Your MVP in 4-8 Weeks
 description: Production-ready startup MVPs built by a senior full-stack developer. Fixed scope, fixed timeline, zero agency overhead. From idea to launched product in 4-8 weeks.
-home: true
+layout: Layout
+hidePageTitle: true
 editLink: false
 copyright: false
 pageInfo: false

@@ -2,11 +2,12 @@
 title: Posts tagged with natural language processing
 description: Explore articles, tutorials, and insights about natural language processing — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: natural language processing
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: natural language processing, web development, programming, tech, tutorial

@@ -2,11 +2,12 @@
 title: Posts tagged with javascript
 description: Explore articles, tutorials, and insights about javascript — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: javascript
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: javascript, web development, programming, tech, tutorial

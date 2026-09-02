@@ -1,5 +1,5 @@
 ---
-title: "Beyond Spreadsheets: Scaling Operations with Custom Internal Portals"
+title: "Beyond Spreadsheets: Scaling Ops With Internal Portals"
 description: "Stop drowning in manual data entry. Learn how to bridge Notion databases and spreadsheets with custom React-based internal portals to automate your workflow."
 date: 2026-04-18
 category: "Business Automation"

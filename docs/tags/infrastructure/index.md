@@ -2,11 +2,12 @@
 title: Posts tagged with infrastructure
 description: Explore articles, tutorials, and insights about infrastructure — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: infrastructure
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: infrastructure, web development, programming, tech, tutorial

@@ -2,6 +2,7 @@
 title: Explore Topics
 description: Browse all technical topics, tutorials, and insights by category and tags.
 layout: Layout
+hidePageTitle: true
 ---
 
 <section class="p-4 surface-900 text-white border-round-3xl mb-8 overflow-hidden relative">

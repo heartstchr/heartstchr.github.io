@@ -2,11 +2,12 @@
 title: Posts tagged with saas
 description: Explore articles, tutorials, and insights about saas — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: saas
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: saas, web development, programming, tech, tutorial

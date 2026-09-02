@@ -1,5 +1,5 @@
 ---
-title: "How to Vet a Development Agency: A Non-Technical Founder's Checklist"
+title: "How to Vet a Development Agency: Founder's Technical Checklist"
 description: "Most vetting advice is written by salespeople. This is the technical checklist I'd run — from GitHub signals to reference calls that actually reveal quality."
 date: 2026-08-16
 category: "Business Strategy"

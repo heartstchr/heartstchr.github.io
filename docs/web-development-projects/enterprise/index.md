@@ -4,7 +4,8 @@ description: "Large-scale enterprise platforms, banking systems, and mission-cri
 lastUpdated: false
 editLink: false
 copyright: false
-home: true
+layout: Layout
+hidePageTitle: true
 head:
   - - script
     - type: application/ld+json

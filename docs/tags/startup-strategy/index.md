@@ -2,11 +2,12 @@
 title: Posts tagged with startup strategy
 description: Explore articles, tutorials, and insights about startup strategy — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: startup strategy
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: startup strategy, web development, programming, tech, tutorial

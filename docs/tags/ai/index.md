@@ -2,6 +2,7 @@
 title: Posts tagged with ai
 description: Explore articles, tutorials, and insights about ai — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: ai
 head:
   - - meta

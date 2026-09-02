@@ -2,11 +2,12 @@
 title: Posts tagged with technology
 description: Explore articles, tutorials, and insights about technology — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: technology
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: technology, web development, programming, tech, tutorial

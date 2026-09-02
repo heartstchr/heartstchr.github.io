@@ -2,11 +2,12 @@
 title: Posts tagged with process
 description: Explore articles, tutorials, and insights about process — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: process
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: process, web development, programming, tech, tutorial

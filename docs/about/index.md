@@ -2,7 +2,8 @@
 title: Independent Enterprise Engineering Consultancy
 description: Stack Seekers is an independent engineering consultancy by Jiwan Ghosal, delivering banking-grade reliability and AI-powered growth systems for founders.
 order: 4
-home: true
+layout: Layout
+hidePageTitle: true
 editLink: false
 copyright: false
 pageInfo: false

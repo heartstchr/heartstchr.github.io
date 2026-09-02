@@ -2,11 +2,12 @@
 title: Posts tagged with collaboration
 description: Explore articles, tutorials, and insights about collaboration — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: collaboration
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: collaboration, web development, programming, tech, tutorial

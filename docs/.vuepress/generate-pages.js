@@ -422,6 +422,7 @@ contributors: false
 pageInfo: false
 copyright: false
 layout: Layout
+hidePageTitle: true
 service:
   name: ${JSON.stringify(service.name)}
   descriptions: ${JSON.stringify(service.descriptions)}
@@ -473,6 +474,21 @@ service:
         </div>
       </div>
     </div>
+  </section>
+
+  <section class="mb-6">
+    <h2 class="text-3xl font-bold mt-0 mb-3">Why {{$frontmatter.service.name}} Matters</h2>
+    <p class="text-lg text-700 line-height-3 mb-3">
+      When you choose {{$frontmatter.service.name}} with Stack Seekers, you get a senior engineer-led engagement
+      focused on <strong>{{$frontmatter.service.outcome}}</strong> — not a scoped feature list that leaves architecture
+      to chance. I work directly with your product and engineering team to remove the technical bottlenecks that
+      slow revenue, protect your runway, and keep your codebase scalable as you grow.
+    </p>
+    <p class="text-lg text-700 line-height-3 m-0">
+      Every engagement starts with an audit of your current system, a prioritized risk map, and a practical roadmap
+      that the team can execute. The goal is production-grade delivery: architecture you can scale to
+      <strong>{{$frontmatter.service.metric}}</strong>, clear ownership, and no hidden surprises at launch.
+    </p>
   </section>
 
   <section class="mb-6 surface-50 border-round-3xl p-4 md:p-5">
@@ -662,17 +678,20 @@ service:
 `;
 };
 
-const tagTemplate = (tag) => {
+const tagTemplate = (tag, postCount) => {
   const description = `Explore articles, tutorials, and insights about ${tag} — with best practices and latest trends.`;
+  // Avoid index bloat from thin tag pages: only index tags with meaningful content.
+  const robots = postCount >= 3 ? "index, follow" : "noindex, follow";
   return `---
 title: Posts tagged with ${tag}
 description: ${description}
 layout: Layout
+hidePageTitle: true
 tag: ${tag}
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: ${robots}
   - - meta
     - name: keywords
       content: ${tag}, web development, programming, tech, tutorial
@@ -716,9 +735,20 @@ const generateTagPages = () => {
   const tagsArray = Array.from(allTags).sort();
   ensureDirectoryExists(outTagsDir);
 
+  // Count posts per tag so thin tag pages can be noindexed.
+  const tagCount = new Map();
+  posts.forEach((post) => {
+    if (Array.isArray(post.tags)) {
+      post.tags.forEach((tag) => {
+        const key = String(tag).toLowerCase();
+        tagCount.set(key, (tagCount.get(key) || 0) + 1);
+      });
+    }
+  });
+
   // Generate individual tag pages
   tagsArray.forEach((tag) => {
-    const content = tagTemplate(tag);
+    const content = tagTemplate(tag, tagCount.get(tag) || 0);
     const dirPath = path.join(outTagsDir, toKebabCase(tag));
     const filePath = path.join(dirPath, "index.md");
 
@@ -732,6 +762,7 @@ const generateTagPages = () => {
 title: Explore Topics
 description: Browse all technical topics, tutorials, and insights by category and tags.
 layout: Layout
+hidePageTitle: true
 ---
 
 <section class="p-4 surface-900 text-white border-round-3xl mb-8 overflow-hidden relative">

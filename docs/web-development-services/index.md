@@ -1,7 +1,8 @@
 ---
-title: Engineering Services | Fractional CTO, AI Automation, Programmatic SEO
+title: Engineering Services | Fractional CTO & AI Automation
 description: Fractional CTO leadership, AI automation, programmatic SEO engineering, and scalable product architecture for startups and enterprise teams.
-home: true
+layout: Layout
+hidePageTitle: true
 order: 3
 lastUpdated: false
 editLink: false

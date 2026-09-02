@@ -2,11 +2,12 @@
 title: Posts tagged with vue cli
 description: Explore articles, tutorials, and insights about vue cli — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: vue cli
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: vue cli, web development, programming, tech, tutorial

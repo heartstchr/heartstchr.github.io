@@ -2,11 +2,12 @@
 title: Posts tagged with machine learning
 description: Explore articles, tutorials, and insights about machine learning — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: machine learning
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: machine learning, web development, programming, tech, tutorial

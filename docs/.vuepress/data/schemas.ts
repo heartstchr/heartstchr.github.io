@@ -248,6 +248,23 @@ const serviceSchemas = Object.fromEntries(
             availability: "https://schema.org/InStock",
           },
         },
+        ...(service.faq && service.faq.length
+          ? [
+              {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "@id": `${absoluteUrl(pagePath)}#faq`,
+                mainEntity: service.faq.map((item: any) => ({
+                  "@type": "Question",
+                  name: item.question,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: item.answer,
+                  },
+                })),
+              },
+            ]
+          : []),
         breadcrumbSchema([
           { name: "Home", path: "/" },
           { name: "Services", path: "/web-development-services/" },
@@ -326,6 +343,7 @@ const projectSchemas = Object.fromEntries(
           operatingSystem: "All",
           creator: { "@id": `${DOMAIN}/#person` },
           publisher: { "@id": `${DOMAIN}/#organization` },
+          datePublished: project.year ? `${project.year}-01-01` : undefined,
         },
         breadcrumbSchema([
           { name: "Home", path: "/" },

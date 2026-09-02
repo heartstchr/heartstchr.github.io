@@ -2,11 +2,12 @@
 title: Posts tagged with saas mvp
 description: Explore articles, tutorials, and insights about saas mvp — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: saas mvp
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: saas mvp, web development, programming, tech, tutorial

@@ -2,11 +2,12 @@
 title: Posts tagged with post-launch
 description: Explore articles, tutorials, and insights about post-launch — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: post-launch
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: post-launch, web development, programming, tech, tutorial

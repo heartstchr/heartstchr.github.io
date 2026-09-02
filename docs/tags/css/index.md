@@ -2,11 +2,12 @@
 title: Posts tagged with css
 description: Explore articles, tutorials, and insights about css — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: css
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: css, web development, programming, tech, tutorial

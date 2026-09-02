@@ -2,11 +2,12 @@
 title: Posts tagged with typescript
 description: Explore articles, tutorials, and insights about typescript — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: typescript
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: typescript, web development, programming, tech, tutorial

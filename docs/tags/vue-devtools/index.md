@@ -2,11 +2,12 @@
 title: Posts tagged with vue devtools
 description: Explore articles, tutorials, and insights about vue devtools — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: vue devtools
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: vue devtools, web development, programming, tech, tutorial

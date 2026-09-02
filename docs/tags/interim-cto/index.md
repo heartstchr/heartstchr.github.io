@@ -2,11 +2,12 @@
 title: Posts tagged with interim cto
 description: Explore articles, tutorials, and insights about interim cto — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: interim cto
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: interim cto, web development, programming, tech, tutorial

@@ -2,11 +2,12 @@
 title: Posts tagged with cwebp
 description: Explore articles, tutorials, and insights about cwebp — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: cwebp
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: cwebp, web development, programming, tech, tutorial

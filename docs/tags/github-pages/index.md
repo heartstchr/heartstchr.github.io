@@ -2,11 +2,12 @@
 title: Posts tagged with github pages
 description: Explore articles, tutorials, and insights about github pages — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: github pages
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: github pages, web development, programming, tech, tutorial

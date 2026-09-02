@@ -2,11 +2,12 @@
 title: Posts tagged with devops
 description: Explore articles, tutorials, and insights about devops — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: devops
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: devops, web development, programming, tech, tutorial

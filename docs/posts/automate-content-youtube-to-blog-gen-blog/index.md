@@ -1,5 +1,5 @@
 ---
-title: "Automate Your Content: Turn YouTube Videos into Blogs with GEN-BLOG"
+title: "Automate Content: Turn YouTube Videos into Blogs with GEN-BLOG"
 description: Discover how GEN-BLOG, a Node.js tool, converts YouTube transcripts into SEO-friendly blog posts using AI. Save time and boost your content creation!
 date: 2025-06-05
 category: [Tech, Content, Blogging, Automation]

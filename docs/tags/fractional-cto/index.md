@@ -2,11 +2,12 @@
 title: Posts tagged with fractional cto
 description: Explore articles, tutorials, and insights about fractional cto — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: fractional cto
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: fractional cto, web development, programming, tech, tutorial

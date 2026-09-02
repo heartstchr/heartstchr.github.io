@@ -2,11 +2,12 @@
 title: Posts tagged with growth
 description: Explore articles, tutorials, and insights about growth — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: growth
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: growth, web development, programming, tech, tutorial

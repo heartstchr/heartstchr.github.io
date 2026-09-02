@@ -1,5 +1,5 @@
 ---
-title: "Breaking the Black Box: How I Ensure 100% Visibility in Your Software Build"
+title: "Breaking the Black Box: Full Visibility in Your Software Build"
 description: "Stop wondering what your developers are doing. Learn how a transparent engineering process with weekly demos and clear roadmaps eliminates project risk."
 date: 2026-04-18
 category: "Project Management"

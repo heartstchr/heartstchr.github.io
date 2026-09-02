@@ -2,6 +2,7 @@
 title: Posts tagged with automation
 description: Explore articles, tutorials, and insights about automation — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: automation
 head:
   - - meta

@@ -7,6 +7,7 @@ contributors: false
 pageInfo: false
 copyright: false
 layout: Layout
+hidePageTitle: true
 service:
   name: "SaaS MVP Development"
   descriptions: ["I build production-ready SaaS MVPs on a fixed 4 to 8-week timeline — full-stack, deployed, and built to scale past your first 10,000 users without a rewrite.","One senior engineer, full ownership, zero agency overhead. Your MVP ships as a real product, not a clickable demo."]
@@ -58,6 +59,21 @@ service:
         </div>
       </div>
     </div>
+  </section>
+
+  <section class="mb-6">
+    <h2 class="text-3xl font-bold mt-0 mb-3">Why {{$frontmatter.service.name}} Matters</h2>
+    <p class="text-lg text-700 line-height-3 mb-3">
+      When you choose {{$frontmatter.service.name}} with Stack Seekers, you get a senior engineer-led engagement
+      focused on <strong>{{$frontmatter.service.outcome}}</strong> — not a scoped feature list that leaves architecture
+      to chance. I work directly with your product and engineering team to remove the technical bottlenecks that
+      slow revenue, protect your runway, and keep your codebase scalable as you grow.
+    </p>
+    <p class="text-lg text-700 line-height-3 m-0">
+      Every engagement starts with an audit of your current system, a prioritized risk map, and a practical roadmap
+      that the team can execute. The goal is production-grade delivery: architecture you can scale to
+      <strong>{{$frontmatter.service.metric}}</strong>, clear ownership, and no hidden surprises at launch.
+    </p>
   </section>
 
   <section class="mb-6 surface-50 border-round-3xl p-4 md:p-5">

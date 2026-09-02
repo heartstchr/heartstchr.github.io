@@ -2,11 +2,12 @@
 title: Posts tagged with vue.js
 description: Explore articles, tutorials, and insights about vue.js — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: vue.js
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: vue.js, web development, programming, tech, tutorial

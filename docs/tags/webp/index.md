@@ -2,11 +2,12 @@
 title: Posts tagged with webp
 description: Explore articles, tutorials, and insights about webp — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: webp
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: webp, web development, programming, tech, tutorial

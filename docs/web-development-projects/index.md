@@ -2,7 +2,8 @@
 title: The Architect's Playbook | Enterprise Engineering Portfolio
 description: "Strategic engineering insights and technical deep-dives for founders building high-stakes software — and how I solve complex bottlenecks."
 order: 2
-home: true
+layout: Layout
+hidePageTitle: true
 lastUpdated: false
 editLink: false
 copyright: false

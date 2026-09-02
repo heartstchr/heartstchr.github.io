@@ -2,11 +2,12 @@
 title: Posts tagged with refactoring
 description: Explore articles, tutorials, and insights about refactoring — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: refactoring
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: refactoring, web development, programming, tech, tutorial

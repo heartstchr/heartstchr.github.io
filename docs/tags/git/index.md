@@ -2,11 +2,12 @@
 title: Posts tagged with git
 description: Explore articles, tutorials, and insights about git — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: git
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: git, web development, programming, tech, tutorial

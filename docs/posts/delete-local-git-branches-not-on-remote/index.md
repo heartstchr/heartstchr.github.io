@@ -1,5 +1,5 @@
 ---
-title: "How to Delete Local Git Branches Not on Remote (Auto Cleanup Script Included)"
+title: "How to Delete Local Git Branches Not on Remote"
 description: "Safely delete local Git branches no longer on the remote with an auto cleanup script. Includes best practices for a cleaner Git workflow."
 date: 2025-06-12
 category: Programming

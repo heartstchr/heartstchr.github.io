@@ -1,5 +1,5 @@
 ---
-title: "Stop Chasing Backlinks: The 10k Monthly Lead Blueprint with Programmatic SEO"
+title: "Stop Chasing Backlinks: The 10k Lead Blueprint with Programmatic SEO"
 description: "Learn how to scale traffic and lead generation with Programmatic SEO. Build high-performance, database-driven directory platforms with React and Next.js."
 date: 2026-04-18
 category: "Web Development"

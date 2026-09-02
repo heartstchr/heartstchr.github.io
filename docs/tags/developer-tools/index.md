@@ -2,11 +2,12 @@
 title: Posts tagged with developer-tools
 description: Explore articles, tutorials, and insights about developer-tools — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: developer-tools
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: developer-tools, web development, programming, tech, tutorial

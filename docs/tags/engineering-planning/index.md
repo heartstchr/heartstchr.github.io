@@ -2,11 +2,12 @@
 title: Posts tagged with engineering planning
 description: Explore articles, tutorials, and insights about engineering planning — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: engineering planning
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: engineering planning, web development, programming, tech, tutorial

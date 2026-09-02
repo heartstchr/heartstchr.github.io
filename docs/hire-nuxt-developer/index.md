@@ -1,7 +1,8 @@
 ---
 title: Hire Nuxt Developer | Senior Nuxt.js Engineer for SSR & SSG
 description: Hire an experienced Nuxt.js developer for server-side rendering, static site generation, and SEO-optimized Vue.js applications. Senior-level execution, zero agency overhead.
-home: true
+layout: Layout
+hidePageTitle: true
 editLink: false
 copyright: false
 pageInfo: false

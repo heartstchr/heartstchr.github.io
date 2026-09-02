@@ -2,11 +2,12 @@
 title: Posts tagged with branch-management
 description: Explore articles, tutorials, and insights about branch-management — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: branch-management
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: branch-management, web development, programming, tech, tutorial

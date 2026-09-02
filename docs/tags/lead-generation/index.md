@@ -2,11 +2,12 @@
 title: Posts tagged with lead generation
 description: Explore articles, tutorials, and insights about lead generation — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: lead generation
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: lead generation, web development, programming, tech, tutorial

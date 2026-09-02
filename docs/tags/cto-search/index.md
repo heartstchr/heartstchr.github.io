@@ -2,11 +2,12 @@
 title: Posts tagged with cto search
 description: Explore articles, tutorials, and insights about cto search — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: cto search
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: cto search, web development, programming, tech, tutorial

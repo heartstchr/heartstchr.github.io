@@ -4,7 +4,8 @@ description: "Multi-tenant SaaS platforms, marketplaces, and subscription softwa
 lastUpdated: false
 editLink: false
 copyright: false
-home: true
+layout: Layout
+hidePageTitle: true
 head:
   - - script
     - type: application/ld+json

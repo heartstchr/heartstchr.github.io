@@ -7,6 +7,7 @@ contributors: false
 pageInfo: false
 copyright: false
 layout: Layout
+hidePageTitle: true
 service:
   name: "ROI-Driven AI Automation"
   descriptions: ["I integrate Large Language Models (LLMs) and custom AI agents to drive measurable business results. From reducing lead response times from days to hours to automating complex manual data workflows.","I don't just 'add a chatbot'; I build intelligent systems that move your core business metrics and save thousands of manual hours."]
@@ -58,6 +59,21 @@ service:
         </div>
       </div>
     </div>
+  </section>
+
+  <section class="mb-6">
+    <h2 class="text-3xl font-bold mt-0 mb-3">Why {{$frontmatter.service.name}} Matters</h2>
+    <p class="text-lg text-700 line-height-3 mb-3">
+      When you choose {{$frontmatter.service.name}} with Stack Seekers, you get a senior engineer-led engagement
+      focused on <strong>{{$frontmatter.service.outcome}}</strong> — not a scoped feature list that leaves architecture
+      to chance. I work directly with your product and engineering team to remove the technical bottlenecks that
+      slow revenue, protect your runway, and keep your codebase scalable as you grow.
+    </p>
+    <p class="text-lg text-700 line-height-3 m-0">
+      Every engagement starts with an audit of your current system, a prioritized risk map, and a practical roadmap
+      that the team can execute. The goal is production-grade delivery: architecture you can scale to
+      <strong>{{$frontmatter.service.metric}}</strong>, clear ownership, and no hidden surprises at launch.
+    </p>
   </section>
 
   <section class="mb-6 surface-50 border-round-3xl p-4 md:p-5">

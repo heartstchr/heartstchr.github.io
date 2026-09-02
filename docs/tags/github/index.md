@@ -2,11 +2,12 @@
 title: Posts tagged with github
 description: Explore articles, tutorials, and insights about github — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: github
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: github, web development, programming, tech, tutorial

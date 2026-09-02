@@ -1,5 +1,5 @@
 ---
-title: "The Runway Killer: Why Your MVP Doesn't Need a $200k Infrastructure (Yet)"
+title: "Runway Killer: Why Your MVP Doesn't Need $200k Infrastructure"
 description: "Over-engineering your infrastructure kills your startup's runway. Learn to build for the scale you have, and architect for the one you want."
 date: 2026-04-18
 category: "Cloud & DevOps"

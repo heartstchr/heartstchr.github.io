@@ -2,11 +2,12 @@
 title: Posts tagged with mvp development
 description: Explore articles, tutorials, and insights about mvp development — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: mvp development
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: mvp development, web development, programming, tech, tutorial

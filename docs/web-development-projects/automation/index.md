@@ -4,7 +4,8 @@ description: "Workflow automation, no-code tooling, and process efficiency syste
 lastUpdated: false
 editLink: false
 copyright: false
-home: true
+layout: Layout
+hidePageTitle: true
 ---
 
 <section class="hero-newage relative overflow-hidden p-8 mb-4">

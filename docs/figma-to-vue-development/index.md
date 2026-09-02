@@ -1,7 +1,8 @@
 ---
-title: Figma to Vue.js Development | Pixel-Perfect Design Implementation
+title: Figma to Vue.js Development | Pixel-Perfect Implementation
 description: Transform your Figma designs into production-ready Vue.js applications. Pixel-perfect implementation, responsive components, and design system integration by a senior frontend engineer.
-home: true
+layout: Layout
+hidePageTitle: true
 editLink: false
 copyright: false
 pageInfo: false

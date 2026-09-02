@@ -1,7 +1,8 @@
 ---
-title: Website Development for Small Business | Professional Web Design
+title: Website Development for Small Business | Web Design
 description: Professional website development for small businesses. Fast, mobile-friendly, SEO-optimized websites built by a senior developer — not an agency template. Custom design, real results.
-home: true
+layout: Layout
+hidePageTitle: true
 editLink: false
 copyright: false
 pageInfo: false

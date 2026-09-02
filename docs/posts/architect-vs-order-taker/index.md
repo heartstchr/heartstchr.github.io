@@ -1,5 +1,5 @@
 ---
-title: "Why Your Software Project Needs an Architect, Not Just an 'Order Taker'"
+title: "Why Your Project Needs an Architect, Not an Order Taker"
 description: "Most developers build exactly what you ask for, even if it is a bad business decision. Learn why a strategic architect saves your project from costly failures."
 date: 2026-04-18
 category: "Technical Advisory"

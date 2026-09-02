@@ -2,11 +2,12 @@
 title: Posts tagged with node.js
 description: Explore articles, tutorials, and insights about node.js — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: node.js
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: node.js, web development, programming, tech, tutorial

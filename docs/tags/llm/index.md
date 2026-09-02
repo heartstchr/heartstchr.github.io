@@ -2,11 +2,12 @@
 title: Posts tagged with llm
 description: Explore articles, tutorials, and insights about llm — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: llm
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: llm, web development, programming, tech, tutorial

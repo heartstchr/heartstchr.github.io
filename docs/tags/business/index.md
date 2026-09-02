@@ -2,11 +2,12 @@
 title: Posts tagged with business
 description: Explore articles, tutorials, and insights about business — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: business
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: business, web development, programming, tech, tutorial

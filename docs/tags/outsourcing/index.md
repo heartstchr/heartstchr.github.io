@@ -2,11 +2,12 @@
 title: Posts tagged with outsourcing
 description: Explore articles, tutorials, and insights about outsourcing — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: outsourcing
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: outsourcing, web development, programming, tech, tutorial

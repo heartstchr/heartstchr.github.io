@@ -2,11 +2,12 @@
 title: Posts tagged with frontend architecture
 description: Explore articles, tutorials, and insights about frontend architecture — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: frontend architecture
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: frontend architecture, web development, programming, tech, tutorial

@@ -1,6 +1,7 @@
 ---
 layout: Layout
 title: The Architect's Playbook | Engineering Insights
+hidePageTitle: true
 description: Technical deep-dives, strategic architectural breakdowns, and scaling playbooks for founders.
 summary: Technical deep-dives, strategic architectural breakdowns, and scaling playbooks for founders.
 pageInfo: false

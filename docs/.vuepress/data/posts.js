@@ -1,6 +1,6 @@
 export const posts = [
   {
-    title: "SaaS MVP Timeline in 2026: Real Scope, Effort & Decisions That Drive It",
+    title: "SaaS MVP Timeline in 2026: Scope, Effort, and Decisions",
     link: "/posts/saas-mvp-cost-timeline-2026/",
     date: "2026-08-17",
     summary: "Stop guessing. Here's what a SaaS MVP actually takes in 2026 — by scope, team model, and hidden work — plus the 3 decisions that control your timeline.",
@@ -8,7 +8,7 @@ export const posts = [
     tags: ["SaaS MVP", "MVP Development", "Startup Strategy", "Engineering Planning", "Founders"]
   },
   {
-    title: "How to Vet a Development Agency: A Non-Technical Founder's Checklist",
+    title: "How to Vet a Development Agency: Founder's Technical Checklist",
     link: "/posts/how-to-vet-a-development-agency-partner/",
     date: "2026-08-16",
     summary: "Most vetting advice is written by salespeople. This is the technical checklist I'd run — from GitHub signals to reference calls that actually reveal quality.",
@@ -16,7 +16,7 @@ export const posts = [
     tags: ["Vendor Vetting", "Outsourcing", "Agency Selection", "Technical Due Diligence", "Founders"]
   },
   {
-    title: "Fractional CTO vs Interim CTO vs Advisor: Which Model Do You Need?",
+    title: "Fractional CTO vs Interim CTO vs Advisor: Which Model?",
     link: "/posts/fractional-cto-vs-interim-cto-vs-advisor/",
     date: "2026-08-15",
     summary: "Fractional CTO, interim CTO, advisor, or consultant — each solves a different problem. Learn the four models and how to pick the right one for your stage.",
@@ -24,7 +24,7 @@ export const posts = [
     tags: ["Fractional CTO", "Interim CTO", "Technical Advisor", "CTO Search", "Leadership"]
   },
   {
-    title: "Why Your Software Project Needs an Architect, Not Just an 'Order Taker'",
+    title: "Why Your Project Needs an Architect, Not an Order Taker",
     link: "/posts/architect-vs-order-taker/",
     date: "2026-04-18",
     summary: "Most developers build exactly what you ask for, even if it is a bad business decision. Learn why hiring a strategic technical architect saves your project from costly failures.",
@@ -32,7 +32,7 @@ export const posts = [
     tags: ["Architecture", "Strategy", "Product Development", "Consultancy"]
   },
   {
-    title: "The Spaghetti MVP: Why Cheap Development is the Most Expensive Mistake for Startups",
+    title: "The Spaghetti MVP: Why Cheap Development Costs More",
     link: "/posts/the-spaghetti-mvp-technical-debt/",
     date: "2026-04-18",
     summary: "Rushing to market with messy code feels like speed, but it's actually technical debt. Learn how to build an MVP that scales without needing a total rewrite.",
@@ -40,7 +40,7 @@ export const posts = [
     tags: ["Technical Debt", "Architecture", "MVP", "Startup Strategy", "Refactoring"]
   },
   {
-    title: "Breaking the Black Box: How I Ensure 100% Visibility in Your Software Build",
+    title: "Breaking the Black Box: Full Visibility in Your Software Build",
     link: "/posts/software-build-visibility-strategy/",
     date: "2026-04-18",
     summary: "Stop wondering what your developers are doing. Learn how a transparent engineering process with weekly demos and clear roadmaps eliminates project risk.",
@@ -48,7 +48,7 @@ export const posts = [
     tags: ["Transparency", "Process", "Agile", "Consultancy", "Communication"]
   },
   {
-    title: "Code Freedom: How to Build a SaaS without Becoming a Hostage to Your Agency",
+    title: "Code Freedom: Building a SaaS Without Vendor Lock-In",
     link: "/posts/avoiding-vendor-lock-in-saas/",
     date: "2026-04-18",
     summary: "Don't let your developers own your future. Learn how to maintain full control of your IP, source code, and technical freedom when outsourcing development.",
@@ -56,7 +56,7 @@ export const posts = [
     tags: ["IP Ownership", "Vendor Lock-in", "SaaS Strategy", "Clean Code", "Founders"]
   },
   {
-    title: "The Runway Killer: Why Your MVP Doesn't Need a $200k Infrastructure (Yet)",
+    title: "Runway Killer: Why Your MVP Doesn't Need $200k Infrastructure",
     link: "/posts/mvp-infrastructure-pragmatic-engineering/",
     date: "2026-04-18",
     summary: "Over-engineering your infrastructure is the fastest way to kill your startup's runway. Learn how to build for the scale you have, while architecting for the scale you want.",
@@ -64,7 +64,7 @@ export const posts = [
     tags: ["Infrastructure", "Scalability", "Cloud Costs", "MVP", "DevOps"]
   },
   {
-    title: "Beyond the Big Launch: Why Your Product’s Real Life Starts After Day One",
+    title: "Beyond the Big Launch: Software's Real Life Starts After Day One",
     link: "/posts/post-launch-maintenance-strategy/",
     date: "2026-04-18",
     summary: "Launching your SaaS is only the beginning. Learn how to navigate the 'Maintenance Gap' and maintain technical momentum with fractional CTO advisory.",
@@ -72,7 +72,7 @@ export const posts = [
     tags: ["Maintenance", "Fractional CTO", "Post-Launch", "Growth", "Software Lifecycle"]
   },
   {
-    title: "Stop Chasing Backlinks: The 10k Monthly Lead Blueprint with Programmatic SEO",
+    title: "Stop Chasing Backlinks: The 10k Lead Blueprint with Programmatic SEO",
     link: "/posts/scaling-with-programmatic-seo/",
     date: "2026-04-18",
     summary: "Learn how to scale traffic and lead generation with Programmatic SEO. Move beyond manual blogging and build high-performance, database-driven directory platforms with React and Next.js.",
@@ -80,7 +80,7 @@ export const posts = [
     tags: ["SEO", "Programmatic SEO", "Lead Generation", "Next.js", "Growth"]
   },
   {
-    title: "Beyond Spreadsheets: Scaling Operations with Custom Internal Portals",
+    title: "Beyond Spreadsheets: Scaling Ops With Internal Portals",
     link: "/posts/scaling-ops-with-internal-portals/",
     date: "2026-04-18",
     summary: "Stop drowning in manual data entry. Learn how to bridge your Notion databases and spreadsheets with custom React-based internal portals to automate your workflow.",
@@ -88,7 +88,7 @@ export const posts = [
     tags: ["Internal Tools", "Notion", "Automation", "Productivity", "React"]
   },
   {
-    title: "Building an AI-First SaaS: How to Integrate LLMs for Real Business Moat",
+    title: "Building an AI-First SaaS: Integrating LLMs for a Real Moat",
     link: "/posts/ai-first-saas-architecture/",
     date: "2026-04-18",
     summary: "Move past the ChatGPT wrapper. Learn how to architect deeply integrated AI features that provide real competitive advantage and operational efficiency.",
@@ -120,7 +120,7 @@ export const posts = [
     tags: ["micro frontends", "web development", "frontend architecture", "scalability", "modularity", "javascript"]
 },
   {
-    title: "How to Delete Local Git Branches Not on Remote (Auto Cleanup Script Included)",
+    title: "How to Delete Local Git Branches Not on Remote",
     link: "/posts/delete-local-git-branches-not-on-remote/",
     date: "2025-06-12",
     summary: "Learn how to safely delete local Git branches no longer on remote with a cleanup script and tips for a cleaner Git workflow.",
@@ -144,7 +144,7 @@ export const posts = [
     tags: ["TypeScript", "Coding", "JavaScript", "Web Development"]
   },
   {
-    title: "Automate Your Content: Turn YouTube Videos into Blogs with GEN-BLOG",
+    title: "Automate Content: Turn YouTube Videos into Blogs with GEN-BLOG",
     link: "/posts/automate-content-youtube-to-blog-gen-blog/",
     date: "2025-06-05",
     summary: "Convert YouTube videos to SEO-friendly blog posts with GEN-BLOG, a Node.js tool using AI. Save time and enhance your content!",
@@ -152,7 +152,7 @@ export const posts = [
     tags: ["Automation", "Node.js", "AI", "Content Marketing", "SEO"]
   },
   {
-    title: "How Vue 3 and Devtools Enhance Your Web Development: 7 Steps to Build and Debug",
+    title: "How Vue 3 and Devtools Enhance Web Development",
     link: "/posts/create-vue3-application/",
     date: "2024-05-29",
     summary: "Build a Vue 3 app with ease using Vue CLI and debug it with Vue Devtools. This guide shows you how to set up, customize components, and use a reusable ComponentCard to showcase your work in a VuePress portfolio.",

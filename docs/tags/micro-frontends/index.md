@@ -2,11 +2,12 @@
 title: Posts tagged with micro frontends
 description: Explore articles, tutorials, and insights about micro frontends — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: micro frontends
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: micro frontends, web development, programming, tech, tutorial

@@ -2,11 +2,12 @@
 title: Posts tagged with transparency
 description: Explore articles, tutorials, and insights about transparency — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: transparency
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: transparency, web development, programming, tech, tutorial

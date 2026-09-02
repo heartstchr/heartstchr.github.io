@@ -2,11 +2,12 @@
 title: Posts tagged with saas strategy
 description: Explore articles, tutorials, and insights about saas strategy — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: saas strategy
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: saas strategy, web development, programming, tech, tutorial

@@ -2,11 +2,12 @@
 title: Posts tagged with freelancing
 description: Explore articles, tutorials, and insights about freelancing — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: freelancing
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: freelancing, web development, programming, tech, tutorial

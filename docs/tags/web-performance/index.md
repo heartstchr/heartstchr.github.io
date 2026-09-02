@@ -2,11 +2,12 @@
 title: Posts tagged with web performance
 description: Explore articles, tutorials, and insights about web performance — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: web performance
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: web performance, web development, programming, tech, tutorial

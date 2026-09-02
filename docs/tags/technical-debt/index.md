@@ -2,11 +2,12 @@
 title: Posts tagged with technical debt
 description: Explore articles, tutorials, and insights about technical debt — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: technical debt
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: technical debt, web development, programming, tech, tutorial

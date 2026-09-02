@@ -2,11 +2,12 @@
 title: Posts tagged with web development
 description: Explore articles, tutorials, and insights about web development — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: web development
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: web development, web development, programming, tech, tutorial

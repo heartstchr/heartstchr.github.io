@@ -2,11 +2,12 @@
 title: Posts tagged with strategy
 description: Explore articles, tutorials, and insights about strategy — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: strategy
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: strategy, web development, programming, tech, tutorial

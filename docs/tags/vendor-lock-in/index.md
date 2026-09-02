@@ -2,11 +2,12 @@
 title: Posts tagged with vendor lock-in
 description: Explore articles, tutorials, and insights about vendor lock-in — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: vendor lock-in
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: vendor lock-in, web development, programming, tech, tutorial

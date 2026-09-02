@@ -2,11 +2,12 @@
 title: Posts tagged with ip ownership
 description: Explore articles, tutorials, and insights about ip ownership — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: ip ownership
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: ip ownership, web development, programming, tech, tutorial

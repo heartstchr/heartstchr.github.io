@@ -2,11 +2,12 @@
 title: Posts tagged with portfolio
 description: Explore articles, tutorials, and insights about portfolio — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: portfolio
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: portfolio, web development, programming, tech, tutorial

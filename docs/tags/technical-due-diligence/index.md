@@ -2,11 +2,12 @@
 title: Posts tagged with technical due diligence
 description: Explore articles, tutorials, and insights about technical due diligence — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: technical due diligence
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: technical due diligence, web development, programming, tech, tutorial

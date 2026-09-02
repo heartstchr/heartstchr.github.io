@@ -2,11 +2,12 @@
 title: Posts tagged with technical advisor
 description: Explore articles, tutorials, and insights about technical advisor — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: technical advisor
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: technical advisor, web development, programming, tech, tutorial

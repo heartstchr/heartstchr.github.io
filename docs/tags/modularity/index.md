@@ -2,11 +2,12 @@
 title: Posts tagged with modularity
 description: Explore articles, tutorials, and insights about modularity — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: modularity
 head:
   - - meta
     - name: robots
-      content: index, follow
+      content: noindex, follow
   - - meta
     - name: keywords
       content: modularity, web development, programming, tech, tutorial

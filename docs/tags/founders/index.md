@@ -2,6 +2,7 @@
 title: Posts tagged with founders
 description: Explore articles, tutorials, and insights about founders — with best practices and latest trends.
 layout: Layout
+hidePageTitle: true
 tag: founders
 head:
   - - meta
