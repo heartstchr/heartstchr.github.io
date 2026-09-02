@@ -723,6 +723,19 @@ const generatePages = (data, outputDir, slugKey, templateFn) => {
   });
 };
 
+// Count posts per tag so thin tag pages can be noindexed and excluded from the
+// sitemap. A tag page is considered "thin" (and thus noindexed) when it points
+// to fewer than 3 posts.
+const tagCount = new Map();
+posts.forEach((post) => {
+  if (Array.isArray(post.tags)) {
+    post.tags.forEach((tag) => {
+      const key = String(tag).toLowerCase();
+      tagCount.set(key, (tagCount.get(key) || 0) + 1);
+    });
+  }
+});
+
 const generateTagPages = () => {
   const allTags = new Set();
 
@@ -734,17 +747,6 @@ const generateTagPages = () => {
 
   const tagsArray = Array.from(allTags).sort();
   ensureDirectoryExists(outTagsDir);
-
-  // Count posts per tag so thin tag pages can be noindexed.
-  const tagCount = new Map();
-  posts.forEach((post) => {
-    if (Array.isArray(post.tags)) {
-      post.tags.forEach((tag) => {
-        const key = String(tag).toLowerCase();
-        tagCount.set(key, (tagCount.get(key) || 0) + 1);
-      });
-    }
-  });
 
   // Generate individual tag pages
   tagsArray.forEach((tag) => {
@@ -856,6 +858,37 @@ const getLastModified = (filePath, pagePath) => {
   return toIsoDate(stats.mtime);
 };
 
+// Map each paginated URL to a relevant cover image so the sitemap can expose
+// an image:image block per URL (image sitemap support). Returns undefined for
+// pages without a meaningful image so we don't attach irrelevant artwork.
+const getSitemapImage = (pagePath) => {
+  // Service pages — a dedicated cover image exists per service code.
+  const service = services.find((s) => s.code && pagePath === `/web-development-services/${toKebabCase(s.code)}/`);
+  if (service?.code) {
+    return `${DOMAIN}/img/service/${service.code}.webp`;
+  }
+
+  // Project detail pages — use the first cover image.
+  const project = freelance.find(
+    (p) => p.images?.[0]?.itemImageSrc && pagePath === `/web-development-projects/${toKebabCase(p.name)}/`
+  );
+  if (project?.images?.[0]?.itemImageSrc) {
+    const src = project.images[0].itemImageSrc;
+    return src.startsWith("http") ? src : `${DOMAIN}${src}`;
+  }
+
+  // Category pages + projects hub — use the first project's cover image in scope.
+  if (pagePath.startsWith("/web-development-projects/")) {
+    const related = freelance.find((p) => p.images?.[0]?.itemImageSrc);
+    if (related?.images?.[0]?.itemImageSrc) {
+      const src = related.images[0].itemImageSrc;
+      return src.startsWith("http") ? src : `${DOMAIN}${src}`;
+    }
+  }
+
+  return undefined;
+};
+
 // Fetch YouTube playlists at build time so the "Stack Seekers TV" page has
 // crawlable video content (titles/descriptions/links) in the SSR HTML rather
 // than only after a client-side API call. Gracefully degrades: on any failure
@@ -943,9 +976,23 @@ export const youtubeVideos = ${JSON.stringify(data, null, 2)};
 const generateSitemap = () => {
   ensureDirectoryExists(publicDir);
 
-  const markdownFiles = collectMarkdownPages(docsRoot).filter(
-    (filePath) => !filePath.includes(`${path.sep}.vuepress${path.sep}`)
-  );
+  const markdownFiles = collectMarkdownPages(docsRoot)
+    .filter(
+      (filePath) => !filePath.includes(`${path.sep}.vuepress${path.sep}`)
+    )
+    // Exclude thin (noindexed) tag pages from the sitemap to mirror their
+    // robots exclusion — mirror the theme plugin's behavior.
+    .filter((filePath) => {
+      const pagePath = toPagePath(filePath);
+      const m = pagePath.match(/^\/tags\/([^/]+)\/$/);
+      if (!m) return true;
+      const tag = m[1];
+      const tagKeys = new Set(posts.flatMap((p) => (p.tags || []).map(String)));
+      const decodesTo = (candidate) =>
+        toKebabCase(candidate) === tag &&
+        (tagCount.get(String(candidate).toLowerCase()) || 0) >= 3;
+      return Array.from(tagKeys).some(decodesTo);
+    });
 
   const urls = markdownFiles
     .map((filePath) => {
@@ -955,12 +1002,13 @@ const generateSitemap = () => {
         lastmod: getLastModified(filePath, pagePath),
         changefreq: getChangeFrequency(pagePath),
         priority: getPriority(pagePath),
+        image: getSitemapImage(pagePath),
       };
     })
     .sort((a, b) => a.loc.localeCompare(b.loc));
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${urls
   .map(
     (url) => `  <url>
@@ -968,7 +1016,9 @@ ${urls
     <lastmod>${url.lastmod}</lastmod>
     <changefreq>${url.changefreq}</changefreq>
     <priority>${url.priority}</priority>
-  </url>`
+${url.image ? `    <image:image>
+      <image:loc>${escapeXml(url.image)}</image:loc>
+    </image:image>` : ""}  </url>`
   )
   .join("\n")}
 </urlset>

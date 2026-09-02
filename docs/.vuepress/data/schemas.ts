@@ -114,6 +114,23 @@ export const globalSchemas = [
       "https://www.youtube.com/@stackseekers",
     ],
   },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${DOMAIN}/#website`,
+    name: "Stack Seekers",
+    alternateName: "Stack Seekers Engineering Consultancy",
+    url: DOMAIN,
+    description:
+      "Stack Seekers is an independent engineering consultancy focused on fractional CTO advisory, AI automation, programmatic SEO, and scalable product architecture.",
+    publisher: {
+      "@id": `${DOMAIN}/#organization`,
+    },
+    inLanguage: "en",
+    isPartOf: {
+      "@id": `${DOMAIN}/#organization`,
+    },
+  },
 ];
 
 const homepageSchemas = [
