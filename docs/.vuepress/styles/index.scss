@@ -340,6 +340,13 @@ fieldset {
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
+/* Category pages render a full-bleed hero at the top. Hide the theme breadcrumb
+   in its default position so the BreadCrumb component override can relocate it
+   right below the hero without a visible jump. */
+main.vp-page:has(section.hero-newage) > .vp-breadcrumb {
+  display: none;
+}
+
 .text-gradient {
   background: linear-gradient(135deg, #0d9488 0%, #14b8a6 50%, #7e22ce 100%);
   -webkit-background-clip: text;
@@ -464,6 +471,13 @@ fieldset {
   main.vp-page:not(.vp-project-home) #markdown-content,
   main.vp-page:not(.vp-project-home) .vp-breadcrumb,
   main.vp-page:not(.vp-project-home) .vp-page-title {
+    max-width: 64rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Align full-bleed hero inner content with the body below */
+  .hero-newage .relative.z-1 {
     max-width: 64rem !important;
     margin-left: auto !important;
     margin-right: auto !important;

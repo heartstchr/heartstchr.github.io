@@ -17,6 +17,7 @@ project:
   category: "Startup MVPs"
   price: 0
   currency: USD
+  dodoPaymentUrl: 
   link: "https://techcreate.vercel.app/"
   codeLink: 
   contact: "https://wa.me/917026217029?text=Hi%20there%2C%20I'm%20interested%20in%20a%20custom%20code%20solution%20for%"

@@ -133,6 +133,7 @@ project:
   category: ${JSON.stringify(project.category)}
   price: ${JSON.stringify(project.price) || "0"}
   currency: ${JSON.stringify(project.currency) || "USD"}
+  dodoPaymentUrl: ${JSON.stringify(project.dodoPaymentUrl) || ""}
   link: ${JSON.stringify(project.link) || ""}
   codeLink: ${JSON.stringify(project.codeLink) || ""}
   contact: ${JSON.stringify(project.contact || `mailto:${SUPPORT_EMAIL}?subject=${project.name} Inquiry`)}

@@ -177,6 +177,10 @@ export default defineUserConfig({
       __dirname,
       "./components/PageTitle.vue"
     ),
+    "@theme-hope/components/base/BreadCrumb": path.resolve(
+      __dirname,
+      "./components/BreadCrumb.vue"
+    ),
     "@theme-hope/components/base/MainFadeInUpTransition": path.resolve(
       __dirname,
       "./components/MainFadeInUpTransition.vue"
@@ -195,6 +199,7 @@ export default defineUserConfig({
     __VITE_NOTION_DATABASE_ID__: process.env.VITE_NOTION_DATABASE_ID || "",
     __WHATSAPP_NUMBER__: process.env.VITE_WHATSAPP_NUMBER || "917026217029",
     __VITE_RAZORPAY_KEY_ID__: process.env.VITE_RAZORPAY_KEY_ID || "",
+    __VITE_DODO_PAYMENT_URL__: process.env.VITE_DODO_PAYMENT_URL || "https://checkout.dodopayments.com/buy/pdt_0NmnKgqaTDyhk2wTWUM6i",
     __VITE_SUPPORT_EMAIL__: SUPPORT_EMAIL,
   },
 });

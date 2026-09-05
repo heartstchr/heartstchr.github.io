@@ -4,6 +4,10 @@ export const SUPPORT_EMAIL = typeof __VITE_SUPPORT_EMAIL__ !== "undefined"
   ? __VITE_SUPPORT_EMAIL__
   : "support@stackseekers.com";
 
+export const DODO_PAYMENT_URL = typeof __VITE_DODO_PAYMENT_URL__ !== "undefined"
+  ? __VITE_DODO_PAYMENT_URL__
+  : "https://checkout.dodopayments.com/buy/pdt_0NmnKgqaTDyhk2wTWUM6i";
+
 export const freelance = [
   {
     name: "Premium Furniture Landing Page & Catalog",
@@ -19,6 +23,7 @@ export const freelance = [
     link: "",
     price: "20",
     currency: "USD",
+    dodoPaymentUrl: DODO_PAYMENT_URL,
     contact: `mailto:${SUPPORT_EMAIL}?subject=Notion Furniture Catalog Inquiry`,
     stack: [
       "javascript",
@@ -118,6 +123,7 @@ export const freelance = [
     link: "https://ai-dynamic-crud-app.stackseekers.com/",
     price: "20",
     currency: "USD",
+    dodoPaymentUrl: DODO_PAYMENT_URL,
     contact: `mailto:${SUPPORT_EMAIL}?subject=AI Dynamic CRUD App Inquiry`,
     stack: [
       "javascript",
@@ -264,6 +270,7 @@ export const freelance = [
     link: "https://contact-form-app.stackseekers.com/",
     price: "20",
     currency: "USD",
+    dodoPaymentUrl: DODO_PAYMENT_URL,
     contact: `mailto:${SUPPORT_EMAIL}?subject=Contact Form Plugin Inquiry`,
     stack: [
       "javascript",
@@ -435,6 +442,7 @@ export const freelance = [
     link: "https://notion-crud.netlify.app/",
     price: "20",
     currency: "USD",
+    dodoPaymentUrl: DODO_PAYMENT_URL,
     contact: `mailto:${SUPPORT_EMAIL}?subject=Notion CRUD App Inquiry`,
     stack: [
       "javascript",
@@ -601,6 +609,7 @@ export const freelance = [
     link: "https://notion-p.netlify.app/",
     price: "20",
     currency: "USD",
+    dodoPaymentUrl: DODO_PAYMENT_URL,
     contact: `mailto:${SUPPORT_EMAIL}?subject=Inquiry : `,
     stack: [
       "nodedotjs",

@@ -17,6 +17,7 @@ project:
   category: "Enterprise"
   price: 0
   currency: USD
+  dodoPaymentUrl: 
   link: "https://upstox.com/open-demat-account/"
   codeLink: 
   contact: "mailto:support@stackseekers.com?subject=Demat Account Open Inquiry"

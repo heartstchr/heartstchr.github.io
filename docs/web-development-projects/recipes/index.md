@@ -17,6 +17,7 @@ project:
   category: "Startup MVPs"
   price: 0
   currency: USD
+  dodoPaymentUrl: 
   link: "http://recipes-client.s3-website.ap-south-1.amazonaws.com/"
   codeLink: "https://github.com/heartstchr/recipe"
   contact: "mailto:support@stackseekers.com?subject=Recipes Inquiry"

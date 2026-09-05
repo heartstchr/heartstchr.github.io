@@ -17,6 +17,7 @@ project:
   category: "Ready-made Apps"
   price: "0"
   currency: "USD"
+  dodoPaymentUrl: 
   link: "https://ainarrator.stackseekers.com/"
   codeLink: 
   contact: "mailto:support@stackseekers.com?subject=AI Narrator Inquiry"

@@ -17,6 +17,7 @@ project:
   category: "Enterprise"
   price: 0
   currency: USD
+  dodoPaymentUrl: 
   link: "https://holidays.qatarairways.com/en-in/avios"
   codeLink: 
   contact: "mailto:support@stackseekers.com?subject=Qatar Airways widget Inquiry"

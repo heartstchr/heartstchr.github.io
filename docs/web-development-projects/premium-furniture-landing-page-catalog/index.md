@@ -17,6 +17,7 @@ project:
   category: "Ready-made Apps"
   price: "20"
   currency: "USD"
+  dodoPaymentUrl: "https://checkout.dodopayments.com/buy/pdt_0NmnKgqaTDyhk2wTWUM6i"
   link: ""
   codeLink: 
   contact: "mailto:support@stackseekers.com?subject=Notion Furniture Catalog Inquiry"

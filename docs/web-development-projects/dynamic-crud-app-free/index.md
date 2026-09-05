@@ -17,6 +17,7 @@ project:
   category: "Ready-made Apps"
   price: "20"
   currency: "USD"
+  dodoPaymentUrl: "https://checkout.dodopayments.com/buy/pdt_0NmnKgqaTDyhk2wTWUM6i"
   link: "https://notion-crud.netlify.app/"
   codeLink: 
   contact: "mailto:support@stackseekers.com?subject=Notion CRUD App Inquiry"

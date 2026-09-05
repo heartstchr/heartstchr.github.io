@@ -17,6 +17,7 @@ project:
   category: "Automation"
   price: 0
   currency: USD
+  dodoPaymentUrl: 
   link: 
   codeLink: "https://github.com/heartstchr/dic"
   contact: "mailto:support@stackseekers.com?subject=Command Line Dictionary Inquiry"

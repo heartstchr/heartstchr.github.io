@@ -17,6 +17,7 @@ project:
   category: "Startup MVPs"
   price: 0
   currency: USD
+  dodoPaymentUrl: 
   link: "https://appliancerepairly.com"
   codeLink: 
   contact: "mailto:support@stackseekers.com?subject=Inquiry : "

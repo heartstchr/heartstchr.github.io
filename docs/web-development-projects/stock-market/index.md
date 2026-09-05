@@ -17,6 +17,7 @@ project:
   category: "Startup MVPs"
   price: 0
   currency: USD
+  dodoPaymentUrl: 
   link: 
   codeLink: "https://github.com/heartstchr/StockMarket"
   contact: "mailto:support@stackseekers.com?subject=Stock Market Inquiry"

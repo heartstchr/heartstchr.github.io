@@ -17,6 +17,7 @@ project:
   category: "Enterprise"
   price: 0
   currency: USD
+  dodoPaymentUrl: 
   link: "https://upstox.com/sub-broker/"
   codeLink: 
   contact: "mailto:support@stackseekers.com?subject=Partner Dashboard Upstox Inquiry"

@@ -17,6 +17,7 @@ project:
   category: "AI"
   price: 0
   currency: USD
+  dodoPaymentUrl: 
   link: "https://vibe3.vibesquad.co"
   codeLink: 
   contact: "mailto:support@stackseekers.com?subject=Vibe3 Platform Inquiry"

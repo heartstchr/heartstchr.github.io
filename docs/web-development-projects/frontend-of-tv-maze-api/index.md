@@ -17,6 +17,7 @@ project:
   category: "Startup MVPs"
   price: 0
   currency: USD
+  dodoPaymentUrl: 
   link: "https://heartstchr.github.io/tvmaze/"
   codeLink: "https://github.com/heartstchr/tvshows"
   contact: "mailto:support@stackseekers.com?subject=Frontend of Tv Maze API Inquiry"

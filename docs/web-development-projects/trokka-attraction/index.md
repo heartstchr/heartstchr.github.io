@@ -17,6 +17,7 @@ project:
   category: "Startup MVPs"
   price: 0
   currency: USD
+  dodoPaymentUrl: 
   link: "https://m.trokka.com/attraction"
   codeLink: 
   contact: "mailto:support@stackseekers.com?subject=Trokka Attraction Inquiry"

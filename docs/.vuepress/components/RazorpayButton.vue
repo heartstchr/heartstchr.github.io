@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref } from 'vue';
+import { computed, ref, onBeforeUnmount, onMounted } from 'vue';
 import { submitPurchaseLead } from '../services/notionService';
 
 const props = defineProps({
@@ -15,6 +15,10 @@ const props = defineProps({
 
 const RAZORPAY_KEY_ID = typeof __VITE_RAZORPAY_KEY_ID__ !== "undefined"
     ? __VITE_RAZORPAY_KEY_ID__
+    : "";
+
+const DODO_PAYMENT_URL = typeof __VITE_DODO_PAYMENT_URL__ !== "undefined"
+    ? __VITE_DODO_PAYMENT_URL__
     : "";
 
 const opening = ref(false);
@@ -33,8 +37,14 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const price = computed(() => parseFloat(props.project.price || "0"));
 const currency = computed(() => props.project.currency || "USD");
-const purchasable = computed(() => price.value > 0 && !!RAZORPAY_KEY_ID);
+const dodoUrl = computed(() => props.project.dodoPaymentUrl || DODO_PAYMENT_URL);
+const hasRazorpay = computed(() => !!RAZORPAY_KEY_ID);
+const hasDodo = computed(() => !!dodoUrl.value);
+const bothAvailable = computed(() => hasRazorpay.value && hasDodo.value);
+const purchasable = computed(() => price.value > 0 && (hasRazorpay.value || hasDodo.value));
 const workspaceUrl = computed(() => props.project.workspace || props.project.link || "");
+
+const paymentMethod = ref("dodo");
 
 const priceLabel = computed(() => {
     if (!price.value) return "Free";
@@ -104,8 +114,8 @@ const waitForEmbed = async () => {
     return false;
 };
 
-const openCheckout = async (buyerEmail) => {
-    if (!purchasable.value || opening.value) return;
+const openRazorpayCheckout = async (buyerEmail) => {
+    if (!hasRazorpay.value || opening.value) return;
     opening.value = true;
     showConfirm.value = true;
     checkoutActive.value = true;
@@ -149,15 +159,188 @@ const openCheckout = async (buyerEmail) => {
     }
 };
 
+const dodoIframeUrl = ref("");
+let dodoChannel = null;
+
+const DODO_CHANNEL_NAME = "stackseekers-dodo-payment";
+
+const markPaid = () => {
+    dodoIframeUrl.value = "";
+    success.value = true;
+    checkoutActive.value = false;
+    showConfirm.value = false;
+    restoreScroll();
+    teardownDodoListeners();
+};
+
+const DODO_SUCCESS_MARKER = "__dodo_ss_paid";
+
+const isSucceededReturn = () => {
+    if (typeof window === "undefined" || !window.location) return false;
+    const params = new URLSearchParams(window.location.search);
+    return params.get("status") === "succeeded";
+};
+
+const isCanceledReturn = () => {
+    if (typeof window === "undefined" || !window.location) return false;
+    const params = new URLSearchParams(window.location.search);
+    const status = params.get("status");
+    return status && status !== "succeeded"; // canceled, failed, abandoned, etc.
+};
+
+const announceDodoSuccess = () => {
+    // Tell the parent dialog (iframe case) we paid, without clicking anything.
+    try {
+        if (window.self !== window.top && window.parent) {
+            window.parent.postMessage(
+                { type: "dodo-payment-success", product: props.project.name },
+                "*"
+            );
+        }
+    } catch (e) {
+        console.warn("[Dodo] Could not notify parent frame:", e);
+    }
+    // Cross-tab (new-tab fallback) signal.
+    try {
+        if ("BroadcastChannel" in window) {
+            const bc = new BroadcastChannel(DODO_CHANNEL_NAME);
+            bc.postMessage({ type: "dodo-payment-success", product: props.project.name });
+            bc.close();
+        }
+    } catch (e) {
+        console.warn("[Dodo] BroadcastChannel unavailable:", e);
+    }
+    // Persist as a safe fallback for a returning visitor.
+    try {
+        localStorage.setItem(DODO_SUCCESS_MARKER, String(Date.now()));
+    } catch (e) {
+        console.warn("[Dodo] localStorage unavailable:", e);
+    }
+};
+
+const onDodoMessage = (event) => {
+    if (!event.data || typeof event.data !== "object") return;
+    if (event.data.type === "dodo-payment-success" || event.data.paymentSuccess === true) {
+        if (checkoutActive.value) {
+            markPaid();
+        }
+    }
+};
+
+const onDodoStorageEvent = (event) => {
+    if (event.key === DODO_SUCCESS_MARKER && checkoutActive.value) {
+        markPaid();
+    }
+};
+
+const setupDodoListeners = () => {
+    window.addEventListener("message", onDodoMessage);
+    window.addEventListener("storage", onDodoStorageEvent);
+    if ("BroadcastChannel" in window) {
+        try {
+            dodoChannel = new BroadcastChannel(DODO_CHANNEL_NAME);
+            dodoChannel.onmessage = onDodoMessage;
+        } catch (e) {
+            console.warn("[Dodo] BroadcastChannel unavailable:", e);
+        }
+    }
+};
+
+const teardownDodoListeners = () => {
+    window.removeEventListener("message", onDodoMessage);
+    window.removeEventListener("storage", onDodoStorageEvent);
+    if (dodoChannel) {
+        try {
+            dodoChannel.close();
+        } catch (e) {
+            console.warn("[Dodo] Failed to close channel:", e);
+        }
+        dodoChannel = null;
+    }
+};
+
+const handleDodoFrameError = () => {
+    // Fallback for browsers/contexts that block iframe rendering: open the
+    // checkout in a new tab. Detection still works cross-tab via
+    // BroadcastChannel/localStorage when Dodo redirects back with status=succeeded.
+    if (!dodoIframeUrl.value) return;
+    const url = dodoIframeUrl.value;
+    dodoIframeUrl.value = "";
+    window.open(url, "_blank", "noopener,noreferrer");
+};
+
+const openDodoCheckout = async (buyerEmail) => {
+    if (!dodoUrl.value || opening.value) return;
+    opening.value = true;
+    showConfirm.value = true;
+    checkoutActive.value = true;
+    saveScroll();
+    setupDodoListeners();
+    try {
+        const url = new URL(dodoUrl.value);
+        url.searchParams.set("quantity", "1");
+        url.searchParams.set("showDiscounts", "false");
+        if (buyerEmail) {
+            url.searchParams.set("email", buyerEmail);
+        }
+        if (typeof window !== "undefined" && window.location) {
+            const returnUrl = window.location.origin + window.location.pathname;
+            url.searchParams.set("redirect_url", returnUrl);
+        }
+        dodoIframeUrl.value = url.toString();
+    } catch (err) {
+        console.error("[Dodo] Checkout error:", err);
+        checkoutActive.value = false;
+        showConfirm.value = false;
+        restoreScroll();
+        teardownDodoListeners();
+    } finally {
+        opening.value = false;
+    }
+};
+
+const confirmDodoPaid = () => {
+    markPaid();
+};
+
 const closeDialog = () => {
     if (rzpRef.value) {
         rzpRef.value.close();
         rzpRef.value = null;
     }
+    dodoIframeUrl.value = "";
     checkoutActive.value = false;
     showConfirm.value = false;
     restoreScroll();
+    teardownDodoListeners();
 };
+
+onBeforeUnmount(() => {
+    teardownDodoListeners();
+});
+
+// Auto-detect a return from the Dodo checkout page (iframe or new tab).
+// Dodo redirects to redirect_url with ?status=succeeded&payment_id=... after a
+// successful payment, so a freshly-mounted instance on that URL announces the
+// success to the opener/parent that still has the checkout dialog open.
+// On cancel/failed, Dodo may redirect with a different status — close cleanly.
+const initDodoAutoDetect = () => {
+    if (typeof window === "undefined") return;
+    setupDodoListeners();
+    if (isSucceededReturn()) {
+        announceDodoSuccess();
+        markPaid();
+    } else if (isCanceledReturn()) {
+        // Payment was explicitly canceled/failed — close dialog if open, don't mark paid.
+        if (checkoutActive.value) {
+            closeDialog();
+        }
+    }
+};
+
+onMounted(() => {
+    initDodoAutoDetect();
+});
 
 const restoreScroll = () => {
     if (typeof document !== 'undefined') {
@@ -201,13 +384,13 @@ const confirmFreeDownload = async () => {
             currency: currency.value,
         });
         if (!res.ok) {
-            console.warn("[Razorpay] Could not save lead:", res.error);
+            console.warn("[Payment] Could not save lead:", res.error);
         }
         localStorage.setItem("collected_email", email);
         window.open(workspaceUrl.value, "_blank", "noopener,noreferrer");
         downloaded.value = true;
     } catch (err) {
-        console.warn("[Razorpay] Could not save lead:", err);
+        console.warn("[Payment] Could not save lead:", err);
         buyerEmailError.value = "An error occurred. Please try again.";
     }
     savingLead.value = false;
@@ -230,13 +413,18 @@ const confirmBuyerEmail = async () => {
             currency: currency.value,
         });
         if (!res.ok) {
-            console.warn("[Razorpay] Could not save buyer email:", res.error);
+            console.warn("[Payment] Could not save buyer email:", res.error);
         }
     } catch (err) {
-        console.warn("[Razorpay] Could not save buyer email:", err);
+        console.warn("[Payment] Could not save buyer email:", err);
     }
     savingLead.value = false;
-    openCheckout(email);
+
+    if (paymentMethod.value === "dodo" && hasDodo.value) {
+        openDodoCheckout(email);
+    } else if (hasRazorpay.value) {
+        openRazorpayCheckout(email);
+    }
 };
 </script>
 
@@ -264,7 +452,7 @@ const confirmBuyerEmail = async () => {
                         raised
                         class="white-space-nowrap flex-shrink-0"
                         :style="pageTheme ? null : 'background: var(--theme-color); border-color: var(--theme-color); color: #fff;'"
-                        aria-label="Enter your email and buy this ready-made app securely via Razorpay"
+                        :aria-label="'Enter your email and buy this ready-made app securely via ' + (paymentMethod === 'dodo' ? 'Dodo Payments' : 'Razorpay')"
                         @click.stop.prevent="confirmBuyerEmail"
                     />
                 </template>
@@ -305,6 +493,26 @@ const confirmBuyerEmail = async () => {
         </div>
         <small v-if="buyerEmailError && !success" class="p-error mt-1 block">{{ buyerEmailError }}</small>
 
+        <!-- Payment method selector (shown below the input row when both providers available) -->
+        <div v-if="price > 0 && purchasable && !success && bothAvailable" class="flex align-items-center gap-3 mt-2">
+            <div class="flex gap-2">
+                <label
+                    class="payment-option flex align-items-center gap-1 cursor-pointer text-xs font-bold px-2 py-1 border-round-lg transition-all"
+                    :class="paymentMethod === 'dodo' ? 'payment-option--active' : 'payment-option--inactive'"
+                >
+                    <input type="radio" v-model="paymentMethod" value="dodo" class="hidden" />
+                    <i class="pi pi-globe"></i> International
+                </label>
+                <label
+                    class="payment-option flex align-items-center gap-1 cursor-pointer text-xs font-bold px-2 py-1 border-round-lg transition-all"
+                    :class="paymentMethod === 'razorpay' ? 'payment-option--active' : 'payment-option--inactive'"
+                >
+                    <input type="radio" v-model="paymentMethod" value="razorpay" class="hidden" />
+                    <i class="pi pi-inbox"></i> India (INR)
+                </label>
+            </div>
+        </div>
+
         <Dialog
             v-model:visible="showConfirm"
             modal
@@ -314,13 +522,27 @@ const confirmBuyerEmail = async () => {
             @update:visible="onVisibleChange"
         >
             <div ref="checkoutHost" class="w-full" style="height: min(62vh, 560px); position: relative; overflow: hidden;">
-                <div v-if="opening" class="absolute top-0 left-0 w-full h-full flex align-items-center justify-content-center surface-0 z-1">
+                <div v-if="dodoIframeUrl" class="w-full h-full">
+                    <iframe
+                        :src="dodoIframeUrl"
+                        class="w-full h-full border-none"
+                        style="min-height: 500px;"
+                        title="Dodo Payments Checkout"
+                        allow="payment"
+                        @error="handleDodoFrameError"
+                    ></iframe>
+                </div>
+                <div v-else-if="opening" class="absolute top-0 left-0 w-full h-full flex align-items-center justify-content-center surface-0 z-1">
                     <i class="pi pi-spin pi-spinner text-4xl"></i>
                 </div>
             </div>
             <template #footer>
-                <div class="flex justify-content-end gap-2">
-                    <Button label="Cancel" severity="secondary" text @click="closeDialog" :disabled="opening" />
+                <div class="flex align-items-center justify-content-between gap-3">
+                    <small v-if="dodoIframeUrl" class="text-500">
+                        <i class="pi pi-shield mr-1"></i>This page will update automatically once payment is confirmed&nbsp;&middot;&nbsp;
+                        <a href="#" class="text-500 font-bold" @click.prevent="confirmDodoPaid">Paid already? Refresh</a>
+                    </small>
+                    <Button label="Cancel" severity="secondary" text @click="closeDialog" />
                 </div>
             </template>
         </Dialog>
@@ -336,5 +558,18 @@ const confirmBuyerEmail = async () => {
 :deep(.p-button) {
     border-top-left-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
+}
+.payment-option--active {
+    background: var(--theme-color, #10b981);
+    color: #fff;
+}
+.payment-option--inactive {
+    background: transparent;
+    color: #6b7280;
+    border: 1px solid #e5e7eb;
+}
+.payment-option--inactive:hover {
+    border-color: #d1d5db;
+    color: #374151;
 }
 </style>
