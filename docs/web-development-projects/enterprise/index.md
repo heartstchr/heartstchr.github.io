@@ -32,9 +32,6 @@ head:
       </a>
     </div>
     <div class="flex align-items-center gap-3 mb-4">
-      <div class="flex align-items-center justify-content-center border-round-xl" style="background: #6366f118; color: #6366f1; width: 3.5rem; height: 3.5rem;">
-        <i class="pi pi-building text-2xl"></i>
-      </div>
       <div>
         <h1 class="m-0 text-4xl md:text-5xl font-bold" style="color: #6366f1;">Enterprise</h1>
         <p class="m-0 text-lg opacity-60 mt-1">Large-scale platforms, banking systems, and mission-critical applications.</p>

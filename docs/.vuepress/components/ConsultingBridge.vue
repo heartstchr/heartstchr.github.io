@@ -40,12 +40,6 @@
     </section>
   </div>
 
-  <!-- Sticky Mobile CTA -->
-  <div v-if="isActivePage" class="fixed bottom-0 left-0 w-full p-3 z-5 lg:hidden glass-sticky-cta shadow-6 flex gap-3">
-    <a href="https://cal.com/stackseekers/25min" target="_blank" class="flex-grow-1 no-underline">
-      <Button label="Consult Strategy" icon="pi pi-calendar" severity="primary" class="w-full text-lg font-bold py-3" raised />
-    </a>
-  </div>
 </template>
 
 <script setup>
@@ -88,9 +82,4 @@ const isActivePage = computed(() => {
 .shadow-pill { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
 .grayscale-100 { filter: grayscale(100%); transition: filter 0.3s ease; }
 .grayscale-100:hover { filter: grayscale(0%); }
-.glass-sticky-cta { 
-  background: rgba(255, 255, 255, 0.92); 
-  backdrop-filter: blur(12px); 
-  -webkit-backdrop-filter: blur(12px);
-}
 </style>

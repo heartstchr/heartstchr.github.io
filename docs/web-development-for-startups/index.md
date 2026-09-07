@@ -28,7 +28,7 @@ head:
   <div class="grid align-items-center">
     <div class="col-12 lg:col-8">
       <div class="mb-3 flex align-items-center gap-2">
-        <span class="inline-flex align-items-center px-2 py-1 border-round-xl bg-primary text-white text-xs font-bold uppercase letter-spacing-wide">
+        <span class="inline-flex align-items-center px-2 py-1 border-round-xl bg-primary text-balck text-xs font-bold uppercase letter-spacing-wide">
           <i class="pi pi-rocket mr-1"></i> Startup Web Development
         </span>
       </div>

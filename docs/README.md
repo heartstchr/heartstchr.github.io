@@ -8,7 +8,7 @@ copyright: false
 ---
 
 
-<section class="hero-newage relative overflow-hidden px-4 md:px-8 lg:px-12 surface-0 flex align-items-center" style="min-height: 100vh;">
+<section class="hero-newage relative overflow-hidden px-2 md:px-8 lg:px-12 surface-0 flex align-items-center" style="min-height: 100vh;">
   <!-- Dynamic Background Elements -->
   <div class="orb orb-1 opacity-20"></div>
   <div class="orb orb-2 opacity-20"></div>
@@ -32,18 +32,18 @@ copyright: false
       <div class="grid mt-5">
         <div class="col-6 md:col-6">
           <a href="/web-development-projects/partner-dashboard-upstox/" class="no-underline block h-full transition-opacity opacity-100 hover:opacity-80">
-            <div class="px-4 py-3 border-round-2xl h-full">
+            <div class="md:px-4 md:py-3 border-round-2xl h-full">
                <div class="text-xs font-bold text-500 uppercase mb-1">Upstox Impact</div>
-               <div class="text-2xl font-bold text-900 line-height-1">4 Days <i class="pi pi-arrow-right mx-1 text-sm opacity-50"></i> 2 Hours</div>
+               <div class="md:text-2xl font-bold text-900 line-height-1">4 Days <i class="pi pi-arrow-right mx-1 text-sm opacity-50"></i> 2 Hours</div>
                <div class="text-xs text-600 mt-1">Lead turnaround automation</div>
             </div>
           </a>
         </div>
         <div class="col-6 md:col-6">
           <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="no-underline block h-full transition-opacity opacity-100 hover:opacity-80">
-            <div class="px-4 py-3 border-round-2xl h-full">
+            <div class="md:px-4 md:py-3 border-round-2xl h-full">
                <div class="text-xs font-bold text-500 uppercase mb-1">ABN AMRO Scale</div>
-               <div class="text-2xl font-bold text-900 line-height-1">Global Platform</div>
+               <div class="md:text-2xl font-bold text-900 line-height-1">Global Platform</div>
                <div class="text-xs text-600 mt-1">Enterprise SaaS Architecture</div>
             </div>
           </a>
@@ -51,31 +51,27 @@ copyright: false
       </div>
       <!-- Action Center -->
       <div class="flex flex-column md:flex-row gap-3 mt-6">
-        <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=homepage&utm_campaign=homepage" target="_blank" class="no-underline">
-          <Button label="Book Strategy Call" icon="pi pi-calendar-clock" severity="primary" size="large" rounded raised class="px-6 py-4 font-bold text-lg shadow-pill hover:scale-102 transition-transform transition-duration-200" />
-        </a>
-        <Button 
-          label="Explore Services" 
-          icon="pi pi-compass" 
-          class="p-button-outlined p-button-secondary px-6 py-4 font-bold text-lg" 
-          size="large" 
-          rounded 
-          @click="scrollToSolutions"
-        />
-      </div>
-      <!-- Productization: Trust Signals -->
-      <div class="mt-6 flex flex-wrap gap-4 opacity-70">
-        <div class="flex align-items-center gap-2">
-          <i class="pi pi-check-circle text-primary font-bold"></i>
-          <span class="text-sm font-bold">Fixed-Scope Delivery</span>
+        <div class="flex flex-column gap-2">
+          <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=homepage&utm_campaign=homepage" target="_blank" class="no-underline">
+            <Button label="Book Strategy Call" icon="pi pi-calendar-clock" severity="primary" size="large" rounded raised class="w-full px-4 py-2 font-bold text-lg shadow-pill hover:scale-102 transition-transform transition-duration-200" />
+          </a>
+          <!-- Productization: Trust Signals (button micro copy) -->
+          <div class="flex align-items-center justify-content-center gap-2 px-1">
+            <span class="text-xs text-600 font-medium">Zero-Risk First Week</span>
+          </div>
         </div>
-        <div class="flex align-items-center gap-2">
-          <i class="pi pi-check-circle text-primary font-bold"></i>
-          <span class="text-sm font-bold">Zero-Risk First Week</span>
-        </div>
-        <div class="flex align-items-center gap-2">
-          <i class="pi pi-check-circle text-primary font-bold"></i>
-          <span class="text-sm font-bold">CTO-Level Oversight</span>
+        <div class="flex flex-column gap-2">
+          <Button 
+            label="Explore Services" 
+            icon="pi pi-compass" 
+            class="p-button-secondary px-4 py-2 font-bold text-lg" 
+            size="large" 
+            rounded 
+            @click="scrollToSolutions"
+          />
+          <div class="flex align-items-center justify-content-center gap-2 px-1">
+            <span class="text-xs text-600 font-medium">Fractional CTO</span>
+          </div>
         </div>
       </div>
     </div>
@@ -208,7 +204,7 @@ copyright: false
   </div>
 
   <!-- Pillar 1 -->
-  <div class="grid align-items-center mb-8 p-4 border-round-3xl border-1 border-100 relative">
+  <div class="grid align-items-center mb-8 p-2 md:p-4 border-round-3xl border-1 border-100 relative">
     <div class="absolute top-0 right-0 p-4 opacity-10">
         <i class="pi pi-sparkles text-green-500" style="font-size: 4rem;"></i>
     </div>
@@ -225,14 +221,14 @@ copyright: false
     </div>
     <div class="col-12 lg:col-7 relative z-1">
       <div class="grid">
-        <div class="col-12 p-4">
-          <a href="/web-development-projects/ai-dynamic-crud-app/" class="block bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-100">
+        <div class="col-12 md:p-4">
+          <a href="/web-development-projects/ai-dynamic-crud-app/" class="block pillar-tile bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-100">
             <img src="/img/projects/ai-dynamic-crud-app/ai-webapp-english.webp" alt="AI Dynamic CRUD App" width="400" height="300" class="w-full object-cover" loading="lazy" />
             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">AI Dynamic CRUD</div>
           </a>
         </div>
-        <div class="col-12 p-4">
-          <a href="/web-development-projects/ai-voice-generator/" class="block bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-100">
+        <div class="col-12 md:p-4">
+          <a href="/web-development-projects/ai-voice-generator/" class="block pillar-tile bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-100">
             <img src="/img/projects/ai-narrator/Google-docs-text-to-speech-ai-voice-ai-audio.webp" alt="AI Voice Generator" width="400" height="300" class="w-full object-cover" loading="lazy" />
              <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">AI Voice Generator</div>
           </a>
@@ -242,7 +238,7 @@ copyright: false
   </div>
 
   <!-- Pillar 2 -->
-  <div class="grid align-items-center mb-8 p-4 border-round-3xl border-1 border-100 relative flex-column lg:flex-row-reverse">
+  <div class="grid align-items-center mb-8 p-2 md:p-4 border-round-3xl border-1 border-100 relative flex-column lg:flex-row-reverse">
     <div class="absolute top-0 right-0 p-4 opacity-10">
         <i class="pi pi-code text-purple-500" style="font-size: 4rem;"></i>
     </div>
@@ -259,14 +255,14 @@ copyright: false
     </div>
     <div class="col-12 lg:col-7 relative z-1">
       <div class="grid">
-        <div class="col-12 p-4">
-          <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="block bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-100">
+        <div class="col-12 md:p-4">
+          <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="block pillar-tile bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-100">
             <img src="/img/home/projects/ABN_Amro.webp" alt="ABN AMRO Migration" width="400" height="300" class="w-full  object-cover" loading="lazy" />
             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">ABN AMRO Enterprise</div>
           </a>
         </div>
-        <div class="col-12 p-4">
-          <a href="/web-development-projects/momentum-incident-management/" class="block bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-100">
+        <div class="col-12 md:p-4">
+          <a href="/web-development-projects/momentum-incident-management/" class="block pillar-tile bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-100">
             <img src="/img/home/projects/momentum_incident_management.webp" alt="Momentum" width="400" height="300" class="w-full  object-cover" loading="lazy" />
              <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">Momentum Incident Mgmt</div>
           </a>
@@ -276,7 +272,7 @@ copyright: false
   </div>
 
   <!-- Pillar 3 -->
-  <div class="grid align-items-center mb-8 p-4 border-round-3xl border-1 border-100 relative">
+  <div class="grid align-items-center mb-8 p-2 md:p-4 border-round-3xl border-1 border-100 relative">
     <div class="absolute top-0 right-0 p-4 opacity-10">
         <i class="pi pi-chart-line text-orange-500" style="font-size: 4rem;"></i>
     </div>
@@ -293,14 +289,14 @@ copyright: false
     </div>
     <div class="col-12 lg:col-7 relative z-1">
       <div class="grid">
-        <div class="col-12 p-4">
-          <a href="/web-development-projects/local-home-services-pros/" class="block bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-100">
+        <div class="col-12 md:p-4">
+          <a href="/web-development-projects/local-home-services-pros/" class="block pillar-tile bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-100">
             <img src="/img/projects/localxr/localxr-cover.webp" alt="LocalXR" width="400" height="300" class="w-full  object-cover" loading="lazy" />
             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">LocalXR Directory</div>
           </a>
         </div>
-        <div class="col-12 p-4">
-          <a href="/web-development-projects/appliance-repair-service-platform/" class="block bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-100">
+        <div class="col-12 md:p-4">
+          <a href="/web-development-projects/appliance-repair-service-platform/" class="block pillar-tile bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-100">
             <img src="/img/home/projects/appliance_repair_cover.webp" alt="Appliance Repair" width="400" height="300" class="w-full  object-cover" loading="lazy" />
              <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">Appliance Repair Platform</div>
           </a>
@@ -310,7 +306,7 @@ copyright: false
   </div>
 
   <!-- Pillar 4 -->
-  <div class="grid align-items-center mb-8 p-4 border-round-3xl border-1 border-100 relative flex-column lg:flex-row-reverse">
+  <div class="grid align-items-center mb-8 p-2 md:p-4 border-round-3xl border-1 border-100 relative flex-column lg:flex-row-reverse">
     <div class="absolute top-0 right-0 p-4 opacity-10">
         <i class="pi pi-sync text-blue-500" style="font-size: 4rem;"></i>
     </div>
@@ -327,14 +323,14 @@ copyright: false
     </div>
     <div class="col-12 lg:col-7 relative z-1">
       <div class="grid">
-        <div class="col-12 p-4">
-          <a href="/web-development-projects/dynamic-crud-app-free/" class="block bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-100">
+        <div class="col-12 md:p-4">
+          <a href="/web-development-projects/dynamic-crud-app-free/" class="block pillar-tile bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-100">
             <img src="/img/projects/notion-crud-app/Notion-crud-app-free.webp" alt="Notion CRUD" class="w-full  object-cover" loading="lazy" />
             <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">Dynamic CRUD App</div>
           </a>
         </div>
-        <div class="col-12 p-4">
-          <a href="/web-development-projects/service-request-system/" class="block bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-100">
+        <div class="col-12 md:p-4">
+          <a href="/web-development-projects/service-request-system/" class="block pillar-tile bento-hover relative border-round-3xl overflow-hidden  no-underline border-1 border-100">
             <img src="/img/home/projects/notion_service_request.webp" alt="Service Request" class="w-full  object-cover" loading="lazy" />
              <div class="absolute bottom-0 left-0 w-full bg-black-alpha-60 text-white p-3 text-sm font-bold backdrop-blur-md">Service Request Portal</div>
           </a>
@@ -349,16 +345,6 @@ copyright: false
 </div>
 
 <ConsultingBridge />
-
-<!-- Sticky Mobile CTA -->
-<div class="fixed bottom-0 left-0 w-full p-3 z-5 lg:hidden glass-sticky-cta  flex gap-3 border-top-1 border-100">
-  <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=homepage&utm_campaign=homepage" target="_blank" class="flex-grow-1 no-underline">
-    <Button label="Book Call" icon="pi pi-calendar" severity="primary" class="w-full text-lg font-bold py-3" raised />
-  </a>
-  <div @click="scrollToSolutions" class="flex align-items-center justify-content-center surface-100 border-round-lg px-4 border-1 border-100 cursor-pointer">
-    <i class="pi pi-chevron-down text-900"></i>
-  </div>
-</div>
 
 <!-- Pricing Tiers / Fixed Packages -->
 <div class="mb-8 text-center" id="pricing">
@@ -489,7 +475,7 @@ copyright: false
         </p>
       </AccordionTab>
     </Accordion>
-    <div class="surface-0 p-4 md:p-6 border-round-xl shadow-1 border-left-3 border-primary mt-6">
+    <div class="surface-0 p-3 md:p-4 border-round-xl shadow-1 border-left-3 border-primary mt-6">
       <h3 class="m-0 p-0 font-bold text-xl flex align-items-center"><i class="pi pi-shield mr-2 text-primary"></i> The Zero-Risk Guarantee</h3>
       <p class="m-0 text-700 line-height-3 mt-3">
         <strong>If I'm not a perfect fit after the first week of engagement, you pay absolutely nothing.</strong> I partner strictly on milestone-based or month-to-month contracts depending on the scope, so you are never locked into a bad situation.
@@ -545,16 +531,26 @@ copyright: false
 .bento-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; }
 .bento-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
 .shadow-pill { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
-.glass-sticky-cta { 
-  background: rgba(255, 255, 255, 0.92); 
-  backdrop-filter: blur(12px); 
-  -webkit-backdrop-filter: blur(12px);
-}
 .wins-card,
 .wins-card .text-500,
 .wins-card .text-600,
 .wins-card .text-700,
 .wins-card .text-900 { color: #000 !important; }
+
+/* Pillar tiles: constrain the card itself to a 4:3 box on phones so every
+   project image crops to a consistent aspect ratio regardless of source
+   dimensions. Desktop keeps the original layout. */
+@media (max-width: 767px) {
+  .pillar-tile {
+    aspect-ratio: 4 / 3;
+    display: block;
+  }
+  .pillar-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
 
 @media (hover: hover) {
   .hover-zoom img { transition: transform 0.3s ease; }

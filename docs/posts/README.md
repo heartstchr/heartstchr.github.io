@@ -65,13 +65,6 @@ contributors: false
   </div>
 </div>
 
-<!-- Sticky Mobile CTA -->
-<div class="fixed bottom-0 left-0 w-full p-3 z-5 lg:hidden glass-sticky-cta shadow-6">
-  <a href="https://cal.com/stackseekers/25min" target="_blank" class="no-underline">
-    <Button label="Book Strategy Call" icon="pi pi-calendar" severity="primary" class="w-full text-lg font-bold py-3" raised />
-  </a>
-</div>
-
 <script setup lang="ts">
   import { ref, computed } from 'vue';
   import { posts } from "@data/posts.js";
@@ -89,11 +82,6 @@ contributors: false
 </script>
 
 <style scoped>
-.glass-sticky-cta { 
-  background: rgba(255, 255, 255, 0.92); 
-  backdrop-filter: blur(12px); 
-  -webkit-backdrop-filter: blur(12px);
-}
 .whats-new-btn:hover {
   border-color: var(--primary-color, #3b82f6);
   color: var(--primary-color, #3b82f6);

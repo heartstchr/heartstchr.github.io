@@ -4,7 +4,7 @@
             aria-label="Book a 25-min free strategy call">
             <Button label="Book a Call" icon="pi pi-calendar-clock" severity="primary" raised rounded size="small" />
         </a>
-        <a class="vp-action-link" href="https://www.linkedin.com/in/jiwanghosal/details/recommendations/"
+        <a class="vp-action-link repo-linkedin" href="https://www.linkedin.com/in/jiwanghosal/details/recommendations/"
             target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <i class="pi pi-linkedin text-xl"></i>
         </a>

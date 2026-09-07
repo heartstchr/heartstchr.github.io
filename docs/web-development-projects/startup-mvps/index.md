@@ -32,9 +32,6 @@ head:
       </a>
     </div>
     <div class="flex align-items-center gap-3 mb-4">
-      <div class="flex align-items-center justify-content-center border-round-xl" style="background: #10b98118; color: #10b981; width: 3.5rem; height: 3.5rem;">
-        <i class="pi pi-bolt text-2xl"></i>
-      </div>
       <div>
         <h1 class="m-0 text-4xl md:text-5xl font-bold" style="color: #10b981;">Startup MVPs</h1>
         <p class="m-0 text-lg opacity-60 mt-1">Fast-to-market products, niche platforms, and proof-of-concept launches.</p>

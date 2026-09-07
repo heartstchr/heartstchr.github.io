@@ -44,9 +44,6 @@ head:
       </a>
     </div>
     <div class="flex align-items-center gap-3 mb-4">
-      <div class="flex align-items-center justify-content-center border-round-xl" style="background: #3b82f618; color: #3b82f6; width: 3.5rem; height: 3.5rem;">
-        <i class="pi pi-shopping-bag text-2xl"></i>
-      </div>
       <div>
         <h1 class="m-0 text-4xl md:text-5xl font-bold" style="color: #3b82f6;">Ready-made Apps</h1>
         <p class="m-0 text-lg opacity-60 mt-1">Ready-to-deploy digital products, templates, and embeddable widgets.</p>

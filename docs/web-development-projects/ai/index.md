@@ -20,9 +20,6 @@ hidePageTitle: true
       </a>
     </div>
     <div class="flex align-items-center gap-3 mb-4">
-      <div class="flex align-items-center justify-content-center border-round-xl" style="background: #a855f718; color: #a855f7; width: 3.5rem; height: 3.5rem;">
-        <i class="pi pi-microchip-ai text-2xl"></i>
-      </div>
       <div>
         <h1 class="m-0 text-4xl md:text-5xl font-bold" style="color: #a855f7;">AI</h1>
         <p class="m-0 text-lg opacity-60 mt-1">AI-powered tools, intelligent automation, and machine learning integrations.</p>

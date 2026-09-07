@@ -20,9 +20,6 @@ hidePageTitle: true
       </a>
     </div>
     <div class="flex align-items-center gap-3 mb-4">
-      <div class="flex align-items-center justify-content-center border-round-xl" style="background: #f59e0b18; color: #f59e0b; width: 3.5rem; height: 3.5rem;">
-        <i class="pi pi-cog text-2xl"></i>
-      </div>
       <div>
         <h1 class="m-0 text-4xl md:text-5xl font-bold" style="color: #f59e0b;">Automation</h1>
         <p class="m-0 text-lg opacity-60 mt-1">Workflow automation, no-code tooling, and process efficiency systems.</p>

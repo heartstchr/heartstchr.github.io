@@ -33,6 +33,7 @@ import DiagnosticQuiz from "./components/DiagnosticQuiz.vue";
 import ConsultingBridge from "./components/ConsultingBridge.vue";
 import TagIndex from "./components/TagIndex.vue";
 import RazorpayButton from "./components/RazorpayButton.vue";
+import StickyMobileCta from "./components/StickyMobileCta.vue";
 
 import Image from "primevue/image";
 import Galleria from "primevue/galleria";
@@ -77,7 +78,7 @@ export default defineClientConfig({
     app.component("TagIndex", TagIndex);
     app.component("RazorpayButton", RazorpayButton);
   },
-  rootComponents: [GlobalLeadCapture],
+  rootComponents: [GlobalLeadCapture, StickyMobileCta],
   setup() {
     // Ensure canonical URLs strip query parameters
     if (typeof window !== 'undefined') {

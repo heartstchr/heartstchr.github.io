@@ -13,7 +13,7 @@ defineProps({
 </script>
 
 <template>
-    <div class="flex grid mt-4 px-2">
+    <div class="flex grid px-2">
         <Tag v-for="part in stack" :key="part" :value="part" class="m-1"
             style="border: 2px solid var(--border-color); background: transparent; color: var(--text-color);">
             <div class="flex items-center gap-2 px-1">

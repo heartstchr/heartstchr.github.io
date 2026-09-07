@@ -72,12 +72,31 @@
     <a v-if="whatsappNumber" :href="whatsappLink" target="_blank" rel="noopener noreferrer" class="whatsapp-float text-white border-circle shadow-4 flex align-items-center justify-content-center cursor-pointer" aria-label="Chat on WhatsApp">
       <i class="pi pi-whatsapp text-3xl"></i>
     </a>
+
+    <!-- Scroll-to-solutions chevron (mobile, homepage only) -->
+    <button
+      v-if="isHome"
+      @click="scrollToSolutions"
+      class="scroll-chevron fixed z-5 border-circle flex align-items-center justify-content-center cursor-pointer lg:hidden"
+      aria-label="Scroll to solutions"
+    >
+      <i class="pi pi-chevron-down"></i>
+    </button>
   </div>
 </template>
 
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
+import { usePageFrontmatter } from 'vuepress/client';
 import { submitProjectRequest } from '../services/notionService';
+
+const frontmatter = usePageFrontmatter();
+const isHome = computed(() => frontmatter.value.home === true);
+
+const scrollToSolutions = () => {
+  const el = document.getElementById('solutions');
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
+};
 
 const whatsappNumber = __WHATSAPP_NUMBER__;
 const whatsappLink = computed(() => {
@@ -201,8 +220,8 @@ onBeforeUnmount(() => {
 <style scoped>
 .whatsapp-float {
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 4rem;
+    right: 1rem;
     width: 60px;
     height: 60px;
     z-index: 1000;
@@ -213,6 +232,20 @@ onBeforeUnmount(() => {
     background-color: #128C7E;
     transform: scale(1.1) rotate(5deg);
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.scroll-chevron {
+    bottom: 8rem;
+    right: 1rem;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+    background: var(--vp-c-bg-alt);
+    border: 1px solid var(--vp-c-divider);
+    color: var(--vp-c-text);
+    transition: background 0.2s;
+}
+.scroll-chevron:hover {
+    background: var(--vp-c-bg-soft);
 }
 </style>
 
