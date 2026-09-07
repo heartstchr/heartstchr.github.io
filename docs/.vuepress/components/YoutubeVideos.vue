@@ -1,7 +1,7 @@
 <template>
     <div v-if="videos.length === 0">
         <a href="https://www.youtube.com/@stackseekers" target="_blank" aria-label="Watch the Stack Seekers channel on YouTube">
-            <Button label="Watch on youtube" icon="pi pi-youtube" iconPos="left" class="w-full" raised rounded />
+            <Button label="Watch on" icon="pi pi-youtube" iconPos="right" class="w-full btn-youtube" raised rounded />
         </a>
     </div>
     <div v-else class="flex flex-row flex-wrap md:gap-4 gap-1">
@@ -14,18 +14,21 @@
                     </a>
                 </template>
                 <template #title>
-                    <a :href="video.url || 'https://www.youtube.com/watch?v=' + video.id" target="_blank"
-                        class="text-decoration-none hover:underline" :aria-label="`Watch ${video.title} on YouTube`">
+                    <a :href="video.slug ? '/stackseekers-tv/videos/' + video.slug + '/' : (video.url || 'https://www.youtube.com/watch?v=' + video.id)"
+                        class="text-decoration-none hover:underline" :aria-label="`View ${video.title}`">
                         <div class="text-xl line-height-3">{{ video.title }}</div>
                     </a>
                 </template>
-                <template #subtitle>{{ video.publishedAt }}</template>
+                <template #subtitle></template>
                 <template #content>
                 </template>
                 <template #footer>
-                    <div class="flex gap-3 m-1 align-content-end">
+                    <div class="flex justify-content-between align-items-center gap-3 m-1">
+                        <span class="text-xs text-500" v-if="video.publishedAt">{{
+                            new Date(video.publishedAt).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })
+                        }}</span>
                         <a :href="video.url || 'https://www.youtube.com/watch?v=' + video.id" target="_blank" :aria-label="`Watch ${video.title} on YouTube`">
-                            <Button label="Watch on youtube" icon="pi pi-youtube" iconPos="left" class="w-full" raised
+                            <Button label="Watch on" icon="pi pi-youtube" iconPos="right" class="btn-youtube" raised
                                 rounded />
                         </a>
                     </div>

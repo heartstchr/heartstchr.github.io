@@ -3,7 +3,7 @@
         <h2 class="text-lg font-bold mb-2">Latest Videos</h2>
         <div v-if="videos.length === 0" class="flex flex-column gap-2">
             <a href="https://www.youtube.com/@stackseekers" target="_blank" class="no-underline" aria-label="Visit Stack Seekers YouTube Channel">
-                <Button label="Watch on YouTube" icon="pi pi-youtube" iconPos="left" class="w-full" severity="secondary"
+                <Button label="Watch on YouTube" icon="pi pi-youtube" iconPos="left" class="w-full btn-youtube"
                     size="small" raised rounded />
             </a>
         </div>

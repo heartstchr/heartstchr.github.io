@@ -59,6 +59,11 @@ contributors: false
         <a href="https://cal.com/stackseekers/25min" target="_blank" class="no-underline">
           <Button label="Book Audit" icon="pi pi-bolt" severity="primary" class="w-full font-bold" raised rounded />
         </a>
+        <div class="mt-3">
+          <a href="/startup-stack-audit-checklist/" class="no-underline text-primary font-bold text-sm hover:text-primary-600">
+            Try the free tech stack audit checklist <i class="pi pi-arrow-right ml-2 text-xs"></i>
+          </a>
+        </div>
       </div>
       <YouTubeAside />
     </div>

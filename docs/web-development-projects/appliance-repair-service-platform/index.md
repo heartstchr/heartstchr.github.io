@@ -1,6 +1,6 @@
 ---
-title: "Appliance Repair Platform & Troubleshooting"
-description: "A content-driven platform connecting users with local appliance repair professionals, backed by free troubleshooting guides for major home appliances."
+title: "Appliance Repair Platform: Find Local Professionals"
+description: "A local appliance repair service platform connecting homeowners with vetted professionals — with free troubleshooting guides for refrigerators, washers, dryers, and more."
 lastUpdated: false
 editLink: false
 contributors: false
@@ -34,7 +34,7 @@ project:
 
 <div class="grid">
   <div class="col-12 lg:col-4 project-side-col mb-4">
-    <div class="surface-card p-2 border-round-3xl shadow-2 border-1 border-100 project-action-card" style="position: sticky; top: 5rem;">
+    <div class="surface-card p-2 border-round-3xl shadow-2 border-1 border-100 project-action-card">
       <div class="grid align-items-center">
         <div class="col-12 border-bottom-1 border-100 mb-3 pb-3">
           <div class="flex align-items-center gap-3">
@@ -295,7 +295,7 @@ Appliance Repairly demonstrates how **Programmatic SEO** can transform a service
 
 </div>
 
-<div v-if="$frontmatter.project.relatedCaseStudy" class="mt-8 p-2 surface-50 border-round-2xl border-1 border-100 mb-6">
+<div v-if="$frontmatter.project.relatedCaseStudy" class="mt-8 p-4 surface-50 border-round-2xl border-1 border-100 mb-6">
   <div class="flex flex-column md:flex-row align-items-center justify-content-between gap-4">
     <div>
       <h3 class="text-2xl font-bold m-0 flex align-items-center gap-2">

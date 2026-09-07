@@ -1,7 +1,7 @@
 <template>
     <div v-if="videos.length === 0">
         <a href="https://www.youtube.com/@stackseekers" target="_blank" aria-label="Watch the Stack Seekers podcast on YouTube">
-            <Button label="Watch on youtube" icon="pi pi-youtube" iconPos="left" class="w-full" raised rounded />
+            <Button label="Watch on" icon="pi pi-youtube" iconPos="right" class="w-full btn-youtube" raised rounded />
         </a>
     </div>
     <div v-else class="flex-column w-full">
@@ -25,8 +25,8 @@
                         <template #content>
                         </template>
                         <template #footer>
-                            <div class="flex gap-3 m-1 align-content-end">
-                                <Button label="Watch on youtube" icon="pi pi-youtube" iconPos="left" class="w-full"
+                            <div class="flex gap-3 m-1 justify-content-end">
+                                <Button label="Watch on youtube" icon="pi pi-youtube" iconPos="left" class="btn-youtube"
                                     raised rounded :aria-label="`Watch ${video.title} on YouTube`" />
                             </div>
                         </template>

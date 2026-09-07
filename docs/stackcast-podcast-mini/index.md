@@ -1,6 +1,6 @@
 ---
-title: Stack Cast 🎙️ | Tech Strategy Podcast for Developers
-description: A mini-podcast unpacking tools, trends and SaaS strategies for devs and startup CTOs. Hosted by a practicing freelance engineer — Stack Seekers.
+title: Stack Cast Podcast | Tech Strategy for Developers & Startup CTOs
+description: The Stack Cast podcast unpacks tools, trends, and SaaS strategy for developers and startup CTOs. Hosted by a practicing freelance engineer — Stack Seekers.
 order: 5
 editLink: false
 copyright: false
