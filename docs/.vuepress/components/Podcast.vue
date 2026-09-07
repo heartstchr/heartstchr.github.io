@@ -7,17 +7,20 @@
     <div v-else class="flex-column w-full">
         <div class="flex-row flex-wrap md:gap-4 w-full">
             <div v-for="video in paginatedVideos" :key="video.id" class="flex p-0 flex-column md:flex-row gap-1">
-                <a :href="'https://www.youtube.com/watch?v=' + video.id" target="_blank" class="no-underline">
                     <Card
                         class="shadow-1 vp-feature-item my-2 flex-column md:flex-row cursor-pointer hover:shadow-2 transition-all duration-200">
                         <template #header>
-                            <div class="flex-shrink m-auto" style="width: 300px;">
-                                <img :src="video.thumbnail" :alt="video.title" class="w-full border-round-md"
-                                    loading="eager" fetchpriority="high" />
-                            </div>
+                            <a :href="youtubeUrl(video)" target="_blank" class="no-underline" :aria-label="`Watch ${video.title} on YouTube`">
+                                <div class="flex-shrink m-auto" style="width: 300px;">
+                                    <img :src="video.thumbnail" :alt="video.title" class="w-full border-round-md"
+                                        loading="eager" fetchpriority="high" />
+                                </div>
+                            </a>
                         </template>
                         <template #title>
-                            <div class="text-sm line-height-4">{{ video.title }}</div>
+                            <a :href="videoPage(video)" class="no-underline text-900 hover:underline">
+                                <div class="text-sm line-height-4">{{ video.title }}</div>
+                            </a>
                         </template>
                         <template #subtitle>
                             <!-- <div class="text-xs line-height-3">{{ video.publishedAt }}</div> -->
@@ -26,13 +29,14 @@
                         </template>
                         <template #footer>
                             <div class="flex gap-3 m-1 justify-content-end">
-                                <Button label="Watch on youtube" icon="pi pi-youtube" iconPos="left" class="btn-youtube"
-                                    raised rounded :aria-label="`Watch ${video.title} on YouTube`" />
+                                <a :href="youtubeUrl(video)" target="_blank" class="no-underline">
+                                    <Button label="Watch on youtube" icon="pi pi-youtube" iconPos="left" class="btn-youtube"
+                                        raised rounded :aria-label="`Watch ${video.title} on YouTube`" />
+                                </a>
                             </div>
                         </template>
                     </Card>
-                </a>
-            </div>
+                </div>
         </div>
 
         <Pagination v-if="showPagination" :totalRecords="videos.length" :rowsPerPage="3" @page-change="onPageChange" />
@@ -52,6 +56,11 @@ const props = defineProps({
 });
 
 const videos = ref((youtubeVideos.podcastVideos || []).map((v) => ({ ...v })));
+
+const youtubeUrl = (video) => video.url || 'https://www.youtube.com/watch?v=' + video.id;
+const videoPage = (video) =>
+    video.slug ? '/stackseekers-tv/videos/' + video.slug + '/' : youtubeUrl(video);
+
 const currentPage = ref(0);
 const rowsPerPage = ref(3);
 
@@ -72,7 +81,10 @@ const onPageChange = (event) => {
 onMounted(async () => {
     try {
         const { podcastVideos } = await fetchAndSplitVideos();
-        if (podcastVideos.length) videos.value = podcastVideos;
+        if (podcastVideos.length) {
+            const slugById = Object.fromEntries(videos.value.map((v) => [v.id, v.slug]).filter(([, s]) => s));
+            videos.value = podcastVideos.map((v) => ({ ...v, slug: slugById[v.id] }));
+        }
     } catch (error) {
         console.error('Error loading videos:', error);
     }

@@ -50,7 +50,10 @@ const videos = ref((youtubeVideos.channelVideos || []).map((v) => ({ ...v })));
 onMounted(async () => {
     try {
         const { channelVideos } = await fetchAndSplitVideos();
-        if (channelVideos.length) videos.value = channelVideos;
+        if (channelVideos.length) {
+            const slugById = Object.fromEntries(videos.value.map((v) => [v.id, v.slug]).filter(([, s]) => s));
+            videos.value = channelVideos.map((v) => ({ ...v, slug: slugById[v.id] }));
+        }
     } catch (error) {
         console.error('Error loading videos:', error);
     }
