@@ -4,9 +4,9 @@ export const footer = `
     <div class="grid w-full m-0 p-0">
       <div class="col-12 md:col-3 p-4 border-bottom-1 md:border-bottom-none border-50 pb-6 md:pb-4">
         <div class="flex flex-column gap-3 mb-6">
-          <div>  
+          <div class="flex align-items-center gap-2">  
             <img src="/img/stackseekers.webp" alt="Stack Seekers" class="h-3rem w-auto align-self-start" />
-            <div class="text-lg font-semibold" style="color: #000000;">{{ siteTitle }}</div>
+            <div class="text-lg font-semibold" style="color: #000000;">Stack Seekers</div>
           </div>
           <div class="text-xs font-bold text-primary uppercase tracking-widest opacity-80">Engineering Architecture. Scaling Growth.</div>
         </div>
@@ -44,7 +44,7 @@ export const footer = `
     <div class="pt-6 border-top-1 border-50 flex flex-column md:flex-row justify-content-between align-items-center gap-4 opacity-50 text-center md:text-left">
       <div class="flex flex-column md:flex-row align-items-center gap-3">
         <div class="text-xs font-medium uppercase tracking-wider">
-          © 2024-2025 Stack Seekers Architecture Network. 
+          © 2024-2025 Stack Seekers. All Rights Reserved. 
         </div>
       </div>
     </div>

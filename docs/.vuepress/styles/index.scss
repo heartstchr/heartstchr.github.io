@@ -53,6 +53,11 @@ h2 {
 .p-button-primary {
   color: black !important;
 }
+.p-button::after,
+a.p-button::after,
+a:has(.p-button)::after {
+  content: none !important;
+}
 .vp-hero-actions {
   margin-bottom: 0 !important;
 }
@@ -110,6 +115,7 @@ fieldset {
 .vp-footer {
   width: 100%;
   max-width: 100%;
+  margin: 0 auto !important; 
 }
 .vp-article-title span {
   background-color: #669eff;
@@ -129,6 +135,28 @@ fieldset {
 .vp-content {
   padding-bottom: 0 !important;
 }
+
+/* Project-section pages (anything under /web-development-projects/) build their
+   own full-bleed sections with internal padding, so drop the theme's default
+   content wrapper padding on those pages (tagged by MarkdownContent.vue). */
+main.vp-page [vp-content]:not(.custom).vp-project-content {
+  padding: 0 !important;
+}
+
+/* With zero padding on project pages, PrimeFlex .grid's -0.5rem side margins
+   would poke 8px past the viewport — zero them at all widths */
+main.vp-page [vp-content].vp-project-content .grid {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+@media (max-width: 419px) {
+  [vp-content]:not(.custom) {
+    padding: 0 !important;
+  }
+}
+   
 
 
 .p-carousel-indicator-list {
@@ -340,11 +368,85 @@ fieldset {
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-/* Category pages render a full-bleed hero at the top. Hide the theme breadcrumb
-   in its default position so the BreadCrumb component override can relocate it
-   right below the hero without a visible jump. */
-main.vp-page:has(section.hero-newage) > .vp-breadcrumb {
+/* Category/project pages render a full-bleed hero at the top. Hide the theme
+   breadcrumb in its default position so the BreadCrumb component override can
+   relocate it right below the hero without a visible jump. Scoped to non-home
+   pages so the homepage hero (which reuses .hero-newage) is untouched. */
+main.vp-page:not(.vp-project-home):has(section.hero-newage) > .vp-breadcrumb {
   display: none;
+}
+
+/* The custom BreadCrumb.vue replaces the theme component, but the theme's
+   breadcrumb.scss is imported *inside* the original BreadCrumb component and is
+   therefore dropped from the bundle. Replicate those styles here so the <ol>
+   renders as a breadcrumb instead of a numbered list. */
+.vp-breadcrumb {
+  position: relative;
+  z-index: 2;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  max-width: var(--content-width);
+  margin-inline: auto;
+  font-size: 15px;
+
+  @media (max-width: 959px) {
+    font-size: 14px;
+    padding-inline: 1.5rem;
+  }
+
+  @media (max-width: 719px) {
+    padding-top: 0.5rem;
+    font-size: 12.8px;
+  }
+
+  .vp-icon {
+    margin-inline-end: 0.25em;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0 0.5em;
+
+    &::before {
+      position: relative;
+      bottom: 0.125rem;
+      margin-inline-end: 0.25em;
+    }
+
+    &:hover {
+      color: var(--vp-c-accent);
+    }
+  }
+
+  ol {
+    margin: 0;
+    padding-inline-start: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+    line-height: 1.5;
+
+    &:first-child a {
+      padding-inline-start: 0;
+    }
+
+    &:last-child a {
+      padding-inline-end: 0;
+    }
+
+    &.is-active a {
+      color: var(--vp-c-text-mute);
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+
+  li + li::before {
+    content: "/";
+    color: var(--vp-c-text-mute);
+  }
 }
 
 .text-gradient {
@@ -447,8 +549,107 @@ main.vp-page:has(section.hero-newage) > .vp-breadcrumb {
 
 /* Responsive tweaks */
 @media (max-width: 767px) {
-  .hero-newage { padding: 1rem; }
   .orb { filter: blur(40px); opacity: 0.45; }
+}
+
+/* ============ Mobile: compact spacing & grid alignment ============ */
+/* PrimeFlex utilities (p/m-*) ship with !important and huge 5rem steps,
+   so these overrides need !important and higher specificity to win. */
+
+/* Up to the theme's pad breakpoint the huge editorial navbar (6 dropdowns +
+   CTA) can't fit, so collapse it into the hamburger menu and keep the CTA
+   visible on tablets. Also kill any residual horizontal scroll. */
+@media (max-width: 959px) {
+  html,
+  body {
+    overflow-x: clip;
+  }
+
+  /* PrimeFlex .grid uses -0.5rem side margins; zero them so card rows never
+     extend past the content column (fixes the 8px sideways scroll) */
+  #markdown-content .grid {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .vp-navbar .vp-nav-links {
+    display: none !important;
+  }
+
+  .vp-navbar .vp-toggle-navbar-button {
+    display: flex !important;
+  }
+
+  /* The theme only enables the hamburger's full-screen menu (nav-screen)
+     up to the tablet breakpoint (719px). On pad widths we also hide the
+     navbar links above, so the hamburger must open the menu here too. */
+  @media (min-width: 720px) {
+    .vp-nav-screen {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  /* Full-bleed hero: compact padding that horizontally matches the 1.5rem
+     content gutter so hero text/cards align with the body below */
+  .hero-newage {
+    padding: 1rem .5rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* Compact the 5rem section margins used across pages */
+  #markdown-content > .mb-4 {
+    margin-bottom: 1.25rem !important;
+  }
+  #markdown-content > .mb-6,
+  #markdown-content > .mb-8,
+  #markdown-content > .mb-12 {
+    margin-bottom: 2rem !important;
+  }
+  #markdown-content > .mt-8,
+  #markdown-content > .mt-10 {
+    margin-top: 2rem !important;
+  }
+
+  /* Compact the giant 5rem (p-8/py-8) internal padding on big rounded blocks */
+  #markdown-content > .p-4,
+  #markdown-content > .px-4,
+  #markdown-content > .px-6,
+  #markdown-content > .px-8 {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+  #markdown-content > .py-6,
+  #markdown-content > .py-8,
+  #markdown-content > .p-6,
+  #markdown-content > .p-8 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  /* On phones hide the site title text (keep logo) and LinkedIn link;
+     show the navbar-end action buttons (Book a Call / YouTube / Gumroad) */
+  .navbar-logo .text-lg {
+    display: none !important;
+  }
+  .repo-linkedin {
+    display: none !important;
+  }
+  .vp-navbar .vp-navbar-end > .vp-nav-item {
+    display: flex !important;
+  }
+  .vp-action {
+    gap: 0.5rem !important;
+  }
+  /* Fit the call/YouTube/Gumroad buttons on narrow phones: hide the CTA
+     button label, keep it as an icon-only square */
+  .vp-action .p-button {
+    padding: 0.625rem !important;
+  }
+  .vp-action .p-button-label {
+    display: none !important;
+  }
 }
 
 /* Match other pages #markdown-content width to home page - Desktop only */
@@ -456,13 +657,13 @@ main.vp-page:has(section.hero-newage) > .vp-breadcrumb {
   /* VuePress Theme Hope home page uses ~64rem, other pages use ~100rem */
   /* We're restricting other pages to match home page width and center it */
   main.vp-page:not(.vp-project-home) {
-    max-width: 64rem !important;
+    max-width: 72rem !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
 
   main.vp-page:not(.vp-project-home) > div[vp-content] {
-    max-width: 64rem !important;
+    max-width: 72rem !important;
     margin-left: auto !important;
     margin-right: auto !important;
     position: relative !important;
@@ -471,14 +672,16 @@ main.vp-page:has(section.hero-newage) > .vp-breadcrumb {
   main.vp-page:not(.vp-project-home) #markdown-content,
   main.vp-page:not(.vp-project-home) .vp-breadcrumb,
   main.vp-page:not(.vp-project-home) .vp-page-title {
-    max-width: 64rem !important;
+    max-width: 72rem !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
 
-  /* Align full-bleed hero inner content with the body below */
-  .hero-newage .relative.z-1 {
-    max-width: 64rem !important;
+  /* Align full-bleed hero inner content with the body below.
+     Scoped to non-home pages: the homepage hero (`.hero-newage .relative.z-1`)
+     has its own wider `max-w-screen-xl` layout and must not be clamped. */
+  main.vp-page:not(.vp-project-home) .hero-newage .relative.z-1 {
+    max-width: 72rem !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
@@ -789,5 +992,13 @@ $dropdown-accent: var(--theme-color, #3b82f6);
 
   @media (max-width: 991.98px) {
     order: -1; /* card first on mobile/tablet, right after the intro */
+  }
+
+  /* Keep the whole right rail (action card + related services) in view
+     while scrolling the project content */
+  @media (min-width: 992px) {
+    position: sticky;
+    top: 5rem;
+    align-self: start;
   }
 }

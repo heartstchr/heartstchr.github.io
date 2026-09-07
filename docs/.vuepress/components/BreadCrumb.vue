@@ -52,20 +52,28 @@ const getBreadCrumbConfig = () => {
   if (breadcrumbConfig.length > 1) config.value = breadcrumbConfig;
 };
 
+let wasMovedBelowHero = false;
+
 const positionBreadcrumb = () => {
   nextTick(() => {
     const el = rootEl.value;
     if (!el) return;
     const hero = document.querySelector("#markdown-content > section.hero-newage");
     if (hero) {
-      if (hero.nextElementSibling !== el) hero.after(el);
+      if (hero.nextElementSibling !== el) {
+        hero.after(el);
+        wasMovedBelowHero = true;
+      }
       return;
     }
-    const contentWrapper =
-      document.querySelector("main.vp-page > div[vp-content], main.vp-page #markdown-content");
-    if (!contentWrapper) return;
-    if (contentWrapper.previousElementSibling !== el) {
-      contentWrapper.before(el);
+    if (!wasMovedBelowHero) return;
+    wasMovedBelowHero = false;
+    const pageTitle = document.querySelector("main.vp-page .vp-page-title");
+    if (pageTitle && pageTitle.previousElementSibling !== el) {
+      pageTitle.before(el);
+    } else {
+      const main = document.querySelector("main.vp-page");
+      if (main && main.firstElementChild !== el) main.insertBefore(el, main.firstElementChild);
     }
   });
 };

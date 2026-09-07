@@ -234,7 +234,7 @@ service:
   </div>
 </section>
 
-<div class="flex justify-content-between align-items-center mt-8 pt-6 border-top-1 surface-border">
+<div class="flex justify-content-between align-items-center my-4 py-4 border-top-1 surface-border">
   <div class="flex-1">
     <a v-if="$frontmatter.service.previousService" :href="$frontmatter.service.previousService.link" class="flex align-items-center no-underline text-color-secondary hover:text-primary group">
       <i class="pi pi-chevron-left mr-2 transition-transform group-hover:-translate-x-1"></i>

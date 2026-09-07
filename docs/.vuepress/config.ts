@@ -181,6 +181,10 @@ export default defineUserConfig({
       __dirname,
       "./components/BreadCrumb.vue"
     ),
+    "@theme-hope/components/base/MarkdownContent": path.resolve(
+      __dirname,
+      "./components/MarkdownContent.vue"
+    ),
     "@theme-hope/components/base/MainFadeInUpTransition": path.resolve(
       __dirname,
       "./components/MainFadeInUpTransition.vue"

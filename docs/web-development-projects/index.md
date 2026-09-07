@@ -122,13 +122,6 @@ copyright: false
 <!-- Bottom Strategy Section -->
 <ConsultingBridge :showAudit="true" />
 
-<!-- Sticky Mobile CTA -->
-<div class="fixed bottom-0 left-0 w-full p-3 z-5 lg:hidden glass-sticky-cta shadow-6 flex gap-3 border-top-1 border-100">
-  <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="flex-grow-1 no-underline">
-    <Button label="Consult Strategy" icon="pi pi-calendar" severity="primary" class="w-full text-lg font-bold py-3" raised />
-  </a>
-</div>
-
 <script setup lang="ts">
   import { freelance } from "@data/projects.js";
   import { toKebabCase } from "@utils/index.js";
@@ -205,11 +198,6 @@ copyright: false
   scroll-margin-top: 6rem;
 }
 
-.glass-sticky-cta { 
-  background: rgba(255, 255, 255, 0.92); 
-  backdrop-filter: blur(12px); 
-  -webkit-backdrop-filter: blur(12px);
-}
 @media (max-width: 767px) {
   .impact-card {
     padding: 1rem !important;

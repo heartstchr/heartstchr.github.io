@@ -38,19 +38,10 @@ project:
       <div class="grid align-items-center">
         <div class="col-12 border-bottom-1 border-100 mb-3 pb-3">
           <div class="flex align-items-center gap-3">
-            <i class="pi pi-briefcase text-primary text-2xl"></i>
             <div>
               <div class="text-xs opacity-50 uppercase font-bold">Industry</div>
-              <div class="font-bold text-lg text-900">{{$frontmatter.project.domain}}</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12">
-          <div class="flex align-items-center gap-3">
-            <i class="pi pi-bolt text-primary text-2xl"></i>
-            <div>
-              <div class="text-xs opacity-50 uppercase font-bold">Project Status</div>
-              <div class="font-bold text-lg text-900">Scale & Growth</div>
+              <div class="felx flex-row font-bold text-lg text-900">{{$frontmatter.project.domain}}</div>
+              <div class="text-base text-900">Scale & Growth</div>
             </div>
           </div>
         </div>
@@ -58,7 +49,7 @@ project:
           <Stacks :stack="$frontmatter.project.stack" :other-skills="$frontmatter.project.otherSkills" />
         </div>
       </div>
-      <div class="mt-4 pt-4">
+      <div class="mt-2">
         <div class="flex flex-column gap-3">
           <div v-if="$frontmatter.project.category === 'Ready-made Apps' && parseFloat($frontmatter.project.price) > 0" class="flex flex-column gap-3">
             <RazorpayButton :project="$frontmatter.project" page-theme />
@@ -75,6 +66,17 @@ project:
             </a>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="mt-4">
+      <h3 class="text-base font-bold mb-4 flex align-items-center gap-2">
+        <i class="pi pi-cog text-primary"></i>
+        Related Engineering Services
+      </h3>
+      <div class="flex flex-wrap gap-3">
+        <a href="/web-development-services/product-architecture-and-scaling/" class="text-700 hover:text-primary transition-all">Custom Software</a>
+        <a href="/web-development-services/saas-mvp-development/" class="text-700 hover:text-primary transition-all">MVP Development</a>
+        <a href="/web-development-services/ai-and-automation-strategy/" class="text-700 hover:text-primary transition-all">AI & Automation</a>
       </div>
     </div>
   </div>
@@ -292,7 +294,7 @@ LocalXR demonstrates how **Advanced Geographic Orchestration** can turn a simple
 
 </div>
 
-<div v-if="$frontmatter.project.relatedCaseStudy" class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100 mb-6">
+<div v-if="$frontmatter.project.relatedCaseStudy" class="mt-8 p-2 surface-50 border-round-2xl border-1 border-100 mb-6">
   <div class="flex flex-column md:flex-row align-items-center justify-content-between gap-4">
     <div>
       <h3 class="text-2xl font-bold m-0 flex align-items-center gap-2">
@@ -310,17 +312,6 @@ LocalXR demonstrates how **Advanced Geographic Orchestration** can turn a simple
 </div>
 
 <ConsultingBridge />
-<div class="mt-8 p-6 surface-50 border-round-2xl border-1 border-100">
-      <h3 class="text-2xl font-bold mb-4 flex align-items-center gap-2">
-        <i class="pi pi-cog text-primary"></i>
-        Related Engineering Services
-      </h3>
-      <div class="flex flex-wrap gap-3">
-        <a href="/web-development-services/product-architecture-and-scaling/" class="no-underline px-4 py-2 surface-0 shadow-1 border-round-xl text-700 font-bold hover:text-primary transition-all">Custom Software</a>
-        <a href="/web-development-services/saas-mvp-development/" class="no-underline px-4 py-2 surface-0 shadow-1 border-round-xl text-700 font-bold hover:text-primary transition-all">MVP Development</a>
-        <a href="/web-development-services/ai-and-automation-strategy/" class="no-underline px-4 py-2 surface-0 shadow-1 border-round-xl text-700 font-bold hover:text-primary transition-all">AI & Automation</a>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -340,7 +331,7 @@ LocalXR demonstrates how **Advanced Geographic Orchestration** can turn a simple
   </div>
 </section>
 
-<div class="flex justify-content-between align-items-center mt-8 pt-6 border-top-1 surface-border">
+<div class="flex justify-content-between align-items-center my-4 py-4 border-top-1 surface-border">
   <div class="flex-1">
     <a v-if="$frontmatter.project.previousProject" :href="$frontmatter.project.previousProject.link" class="flex align-items-center no-underline text-color-secondary hover:text-primary group">
       <i class="pi pi-chevron-left mr-2 transition-transform group-hover:-translate-x-1"></i>

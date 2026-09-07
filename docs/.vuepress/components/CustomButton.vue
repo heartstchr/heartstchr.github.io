@@ -1,6 +1,6 @@
 <!-- .vuepress/components/CustomButton.vue -->
 <template>
-    <a :href="href" :class="['flex justify-content-center text-center no-underline mt-4', customClass]">
+    <a :href="href" :class="['flex justify-content-center text-center no-underline no-external-link-icon mt-4', customClass]">
         <div class="p-flex p-ai-center">
             <div
                 class="p-button p-button-rounded p-button-secondary p-px-3 p-py-2 p-text-sm p-flex p-ai-center p-shadow-2 custom-button">

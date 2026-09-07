@@ -218,11 +218,39 @@ const announceDodoSuccess = () => {
     }
 };
 
+const announceDodoCancel = () => {
+    // Payment was canceled/failed. Tell the opener (parent dialog or original
+    // tab) so it closes the dialog without ever marking the order paid.
+    try {
+        if (window.self !== window.top && window.parent) {
+            window.parent.postMessage(
+                { type: "dodo-payment-canceled", product: props.project.name },
+                "*"
+            );
+        }
+    } catch (e) {
+        console.warn("[Dodo] Could not notify parent frame:", e);
+    }
+    try {
+        if ("BroadcastChannel" in window) {
+            const bc = new BroadcastChannel(DODO_CHANNEL_NAME);
+            bc.postMessage({ type: "dodo-payment-canceled", product: props.project.name });
+            bc.close();
+        }
+    } catch (e) {
+        console.warn("[Dodo] BroadcastChannel unavailable:", e);
+    }
+};
+
 const onDodoMessage = (event) => {
     if (!event.data || typeof event.data !== "object") return;
     if (event.data.type === "dodo-payment-success" || event.data.paymentSuccess === true) {
         if (checkoutActive.value) {
             markPaid();
+        }
+    } else if (event.data.type === "dodo-payment-canceled") {
+        if (checkoutActive.value) {
+            closeDialog();
         }
     }
 };
@@ -331,7 +359,10 @@ const initDodoAutoDetect = () => {
         announceDodoSuccess();
         markPaid();
     } else if (isCanceledReturn()) {
-        // Payment was explicitly canceled/failed — close dialog if open, don't mark paid.
+        // Payment was explicitly canceled/failed — announce it so the opener
+        // (parent dialog / original tab) closes its checkout, and close here
+        // too if this instance still has a dialog open.
+        announceDodoCancel();
         if (checkoutActive.value) {
             closeDialog();
         }
@@ -430,6 +461,29 @@ const confirmBuyerEmail = async () => {
 
 <template>
     <div class="w-full" @click.stop>
+        <!-- Payment method selector (shown above the email input when both providers available) -->
+        <div v-if="price > 0 && purchasable && !success && bothAvailable" class="flex align-items-center mb-4 w-full">
+            <div class="payment-toggle inline-flex align-items-center relative border-round-full w-full">
+                <span
+                    class="payment-toggle__thumb"
+                    :class="paymentMethod === 'razorpay' ? 'payment-toggle__thumb--right' : ''"
+                ></span>
+                <label
+                    class="payment-toggle__option relative z-1 flex-1 flex justify-content-center align-items-center gap-1 cursor-pointer text-xs font-bold px-4 py-1 border-round-full transition-colors"
+                    :class="paymentMethod === 'dodo' ? 'payment-toggle__option--active' : 'payment-toggle__option--inactive'"
+                >
+                    <input type="radio" v-model="paymentMethod" value="dodo" class="hidden" />
+                    Others
+                </label>
+                <label
+                    class="payment-toggle__option relative z-1 flex-1 flex justify-content-center align-items-center gap-1 cursor-pointer text-xs font-bold px-4 py-1 border-round-full transition-colors"
+                    :class="paymentMethod === 'razorpay' ? 'payment-toggle__option--active' : 'payment-toggle__option--inactive'"
+                >
+                    <input type="radio" v-model="paymentMethod" value="razorpay" class="hidden" />
+                    India (INR)
+                </label>
+            </div>
+        </div>
         <div class="flex flex-nowrap align-items-stretch w-full">
             <template v-if="price > 0">
                 <template v-if="purchasable && !success">
@@ -493,26 +547,6 @@ const confirmBuyerEmail = async () => {
         </div>
         <small v-if="buyerEmailError && !success" class="p-error mt-1 block">{{ buyerEmailError }}</small>
 
-        <!-- Payment method selector (shown below the input row when both providers available) -->
-        <div v-if="price > 0 && purchasable && !success && bothAvailable" class="flex align-items-center gap-3 mt-2">
-            <div class="flex gap-2">
-                <label
-                    class="payment-option flex align-items-center gap-1 cursor-pointer text-xs font-bold px-2 py-1 border-round-lg transition-all"
-                    :class="paymentMethod === 'dodo' ? 'payment-option--active' : 'payment-option--inactive'"
-                >
-                    <input type="radio" v-model="paymentMethod" value="dodo" class="hidden" />
-                    <i class="pi pi-globe"></i> International
-                </label>
-                <label
-                    class="payment-option flex align-items-center gap-1 cursor-pointer text-xs font-bold px-2 py-1 border-round-lg transition-all"
-                    :class="paymentMethod === 'razorpay' ? 'payment-option--active' : 'payment-option--inactive'"
-                >
-                    <input type="radio" v-model="paymentMethod" value="razorpay" class="hidden" />
-                    <i class="pi pi-inbox"></i> India (INR)
-                </label>
-            </div>
-        </div>
-
         <Dialog
             v-model:visible="showConfirm"
             modal
@@ -559,17 +593,39 @@ const confirmBuyerEmail = async () => {
     border-top-left-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
 }
-.payment-option--active {
-    background: var(--theme-color, #10b981);
+.payment-toggle {
+    height: 36px;
+    padding: 3px;
+    background: rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid var(--premium-border, rgba(0, 0, 0, 0.08));
+    border-radius: 999px !important;
+}
+.payment-toggle__thumb {
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    width: calc(50% - 3px);
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--theme-color, #10b981) 0%, #059669 100%);
+    box-shadow: 0 12px 24px -8px rgba(16, 185, 129, 0.5);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.payment-toggle__thumb--right {
+    transform: translateX(100%);
+}
+.payment-toggle__option {
+    z-index: 1;
+    border-radius: 999px !important;
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.payment-toggle__option--active {
     color: #fff;
 }
-.payment-option--inactive {
-    background: transparent;
-    color: #6b7280;
-    border: 1px solid #e5e7eb;
+.payment-toggle__option--inactive {
+    color: var(--text-color-secondary, #6b7280);
 }
-.payment-option--inactive:hover {
-    border-color: #d1d5db;
-    color: #374151;
+.payment-toggle__option--inactive:hover {
+    color: var(--text-color, #1e293b);
 }
 </style>
