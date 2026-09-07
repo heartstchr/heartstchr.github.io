@@ -441,14 +441,49 @@ const categorySchemas = Object.fromEntries(
   })
 );
 
+// Standalone service landing pages (not under /web-development-services/) already
+// carry a Service JSON-LD in their frontmatter head. Add the missing breadcrumb
+// so they qualify for breadcrumb rich results site-wide.
+const standaloneServiceBreadcrumbs = Object.fromEntries(
+  [
+    { path: "/hire-nuxt-developer/", name: "Hire Nuxt.js Developers" },
+    { path: "/hire-nextjs-developer/", name: "Hire Next.js Developer" },
+    { path: "/figma-to-vue-development/", name: "Figma to Vue.js Development" },
+    { path: "/ai-saas-development/", name: "AI SaaS Development" },
+    { path: "/web-development-for-startups/", name: "Web Development for Startups" },
+    {
+      path: "/website-development-for-small-business/",
+      name: "Website Development for Small Business",
+    },
+  ].map(({ path, name }) => [
+    path,
+    [
+      breadcrumbSchema([
+        { name: "Home", path: "/" },
+        { name: "Services", path: "/web-development-services/" },
+        { name, path },
+      ]),
+    ],
+  ])
+);
+
+const auditPageSchemas = [
+  breadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Startup Tech Stack Audit", path: "/startup-stack-audit-checklist/" },
+  ]),
+];
+
 export const pageSpecificSchemas: Record<string, any[]> = {
   "/": homepageSchemas,
   "/web-development-services/": servicesHubSchemas,
   "/web-development-projects/": projectsHubSchemas,
   "/contact/": contactSchemas,
   "/stackseekers-tv/": tvHubSchemas,
+  "/startup-stack-audit-checklist/": auditPageSchemas,
   ...serviceSchemas,
   ...projectSchemas,
   ...postSchemas,
   ...categorySchemas,
+  ...standaloneServiceBreadcrumbs,
 };

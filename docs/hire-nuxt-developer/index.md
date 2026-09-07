@@ -1,6 +1,6 @@
 ---
-title: Hire Nuxt Developer | Senior Nuxt.js Engineer for SSR & SSG
-description: Hire an experienced Nuxt.js developer for server-side rendering, static site generation, and SEO-optimized Vue.js applications. Senior-level execution, zero agency overhead.
+title: Hire Nuxt.js Developers | Senior Nuxt Developer for Hire
+description: Hire senior Nuxt.js developers for SSR, SSG, and SEO-optimized Vue applications. Experienced freelance Nuxt developer with banking-grade production experience — zero agency overhead.
 layout: Layout
 hidePageTitle: true
 editLink: false
@@ -10,16 +10,16 @@ contributors: false
 head:
   - - meta
     - name: keywords
-      content: hire nuxt developer, nuxt.js developer, nuxt developer for hire, vue nuxt developer, ssr vue.js, nuxt ssg developer, hire vue nuxt engineer, nuxt freelancer
+      content: hire nuxt developer, hire nuxt.js developers, nuxt.js developer, nuxt developer for hire, vue nuxt developer, hire nuxt js developers, ssr vue.js, nuxt ssg developer, hire vue nuxt engineer, nuxt freelancer, hire freelance nuxt.js developer
   - - meta
     - property: og:title
-      content: "Hire Nuxt Developer | Senior Nuxt.js Engineer for SSR & SSG"
+      content: "Hire Nuxt.js Developers | Senior Nuxt Developer for Hire"
   - - meta
     - property: og:description
-      content: "Hire an experienced Nuxt.js developer for server-side rendering, static site generation, and SEO-optimized Vue.js applications."
+      content: "Hire senior Nuxt.js developers for server-side rendering, static site generation, and SEO-optimized Vue.js applications."
   - - script
     - type: application/ld+json
-      content: '{"@context":"https://schema.org","@type":"Service","name":"Hire Nuxt Developer","description":"Senior Nuxt.js developer for SSR, SSG, and SEO-optimized Vue.js applications.","provider":{"@type":"Person","name":"Jiwan Ghosal","jobTitle":"Senior Nuxt.js Developer"},"areaServed":"Global","serviceType":"Nuxt.js Development"}'
+      content: '{"@context":"https://schema.org","@type":"Service","name":"Hire Nuxt.js Developers","description":"Senior Nuxt.js developers for SSR, SSG, and SEO-optimized Vue.js applications.","provider":{"@type":"Person","name":"Jiwan Ghosal","jobTitle":"Senior Nuxt.js Developer"},"areaServed":"Global","serviceType":"Nuxt.js Development"}'
 ---
 
 <section class="hero-newage relative overflow-hidden px-4 py-8 md:px-8 md:py-12 lg:px-12 surface-0 mb-8">

@@ -3,20 +3,24 @@
         <h2 class="text-lg font-bold mb-2">Latest Videos</h2>
         <div v-if="videos.length === 0" class="flex flex-column gap-2">
             <a href="https://www.youtube.com/@stackseekers" target="_blank" class="no-underline" aria-label="Visit Stack Seekers YouTube Channel">
-                <Button label="Watch on YouTube" icon="pi pi-youtube" iconPos="left" class="w-full" severity="secondary"
+                <Button label="Watch on YouTube" icon="pi pi-youtube" iconPos="left" class="w-full btn-youtube"
                     size="small" raised rounded />
             </a>
         </div>
         <div v-else class="flex flex-column gap-2">
-            <a v-for="video in videos.slice(0, 4)" :key="video.id" :href="'https://www.youtube.com/watch?v=' + video.id"
-                target="_blank" class="block no-underline transition-transform duration-200 hover:-translate-y-0.5" :aria-label="'Watch ' + video.title">
+            <div v-for="video in videos.slice(0, 4)" :key="video.id"
+                class="block no-underline transition-transform duration-200 hover:-translate-y-0.5">
                 <div
                     class="flex flex-column gap-1.5 p-1.5 bg-surface-0 rounded-md border border-surface-200 transition-all duration-200 hover:border-p-green-800 hover:shadow-md">
-                    <img :src="video.thumbnail" :alt="video.title" class="w-full aspect-video object-cover rounded"
-                        loading="lazy" />
-                    <span class="text-sm font-medium text-900 line-clamp-2">{{ video.title }}</span>
+                    <a :href="youtubeUrl(video)" target="_blank" class="no-underline" :aria-label="'Watch ' + video.title">
+                        <img :src="video.thumbnail" :alt="video.title" class="w-full aspect-video object-cover rounded"
+                            loading="lazy" />
+                    </a>
+                    <a :href="videoPage(video)" class="no-underline" :aria-label="'View ' + video.title">
+                        <span class="text-sm font-medium text-900 line-clamp-2">{{ video.title }}</span>
+                    </a>
                 </div>
-            </a>
+            </div>
             <a href="https://www.youtube.com/@stackseekers" target="_blank" class="no-underline mt-2" aria-label="View All Videos on YouTube">
                 <Button label="View All Videos" icon="pi pi-youtube" iconPos="left" class="w-full" severity="secondary"
                     size="small" outlined rounded />
@@ -32,10 +36,17 @@ import { fetchChannelVideos } from '../services/youtubeService';
 
 const videos = ref((youtubeVideos.channelVideos || []).slice(0, 4).map((v) => ({ ...v })));
 
+const youtubeUrl = (video) => video.url || 'https://www.youtube.com/watch?v=' + video.id;
+const videoPage = (video) =>
+    video.slug ? '/stackseekers-tv/videos/' + video.slug + '/' : youtubeUrl(video);
+
 onMounted(async () => {
     try {
         const fresh = await fetchChannelVideos(4);
-        if (fresh.length) videos.value = fresh;
+        if (fresh.length) {
+            const slugById = Object.fromEntries(videos.value.map((v) => [v.id, v.slug]).filter(([, s]) => s));
+            videos.value = fresh.map((v) => ({ ...v, slug: slugById[v.id] }));
+        }
     } catch (error) {
         console.error('Error loading videos:', error);
     }

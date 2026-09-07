@@ -111,8 +111,8 @@ export const freelance = [
   },
   {
     name: "AI Dynamic CRUD App",
-    seoTitle: "AI Dynamic CRUD App: Notion to Web App",
-    seoDescription: "Transform any Notion database into a professional web application with AI. Automatic field detection, intelligent forms, search, and multi-language support.",
+    seoTitle: "AI CRUD App Generator: Notion to Web App",
+    seoDescription: "Generate a CRUD app with AI. Turn any Notion database into a professional web app — automatic field detection, intelligent forms, search, and multi-language support.",
     category: "Ready-made Apps",
     description: "Transform your Notion database into a professional web application in minutes with the power of AI. Automatically reads your Notion structure, suggests field relationships, and creates beautiful, responsive interfaces with intelligent forms, search, and multi-language support.",
     software: "Web Application",
@@ -682,8 +682,8 @@ export const freelance = [
   },
   {
     name: "Appliance Repair Service Platform",
-    seoTitle: "Appliance Repair Platform & Troubleshooting",
-    seoDescription: "A content-driven platform connecting users with local appliance repair professionals, backed by free troubleshooting guides for major home appliances.",
+    seoTitle: "Appliance Repair Platform: Find Local Professionals",
+    seoDescription: "A local appliance repair service platform connecting homeowners with vetted professionals — with free troubleshooting guides for refrigerators, washers, dryers, and more.",
     category: "Startup MVPs",
     details: "./details/appliance-repair.md",
     description:
@@ -1656,8 +1656,8 @@ export const freelance = [
   },
   {
     name: "Partner Dashboard Upstox",
-    seoTitle: "Upstox Partner Dashboard: Sub-Broker Account",
-    seoDescription: "Upstox's partner dashboard for opening a sub-broker account — onboard clients, track commissions, and run your brokerage business from one place.",
+    seoTitle: "Upstox Partner Dashboard: Sub-Broker Account & Login",
+    seoDescription: "Open an Upstox sub-broker account and run your brokerage from the partner dashboard — onboard clients, track leads and commissions, and manage your business in one place.",
     category: "Enterprise",
     description: "Open a sub-broker account with Upstox.",
     software: "Web",
@@ -1778,8 +1778,8 @@ export const freelance = [
   },
   {
     name: "Call Matrix",
-    seoTitle: "Call Matrix: Call Intelligence & Analytics",
-    seoDescription: "A SaaS platform for call intelligence, marketing attribution, and analytics — track calls from ad to close with D3-powered dashboards.",
+    seoTitle: "Call Matrix: Call Tracking & Intelligence Platform",
+    seoDescription: "A SaaS call intelligence and analytics platform for call tracking, marketing attribution, and campaign analytics — with D3-powered dashboards and advanced IVR reporting.",
     category: "SaaS",
     description: "Call Intelligence, Marketing, and Analytics Platform",
     stack: [

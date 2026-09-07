@@ -55,7 +55,7 @@ h2 {
 }
 .p-button::after,
 a.p-button::after,
-a:has(.p-button)::after {
+a:has(.p-button)::after, a::after {
   content: none !important;
 }
 .vp-hero-actions {
@@ -746,6 +746,23 @@ html[data-theme="dark"] .pi-github,
 
 .pi-youtube {
   color: #FF0000 !important;
+}
+
+/* YouTube-branded buttons (Watch on / Watch on YouTube) */
+.p-button.btn-youtube {
+  background: #ff0000 !important;
+  border-color: #ff0000 !important;
+  color: #fff !important;
+}
+
+.p-button.btn-youtube:hover,
+.p-button.btn-youtube:focus {
+  background: #cc0000 !important;
+  border-color: #cc0000 !important;
+}
+
+.p-button.btn-youtube .pi-youtube {
+  color: #fff !important;
 }
 
 @media (max-width: 767px) {

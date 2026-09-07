@@ -55,8 +55,13 @@ const publicDir = path.resolve(__dirname, "./public");
 const outProjectDir = path.resolve(docsRoot, "web-development-projects");
 const outServiceDir = path.resolve(docsRoot, "web-development-services");
 const outTagsDir = path.resolve(docsRoot, "tags");
+const outVideoDir = path.resolve(docsRoot, "stackseekers-tv", "videos");
 const detailsDir = path.resolve(__dirname, "./data/details");
 const DOMAIN = "https://stackseekers.com";
+
+// Track generated per-video pages so the sitemap can enrich them
+// (priority/changefreq/lastmod/thumbnail).
+const videoPages = [];
 
 const ensureDirectoryExists = (dirPath) => {
   if (!fs.existsSync(dirPath)) {
@@ -96,6 +101,37 @@ const toIsoDate = (value) => {
 
 const buildContactLink = (subject, service) =>
   `/contact/?subject=${encodeURIComponent(subject)}&service=${encodeURIComponent(service)}`;
+
+// Strip YouTube-ism noise (#hashtags, emojis/symbols, box-drawing + math glyphs,
+// doubled spaces) from titles/descriptions so generated video pages get clean,
+// SEO-friendly text.
+const cleanVideoText = (value, maxLength) => {
+  const cleaned = String(value || "")
+    .replace(/#[\w-]+/g, " ")
+    .replace(
+      /[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}\u{2500}-\u{25FF}\u{1D400}-\u{1D7FF}\u{FE0F}\u{200D}\u{FFFD}]/gu,
+      " "
+    )
+    .replace(/\s+/g, " ")
+    .trim();
+  return maxLength && cleaned.length > maxLength
+    ? cleaned.slice(0, maxLength).trim()
+    : cleaned;
+};
+
+// Pull the actual walkthrough text out of a YouTube description and drop the
+// repeated boilerplate (Discord/link blocks, "STACK USED", "CONNECT WITH ME",
+// "DESCRIPTION" labels, timestamps). Used for the page's meta description.
+const cleanVideoDescription = (value, maxLength) => {
+  let text = cleanVideoText(value);
+  const labeled = text.match(/\bDESCRIPTION\b\s*(.*)$/i);
+  if (labeled && labeled[1]) text = labeled[1];
+  const cut = text.split(
+    /\b(STACK USED|CONNECT WITH ME|WATCH THE VIDEO|TIMESTAMPS)\b/i
+  )[0];
+  text = cut || text;
+  return cleanVideoText(text, maxLength);
+};
 
 const projectTemplate = (project, projectIndex, allProjects) => {
   const markdownContent = readMarkdownContent(project.details);
@@ -150,7 +186,7 @@ project:
 
 <div class="grid">
   <div class="col-12 lg:col-4 project-side-col mb-4">
-    <div class="surface-card p-2 border-round-3xl shadow-2 border-1 border-100 project-action-card" style="position: sticky; top: 5rem;">
+    <div class="surface-card p-2 border-round-3xl shadow-2 border-1 border-100 project-action-card">
       <div class="grid align-items-center">
         <div class="col-12 border-bottom-1 border-100 mb-3 pb-3">
           <div class="flex align-items-center gap-3">
@@ -349,7 +385,7 @@ ${markdownContent}
 
 </div>
 
-<div v-if="$frontmatter.project.relatedCaseStudy" class="mt-8 p-2 surface-50 border-round-2xl border-1 border-100 mb-6">
+<div v-if="$frontmatter.project.relatedCaseStudy" class="mt-8 p-4 surface-50 border-round-2xl border-1 border-100 mb-6">
   <div class="flex flex-column md:flex-row align-items-center justify-content-between gap-4">
     <div>
       <h3 class="text-2xl font-bold m-0 flex align-items-center gap-2">
@@ -860,6 +896,8 @@ const getPriority = (pagePath) => {
   if (pagePath === "/web-development-projects/") return "0.85";
   if (pagePath.startsWith("/web-development-projects/")) return "0.80";
   if (pagePath.startsWith("/posts/")) return "0.76";
+  if (pagePath.startsWith("/stackseekers-tv/videos/")) return "0.60";
+  if (pagePath === "/stackseekers-tv/") return "0.64";
   if (pagePath.startsWith("/about/") || pagePath.startsWith("/jiwan-ghosal/")) return "0.72";
   if (pagePath.startsWith("/tags/")) return "0.58";
   if (pagePath.startsWith("/privacy-policy/") || pagePath.startsWith("/terms-of-service/")) return "0.20";
@@ -869,11 +907,15 @@ const getPriority = (pagePath) => {
 const getChangeFrequency = (pagePath) => {
   if (pagePath === "/" || pagePath === "/contact/" || pagePath === "/web-development-services/") return "weekly";
   if (pagePath.startsWith("/posts/")) return "monthly";
+  if (pagePath.startsWith("/stackseekers-tv/videos/")) return "yearly";
   if (pagePath.startsWith("/tags/")) return "weekly";
   return "monthly";
 };
 
 const getLastModified = (filePath, pagePath) => {
+  const video = videoPages.find((v) => v.page === pagePath);
+  if (video?.publishedAt) return toIsoDate(video.publishedAt);
+
   const post = posts.find((item) => item.link === pagePath);
   if (post?.date) return toIsoDate(post.date);
 
@@ -885,6 +927,12 @@ const getLastModified = (filePath, pagePath) => {
 // an image:image block per URL (image sitemap support). Returns undefined for
 // pages without a meaningful image so we don't attach irrelevant artwork.
 const getSitemapImage = (pagePath) => {
+  // Per-video pages — expose the YouTube thumbnail as their image.
+  const video = videoPages.find((v) => v.page === pagePath);
+  if (video?.thumbnail) {
+    return video.thumbnail;
+  }
+
   // Service pages — a dedicated cover image exists per service code.
   const service = services.find((s) => s.code && pagePath === `/web-development-services/${toKebabCase(s.code)}/`);
   if (service?.code) {
@@ -900,11 +948,32 @@ const getSitemapImage = (pagePath) => {
     return src.startsWith("http") ? src : `${DOMAIN}${src}`;
   }
 
-  // Category pages + projects hub — use the first project's cover image in scope.
+  // Category pages + projects hub — use a cover image relevant to the page.
   if (pagePath.startsWith("/web-development-projects/")) {
-    const related = freelance.find((p) => p.images?.[0]?.itemImageSrc);
+    // Map a category slug to the exact "category" value used in projects data,
+    // so each category page gets a cover from its own projects, not the first
+    // project with images site-wide (previously a duplicated "furniture" cover).
+    const categoryBySlug = {
+      "ready-made-apps": "Ready-made Apps",
+      enterprise: "Enterprise",
+      ai: "AI",
+      saas: "SaaS",
+      automation: "Automation",
+      "startup-mvps": "Startup MVPs",
+    };
+    const categoryMatch = pagePath.match(/^\/web-development-projects\/([^/]+)\/$/);
+    const scope = categoryMatch
+      ? freelance.filter((p) => p.category === categoryBySlug[categoryMatch[1]])
+      : freelance;
+    const related = scope.find((p) => p.images?.[0]?.itemImageSrc);
     if (related?.images?.[0]?.itemImageSrc) {
       const src = related.images[0].itemImageSrc;
+      return src.startsWith("http") ? src : `${DOMAIN}${src}`;
+    }
+    // Fallback for category slugs with no matching projects: any cover.
+    const fallback = freelance.find((p) => p.images?.[0]?.itemImageSrc);
+    if (fallback?.images?.[0]?.itemImageSrc) {
+      const src = fallback.images[0].itemImageSrc;
       return src.startsWith("http") ? src : `${DOMAIN}${src}`;
     }
   }
@@ -953,6 +1022,27 @@ const mapYoutubeItem = (item) => ({
   url: `https://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`,
 });
 
+// Assign a unique, human-readable slug (derived from the video title) + its
+// page URL. Kept unique across both playlists so no two videos collide.
+const assignVideoSlugs = (videos) => {
+  const used = new Set();
+  return (videos || []).map((video) => {
+    let slug = toKebabCase(cleanVideoText(video.title));
+    if (!slug) slug = (video.id || "video").toLowerCase();
+    let uniqueSlug = slug;
+    let counter = 2;
+    while (used.has(uniqueSlug)) {
+      uniqueSlug = `${slug}-${counter++}`;
+    }
+    used.add(uniqueSlug);
+    return {
+      ...video,
+      slug: uniqueSlug,
+      page: `/stackseekers-tv/videos/${uniqueSlug}/`,
+    };
+  });
+};
+
 const generateYouTubeVideos = async () => {
   const outFile = path.resolve(__dirname, "./data/youtubeVideos.ts");
   const empty = { channelVideos: [], podcastVideos: [], fetchedAt: null };
@@ -966,7 +1056,7 @@ export const youtubeVideos = ${JSON.stringify(data, null, 2)};
   if (!YT_API) {
     console.warn("[youtube] No VITE_YOUTUBE_API_KEY; writing empty data.");
     write(empty);
-    return;
+    return empty;
   }
   try {
     const [uploads, podcast] = await Promise.all([
@@ -982,18 +1072,188 @@ export const youtubeVideos = ${JSON.stringify(data, null, 2)};
     const publicPodcast = (podcast.items || []).filter(
       (i) => i.status?.privacyStatus === "public"
     );
-    write({
-      channelVideos: publicUploads.map(mapYoutubeItem),
-      podcastVideos: publicPodcast.map(mapYoutubeItem),
+    const data = {
+      channelVideos: assignVideoSlugs(publicUploads.map(mapYoutubeItem)),
+      podcastVideos: assignVideoSlugs(publicPodcast.map(mapYoutubeItem)),
       fetchedAt: new Date().toISOString(),
-    });
+    };
+    write(data);
     console.log(
       `Created youtubeVideos.ts (${publicUploads.length} channel, ${publicPodcast.length} podcast)`
     );
+    return data;
   } catch (error) {
     console.warn("[youtube] Build-time fetch failed, writing empty data:", error.message);
     write(empty);
+    return empty;
   }
+};
+
+const videoTemplate = (video, index, allVideos) => {
+  const title = cleanVideoText(video.title, 70);
+  const description = cleanVideoText(video.description, 170);
+  const schemaDescription = cleanVideoText(video.description, 300);
+  const publishedAt = video.publishedAt || new Date().toISOString();
+  const sortableDate = publishedAt.slice(0, 10);
+  const prev = index > 0 ? allVideos[index - 1] : null;
+  const next = index < allVideos.length - 1 ? allVideos[index + 1] : null;
+  const related = (allVideos || [])
+    .filter((v) => v.id !== video.id)
+    .slice(0, 4)
+    .map((v) => ({
+      id: v.id,
+      title: cleanVideoText(v.title, 70),
+      thumbnail: v.thumbnail,
+      page: v.page,
+    }));
+
+  const videoJsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "@id": `${DOMAIN}${video.page}`,
+    name: title,
+    description: schemaDescription,
+    thumbnailUrl: [video.thumbnail],
+    uploadDate: publishedAt,
+    contentUrl: video.url,
+    embedUrl: `https://www.youtube.com/embed/${video.id}`,
+    publisher: {
+      "@type": "Organization",
+      "@id": `${DOMAIN}/#organization`,
+      name: "Stack Seekers",
+    },
+    author: {
+      "@type": "Person",
+      "@id": `${DOMAIN}/#person`,
+      name: "Jiwan Ghosal",
+    },
+  });
+
+  return `---
+title: ${JSON.stringify(title)}
+description: ${JSON.stringify(description)}
+date: ${sortableDate}
+lastUpdated: false
+editLink: false
+contributors: false
+pageInfo: false
+copyright: false
+layout: Layout
+video:
+  id: ${JSON.stringify(video.id)}
+  title: ${JSON.stringify(title)}
+  description: ${JSON.stringify(cleanVideoText(video.description))}
+  thumbnail: ${JSON.stringify(video.thumbnail)}
+  publishedAt: ${JSON.stringify(publishedAt)}
+  embedUrl: ${JSON.stringify(`https://www.youtube.com/embed/${video.id}`)}
+  url: ${JSON.stringify(video.url)}
+  page: ${JSON.stringify(video.page)}
+  previousVideo: ${JSON.stringify(
+    prev
+      ? { id: prev.id, title: cleanVideoText(prev.title, 70), thumbnail: prev.thumbnail, page: prev.page }
+      : null
+  )}
+  nextVideo: ${JSON.stringify(
+    next
+      ? { id: next.id, title: cleanVideoText(next.title, 70), thumbnail: next.thumbnail, page: next.page }
+      : null
+  )}
+  relatedVideos: ${JSON.stringify(related)}
+head:
+  - - script
+    - type: application/ld+json
+      content: '${videoJsonLd.replace(/'/g, "''")}'
+---
+
+<div class="mb-4">
+  <a href="/stackseekers-tv/" class="text-700 hover:text-primary no-underline inline-flex align-items-center gap-1">
+    <i class="pi pi-arrow-left text-xs"></i> Back to All Videos
+  </a>
+</div>
+
+<div class="mb-4 overflow-hidden border-round-3xl shadow-4 surface-card border-1 border-100">
+  <div class="relative w-full overflow-hidden" style="padding-top: 56.25%;">
+    <iframe
+      :src="$frontmatter.video.embedUrl"
+      class="absolute top-0 left-0 w-full h-full"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+
+<div class="flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+  <div class="text-xs text-500 font-bold uppercase tracking-wider">
+    <i class="pi pi-calendar mr-1"></i>
+    {{ new Date($frontmatter.video.publishedAt).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }) }}
+  </div>
+  <a :href="$frontmatter.video.url" target="_blank" class="no-underline">
+    <Button label="Watch on YouTube" icon="pi pi-youtube" iconPos="left" class="btn-youtube font-bold" raised rounded />
+  </a>
+</div>
+
+<section class="surface-card border-round-3xl border-1 border-100 p-4 md:p-5 mb-6">
+  <h2 class="text-2xl font-bold mb-3">About This Video</h2>
+  <p class="text-700 line-height-4 m-0" style="white-space: pre-line;">{{ $frontmatter.video.description }}</p>
+</section>
+
+<section v-if="$frontmatter.video.previousVideo || $frontmatter.video.nextVideo" class="mb-6 grid">
+  <div v-if="$frontmatter.video.previousVideo" class="col-12 md:col-6 mb-3 md:mb-0">
+    <a :href="$frontmatter.video.previousVideo.page" class="no-underline surface-card border-1 border-100 border-round-3xl p-3 flex align-items-center gap-3 hover:shadow-2 transition-all h-full">
+      <img :src="$frontmatter.video.previousVideo.thumbnail" :alt="$frontmatter.video.previousVideo.title" class="w-7rem aspect-video object-cover border-round-md" loading="lazy" />
+      <span>
+        <span class="block text-xs text-500 font-bold uppercase tracking-wider mb-1"><i class="pi pi-arrow-left text-xs mr-1"></i>Previous</span>
+        <span class="text-sm font-medium text-900 line-clamp-2">{{ $frontmatter.video.previousVideo.title }}</span>
+      </span>
+    </a>
+  </div>
+  <div v-if="$frontmatter.video.nextVideo" class="col-12 md:col-6">
+    <a :href="$frontmatter.video.nextVideo.page" class="no-underline surface-card border-1 border-100 border-round-3xl p-3 flex align-items-center gap-3 hover:shadow-2 transition-all h-full flex-row-reverse text-right">
+      <img :src="$frontmatter.video.nextVideo.thumbnail" :alt="$frontmatter.video.nextVideo.title" class="w-7rem aspect-video object-cover border-round-md" loading="lazy" />
+      <span>
+        <span class="block text-xs text-500 font-bold uppercase tracking-wider mb-1">Next <i class="pi pi-arrow-right text-xs ml-1"></i></span>
+        <span class="text-sm font-medium text-900 line-clamp-2">{{ $frontmatter.video.nextVideo.title }}</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<section class="mb-6">
+  <h3 class="text-lg font-bold mb-3">More Videos from Stack Seekers TV</h3>
+  <div class="flex flex-wrap gap-3">
+    <a v-for="v in $frontmatter.video.relatedVideos" :key="v.id" :href="v.page" class="no-underline surface-card border-round-3xl border-1 border-100 overflow-hidden text-900 hover:shadow-2 transition-all" style="width: 16rem;">
+      <img :src="v.thumbnail" :alt="v.title" class="w-full aspect-video object-cover" loading="lazy" />
+      <span class="block p-3 text-sm font-medium line-clamp-2">{{ v.title }}</span>
+    </a>
+  </div>
+</section>
+
+<section class="border-round-3xl p-6 text-center surface-section relative overflow-hidden">
+  <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
+  <div class="relative z-1">
+    <h2 class="text-3xl font-bold mb-3">Ready to build something similar?</h2>
+    <p class="text-lg text-700 mb-5 max-w-30rem mx-auto">I help founders and teams take these concepts and turn them into scalable, production-ready systems.</p>
+    <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=book-call" target="_blank" class="no-underline">
+      <Button label="Book Free Strategy Call" icon="pi pi-video" severity="primary" size="large" rounded raised />
+    </a>
+  </div>
+</section>
+`;
+};
+
+// One static page per YouTube video, e.g. /stackseekers-tv/videos/<slug>/.
+const generateVideoPages = (videos) => {
+  ensureDirectoryExists(outVideoDir);
+  (videos || []).forEach((video, index) => {
+    const content = videoTemplate(video, index, videos);
+    const dirPath = path.join(outVideoDir, video.slug);
+    const filePath = path.join(dirPath, "index.md");
+    ensureDirectoryExists(dirPath);
+    fs.writeFileSync(filePath, content, "utf-8");
+    videoPages.push(video);
+    console.log(`Created Video Page: ${filePath}`);
+  });
 };
 
 const generateSitemap = () => {
@@ -1054,5 +1314,6 @@ ${url.image ? `    <image:image>
 generatePages(freelance, outProjectDir, "name", projectTemplate);
 generatePages(services, outServiceDir, "code", serviceTemplate);
 generateTagPages();
+const ytData = await generateYouTubeVideos();
+generateVideoPages(ytData?.channelVideos || []);
 generateSitemap();
-await generateYouTubeVideos();

@@ -161,8 +161,8 @@ export const services = [
   },
   {
     name: "High-Performance API Design",
-    seoTitle: "High-Performance API Design & Audit",
-    seoDescription: "Slow APIs killing your product? We audit latency, redesign hot paths, and build high-concurrency RESTful and GraphQL APIs that stay fast under growing load.",
+    seoTitle: "High-Performance API Design, Audit & Integration",
+    seoDescription: "High-throughput APIs that stay fast under load. Audit latency, redesign hot paths, and build high-concurrency RESTful and GraphQL APIs with clean integrations.",
     icon: "swagger",
     code: "api-performance-and-integration",
     imageCode: "API-performance-and-integration",

@@ -1,6 +1,6 @@
 ---
-title: "AI Dynamic CRUD App: Notion to Web App"
-description: "Transform any Notion database into a professional web application with AI. Automatic field detection, intelligent forms, search, and multi-language support."
+title: "AI CRUD App Generator: Notion to Web App"
+description: "Generate a CRUD app with AI. Turn any Notion database into a professional web app — automatic field detection, intelligent forms, search, and multi-language support."
 lastUpdated: false
 editLink: false
 contributors: false
@@ -34,7 +34,7 @@ project:
 
 <div class="grid">
   <div class="col-12 lg:col-4 project-side-col mb-4">
-    <div class="surface-card p-2 border-round-3xl shadow-2 border-1 border-100 project-action-card" style="position: sticky; top: 5rem;">
+    <div class="surface-card p-2 border-round-3xl shadow-2 border-1 border-100 project-action-card">
       <div class="grid align-items-center">
         <div class="col-12 border-bottom-1 border-100 mb-3 pb-3">
           <div class="flex align-items-center gap-3">
@@ -294,7 +294,7 @@ This project serves as a technical proof-of-concept for **Automated Internal Too
 
 </div>
 
-<div v-if="$frontmatter.project.relatedCaseStudy" class="mt-8 p-2 surface-50 border-round-2xl border-1 border-100 mb-6">
+<div v-if="$frontmatter.project.relatedCaseStudy" class="mt-8 p-4 surface-50 border-round-2xl border-1 border-100 mb-6">
   <div class="flex flex-column md:flex-row align-items-center justify-content-between gap-4">
     <div>
       <h3 class="text-2xl font-bold m-0 flex align-items-center gap-2">

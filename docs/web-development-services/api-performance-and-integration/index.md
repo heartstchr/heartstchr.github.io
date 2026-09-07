@@ -1,6 +1,6 @@
 ---
-title: "High-Performance API Design & Audit"
-description: "Slow APIs killing your product? We audit latency, redesign hot paths, and build high-concurrency RESTful and GraphQL APIs that stay fast under growing load."
+title: "High-Performance API Design, Audit & Integration"
+description: "High-throughput APIs that stay fast under load. Audit latency, redesign hot paths, and build high-concurrency RESTful and GraphQL APIs with clean integrations."
 lastUpdated: false
 editLink: false
 contributors: false
