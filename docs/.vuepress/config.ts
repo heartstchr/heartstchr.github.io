@@ -156,6 +156,25 @@ export default defineUserConfig({
           ];
         }
       },
+      onInitialized: (app: any) => {
+        // The theme's SEO plugin runs during onInitialized and emits a
+        // <script type="application/ld+json">null</script> tag when the
+        // jsonLd callback returns undefined. This hook runs after the
+        // theme's plugin and strips those invalid entries.
+        for (const page of app.pages) {
+          if (page.frontmatter.head) {
+            page.frontmatter.head = page.frontmatter.head.filter(
+              (entry: any[]) =>
+                !(
+                  Array.isArray(entry) &&
+                  entry[0] === "script" &&
+                  entry[1]?.type === "application/ld+json" &&
+                  (entry[2] === "null" || entry[2] === null || entry[2] === undefined || entry[2] === "undefined")
+                )
+            );
+          }
+        }
+      },
     }),
   ],
   alias: {
