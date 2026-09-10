@@ -641,8 +641,12 @@ main.vp-page:not(.vp-project-home):has(section.hero-newage) > .vp-breadcrumb {
   .vp-navbar .vp-navbar-end > .vp-nav-item {
     display: flex !important;
   }
+  /* Alignment/row layout on the action bar (Book a Call / socials) is driven by the
+     component's PrimeFlex classes (vp-nav-item vp-action flex align-items-center
+     gap-3 md:gap-4 !flex-row), which ship with !important. This mirrors gap-3 so
+     the mobile gap matches; a tighter gap is kept only on very narrow phones. */
   .vp-action {
-    gap: 0.5rem !important;
+    gap: 1rem !important;
   }
   /* Fit the call/YouTube/Gumroad buttons on narrow phones: hide the CTA
      button label, keep it as an icon-only square */
@@ -651,6 +655,11 @@ main.vp-page:not(.vp-project-home):has(section.hero-newage) > .vp-breadcrumb {
   }
   .vp-action .p-button-label {
     display: none !important;
+  }
+  @media (max-width: 419px) {
+    .vp-action {
+      gap: 0.5rem !important;
+    }
   }
 }
 
