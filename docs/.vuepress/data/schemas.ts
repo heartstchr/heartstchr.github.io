@@ -253,6 +253,7 @@ const serviceSchemas = Object.fromEntries(
           serviceType: service.name,
           url: absoluteUrl(pagePath),
           description: service.descriptions.join(" "),
+          image: `${DOMAIN}/img/service/${service.imageCode || service.code}.webp`,
           provider: { "@id": `${DOMAIN}/#organization` },
           areaServed: "Worldwide",
           audience: {
@@ -356,6 +357,11 @@ const projectSchemas = Object.fromEntries(
           name: project.name,
           url: absoluteUrl(pagePath),
           description: project.description,
+          image: project.images?.[0]?.itemImageSrc
+            ? (project.images[0].itemImageSrc.startsWith("http")
+                ? project.images[0].itemImageSrc
+                : `${DOMAIN}${project.images[0].itemImageSrc}`)
+            : undefined,
           applicationCategory: project.category || "DeveloperApplication",
           operatingSystem: "All",
           creator: { "@id": `${DOMAIN}/#person` },

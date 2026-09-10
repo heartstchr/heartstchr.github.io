@@ -73,9 +73,8 @@
       <i class="pi pi-whatsapp text-3xl"></i>
     </a>
 
-    <!-- Scroll-to-solutions chevron (mobile, homepage only) -->
+    <!-- Scroll-to-solutions chevron (mobile, every page) -->
     <button
-      v-if="isHome"
       @click="scrollToSolutions"
       class="scroll-chevron fixed z-5 border-circle flex align-items-center justify-content-center cursor-pointer lg:hidden"
       aria-label="Scroll to solutions"
@@ -87,15 +86,12 @@
 
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
-import { usePageFrontmatter } from 'vuepress/client';
 import { submitProjectRequest } from '../services/notionService';
-
-const frontmatter = usePageFrontmatter();
-const isHome = computed(() => frontmatter.value.home === true);
 
 const scrollToSolutions = () => {
   const el = document.getElementById('solutions');
   if (el) el.scrollIntoView({ behavior: 'smooth' });
+  else document.getElementById('markdown-content')?.scrollIntoView({ behavior: 'smooth' });
 };
 
 const whatsappNumber = __WHATSAPP_NUMBER__;

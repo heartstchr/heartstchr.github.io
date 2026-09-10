@@ -112,6 +112,11 @@ fieldset {
 .vp-footer-wrapper {
   background-color: var(--surface-100) !important;
 }
+@media (max-width: 719px) {
+  .vp-footer-wrapper {
+    padding-inline: 0 !important;
+  }
+}
 .vp-footer {
   width: 100%;
   max-width: 100%;
@@ -628,12 +633,9 @@ main.vp-page:not(.vp-project-home):has(section.hero-newage) > .vp-breadcrumb {
     padding-bottom: 2rem !important;
   }
 
-  /* On phones hide the site title text (keep logo) and LinkedIn link;
-     show the navbar-end action buttons (Book a Call / YouTube / Gumroad) */
+  /* On phones hide the site title text (keep logo);
+     show the navbar-end action buttons (Book a Call / LinkedIn / YouTube / Gumroad) */
   .navbar-logo .text-lg {
-    display: none !important;
-  }
-  .repo-linkedin {
     display: none !important;
   }
   .vp-navbar .vp-navbar-end > .vp-nav-item {
