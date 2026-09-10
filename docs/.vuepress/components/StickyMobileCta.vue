@@ -28,7 +28,7 @@ const isHome = computed(() => frontmatter.value.home === true || path.value === 
 const isBlogListing = computed(() => path.value === "/posts/");
 const isProjectsListing = computed(() => path.value === "/web-development-projects/");
 
-const show = computed(() => isHome.value || isBlogListing.value || isProjectsListing.value);
+const show = computed(() => true);
 
 const label = computed(() => {
   if (isHome.value) return "Book Call";

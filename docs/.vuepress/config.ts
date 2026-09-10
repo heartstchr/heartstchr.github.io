@@ -82,7 +82,6 @@ export default defineUserConfig({
     ],
     ["link", { rel: "icon", href: "/favicon.ico" }],
     ["link", { rel: "apple-touch-icon", href: "/img/stackseekers.webp" }],
-    ["meta", { property: "og:image", content: "https://stackseekers.com/img/home/jiwanghosal.webp" }],
     ["meta", { property: "og:site_name", content: "Stack Seekers" }],
     ["meta", { name: "twitter:card", content: "summary_large_image" }],
     ["meta", { name: "twitter:site", content: "@heartstchr" }],

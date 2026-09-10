@@ -14,7 +14,7 @@ hidePageTitle: true
   <div class="relative z-1">
     <div class="mb-3">
       <a href="/web-development-projects/" class="no-underline">
-        <span class="inline-flex align-items-center px-3 py-1 border-round-xl surface-card text-sm font-bold opacity-70 hover:opacity-100 transition-all">
+        <span class="inline-flex align-items-center px-2 py-1 border-round-xl surface-card text-sm font-bold opacity-70 hover:opacity-100 transition-all">
           <i class="pi pi-arrow-left mr-2"></i> All Projects
         </span>
       </a>
@@ -66,11 +66,11 @@ hidePageTitle: true
   </a>
 </section>
 
-<div class="flex justify-content-between align-items-center pt-4 border-top-1 surface-border">
+<div class="flex flex-column md:flex-row justify-content-between align-items-center gap-3 py-4 border-top-1 surface-border">
   <a href="/web-development-projects/" class="no-underline text-color-secondary hover:text-primary font-bold flex align-items-center gap-2">
     <i class="pi pi-th-large"></i> All Projects
   </a>
-  <div class="flex gap-3 flex-wrap">
+  <div class="flex gap-2 md:gap-3 flex-wrap justify-content-center">
     <a href="/web-development-projects/ready-made-apps/" class="no-underline text-color-secondary hover:text-primary text-sm font-bold">Ready-made Apps →</a>
     <a href="/web-development-projects/enterprise/" class="no-underline text-color-secondary hover:text-primary text-sm font-bold">Enterprise →</a>
     <a href="/web-development-projects/ai/" class="no-underline text-color-secondary hover:text-primary text-sm font-bold">AI →</a>

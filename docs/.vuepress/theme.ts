@@ -2,6 +2,41 @@ import { footer } from "./footer.js";
 import { hopeTheme } from "vuepress-theme-hope";
 import { enNavbar } from "./navbar/index.js";
 import { pageSpecificSchemas } from "./data/schemas.js";
+import { freelance } from "./data/projects.js";
+import { youtubeVideos } from "./data/youtubeVideos.ts";
+import { toKebabCase } from "./utils/index.js";
+
+const DOMAIN = "https://stackseekers.com";
+const FALLBACK_OG_IMAGE = `${DOMAIN}/img/home/jiwanghosal.webp`;
+
+function resolveOgImage(path: string): string {
+  // Project detail pages
+  const projectMatch = freelance.find(
+    (p: any) => `/web-development-projects/${toKebabCase(p.name)}/` === path
+  );
+  if (projectMatch?.images?.[0]?.itemImageSrc) {
+    const img = projectMatch.images[0].itemImageSrc;
+    return img.startsWith("http") ? img : `${DOMAIN}${img}`;
+  }
+
+  // Service detail pages
+  const serviceCode = path.match(/^\/web-development-services\/([^/]+)\/$/)?.[1];
+  if (serviceCode) {
+    return `${DOMAIN}/img/service/${serviceCode}.webp`;
+  }
+
+  // TV video pages
+  const allVideos = [
+    ...(youtubeVideos.channelVideos || []),
+    ...(youtubeVideos.podcastVideos || []),
+  ];
+  const video = allVideos.find((v: any) => v.page === path);
+  if (video?.thumbnail) {
+    return video.thumbnail;
+  }
+
+  return FALLBACK_OG_IMAGE;
+}
 
 export default hopeTheme(
   {
@@ -69,8 +104,10 @@ export default hopeTheme(
           } else {
             ogp['og:type'] = 'website';
           }
-          // twitter:image — mirror og:image for all pages
-          ogp['twitter:image'] = ogp['og:image'];
+          // Per-page og:image — resolve based on page type, fall back to global
+          const pageImage = resolveOgImage(path);
+          ogp['og:image'] = pageImage;
+          ogp['twitter:image'] = pageImage;
           ogp['twitter:image:alt'] = page.title;
           // twitter:description fallback
           if (!ogp['twitter:description']) {
