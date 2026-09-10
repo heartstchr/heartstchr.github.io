@@ -656,6 +656,11 @@ main.vp-page:not(.vp-project-home):has(section.hero-newage) > .vp-breadcrumb {
   .vp-action .p-button-label {
     display: none !important;
   }
+  /* Mobile: Book a Call becomes a text button (no green fill, no raised shadow) */
+  .vp-action .p-button {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
   @media (max-width: 419px) {
     .vp-action {
       gap: 0.5rem !important;
