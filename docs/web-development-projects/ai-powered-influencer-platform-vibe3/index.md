@@ -55,14 +55,14 @@ project:
             <RazorpayButton :project="$frontmatter.project" page-theme />
           </div>
           <div class="flex flex-column gap-3">
-            <a v-if="$frontmatter.project.link" :href="$frontmatter.project.link" target="_blank" class="no-underline">
-              <Button label="View Live Demo" icon="pi pi-external-link" severity="primary" class="w-full font-bold py-3" raised rounded />
+            <a v-if="$frontmatter.project.contact" :href="'https://cal.com/stackseekers/25min?utm_source=website&utm_medium=portfolio&utm_campaign=' + $frontmatter.project.name.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '&utm_content=sidebar-book-call'" target="_blank" rel="noopener noreferrer" class="no-underline">
+              <Button label="Book a 25-min Strategy Call" icon="pi pi-calendar-clock" severity="primary" class="w-full font-bold py-3" raised rounded />
             </a>
-            <a v-if="$frontmatter.project.codeLink" :href="$frontmatter.project.codeLink" target="_blank" class="no-underline">
+            <a v-if="$frontmatter.project.link" :href="$frontmatter.project.link" target="_blank" rel="noopener noreferrer" class="no-underline">
+              <Button label="View Live Demo" icon="pi pi-external-link" severity="secondary" class="w-full font-bold py-3" raised rounded />
+            </a>
+            <a v-if="$frontmatter.project.codeLink" :href="$frontmatter.project.codeLink" target="_blank" rel="noopener noreferrer" class="no-underline">
               <Button label="View Source Code" icon="pi pi-github" severity="secondary" class="w-full font-bold py-3" raised rounded />
-            </a>
-            <a v-if="$frontmatter.project.contact" :href="'mailto:support@stackseekers.com?subject=' + encodeURIComponent('Scale Request: ' + $frontmatter.project.name)" class="no-underline">
-              <Button label="Architect Similar Solution" icon="pi pi-bolt" severity="secondary" class="w-full font-bold py-3" raised rounded />
             </a>
           </div>
         </div>
@@ -81,6 +81,43 @@ project:
     </div>
   </div>
   <div class="col-12 lg:col-8 project-main-col">
+
+<section v-if="$frontmatter.project.category !== 'Ready-made Apps'" class="mb-6">
+  <div class="surface-card p-4 border-round-3xl shadow-2 border-1 border-100">
+    <div class="flex flex-column md:flex-row align-items-center justify-content-between gap-4">
+      <div class="flex align-items-start gap-3">
+        <div class="w-3rem h-3rem border-circle bg-primary-50 flex align-items-center justify-content-center flex-shrink-0">
+          <i class="pi pi-th-large text-primary text-xl"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold m-0 text-900">Want this "build once, deploy many" foundation pre-built?</h3>
+          <p class="text-sm text-600 m-0 mt-1 line-height-3">Skip the months-long build. The ready-made app catalogue ships token-driven, component-based foundations you can launch in days.</p>
+        </div>
+      </div>
+      <div class="flex-shrink-0">
+        <a href="/web-development-projects/ready-made-apps/" class="no-underline">
+          <Button label="Browse Ready-Made Apps" icon="pi pi-arrow-right" iconPos="right" severity="primary" raised rounded class="font-bold white-space-nowrap" />
+        </a>
+      </div>
+    </div>
+    <div class="grid mt-4">
+      <div class="col-12 md:col-6">
+        <a href="/web-development-projects/premium-furniture-landing-page-catalog/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
+          <div class="text-primary font-bold text-xs mb-2 uppercase">Landing + Catalog</div>
+          <div class="font-bold text-900 mb-2">Premium Furniture Catalog</div>
+          <div class="text-600 text-sm">Design-first, component-based store kit.</div>
+        </a>
+      </div>
+      <div class="col-12 md:col-6">
+        <a href="/web-development-projects/dynamic-crud-app-free/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
+          <div class="text-primary font-bold text-xs mb-2 uppercase">Free App</div>
+          <div class="font-bold text-900 mb-2">Dynamic CRUD App (Free)</div>
+          <div class="text-600 text-sm">Reusable, token-styled admin foundation.</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section v-if="$frontmatter.project.images && $frontmatter.project.images.length" class="mb-8" itemscope itemtype="https://schema.org/SoftwareApplication">
   <div class="grid m-0 p-0">
@@ -138,8 +175,8 @@ project:
 </section>
 
 <div v-if="$frontmatter.project.video" class="flex flex-wrap justify-content-center gap-3 mb-8">
-  <a :href="'mailto:support@stackseekers.com?subject=' + encodeURIComponent('Architectural Consultation: ' + $frontmatter.project.name)" class="no-underline">
-    <Button label="Architect Similar Solution" icon="pi pi-bolt" severity="primary" raised rounded class="font-bold px-6 py-3" />
+  <a :href="'https://cal.com/stackseekers/25min?utm_source=website&utm_medium=portfolio&utm_campaign=' + $frontmatter.project.name.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '&utm_content=video-cta'" target="_blank" rel="noopener noreferrer" class="no-underline">
+    <Button label="Book a 25-min Call" icon="pi pi-calendar-clock" severity="primary" raised rounded class="font-bold px-6 py-3" />
   </a>
   <a :href="'https://wa.me/917026217029?text=' + encodeURIComponent('Hi Jiwan! I saw your ' + $frontmatter.project.name + ' project and would like to discuss a similar strategic architecture.')" target="_blank" rel="noopener noreferrer" class="no-underline">
     <Button label="WhatsApp Connect" icon="pi pi-whatsapp" severity="success" raised rounded class="font-bold px-6 py-3" />
@@ -293,6 +330,18 @@ Vibe3 proves that **Modern Product Architecture** is about the elegant fusion of
 
 </div>
 
+<section v-if="$frontmatter.project.category !== 'Ready-made Apps'" class="mb-6">
+  <div class="p-4 md:p-6 border-round-2xl border-1 border-100 surface-card flex flex-column md:flex-row align-items-center justify-content-between gap-4">
+    <div>
+      <div class="font-bold text-lg text-900">Want this engineering approach for your product?</div>
+      <div class="text-sm text-600 line-height-3">Book a 25-min call to scope it with a senior architect, or <a href="/web-development-projects/ready-made-apps/" class="text-primary font-bold no-underline">browse ready-made foundations</a> to start in days.</div>
+    </div>
+    <a :href="'https://cal.com/stackseekers/25min?utm_source=website&utm_medium=portfolio&utm_campaign=' + $frontmatter.project.name.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '&utm_content=mid-article-atomic'" target="_blank" rel="noopener noreferrer" class="no-underline flex-shrink-0">
+      <Button label="Book a 25-min Call" icon="pi pi-calendar-clock" severity="primary" raised rounded class="font-bold white-space-nowrap" />
+    </a>
+  </div>
+</section>
+
 <div v-if="$frontmatter.project.relatedCaseStudy" class="mt-8 p-4 surface-50 border-round-2xl border-1 border-100 mb-6">
   <div class="flex flex-column md:flex-row align-items-center justify-content-between gap-4">
     <div>
@@ -320,10 +369,10 @@ Vibe3 proves that **Modern Product Architecture** is about the elegant fusion of
     <h2 class="text-3xl md:text-5xl font-bold mb-4 relative z-1">Need a similar <span class="text-gradient">strategic architecture</span>?</h2>
     <p class="text-xl text-600 mb-6 max-w-30rem mx-auto relative z-1">If this project aligns with your current bottlenecks, let's discuss how to apply these same principles to your business.</p>
     <div class="flex flex-wrap justify-content-center gap-3 relative z-1">
-      <a :href="'/contact/?subject=' + encodeURIComponent('Inquiry regarding ' + $frontmatter.project.name)" class="no-underline">
+      <a :href="'/contact/?subject=' + encodeURIComponent('Inquiry regarding ' + $frontmatter.project.name) + '&utm_source=website&utm_medium=portfolio&utm_campaign=' + $frontmatter.project.name.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '&utm_content=glass-contact'" class="no-underline">
         <Button label="Start Your Project Brief" icon="pi pi-file-edit" severity="primary" raised rounded />
       </a>
-      <a :href="'https://cal.com/stackseekers/25min?utm_source=website&utm_medium=portfolio&utm_campaign=' + $frontmatter.project.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')" target="_blank" class="no-underline">
+      <a :href="'https://cal.com/stackseekers/25min?utm_source=website&utm_medium=portfolio&utm_campaign=' + $frontmatter.project.name.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '&utm_content=glass-book-call'" target="_blank" rel="noopener noreferrer" class="no-underline">
         <Button label="Book Technical Roadmap Audit" icon="pi pi-calendar-clock" severity="secondary" raised rounded />
       </a>
     </div>

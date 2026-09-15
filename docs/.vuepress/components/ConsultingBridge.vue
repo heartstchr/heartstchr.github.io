@@ -33,7 +33,7 @@
       </div>
 
       <div class="text-center mt-8 relative z-1">
-        <a href="https://cal.com/stackseekers/25min" target="_blank" class="no-underline">
+        <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=portfolio&utm_content=consulting-bridge" target="_blank" rel="noopener noreferrer" class="no-underline">
           <Button label="Book Free Discovery Call" icon="pi pi-bolt" severity="primary" size="large" raised rounded class="px-6 text-xl white-space-nowrap" />
         </a>
       </div>

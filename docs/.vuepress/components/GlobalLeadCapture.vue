@@ -190,6 +190,7 @@ const handleMouseLeave = (e) => {
 const handleGlobalClick = (e) => {
     const link = e.target.closest('a');
     if (link && link.href && link.href.includes('cal.com/stackseekers')) {
+        if (link.href.includes('utm_medium=portfolio')) return;
         if (!localStorage.getItem('collected_email')) {
             e.preventDefault();
             pendingCalHref.value = link.href;

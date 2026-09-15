@@ -746,6 +746,26 @@ main.vp-page:not(.vp-project-home):has(section.hero-newage) > .vp-breadcrumb {
   }
 }
 
+/* Theme TOC right rail: only render where it fully fits in the viewport.
+   #toc is absolutely positioned 256px past the 72rem page's right edge, so it
+   overflows horizontally on screens narrower than ~1664px. Below that we tuck
+   it away (the rail is unusable off-screen anyway); above it, the rail fits. */
+@media (min-width: 1664px) {
+  main.vp-page:not(.vp-project-home) #toc {
+    display: block !important;
+  }
+  main.vp-page:not(.vp-project-home) .vp-toc-placeholder {
+    display: block !important;
+  }
+}
+
+@media (max-width: 1663.98px) {
+  main.vp-page:not(.vp-project-home) #toc,
+  main.vp-page:not(.vp-project-home) .vp-toc-placeholder {
+    display: none !important;
+  }
+}
+
 /* Social media brand colors */
 .pi-github {
   color: black !important;
