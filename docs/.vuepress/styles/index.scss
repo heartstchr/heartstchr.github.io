@@ -641,8 +641,12 @@ main.vp-page:not(.vp-project-home):has(section.hero-newage) > .vp-breadcrumb {
   .vp-navbar .vp-navbar-end > .vp-nav-item {
     display: flex !important;
   }
+  /* Alignment/row layout on the action bar (Book a Call / socials) is driven by the
+     component's PrimeFlex classes (vp-nav-item vp-action flex align-items-center
+     gap-3 md:gap-4 !flex-row), which ship with !important. This mirrors gap-3 so
+     the mobile gap matches; a tighter gap is kept only on very narrow phones. */
   .vp-action {
-    gap: 0.5rem !important;
+    gap: 1rem !important;
   }
   /* Fit the call/YouTube/Gumroad buttons on narrow phones: hide the CTA
      button label, keep it as an icon-only square */
@@ -651,6 +655,16 @@ main.vp-page:not(.vp-project-home):has(section.hero-newage) > .vp-breadcrumb {
   }
   .vp-action .p-button-label {
     display: none !important;
+  }
+  /* Mobile: Book a Call becomes a text button (no green fill, no raised shadow) */
+  .vp-action .p-button {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  @media (max-width: 419px) {
+    .vp-action {
+      gap: 0.5rem !important;
+    }
   }
 }
 
@@ -729,6 +743,26 @@ main.vp-page:not(.vp-project-home):has(section.hero-newage) > .vp-breadcrumb {
     margin-left: 2rem !important;
     max-width: 15rem !important;
     height: fit-content !important;
+  }
+}
+
+/* Theme TOC right rail: only render where it fully fits in the viewport.
+   #toc is absolutely positioned 256px past the 72rem page's right edge, so it
+   overflows horizontally on screens narrower than ~1664px. Below that we tuck
+   it away (the rail is unusable off-screen anyway); above it, the rail fits. */
+@media (min-width: 1664px) {
+  main.vp-page:not(.vp-project-home) #toc {
+    display: block !important;
+  }
+  main.vp-page:not(.vp-project-home) .vp-toc-placeholder {
+    display: block !important;
+  }
+}
+
+@media (max-width: 1663.98px) {
+  main.vp-page:not(.vp-project-home) #toc,
+  main.vp-page:not(.vp-project-home) .vp-toc-placeholder {
+    display: none !important;
   }
 }
 
