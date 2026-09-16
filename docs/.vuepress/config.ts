@@ -122,7 +122,14 @@ export default defineUserConfig({
     ["meta", { name: "ai-specialty", content: "Fractional CTO, AI Automation, Scalable SaaS" }],
     ["script", { src: "/ga-loader.js" }],
     ["script", { src: "/sw-register.js" }],
-    ["meta", { name: "google-adsense-account", content: "ca-pub-6802795079617307" }],
+    [
+      "script",
+      {
+        async: "",
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6802795079617307",
+        crossorigin: "anonymous",
+      },
+    ],
     [
       "script",
       {
