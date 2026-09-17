@@ -20,11 +20,11 @@ contributors: false
         </span>
         <span class="text-xs text-500">Faster launches · Scalable systems · Reduced operational risk</span>
       </div>
-      <h1 class="m-0 p-0 line-height-2 text-5xl md:text-7xl font-bold">
+      <h1 class="m-0 p-0 line-height-2 text-3xl md:text-5xl lg:text-7xl font-bold">
         The <span class="text-gradient">Architect</span> behind Stack Seekers
       </h1>
-      <div class="text-xl md:text-2xl mt-3 line-height-3 min-h-10rem">
-        <div class="text-4xl" >Turning <Transition name="fade" mode="out-in"><span :key="currentPhrase" class="text-gradient-2">{{ currentPhrase }}</span></Transition> into engineering excellence.</div>
+      <div class="text-base md:text-2xl mt-3 line-height-3 min-h-6rem md:min-h-10rem">
+        <div class="text-xl md:text-3xl lg:text-4xl" >Turning <Transition name="fade" mode="out-in"><span :key="currentPhrase" class="text-gradient-2">{{ currentPhrase }}</span></Transition> into engineering excellence.</div>
         <span class="flex mt-4">I’m Jiwan Ghosal, a senior full-stack engineer and the founder of Stack Seekers. I specialize in taking raw ideas and architecting them into scalable, production-grade platforms.</span>
         <p class="mt-3">Whether you need a high-performance SaaS or an AI-driven automation engine, I provide the technical leadership to launch faster, scale reliably, and reduce operational pain.</p>
       </div>
@@ -51,7 +51,7 @@ contributors: false
     </div>
     <div class="col-12 md:col-4 mt-6 md:mt-0">
       <div class="relative border-round-2xl overflow-hidden">
-        <img src="/img/home/jiwanghosal.webp" alt="Jiwan Ghosal" width="600" height="600" class="w-1/2 border-round-2xl shadow-4 hero-image" style="height: auto; aspect-ratio: 1/1; object-fit: cover;" loading="eager" fetchpriority="high" />
+        <img src="/img/home/jiwanghosal.webp" alt="Jiwan Ghosal" width="600" height="600" class="w-full border-round-2xl shadow-4 hero-image" style="height: auto; aspect-ratio: 1/1; object-fit: cover;" loading="eager" fetchpriority="high" />
         <div class="glow-ring"></div>
       </div>
     </div>
@@ -61,7 +61,7 @@ contributors: false
 <div class="my-8 px-4 md:px-6">
   <div class="grid">
     <div class="col-12 md:col-6">
-      <h2 class="text-4xl font-bold mb-4">Highlights of My Journey</h2>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Highlights of My Journey</h2>
       <div class="surface-card p-4 border-round-xl shadow-2 mb-4">
         <h3 class="text-2xl font-bold mb-2">JS World Conference, Amsterdam</h3>
         <YouTubePlayers videoId="H7B5hQbQqKQ" :autoplay="false" :muted="true" :loop="true" class="border-round-xl overflow-hidden"/>
@@ -81,7 +81,7 @@ contributors: false
 <div class="my-8 surface-section p-4 md:p-6 border-round-3xl mx-4 md:mx-6">
   <div class="grid align-items-center">
     <div class="col-12 md:col-8">
-      <h2 class="text-4xl font-bold mb-3">The Person Behind the Code</h2>
+      <h2 class="text-3xl md:text-4xl font-bold mb-3">The Person Behind the Code</h2>
       <p class="text-xl line-height-4">
         When I’m not architecting cloud platforms, I’m exploring the intersection of technology and travel. I document my adventures on my <a href="https://www.youtube.com/@JiwanGhosal" target="_blank" class="text-primary no-underline font-bold">travel vlog</a> and share my daily learnings on <a href="https://www.instagram.com/jiwan_ghosal/" target="_blank" class="text-primary no-underline font-bold">Instagram</a>.
       </p>
@@ -137,8 +137,8 @@ contributors: false
 </div>
 <div class="mt-6">
   <div class="text-center pb-4">
-    <h2 class="text-4xl font-bold mb-4">Scalable Solutions for <span class="bg-primary px-2">Startups, Enterprises & Agencies</span></h2>
-    <p class="text-xl md:text-center line-height-3 text-700">I'm Jiwan Ghosal, a senior engineer specialising in fast, interactive frontends and high-performance server infrastructure on scalable cloud platforms. I help founders and teams launch faster, scale confidently, and eliminate operational bottlenecks. I bring a proven track record across every phase of product development.</p>
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">Scalable Solutions for <span class="bg-primary px-2">Startups, Enterprises & Agencies</span></h2>
+    <p class="text-base md:text-xl md:text-center line-height-3 text-700">I'm Jiwan Ghosal, a senior engineer specialising in fast, interactive frontends and high-performance server infrastructure on scalable cloud platforms. I help founders and teams launch faster, scale confidently, and eliminate operational bottlenecks. I bring a proven track record across every phase of product development.</p>
   </div>
   <div class="gallery gap-4">
     <div
@@ -175,7 +175,7 @@ contributors: false
 <!-- Testimonials -->
 <div class="my-6">
   <div class="text-center pb-4">
-    <div class="text-4xl font-bold"><h2>Trusted by <div class="text-4xl font-bold bg-primary">World Wide</div></h2></div>
+    <div class="text-3xl md:text-4xl font-bold"><h2>Trusted by <div class="text-3xl md:text-4xl font-bold bg-primary">World Wide</div></h2></div>
     <h3 class="my-4 text-xl line-height-2">Client Testimonials: See how partners describe their experience collaborating with me on innovative digital solutions.</h3>
   </div>
   <div class="card relative md:mx-0 -mx-4 md:hidden block" @mouseenter="pauseAutoPlay"
@@ -248,11 +248,11 @@ contributors: false
 
 <div class="my-6 flex flex-column">
   <div class="text-center pb-4">
-    <div class="text-4xl font-bold"><h2>Why choose <span class="bg-primary">me?</span></h2></div>
+    <div class="text-3xl md:text-4xl font-bold"><h2>Why choose <span class="bg-primary">me?</span></h2></div>
     <div class="my-4 text-xl line-height-2">Here’s why I’m the right choice for your project</div>
   </div>
   <div class="flex flex-wrap">
-    <div class="md:col-6 col-12 md:p-4" v-for="why in whyme" :key="why.title">  
+    <div class="md:col-6 col-12 p-2 md:p-4" v-for="why in whyme" :key="why.title">  
       <Fieldset class="vp-feature-item">
         <template #legend>
             <h3 class="flex align-items-center pl-2 m-0 p-0">
@@ -285,7 +285,7 @@ contributors: false
 <!-- FAQ -->
 <div class="my-6">
   <div class="text-center pb-4">
-    <div class="text-4xl font-bold line-height-2"><h2>Frequently asked <span class="bg-primary">questions</span></h2></div>
+    <div class="text-3xl md:text-4xl font-bold line-height-2"><h2>Frequently asked <span class="bg-primary">questions</span></h2></div>
   </div>
   <div class="grid overflow-hidden border-round-md">
     <div class="col-12 ">
@@ -341,11 +341,11 @@ contributors: false
             <div class="flex flex-column gap-4">
               <div class="">
                 <i class="pi pi-shield text-small mr-3"></i>
-                <span class="text-lg">If I'm not a fit after the first week, you pay nothing.</span>
+                <span class="text-base md:text-lg">If I'm not a fit after the first week, you pay nothing.</span>
               </div>
               <div class="">
                 <i class="pi pi-unlock text-small mr-3"></i>
-                <span class="text-lg">No lock‑in: cancel monthly engagement anytime.</span>
+                <span class="text-base md:text-lg">No lock‑in: cancel monthly engagement anytime.</span>
               </div>
             </div>
           </div>
