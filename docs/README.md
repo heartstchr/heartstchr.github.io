@@ -466,7 +466,7 @@ copyright: false
       </AccordionTab>
       <AccordionTab header="Q. What is your preferred technology stack?">
         <p class="m-0 text-700 line-height-3">
-          I specialize in the 'Modern Enterprise Stack': **React/Next.js**, **Node.js/TypeScript**, and **Cloud-Native Infrastructure** (AWS/GCP/Azure). I choose tools based on your business constraints, not personal hype.
+          I specialize in the 'Modern Enterprise Stack': React/Next.js, Node.js/TypeScript, and Cloud-Native Infrastructure (AWS/GCP/Azure). I choose tools based on your business constraints, not personal hype.
         </p>
       </AccordionTab>
       <AccordionTab header="Q. What if our current codebase is a 'legacy mess'?">

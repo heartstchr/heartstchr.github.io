@@ -1,6 +1,6 @@
 ---
 title: "Landing page with listing using notion template"
-description: "Product listing with a landing page. Discord: https://discord.gg/nVhJSymeXp Contact: https://stackseekers.com/contact LinkedIn: https://www.linkedin.com/in/jiwanghosal/ I"
+description: "Product listing with a landing page."
 date: 2026-01-01
 lastUpdated: false
 editLink: false
@@ -11,7 +11,7 @@ layout: Layout
 video:
   id: "SHtDyIv-534"
   title: "Landing page with listing using notion template"
-  description: "Product listing with a landing page. Discord: https://discord.gg/nVhJSymeXp Contact: https://stackseekers.com/contact LinkedIn: https://www.linkedin.com/in/jiwanghosal/ Instagram: https://www.instagram.com/jiwan_ghosal/ GitHub: https://github.com/stackseekers WhatsApp: https://whatsapp.com/channel/0029Vb0DIRq8V0tlhqjkJg3Z"
+  description: "Product listing with a landing page."
   thumbnail: "https://i.ytimg.com/vi/SHtDyIv-534/mqdefault.jpg"
   publishedAt: "2026-01-01T15:06:29Z"
   embedUrl: "https://www.youtube.com/embed/SHtDyIv-534"
@@ -20,10 +20,6 @@ video:
   previousVideo: {"id":"2CW88Ji3zn4","title":"Real Estate CRM Using Notion","thumbnail":"https://i.ytimg.com/vi/2CW88Ji3zn4/mqdefault.jpg","page":"/stackseekers-tv/videos/real-estate-crm-using-notion/"}
   nextVideo: {"id":"r3mHBYX-gr0","title":"Gemini 3.0 pro build full-stack app","thumbnail":"https://i.ytimg.com/vi/r3mHBYX-gr0/mqdefault.jpg","page":"/stackseekers-tv/videos/gemini-3-0-pro-build-full-stack-app/"}
   relatedVideos: [{"id":"g47y6q_WkkM","title":"FREE AI voice generator Gemini text to voice for Google Docs add-on.","thumbnail":"https://i.ytimg.com/vi/g47y6q_WkkM/mqdefault.jpg","page":"/stackseekers-tv/videos/free-ai-voice-generator-gemini-text-to-voice-for-google-docs-add-on/"},{"id":"GgWw2ybOEx8","title":"Ultimate FREE eCommerce Website a furniture website app using Notion.","thumbnail":"https://i.ytimg.com/vi/GgWw2ybOEx8/mqdefault.jpg","page":"/stackseekers-tv/videos/ultimate-free-ecommerce-website-a-furniture-website-app-using-notion-no-wordpress/"},{"id":"55QSJ9nAheI","title":"Ultimate FREE eCommerce Website Tutorial 2026 using Notion!! No wordpr","thumbnail":"https://i.ytimg.com/vi/55QSJ9nAheI/mqdefault.jpg","page":"/stackseekers-tv/videos/ultimate-free-ecommerce-website-tutorial-2026-using-notion-no-wordpress-no-coding/"},{"id":"2CW88Ji3zn4","title":"Real Estate CRM Using Notion","thumbnail":"https://i.ytimg.com/vi/2CW88Ji3zn4/mqdefault.jpg","page":"/stackseekers-tv/videos/real-estate-crm-using-notion/"}]
-head:
-  - - script
-    - type: application/ld+json
-      content: '{"@context":"https://schema.org","@type":"VideoObject","@id":"https://stackseekers.com/stackseekers-tv/videos/landing-page-with-listing-using-notion-template/","name":"Landing page with listing using notion template","description":"Product listing with a landing page. Discord: https://discord.gg/nVhJSymeXp Contact: https://stackseekers.com/contact LinkedIn: https://www.linkedin.com/in/jiwanghosal/ Instagram: https://www.instagram.com/jiwan_ghosal/ GitHub: https://github.com/stackseekers WhatsApp: https://whatsapp.com/channel/0","thumbnailUrl":["https://i.ytimg.com/vi/SHtDyIv-534/mqdefault.jpg"],"uploadDate":"2026-01-01T15:06:29Z","contentUrl":"https://www.youtube.com/watch?v=SHtDyIv-534","embedUrl":"https://www.youtube.com/embed/SHtDyIv-534","publisher":{"@type":"Organization","@id":"https://stackseekers.com/#organization","name":"Stack Seekers"},"author":{"@type":"Person","@id":"https://stackseekers.com/#person","name":"Jiwan Ghosal"}}'
 ---
 
 <div class="mb-4">

@@ -8,9 +8,6 @@ head:
   - - meta
     - name: keywords
       content: startup technical audit, tech stack audit, saas infrastructure checklist, technical debt assessment, fractional cto audit, scalable tech stack, startup architecture review, tech stack audit service
-  - - script
-    - type: application/ld+json
-      content: '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a tech stack audit?","acceptedAnswer":{"@type":"Answer","text":"A tech stack audit (also called a startup technical audit) is a structured review of your infrastructure — deployment, resilience, scaling, engineering velocity, data, and security — that identifies technical debt and bottlenecks before they block growth."}},{"@type":"Question","name":"How long does a full audit take?","acceptedAnswer":{"@type":"Answer","text":"A self-audit with this checklist takes about 5 minutes. A professional architecture review by Stack Seekers typically takes 48-72 hours and includes a prioritized roadmap."}},{"@type":"Question","name":"Can non-technical founders use this checklist?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every question is written in business language with one-line insights, so founders and operators can complete the assessment without code-level knowledge."}},{"@type":"Question","name":"What is the outcome of the audit?","acceptedAnswer":{"@type":"Answer","text":"You receive a prioritized roadmap of technical fixes categorized by business risk and ROI impact — red flags you can act on, plus a baseline for future audits."}},{"@type":"Question","name":"What areas does the startup technical audit cover?","acceptedAnswer":{"@type":"Answer","text":"Six areas: deployment stability, platform resilience, growth and scaling, engineering velocity, data and AI strategy, and security and compliance."}}]}'
 ---
 
 <div class="p-2 md:p-4" style="max-width: 1000px; margin: 0 auto;">
@@ -231,6 +228,14 @@ head:
              <div class="mb-4">
                 <div class="font-bold text-sm text-900 mb-1">How long does a full audit take?</div>
                 <p class="text-sm text-600 m-0">A self-audit takes 5 minutes. A professional architecture review by Stack Seekers typically takes 48-72 hours.</p>
+             </div>
+             <div class="mb-4">
+                <div class="font-bold text-sm text-900 mb-1">Do you offer tech stack audit services for startups?</div>
+                <p class="text-sm text-600 m-0">Yes. Stack Seekers runs professional technical audits that review deployment, resilience, security, and scaling — and delivers a prioritized roadmap. Run this free checklist first, then book a call to scope one.</p>
+             </div>
+             <div class="mb-4">
+                <div class="font-bold text-sm text-900 mb-1">How much does a professional tech stack audit cost?</div>
+                <p class="text-sm text-600 m-0">A professional audit is a fixed-scope engagement, so pricing depends on stack size and complexity. This self-audit is free; book a short call for a project-specific quote.</p>
              </div>
              <div class="mb-0">
                 <div class="font-bold text-sm text-900 mb-1">What is the outcome?</div>

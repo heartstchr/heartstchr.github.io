@@ -1,6 +1,6 @@
 ---
 title: "Transfer Github repo to Github organization? | Stack Seekers"
-description: "Discord for any problems/errors/bugs: https://discord.gg/nVhJSymeXp Explore All My Projects: https://stackseekers.com/web-development-projects/ How to transfer the Github"
+description: "How to transfer the Github repo to the organization"
 date: 2025-09-07
 lastUpdated: false
 editLink: false
@@ -11,7 +11,7 @@ layout: Layout
 video:
   id: "9LPnNNLFSko"
   title: "Transfer Github repo to Github organization? | Stack Seekers"
-  description: "Discord for any problems/errors/bugs: https://discord.gg/nVhJSymeXp Explore All My Projects: https://stackseekers.com/web-development-projects/ How to transfer the Github repo to the organization STACK USED Git Node.js LinkedIn: https://www.linkedin.com/in/jiwanghosal/ Instagram: https://www.instagram.com/jiwan_ghosal/ GitHub: https://github.com/stackseekers Discord: https://discord.gg/nVhJSymeXp Contact: https://stackseekers.com/"
+  description: "How to transfer the Github repo to the organization"
   thumbnail: "https://i.ytimg.com/vi/9LPnNNLFSko/mqdefault.jpg"
   publishedAt: "2025-09-07T11:42:42Z"
   embedUrl: "https://www.youtube.com/embed/9LPnNNLFSko"
@@ -20,10 +20,6 @@ video:
   previousVideo: {"id":"4QR0qERWssI","title":"How to build a free HTML form app and publish (NO CODING Needed and NO","thumbnail":"https://i.ytimg.com/vi/4QR0qERWssI/mqdefault.jpg","page":"/stackseekers-tv/videos/how-to-build-a-free-html-form-app-and-publish-no-coding-needed-and-no-app-maintenance/"}
   nextVideo: {"id":"yagpsXjngcQ","title":"Getting started Vue 3 and Vue Devtools | Stack Seekers","thumbnail":"https://i.ytimg.com/vi/yagpsXjngcQ/mqdefault.jpg","page":"/stackseekers-tv/videos/getting-started-vue-3-and-vue-devtools-stack-seekers/"}
   relatedVideos: [{"id":"g47y6q_WkkM","title":"FREE AI voice generator Gemini text to voice for Google Docs add-on.","thumbnail":"https://i.ytimg.com/vi/g47y6q_WkkM/mqdefault.jpg","page":"/stackseekers-tv/videos/free-ai-voice-generator-gemini-text-to-voice-for-google-docs-add-on/"},{"id":"GgWw2ybOEx8","title":"Ultimate FREE eCommerce Website a furniture website app using Notion.","thumbnail":"https://i.ytimg.com/vi/GgWw2ybOEx8/mqdefault.jpg","page":"/stackseekers-tv/videos/ultimate-free-ecommerce-website-a-furniture-website-app-using-notion-no-wordpress/"},{"id":"55QSJ9nAheI","title":"Ultimate FREE eCommerce Website Tutorial 2026 using Notion!! No wordpr","thumbnail":"https://i.ytimg.com/vi/55QSJ9nAheI/mqdefault.jpg","page":"/stackseekers-tv/videos/ultimate-free-ecommerce-website-tutorial-2026-using-notion-no-wordpress-no-coding/"},{"id":"2CW88Ji3zn4","title":"Real Estate CRM Using Notion","thumbnail":"https://i.ytimg.com/vi/2CW88Ji3zn4/mqdefault.jpg","page":"/stackseekers-tv/videos/real-estate-crm-using-notion/"}]
-head:
-  - - script
-    - type: application/ld+json
-      content: '{"@context":"https://schema.org","@type":"VideoObject","@id":"https://stackseekers.com/stackseekers-tv/videos/transfer-github-repo-to-github-organization-stack-seekers/","name":"Transfer Github repo to Github organization? | Stack Seekers","description":"Discord for any problems/errors/bugs: https://discord.gg/nVhJSymeXp Explore All My Projects: https://stackseekers.com/web-development-projects/ How to transfer the Github repo to the organization STACK USED Git Node.js LinkedIn: https://www.linkedin.com/in/jiwanghosal/ Instagram: https://www.instagr","thumbnailUrl":["https://i.ytimg.com/vi/9LPnNNLFSko/mqdefault.jpg"],"uploadDate":"2025-09-07T11:42:42Z","contentUrl":"https://www.youtube.com/watch?v=9LPnNNLFSko","embedUrl":"https://www.youtube.com/embed/9LPnNNLFSko","publisher":{"@type":"Organization","@id":"https://stackseekers.com/#organization","name":"Stack Seekers"},"author":{"@type":"Person","@id":"https://stackseekers.com/#person","name":"Jiwan Ghosal"}}'
 ---
 
 <div class="mb-4">

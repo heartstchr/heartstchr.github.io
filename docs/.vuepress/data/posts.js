@@ -72,7 +72,7 @@ export const posts = [
     tags: ["Maintenance", "Fractional CTO", "Post-Launch", "Growth", "Software Lifecycle"]
   },
   {
-    title: "Stop Chasing Backlinks: The 10k Lead Blueprint with Programmatic SEO",
+    title: "Programmatic SEO: A Practical Framework for Scalable Lead Generation",
     link: "/posts/scaling-with-programmatic-seo/",
     date: "2026-04-18",
     summary: "Learn how to scale traffic and lead generation with Programmatic SEO. Move beyond manual blogging and build high-performance, database-driven directory platforms with React and Next.js.",
@@ -155,9 +155,9 @@ export const posts = [
     title: "How Vue 3 and Devtools Enhance Web Development",
     link: "/posts/create-vue3-application/",
     date: "2024-05-29",
-    summary: "Build a Vue 3 app with ease using Vue CLI and debug it with Vue Devtools. This guide shows you how to set up, customize components, and use a reusable ComponentCard to showcase your work in a VuePress portfolio.",
+    summary: "Build a Vue 3 app with ease using create-vue and debug it with Vue Devtools. This guide shows you how to set up, customize components, and use a reusable ComponentCard to showcase your work in a VuePress portfolio.",
     category: "Web Development",
-    tags: ["Vue.js", "Vue 3", "Vue Devtools", "Vue CLI", "Portfolio"]
+    tags: ["Vue.js", "Vue 3", "Vue Devtools", "create-vue", "Portfolio"]
   },
   {
     title: "How CSS Impacts Your Brain: 7 Ways to Optimize Web Design",
@@ -176,10 +176,10 @@ export const posts = [
     tags: ["VuePress", "Portfolio", "Static Site", "GitHub Pages", "Freelancing"]
   },
   {
-    title: "How to Transfer a GitHub Repository to an Organization",
+    title: "How to Move or Transfer a GitHub Repository to an Organization",
     link: "/posts/transfer-github-repository/",
     date: "2024-05-26",
-    summary: "As a developer or freelancer, managing your GitHub repositories efficiently is crucial for collaboration and organization. Transferring a repository to a GitHub organization allows you to centralize projects under a team or brand, streamline access, and maintain commit history.",
+    summary: "Move or transfer a GitHub repository to an organization in minutes — public or private, with full commit history preserved and automatic redirects from the old URL. Step-by-step guide with video.",
     category: "Version Control",
     tags: ["GitHub", "Repository Management", "Collaboration", "Freelancing"]
   }

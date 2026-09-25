@@ -58,3 +58,5 @@ Notion's API has strict limitations on direct file uploads. To overcome this, we
 - **Universal Accessibility:** Provides a high-performance, mobile-optimized interface for data that is otherwise difficult to navigate in the native Notion mobile app.
 
 This project serves as a technical blueprint for **Headless No-Code Integration**, showing how to build professional software on top of flexible, user-friendly data sources.
+
+> Want AI to design and generate the app structure for you? See the [AI Dynamic CRUD App](/web-development-projects/ai-dynamic-crud-app/) — describe the app in natural language and the AI builds the Notion schema and UI automatically.

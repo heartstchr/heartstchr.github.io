@@ -21,6 +21,7 @@ service:
   problems: ["Fragile legacy code that makes every change slow, risky, and expensive","Big-bang rewrites that fail, lose years of business logic, and scare stakeholders","Knowledge concentrated in a few people, so no one dares touch the system"]
   deliverables: ["Modernization assessment with a risk map and phased migration plan","Architecture reset to modular, testable, cloud-native components","Zero-downtime execution with rollback safety at every step"]
   proof: "Applied to enterprise and banking-grade systems, including ABN AMRO migration work where downtime was not an option."
+  caseStudies: [{"slug":"ibrebuild-for-abn-amro-bank-n-v","category":"Modernization","title":"ABN AMRO Rebuild","blurb":"Phased AngularJS-to-Vue migration of internet banking."},{"slug":"emerald-design-system","category":"Platform Reset","title":"Emerald Design System","blurb":"Replacing fragmented frontends with one component system."},{"slug":"partner-dashboard-upstox","category":"Migration","title":"Upstox Partner Dashboard","blurb":"Rebuilt sub-broker tools on a modern Angular stack."}]
   faq: [{"question":"Do you replace the whole system at once?","answer":"No. Modernization is phased: we strangle the monolith incrementally, keeping the product live, tested, and rollback-safe at every step."},{"question":"Can you modernize without losing existing business logic?","answer":"Yes. The first phase is always understanding and codifying the current behavior, so migrations preserve functionality instead of guessing at it."}]
   previousService: {"name":"SaaS MVP Development","link":"/web-development-services/saas-mvp-development/"}
   nextService: {"name":"Internal Tools & Portals","link":"/web-development-services/internal-tools-and-portals/"}
@@ -119,6 +120,7 @@ service:
     <div class="grid">
       <div class="col-12 lg:col-8">
         <h2 class="text-3xl font-bold mt-0 mb-3">How We Work</h2>
+        <p class="text-lg text-700 line-height-3 mb-4">Not sure where your stack stands? Run the free <a href="/startup-stack-audit-checklist/" class="text-primary font-bold">Startup Tech Stack Audit</a> first — a 5-minute self-assessment that surfaces the exact bottlenecks this engagement would fix.</p>
         <div class="grid">
           <div class="col-12 md:col-4">
             <div class="surface-card border-round-2xl p-4 shadow-1 h-full">
@@ -166,32 +168,18 @@ service:
 </article>
 
 <!-- Related Case Studies -->
-<section class="mb-6">
+<section class="mb-6" v-if="$frontmatter.service.caseStudies?.length">
   <div class="surface-card text-900 p-4 border-round-3xl relative overflow-hidden">
     <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
     <div class="relative z-1">
       <h3 class="text-3xl font-bold mb-4">Relevant Case Studies</h3>
       <p class="text-xl text-600 mb-6 max-w-30rem">See how I've applied these principles to real-world business challenges.</p>
       <div class="grid">
-        <div class="col-12 md:col-4">
-          <a href="/web-development-projects/ai-dynamic-crud-app/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
-            <div class="text-primary font-bold text-xs mb-2 uppercase">AI Automation</div>
-            <div class="font-bold text-900 mb-2">AI Dynamic CRUD</div>
-            <div class="text-600 text-sm">Enterprise Notion-to-App engine.</div>
-          </a>
-        </div>
-        <div class="col-12 md:col-4">
-          <a href="/web-development-projects/local-home-services-pros/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
-            <div class="text-primary font-bold text-xs mb-2 uppercase">Scalable Web</div>
-            <div class="font-bold text-900 mb-2">LocalXR Platform</div>
-            <div class="text-600 text-sm">10k+ dynamic service routes.</div>
-          </a>
-        </div>
-        <div class="col-12 md:col-4">
-          <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
-            <div class="text-primary font-bold text-xs mb-2 uppercase">Enterprise Migration</div>
-            <div class="font-bold text-900 mb-2">ABN AMRO Rebuild</div>
-            <div class="text-600 text-sm">Global banking infrastructure.</div>
+        <div class="col-12 md:col-4" v-for="caseStudy in $frontmatter.service.caseStudies" :key="caseStudy.slug">
+          <a :href="'/web-development-projects/' + caseStudy.slug + '/'" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
+            <div class="text-primary font-bold text-xs mb-2 uppercase">{{ caseStudy.category }}</div>
+            <div class="font-bold text-900 mb-2">{{ caseStudy.title }}</div>
+            <div class="text-600 text-sm">{{ caseStudy.blurb }}</div>
           </a>
         </div>
       </div>

@@ -17,9 +17,7 @@ head:
   - - meta
     - property: og:description
       content: "Professional website development for small businesses. Fast, mobile-friendly, SEO-optimized websites built by a senior developer."
-  - - script
-    - type: application/ld+json
-      content: '{"@context":"https://schema.org","@type":"Service","name":"Website Development for Small Business","description":"Professional website development for small businesses with custom design and SEO optimization.","provider":{"@type":"Person","name":"Jiwan Ghosal","jobTitle":"Senior Web Developer"},"areaServed":"Global","serviceType":"Small Business Web Development"}'
+  
 ---
 
 <section class="hero-newage relative overflow-hidden px-4 py-8 md:px-8 md:py-12 lg:px-12 surface-0 mb-8">

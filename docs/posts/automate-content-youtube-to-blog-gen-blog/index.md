@@ -67,11 +67,9 @@ GEN-BLOG is built for flexibility:
 
 These options ensure GEN-BLOG fits seamlessly into your workflow.
 
-## Watch the Demo on YouTube
+## See It in Action
 
-Curious to see GEN-BLOG in action? Check out my full demo video:  
-[Watch the GEN-BLOG Demo coming soon...](https://www.youtube.com/channel/UCedRFWwDbnHmg95RpPWBZRA)  
-I walk through the process step-by-step, showing how easy it is to turn a video into a blog post.
+The GEN-BLOG repository ships with `example.js`, a working end-to-end pipeline you can run yourself. I'll be publishing a step-by-step walkthrough video soon — subscribe to my YouTube channel to catch it when it's live.
 
 ## Get Started Today
 

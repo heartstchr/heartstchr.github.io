@@ -11,7 +11,7 @@ layout: Layout
 video:
   id: "yagpsXjngcQ"
   title: "Getting started Vue 3 and Vue Devtools | Stack Seekers"
-  description: "This video explains how to create a Vue 3 application with four commands. What do you get in the scaffolded application? and how to use Vuedevtools Pages, Components, Timeline, Assets（Vite only), Router, Graph, and Inspect（Vite only). PREREQUISITE Vscode: https://code.visualstudio.com/download Node: https://nodejs.org/en/download LINKS AND RESOURCES VueJs: https://vuejs.org/guide/quick-start.html Vuedevtools: https://devtools.vuejs.org/ Source code: https://github.com/heartstchr/vue-starter-kit STACK USED Vue.js Git Node.js Pnpm Vuepress Primevue LinkedIn: https://www.linkedin.com/in/jiwanghosal/ Instagram: https://www.instagram.com/jiwan_ghosal/ GitHub: https://github.com/stackseekers Discord: https://discord.gg/nVhJSymeXp Contact: https://stackseekers.com/"
+  description: "This video explains how to create a Vue 3 application with four commands. What do you get in the scaffolded application? and how to use Vuedevtools Pages, Components, Timeline, Assets（Vite only), Router, Graph, and Inspect（Vite only)."
   thumbnail: "https://i.ytimg.com/vi/yagpsXjngcQ/mqdefault.jpg"
   publishedAt: "2025-09-07T11:42:42Z"
   embedUrl: "https://www.youtube.com/embed/yagpsXjngcQ"
@@ -20,10 +20,6 @@ video:
   previousVideo: {"id":"9LPnNNLFSko","title":"Transfer Github repo to Github organization? | Stack Seekers","thumbnail":"https://i.ytimg.com/vi/9LPnNNLFSko/mqdefault.jpg","page":"/stackseekers-tv/videos/transfer-github-repo-to-github-organization-stack-seekers/"}
   nextVideo: {"id":"8OqDTsb2WwQ","title":"Repurpose YouTube content into blogs in minutes with AI | StackSeekers","thumbnail":"https://i.ytimg.com/vi/8OqDTsb2WwQ/mqdefault.jpg","page":"/stackseekers-tv/videos/repurpose-youtube-content-into-blogs-in-minutes-with-ai-stackseekers/"}
   relatedVideos: [{"id":"g47y6q_WkkM","title":"FREE AI voice generator Gemini text to voice for Google Docs add-on.","thumbnail":"https://i.ytimg.com/vi/g47y6q_WkkM/mqdefault.jpg","page":"/stackseekers-tv/videos/free-ai-voice-generator-gemini-text-to-voice-for-google-docs-add-on/"},{"id":"GgWw2ybOEx8","title":"Ultimate FREE eCommerce Website a furniture website app using Notion.","thumbnail":"https://i.ytimg.com/vi/GgWw2ybOEx8/mqdefault.jpg","page":"/stackseekers-tv/videos/ultimate-free-ecommerce-website-a-furniture-website-app-using-notion-no-wordpress/"},{"id":"55QSJ9nAheI","title":"Ultimate FREE eCommerce Website Tutorial 2026 using Notion!! No wordpr","thumbnail":"https://i.ytimg.com/vi/55QSJ9nAheI/mqdefault.jpg","page":"/stackseekers-tv/videos/ultimate-free-ecommerce-website-tutorial-2026-using-notion-no-wordpress-no-coding/"},{"id":"2CW88Ji3zn4","title":"Real Estate CRM Using Notion","thumbnail":"https://i.ytimg.com/vi/2CW88Ji3zn4/mqdefault.jpg","page":"/stackseekers-tv/videos/real-estate-crm-using-notion/"}]
-head:
-  - - script
-    - type: application/ld+json
-      content: '{"@context":"https://schema.org","@type":"VideoObject","@id":"https://stackseekers.com/stackseekers-tv/videos/getting-started-vue-3-and-vue-devtools-stack-seekers/","name":"Getting started Vue 3 and Vue Devtools | Stack Seekers","description":"This video explains how to create a Vue 3 application with four commands. What do you get in the scaffolded application? and how to use Vuedevtools Pages, Components, Timeline, Assets（Vite only), Router, Graph, and Inspect（Vite only). PREREQUISITE Vscode: https://code.visualstudio.com/download Node:","thumbnailUrl":["https://i.ytimg.com/vi/yagpsXjngcQ/mqdefault.jpg"],"uploadDate":"2025-09-07T11:42:42Z","contentUrl":"https://www.youtube.com/watch?v=yagpsXjngcQ","embedUrl":"https://www.youtube.com/embed/yagpsXjngcQ","publisher":{"@type":"Organization","@id":"https://stackseekers.com/#organization","name":"Stack Seekers"},"author":{"@type":"Person","@id":"https://stackseekers.com/#person","name":"Jiwan Ghosal"}}'
 ---
 
 <div class="mb-4">

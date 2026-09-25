@@ -25,8 +25,8 @@ project:
   images: [{"itemImageSrc":"/img/projects/dictionary.webp","alt":"CLI for Dictionary"}]
   video: ""
   features: [{"text":"Create help command for available commands"},{"text":"Definition of a word"},{"text":"Synonyms and antonyms of a word"},{"text":"Get example sentence from a word"},{"text":"Get word of the day"},{"text":"Play word game"}]
-  perspective: {"executive":"","technical":""}
-  details: ""
+  perspective: {"executive":"A single-purpose CLI that answers what a word means, or what another word means in context, in under a second. Dependency-light, instant startup, and composable internals that a larger tool could reuse.","technical":"Core lookup engine separated from the CLI presentation layer; subcommands for definitions, synonyms, and examples; structured terminal output; graceful fallbacks with suggestions on miss."}
+  details: "## Engineering Architecture: A Terminal Dictionary with an API Brain\n\nCommand Line Dictionary is a fast, lightweight CLI for looking up word definitions, synonyms, and examples — built for developers who already live in the terminal and want an answer without opening a browser tab.\n\n### 1. The Product\nInstead of a GUI or website, the tool ships as a single executable command: type a word, get a clean definition. It's designed for speed of use — one command, immediate output — and freedom from network round-trips where possible.\n\n### 2. Architecture\nThe CLI wraps a dictionary service behind a small, opinionated interface:\n\n- **Input handling:** subcommands and flags for word lookup, synonym search, and example retrieval, with sensible defaults so the zero-config path works on first run.\n- **Result formatting:** structured output (headword, part of speech, definitions, usage examples) rendered as readable terminal text — not raw JSON dumps.\n- **Fallbacks:** when a lookup misses, the tool degrades gracefully (suggestions and clear errors) instead of crashing mid-session.\n\n### 3. Design Decisions\n- **Startup performance matters:** the binary is kept dependency-light so cold start is instant; terminal users abandon tools that make them wait.\n- **Composable output:** core lookup logic is separated from the CLI presentation, so the same engine could later power a JSON or REPL interface without a rewrite.\n- **Focused scope:** synonyms, definitions, examples — and no more. Restraint keeps the tool predictable and the codebase small enough to audit in an afternoon.\n\n### 4. Outcome\nThe project is a clean demonstration of single-purpose tooling: right-sized scope, composable internals, and an interface tuned to the people actually using it. The pattern — a tiny, fast core behind a deliberate CLI surface — transfers directly to internal developer tools and CI helpers."
   previousProject: {"name":"Call Matrix","link":"/web-development-projects/call-matrix/"}
   nextProject: {"name":"Stock Market","link":"/web-development-projects/stock-market/"}
   relatedCaseStudy: null
@@ -246,7 +246,27 @@ project:
           </div>
           <div class="project-markdown-content text-lg line-height-4">
 
+## Engineering Architecture: A Terminal Dictionary with an API Brain
 
+Command Line Dictionary is a fast, lightweight CLI for looking up word definitions, synonyms, and examples — built for developers who already live in the terminal and want an answer without opening a browser tab.
+
+### 1. The Product
+Instead of a GUI or website, the tool ships as a single executable command: type a word, get a clean definition. It's designed for speed of use — one command, immediate output — and freedom from network round-trips where possible.
+
+### 2. Architecture
+The CLI wraps a dictionary service behind a small, opinionated interface:
+
+- **Input handling:** subcommands and flags for word lookup, synonym search, and example retrieval, with sensible defaults so the zero-config path works on first run.
+- **Result formatting:** structured output (headword, part of speech, definitions, usage examples) rendered as readable terminal text — not raw JSON dumps.
+- **Fallbacks:** when a lookup misses, the tool degrades gracefully (suggestions and clear errors) instead of crashing mid-session.
+
+### 3. Design Decisions
+- **Startup performance matters:** the binary is kept dependency-light so cold start is instant; terminal users abandon tools that make them wait.
+- **Composable output:** core lookup logic is separated from the CLI presentation, so the same engine could later power a JSON or REPL interface without a rewrite.
+- **Focused scope:** synonyms, definitions, examples — and no more. Restraint keeps the tool predictable and the codebase small enough to audit in an afternoon.
+
+### 4. Outcome
+The project is a clean demonstration of single-purpose tooling: right-sized scope, composable internals, and an interface tuned to the people actually using it. The pattern — a tiny, fast core behind a deliberate CLI surface — transfers directly to internal developer tools and CI helpers.
 
 </div>
 </div>

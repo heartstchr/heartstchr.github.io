@@ -17,9 +17,7 @@ head:
   - - meta
     - property: og:description
       content: "Hire senior Nuxt.js developers for server-side rendering, static site generation, and SEO-optimized Vue.js applications."
-  - - script
-    - type: application/ld+json
-      content: '{"@context":"https://schema.org","@type":"Service","name":"Hire Nuxt.js Developers","description":"Senior Nuxt.js developers for SSR, SSG, and SEO-optimized Vue.js applications.","provider":{"@type":"Person","name":"Jiwan Ghosal","jobTitle":"Senior Nuxt.js Developer"},"areaServed":"Global","serviceType":"Nuxt.js Development"}'
+  
 ---
 
 <section class="hero-newage relative overflow-hidden px-4 py-8 md:px-8 md:py-12 lg:px-12 surface-0 mb-8">
@@ -185,57 +183,57 @@ head:
   </div>
   <div class="grid">
     <div class="col-12 md:col-6 lg:col-4 p-3">
-      <a href="/web-development-projects/local-home-services-pros/" class="no-underline">
+      <a href="/web-development-projects/momentum-incident-management/" class="no-underline">
         <div class="surface-0 shadow-2 border-round-2xl overflow-hidden h-full transition-all hover:shadow-6">
           <div class="relative overflow-hidden h-10rem">
-            <img src="/img/projects/localxr/localxr-cover.webp" alt="LocalXR" class="w-full h-full object-cover" />
+            <img src="/img/home/projects/momentum_incident_management.webp" alt="Momentum Incident Management" class="w-full h-full object-cover" />
           </div>
           <div class="p-4">
-            <span class="text-xs font-bold text-primary uppercase">Programmatic SEO</span>
-            <h3 class="text-lg font-bold mt-1 mb-2">Local Home Services Marketplace</h3>
-            <p class="text-600 text-sm line-height-3">Next.js 15 SSR platform with thousands of dynamic location-service routes. SEO-optimized with ISR for maximum crawl efficiency.</p>
+            <span class="text-xs font-bold text-primary uppercase">Incident Management</span>
+            <h3 class="text-lg font-bold mt-1 mb-2">Momentum Incident Management</h3>
+            <p class="text-600 text-sm line-height-3">A Vue 3 + PrimeVue incident management platform with an expressive REST API, role-based access, and a polished admin surface for triage teams.</p>
             <div class="flex gap-2 mt-3 flex-wrap">
-              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">Next.js 15</span>
-              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">SSR</span>
-              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">ISR</span>
+              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">Vue 3</span>
+              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">PrimeVue</span>
+              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">REST</span>
             </div>
           </div>
         </div>
       </a>
     </div>
     <div class="col-12 md:col-6 lg:col-4 p-3">
-      <a href="/web-development-projects/appliance-repair-service-platform/" class="no-underline">
+      <a href="/web-development-projects/yit-plus/" class="no-underline">
         <div class="surface-0 shadow-2 border-round-2xl overflow-hidden h-full transition-all hover:shadow-6">
           <div class="relative overflow-hidden h-10rem">
-            <img src="/img/home/projects/appliance_repair_cover.webp" alt="Appliance Repair" class="w-full h-full object-cover" />
+            <img src="/img/home/projects/YIT_plus.webp" alt="Yit Plus" class="w-full h-full object-cover" />
           </div>
           <div class="p-4">
-            <span class="text-xs font-bold text-primary uppercase">Content Platform</span>
-            <h3 class="text-lg font-bold mt-1 mb-2">Appliance Repair Platform</h3>
-            <p class="text-600 text-sm line-height-3">SSR-rendered content platform with dynamic appliance categories, troubleshooting guides, and local service listings.</p>
+            <span class="text-xs font-bold text-primary uppercase">Service Platform</span>
+            <h3 class="text-lg font-bold mt-1 mb-2">Yit Plus</h3>
+            <p class="text-600 text-sm line-height-3">A Vue.js customer portal for repair and maintenance — service requests, one-year warranty tracking, discussion boards, and an admin console.</p>
             <div class="flex gap-2 mt-3 flex-wrap">
-              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">Next.js</span>
-              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">React</span>
-              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">SEO</span>
+              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">Vue.js</span>
+              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">Portal</span>
+              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">Admin</span>
             </div>
           </div>
         </div>
       </a>
     </div>
     <div class="col-12 md:col-6 lg:col-4 p-3">
-      <a href="/web-development-projects/sr-22-insurance-now/" class="no-underline">
+      <a href="/web-development-projects/tech-create/" class="no-underline">
         <div class="surface-0 shadow-2 border-round-2xl overflow-hidden h-full transition-all hover:shadow-6">
           <div class="relative overflow-hidden h-10rem">
-            <img src="/img/home/projects/sr22.webp" alt="SR-22 Insurance" class="w-full h-full object-cover" />
+            <img src="/img/home/projects/tech_create.webp" alt="Tech Create" class="w-full h-full object-cover" />
           </div>
           <div class="p-4">
-            <span class="text-xs font-bold text-primary uppercase">Programmatic Pages</span>
-            <h3 class="text-lg font-bold mt-1 mb-2">SR-22 Insurance Now</h3>
-            <p class="text-600 text-sm line-height-3">JSON-driven dynamic landing pages for insurance campaigns. Fast load, dynamic content injection, and conversion-optimized layouts.</p>
+            <span class="text-xs font-bold text-primary uppercase">Marketing Site</span>
+            <h3 class="text-lg font-bold mt-1 mb-2">Tech Create</h3>
+            <p class="text-600 text-sm line-height-3">A high-converting digital solutions landing page built with Vue.js and PrimeVue, deployed on Vercel for fast global delivery.</p>
             <div class="flex gap-2 mt-3 flex-wrap">
-              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">Next.js</span>
-              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">React</span>
-              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">Dynamic Routing</span>
+              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">Vue.js</span>
+              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">PrimeVue</span>
+              <span class="text-xs px-2 py-1 bg-gray-100 border-round-md font-bold">Vercel</span>
             </div>
           </div>
         </div>

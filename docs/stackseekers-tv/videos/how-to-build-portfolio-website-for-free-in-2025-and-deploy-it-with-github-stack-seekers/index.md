@@ -1,6 +1,6 @@
 ---
 title: "How to Build Portfolio Website for Free in 2025 and Deploy it with Git"
-description: "Discord for any problems/errors/bugs: https://discord.gg/nVhJSymeXp Explore All My Projects: https://stackseekers.com/web-development-projects/ PREREQUISITE Vscode: https"
+description: ""
 date: 2025-09-07
 lastUpdated: false
 editLink: false
@@ -11,7 +11,7 @@ layout: Layout
 video:
   id: "4loRfGbiFBM"
   title: "How to Build Portfolio Website for Free in 2025 and Deploy it with Git"
-  description: "Discord for any problems/errors/bugs: https://discord.gg/nVhJSymeXp Explore All My Projects: https://stackseekers.com/web-development-projects/ PREREQUISITE Vscode: https://code.visualstudio.com/download Node: https://nodejs.org/en/download Pnpm: https://pnpm.io/installation This video will show you 1. How to transform a default Vupress Hope theme into a sleek professional portfolio like this using PrimeVue and Vuepress. I will make a few changes in the markdown file to achieve this. 2. How do you set up PrimeFlex for custom CSS and Primeicon from the icon and Primevue UI framework for custom-designed sections? 3. How do you deploy it to GitHub pages? 4. How to create static site? 5. How to create document site? 6. How to create Blog? TIMESTAMPS 00:00 Intro & Demo 03:40 Code Structure 04:40 Home Page 05:41 Setup for PrimeVue and PrimeFlex using Vite 07:48 Use of PrimeVue component 08:51 Use of PrimeFlex 09:11 Navbar & Sidebar 12:24 Deploy to GitHub pages REFERENCE LINK Part-1: https://youtu.be/MoIbz_DdmLs Vuepress: https://v2.vuepress.vuejs.org/ Giscus: https://giscus.app/ Github pages: https://docs.github.com/en/pages/quickstart Markdown: https://www.markdownguide.org/getting-started/ Demo URL: https://stackseekers.github.io/ Source code: https://github.com/stackseekers/stackseekers.github.io Pull request: https://github.com/stackseekers/stackseekers.github.io/pull/45 KEY FEATURES Navbar Dropdown Menu Collapsible Sidebar Giscus: A comments system powered by GitHub Discussions Theme / Light mode / Dark mode Responsive - Mobile, Table, Desktop, Large Desktop Primevue Setup Custom CSS Back to the top of the page Deploy to GitHub pages STACK USED Vue.js Git Node.js Pnpm Vuepress Primevue LinkedIn: https://www.linkedin.com/in/jiwanghosal/ Instagram: https://www.instagram.com/jiwan_ghosal/ GitHub: https://github.com/stackseekers Discord: https://discord.gg/nVhJSymeXp Contact: https://stackseekers.com/"
+  description: ""
   thumbnail: "https://i.ytimg.com/vi/4loRfGbiFBM/mqdefault.jpg"
   publishedAt: "2025-09-07T11:42:28Z"
   embedUrl: "https://www.youtube.com/embed/4loRfGbiFBM"
@@ -20,10 +20,6 @@ video:
   previousVideo: {"id":"wXByXjYfPXw","title":"I thought analytics in portfolio websites was easy | Stack Seekers","thumbnail":"https://i.ytimg.com/vi/wXByXjYfPXw/mqdefault.jpg","page":"/stackseekers-tv/videos/i-thought-analytics-in-portfolio-websites-was-easy-stack-seekers/"}
   nextVideo: {"id":"MoIbz_DdmLs","title":"How to Make a Portfolio Website for Free in 2025 Using VuePress | Stac","thumbnail":"https://i.ytimg.com/vi/MoIbz_DdmLs/mqdefault.jpg","page":"/stackseekers-tv/videos/how-to-make-a-portfolio-website-for-free-in-2025-using-vuepress-stack-seekers/"}
   relatedVideos: [{"id":"g47y6q_WkkM","title":"FREE AI voice generator Gemini text to voice for Google Docs add-on.","thumbnail":"https://i.ytimg.com/vi/g47y6q_WkkM/mqdefault.jpg","page":"/stackseekers-tv/videos/free-ai-voice-generator-gemini-text-to-voice-for-google-docs-add-on/"},{"id":"GgWw2ybOEx8","title":"Ultimate FREE eCommerce Website a furniture website app using Notion.","thumbnail":"https://i.ytimg.com/vi/GgWw2ybOEx8/mqdefault.jpg","page":"/stackseekers-tv/videos/ultimate-free-ecommerce-website-a-furniture-website-app-using-notion-no-wordpress/"},{"id":"55QSJ9nAheI","title":"Ultimate FREE eCommerce Website Tutorial 2026 using Notion!! No wordpr","thumbnail":"https://i.ytimg.com/vi/55QSJ9nAheI/mqdefault.jpg","page":"/stackseekers-tv/videos/ultimate-free-ecommerce-website-tutorial-2026-using-notion-no-wordpress-no-coding/"},{"id":"2CW88Ji3zn4","title":"Real Estate CRM Using Notion","thumbnail":"https://i.ytimg.com/vi/2CW88Ji3zn4/mqdefault.jpg","page":"/stackseekers-tv/videos/real-estate-crm-using-notion/"}]
-head:
-  - - script
-    - type: application/ld+json
-      content: '{"@context":"https://schema.org","@type":"VideoObject","@id":"https://stackseekers.com/stackseekers-tv/videos/how-to-build-portfolio-website-for-free-in-2025-and-deploy-it-with-github-stack-seekers/","name":"How to Build Portfolio Website for Free in 2025 and Deploy it with Git","description":"Discord for any problems/errors/bugs: https://discord.gg/nVhJSymeXp Explore All My Projects: https://stackseekers.com/web-development-projects/ PREREQUISITE Vscode: https://code.visualstudio.com/download Node: https://nodejs.org/en/download Pnpm: https://pnpm.io/installation This video will show you","thumbnailUrl":["https://i.ytimg.com/vi/4loRfGbiFBM/mqdefault.jpg"],"uploadDate":"2025-09-07T11:42:28Z","contentUrl":"https://www.youtube.com/watch?v=4loRfGbiFBM","embedUrl":"https://www.youtube.com/embed/4loRfGbiFBM","publisher":{"@type":"Organization","@id":"https://stackseekers.com/#organization","name":"Stack Seekers"},"author":{"@type":"Person","@id":"https://stackseekers.com/#person","name":"Jiwan Ghosal"}}'
 ---
 
 <div class="mb-4">

@@ -3,19 +3,19 @@ title: "How Vue 3 and Devtools Enhance Web Development"
 description: Discover how Vue 3 and Vue Devtools streamline web development with rapid project setup, component customization, and real-time debugging.
 date: 2025-05-29
 category: [Tech, Web Development, Vue]
-tags: [Vue.js, Vue 3, Vue Devtools, Vue CLI, Portfolio]
+tags: [Vue.js, Vue 3, Vue Devtools, create-vue, Portfolio]
 ---
 
 <MetaContent :date="$frontmatter.date" :category="$frontmatter.tags"/>
 
-Building a modern web application requires a framework that’s both powerful and developer-friendly. Vue 3, combined with Vue Devtools, offers an exceptional environment for creating dynamic, responsive, and scalable projects. In this tutorial, I’ll guide you through setting up a Vue 3 application using the Vue CLI, customizing its components, and debugging with Vue Devtools. Whether you’re a freelancer building a portfolio like Stack Seekers or a developer enhancing your workflow, this SEO-optimized guide provides 7 actionable steps to create a brain-friendly, efficient Vue 3 application.
+Building a modern web application requires a framework that’s both powerful and developer-friendly. Vue 3, combined with Vue Devtools, offers an exceptional environment for creating dynamic, responsive, and scalable projects. In this tutorial, I’ll guide you through setting up a Vue 3 application using the official `create-vue` scaffold, customizing its components, and debugging with Vue Devtools. Whether you’re a freelancer building a portfolio like Stack Seekers or a developer enhancing your workflow, this guide provides 7 actionable steps to create a brain-friendly, efficient Vue 3 application.
 
 ## Why Choose Vue 3 and Vue Devtools?
 
-Vue 3 is a lightweight, performant JavaScript framework ideal for building modern web applications. Its Composition API, reactive state management, and Vue Router make it perfect for creating portfolio websites or client projects. Vue Devtools enhances this experience by offering real-time insights into components, routes, and performance, helping developers debug efficiently and optimize user experience.
+Vue 3 is a lightweight, performant JavaScript framework ideal for building modern web applications. Its Composition API, reactive state management, and Vue Router make it perfect for creating portfolio websites or client projects. Vue Devtools complements it by offering real-time insights into components, routes, and performance, helping developers debug efficiently and optimize user experience.
 
 ### Benefits of Vue 3 and Vue Devtools:
-- **Rapid Project Setup**: Scaffold a Vue 3 project in minutes with Vue CLI.
+- **Rapid Project Setup**: Scaffold a Vue 3 project in minutes with the official `create-vue` tool (Vite-based).
 - **Component-Based Development**: Build reusable, modular components for scalability.
 - **Vue Router Integration**: Create multi-page applications with seamless navigation.
 - **Real-Time Debugging**: Use Vue Devtools to inspect components, routes, and performance.
@@ -28,8 +28,8 @@ Vue 3 is a lightweight, performant JavaScript framework ideal for building moder
 Follow these steps to create a Vue 3 application, customize its content, and debug it effectively using Vue Devtools.
 
 ### Prerequisites
-- **Node.js**: Ensure Node.js is installed on your system.
-- **Vue CLI**: Install globally with `npm install -g @vue/cli`.
+- **Node.js**: Ensure Node.js is installed on your system. `npm create vue@latest` requires Node 18+ (20+ recommended).
+- **npm**: Comes bundled with Node.js.
 - **Git**: Install Git for version control.
 - **VS Code**: Use Visual Studio Code for editing project files.
 - **Vue Devtools**: Install the Vue Devtools browser extension for Chrome or Firefox.
@@ -87,11 +87,11 @@ Follow these steps to create a Vue 3 application, customize its content, and deb
 4. Review `src/router/index.js` to understand the defined routes (`/` for Home, `/about` for About).
 
 ### Step 6: Explore Component Structure
-1. In `src/views/HomeView.vue`, note the `<Welcome>` component, which includes `<WelcomeItem>` components.
+1. In `src/views/HomeView.vue`, note the `<TheWelcome>` component, which includes `<WelcomeItem>` components.
 2. Open `src/components/WelcomeItem.vue`:
    - Uses three slots: `icon` (e.g., `document`, `tooling`), `heading` (e.g., “Documentation”), and `default` (body text).
    - Customize slots or CSS to align with your project’s branding.
-3. Comment out the `<Welcome>` component in `HomeView.vue` to observe its impact, then uncomment to restore functionality.
+3. Comment out the `<TheWelcome>` component in `HomeView.vue` to observe its impact, then uncomment to restore functionality.
 
 ### Step 7: Debug with Vue Devtools
 1. Open your browser’s developer tools and navigate to the **Vue** tab (requires Vue Devtools extension).
@@ -100,10 +100,10 @@ Follow these steps to create a Vue 3 application, customize its content, and deb
    - **Routes Tab**: Monitor active routes (e.g., `/` or `/about`) and their metadata.
    - **Timeline Tab**: Analyze events and asset loading for performance optimization.
    - **Virtual DOM**: Inspect sub-components and rendering structure.
-3. For production, disable Vue Devtools in `vite.config.js` by commenting out the Devtools plugin to prevent exposure.
+3. For production, add `vite-plugin-vue-devtools` to your project and wire it in `vite.config.js` — Vue Devtools loads only in dev mode, so production builds already exclude it by default. No extra step is needed to "disable" it.
 
-### conclusion
-That's it! You now have a Vue 3 application scaffolded with Vue CLI, ready for customization and debugging. Stay tuned for more Vue 3 tips and tricks to elevate your web development skills!
+### Conclusion
+That's it! You now have a Vue 3 application scaffolded with `create-vue` (Vite), ready for customization and debugging. Stay tuned for more Vue 3 tips and tricks to elevate your web development skills!
 
 <div class="blog-content-and-aside">
   <div class="blog-content-main"></div>

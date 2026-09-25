@@ -50,4 +50,4 @@ To maintain high developer velocity across ABN AMRO’s engineering teams, the a
 - **Automated CI/CD:** Every commit triggers visual regression testing via Chromatic and unit testing for accessibility (A11y) compliance.
 - **Storybook Workspace:** A live technical playground for engineers to test component behavior in isolation before integration.
 
-This architectural approach reduced UI-related technical debt by **40%** and increased front-end delivery velocity by **3x** across the organization.
+This architectural approach materially reduced UI-related technical debt and lifted front-end delivery velocity across the organization: teams stopped re-solving the same styling and component problems, and new interface work started from documented, tested building blocks instead of a blank canvas.

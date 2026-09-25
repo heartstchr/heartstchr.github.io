@@ -1,6 +1,6 @@
 ---
 title: "Repurpose YouTube content into blogs in minutes with AI | StackSeekers"
-description: "Podcast Playlist: [https://www.youtube.com/playlist?list=PLGK9Y5ibwm0-diGJKA69TmIGUQBIStzNw] Discord for any problems/errors/bugs: https://discord.gg/nVhJSymeXp Explore A"
+description: ""
 date: 2025-09-07
 lastUpdated: false
 editLink: false
@@ -11,7 +11,7 @@ layout: Layout
 video:
   id: "8OqDTsb2WwQ"
   title: "Repurpose YouTube content into blogs in minutes with AI | StackSeekers"
-  description: "Podcast Playlist: [https://www.youtube.com/playlist?list=PLGK9Y5ibwm0-diGJKA69TmIGUQBIStzNw] Discord for any problems/errors/bugs: https://discord.gg/nVhJSymeXp Explore All My Projects: https://stackseekers.com/web-development-projects/ PREREQUISITE Vscode: https://code.visualstudio.com/download Node: https://nodejs.org/en/download In this video, I showcase GEN-BLOG, an innovative Node.js tool that transforms your YouTube videos into SEO-optimized blog posts effortlessly. With GEN-BLOG, you can extract video transcripts, generate structured Markdown files with front matter, and create JSON metadata for your blog—all powered by AI. Perfect for content creators and developers looking to boost their productivity! Want to try it out? Visit the GitHub repository: https://github.com/heartstchr/gen-blog TIMESTAMPS 00:00 Intro & Demo 02:30 How It Works 03:00 Code Overview 04:50 Live Demo 05:44 Customisation Options 06:00 Prompt Explanation 07:00 Conclusion LINKS AND RESOURCES GitHub Repository: https://github.com/heartstchr/gen-blog StackSeekers Website: https://stackseekers.com KEY FEATURES Extracts transcripts from YouTube videos Generates structured Markdown blog posts with front matter Creates JSON metadata for blog homepages Customizable prompts and output settings Saves time and enhances SEO STACK USED Vue.js Git Node.js Pnpm Vuepress Discord: https://discord.gg/nVhJSymeXp Contact: https://stackseekers.com/ LinkedIn: https://www.linkedin.com/in/jiwanghosal/ Instagram: https://www.instagram.com/jiwan_ghosal/ GitHub: https://github.com/stackseekers WhatsApp: https://whatsapp.com/channel/0029Vb0DIRq8V0tlhqjkJg3Z"
+  description: ""
   thumbnail: "https://i.ytimg.com/vi/8OqDTsb2WwQ/mqdefault.jpg"
   publishedAt: "2025-09-07T11:42:28Z"
   embedUrl: "https://www.youtube.com/embed/8OqDTsb2WwQ"
@@ -20,10 +20,6 @@ video:
   previousVideo: {"id":"yagpsXjngcQ","title":"Getting started Vue 3 and Vue Devtools | Stack Seekers","thumbnail":"https://i.ytimg.com/vi/yagpsXjngcQ/mqdefault.jpg","page":"/stackseekers-tv/videos/getting-started-vue-3-and-vue-devtools-stack-seekers/"}
   nextVideo: {"id":"8rYCgrrbHqk","title":"Is CSS (Cascading Style Sheet) affecting your website visitors brains?","thumbnail":"https://i.ytimg.com/vi/8rYCgrrbHqk/mqdefault.jpg","page":"/stackseekers-tv/videos/is-css-cascading-style-sheet-affecting-your-website-visitors-brains/"}
   relatedVideos: [{"id":"g47y6q_WkkM","title":"FREE AI voice generator Gemini text to voice for Google Docs add-on.","thumbnail":"https://i.ytimg.com/vi/g47y6q_WkkM/mqdefault.jpg","page":"/stackseekers-tv/videos/free-ai-voice-generator-gemini-text-to-voice-for-google-docs-add-on/"},{"id":"GgWw2ybOEx8","title":"Ultimate FREE eCommerce Website a furniture website app using Notion.","thumbnail":"https://i.ytimg.com/vi/GgWw2ybOEx8/mqdefault.jpg","page":"/stackseekers-tv/videos/ultimate-free-ecommerce-website-a-furniture-website-app-using-notion-no-wordpress/"},{"id":"55QSJ9nAheI","title":"Ultimate FREE eCommerce Website Tutorial 2026 using Notion!! No wordpr","thumbnail":"https://i.ytimg.com/vi/55QSJ9nAheI/mqdefault.jpg","page":"/stackseekers-tv/videos/ultimate-free-ecommerce-website-tutorial-2026-using-notion-no-wordpress-no-coding/"},{"id":"2CW88Ji3zn4","title":"Real Estate CRM Using Notion","thumbnail":"https://i.ytimg.com/vi/2CW88Ji3zn4/mqdefault.jpg","page":"/stackseekers-tv/videos/real-estate-crm-using-notion/"}]
-head:
-  - - script
-    - type: application/ld+json
-      content: '{"@context":"https://schema.org","@type":"VideoObject","@id":"https://stackseekers.com/stackseekers-tv/videos/repurpose-youtube-content-into-blogs-in-minutes-with-ai-stackseekers/","name":"Repurpose YouTube content into blogs in minutes with AI | StackSeekers","description":"Podcast Playlist: [https://www.youtube.com/playlist?list=PLGK9Y5ibwm0-diGJKA69TmIGUQBIStzNw] Discord for any problems/errors/bugs: https://discord.gg/nVhJSymeXp Explore All My Projects: https://stackseekers.com/web-development-projects/ PREREQUISITE Vscode: https://code.visualstudio.com/download Nod","thumbnailUrl":["https://i.ytimg.com/vi/8OqDTsb2WwQ/mqdefault.jpg"],"uploadDate":"2025-09-07T11:42:28Z","contentUrl":"https://www.youtube.com/watch?v=8OqDTsb2WwQ","embedUrl":"https://www.youtube.com/embed/8OqDTsb2WwQ","publisher":{"@type":"Organization","@id":"https://stackseekers.com/#organization","name":"Stack Seekers"},"author":{"@type":"Person","@id":"https://stackseekers.com/#person","name":"Jiwan Ghosal"}}'
 ---
 
 <div class="mb-4">

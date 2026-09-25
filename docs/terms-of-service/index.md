@@ -6,7 +6,7 @@ editLink: false
 
 # Terms of Service
 
-**Last updated: January 2025**
+**Last updated: September 2026**
 
 ## Agreement to Terms
 

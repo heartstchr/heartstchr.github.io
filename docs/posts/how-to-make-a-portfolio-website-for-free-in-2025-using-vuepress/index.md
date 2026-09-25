@@ -1,5 +1,5 @@
 ---
-title: "How to Make a Free Portfolio Website in 2025 with VuePress"
+title: "How to Make a Free Portfolio Website with VuePress"
 description: "Build a free portfolio website for your business or freelance brand with VuePress. Write in Markdown, generate a static site, and host it on GitHub Pages."
 date: 2025-05-22
 category: [Tech]
@@ -86,13 +86,13 @@ To showcase your projects dynamically, integrate a Vue component using PrimeVue 
 [
   {
     "id": 1,
-    "title": "Freelance Web App",
+    "name": "Freelance Web App",
     "description": "A responsive web application built with Vue.js and Node.js for a client in the e-commerce sector.",
     "link": "https://example.com/project1"
   },
   {
     "id": 2,
-    "title": "Portfolio Website",
+    "name": "Portfolio Website",
     "description": "A personal portfolio website showcasing my freelance projects, built with VuePress and PrimeVue.",
     "link": "https://example.com/project2"
   }
@@ -100,19 +100,49 @@ To showcase your projects dynamically, integrate a Vue component using PrimeVue 
 ```
 
 #### Reusable Vue Component
-The `ProjectCard` component displays project details in a card layout, styled with PrimeVue and PrimeFlex for a modern look.
+Create a local component at `docs/.vuepress/components/ProjectCard.vue` that accepts a `project` prop and renders the card. Any component placed in `docs/.vuepress/components` is auto-registered across Markdown pages:
 
-<ProjectCard
-  v-for="(project, index) in freelance.slice(0,2)"
-  :key="index"
-  :project="project"
-  :showHeader=true
-/>
-
-<script setup lang="ts">
-  import { freelance } from "@data/projects.js";
-  import { toKebabCase } from "@utils";
+```vue
+<script setup>
+defineProps({
+  project: { type: Object, required: true },
+});
 </script>
+
+<template>
+  <article class="project-card">
+    <h3><a :href="project.link">{{ project.name }}</a></h3>
+    <p>{{ project.description }}</p>
+  </article>
+</template>
+
+<style scoped>
+.project-card {
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+</style>
+```
+
+Then render it from your page's `<script setup>` block with the data imported locally: 
+
+```vue
+<script setup>
+import projects from "./projects.json";
+</script>
+
+<template>
+  <ProjectCard
+    v-for="project in projects"
+    :key="project.id"
+    :project="project"
+  />
+</template>
+```
+
+Note: if you place your data file inside the `docs` folder, prefix its import with `@` (VuePress reserves `@` for the source directory), e.g. `import projects from "@/projects.json"`.
 
 <div class="blog-content-and-aside">
   <div class="blog-content-main"></div>

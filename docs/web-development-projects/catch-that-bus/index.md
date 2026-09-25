@@ -25,8 +25,8 @@ project:
   images: [{"itemImageSrc":"/img/projects/catchthatbus.webp","alt":"Book Malaysia and Singapore bus tickets online. | CatchThatBus"},{"itemImageSrc":"https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/ad/b9/3b/adb93b8f-08b6-ac23-8f9e-906f7b2529c2/pr_source.webp/230x0w.webp","alt":"IOS app for booking Malaysia and Singapore bus tickets online | CatchThatBus"}]
   video: ""
   features: [{"text":"Search for a bus by choosing from the destination and to the destination in Malaysia for dates."},{"text":"Sort and filter on available buses"},{"text":"Seat visualization of a bus"},{"text":"Booking system to handle concurrent requests"},{"text":"Discount system based on coupon code"},{"text":"Insurance integration for travellers"},{"text":"Payment system using wallets and cards"},{"text":"Webview for Boost wallet"},{"text":"Multiple language support"},{"text":"Multiple Currency support"},{"text":"Bus Booked history"},{"text":"Bus onboarding system for admin and bus operator"}]
-  perspective: {"executive":"","technical":""}
-  details: ""
+  perspective: {"executive":"Cross-border bus ticketing normalized across many operators into one searchable, bookable experience. Transparent search, live seat maps, and confirmed e-tickets replace queues and phone calls.","technical":"Vue.js client with a normalized schedule model over per-operator adapters; hold-then-pay seat locking with race-condition safety; booking lifecycle persisted end-to-end; operator admin for schedules, pricing, and refunds."}
+  details: "## Engineering Architecture: Catch That Bus Ticketing Platform\n\nCatch That Bus connects Malaysia and Singapore travelers with intercity coaches — search schedules, compare operators, pick your seat, and pay online. It's a full commerce product: searchable inventory, live seat maps, and confirmed ticketing.\n\n### 1. The Problem in Cross-Border Bus Travel\nIntercity and cross-border coach travel is fragmented across operators, each with their own routes, stops, and rules. Travelers used to call operators individually or queue at terminals. The platform's job is to unify that into one searchable, bookable experience without breaking each operator's existing operations.\n\n### 2. Architecture\nA Vue.js client drives the search-and-book flow over a service layer that talks to operators:\n\n- **Normalized schedule search:** each operator's routes are mapped into a common schedule model (origin, destination, date, duration, operator, price), so one search box covers every operator.\n- **Live seat selection:** seat maps come from operator APIs in real time; the UI renders and blocks seats during the booking session so two travelers can't reserve the same seat.\n- **Booking lifecycle:** quotes → seat hold → payment → e-ticket, with the confirmation of each stage persisted so both customer and operator always know the state.\n\n### 3. Design Decisions\n- **Operator abstraction:** behind the API, each operator is adapted separately, so adding a new operator is an integration task, not a UI change.\n- **Hold-then-pay:** seats are locked at quote time and released on timeout or cancellation, protecting the operator's inventory while the traveler checks out.\n- **Race-condition safety:** the backend, not the UI, is the source of truth for seat state — two tabs or two devices can't produce conflicting bookings.\n- **Admin operations:** the operator-facing side manages schedules, pricing, and refunds, keeping the customer journey and the business tooling in one system.\n\n### 4. Outcome\nThe platform turned a phone-and-queue booking process into a transparent online funnel: travelers compare and book in minutes, and operators reach a wider audience with automated seat and payment handling."
   previousProject: {"name":"Trokka Attraction","link":"/web-development-projects/trokka-attraction/"}
   nextProject: {"name":"Partner Dashboard Upstox","link":"/web-development-projects/partner-dashboard-upstox/"}
   relatedCaseStudy: null
@@ -246,7 +246,28 @@ project:
           </div>
           <div class="project-markdown-content text-lg line-height-4">
 
+## Engineering Architecture: Catch That Bus Ticketing Platform
 
+Catch That Bus connects Malaysia and Singapore travelers with intercity coaches — search schedules, compare operators, pick your seat, and pay online. It's a full commerce product: searchable inventory, live seat maps, and confirmed ticketing.
+
+### 1. The Problem in Cross-Border Bus Travel
+Intercity and cross-border coach travel is fragmented across operators, each with their own routes, stops, and rules. Travelers used to call operators individually or queue at terminals. The platform's job is to unify that into one searchable, bookable experience without breaking each operator's existing operations.
+
+### 2. Architecture
+A Vue.js client drives the search-and-book flow over a service layer that talks to operators:
+
+- **Normalized schedule search:** each operator's routes are mapped into a common schedule model (origin, destination, date, duration, operator, price), so one search box covers every operator.
+- **Live seat selection:** seat maps come from operator APIs in real time; the UI renders and blocks seats during the booking session so two travelers can't reserve the same seat.
+- **Booking lifecycle:** quotes → seat hold → payment → e-ticket, with the confirmation of each stage persisted so both customer and operator always know the state.
+
+### 3. Design Decisions
+- **Operator abstraction:** behind the API, each operator is adapted separately, so adding a new operator is an integration task, not a UI change.
+- **Hold-then-pay:** seats are locked at quote time and released on timeout or cancellation, protecting the operator's inventory while the traveler checks out.
+- **Race-condition safety:** the backend, not the UI, is the source of truth for seat state — two tabs or two devices can't produce conflicting bookings.
+- **Admin operations:** the operator-facing side manages schedules, pricing, and refunds, keeping the customer journey and the business tooling in one system.
+
+### 4. Outcome
+The platform turned a phone-and-queue booking process into a transparent online funnel: travelers compare and book in minutes, and operators reach a wider audience with automated seat and payment handling.
 
 </div>
 </div>

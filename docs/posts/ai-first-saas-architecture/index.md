@@ -8,7 +8,7 @@ tags: ["AI", "LLM", "SaaS", "Architecture", "Gemini", "Automation"]
 
 <MetaContent :date="$frontmatter.date" :category="$frontmatter.tags"/>
 
-In 2024, every startup claims to be "Powered by AI." But for most, that just means they’ve slapped a generic chatbot in the corner of their dashboard. These "wrappers" are easily copied and provide very little long-term business value.
+Every startup claims to be "Powered by AI." But for most, that just means they’ve slapped a generic chatbot in the corner of their dashboard. These "wrappers" are easily copied and provide very little long-term business value.
 
 If you want to build a real **AI Moat**, you have to architect for it from the ground up.
 

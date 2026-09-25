@@ -1,6 +1,6 @@
 ---
 title: "Copy Paste Contact Form with reCAPTCHA for Website (No Code) get data"
-description: "Get the Contact Form setup: https://contact-form-app.stackseekers.com/ Download code: https://stackseekers.gumroad.com/l/contact-form-widget I will show you how to add a"
+description: "I will show you how to add a professional contact form widget to ANY website (WordPress, Wix, Squarespace, or custom) in just a few minutes. It automatically saves messag"
 date: 2025-10-25
 lastUpdated: false
 editLink: false
@@ -11,7 +11,7 @@ layout: Layout
 video:
   id: "BgoRVTl2WCI"
   title: "Copy Paste Contact Form with reCAPTCHA for Website (No Code) get data"
-  description: "Get the Contact Form setup: https://contact-form-app.stackseekers.com/ Download code: https://stackseekers.gumroad.com/l/contact-form-widget I will show you how to add a professional contact form widget to ANY website (WordPress, Wix, Squarespace, or custom) in just a few minutes. It automatically saves messages to Notion for easy management—and it's completely FREE! Live demo: Add the form with 3 lines of code and see messages appear in Notion instantly. 4 ready-to-copy templates: Simple Contact, Business Inquiry, Customer Support, and Custom Branded. Interactive playground: Customise fields, titles, buttons, and more in real-time with live previews. Step-by-step setup: Create a Notion database from my template, set up integrations, and deploy on Netlify. Built-in security: reCAPTCHA to block spam, rate limiting, and input sanitisation. Discord: https://discord.gg/nVhJSymeXp Contact: https://stackseekers.com/contact LinkedIn: https://www.linkedin.com/in/jiwanghosal/ Instagram: https://www.instagram.com/jiwan_ghosal/ GitHub: https://github.com/stackseekers WhatsApp: https://whatsapp.com/channel/0029Vb0DIRq8V0tlhqjkJg3Z"
+  description: "I will show you how to add a professional contact form widget to ANY website (WordPress, Wix, Squarespace, or custom) in just a few minutes. It automatically saves messages to Notion for easy management—and it's completely FREE! Live demo: Add the form with 3 lines of code and see messages appear in Notion instantly. 4 ready-to-copy templates: Simple Contact, Business Inquiry, Customer Support, and Custom Branded. Interactive playground: Customise fields, titles, buttons, and more in real-time with live previews. Step-by-step setup: Create a Notion database from my template, set up integrations, and deploy on Netlify. Built-in security: reCAPTCHA to block spam, rate limiting, and input sanitisation."
   thumbnail: "https://i.ytimg.com/vi/BgoRVTl2WCI/mqdefault.jpg"
   publishedAt: "2025-10-25T16:39:04Z"
   embedUrl: "https://www.youtube.com/embed/BgoRVTl2WCI"
@@ -20,10 +20,6 @@ video:
   previousVideo: {"id":"AbutFD2BzF4","title":"How to add the Google reCAPTCHA key? I'm not a robot verification befo","thumbnail":"https://i.ytimg.com/vi/AbutFD2BzF4/mqdefault.jpg","page":"/stackseekers-tv/videos/how-to-add-the-google-recaptcha-key-i-m-not-a-robot-verification-before-submitting/"}
   nextVideo: {"id":"PqD1jHW9S4g","title":"How to Get a Free Google AI API Key? Gemini API Key","thumbnail":"https://i.ytimg.com/vi/PqD1jHW9S4g/mqdefault.jpg","page":"/stackseekers-tv/videos/how-to-get-a-free-google-ai-api-key-gemini-api-key/"}
   relatedVideos: [{"id":"g47y6q_WkkM","title":"FREE AI voice generator Gemini text to voice for Google Docs add-on.","thumbnail":"https://i.ytimg.com/vi/g47y6q_WkkM/mqdefault.jpg","page":"/stackseekers-tv/videos/free-ai-voice-generator-gemini-text-to-voice-for-google-docs-add-on/"},{"id":"GgWw2ybOEx8","title":"Ultimate FREE eCommerce Website a furniture website app using Notion.","thumbnail":"https://i.ytimg.com/vi/GgWw2ybOEx8/mqdefault.jpg","page":"/stackseekers-tv/videos/ultimate-free-ecommerce-website-a-furniture-website-app-using-notion-no-wordpress/"},{"id":"55QSJ9nAheI","title":"Ultimate FREE eCommerce Website Tutorial 2026 using Notion!! No wordpr","thumbnail":"https://i.ytimg.com/vi/55QSJ9nAheI/mqdefault.jpg","page":"/stackseekers-tv/videos/ultimate-free-ecommerce-website-tutorial-2026-using-notion-no-wordpress-no-coding/"},{"id":"2CW88Ji3zn4","title":"Real Estate CRM Using Notion","thumbnail":"https://i.ytimg.com/vi/2CW88Ji3zn4/mqdefault.jpg","page":"/stackseekers-tv/videos/real-estate-crm-using-notion/"}]
-head:
-  - - script
-    - type: application/ld+json
-      content: '{"@context":"https://schema.org","@type":"VideoObject","@id":"https://stackseekers.com/stackseekers-tv/videos/copy-paste-contact-form-with-recaptcha-for-website-no-code-get-data-notion-db/","name":"Copy Paste Contact Form with reCAPTCHA for Website (No Code) get data","description":"Get the Contact Form setup: https://contact-form-app.stackseekers.com/ Download code: https://stackseekers.gumroad.com/l/contact-form-widget I will show you how to add a professional contact form widget to ANY website (WordPress, Wix, Squarespace, or custom) in just a few minutes. It automatically s","thumbnailUrl":["https://i.ytimg.com/vi/BgoRVTl2WCI/mqdefault.jpg"],"uploadDate":"2025-10-25T16:39:04Z","contentUrl":"https://www.youtube.com/watch?v=BgoRVTl2WCI","embedUrl":"https://www.youtube.com/embed/BgoRVTl2WCI","publisher":{"@type":"Organization","@id":"https://stackseekers.com/#organization","name":"Stack Seekers"},"author":{"@type":"Person","@id":"https://stackseekers.com/#person","name":"Jiwan Ghosal"}}'
 ---
 
 <div class="mb-4">

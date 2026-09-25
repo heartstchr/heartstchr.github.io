@@ -1,6 +1,6 @@
 ---
-title: "Upstox Partner Dashboard: Sub-Broker Account & Login"
-description: "Open an Upstox sub-broker account and run your brokerage from the partner dashboard — onboard clients, track leads and commissions, and manage your business in one place."
+title: "Upstox Partner Dashboard: Sub-Broker App Case Study"
+description: "Case study of the Upstox sub-broker partner dashboard we built — client onboarding, lead tracking, commission settlements, and referral tools. A portfolio showcase, not the official Upstox login."
 lastUpdated: false
 editLink: false
 contributors: false
@@ -9,7 +9,7 @@ copyright: false
 layout: Layout
 project:
   name: "Partner Dashboard Upstox"
-  description: "Open a sub-broker account with Upstox."
+  description: "A partner dashboard for Upstox's sub-broker program: lead referral tracking, royalty and ambassador programs, UCC search, and commission reports tied to customer trades."
   software: "Web"
   schema: "https://schema.org/BusinessApplication"
   domain: "FinTech"
@@ -18,15 +18,15 @@ project:
   price: 0
   currency: USD
   dodoPaymentUrl: 
-  link: "https://upstox.com/sub-broker/"
+  link: ""
   codeLink: 
   contact: "mailto:support@stackseekers.com?subject=Partner Dashboard Upstox Inquiry"
   stack: ["Angular/black/white","MongoDB","mysql","loopback","npm","Eslint","Prettier","github/black/white"]
   images: [{"itemImageSrc":"/img/projects/partnerUpstox/partnerUpstox.webp","alt":"Partner Dashboard Upstox - Cover page"},{"itemImageSrc":"/img/projects/partnerUpstox/dashboard.webp","alt":"Partner Dashboard Upstox - Dashboard"},{"itemImageSrc":"/img/projects/partnerUpstox/leads.webp","alt":"Partner Dashboard Upstox - Leads management"},{"itemImageSrc":"/img/projects/partnerUpstox/customer.webp","alt":"Partner Dashboard Upstox - Customer management"},{"itemImageSrc":"/img/projects/partnerUpstox/earning.webp","alt":"Partner Dashboard Upstox - Earnings report"}]
   video: ""
   features: [{"text":"Refer and earn program"},{"text":"Track lead referred"},{"text":"Ambassador program"},{"text":"Royalty program"},{"text":"Track customer referred"},{"text":"Dashboard to show earnings based on the program"},{"text":"Search by name and UCC"},{"text":"Earning report based on the customer trade"}]
-  perspective: {"executive":"","technical":""}
-  details: ""
+  perspective: {"executive":"A partner dashboard that turns sub-broker referral programs into a transparent, trackable business: leads, programs, and earnings reconciled server-side so payouts never depend on a spreadsheet or a browser tab.","technical":"Angular client over a LoopBack and Node.js API with MySQL and MongoDB; lead lifecycle states, UCC and name index for instant search, and commission aggregation computed from trade data server-side so the UI is a faithful mirror of authoritative balances."}
+  details: "## Engineering Architecture: Upstox Sub-Broker Partner Dashboard\n\nThe Partner Dashboard gives Upstox's sub-brokers a single place to run their referral business: track referred prospects, watch earnings, and manage the programs that pay them.\n\n### 1. Business Model the Product Serves\nSub-brokers and partners onboard clients into the Upstox brokerage. Their income is tied to how many customers they bring in and how actively those customers trade. The dashboard exists to make that relationship legible:\n\n- **Refer and Earn / Ambassador / Royalty programs** each carry their own earning rules.\n- Every referred lead is tracked from sign-up through activation.\n- Earnings accrue from customer trades, so the dashboard must reconcile program rules with live trading data.\n\n### 2. Architecture\nThe stack is Angular on the client, backed by a LoopBack (Node.js) API with MySQL and MongoDB. LoopBack's model-driven scaffolding fit the fast-moving rule set — each program is a data model, and earning calculations run server-side so the browser can never misreport a balance.\n\n- **Lead lifecycle tracking:** a prospect moves through stages (referred → registered → activated), with search by name or UCC (a unique client code) so partners can find any customer instantly.\n- **Earning reports:** server-computed aggregations of customer trade activity mapped back to the active program, rendered as dashboard cards and exportable views.\n- **Role separation:** partner-facing views expose only the partner's own funnel, while the operating team administers programs, rules, and payouts.\n\n### 3. Design Decisions\n- **Search by UCC and name:** UCC is the canonical identifier in Indian brokerage systems; indexing it made lookup instant even with large partner books.\n- **Server authoritative math:** commissions derive from trade data server-side, which keeps the UI a faithful mirror instead of a source of truth.\n- **Program-driven UI:** switching a program's rule configuration updates the dashboard contract rather than requiring code changes per program.\n\n### 4. Outcome\nThe dashboard replaced spreadsheet-based tracking for partners with a live view of their funnel and earnings. For Upstox, it produced structured lead data, clearer payout reconciliation, and a cleaner path to grow partner acquisition."
   previousProject: {"name":"Catch That Bus","link":"/web-development-projects/catch-that-bus/"}
   nextProject: {"name":"Demat Account Open","link":"/web-development-projects/demat-account-open/"}
   relatedCaseStudy: null
@@ -246,7 +246,31 @@ project:
           </div>
           <div class="project-markdown-content text-lg line-height-4">
 
+## Engineering Architecture: Upstox Sub-Broker Partner Dashboard
 
+The Partner Dashboard gives Upstox's sub-brokers a single place to run their referral business: track referred prospects, watch earnings, and manage the programs that pay them.
+
+### 1. Business Model the Product Serves
+Sub-brokers and partners onboard clients into the Upstox brokerage. Their income is tied to how many customers they bring in and how actively those customers trade. The dashboard exists to make that relationship legible:
+
+- **Refer and Earn / Ambassador / Royalty programs** each carry their own earning rules.
+- Every referred lead is tracked from sign-up through activation.
+- Earnings accrue from customer trades, so the dashboard must reconcile program rules with live trading data.
+
+### 2. Architecture
+The stack is Angular on the client, backed by a LoopBack (Node.js) API with MySQL and MongoDB. LoopBack's model-driven scaffolding fit the fast-moving rule set — each program is a data model, and earning calculations run server-side so the browser can never misreport a balance.
+
+- **Lead lifecycle tracking:** a prospect moves through stages (referred → registered → activated), with search by name or UCC (a unique client code) so partners can find any customer instantly.
+- **Earning reports:** server-computed aggregations of customer trade activity mapped back to the active program, rendered as dashboard cards and exportable views.
+- **Role separation:** partner-facing views expose only the partner's own funnel, while the operating team administers programs, rules, and payouts.
+
+### 3. Design Decisions
+- **Search by UCC and name:** UCC is the canonical identifier in Indian brokerage systems; indexing it made lookup instant even with large partner books.
+- **Server authoritative math:** commissions derive from trade data server-side, which keeps the UI a faithful mirror instead of a source of truth.
+- **Program-driven UI:** switching a program's rule configuration updates the dashboard contract rather than requiring code changes per program.
+
+### 4. Outcome
+The dashboard replaced spreadsheet-based tracking for partners with a live view of their funnel and earnings. For Upstox, it produced structured lead data, clearer payout reconciliation, and a cleaner path to grow partner acquisition.
 
 </div>
 </div>

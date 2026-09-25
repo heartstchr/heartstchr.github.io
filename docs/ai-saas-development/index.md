@@ -17,9 +17,7 @@ head:
   - - meta
     - property: og:description
       content: "Build AI-powered SaaS products with LLM integration, intelligent automation, and production-grade architecture."
-  - - script
-    - type: application/ld+json
-      content: '{"@context":"https://schema.org","@type":"Service","name":"AI SaaS Development","description":"Build AI-powered SaaS products with LLM integration, intelligent automation, and production-grade architecture.","provider":{"@type":"Person","name":"Jiwan Ghosal","jobTitle":"AI SaaS Developer"},"areaServed":"Global","serviceType":"AI SaaS Development"}'
+  
 ---
 
 <section class="hero-newage relative overflow-hidden px-4 py-8 md:px-8 md:py-12 lg:px-12 surface-0 mb-8">
@@ -91,7 +89,7 @@ head:
     <div class="col-12 lg:col-6 text-center">
       <div class="surface-0 p-6 border-round-3xl shadow-4">
         <div class="text-center mb-4">
-          <div class="text-6xl font-bold text-primary mb-2">98%</div>
+          <div class="text-5xl font-bold text-primary mb-2">Days → Hours</div>
           <div class="text-xl font-bold text-900">Faster Lead Processing</div>
         </div>
         <div class="grid text-left">

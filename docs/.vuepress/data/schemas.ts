@@ -55,6 +55,19 @@ const breadcrumbSchema = (items: Array<{ name: string; path: string }>) => ({
   })),
 });
 
+const faqPageSchema = (qas: Array<[string, string]>) => ({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: qas.map(([name, text]) => ({
+    "@type": "Question",
+    name,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text,
+    },
+  })),
+});
+
 export const globalSchemas = [
   {
     "@context": "https://schema.org",
@@ -447,23 +460,79 @@ const categorySchemas = Object.fromEntries(
   })
 );
 
-// Standalone service landing pages (not under /web-development-services/) already
-// carry a Service JSON-LD in their frontmatter head. Add the missing breadcrumb
-// so they qualify for breadcrumb rich results site-wide.
-const standaloneServiceBreadcrumbs = Object.fromEntries(
+// Standalone service landing pages (not under /web-development-services/) — add
+// the Service JSON-LD (previously placed in frontmatter head, where VuePress
+// strips script+ld+json entries) plus a breadcrumb so they qualify for both
+// service and breadcrumb rich results site-wide.
+const standaloneServiceSchemas = Object.fromEntries(
   [
-    { path: "/hire-nuxt-developer/", name: "Hire Nuxt.js Developers" },
-    { path: "/hire-nextjs-developer/", name: "Hire Next.js Developer" },
-    { path: "/figma-to-vue-development/", name: "Figma to Vue.js Development" },
-    { path: "/ai-saas-development/", name: "AI SaaS Development" },
-    { path: "/web-development-for-startups/", name: "Web Development for Startups" },
+    {
+      path: "/hire-nuxt-developer/",
+      name: "Hire Nuxt.js Developers",
+      description:
+        "Senior Nuxt.js developers for SSR, SSG, and SEO-optimized Vue.js applications.",
+      serviceType: "Nuxt.js Development",
+      jobTitle: "Senior Nuxt.js Developer",
+    },
+    {
+      path: "/hire-nextjs-developer/",
+      name: "Hire Next.js Developer",
+      description: "Senior Next.js developer for SSR, SSG, ISR, and SEO-optimized React applications.",
+      serviceType: "Next.js Development",
+      jobTitle: "Senior Next.js Developer",
+    },
+    {
+      path: "/figma-to-vue-development/",
+      name: "Figma to Vue.js Development",
+      description:
+        "Transform Figma designs into production-ready Vue.js applications with pixel-perfect implementation.",
+      serviceType: "Frontend Development",
+      jobTitle: "Senior Frontend Engineer",
+    },
+    {
+      path: "/ai-saas-development/",
+      name: "AI SaaS Development",
+      description:
+        "Build AI-powered SaaS products with LLM integration, intelligent automation, and production-grade architecture.",
+      serviceType: "AI SaaS Development",
+      jobTitle: "AI SaaS Developer",
+    },
+    {
+      path: "/web-development-for-startups/",
+      name: "Web Development for Startups",
+      description:
+        "Production-ready startup MVPs built by a senior full-stack developer with fixed scope and timeline.",
+      serviceType: "MVP Development",
+      jobTitle: "Fractional CTO & Senior Full-Stack Developer",
+    },
     {
       path: "/website-development-for-small-business/",
       name: "Website Development for Small Business",
+      description:
+        "Professional website development for small businesses with custom design and SEO optimization.",
+      serviceType: "Small Business Web Development",
+      jobTitle: "Senior Web Developer",
     },
-  ].map(({ path, name }) => [
+  ].map(({ path, name, description, serviceType, jobTitle }) => [
     path,
     [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": `${absoluteUrl(path)}#service`,
+        name,
+        url: absoluteUrl(path),
+        description,
+        serviceType,
+        areaServed: "Global",
+        provider: {
+          "@type": "Person",
+          "@id": `${DOMAIN}/#person`,
+          name: "Jiwan Ghosal",
+          jobTitle,
+        },
+        isSimilarTo: { "@id": `${DOMAIN}/#organization` },
+      },
       breadcrumbSchema([
         { name: "Home", path: "/" },
         { name: "Services", path: "/web-development-services/" },
@@ -478,7 +547,72 @@ const auditPageSchemas = [
     { name: "Home", path: "/" },
     { name: "Startup Tech Stack Audit", path: "/startup-stack-audit-checklist/" },
   ]),
+  faqPageSchema([
+    [
+      "What is a tech stack audit?",
+      "A tech stack audit (also called a startup technical audit) is a structured review of your infrastructure — deployment, resilience, scaling, engineering velocity, data, and security — that identifies technical debt and bottlenecks before they block growth.",
+    ],
+    [
+      "How long does a full audit take?",
+      "A self-audit with this checklist takes about 5 minutes. A professional architecture review by Stack Seekers typically takes 48-72 hours and includes a prioritized roadmap.",
+    ],
+    [
+      "Can non-technical founders use this checklist?",
+      "Yes. Every question is written in business language with one-line insights, so founders and operators can complete the assessment without code-level knowledge.",
+    ],
+    [
+      "What is the outcome of the audit?",
+      "You receive a prioritized roadmap of technical fixes categorized by business risk and ROI impact — red flags you can act on, plus a baseline for future audits.",
+    ],
+    [
+      "What areas does the startup technical audit cover?",
+      "Six areas: deployment stability, platform resilience, growth and scaling, engineering velocity, data and AI strategy, and security and compliance.",
+    ],
+    [
+      "Do you offer tech stack audit services for startups and companies?",
+      "Yes. Stack Seekers runs professional technical audits for startups and scale-ups. A senior engineer reviews your deployment, resilience, security, and scaling and delivers a prioritized roadmap. Run this free checklist first to self-assess, then book a call to scope a professional audit.",
+    ],
+    [
+      "How much does a professional tech stack audit cost?",
+      "A professional audit is a fixed-scope engagement, so pricing depends on the size and complexity of your stack. The self-audit on this page is free and gives you an instant baseline; book a short call to get a project-specific quote.",
+    ],
+  ]),
 ];
+
+const transferFaqSchema = faqPageSchema([
+  [
+    "How do I transfer or move a GitHub repository to an organization?",
+    "Open the repository, go to Settings, scroll to the Danger Zone, and choose Transfer ownership. Select the destination organization, confirm the repository name, authenticate with your password or 2FA code, then click I understand, transfer this repository. Transferring and moving are the same GitHub feature — \"move a repo to an organization\" is simply the common way people phrase it.",
+  ],
+  [
+    "Can I move a private GitHub repository to an organization?",
+    "Yes. Both public and private repositories can be transferred to an organization. Internal repositories can only be transferred to an organization inside the same enterprise as the current owner.",
+  ],
+  [
+    "Can I copy a repository to an organization instead of moving it?",
+    "GitHub has no one-click \"copy to organization\" button. You either transfer ownership — which moves the repository and redirects the old URL — or fork the repository into the organization, which leaves the original untouched and creates a separate copy. Choose a fork when you want to keep the source repo, and a transfer when the organization should own the canonical repository.",
+  ],
+  [
+    "What happens to the original repository URL after a transfer?",
+    "GitHub automatically creates a redirect from the old URL to the new organization URL, so existing links, clones, and embedded references keep working.",
+  ],
+  [
+    "What is preserved when I transfer a repository to an organization?",
+    "The full commit history, branches, tags, issues, pull requests, stars, watchers, wiki, and releases are all preserved. The transfer does not rewrite history.",
+  ],
+  [
+    "What happens to access and automation when I transfer a repository?",
+    "External collaborators are removed when the transfer completes, so re-add anyone outside the organization. Webhooks, GitHub Actions secrets, branch protection rules, and deployment keys do not carry over to the new repository — reconfigure them under the organization. Stars, watchers, forks, issues, and releases move with the repository.",
+  ],
+  [
+    "How long does a GitHub repository transfer take?",
+    "Most transfers complete in a few minutes. Large repositories or repositories with heavy CI/automation can take slightly longer, but the process is generally quick and non-destructive.",
+  ],
+  [
+    "Can I transfer or move a repository back from an organization to my personal account?",
+    "Yes, if you have admin access to the repository you can transfer it back to your personal account or to another user, subject to the same ownership and access rules.",
+  ],
+]);
 
 export const pageSpecificSchemas: Record<string, any[]> = {
   "/": homepageSchemas,
@@ -491,5 +625,9 @@ export const pageSpecificSchemas: Record<string, any[]> = {
   ...projectSchemas,
   ...postSchemas,
   ...categorySchemas,
-  ...standaloneServiceBreadcrumbs,
+  ...standaloneServiceSchemas,
+  "/posts/transfer-github-repository/": [
+    ...postSchemas["/posts/transfer-github-repository/"],
+    transferFaqSchema,
+  ],
 };

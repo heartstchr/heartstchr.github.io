@@ -7,6 +7,9 @@ lastUpdated: false
 copyright: false
 head:
   - - meta
+    - name: robots
+      content: noindex, follow
+  - - meta
     - http-equiv: refresh
       content: 0;url=/web-development-projects/local-home-services-pros/
   - - link

@@ -18,15 +18,4 @@ export const getPlaylistItems = async (
     },
   });
   return response.data.items;
-};
-
-export const getChannelDetails = async (apiKey: string, channelId: string) => {
-  const response = await apiClient.get("/channels", {
-    params: {
-      key: apiKey,
-      id: channelId,
-      part: "contentDetails",
-    },
-  });
-  return response.data;
 }; 

@@ -1,6 +1,6 @@
 ---
 title: "Create a Notion account and get a hang of ."
-description: "Create a Notion account and get the hang of it. Watch Free custom web form notion template: https://youtu.be/wOrA6n0GLow Discord: https://discord.gg/nVhJSymeXp Contact: h"
+description: "Create a Notion account and get the hang of it."
 date: 2025-09-07
 lastUpdated: false
 editLink: false
@@ -11,7 +11,7 @@ layout: Layout
 video:
   id: "hZzXYrBg1d0"
   title: "Create a Notion account and get a hang of ."
-  description: "Create a Notion account and get the hang of it. Watch Free custom web form notion template: https://youtu.be/wOrA6n0GLow Discord: https://discord.gg/nVhJSymeXp Contact: https://stackseekers.com/contact LinkedIn: https://www.linkedin.com/in/jiwanghosal/ Instagram: https://www.instagram.com/jiwan_ghosal/ GitHub: https://github.com/stackseekers WhatsApp: https://whatsapp.com/channel/0029Vb0DIRq8V0tlhqjkJg3Z"
+  description: "Create a Notion account and get the hang of it."
   thumbnail: "https://i.ytimg.com/vi/hZzXYrBg1d0/mqdefault.jpg"
   publishedAt: "2025-09-07T11:41:53Z"
   embedUrl: "https://www.youtube.com/embed/hZzXYrBg1d0"
@@ -20,10 +20,6 @@ video:
   previousVideo: {"id":"xf4mUWdzNw4","title":"How to create a GitHub account and add files to a repo? How to fork a","thumbnail":"https://i.ytimg.com/vi/xf4mUWdzNw4/mqdefault.jpg","page":"/stackseekers-tv/videos/how-to-create-a-github-account-and-add-files-to-a-repo-how-to-fork-a-repository/"}
   nextVideo: {"id":"B1kupUXVtWU","title":"How to deploy app from the GitHub repo and Create a Netlify account","thumbnail":"https://i.ytimg.com/vi/B1kupUXVtWU/mqdefault.jpg","page":"/stackseekers-tv/videos/how-to-deploy-app-from-the-github-repo-and-create-a-netlify-account/"}
   relatedVideos: [{"id":"g47y6q_WkkM","title":"FREE AI voice generator Gemini text to voice for Google Docs add-on.","thumbnail":"https://i.ytimg.com/vi/g47y6q_WkkM/mqdefault.jpg","page":"/stackseekers-tv/videos/free-ai-voice-generator-gemini-text-to-voice-for-google-docs-add-on/"},{"id":"GgWw2ybOEx8","title":"Ultimate FREE eCommerce Website a furniture website app using Notion.","thumbnail":"https://i.ytimg.com/vi/GgWw2ybOEx8/mqdefault.jpg","page":"/stackseekers-tv/videos/ultimate-free-ecommerce-website-a-furniture-website-app-using-notion-no-wordpress/"},{"id":"55QSJ9nAheI","title":"Ultimate FREE eCommerce Website Tutorial 2026 using Notion!! No wordpr","thumbnail":"https://i.ytimg.com/vi/55QSJ9nAheI/mqdefault.jpg","page":"/stackseekers-tv/videos/ultimate-free-ecommerce-website-tutorial-2026-using-notion-no-wordpress-no-coding/"},{"id":"2CW88Ji3zn4","title":"Real Estate CRM Using Notion","thumbnail":"https://i.ytimg.com/vi/2CW88Ji3zn4/mqdefault.jpg","page":"/stackseekers-tv/videos/real-estate-crm-using-notion/"}]
-head:
-  - - script
-    - type: application/ld+json
-      content: '{"@context":"https://schema.org","@type":"VideoObject","@id":"https://stackseekers.com/stackseekers-tv/videos/create-a-notion-account-and-get-a-hang-of/","name":"Create a Notion account and get a hang of .","description":"Create a Notion account and get the hang of it. Watch Free custom web form notion template: https://youtu.be/wOrA6n0GLow Discord: https://discord.gg/nVhJSymeXp Contact: https://stackseekers.com/contact LinkedIn: https://www.linkedin.com/in/jiwanghosal/ Instagram: https://www.instagram.com/jiwan_ghos","thumbnailUrl":["https://i.ytimg.com/vi/hZzXYrBg1d0/mqdefault.jpg"],"uploadDate":"2025-09-07T11:41:53Z","contentUrl":"https://www.youtube.com/watch?v=hZzXYrBg1d0","embedUrl":"https://www.youtube.com/embed/hZzXYrBg1d0","publisher":{"@type":"Organization","@id":"https://stackseekers.com/#organization","name":"Stack Seekers"},"author":{"@type":"Person","@id":"https://stackseekers.com/#person","name":"Jiwan Ghosal"}}'
 ---
 
 <div class="mb-4">

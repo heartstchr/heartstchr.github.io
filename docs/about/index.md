@@ -169,8 +169,8 @@ contributors: false
   const stats = [
     { value: '10+',  label: 'Years Delivered',       sub: 'Enterprise-grade systems since 2014' },
     { value: '25+',  label: 'Products Shipped',       sub: 'Across 5 verticals globally' },
-    { value: '10M+', label: 'Users Impacted',         sub: 'ABN AMRO Emerald Design System' },
-    { value: '98%',  label: 'Faster Lead Processing', sub: 'Upstox — 4 days → 2 hours' },
+    { value: 'Millions', label: 'Users Impacted',      sub: 'ABN AMRO Emerald Design System' },
+    { value: 'Days → Hours', label: 'Lead Processing', sub: 'Upstox lead-turnaround automation' },
   ];
 
   const model = [
