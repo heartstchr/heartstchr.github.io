@@ -116,8 +116,3 @@ export const fetchChannelVideos = async (maxResults = 4): Promise<Video[]> => {
   const { channelVideos } = await fetchAndSplitVideos();
   return channelVideos.slice(0, maxResults);
 };
-
-export const fetchPodcastVideos = async (maxResults = 10): Promise<Video[]> => {
-  const { podcastVideos } = await fetchAndSplitVideos();
-  return podcastVideos.slice(0, maxResults);
-};

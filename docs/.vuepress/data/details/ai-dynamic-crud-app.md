@@ -59,3 +59,5 @@ By leveraging LLM semantic understanding, the system supports multi-lingual inte
 - **Zero-Maintenance Infrastructure:** By using Notion as the database and Netlify for the frontend, the system is virtually "serverless" and requires zero backend maintenance.
 
 This project serves as a technical proof-of-concept for **Automated Internal Tooling**, demonstrating how AI can effectively manage the entire lifecycle of a standard business application.
+
+> Looking for the no-code version? Try the [Free CRUD App: Notion to Web App](/web-development-projects/dynamic-crud-app-free/) — same Notion-to-app workflow, no AI required.

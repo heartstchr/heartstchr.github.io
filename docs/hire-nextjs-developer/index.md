@@ -17,9 +17,7 @@ head:
   - - meta
     - property: og:description
       content: "Hire an experienced Next.js developer for server-side rendering, App Router architecture, and SEO-optimized React applications."
-  - - script
-    - type: application/ld+json
-      content: '{"@context":"https://schema.org","@type":"Service","name":"Hire Next.js Developer","description":"Senior Next.js developer for SSR, SSG, ISR, and SEO-optimized React applications.","provider":{"@type":"Person","name":"Jiwan Ghosal","jobTitle":"Senior Next.js Developer"},"areaServed":"Global","serviceType":"Next.js Development"}'
+  
 ---
 
 <section class="hero-newage relative overflow-hidden px-4 py-8 md:px-8 md:py-12 lg:px-12 surface-0 mb-8">

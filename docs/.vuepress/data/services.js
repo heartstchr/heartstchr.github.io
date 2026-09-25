@@ -2,11 +2,11 @@ export const services = [
   {
     name: "Product Architecture & Scale",
     seoTitle: "Scalable SaaS Architecture Design & Audit",
-    seoDescription: "Hire a senior product architecture consultant who has designed banking-grade systems for 10M+ users. Get a risk map, scalable design, and an execution roadmap.",
+    seoDescription: "Hire a senior product architecture consultant who has designed banking-grade systems for millions of users. Get a risk map, scalable design, and an execution roadmap.",
     icon: "blueprint",
     code: "product-architecture-and-scaling",
     outcome: "Banking-Grade Stability",
-    metric: "10M+ Users",
+    metric: "Millions of Users",
     keywords: ["product architecture consultant", "scalable SaaS architecture", "technical architecture advisor"],
     idealFor: [
       "SaaS founders preparing for launch or scale",
@@ -24,6 +24,11 @@ export const services = [
       "Execution roadmap for the next 3 to 6 months",
     ],
     proof: "Used on enterprise-grade systems including ABN AMRO migrations and high-growth product environments.",
+    caseStudies: [
+      { slug: "emerald-design-system", category: "Design Systems", title: "Emerald Design System", blurb: "Tokens-first component library standardizing a global bank's frontend." },
+      { slug: "ibrebuild-for-abn-amro-bank-n-v", category: "Enterprise", title: "ABN AMRO Rebuild", blurb: "AngularJS to Vue.js migration of a banking internet app." },
+      { slug: "local-home-services-pros", category: "Scalable Web", title: "LocalXR Platform", blurb: "Programmatic platform serving thousands of dynamic routes." },
+    ],
     faq: [
       {
         question: "Do you work with existing products or only new builds?",
@@ -41,12 +46,12 @@ export const services = [
   },
   {
     name: "ROI-Driven AI Automation",
-    seoTitle: "AI Automation That Cuts Lead Time 98%",
-    seoDescription: "We build production AI automation, not chatbots. LLM architecture, guardrails, and tool integrations that cut lead turnaround from 4 days to 2 hours.",
+    seoTitle: "AI Automation That Cuts Lead Turnaround From Days to Hours",
+    seoDescription: "We build production AI automation, not chatbots. LLM architecture, guardrails, and tool integrations that cut lead turnaround from days to hours.",
     icon: "openai",
     code: "ai-and-automation-strategy",
     outcome: "Operational Efficiency",
-    metric: "98% Faster Leads",
+    metric: "Days → Hours Lead Turnaround",
     keywords: ["AI automation consultant", "LLM integration developer", "AI workflow automation"],
     idealFor: [
       "Founders turning manual workflows into productized automation",
@@ -63,7 +68,12 @@ export const services = [
       "LLM architecture with context, guardrails, and tool integrations",
       "Production-ready automation flows inside your existing stack",
     ],
-    proof: "Built AI-powered matching, content generation, and automation systems that reduced lead turnaround from 4 days to 2 hours.",
+    proof: "Built AI-powered matching, content generation, and automation systems that reduced lead turnaround from days to hours.",
+    caseStudies: [
+      { slug: "ai-dynamic-crud-app", category: "AI Automation", title: "AI Dynamic CRUD", blurb: "Gemini-driven Notion-to-app generator with schema review." },
+      { slug: "ai-voice-generator", category: "AI Content", title: "AI Voice Generator", blurb: "Gemini TTS pipeline turning scripts into natural voiceovers." },
+      { slug: "ai-powered-influencer-platform-vibe3", category: "AI Platform", title: "Vibe3", blurb: "AI-powered influencer platform with smart matching." },
+    ],
     faq: [
       {
         question: "Do you only build chatbots?",
@@ -104,6 +114,11 @@ export const services = [
       "Mentorship for developers and sharper technical decision-making",
     ],
     proof: "Trusted by enterprise and high-growth teams as an architect who can connect roadmap, execution, and long-term platform health.",
+    caseStudies: [
+      { slug: "ibrebuild-for-abn-amro-bank-n-v", category: "Enterprise", title: "ABN AMRO Rebuild", blurb: "Award-winning architecture for a global bank's internet app." },
+      { slug: "emerald-design-system", category: "Governance", title: "Emerald Design System", blurb: "Design-system governance for engineering teams at scale." },
+      { slug: "momentum-incident-management", category: "Product", title: "Momentum", blurb: "Incident management product with a role-based portal." },
+    ],
     faq: [
       {
         question: "Is this advisory only, or will you get hands-on too?",
@@ -144,6 +159,11 @@ export const services = [
       "Lead capture flows tied directly to commercial search intent",
     ],
     proof: "Built directory and lead-generation platforms with dynamic routing, strong crawlability, and conversion-focused page structures.",
+    caseStudies: [
+      { slug: "local-home-services-pros", category: "Programmatic SEO", title: "LocalXR", blurb: "Thousands of dynamic location-service routes." },
+      { slug: "sr-22-insurance-now", category: "Lead Generation", title: "SR-22 Insurance Now", blurb: "JSON-driven landing pages tied to insurance campaigns." },
+      { slug: "appliance-repair-service-platform", category: "Content Platform", title: "Appliance Repair", blurb: "Category and guide pages built to capture long-tail demand." },
+    ],
     faq: [
       {
         question: "Is programmatic SEO just AI content at scale?",
@@ -185,6 +205,11 @@ export const services = [
       "Cleaner data contracts, monitoring points, and service boundaries",
     ],
     proof: "Applied to high-concurrency systems and real-world product workflows where response time directly affects user outcomes.",
+    caseStudies: [
+      { slug: "call-matrix", category: "Backend", title: "Call Matrix", blurb: "Call tracking with Twilio, IVR reporting, and D3 dashboards." },
+      { slug: "momentum-incident-management", category: "API Design", title: "Momentum", blurb: "Expressive REST API powering an incident platform." },
+      { slug: "frontend-of-tv-maze-api", category: "Integration", title: "TV Maze API", blurb: "Clean frontend built against a live public API." },
+    ],
     faq: [
       {
         question: "Can you optimize an existing API without rebuilding everything?",
@@ -226,6 +251,11 @@ export const services = [
       "Launch setup: deployment pipeline, monitoring, and a foundation that scales past 10k users",
     ],
     proof: "Shipped production MVPs on the modern enterprise stack that launch fast and scale cleanly instead of forcing a rewrite.",
+    caseStudies: [
+      { slug: "marketplace-booking-platform", category: "SaaS", title: "Marketplace Booking", blurb: "Multi-vendor booking platform built as a production MVP." },
+      { slug: "recipes", category: "Community", title: "Recipes", blurb: "Content-driven platform with search and sharing." },
+      { slug: "catch-that-bus", category: "Marketplace", title: "Catch That Bus", blurb: "Bus ticketing built for Malaysia and Singapore." },
+    ],
     faq: [
       {
         question: "Is this a prototype or a production-ready product?",
@@ -267,6 +297,11 @@ export const services = [
       "Zero-downtime execution with rollback safety at every step",
     ],
     proof: "Applied to enterprise and banking-grade systems, including ABN AMRO migration work where downtime was not an option.",
+    caseStudies: [
+      { slug: "ibrebuild-for-abn-amro-bank-n-v", category: "Modernization", title: "ABN AMRO Rebuild", blurb: "Phased AngularJS-to-Vue migration of internet banking." },
+      { slug: "emerald-design-system", category: "Platform Reset", title: "Emerald Design System", blurb: "Replacing fragmented frontends with one component system." },
+      { slug: "partner-dashboard-upstox", category: "Migration", title: "Upstox Partner Dashboard", blurb: "Rebuilt sub-broker tools on a modern Angular stack." },
+    ],
     faq: [
       {
         question: "Do you replace the whole system at once?",
@@ -308,6 +343,11 @@ export const services = [
       "Forms, approval flows, and dashboards with audit trails and role-based access",
     ],
     proof: "Built Notion-to-web systems and service request portals that replaced manual workflows with real-time, auditable applications.",
+    caseStudies: [
+      { slug: "dynamic-crud-app-free", category: "Notion", title: "Dynamic CRUD App Free", blurb: "Notion database to a full web application, no code." },
+      { slug: "service-request-system", category: "Operations", title: "Service Request System", blurb: "Portal with automated notifications and file uploads." },
+      { slug: "contact-form-plugin", category: "Automation", title: "Contact Form Plugin", blurb: "Embeddable forms that forward submissions to Notion." },
+    ],
     faq: [
       {
         question: "Do I need to rebuild how my team works?",

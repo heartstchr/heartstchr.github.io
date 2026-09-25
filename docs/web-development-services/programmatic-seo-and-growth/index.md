@@ -21,6 +21,7 @@ service:
   problems: ["Manual content workflows that cannot scale to thousands of landing pages","Slow sites that waste long-tail demand and fail to index well","SEO content disconnected from conversion and lead capture"]
   deliverables: ["Search architecture for scalable location and category pages","Fast page-generation system with templates, data, and internal linking","Lead capture flows tied directly to commercial search intent"]
   proof: "Built directory and lead-generation platforms with dynamic routing, strong crawlability, and conversion-focused page structures."
+  caseStudies: [{"slug":"local-home-services-pros","category":"Programmatic SEO","title":"LocalXR","blurb":"Thousands of dynamic location-service routes."},{"slug":"sr-22-insurance-now","category":"Lead Generation","title":"SR-22 Insurance Now","blurb":"JSON-driven landing pages tied to insurance campaigns."},{"slug":"appliance-repair-service-platform","category":"Content Platform","title":"Appliance Repair","blurb":"Category and guide pages built to capture long-tail demand."}]
   faq: [{"question":"Is programmatic SEO just AI content at scale?","answer":"No. The core is structured data, useful page templates, clean internal linking, performance, and commercial intent. AI can help, but it is not the strategy by itself."},{"question":"Can you build both the SEO system and the lead funnel?","answer":"Yes. The strongest results come when information architecture, page generation, forms, and routing are designed together."}]
   previousService: {"name":"Fractional CTO Strategy","link":"/web-development-services/fractional-cto-and-advisory/"}
   nextService: {"name":"High-Performance API Design","link":"/web-development-services/api-performance-and-integration/"}
@@ -119,6 +120,7 @@ service:
     <div class="grid">
       <div class="col-12 lg:col-8">
         <h2 class="text-3xl font-bold mt-0 mb-3">How We Work</h2>
+        <p class="text-lg text-700 line-height-3 mb-4">Not sure where your stack stands? Run the free <a href="/startup-stack-audit-checklist/" class="text-primary font-bold">Startup Tech Stack Audit</a> first — a 5-minute self-assessment that surfaces the exact bottlenecks this engagement would fix.</p>
         <div class="grid">
           <div class="col-12 md:col-4">
             <div class="surface-card border-round-2xl p-4 shadow-1 h-full">
@@ -166,32 +168,18 @@ service:
 </article>
 
 <!-- Related Case Studies -->
-<section class="mb-6">
+<section class="mb-6" v-if="$frontmatter.service.caseStudies?.length">
   <div class="surface-card text-900 p-4 border-round-3xl relative overflow-hidden">
     <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
     <div class="relative z-1">
       <h3 class="text-3xl font-bold mb-4">Relevant Case Studies</h3>
       <p class="text-xl text-600 mb-6 max-w-30rem">See how I've applied these principles to real-world business challenges.</p>
       <div class="grid">
-        <div class="col-12 md:col-4">
-          <a href="/web-development-projects/ai-dynamic-crud-app/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
-            <div class="text-primary font-bold text-xs mb-2 uppercase">AI Automation</div>
-            <div class="font-bold text-900 mb-2">AI Dynamic CRUD</div>
-            <div class="text-600 text-sm">Enterprise Notion-to-App engine.</div>
-          </a>
-        </div>
-        <div class="col-12 md:col-4">
-          <a href="/web-development-projects/local-home-services-pros/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
-            <div class="text-primary font-bold text-xs mb-2 uppercase">Scalable Web</div>
-            <div class="font-bold text-900 mb-2">LocalXR Platform</div>
-            <div class="text-600 text-sm">10k+ dynamic service routes.</div>
-          </a>
-        </div>
-        <div class="col-12 md:col-4">
-          <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
-            <div class="text-primary font-bold text-xs mb-2 uppercase">Enterprise Migration</div>
-            <div class="font-bold text-900 mb-2">ABN AMRO Rebuild</div>
-            <div class="text-600 text-sm">Global banking infrastructure.</div>
+        <div class="col-12 md:col-4" v-for="caseStudy in $frontmatter.service.caseStudies" :key="caseStudy.slug">
+          <a :href="'/web-development-projects/' + caseStudy.slug + '/'" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
+            <div class="text-primary font-bold text-xs mb-2 uppercase">{{ caseStudy.category }}</div>
+            <div class="font-bold text-900 mb-2">{{ caseStudy.title }}</div>
+            <div class="text-600 text-sm">{{ caseStudy.blurb }}</div>
           </a>
         </div>
       </div>

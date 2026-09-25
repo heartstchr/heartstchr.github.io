@@ -1,6 +1,6 @@
 ---
 title: "How to Make a Portfolio Website for Free in 2025 Using VuePress | Stac"
-description: "Discord for any problems/errors/bugs: https://discord.gg/nVhJSymeXp Explore All My Projects: https://stackseekers.com/web-development-projects/ PREREQUISITE Vscode: https"
+description: ""
 date: 2025-09-07
 lastUpdated: false
 editLink: false
@@ -11,7 +11,7 @@ layout: Layout
 video:
   id: "MoIbz_DdmLs"
   title: "How to Make a Portfolio Website for Free in 2025 Using VuePress | Stac"
-  description: "Discord for any problems/errors/bugs: https://discord.gg/nVhJSymeXp Explore All My Projects: https://stackseekers.com/web-development-projects/ PREREQUISITE Vscode: https://code.visualstudio.com/download Node: https://nodejs.org/en/download Pnpm: https://pnpm.io/installation VuePress is a markdown-centered static site generator. You can write your content in Markdown, and then VuePress will help you generate a static site to host it. And host it on GitHub pages for free. How to create a free portfolio website template for an organisation or freelancer using Vuepress. TIMESTAMPS 00:00 Intro & Demo 01:27 Prerequisites 01:44 Vuepress Project Setup 04:21 Initial Portfolio Website on browser 07:07 Scafolded files and folder 08:23 Minor changes to markdown 10:19 Conclusion & Wait for Part 2 REFERENCE LINK Part 2: https://youtu.be/4loRfGbiFBM Pnpm: https://pnpm.io/installation Markdown: https://www.markdownguide.org/getting-started/ Vuepress: https://v2.vuepress.vuejs.org/ Demo URL: https://stackseekers.github.io/ Source code: https://github.com/stackseekers/stackseekers.github.io STACK USED Vue.js Git Node.js Pnpm Vuepress Primevue LinkedIn: https://www.linkedin.com/in/jiwanghosal/ Instagram: https://www.instagram.com/jiwan_ghosal/ GitHub: https://github.com/stackseekers Discord: https://discord.gg/nVhJSymeXp Contact: https://stackseekers.com/"
+  description: ""
   thumbnail: "https://i.ytimg.com/vi/MoIbz_DdmLs/mqdefault.jpg"
   publishedAt: "2025-09-07T11:42:28Z"
   embedUrl: "https://www.youtube.com/embed/MoIbz_DdmLs"
@@ -20,10 +20,6 @@ video:
   previousVideo: {"id":"4loRfGbiFBM","title":"How to Build Portfolio Website for Free in 2025 and Deploy it with Git","thumbnail":"https://i.ytimg.com/vi/4loRfGbiFBM/mqdefault.jpg","page":"/stackseekers-tv/videos/how-to-build-portfolio-website-for-free-in-2025-and-deploy-it-with-github-stack-seekers/"}
   nextVideo: {"id":"xf4mUWdzNw4","title":"How to create a GitHub account and add files to a repo? How to fork a","thumbnail":"https://i.ytimg.com/vi/xf4mUWdzNw4/mqdefault.jpg","page":"/stackseekers-tv/videos/how-to-create-a-github-account-and-add-files-to-a-repo-how-to-fork-a-repository/"}
   relatedVideos: [{"id":"g47y6q_WkkM","title":"FREE AI voice generator Gemini text to voice for Google Docs add-on.","thumbnail":"https://i.ytimg.com/vi/g47y6q_WkkM/mqdefault.jpg","page":"/stackseekers-tv/videos/free-ai-voice-generator-gemini-text-to-voice-for-google-docs-add-on/"},{"id":"GgWw2ybOEx8","title":"Ultimate FREE eCommerce Website a furniture website app using Notion.","thumbnail":"https://i.ytimg.com/vi/GgWw2ybOEx8/mqdefault.jpg","page":"/stackseekers-tv/videos/ultimate-free-ecommerce-website-a-furniture-website-app-using-notion-no-wordpress/"},{"id":"55QSJ9nAheI","title":"Ultimate FREE eCommerce Website Tutorial 2026 using Notion!! No wordpr","thumbnail":"https://i.ytimg.com/vi/55QSJ9nAheI/mqdefault.jpg","page":"/stackseekers-tv/videos/ultimate-free-ecommerce-website-tutorial-2026-using-notion-no-wordpress-no-coding/"},{"id":"2CW88Ji3zn4","title":"Real Estate CRM Using Notion","thumbnail":"https://i.ytimg.com/vi/2CW88Ji3zn4/mqdefault.jpg","page":"/stackseekers-tv/videos/real-estate-crm-using-notion/"}]
-head:
-  - - script
-    - type: application/ld+json
-      content: '{"@context":"https://schema.org","@type":"VideoObject","@id":"https://stackseekers.com/stackseekers-tv/videos/how-to-make-a-portfolio-website-for-free-in-2025-using-vuepress-stack-seekers/","name":"How to Make a Portfolio Website for Free in 2025 Using VuePress | Stac","description":"Discord for any problems/errors/bugs: https://discord.gg/nVhJSymeXp Explore All My Projects: https://stackseekers.com/web-development-projects/ PREREQUISITE Vscode: https://code.visualstudio.com/download Node: https://nodejs.org/en/download Pnpm: https://pnpm.io/installation VuePress is a markdown-c","thumbnailUrl":["https://i.ytimg.com/vi/MoIbz_DdmLs/mqdefault.jpg"],"uploadDate":"2025-09-07T11:42:28Z","contentUrl":"https://www.youtube.com/watch?v=MoIbz_DdmLs","embedUrl":"https://www.youtube.com/embed/MoIbz_DdmLs","publisher":{"@type":"Organization","@id":"https://stackseekers.com/#organization","name":"Stack Seekers"},"author":{"@type":"Person","@id":"https://stackseekers.com/#person","name":"Jiwan Ghosal"}}'
 ---
 
 <div class="mb-4">

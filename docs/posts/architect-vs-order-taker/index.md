@@ -30,7 +30,7 @@ As a Senior Full-Stack Engineer, I look at your product through three lenses:
 3.  **Technical Debt:** How much will this cost to maintain or scale in two years?
 
 ### A Real-World Example
-I once had a client request a massive, custom-built dashboard for their internal team. By identifying that 90% of their needs could be met by bridging their existing Notion database with a small [Custom React Portal](/posts/scaling-ops-with-internal-portals/), I was able to cut their development timeline by 3 months and save them tens of thousands in unnecessary infrastructure.
+I once had a client request a massive, custom-built dashboard for their internal team. By identifying that the bulk of their needs could be met by bridging their existing Notion database with a small [Custom React Portal](/posts/scaling-ops-with-internal-portals/), I cut their build timeline by months and avoided a large, unnecessary infrastructure bill.
 
 ## Shifting Your Perspective
 

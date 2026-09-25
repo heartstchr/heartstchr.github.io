@@ -21,6 +21,7 @@ service:
   problems: ["Hours lost weekly to manual data entry, copy-paste, and status chasing","Business logic trapped in spreadsheets and email threads nobody can audit","Off-the-shelf tools that almost fit but force your team to adapt to them"]
   deliverables: ["Web-based internal portal built around your actual workflows","Automated sync from Notion, Sheets, or your existing data sources","Forms, approval flows, and dashboards with audit trails and role-based access"]
   proof: "Built Notion-to-web systems and service request portals that replaced manual workflows with real-time, auditable applications."
+  caseStudies: [{"slug":"dynamic-crud-app-free","category":"Notion","title":"Dynamic CRUD App Free","blurb":"Notion database to a full web application, no code."},{"slug":"service-request-system","category":"Operations","title":"Service Request System","blurb":"Portal with automated notifications and file uploads."},{"slug":"contact-form-plugin","category":"Automation","title":"Contact Form Plugin","blurb":"Embeddable forms that forward submissions to Notion."}]
   faq: [{"question":"Do I need to rebuild how my team works?","answer":"No. The portal is built around your current processes first, then improves them with automation — so adoption is natural instead of forced."},{"question":"Can you connect it to Notion or Google Sheets?","answer":"Yes. Most internal tooling starts by syncing existing Notion databases or spreadsheets into a real application layer with forms, search, and workflows."}]
   previousService: {"name":"Legacy Modernization","link":"/web-development-services/legacy-modernization/"}
   nextService: null
@@ -119,6 +120,7 @@ service:
     <div class="grid">
       <div class="col-12 lg:col-8">
         <h2 class="text-3xl font-bold mt-0 mb-3">How We Work</h2>
+        <p class="text-lg text-700 line-height-3 mb-4">Not sure where your stack stands? Run the free <a href="/startup-stack-audit-checklist/" class="text-primary font-bold">Startup Tech Stack Audit</a> first — a 5-minute self-assessment that surfaces the exact bottlenecks this engagement would fix.</p>
         <div class="grid">
           <div class="col-12 md:col-4">
             <div class="surface-card border-round-2xl p-4 shadow-1 h-full">
@@ -166,32 +168,18 @@ service:
 </article>
 
 <!-- Related Case Studies -->
-<section class="mb-6">
+<section class="mb-6" v-if="$frontmatter.service.caseStudies?.length">
   <div class="surface-card text-900 p-4 border-round-3xl relative overflow-hidden">
     <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
     <div class="relative z-1">
       <h3 class="text-3xl font-bold mb-4">Relevant Case Studies</h3>
       <p class="text-xl text-600 mb-6 max-w-30rem">See how I've applied these principles to real-world business challenges.</p>
       <div class="grid">
-        <div class="col-12 md:col-4">
-          <a href="/web-development-projects/ai-dynamic-crud-app/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
-            <div class="text-primary font-bold text-xs mb-2 uppercase">AI Automation</div>
-            <div class="font-bold text-900 mb-2">AI Dynamic CRUD</div>
-            <div class="text-600 text-sm">Enterprise Notion-to-App engine.</div>
-          </a>
-        </div>
-        <div class="col-12 md:col-4">
-          <a href="/web-development-projects/local-home-services-pros/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
-            <div class="text-primary font-bold text-xs mb-2 uppercase">Scalable Web</div>
-            <div class="font-bold text-900 mb-2">LocalXR Platform</div>
-            <div class="text-600 text-sm">10k+ dynamic service routes.</div>
-          </a>
-        </div>
-        <div class="col-12 md:col-4">
-          <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
-            <div class="text-primary font-bold text-xs mb-2 uppercase">Enterprise Migration</div>
-            <div class="font-bold text-900 mb-2">ABN AMRO Rebuild</div>
-            <div class="text-600 text-sm">Global banking infrastructure.</div>
+        <div class="col-12 md:col-4" v-for="caseStudy in $frontmatter.service.caseStudies" :key="caseStudy.slug">
+          <a :href="'/web-development-projects/' + caseStudy.slug + '/'" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
+            <div class="text-primary font-bold text-xs mb-2 uppercase">{{ caseStudy.category }}</div>
+            <div class="font-bold text-900 mb-2">{{ caseStudy.title }}</div>
+            <div class="text-600 text-sm">{{ caseStudy.blurb }}</div>
           </a>
         </div>
       </div>

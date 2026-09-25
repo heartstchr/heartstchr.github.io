@@ -1,6 +1,6 @@
 ---
 title: "How to add the Google reCAPTCHA key? I'm not a robot verification befo"
-description: "How to get the reCAPTCHA site key Link to recaptcha admin: https://www.google.com/recaptcha/admin/ Related Applied video: https://youtu.be/BgoRVTl2WCI Discord: https://di"
+description: "How to get the reCAPTCHA site key Link to recaptcha admin: Related Applied video:"
 date: 2025-10-26
 lastUpdated: false
 editLink: false
@@ -11,7 +11,7 @@ layout: Layout
 video:
   id: "AbutFD2BzF4"
   title: "How to add the Google reCAPTCHA key? I'm not a robot verification befo"
-  description: "How to get the reCAPTCHA site key Link to recaptcha admin: https://www.google.com/recaptcha/admin/ Related Applied video: https://youtu.be/BgoRVTl2WCI Discord: https://discord.gg/nVhJSymeXp Contact: https://stackseekers.com/contact LinkedIn: https://www.linkedin.com/in/jiwanghosal/ Instagram: https://www.instagram.com/jiwan_ghosal/ GitHub: https://github.com/stackseekers WhatsApp: https://whatsapp.com/channel/0029Vb0DIRq8V0tlhqjkJg3Z"
+  description: "How to get the reCAPTCHA site key Link to recaptcha admin: Related Applied video:"
   thumbnail: "https://i.ytimg.com/vi/AbutFD2BzF4/mqdefault.jpg"
   publishedAt: "2025-10-26T07:58:41Z"
   embedUrl: "https://www.youtube.com/embed/AbutFD2BzF4"
@@ -20,10 +20,6 @@ video:
   previousVideo: {"id":"jrkwxLkICRY","title":"Build CRUD App with Gemini AI using Notion template.","thumbnail":"https://i.ytimg.com/vi/jrkwxLkICRY/mqdefault.jpg","page":"/stackseekers-tv/videos/build-crud-app-with-gemini-ai-using-notion-template/"}
   nextVideo: {"id":"BgoRVTl2WCI","title":"Copy Paste Contact Form with reCAPTCHA for Website (No Code) get data","thumbnail":"https://i.ytimg.com/vi/BgoRVTl2WCI/mqdefault.jpg","page":"/stackseekers-tv/videos/copy-paste-contact-form-with-recaptcha-for-website-no-code-get-data-notion-db/"}
   relatedVideos: [{"id":"g47y6q_WkkM","title":"FREE AI voice generator Gemini text to voice for Google Docs add-on.","thumbnail":"https://i.ytimg.com/vi/g47y6q_WkkM/mqdefault.jpg","page":"/stackseekers-tv/videos/free-ai-voice-generator-gemini-text-to-voice-for-google-docs-add-on/"},{"id":"GgWw2ybOEx8","title":"Ultimate FREE eCommerce Website a furniture website app using Notion.","thumbnail":"https://i.ytimg.com/vi/GgWw2ybOEx8/mqdefault.jpg","page":"/stackseekers-tv/videos/ultimate-free-ecommerce-website-a-furniture-website-app-using-notion-no-wordpress/"},{"id":"55QSJ9nAheI","title":"Ultimate FREE eCommerce Website Tutorial 2026 using Notion!! No wordpr","thumbnail":"https://i.ytimg.com/vi/55QSJ9nAheI/mqdefault.jpg","page":"/stackseekers-tv/videos/ultimate-free-ecommerce-website-tutorial-2026-using-notion-no-wordpress-no-coding/"},{"id":"2CW88Ji3zn4","title":"Real Estate CRM Using Notion","thumbnail":"https://i.ytimg.com/vi/2CW88Ji3zn4/mqdefault.jpg","page":"/stackseekers-tv/videos/real-estate-crm-using-notion/"}]
-head:
-  - - script
-    - type: application/ld+json
-      content: '{"@context":"https://schema.org","@type":"VideoObject","@id":"https://stackseekers.com/stackseekers-tv/videos/how-to-add-the-google-recaptcha-key-i-m-not-a-robot-verification-before-submitting/","name":"How to add the Google reCAPTCHA key? I''m not a robot verification befo","description":"How to get the reCAPTCHA site key Link to recaptcha admin: https://www.google.com/recaptcha/admin/ Related Applied video: https://youtu.be/BgoRVTl2WCI Discord: https://discord.gg/nVhJSymeXp Contact: https://stackseekers.com/contact LinkedIn: https://www.linkedin.com/in/jiwanghosal/ Instagram: https:","thumbnailUrl":["https://i.ytimg.com/vi/AbutFD2BzF4/mqdefault.jpg"],"uploadDate":"2025-10-26T07:58:41Z","contentUrl":"https://www.youtube.com/watch?v=AbutFD2BzF4","embedUrl":"https://www.youtube.com/embed/AbutFD2BzF4","publisher":{"@type":"Organization","@id":"https://stackseekers.com/#organization","name":"Stack Seekers"},"author":{"@type":"Person","@id":"https://stackseekers.com/#person","name":"Jiwan Ghosal"}}'
 ---
 
 <div class="mb-4">

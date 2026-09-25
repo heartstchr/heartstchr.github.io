@@ -8,7 +8,7 @@ contributors: false
 
 # Privacy Policy
 
-**Last updated: January 2025**
+**Last updated: September 2026**
 
 ## Introduction
 
@@ -179,6 +179,21 @@ We use the following third-party services that may collect information:
 - Static site deployment platforms
 
 All third-party integrations are carefully selected for their security standards and privacy compliance.
+
+### Advertising (Google AdSense)
+
+Our website may display advertisements served by Google AdSense. Google and its approved third-party vendors use cookies — including the Google DoubleClick DART cookie — to serve ads based on your prior visits to this and other websites.
+
+- **Personalized advertising:** Google may use the information collected from your visits to serve ads tailored to your interests.
+- **Non-personalized advertising:** When personalization is not enabled, ads may still be served, but cookies are not used to tailor ads to your interests.
+
+**Your opt-out choices:**
+
+- Opt out of personalized advertising via [Google Ads Settings](https://adssettings.google.com/)
+- Opt out of interest-based advertising from participating third-party vendors via the [Network Advertising Initiative opt-out page](https://www.networkadvertising.org/) and [About Ads](https://www.aboutads.info/)
+- Disable or block cookies through your browser settings (see "Cookie Management" above)
+
+Third-party advertisers and ad networks have their own privacy policies, which may govern how they use the data collected to display interest-based advertisements.
 
 ## Data Retention
 

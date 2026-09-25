@@ -363,7 +363,6 @@ contributors: false
   import { projects } from "@data/projects.js";
   import { stackLogos, events, orgs, testimonials , whyme} from "@data/home.js";
   // Current page and autoplay interval
-  import {certificate} from "@data/home.js";
   const currentPage = ref(0);
   const autoplayInterval = 10000;
   let autoplayTimer = null;

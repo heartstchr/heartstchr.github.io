@@ -10,7 +10,7 @@ tags: ["Technical Debt", "Architecture", "MVP", "Startup Strategy", "Refactoring
 
 In the world of startups, "Move Fast and Break Things" is a popular mantra. But if you break your foundational code in the first three months, you might never recover. 
 
-I call this the **Spaghetti MVP.** It’s the result of hiring the cheapest possible developers to "just get it done." While you save $5,000 upfront, you are actually signing a contract for a $50,000 disaster down the road.
+I call this the **Spaghetti MVP.** It’s the result of hiring the cheapest possible developers to "just get it done." The upfront invoice is a fraction of what a senior team would charge — but the fix-it-later bill, paid out over months of debugging, hotfixes, and rewrites, typically dwarfs the original savings.
 
 ## The Hidden Cost of "Cheap"
 

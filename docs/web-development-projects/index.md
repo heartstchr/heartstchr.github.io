@@ -29,14 +29,14 @@ copyright: false
     <div class="grid gap-3">
       <div class="col-12 md:col-3">
         <div class="impact-card border-round-2xl p-4 text-center glass-effect">
-          <div class="text-4xl font-bold text-primary mb-1">98%</div>
+          <div class="text-4xl font-bold text-primary mb-1">Days → Hours</div>
           <div class="text-sm font-bold mb-1">Faster Lead Conversion</div>
-          <div class="text-xs text-400">Upstox — 4 days → 2 hours</div>
+          <div class="text-xs text-400">Upstox — automated lead processing</div>
         </div>
       </div>
       <div class="col-12 md:col-3">
         <div class="impact-card border-round-2xl p-4 text-center glass-effect">
-          <div class="text-4xl font-bold text-primary mb-1">10M+</div>
+          <div class="text-4xl font-bold text-primary mb-1">Millions</div>
           <div class="text-sm font-bold mb-1">Users Migrated</div>
           <div class="text-xs text-400">ABN AMRO — Emerald Design System</div>
         </div>

@@ -21,6 +21,7 @@ service:
   problems: ["Roadmaps moving without technical prioritization","Teams shipping features with no shared architecture direction","Founders struggling to assess vendors, timelines, or engineering risk"]
   deliverables: ["Technical roadmap aligned to business milestones","Architecture oversight, sprint guidance, and vendor review","Mentorship for developers and sharper technical decision-making"]
   proof: "Trusted by enterprise and high-growth teams as an architect who can connect roadmap, execution, and long-term platform health."
+  caseStudies: [{"slug":"ibrebuild-for-abn-amro-bank-n-v","category":"Enterprise","title":"ABN AMRO Rebuild","blurb":"Award-winning architecture for a global bank's internet app."},{"slug":"emerald-design-system","category":"Governance","title":"Emerald Design System","blurb":"Design-system governance for engineering teams at scale."},{"slug":"momentum-incident-management","category":"Product","title":"Momentum","blurb":"Incident management product with a role-based portal."}]
   faq: [{"question":"Is this advisory only, or will you get hands-on too?","answer":"It can be either. Many engagements start with advisory and expand into architecture reviews, delivery support, and selected implementation."},{"question":"What stage companies benefit most from fractional CTO support?","answer":"Usually pre-scale startups, post-MVP teams, and companies going through a platform transition or technical reset."}]
   previousService: {"name":"ROI-Driven AI Automation","link":"/web-development-services/ai-and-automation-strategy/"}
   nextService: {"name":"Programmatic Growth Engines","link":"/web-development-services/programmatic-seo-and-growth/"}
@@ -119,6 +120,7 @@ service:
     <div class="grid">
       <div class="col-12 lg:col-8">
         <h2 class="text-3xl font-bold mt-0 mb-3">How We Work</h2>
+        <p class="text-lg text-700 line-height-3 mb-4">Not sure where your stack stands? Run the free <a href="/startup-stack-audit-checklist/" class="text-primary font-bold">Startup Tech Stack Audit</a> first — a 5-minute self-assessment that surfaces the exact bottlenecks this engagement would fix.</p>
         <div class="grid">
           <div class="col-12 md:col-4">
             <div class="surface-card border-round-2xl p-4 shadow-1 h-full">
@@ -166,32 +168,18 @@ service:
 </article>
 
 <!-- Related Case Studies -->
-<section class="mb-6">
+<section class="mb-6" v-if="$frontmatter.service.caseStudies?.length">
   <div class="surface-card text-900 p-4 border-round-3xl relative overflow-hidden">
     <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
     <div class="relative z-1">
       <h3 class="text-3xl font-bold mb-4">Relevant Case Studies</h3>
       <p class="text-xl text-600 mb-6 max-w-30rem">See how I've applied these principles to real-world business challenges.</p>
       <div class="grid">
-        <div class="col-12 md:col-4">
-          <a href="/web-development-projects/ai-dynamic-crud-app/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
-            <div class="text-primary font-bold text-xs mb-2 uppercase">AI Automation</div>
-            <div class="font-bold text-900 mb-2">AI Dynamic CRUD</div>
-            <div class="text-600 text-sm">Enterprise Notion-to-App engine.</div>
-          </a>
-        </div>
-        <div class="col-12 md:col-4">
-          <a href="/web-development-projects/local-home-services-pros/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
-            <div class="text-primary font-bold text-xs mb-2 uppercase">Scalable Web</div>
-            <div class="font-bold text-900 mb-2">LocalXR Platform</div>
-            <div class="text-600 text-sm">10k+ dynamic service routes.</div>
-          </a>
-        </div>
-        <div class="col-12 md:col-4">
-          <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
-            <div class="text-primary font-bold text-xs mb-2 uppercase">Enterprise Migration</div>
-            <div class="font-bold text-900 mb-2">ABN AMRO Rebuild</div>
-            <div class="text-600 text-sm">Global banking infrastructure.</div>
+        <div class="col-12 md:col-4" v-for="caseStudy in $frontmatter.service.caseStudies" :key="caseStudy.slug">
+          <a :href="'/web-development-projects/' + caseStudy.slug + '/'" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
+            <div class="text-primary font-bold text-xs mb-2 uppercase">{{ caseStudy.category }}</div>
+            <div class="font-bold text-900 mb-2">{{ caseStudy.title }}</div>
+            <div class="text-600 text-sm">{{ caseStudy.blurb }}</div>
           </a>
         </div>
       </div>

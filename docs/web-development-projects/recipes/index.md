@@ -25,8 +25,8 @@ project:
   images: [{"itemImageSrc":"/img/home/projects/Recipe.webp","alt":"Recipes - Login page"},{"itemImageSrc":"/img/projects/recipe/login.webp","alt":"Recipes - Login page"},{"itemImageSrc":"/img/projects/recipe/register.webp","alt":"Recipes - Registration page"},{"itemImageSrc":"/img/projects/recipe/home.webp","alt":"Recipes - Home page"},{"itemImageSrc":"/img/projects/recipe/direction.webp","alt":"Recipes - Directions page"},{"itemImageSrc":"/img/projects/recipe/ingredients.webp","alt":"Recipes - Ingredients page"},{"itemImageSrc":"/img/projects/recipe/addrecipe.webp","alt":"Recipes - Add Recipe page"},{"itemImageSrc":"/img/projects/recipe/search.webp","alt":"Recipes - Search page"},{"itemImageSrc":"/img/projects/recipe/share.webp","alt":"Recipes - Share screen"}]
   video: ""
   features: [{"text":"Authentication with Incognigo pool"},{"text":"Create and Share recipes with friends"},{"text":"Search recipes"},{"text":"List and share your recipes direction or ingradients"},{"text":"Rate and review for recipe"}]
-  perspective: {"executive":"","technical":""}
-  details: ""
+  perspective: {"executive":"A community content platform where structured authoring drives discoverability. Typed recipe data enables ingredient search and consistent rendering that free-form posts simply cannot deliver.","technical":"Vue.js frontend over a structured recipe schema (ingredients, steps, metadata), enabling ingredient-based search, fast catalog views, and an add-recipe editor that validates common mistakes before publish."}
+  details: "## Engineering Architecture: A Community Recipe Platform\n\nRecipes is a community-driven cooking platform: members share recipes, tweak each other's versions, search by ingredient or cuisine, and follow the people whose cooking they trust.\n\n### 1. The Core Loop\nThe product is built around a simple content loop that keeps it self-sustaining:\n\n- **Publish:** members write recipes with structured fields — ingredients, steps, prep time, servings, photos.\n- **Discover:** search, category browsing, and \"more like this\" surfaces surface the right recipe for the evening's ingredients.\n- **Engage:** comments and shares keep the loop alive and give search engines genuinely useful, incrementally unique pages.\n\n### 2. Architecture\nA Vue.js frontend drives a structured content model. Recipes are typed data, not free-form blog posts, which is what allows them to be searched, filtered, and rendered consistently:\n\n- **Structured recipe schema:** ingredients and steps are stored as ordered lists with structured metadata, enabling ingredient search (\"recipes with chickpeas\") that free text can't reliably deliver.\n- **Fast list views:** catalog pages (by cuisine, by ingredient, latest) are server-rendered-friendly snapshots of the data model, keeping first paint fast on low-end devices.\n- **Editor UX:** an add-recipe flow validates common mistakes (missing quantities, empty steps) before publish, keeping the catalog quality high without heavy moderation.\n\n### 3. Design Decisions\n- **Search by ingredient, not title:** because contents are structured, the search index covers what's in recipes — the query most home cooks actually make.\n- **Photo-forward cards:** visually distinct dish images drive the feed, with consistent card layout so the catalog scans quickly.\n- **Ownership incentives:** every contributor gets credit on their profile, which gives the community a reason to keep publishing.\n\n### 4. Outcome\nThe platform proved the community-content playbook: structured authoring in, discoverability out. Good data modeling turned a recipe-sharing hobby site into a searchable, growing library."
   previousProject: {"name":"Qatar Airways widget","link":"/web-development-projects/qatar-airways-widget/"}
   nextProject: {"name":"Frontend of Tv Maze API","link":"/web-development-projects/frontend-of-tv-maze-api/"}
   relatedCaseStudy: null
@@ -246,7 +246,31 @@ project:
           </div>
           <div class="project-markdown-content text-lg line-height-4">
 
+## Engineering Architecture: A Community Recipe Platform
 
+Recipes is a community-driven cooking platform: members share recipes, tweak each other's versions, search by ingredient or cuisine, and follow the people whose cooking they trust.
+
+### 1. The Core Loop
+The product is built around a simple content loop that keeps it self-sustaining:
+
+- **Publish:** members write recipes with structured fields — ingredients, steps, prep time, servings, photos.
+- **Discover:** search, category browsing, and "more like this" surfaces surface the right recipe for the evening's ingredients.
+- **Engage:** comments and shares keep the loop alive and give search engines genuinely useful, incrementally unique pages.
+
+### 2. Architecture
+A Vue.js frontend drives a structured content model. Recipes are typed data, not free-form blog posts, which is what allows them to be searched, filtered, and rendered consistently:
+
+- **Structured recipe schema:** ingredients and steps are stored as ordered lists with structured metadata, enabling ingredient search ("recipes with chickpeas") that free text can't reliably deliver.
+- **Fast list views:** catalog pages (by cuisine, by ingredient, latest) are server-rendered-friendly snapshots of the data model, keeping first paint fast on low-end devices.
+- **Editor UX:** an add-recipe flow validates common mistakes (missing quantities, empty steps) before publish, keeping the catalog quality high without heavy moderation.
+
+### 3. Design Decisions
+- **Search by ingredient, not title:** because contents are structured, the search index covers what's in recipes — the query most home cooks actually make.
+- **Photo-forward cards:** visually distinct dish images drive the feed, with consistent card layout so the catalog scans quickly.
+- **Ownership incentives:** every contributor gets credit on their profile, which gives the community a reason to keep publishing.
+
+### 4. Outcome
+The platform proved the community-content playbook: structured authoring in, discoverability out. Good data modeling turned a recipe-sharing hobby site into a searchable, growing library.
 
 </div>
 </div>

@@ -1,6 +1,6 @@
 ---
-title: "Open a Demat Account Online | Upstox"
-description: "Open a Demat account online with Upstox in minutes — instant KYC, free equity delivery trading, and a smooth onboarding flow built with Angular."
+title: "Demat Account Opening App: Upstox Case Study"
+description: "Case study of the Upstox demat account opening app we built — document upload, instant KYC, and e-sign onboarding, engineered with Angular. A portfolio showcase, not the official login page."
 lastUpdated: false
 editLink: false
 contributors: false
@@ -9,7 +9,7 @@ copyright: false
 layout: Layout
 project:
   name: "Demat Account Open"
-  description: "Open a Demat Account Online at Upstox"
+  description: "The demat account opening funnel we built for Upstox: document upload, PAN/Aadhar/IPV/cheque verification, CRM lead handoff, and NSE/BSE/MCX registration with per-lead reporting."
   software: "Web"
   schema: "https://schema.org/BusinessApplication"
   domain: "FinTech"
@@ -18,15 +18,15 @@ project:
   price: 0
   currency: USD
   dodoPaymentUrl: 
-  link: "https://upstox.com/open-demat-account/"
+  link: ""
   codeLink: 
   contact: "mailto:support@stackseekers.com?subject=Demat Account Open Inquiry"
   stack: ["Angular/black/white","MongoDB","mysql","loopback","npm","Eslint","Prettier","github/black/white"]
   images: [{"itemImageSrc":"/img/projects/openDemat.webp","alt":"Open a Demat Account Online: Demat Account Opening at Upstox"}]
   video: ""
   features: [{"text":"Open a Demat account with document upload."},{"text":"PAN, Aadhar, IPV, and cancelled check verification"},{"text":"Lead to CRM system"},{"text":"Scrutiny of lead"},{"text":"Upload details to NSE, BSE, and MCX"},{"text":"Report based on the flow of lead"}]
-  perspective: {"executive":"","technical":""}
-  details: ""
+  perspective: {"executive":"Account opening is a brokerage's highest-stakes funnel. This build turned a paper-and-callback application into a digital state machine: document upload, instant verification, CRM handoff, and exchange registration with a per-lead audit trail.","technical":"Angular frontend over the shared LoopBack and Node.js service layer; application-as-state-machine (draft, submitted, scrutiny, registered, rejected), client-side document validation before upload, and deterministic NSE, BSE, and MCX registration with per-lead reporting."}
+  details: "## Engineering Architecture: Upstox Demat Account Opening Funnel\n\nOnline account opening is where a brokerage gains or loses every new customer. The Demat account flow we built for Upstox had to be fast enough to not lose attention, rigorous enough to satisfy KYC regulation, and automated enough to route every applicant into the right systems without manual data entry.\n\n### 1. The Funnel in One Screen's Worth of Decisions\nThe application guides a lead through the steps the regulator requires — identity, address proof, bank verification, and in-person verification (IPV) — while keeping friction low:\n\n- **Document upload:** PAN, Aadhaar, cancelled cheque, and address proof are captured inline and validated on the client before upload.\n- **Instant verification:** identity documents are cross-checked against available verifiers; IPV and e-sign are handled inside the flow where supported.\n- **CRM handoff:** each application is pushed to the CRM as a lead with full document metadata.\n- **Scrutiny:** the operations team reviews applications in a queue with the evidence attached, rejecting or passing with one action.\n- **Exchange registration:** passed leads are registered with NSE, BSE, and MCX, and the originating flow is reported back per lead.\n\n### 2. Architecture\nThe frontend is Angular, talking to a LoopBack (Node.js) API backed by MySQL and MongoDB — the same service layer used across Upstox's internal products. File uploads, verification status, and exchange submissions are modeled as first-class states, so a lead's progress is represented as a state machine rather than scattered fields:\n\n- Each application has an explicit state (draft → submitted → scrutiny → registered → rejected), and every state transition is auditable.\n- The lead-to-CRM integration fires when the application reaches \"submitted,\" keeping sales data in sync with operations data.\n- Reporting answers the question leadership asks most: how many leads are flowing, and at what step are they dropping.\n\n### 3. Outcome\nBy moving account opening from a paper-and-callback process to a digital state machine, the funnel removed the manual re-keying between document intake and exchange registration, cut the lead's submission time, and gave the team a per-lead audit trail from first upload to live account."
   previousProject: {"name":"Partner Dashboard Upstox","link":"/web-development-projects/partner-dashboard-upstox/"}
   nextProject: {"name":"Call Matrix","link":"/web-development-projects/call-matrix/"}
   relatedCaseStudy: null
@@ -246,7 +246,28 @@ project:
           </div>
           <div class="project-markdown-content text-lg line-height-4">
 
+## Engineering Architecture: Upstox Demat Account Opening Funnel
 
+Online account opening is where a brokerage gains or loses every new customer. The Demat account flow we built for Upstox had to be fast enough to not lose attention, rigorous enough to satisfy KYC regulation, and automated enough to route every applicant into the right systems without manual data entry.
+
+### 1. The Funnel in One Screen's Worth of Decisions
+The application guides a lead through the steps the regulator requires — identity, address proof, bank verification, and in-person verification (IPV) — while keeping friction low:
+
+- **Document upload:** PAN, Aadhaar, cancelled cheque, and address proof are captured inline and validated on the client before upload.
+- **Instant verification:** identity documents are cross-checked against available verifiers; IPV and e-sign are handled inside the flow where supported.
+- **CRM handoff:** each application is pushed to the CRM as a lead with full document metadata.
+- **Scrutiny:** the operations team reviews applications in a queue with the evidence attached, rejecting or passing with one action.
+- **Exchange registration:** passed leads are registered with NSE, BSE, and MCX, and the originating flow is reported back per lead.
+
+### 2. Architecture
+The frontend is Angular, talking to a LoopBack (Node.js) API backed by MySQL and MongoDB — the same service layer used across Upstox's internal products. File uploads, verification status, and exchange submissions are modeled as first-class states, so a lead's progress is represented as a state machine rather than scattered fields:
+
+- Each application has an explicit state (draft → submitted → scrutiny → registered → rejected), and every state transition is auditable.
+- The lead-to-CRM integration fires when the application reaches "submitted," keeping sales data in sync with operations data.
+- Reporting answers the question leadership asks most: how many leads are flowing, and at what step are they dropping.
+
+### 3. Outcome
+By moving account opening from a paper-and-callback process to a digital state machine, the funnel removed the manual re-keying between document intake and exchange registration, cut the lead's submission time, and gave the team a per-lead audit trail from first upload to live account.
 
 </div>
 </div>

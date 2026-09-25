@@ -1,6 +1,6 @@
 ---
 title: "I thought analytics in portfolio websites was easy | Stack Seekers"
-description: "Discord for any problems/errors/bugs: https://discord.gg/nVhJSymeXp Explore All My Projects: https://stackseekers.com/web-development-projects/ PREREQUISITE Vscode: https"
+description: ""
 date: 2025-09-07
 lastUpdated: false
 editLink: false
@@ -11,7 +11,7 @@ layout: Layout
 video:
   id: "wXByXjYfPXw"
   title: "I thought analytics in portfolio websites was easy | Stack Seekers"
-  description: "Discord for any problems/errors/bugs: https://discord.gg/nVhJSymeXp Explore All My Projects: https://stackseekers.com/web-development-projects/ PREREQUISITE Vscode: https://code.visualstudio.com/download Node: https://nodejs.org/en/download How to set up Google Analytics on the website made with Vuepress in Part 1 and Part 2? TIMESTAMPS 00:00 Intro & Demo LINKS AND RESOURCES Part 2: https://youtu.be/4loRfGbiFBM Part 1: https://youtu.be/MoIbz_DdmLs Google Analytics: https://support.google.com/analytics/answer/9304153?hl=en KEY FEATURES Google Analytics Markdown customer head STACK USED Vue.js Git Node.js Pnpm Vuepress Discord: https://discord.gg/nVhJSymeXp Contact: https://stackseekers.com/ LinkedIn: https://www.linkedin.com/in/jiwanghosal/ Instagram: https://www.instagram.com/jiwan_ghosal/ GitHub: https://github.com/stackseekers WhatsApp: https://whatsapp.com/channel/0029Vb0DIRq8V0tlhqjkJg3Z"
+  description: ""
   thumbnail: "https://i.ytimg.com/vi/wXByXjYfPXw/mqdefault.jpg"
   publishedAt: "2025-09-07T11:42:28Z"
   embedUrl: "https://www.youtube.com/embed/wXByXjYfPXw"
@@ -20,10 +20,6 @@ video:
   previousVideo: {"id":"8rYCgrrbHqk","title":"Is CSS (Cascading Style Sheet) affecting your website visitors brains?","thumbnail":"https://i.ytimg.com/vi/8rYCgrrbHqk/mqdefault.jpg","page":"/stackseekers-tv/videos/is-css-cascading-style-sheet-affecting-your-website-visitors-brains/"}
   nextVideo: {"id":"4loRfGbiFBM","title":"How to Build Portfolio Website for Free in 2025 and Deploy it with Git","thumbnail":"https://i.ytimg.com/vi/4loRfGbiFBM/mqdefault.jpg","page":"/stackseekers-tv/videos/how-to-build-portfolio-website-for-free-in-2025-and-deploy-it-with-github-stack-seekers/"}
   relatedVideos: [{"id":"g47y6q_WkkM","title":"FREE AI voice generator Gemini text to voice for Google Docs add-on.","thumbnail":"https://i.ytimg.com/vi/g47y6q_WkkM/mqdefault.jpg","page":"/stackseekers-tv/videos/free-ai-voice-generator-gemini-text-to-voice-for-google-docs-add-on/"},{"id":"GgWw2ybOEx8","title":"Ultimate FREE eCommerce Website a furniture website app using Notion.","thumbnail":"https://i.ytimg.com/vi/GgWw2ybOEx8/mqdefault.jpg","page":"/stackseekers-tv/videos/ultimate-free-ecommerce-website-a-furniture-website-app-using-notion-no-wordpress/"},{"id":"55QSJ9nAheI","title":"Ultimate FREE eCommerce Website Tutorial 2026 using Notion!! No wordpr","thumbnail":"https://i.ytimg.com/vi/55QSJ9nAheI/mqdefault.jpg","page":"/stackseekers-tv/videos/ultimate-free-ecommerce-website-tutorial-2026-using-notion-no-wordpress-no-coding/"},{"id":"2CW88Ji3zn4","title":"Real Estate CRM Using Notion","thumbnail":"https://i.ytimg.com/vi/2CW88Ji3zn4/mqdefault.jpg","page":"/stackseekers-tv/videos/real-estate-crm-using-notion/"}]
-head:
-  - - script
-    - type: application/ld+json
-      content: '{"@context":"https://schema.org","@type":"VideoObject","@id":"https://stackseekers.com/stackseekers-tv/videos/i-thought-analytics-in-portfolio-websites-was-easy-stack-seekers/","name":"I thought analytics in portfolio websites was easy | Stack Seekers","description":"Discord for any problems/errors/bugs: https://discord.gg/nVhJSymeXp Explore All My Projects: https://stackseekers.com/web-development-projects/ PREREQUISITE Vscode: https://code.visualstudio.com/download Node: https://nodejs.org/en/download How to set up Google Analytics on the website made with Vue","thumbnailUrl":["https://i.ytimg.com/vi/wXByXjYfPXw/mqdefault.jpg"],"uploadDate":"2025-09-07T11:42:28Z","contentUrl":"https://www.youtube.com/watch?v=wXByXjYfPXw","embedUrl":"https://www.youtube.com/embed/wXByXjYfPXw","publisher":{"@type":"Organization","@id":"https://stackseekers.com/#organization","name":"Stack Seekers"},"author":{"@type":"Person","@id":"https://stackseekers.com/#person","name":"Jiwan Ghosal"}}'
 ---
 
 <div class="mb-4">

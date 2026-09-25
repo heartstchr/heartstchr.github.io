@@ -25,8 +25,8 @@ project:
   images: [{"itemImageSrc":"/img/projects/trokka.webp","alt":"Trokka.com | Book Attractions and Tours for Your Next Holiday"}]
   video: ""
   features: [{"text":"Show Tours and Attraction of Malaysia"},{"text":"Popular activities based on rating and demand"},{"text":"Activities and details based on location"},{"text":"Book and share attractions with other people"},{"text":"Discount system based on promo code"},{"text":"Payment system using Boost wallet and other payment methods"},{"text":"Custom CMS backend system to add, update, and delete tours and attractions"}]
-  perspective: {"executive":"","technical":""}
-  details: ""
+  perspective: {"executive":"A booking funnel that keeps availability, pricing, and booking state synchronized across the traveler journey. Deterministic quotes, held availability, and idempotent confirmations protect both customer and operator.","technical":"Vue.js customer funnel over an API that owns availability, pricing, and reservation state; step-locked booking flow (quote, details, confirm), server-authoritative availability holds, and an operator admin surface for confirm and cancel."}
+  details: "## Engineering Architecture: Attractions & Tours Booking\n\nTrokka Attraction is the booking layer for attractions and tours — the kind of product that sits between a traveller's search and a confirmed ticket for a theme park, museum, or guided experience.\n\n### 1. What the Product Does\nUsers browse attraction and tour inventory (by city, category, or popularity), compare experiences, pick dates and party size, and complete a booking. Behind the scenes, that means three things must stay in sync:\n\n- **Inventory:** what's bookable, at which dates and times, with live availability.\n- **Pricing:** per-attraction rules (per person, per family, bundles) that must be computed deterministically at quote time.\n- **Booking state:** a reservation moves through hold → confirmed → fulfilled (or cancelled), and every transition must be consistent for both customer and operator.\n\n### 2. Architecture\nA Vue.js frontend drives the customer funnel; the API layer owns availability, pricing, and booking state:\n\n- **Availability querying:** the API returns low-level date/time/gate availability, and the UI renders it as a date picker the customer can reason about without hitting the server on every click.\n- **Step-locked booking flow:** quote (price + availability held) → customer details → confirmation. Each step posts a typed payload, so the backend can reject stale quotes instead of double-booking.\n- **Operator view:** an admin surface lists bookings, handles confirm/cancel, and surfaces capacity conflicts before they reach the customer.\n\n### 3. Design Decisions\n- **Availability before pricing:** the UI never shows a price without confirmed availability data, avoiding the classic \"priced, then sold out\" friction.\n- **Idempotent confirmations:** confirmations are safe to replay, which matters when mobile networks drop mid-payment.\n- **Composable details forms:** traveller info is collected per party member but rendered as one coherent form, matching how operators actually need the data later.\n\n### 4. Outcome\nThe platform gave a tour operator a modern, mobile-friendly booking funnel that reduced manual booking-handling and gave them real-time capacity control across their inventory."
   previousProject: {"name":"Frontend of Tv Maze API","link":"/web-development-projects/frontend-of-tv-maze-api/"}
   nextProject: {"name":"Catch That Bus","link":"/web-development-projects/catch-that-bus/"}
   relatedCaseStudy: null
@@ -246,7 +246,31 @@ project:
           </div>
           <div class="project-markdown-content text-lg line-height-4">
 
+## Engineering Architecture: Attractions & Tours Booking
 
+Trokka Attraction is the booking layer for attractions and tours — the kind of product that sits between a traveller's search and a confirmed ticket for a theme park, museum, or guided experience.
+
+### 1. What the Product Does
+Users browse attraction and tour inventory (by city, category, or popularity), compare experiences, pick dates and party size, and complete a booking. Behind the scenes, that means three things must stay in sync:
+
+- **Inventory:** what's bookable, at which dates and times, with live availability.
+- **Pricing:** per-attraction rules (per person, per family, bundles) that must be computed deterministically at quote time.
+- **Booking state:** a reservation moves through hold → confirmed → fulfilled (or cancelled), and every transition must be consistent for both customer and operator.
+
+### 2. Architecture
+A Vue.js frontend drives the customer funnel; the API layer owns availability, pricing, and booking state:
+
+- **Availability querying:** the API returns low-level date/time/gate availability, and the UI renders it as a date picker the customer can reason about without hitting the server on every click.
+- **Step-locked booking flow:** quote (price + availability held) → customer details → confirmation. Each step posts a typed payload, so the backend can reject stale quotes instead of double-booking.
+- **Operator view:** an admin surface lists bookings, handles confirm/cancel, and surfaces capacity conflicts before they reach the customer.
+
+### 3. Design Decisions
+- **Availability before pricing:** the UI never shows a price without confirmed availability data, avoiding the classic "priced, then sold out" friction.
+- **Idempotent confirmations:** confirmations are safe to replay, which matters when mobile networks drop mid-payment.
+- **Composable details forms:** traveller info is collected per party member but rendered as one coherent form, matching how operators actually need the data later.
+
+### 4. Outcome
+The platform gave a tour operator a modern, mobile-friendly booking funnel that reduced manual booking-handling and gave them real-time capacity control across their inventory.
 
 </div>
 </div>

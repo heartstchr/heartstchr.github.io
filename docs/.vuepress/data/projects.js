@@ -114,7 +114,7 @@ export const freelance = [
     seoTitle: "AI CRUD App Generator: Notion to Web App",
     seoDescription: "Generate a CRUD app with AI. Turn any Notion database into a professional web app — automatic field detection, intelligent forms, search, and multi-language support.",
     category: "Ready-made Apps",
-    description: "Transform your Notion database into a professional web application in minutes with the power of AI. Automatically reads your Notion structure, suggests field relationships, and creates beautiful, responsive interfaces with intelligent forms, search, and multi-language support.",
+    description: "Describe the app you need and Gemini turns your Notion database into a working web application: AI-driven field-type detection, suggested schema relationships, a review step before anything goes live, and a polished UI with search, filters, and multi-language support.",
     software: "Web Application",
     org: "Stack Seekers",
     year: "2025",
@@ -272,6 +272,10 @@ export const freelance = [
     currency: "USD",
     dodoPaymentUrl: DODO_PAYMENT_URL,
     contact: `mailto:${SUPPORT_EMAIL}?subject=Contact Form Plugin Inquiry`,
+    perspective: {
+      executive: "An embeddable contact form widget that forwards submissions straight to a Notion database — making lead capture and CRM sync one step instead of two for any website owner.",
+      technical: "Generator-based component allowing multiple form configurations per integration, posting structured submissions to Notion; embeddable as a plain script tag with no host-page dependency."
+    },
     stack: [
       "javascript",
       "notion/black/white",
@@ -429,21 +433,25 @@ export const freelance = [
   },
   {
     name: "Dynamic CRUD App Free",
-    seoTitle: "Free CRUD App: Notion to Web App",
+    seoTitle: "Free No-Code CRUD App: Notion to Web App",
     seoDescription: "Transform your Notion database into a professional, responsive web app in minutes — free and no-code. Auto-generated forms, search, multi-language support.",
     category: "Ready-made Apps",
     description:
-      "Transform your Notion database into a professional web application in minutes. Automatically reads your Notion structure and creates beautiful, responsive interfaces with intelligent forms, search, and multi-language support - completely free and no-code required.",
+      "The no-code route to a Notion-backed web app: hook up your database and get auto-generated forms, card and table views, real-time search and filtering, privacy masking for sensitive fields, deletion confirmation, and multi-language currency formatting — free, with a Netlify one-command deploy path.",
     software: "Web Application",
     org: "Stack Lab",
     year: "2025",
     domain: "Database Management & No-Code",
     schema: "https://schema.org/WebApplication",
     link: "https://notion-crud.netlify.app/",
-    price: "20",
+    price: "",
     currency: "USD",
-    dodoPaymentUrl: DODO_PAYMENT_URL,
+    dodoPaymentUrl: "",
     contact: `mailto:${SUPPORT_EMAIL}?subject=Notion CRUD App Inquiry`,
+    perspective: {
+      executive: "The no-code bridge between a Notion database and a production-looking web app. Users paste their structure and immediately get forms, search, filtering, and privacy masking with a Netlify deploy path.",
+      technical: "Schema-driven Vue renderer that reads Notion property types in real time to generate inputs and validation; real-time interface updates on schema changes; privacy masking for marked fields and multi-language currency formatting."
+    },
     stack: [
       "javascript",
       "vuedotjs",
@@ -682,8 +690,8 @@ export const freelance = [
   },
   {
     name: "Appliance Repair Service Platform",
-    seoTitle: "Appliance Repair Platform: Find Local Professionals",
-    seoDescription: "A local appliance repair service platform connecting homeowners with vetted professionals — with free troubleshooting guides for refrigerators, washers, dryers, and more.",
+    seoTitle: "Appliance Repair Platform: Programmatic SEO Case Study",
+    seoDescription: "Case study of a local appliance repair platform built on programmatic SEO — thousands of city-and-service pages for refrigerators, washers, dryers, and more, with a troubleshooting content hub.",
     category: "Startup MVPs",
     details: "./details/appliance-repair.md",
     description:
@@ -695,6 +703,10 @@ export const freelance = [
     schema: "https://schema.org/WebApplication",
     link: "https://appliancerepairly.com",
     contact: `mailto:${SUPPORT_EMAIL}?subject=Inquiry : `,
+    perspective: {
+      executive: "A service-content engine at local scale: dynamic appliance categories and troubleshooting guides structured to rank, serve, and convert into repair leads without expensive manual pages.",
+      technical: "Template-driven category and guide pages generated from structured data, with internal linking and fast static delivery tuned for crawl efficiency and mobile traffic."
+    },
     stack: [
       "nextdotjs/black/white",
       "react",
@@ -920,6 +932,10 @@ export const freelance = [
     link: "https://momentum-chi-brown.vercel.app/",
     contact:
       "https://wa.me/917026217029?text=Hi%20there%2C%20I'm%20interested%20in%20a%20custom%20code%20solution%20for%20",
+    perspective: {
+      executive: "An incident management product that gives triage teams a polished, role-based portal over a clean REST API — with search, sorting, and export where operations teams actually live.",
+      technical: "Vue 3 + PrimeVue front end against an expressive REST API; role-based access, incident lifecycle states, notes and task tracking, and exportable sorted/searchable views."
+    },
     stack: [
       "vuedotjs",
       "PrimeVue",
@@ -1029,6 +1045,10 @@ export const freelance = [
     link: "",
     contact:
       "https://wa.me/917026217029?text=Hi%20there%2C%20I'm%20interested%20in%20a%20custom%20code%20solution%20for%20",
+    perspective: {
+      executive: "A multi-vendor marketplace where supply meets booking demand: listings, availability, and transactions in one coherent product that a small team can launch and a larger team can extend.",
+      technical: "Vendor/product data model with booking lifecycle, search and listing views, and a transaction layer that keeps quote, hold, and confirmation states consistent."
+    },
     stack: [
       "Javascript",
       "Vuedotjs",
@@ -1092,16 +1112,21 @@ export const freelance = [
   {
     name: "IBRebuild for ABN AMRO BANK N.V.",
     seoTitle: "IBRebuild: ABN AMRO Banking Migration",
-    seoDescription: "ABN AMRO's internet banking application rebuilt from AngularJS to Vue.js on Microsoft Azure — a zero-downtime modernization of a mission-critical platform.",
+    seoDescription: "ABN AMRO's internet banking application rebuilt from AngularJS to Vue.js — a zero-downtime modernization of a mission-critical banking platform.",
     category: "Enterprise",
     description:
-      "ABN AMRO Bank N.V. is a Dutch bank with headquarters in Amsterdam. The internet banking (IB) application for the bank customers which is migrating from old Angular JS to Vue.js integrated with Microsoft Azure cloud services as IBRebuild.",
+      "IBRebuild modernized ABN AMRO Bank's internet banking application, migrating it from an aging AngularJS codebase to Vue.js. The rebuild delivered a faster, component-driven UI while the legacy system kept running until the new frontend was proven in production.",
     software: "Web",
     org: "ABN Amro",
     year: "2022",
     domain: "Banking",
     schema: "https://schema.org/DeveloperApplication",
-    link: "https://www.abnamro.nl/en/personal/index.html",
+    link: "",
+    details: "./details/ibrebuild.md",
+    perspective: {
+      executive: "Strategic modernization: replacing an end-of-life AngularJS frontend was the right call before the framework's last-fixed state became a security and velocity liability. The incremental, zero-downtime approach protected customers and built engineering trust across the platform.",
+      technical: "Incremental AngularJS-to-Vue migration: shared view layer first, feature-by-feature swap, coexistence with the legacy app, token-based session handling, and feature-flagged rollback. Business logic stayed in the API layer so the UI rewrite never re-opened banking rules."
+    },
     stack: [
       "Javascript",
       "Angular/black/white",
@@ -1130,13 +1155,13 @@ export const freelance = [
     seoDescription: "A tokens-first, component-driven design system built on Lit Web Components for ABN AMRO — consistent, bank-grade UX with faster time-to-market.",
     category: "Enterprise",
     description:
-      "Our innovative digital strategy emphasizes efficiency through a 'build once, deploy multiple times' approach. Utilizing the Emerald design system, we ensure a consistent and seamless user experience across platforms. Significant investments in this system, coupled with an expanded team, have enhanced productivity and scalability, delivering cohesive digital solutions for optimal user engagement.",
+      "A tokens-first, component-driven design system built with Lit Web Components for ABN AMRO. Emerald replaces per-team styling sprawl with a single source of truth: design tokens, versioned components, automated visual regression via Chromatic, and a Storybook workspace — so the bank ships consistent, accessible interfaces without each team re-solving the same problems.",
     software: "Web",
     org: "ABN Amro",
     year: "2022",
     domain: "Banking",
     schema: "https://schema.org/SoftwareApplication",
-    link: "https://www.abnamro.com/en/home",
+    link: "",
     contact: "https://wa.me/917026217029?text=Hi%20there%2C%20I'm%20interested%20in%20building%20a%20modern%20Design%20System",
     details: "./details/emerald-design-system.md",
     perspective: {
@@ -1214,6 +1239,10 @@ export const freelance = [
     link: "https://techcreate.vercel.app/",
     contact:
       "https://wa.me/917026217029?text=Hi%20there%2C%20I'm%20interested%20in%20a%20custom%20code%20solution%20for%",
+    perspective: {
+      executive: "A high-converting marketing site for a digital solutions studio — fast, on-brand, and measurable. Built to turn visitors into project inquiries rather than just traffic.",
+      technical: "Vue.js + PrimeVue landing page deployed on Vercel, with componentized sections, fast global delivery, and conversion-focused layout and copy hierarchy."
+    },
     stack: [
       "Vuedotjs",
       "PrimeVue",
@@ -1251,6 +1280,11 @@ export const freelance = [
     domain: "Housing company",
     schema: "https://schema.org/DeveloperApplication",
     link: "https://plus.yitgroup.com/",
+    details: "./details/yit-plus.md",
+    perspective: {
+      executive: "A customer-facing portal that shifts service coordination from phone calls and paper to structured requests and self-service documents. For the property business it means fewer chasing emails, clearer ownership of each request, and resident-facing service that feels modern.",
+      technical: "Vue.js component architecture over a shared API and data model, with explicit request state machines (open, assigned, in progress, resolved), role-based resident and admin views, and warranty and document assets linked per property."
+    },
     stack: [
       "Javascript",
       "Vuedotjs",
@@ -1312,18 +1346,22 @@ export const freelance = [
   },
   {
     name: "Qatar Airways widget",
-    seoTitle: "Qatar Airways Flight Booking Widget",
-    seoDescription: "Book flights to destinations worldwide with Qatar Airways — special fares, Avios collection, and award-winning service in a seamless booking widget.",
+    seoTitle: "Qatar Airways Flight + Hotel Booking Widget Case Study",
+    seoDescription: "Engineering case study: a Vue.js flight, hotel, and transfer booking widget published as an embeddable asset for TUI's travel tech suite, deployable on any partner CMS.",
     category: "Enterprise",
     details: "./details/qa.md",
     description:
-      "Book flights to destinations around the world with Qatar Airways and fly on board an award-winning airline. Enjoy special fares, collect Avios, and more.",
+      "A white-label flight, hotel, and transfer booking widget we built with Vue.js as part of TUI's travel tech suite. It ships as a single embeddable asset that any partner site can drop in via a script tag, with scoped styling, locale-aware forms, and a unified API layer.",
     software: "Web",
     org: "TUI",
     year: "2021",
     domain: "Leisure, travel, and tourism",
     schema: "https://schema.org/DeveloperApplication",
-    link: "https://holidays.qatarairways.com/en-in/avios",
+    link: "",
+    perspective: {
+      executive: "A white-label booking surface placed directly in a traveler's context: flight, hotel, and transfer search embedded on partner sites while keeping brand and logic intact. For the travel operator, widgets multiply distribution without multiplying maintenance.",
+      technical: "Decoupled Vue.js widget architecture: isolated instances with scoped styling (PostCSS/SASS), a mixin-based 'universal product' layer sharing API/validation/i18n across 25+ form types, and runtime localization by culture code."
+    },
     stack: [
       "Javascript",
       "Vuedotjs",
@@ -1354,10 +1392,6 @@ export const freelance = [
     ],
     images: [
       {
-        itemImageSrc: "/img/projects/qatar/placeholder.webp",
-        alt: "Qatar Airways",
-      },
-      {
         itemImageSrc: "/img/projects/qatar/qatar-airways.webp",
         alt: "Qatar Airways",
       },
@@ -1386,6 +1420,11 @@ export const freelance = [
     schema: "https://schema.org/DeveloperApplication",
     link: "http://recipes-client.s3-website.ap-south-1.amazonaws.com/",
     codeLink: "https://github.com/heartstchr/recipe",
+    details: "./details/recipes.md",
+    perspective: {
+      executive: "A community content platform where structured authoring drives discoverability. Typed recipe data enables ingredient search and consistent rendering that free-form posts simply cannot deliver.",
+      technical: "Vue.js frontend over a structured recipe schema (ingredients, steps, metadata), enabling ingredient-based search, fast catalog views, and an add-recipe editor that validates common mistakes before publish."
+    },
     stack: [
       "Javascript",
       "Vuedotjs",
@@ -1469,6 +1508,11 @@ export const freelance = [
     schema: "https://schema.org/DeveloperApplication",
     link: "https://heartstchr.github.io/tvmaze/",
     codeLink: "https://github.com/heartstchr/tvshows",
+    details: "./details/frontend-tv-maze.md",
+    perspective: {
+      executive: "A showcase of building a real product on a third-party API: search-first UX, route-driven detail views, and graceful handling of missing data. Proof that a small Vue frontend can extract full value from an imperfect external API.",
+      technical: "Vue.js SPA with debounced search, one-to-one API-to-view mapping, in-memory response caching, lazy-loaded images, and route-level code splitting. Views degrade to placeholders where the API has gaps."
+    },
     stack: [
       "Javascript",
       "Vuedotjs",
@@ -1536,6 +1580,11 @@ export const freelance = [
     domain: "Leisure, travel, and tourism",
     schema: "https://schema.org/DeveloperApplication",
     link: "https://m.trokka.com/attraction",
+    details: "./details/trokka-attraction.md",
+    perspective: {
+      executive: "A booking funnel that keeps availability, pricing, and booking state synchronized across the traveler journey. Deterministic quotes, held availability, and idempotent confirmations protect both customer and operator.",
+      technical: "Vue.js customer funnel over an API that owns availability, pricing, and reservation state; step-locked booking flow (quote, details, confirm), server-authoritative availability holds, and an operator admin surface for confirm and cancel."
+    },
     stack: [
       "Javascript",
       "VuedotJs",
@@ -1591,6 +1640,11 @@ export const freelance = [
     domain: "Leisure, travel, and tourism",
     schema: "https://schema.org/DeveloperApplication",
     iosLink: "https://apps.apple.com/my/app/catchthatbus/id1025824078",
+    details: "./details/catch-that-bus.md",
+    perspective: {
+      executive: "Cross-border bus ticketing normalized across many operators into one searchable, bookable experience. Transparent search, live seat maps, and confirmed e-tickets replace queues and phone calls.",
+      technical: "Vue.js client with a normalized schedule model over per-operator adapters; hold-then-pay seat locking with race-condition safety; booking lifecycle persisted end-to-end; operator admin for schedules, pricing, and refunds."
+    },
     stack: [
       "Javascript",
       "VuedotJs",
@@ -1656,16 +1710,21 @@ export const freelance = [
   },
   {
     name: "Partner Dashboard Upstox",
-    seoTitle: "Upstox Partner Dashboard: Sub-Broker Account & Login",
-    seoDescription: "Open an Upstox sub-broker account and run your brokerage from the partner dashboard — onboard clients, track leads and commissions, and manage your business in one place.",
+    seoTitle: "Upstox Partner Dashboard: Sub-Broker App Case Study",
+    seoDescription: "Case study of the Upstox sub-broker partner dashboard we built — client onboarding, lead tracking, commission settlements, and referral tools. A portfolio showcase, not the official Upstox login.",
     category: "Enterprise",
-    description: "Open a sub-broker account with Upstox.",
+    description: "A partner dashboard for Upstox's sub-broker program: lead referral tracking, royalty and ambassador programs, UCC search, and commission reports tied to customer trades.",
     software: "Web",
     org: "Upstox",
     year: "2018",
     domain: "FinTech",
     schema: "https://schema.org/BusinessApplication",
-    link: "https://upstox.com/sub-broker/",
+    link: "",
+    details: "./details/partner-upstox.md",
+    perspective: {
+      executive: "A partner dashboard that turns sub-broker referral programs into a transparent, trackable business: leads, programs, and earnings reconciled server-side so payouts never depend on a spreadsheet or a browser tab.",
+      technical: "Angular client over a LoopBack and Node.js API with MySQL and MongoDB; lead lifecycle states, UCC and name index for instant search, and commission aggregation computed from trade data server-side so the UI is a faithful mirror of authoritative balances."
+    },
     stack: [
       "Angular/black/white",
       "MongoDB",
@@ -1728,10 +1787,21 @@ export const freelance = [
   },
   {
     name: "Demat Account Open",
-    seoTitle: "Open a Demat Account Online | Upstox",
-    seoDescription: "Open a Demat account online with Upstox in minutes — instant KYC, free equity delivery trading, and a smooth onboarding flow built with Angular.",
+    seoTitle: "Demat Account Opening App: Upstox Case Study",
+    seoDescription: "Case study of the Upstox demat account opening app we built — document upload, instant KYC, and e-sign onboarding, engineered with Angular. A portfolio showcase, not the official login page.",
     category: "Enterprise",
-    description: "Open a Demat Account Online at Upstox",
+    description: "The demat account opening funnel we built for Upstox: document upload, PAN/Aadhar/IPV/cheque verification, CRM lead handoff, and NSE/BSE/MCX registration with per-lead reporting.",
+    software: "Web",
+    org: "Upstox",
+    year: "2017",
+    domain: "FinTech",
+    schema: "https://schema.org/BusinessApplication",
+    link: "",
+    details: "./details/demat-upstox.md",
+    perspective: {
+      executive: "Account opening is a brokerage's highest-stakes funnel. This build turned a paper-and-callback application into a digital state machine: document upload, instant verification, CRM handoff, and exchange registration with a per-lead audit trail.",
+      technical: "Angular frontend over the shared LoopBack and Node.js service layer; application-as-state-machine (draft, submitted, scrutiny, registered, rejected), client-side document validation before upload, and deterministic NSE, BSE, and MCX registration with per-lead reporting."
+    },
     stack: [
       "Angular/black/white",
       "MongoDB",
@@ -1743,12 +1813,6 @@ export const freelance = [
       "github/black/white",
     ],
     otherSkills: [],
-    software: "Web",
-    org: "Upstox",
-    year: "2017",
-    domain: "FinTech",
-    schema: "https://schema.org/BusinessApplication",
-    link: "https://upstox.com/open-demat-account/",
     features: [
       {
         text: "Open a Demat account with document upload.",
@@ -1778,10 +1842,15 @@ export const freelance = [
   },
   {
     name: "Call Matrix",
-    seoTitle: "Call Matrix: Call Tracking & Intelligence Platform",
-    seoDescription: "A SaaS call intelligence and analytics platform for call tracking, marketing attribution, and campaign analytics — with D3-powered dashboards and advanced IVR reporting.",
+    seoTitle: "Call Matrix: Call Tracking SaaS Case Study",
+    seoDescription: "Case study of the Call Matrix call tracking SaaS — marketing attribution, IVR reporting, and D3-powered analytics dashboards built with Angular, Node.js, Twilio, and MongoDB.",
     category: "SaaS",
     description: "Call Intelligence, Marketing, and Analytics Platform",
+    details: "./details/call-matrix.md",
+    perspective: {
+      executive: "Call intelligence turns phone leads into measurable marketing data. Campaign-scoped tracking numbers, live call events, and D3 analytics give clients a per-campaign ROI view they never had before.",
+      technical: "Angular client; Node.js API with Twilio webhooks feeding an event-first MongoDB stream; IVR routing captured back to the campaign; D3 dashboards aggregating conversion, duration, and cost per lead with drill-down to raw call records."
+    },
     stack: [
       "Angular/black/white",
       "Nodedotjs",
@@ -1851,6 +1920,11 @@ export const freelance = [
     org: "Freelance",
     year: "2020",
     domain: "Ed Tech",
+    details: "./details/command-line-dictionary.md",
+    perspective: {
+      executive: "A single-purpose CLI that answers what a word means, or what another word means in context, in under a second. Dependency-light, instant startup, and composable internals that a larger tool could reuse.",
+      technical: "Core lookup engine separated from the CLI presentation layer; subcommands for definitions, synonyms, and examples; structured terminal output; graceful fallbacks with suggestions on miss."
+    },
     stack: ["npm", "Eslint", "Prettier"],
     otherSkills: ["Inquirer", "Commander", "Plop"],
     schema: "https://schema.org/DeveloperApplication",
@@ -1888,6 +1962,11 @@ export const freelance = [
     seoDescription: "A high-performance real-time data visualization platform that renders live, interactive D3.js charts from socket-driven financial data with sub-second latency.",
     category: "Startup MVPs",
     description: "A high-performance real-time data visualization platform that consumes socket-driven financial data and renders live, interactive D3.js charts with sub-second latency.",
+    details: "./details/stock-market.md",
+    perspective: {
+      executive: "Real-time financial visualization where live isn't a feature, it's the baseline. Socket ingestion, sub-second D3 rendering, and honest data windows give analysts truth under load, not smoothed fiction.",
+      technical: "WebSocket ingestion over a D3 incremental render pipeline; frame-rate throttling applies latest state under bursts; client-side timeframe bucketing; data windows truncated on gaps rather than interpolated."
+    },
     stack: [
       "Socket.io/black/white",
       "d3",

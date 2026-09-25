@@ -1,6 +1,6 @@
 ---
-title: "Call Matrix: Call Tracking & Intelligence Platform"
-description: "A SaaS call intelligence and analytics platform for call tracking, marketing attribution, and campaign analytics — with D3-powered dashboards and advanced IVR reporting."
+title: "Call Matrix: Call Tracking SaaS Case Study"
+description: "Case study of the Call Matrix call tracking SaaS — marketing attribution, IVR reporting, and D3-powered analytics dashboards built with Angular, Node.js, Twilio, and MongoDB."
 lastUpdated: false
 editLink: false
 contributors: false
@@ -25,8 +25,8 @@ project:
   images: [{"itemImageSrc":"/img/projects/callmatrix/callmatrix.webp","alt":"CallMatrix - Call Intelligence, Marketing, and Analytics Platform"},{"itemImageSrc":"/img/projects/callmatrix/mobistreak.webp","alt":"CallMatrix - Call Intelligence, Marketing, and Analytics Platform"}]
   video: ""
   features: [{"text":"Create a campaign for the call"},{"text":"Create a bundle of campaigns for the call"},{"text":"Buy local & toll-free numbers"},{"text":"Call Recording and Off-Hour Call Handling"},{"text":"Funnel to redirect the call based on the multi-level IVR"},{"text":"Report of bundle, CDR, and offer based on hour, week, and geo location"},{"text":"Dashboard to get a birds-eye view"},{"text":"Google AdWords API integration"},{"text":"User authorization based on role"}]
-  perspective: {"executive":"","technical":""}
-  details: ""
+  perspective: {"executive":"Call intelligence turns phone leads into measurable marketing data. Campaign-scoped tracking numbers, live call events, and D3 analytics give clients a per-campaign ROI view they never had before.","technical":"Angular client; Node.js API with Twilio webhooks feeding an event-first MongoDB stream; IVR routing captured back to the campaign; D3 dashboards aggregating conversion, duration, and cost per lead with drill-down to raw call records."}
+  details: "## Engineering Architecture: Call Matrix Call Tracking SaaS\n\nCall Matrix is a call intelligence platform: it tracks marketing calls at the source, attributes them to campaigns, records their outcome, and reports it all in real time — so clients know exactly which ads produce phone leads.\n\n### 1. The Data Problem It Solves\nOffline channels (print, radio, signage, or \"call us\" campaigns) used to be attribution black holes. Call Matrix gives each campaign a unique tracking number; when the number rings, the platform knows the source, records the call, and ties the outcome back to the channel. That turns phone calls into the same measurable event as a form submission.\n\n### 2. Architecture\nThe platform is Angular on the client with a Node.js API, Twilio for telephony, and MongoDB for the high-volume call event stream; D3 powers the analytics dashboards.\n\n- **Call event pipeline:** Twilio webhooks fire on inbound calls; the API normalizes each event (source number, duration, recordings, outcome) and stores it as an immutable record.\n- **IVR routing:** calls can be answered by an automated IVR that captures intent or routes to the right team, with the choice logged back to the campaign.\n- **Analytics layer:** D3-rendered dashboards aggregate by campaign, channel, and time window — conversion, call duration, and cost per lead — with drill-downs to raw call records.\n\n### 3. Design Decisions\n- **Event-first modeling:** every call is an event with metadata rather than a mutable row, preserving audit history and making aggregations trivial.\n- **Webhook decoupling:** telephony delivery is queued and acknowledged without blocking the UI, so burst traffic never drops a call record.\n- **Campaign scoping:** each number is bound to a campaign at provisioning time, which keeps attribution deterministic instead of guessed.\n\n### 4. Outcome\nCustomers replaced guesswork with a per-campaign ROI view of phone leads. The platform turned telephony into first-class marketing data — integrated with the rest of their reporting — with dashboards their teams actually open."
   previousProject: {"name":"Demat Account Open","link":"/web-development-projects/demat-account-open/"}
   nextProject: {"name":"Command Line Dictionary","link":"/web-development-projects/command-line-dictionary/"}
   relatedCaseStudy: null
@@ -246,7 +246,27 @@ project:
           </div>
           <div class="project-markdown-content text-lg line-height-4">
 
+## Engineering Architecture: Call Matrix Call Tracking SaaS
 
+Call Matrix is a call intelligence platform: it tracks marketing calls at the source, attributes them to campaigns, records their outcome, and reports it all in real time — so clients know exactly which ads produce phone leads.
+
+### 1. The Data Problem It Solves
+Offline channels (print, radio, signage, or "call us" campaigns) used to be attribution black holes. Call Matrix gives each campaign a unique tracking number; when the number rings, the platform knows the source, records the call, and ties the outcome back to the channel. That turns phone calls into the same measurable event as a form submission.
+
+### 2. Architecture
+The platform is Angular on the client with a Node.js API, Twilio for telephony, and MongoDB for the high-volume call event stream; D3 powers the analytics dashboards.
+
+- **Call event pipeline:** Twilio webhooks fire on inbound calls; the API normalizes each event (source number, duration, recordings, outcome) and stores it as an immutable record.
+- **IVR routing:** calls can be answered by an automated IVR that captures intent or routes to the right team, with the choice logged back to the campaign.
+- **Analytics layer:** D3-rendered dashboards aggregate by campaign, channel, and time window — conversion, call duration, and cost per lead — with drill-downs to raw call records.
+
+### 3. Design Decisions
+- **Event-first modeling:** every call is an event with metadata rather than a mutable row, preserving audit history and making aggregations trivial.
+- **Webhook decoupling:** telephony delivery is queued and acknowledged without blocking the UI, so burst traffic never drops a call record.
+- **Campaign scoping:** each number is bound to a campaign at provisioning time, which keeps attribution deterministic instead of guessed.
+
+### 4. Outcome
+Customers replaced guesswork with a per-campaign ROI view of phone leads. The platform turned telephony into first-class marketing data — integrated with the rest of their reporting — with dashboards their teams actually open.
 
 </div>
 </div>

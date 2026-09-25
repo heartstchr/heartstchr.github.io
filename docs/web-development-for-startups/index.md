@@ -17,9 +17,7 @@ head:
   - - meta
     - property: og:description
       content: "Production-ready startup MVPs built by a senior full-stack developer. Fixed scope, fixed timeline, zero agency overhead."
-  - - script
-    - type: application/ld+json
-      content: '{"@context":"https://schema.org","@type":"Service","name":"Web Development for Startups","description":"Production-ready startup MVPs built by a senior full-stack developer with fixed scope and timeline.","provider":{"@type":"Person","name":"Jiwan Ghosal","jobTitle":"Fractional CTO & Senior Full-Stack Developer"},"areaServed":"Global","serviceType":"MVP Development","offers":{"@type":"Offer","description":"4-8 week MVP development with fixed scope"}}'
+  
 ---
 
 <section class="hero-newage relative overflow-hidden px-4 py-8 md:px-8 md:py-12 lg:px-12 surface-0 mb-8">

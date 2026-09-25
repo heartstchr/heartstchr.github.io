@@ -44,7 +44,7 @@ Once you've mastered the basics, you can explore more advanced techniques:
 
 ### Case Study: Improving Customer Service with Prompt Engineering
 
-A major e-commerce company improved their customer service chatbot's accuracy by 30% by implementing effective prompt engineering. They refined their prompts to be more specific about the types of questions the chatbot could answer, provided examples of desired responses, and incorporated negative constraints to prevent the chatbot from providing inaccurate or misleading information.
+In customer support, small prompt changes compound quickly. Refining a chatbot's system prompt to be specific about the kinds of questions it may answer, giving it a few exemplar responses, and adding negative constraints ("do not guess; say when you're unsure") measurably cuts unhelpful replies and escalations. The pattern holds across models: specificity, examples, and guardrails produce more reliable output than a generic "be helpful" instruction.
 
 ## Tools and Resources for Prompt Engineering
 
@@ -54,7 +54,7 @@ Several tools and resources can aid in your prompt engineering journey:
 *   **Prompt Engineering Platforms:** Some platforms are designed specifically for creating and testing prompts.
 *   **Online Communities:** Engage with other prompt engineers in online forums and communities to share knowledge and learn from each other.
 
-For example, OpenAI's API documentation provides detailed information on crafting effective prompts for their language models.  [OpenAI API Documentation](https://platform.openai.com/docs/guides/completion/prompt-design)
+For example, [OpenAI's prompt engineering guide](https://platform.openai.com/docs/guides/prompt-engineering) provides detailed, model-specific tips on crafting effective prompts for their language models.
 
 **Internal Link:** Check out my blog post on [Best AI Tools for Business](/posts/ai-tools-for-business/) to find other resources.
 

@@ -99,9 +99,6 @@ const toIsoDate = (value) => {
   return date.toISOString().split("T")[0];
 };
 
-const buildContactLink = (subject, service) =>
-  `/contact/?subject=${encodeURIComponent(subject)}&service=${encodeURIComponent(service)}`;
-
 // Strip YouTube-ism noise (#hashtags, emojis/symbols, box-drawing + math glyphs,
 // doubled spaces) from titles/descriptions so generated video pages get clean,
 // SEO-friendly text.
@@ -119,18 +116,51 @@ const cleanVideoText = (value, maxLength) => {
     : cleaned;
 };
 
+// YouTube's "𝗗𝗘𝗦𝗖𝗥𝗜𝗣𝗧𝗜𝗢𝗡 / 𝗖𝗢𝗡𝗡𝗘𝗖𝗧 𝗪𝗜𝗧𝗛 𝗠𝗘" headings use Mathematical
+// Alphanumeric (bold sans-serif) code points. Map them back to ASCII so the
+// section markers below are detectable after cleanup.
+const mathBoldToAscii = (value) =>
+  String(value || "").replace(
+    /[\u{1D400}-\u{1D433}\u{1D7CE}-\u{1D7D7}]/gu,
+    (ch) => {
+      const code = ch.codePointAt(0);
+      if (code >= 0x1d400 && code <= 0x1d419)
+        return String.fromCharCode(0x41 + (code - 0x1d400));
+      if (code >= 0x1d41a && code <= 0x1d433)
+        return String.fromCharCode(0x61 + (code - 0x1d41a));
+      if (code >= 0x1d7ce && code <= 0x1d7d7)
+        return String.fromCharCode(0x30 + (code - 0x1d7ce));
+      return "";
+    }
+  );
+
 // Pull the actual walkthrough text out of a YouTube description and drop the
 // repeated boilerplate (Discord/link blocks, "STACK USED", "CONNECT WITH ME",
 // "DESCRIPTION" labels, timestamps). Used for the page's meta description.
 const cleanVideoDescription = (value, maxLength) => {
-  let text = cleanVideoText(value);
-  const labeled = text.match(/\bDESCRIPTION\b\s*(.*)$/i);
-  if (labeled && labeled[1]) text = labeled[1];
-  const cut = text.split(
-    /\b(STACK USED|CONNECT WITH ME|WATCH THE VIDEO|TIMESTAMPS)\b/i
+  const normalized = mathBoldToAscii(value);
+  const labeled = normalized.match(/\bDESCRIPTION\b\s*(.*)$/is);
+  const body = (labeled && labeled[1]) || normalized;
+  const cut = body.split(
+    /\b(STACK USED|CONNECT WITH ME|WATCH THE VIDEO|TIMESTAMPS|LINKS AND RESOURCES|PREREQUISITE|KEY FEATURES)\b/i
   )[0];
-  text = cut || text;
-  return cleanVideoText(text, maxLength);
+  const text = String(cut || body)
+    .split(/\r?\n/)
+    .filter((line) => {
+      const trimmed = line.trim();
+      if (!trimmed) return false;
+      if (/^(>(>)?\s*)?([👉🔗📸💻💬📬📟🔖🖇📄✅])/.test(trimmed)) return false;
+      if (/^https?:\/\/\S+$/.test(trimmed)) return false;
+      if (
+        /^(Get the|Download (code|the)|Watch (this|free|[a-z])|Visit (my|the|us|our)|Follow me|Join (my|our)|Subscribe|Check (out|it)|Buy (me|the|this)|Support me|Connect (with|me|to))[\s:…#]/i.test(
+          trimmed
+        )
+      )
+        return false;
+      return true;
+    })
+    .join(" ");
+  return cleanVideoText(text.replace(/https?:\/\/\S+/g, " "), maxLength);
 };
 
 const projectTemplate = (project, projectIndex, allProjects) => {
@@ -544,6 +574,7 @@ service:
   problems: ${JSON.stringify(service.problems || [])}
   deliverables: ${JSON.stringify(service.deliverables || [])}
   proof: ${JSON.stringify(service.proof || "")}
+  caseStudies: ${JSON.stringify(service.caseStudies || [])}
   faq: ${JSON.stringify(service.faq || [])}
   previousService: ${JSON.stringify(previousService)}
   nextService: ${JSON.stringify(nextService)}
@@ -642,6 +673,7 @@ service:
     <div class="grid">
       <div class="col-12 lg:col-8">
         <h2 class="text-3xl font-bold mt-0 mb-3">How We Work</h2>
+        <p class="text-lg text-700 line-height-3 mb-4">Not sure where your stack stands? Run the free <a href="/startup-stack-audit-checklist/" class="text-primary font-bold">Startup Tech Stack Audit</a> first — a 5-minute self-assessment that surfaces the exact bottlenecks this engagement would fix.</p>
         <div class="grid">
           <div class="col-12 md:col-4">
             <div class="surface-card border-round-2xl p-4 shadow-1 h-full">
@@ -689,32 +721,18 @@ service:
 </article>
 
 <!-- Related Case Studies -->
-<section class="mb-6">
+<section class="mb-6" v-if="$frontmatter.service.caseStudies?.length">
   <div class="surface-card text-900 p-4 border-round-3xl relative overflow-hidden">
     <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
     <div class="relative z-1">
       <h3 class="text-3xl font-bold mb-4">Relevant Case Studies</h3>
       <p class="text-xl text-600 mb-6 max-w-30rem">See how I've applied these principles to real-world business challenges.</p>
       <div class="grid">
-        <div class="col-12 md:col-4">
-          <a href="/web-development-projects/ai-dynamic-crud-app/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
-            <div class="text-primary font-bold text-xs mb-2 uppercase">AI Automation</div>
-            <div class="font-bold text-900 mb-2">AI Dynamic CRUD</div>
-            <div class="text-600 text-sm">Enterprise Notion-to-App engine.</div>
-          </a>
-        </div>
-        <div class="col-12 md:col-4">
-          <a href="/web-development-projects/local-home-services-pros/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
-            <div class="text-primary font-bold text-xs mb-2 uppercase">Scalable Web</div>
-            <div class="font-bold text-900 mb-2">LocalXR Platform</div>
-            <div class="text-600 text-sm">10k+ dynamic service routes.</div>
-          </a>
-        </div>
-        <div class="col-12 md:col-4">
-          <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
-            <div class="text-primary font-bold text-xs mb-2 uppercase">Enterprise Migration</div>
-            <div class="font-bold text-900 mb-2">ABN AMRO Rebuild</div>
-            <div class="text-600 text-sm">Global banking infrastructure.</div>
+        <div class="col-12 md:col-4" v-for="caseStudy in $frontmatter.service.caseStudies" :key="caseStudy.slug">
+          <a :href="'/web-development-projects/' + caseStudy.slug + '/'" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
+            <div class="text-primary font-bold text-xs mb-2 uppercase">{{ caseStudy.category }}</div>
+            <div class="font-bold text-900 mb-2">{{ caseStudy.title }}</div>
+            <div class="text-600 text-sm">{{ caseStudy.blurb }}</div>
           </a>
         </div>
       </div>
@@ -866,6 +884,23 @@ const generateTagPages = () => {
     fs.writeFileSync(filePath, content, "utf-8");
     console.log(`Created Tag Page: ${filePath}`);
   });
+
+  // Prune stale tag pages left over from previous builds so orphaned,
+  // post-less tag URLs never accumulate in the index.
+  const activeTagSlugs = new Set(tagsArray.map((tag) => toKebabCase(tag)));
+  try {
+    const existing = fs.readdirSync(outTagsDir) || [];
+    for (const entry of existing) {
+      const dirPath = path.join(outTagsDir, entry);
+      if (entry === "README.md" || !fs.statSync(dirPath).isDirectory()) continue;
+      if (!activeTagSlugs.has(entry)) {
+        fs.rmSync(dirPath, { recursive: true, force: true });
+        console.log(`Pruned stale tag page: ${dirPath}`);
+      }
+    }
+  } catch (err) {
+    console.warn(`Could not prune stale tag pages: ${err.message}`);
+  }
 
   // Central Tags index page content
   const indexContent = `---
@@ -1140,8 +1175,7 @@ export const youtubeVideos = ${JSON.stringify(data, null, 2)};
 
 const videoTemplate = (video, index, allVideos) => {
   const title = cleanVideoText(video.title, 70);
-  const description = cleanVideoText(video.description, 170);
-  const schemaDescription = cleanVideoText(video.description, 300);
+  const description = cleanVideoDescription(video.description, 170);
   const publishedAt = video.publishedAt || new Date().toISOString();
   const sortableDate = publishedAt.slice(0, 10);
   const prev = index > 0 ? allVideos[index - 1] : null;
@@ -1156,28 +1190,6 @@ const videoTemplate = (video, index, allVideos) => {
       page: v.page,
     }));
 
-  const videoJsonLd = JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "@id": `${DOMAIN}${video.page}`,
-    name: title,
-    description: schemaDescription,
-    thumbnailUrl: [video.thumbnail],
-    uploadDate: publishedAt,
-    contentUrl: video.url,
-    embedUrl: `https://www.youtube.com/embed/${video.id}`,
-    publisher: {
-      "@type": "Organization",
-      "@id": `${DOMAIN}/#organization`,
-      name: "Stack Seekers",
-    },
-    author: {
-      "@type": "Person",
-      "@id": `${DOMAIN}/#person`,
-      name: "Jiwan Ghosal",
-    },
-  });
-
   return `---
 title: ${JSON.stringify(title)}
 description: ${JSON.stringify(description)}
@@ -1191,7 +1203,7 @@ layout: Layout
 video:
   id: ${JSON.stringify(video.id)}
   title: ${JSON.stringify(title)}
-  description: ${JSON.stringify(cleanVideoText(video.description))}
+  description: ${JSON.stringify(cleanVideoDescription(video.description))}
   thumbnail: ${JSON.stringify(video.thumbnail)}
   publishedAt: ${JSON.stringify(publishedAt)}
   embedUrl: ${JSON.stringify(`https://www.youtube.com/embed/${video.id}`)}
@@ -1208,10 +1220,6 @@ video:
       : null
   )}
   relatedVideos: ${JSON.stringify(related)}
-head:
-  - - script
-    - type: application/ld+json
-      content: '${videoJsonLd.replace(/'/g, "''")}'
 ---
 
 <div class="mb-4">
@@ -1324,6 +1332,32 @@ const generateSitemap = () => {
         toKebabCase(candidate) === tag &&
         (tagCount.get(String(candidate).toLowerCase()) || 0) >= 3;
       return Array.from(tagKeys).some(decodesTo);
+    })
+    // Exclude "Redirecting..." placeholder pages (meta-refresh / JS redirect)
+    // and any noindexed page from the sitemap — the sitemap should only
+    // advertise indexable, substantive content.
+    .filter((filePath) => {
+      const pagePath = toPagePath(filePath);
+      if (
+        pagePath.startsWith("/stackseekers-tv/videos/") ||
+        pagePath.startsWith("/tag/") ||
+        pagePath === "/timeline/" ||
+        pagePath === "/star/"
+      ) {
+        return false;
+      }
+      const content = fs.readFileSync(filePath, "utf-8");
+      if (
+        /<meta\s+http-equiv=["']refresh|window\.location\.replace/.test(content)
+      ) {
+        return false;
+      }
+      if (
+        /name\s*[:=]\s*["']?robots["']?[\s\S]{0,120}?noindex/i.test(content)
+      ) {
+        return false;
+      }
+      return true;
     });
 
   const urls = markdownFiles

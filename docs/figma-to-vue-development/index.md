@@ -17,9 +17,7 @@ head:
   - - meta
     - property: og:description
       content: "Transform your Figma designs into production-ready Vue.js applications. Pixel-perfect implementation by a senior frontend engineer."
-  - - script
-    - type: application/ld+json
-      content: '{"@context":"https://schema.org","@type":"Service","name":"Figma to Vue.js Development","description":"Transform Figma designs into production-ready Vue.js applications with pixel-perfect implementation.","provider":{"@type":"Person","name":"Jiwan Ghosal","jobTitle":"Senior Frontend Engineer"},"areaServed":"Global","serviceType":"Frontend Development"}'
+  
 ---
 
 <section class="hero-newage relative overflow-hidden px-4 py-8 md:px-8 md:py-12 lg:px-12 surface-0 mb-8">

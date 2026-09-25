@@ -1,6 +1,6 @@
 ---
 title: "Scalable SaaS Architecture Design & Audit"
-description: "Hire a senior product architecture consultant who has designed banking-grade systems for 10M+ users. Get a risk map, scalable design, and an execution roadmap."
+description: "Hire a senior product architecture consultant who has designed banking-grade systems for millions of users. Get a risk map, scalable design, and an execution roadmap."
 lastUpdated: false
 editLink: false
 contributors: false
@@ -14,13 +14,14 @@ service:
   icon: "blueprint"
   code: "product-architecture-and-scaling"
   imageCode: "product-architecture-and-scaling"
-  metric: "10M+ Users"
+  metric: "Millions of Users"
   outcome: "Banking-Grade Stability"
   keywords: ["product architecture consultant","scalable SaaS architecture","technical architecture advisor"]
   idealFor: ["SaaS founders preparing for launch or scale","Teams rebuilding after a rushed MVP","Products with rising traffic, reliability, or maintainability issues"]
   problems: ["Unclear system boundaries that slow every feature release","Fragile architecture that breaks under new traffic or product complexity","Technical debt that is blocking roadmap execution"]
   deliverables: ["Architecture review with risk map and priority fixes","Scalable frontend, backend, and data design","Execution roadmap for the next 3 to 6 months"]
   proof: "Used on enterprise-grade systems including ABN AMRO migrations and high-growth product environments."
+  caseStudies: [{"slug":"emerald-design-system","category":"Design Systems","title":"Emerald Design System","blurb":"Tokens-first component library standardizing a global bank's frontend."},{"slug":"ibrebuild-for-abn-amro-bank-n-v","category":"Enterprise","title":"ABN AMRO Rebuild","blurb":"AngularJS to Vue.js migration of a banking internet app."},{"slug":"local-home-services-pros","category":"Scalable Web","title":"LocalXR Platform","blurb":"Programmatic platform serving thousands of dynamic routes."}]
   faq: [{"question":"Do you work with existing products or only new builds?","answer":"Both. I often step into products that already exist, identify the structural bottlenecks, and design the next stable version without forcing a rewrite."},{"question":"Can you help the team implement the architecture too?","answer":"Yes. I can stay involved through delivery, code review, and sprint planning so the architecture turns into shipped outcomes."}]
   previousService: null
   nextService: {"name":"ROI-Driven AI Automation","link":"/web-development-services/ai-and-automation-strategy/"}
@@ -119,6 +120,7 @@ service:
     <div class="grid">
       <div class="col-12 lg:col-8">
         <h2 class="text-3xl font-bold mt-0 mb-3">How We Work</h2>
+        <p class="text-lg text-700 line-height-3 mb-4">Not sure where your stack stands? Run the free <a href="/startup-stack-audit-checklist/" class="text-primary font-bold">Startup Tech Stack Audit</a> first — a 5-minute self-assessment that surfaces the exact bottlenecks this engagement would fix.</p>
         <div class="grid">
           <div class="col-12 md:col-4">
             <div class="surface-card border-round-2xl p-4 shadow-1 h-full">
@@ -166,32 +168,18 @@ service:
 </article>
 
 <!-- Related Case Studies -->
-<section class="mb-6">
+<section class="mb-6" v-if="$frontmatter.service.caseStudies?.length">
   <div class="surface-card text-900 p-4 border-round-3xl relative overflow-hidden">
     <div class="absolute top-0 right-0 w-20rem h-20rem bg-primary border-circle opacity-10" style="filter: blur(80px); transform: translate(30%, -30%)"></div>
     <div class="relative z-1">
       <h3 class="text-3xl font-bold mb-4">Relevant Case Studies</h3>
       <p class="text-xl text-600 mb-6 max-w-30rem">See how I've applied these principles to real-world business challenges.</p>
       <div class="grid">
-        <div class="col-12 md:col-4">
-          <a href="/web-development-projects/ai-dynamic-crud-app/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
-            <div class="text-primary font-bold text-xs mb-2 uppercase">AI Automation</div>
-            <div class="font-bold text-900 mb-2">AI Dynamic CRUD</div>
-            <div class="text-600 text-sm">Enterprise Notion-to-App engine.</div>
-          </a>
-        </div>
-        <div class="col-12 md:col-4">
-          <a href="/web-development-projects/local-home-services-pros/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
-            <div class="text-primary font-bold text-xs mb-2 uppercase">Scalable Web</div>
-            <div class="font-bold text-900 mb-2">LocalXR Platform</div>
-            <div class="text-600 text-sm">10k+ dynamic service routes.</div>
-          </a>
-        </div>
-        <div class="col-12 md:col-4">
-          <a href="/web-development-projects/ibrebuild-for-abn-amro-bank-n-v/" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
-            <div class="text-primary font-bold text-xs mb-2 uppercase">Enterprise Migration</div>
-            <div class="font-bold text-900 mb-2">ABN AMRO Rebuild</div>
-            <div class="text-600 text-sm">Global banking infrastructure.</div>
+        <div class="col-12 md:col-4" v-for="caseStudy in $frontmatter.service.caseStudies" :key="caseStudy.slug">
+          <a :href="'/web-development-projects/' + caseStudy.slug + '/'" class="no-underline block p-4 surface-50 border-round-2xl hover:surface-100 transition-all border-1 border-100 h-full">
+            <div class="text-primary font-bold text-xs mb-2 uppercase">{{ caseStudy.category }}</div>
+            <div class="font-bold text-900 mb-2">{{ caseStudy.title }}</div>
+            <div class="text-600 text-sm">{{ caseStudy.blurb }}</div>
           </a>
         </div>
       </div>

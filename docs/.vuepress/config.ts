@@ -151,6 +151,26 @@ export default defineUserConfig({
           page.frontmatter.contributors = false;
         }
 
+        // Low-value / replicated / system pages: keep them usable for visitors
+        // but out of the index so they don't dilute site quality:
+        // - /tag/* duplicates the /tags/ taxonomy (and the /tags/ pages are
+        //   already selectively noindexed for thin tags).
+        // - /stackseekers-tv/videos/* are embedded YouTube replicas with no
+        //   substantial original commentary.
+        // - /timeline/ and /star/ are navigational blog snapshots.
+        if (
+          path.startsWith("/tag/") ||
+          path.startsWith("/category/") ||
+          (path.startsWith("/stackseekers-tv/videos/")) ||
+          path === "/article/" ||
+          path === "/timeline/" ||
+          path === "/star/"
+        ) {
+          page.frontmatter.head = (page.frontmatter.head || []).concat([
+            ["meta", { name: "robots", content: "noindex, follow" }],
+          ]);
+        }
+
         const schemas = pageSpecificSchemas[path] || [];
         if (schemas.length > 0) {
           page.frontmatter.head = [
@@ -161,6 +181,40 @@ export default defineUserConfig({
               JSON.stringify(s),
             ]),
           ];
+        }
+
+        // Video pages carry structured data in their frontmatter `video` block.
+        // Emit a per-page VideoObject here (the 3-element head tuple) because
+        // script+ld+json entries end up stripped by onInitialized below when
+        // placed directly in the frontmatter `head` of a markdown file.
+        const video = page.frontmatter.video;
+        if (video && video.id) {
+          page.frontmatter.head = (page.frontmatter.head || []).concat([
+            [
+              "script",
+              { type: "application/ld+json" },
+              JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "VideoObject",
+                "@id": video.url,
+                name: video.title,
+                description: (video.description || "").slice(0, 300),
+                thumbnailUrl: video.thumbnail,
+                uploadDate: video.publishedAt,
+                contentUrl: video.url,
+                embedUrl: video.embedUrl,
+                publisher: {
+                  "@type": "Organization",
+                  "@id": "https://stackseekers.com/#organization",
+                  name: "Stack Seekers",
+                },
+                author: {
+                  "@type": "Person",
+                  "@id": "https://stackseekers.com/#person",
+                },
+              }),
+            ],
+          ]);
         }
       },
       onInitialized: (app: any) => {

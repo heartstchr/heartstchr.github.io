@@ -31,15 +31,15 @@ TypeScript’s utility types—`Pick`, `Omit`, `Exclude`, and `Extract`—are li
 
 These utilities let you craft precise types without altering the original, like preparing a dish without wasting ingredients.
 
-## Pritify Type Helper: Plating Your Types Beautifully
+## Prettify Type Helper: Plating Your Types Beautifully
 
-Complex types in TypeScript can look like a messy kitchen counter after cooking. The `Pritify` type helper cleans them up, presenting a polished dish. In our playlist app, combining types for a `Song & PlaylistMetadata & Omit<User, 'id'>` creates an unreadable mess when hovered over.
+Complex types in TypeScript can look like a messy kitchen counter after cooking. The `Prettify` type helper cleans them up, presenting a polished dish. In our playlist app, combining types for a `Song & PlaylistMetadata & Omit<User, 'id'>` creates an unreadable mess when hovered over.
 
-- **Pritify’s Magic**: Wrapping the type in `Pritify<T>` flattens intersections into a single, readable object, like plating a dish elegantly for guests.
+- **Prettify’s Magic**: Wrapping the type in `Prettify<T>` flattens intersections into a single, readable object, like plating a dish elegantly for guests.
 - **Use Case**: Essential for library authors who want users to see clear type definitions, ensuring a delightful developer experience.
-- **Example**: A `Pritify<Song & Metadata>` type shows a clean `{ title: string, artist: string, playlistName: string }` instead of a jumbled intersection.
+- **Example**: A `Prettify<Song & Metadata>` type shows a clean `{ title: string, artist: string, playlistName: string }` instead of a jumbled intersection.
 
-Pritify is your sous-chef for presenting complex types with style.
+Prettify is your sous-chef for presenting complex types with style.
 
 ## Loose Autocomplete Trick: A Flexible Recipe Book
 
@@ -70,7 +70,7 @@ To make your playlist app’s state management robust, convert a `SongActions` o
 - **Steps**:
   - Map over `keyof SongActions` to create `{ [K in keyof SongActions]: { type: K } & SongActions[K] }`.
   - Index with `keyof SongActions` to extract values as a union, e.g., `{ type: 'play', songId: string } | { type: 'pause', reason: string }`.
-  - Wrap in `Pritify` for a clean display.
+  - Wrap in `Prettify` for a clean display.
 - **Analogy**: Like labeling each dish with its main ingredient (e.g., “play” or “pause”), making it easy to handle specific cases.
 
 This technique, using the immediately indexed mapped type, creates type-safe unions, like a menu where every dish is clearly defined.

@@ -10,7 +10,7 @@ tags: ["Vendor Vetting", "Outsourcing", "Agency Selection", "Technical Due Dilig
 
 You're a non-technical founder. You need to hire a development agency or partner to build your product. Every agency has a polished deck, glowing testimonials, and a "senior team." How do you tell who will actually ship quality code on time — and who will leave you with technical debt, missed deadlines, and a codebase you can't maintain?
 
-I've been a developer for 15+ years, worked at agencies, and seen how the sausage gets made from both sides. Here's the vetting process I would run for my own product.
+I've been a developer for more than 10 years, worked at agencies, and seen how the sausage gets made from both sides. Here's the vetting process I would run for my own product.
 
 ## Phase 1: What You Can Verify Before the First Call
 

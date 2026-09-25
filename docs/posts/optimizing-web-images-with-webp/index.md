@@ -15,7 +15,7 @@ In today's digital landscape, website performance is critical for user satisfact
 WebP, developed by Google, is a modern image format that provides excellent compression without sacrificing quality. By reducing file sizes, WebP helps websites load faster, which is a key factor in user experience and search engine optimization (SEO). Faster-loading pages reduce bounce rates, improve user engagement, and signal to search engines like Google that your site is well-optimized.
 
 Here are some key benefits of using WebP:
-- **Smaller File Sizes**: WebP images are significantly smaller than JPG and PNG files, often by 25-34% for comparable quality.
+- **Smaller File Sizes**: WebP images are significantly smaller than JPG files for comparable quality — Google reports typical savings of 25-34% for lossy compression versus JPG — with further gains on PNG-style content like logos and graphics.
 - **Lossy and Lossless Compression**: WebP supports both lossy and lossless compression, making it versatile for various use cases.
 - **Transparency Support**: Like PNG, WebP supports alpha transparency, ideal for logos and graphics.
 - **SEO Boost**: Faster page load times improve search engine rankings, as speed is a known ranking factor.
@@ -34,10 +34,10 @@ Before you begin, ensure `cwebp` is installed on your system:
 ### Step 2: Convert a Single Image
 To convert a single JPG image to WebP, use the following command:
 ```bash
-cwebp -q 80 image.webp -o image.webp
+cwebp -q 80 image.jpg -o image.webp
 ```
 - `-q 80`: Sets the quality to 80 (out of 100), balancing file size and visual quality.
-- `image.webp`: The input file.
+- `image.jpg`: The input file.
 - `-o image.webp`: The output WebP file.
 
 ### Step 3: Convert Images Recursively
@@ -45,21 +45,21 @@ To convert all JPG images in a folder and its subfolders, you can use a script. 
 
 #### Linux/MacOS Shell Script
 ```bash
-find . -type f -name "*.webp" | while read img; do
-    webp_img="${img%.webp}.webp"
+find . -type f \( -name "*.jpg" -o -name "*.jpeg" \) | while read img; do
+    webp_img="${img%.*}.webp"
     cwebp -q 80 "$img" -o "$webp_img"
     echo "Converted: $img -> $webp_img"
 done
 ```
 This command:
-- Finds all `.webp` files in the current directory and subdirectories.
-- Converts each file to WebP with the same name but a `.webp` extension.
+- Finds all `.jpg` and `.jpeg` files in the current directory and subdirectories.
+- Converts each file to WebP, writing it next to the source with a `.webp` extension.
 
 #### Windows Batch Script
 ```batch
-for /r %%i in (*.webp) do cwebp -q 80 "%%i" -o "%%~ni.webp"
+for /r %%i in (*.jpg *.jpeg) do cwebp -q 80 "%%i" -o "%%~ni.webp"
 ```
-This script processes all `.webp` files recursively, creating WebP versions in the same directories.
+This script processes all `.jpg` and `.jpeg` files recursively, creating WebP versions in the same directories.
 
 ### Step 4: Verify and Implement
 After conversion, verify the WebP files for quality and file size reduction. Update your website's HTML or CSS to reference the `.webp` files. For browsers that don't support WebP, consider using a `<picture>` element to provide fallback formats like JPG or PNG:
@@ -74,7 +74,7 @@ After conversion, verify the WebP files for quality and file size reduction. Upd
 To maximize the benefits of WebP, follow these best practices:
 - **Choose the Right Quality**: A quality setting of 75-85 typically offers a good balance between size and quality.
 - **Automate the Process**: Integrate `cwebp` into your build pipeline using tools like Gulp or Webpack.
-- **Test Across Browsers**: Ensure fallback images are available for browsers like Safari that may have limited WebP support.
+- **Test Across Browsers**: Since version 14 WebP is supported by all major browsers — Chrome, Firefox, Safari, and Edge — so fallbacks are only needed for very old browsers; use them only if your audience data shows legacy traffic.
 - **Monitor Performance**: Use tools like Google Lighthouse to measure the impact of WebP on page load times.
 - **Combine with Other Techniques**: Pair WebP with lazy loading and responsive images for optimal performance.
 

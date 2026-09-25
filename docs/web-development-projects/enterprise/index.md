@@ -38,7 +38,7 @@ head:
       </div>
     </div>
     <p class="text-xl text-300 line-height-3 m-0" style="max-width: 720px;">
-      Production systems trusted at global scale — from internet banking for 10M+ users at ABN AMRO to flight booking engines for Qatar Airways and FinTech dashboards for Upstox. Our <strong>Enterprise development</strong> focus is on building resilient, mission-critical systems that can handle high loads and strict security requirements. We bridge the gap between <strong>legacy infrastructure</strong> and <strong>modern cloud architecture</strong>. Having worked with global giants like <strong>ABN AMRO</strong> and <strong>Qatar Airways</strong>, we bring banking-grade engineering standards to every project. We focus on <strong>system observability</strong>, <strong>zero-downtime migrations</strong>, and <strong>high-availability deployments</strong> to ensure your business operations never stop.
+      Production systems trusted at global scale — from internet banking for millions of users at ABN AMRO to flight booking engines for Qatar Airways and FinTech dashboards for Upstox. Our <strong>Enterprise development</strong> focus is on building resilient, mission-critical systems that can handle high loads and strict security requirements. We bridge the gap between <strong>legacy infrastructure</strong> and <strong>modern cloud architecture</strong>. Having worked with global giants like <strong>ABN AMRO</strong> and <strong>Qatar Airways</strong>, we bring banking-grade engineering standards to every project. We focus on <strong>system observability</strong>, <strong>zero-downtime migrations</strong>, and <strong>high-availability deployments</strong> to ensure your business operations never stop.
     </p>
   </div>
 </section>

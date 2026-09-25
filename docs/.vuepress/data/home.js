@@ -45,16 +45,16 @@ export const orgs = [
   {
     title: "Catch That Bus",
     icon: "/img/home/catchthatbus.webp",
-    details: "Travel & lesure",
+    details: "Travel & leisure",
   }
 ];
 
 export const highImpactWins = [
   {
     title: "Upstox",
-    before: "4-day manual lead processing turnaround",
-    metric: "98% Speed Increase",
-    description: "Architected a high-velocity event engine reducing lead conversion from <strong>4 days to 2 hours</strong>.",
+    before: "Manual lead processing turnaround of several days",
+    metric: "Days → Hours",
+    description: "Architected a high-velocity event engine reducing lead conversion from <strong>days to hours</strong>.",
     icon: "pi-chart-line",
     color: "green",
     link: "/web-development-projects/partner-dashboard-upstox/"
@@ -79,26 +79,6 @@ export const highImpactWins = [
   }
 ];
 
-export const heroSlides = [
-  {
-    title: "AI & Machine Learning",
-    subtitle: "Native AI Architectures",
-    image: "/img/projects/ai-dynamic-crud-app/ai-webapp-english.webp",
-    alt: "AI Dynamic CRUD Application"
-  },
-  {
-    title: "Enterprise SaaS",
-    subtitle: "ABN AMRO Banking Scale",
-    image: "/img/home/projects/ABN_Amro.webp",
-    alt: "ABN AMRO Enterprise Migration"
-  },
-  {
-    title: "Programmatic Growth",
-    subtitle: "Scalable Lead Engines",
-    image: "/img/projects/localxr/localxr-cover.webp",
-    alt: "LocalXR Programmatic SEO Platform"
-  }
-];
 export const testimonials = [
   {
     name: "Harris Malik",
@@ -168,7 +148,7 @@ export const whyme = [
     id: "commitment_to_quality_code",
     title: "High-Integrity Infrastructure",
     description:
-      "Built with enterprise standards (ABN AMRO grade) so your product can scale to 10M+ users without needing a total rewrite.",
+      "Built with enterprise standards (ABN AMRO grade) so your product can scale to millions of users without needing a total rewrite.",
   },
 ];
 export const stackLogos = [
@@ -207,30 +187,5 @@ export const stackLogos = [
   {
     link: "lighthouse",
     title: "lighthouse",
-  },
-];
-export const certificate =[
-  {
-    name: "certificate",
-    images: [
-      {
-        itemImageSrc: "/img/about/JiwanGhosalMicrosoftAz900.webp",
-        thumbnailImageSrc: "/img/about/JiwanGhosalMicrosoftAz900.webp",
-        alt: "Jiwan Ghosal Microsoft Az900",
-        title: "Jiwan Ghosal Microsoft Az900",
-      },
-      {
-        itemImageSrc: "/img/about/platformcon-2025-golden-path-labs.webp",
-        thumbnailImageSrc: "/img/about/platformcon-2025-golden-path-labs.webp",
-        alt: "Platformcon 2025 golden path labs",
-        title: "Platformcon 2025 golden path labs",
-      },
-      {
-        itemImageSrc: "/img/about/connectedManager.webp",
-        thumbnailImageSrc: "/img/about/connectedManager.webp",
-        alt: "Connected Manager",
-        title: "Connected Manager",
-      },
-    ],
   },
 ];
