@@ -1,1 +1,0 @@
-var e=`/img/home/projects/sr22.webp`;export{e as t};
