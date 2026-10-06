@@ -74,6 +74,10 @@ export const enNavbar = navbar([
         link: "/web-development-services/internal-tools-and-portals/",
       },
       {
+        text: "Tech Stack Audit",
+        link: "/web-development-services/tech-stack-audit-service/",
+      },
+      {
         text: "All Services",
         link: "/web-development-services/",
       },

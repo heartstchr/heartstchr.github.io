@@ -292,7 +292,7 @@ head:
     <div class="col-12 md:col-6 p-3">
       <div class="surface-0 p-4 border-round-2xl shadow-1 h-full">
         <h3 class="text-lg font-bold mb-2">Do you use a component library or build from scratch?</h3>
-        <p class="text-600 line-height-3 text-sm m-0">I use PrimeVue or Tailwind CSS as a foundation, then build custom components to match your Figma exactly. This gives you the speed of a library with the fidelity of a custom build.</p>
+        <p class="text-600 line-height-3 text-sm m-0">I use PrimeVue or Tailwind CSS as a foundation, then build custom components to match your Figma exactly. This gives you the speed of a library with the fidelity of a custom build. When your Vue app needs SSR or programmatic SEO, I can take it further as a <a href="/hire-nuxt-developer/" class="text-primary font-bold">hired Nuxt.js developer</a>.</p>
       </div>
     </div>
     <div class="col-12 md:col-6 p-3">

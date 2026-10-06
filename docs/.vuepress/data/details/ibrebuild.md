@@ -20,4 +20,4 @@ The structure kept business logic in the API layer, so the frontend rewrite was 
 - **Zero-downtime release:** deployments were served behind the same domain with feature gating; rollback meant flipping routes, not redeploying.
 
 ### 4. Outcome
-The rebuild removed the framework lifecycle risk, cut bundle size and first-paint times on the primary screens, and gave ABN AMRO's frontend teams a modern baseline — the same engineering foundation later required by the Emerald Design System rollout.
+The rebuild removed the framework lifecycle risk, cut bundle size and first-paint times on the primary screens, and gave ABN AMRO's frontend teams a modern baseline — the same engineering foundation later required by the [Emerald Design System](/web-development-projects/emerald-design-system/) rollout.

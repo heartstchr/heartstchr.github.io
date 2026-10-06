@@ -317,7 +317,11 @@ const postSchemas = Object.fromEntries(
         headline: post.title,
         description: post.summary,
         datePublished: post.date,
-        dateModified: post.date,
+        // Only claim a modified date when the post actually declares one.
+        // Mirroring datePublished tells crawlers the page never changed, which
+        // is both false and actively harmful for a how-to guide whose steps
+        // depend on a third-party UI.
+        dateModified: post.lastUpdated || post.date,
         mainEntityOfPage: absoluteUrl(post.link),
         author: { "@id": `${DOMAIN}/#person` },
         publisher: { "@id": `${DOMAIN}/#organization` },
@@ -602,7 +606,7 @@ const transferFaqSchema = faqPageSchema([
   ],
   [
     "What happens to access and automation when I transfer a repository?",
-    "External collaborators are removed when the transfer completes, so re-add anyone outside the organization. Webhooks, GitHub Actions secrets, branch protection rules, and deployment keys do not carry over to the new repository — reconfigure them under the organization. Stars, watchers, forks, issues, and releases move with the repository.",
+    "Access and automation survive the transfer. The previous owner is added as a collaborator and other collaborators remain intact. Webhooks, services, secrets, and deploy keys remain associated with the repository once the transfer completes, and Git history is preserved. Two things deserve a review afterwards: the organization's default repository permission settings and membership privileges now apply, and if the target account is on GitHub Free the repository can lose access to features such as protected branches and GitHub Pages. Note that read-only collaborators are not carried over when transferring from an organization to a personal account, since personal accounts cannot hold that permission level.",
   ],
   [
     "How long does a GitHub repository transfer take?",
@@ -621,6 +625,24 @@ export const pageSpecificSchemas: Record<string, any[]> = {
   "/contact/": contactSchemas,
   "/stackseekers-tv/": tvHubSchemas,
   "/startup-stack-audit-checklist/": auditPageSchemas,
+  "/stackcast-podcast-mini/": [
+    {
+      "@context": "https://schema.org",
+      "@type": "PodcastSeries",
+      "@id": `${absoluteUrl("/stackcast-podcast-mini/")}#podcast-series`,
+      name: "Stack Cast Mini",
+      url: absoluteUrl("/stackcast-podcast-mini/"),
+      description:
+        "The Stack Cast mini podcast unpacks tools, trends, and SaaS strategy for developers and startup CTOs.",
+      webFeed: "https://www.youtube.com/playlist?list=PLGK9Y5ibwm0-diGJKA69TmIGUQBIStzNw",
+      inLanguage: "en",
+      creator: {
+        "@type": "Person",
+        name: "Jiwan Ghosal",
+        url: `${DOMAIN}/jiwan-ghosal/`,
+      },
+    },
+  ],
   ...serviceSchemas,
   ...projectSchemas,
   ...postSchemas,

@@ -251,7 +251,7 @@ head:
     <div class="col-12 md:col-6 p-3">
       <div class="surface-0 p-4 border-round-2xl shadow-1 h-full">
         <h3 class="text-lg font-bold mb-2">Do you prefer Next.js or Nuxt?</h3>
-        <p class="text-600 line-height-3 text-sm m-0">Both. I choose the framework based on your project needs. Next.js is ideal for React-ecosystem teams; Nuxt is ideal for Vue teams. Both support SSR, SSG, and hybrid rendering.</p>
+        <p class="text-600 line-height-3 text-sm m-0">Both. I choose the framework based on your project needs. Next.js is ideal for React-ecosystem teams; <a href="/hire-nuxt-developer/" class="text-primary font-bold">Nuxt is ideal for Vue teams</a>. Both support SSR, SSG, and hybrid rendering.</p>
       </div>
     </div>
     <div class="col-12 md:col-6 p-3">

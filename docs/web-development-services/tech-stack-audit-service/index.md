@@ -1,6 +1,6 @@
 ---
-title: "Internal Tools Development: Notion to Portals"
-description: "We turn Notion databases, spreadsheets, and manual workflows into professional internal tools — portals, dashboards, and automation your team will use."
+title: "Tech Stack Audit Service for Startups & SaaS"
+description: "A fixed-scope tech stack audit for startups and SaaS. A senior engineer reviews deployment, resilience, security and scaling, and delivers a prioritized roadmap in 48-72 hours."
 lastUpdated: false
 editLink: false
 contributors: false
@@ -9,22 +9,22 @@ copyright: false
 layout: Layout
 hidePageTitle: true
 service:
-  name: "Internal Tools & Portals"
-  descriptions: ["I turn Notion databases, spreadsheets, and manual workflows into professional internal tools — portals, dashboards, and automated processes your team actually wants to use.","Custom-built for your operation, connected to your existing data, and delivered without the overhead of a months-long enterprise build."]
-  icon: "box"
-  code: "internal-tools-and-portals"
-  imageCode: "internal-tools-and-portals"
-  metric: "Hours Saved / Week"
-  outcome: "Operational Velocity"
-  keywords: ["internal tool development","custom admin portal","Notion to web application"]
-  idealFor: ["Operations-heavy teams losing hours to manual data entry and email ping-pong","Companies running critical workflows out of Notion, spreadsheets, or inboxes","Teams that need admin dashboards and approval flows without a months-long build"]
-  problems: ["Hours lost weekly to manual data entry, copy-paste, and status chasing","Business logic trapped in spreadsheets and email threads nobody can audit","Off-the-shelf tools that almost fit but force your team to adapt to them"]
-  deliverables: ["Web-based internal portal built around your actual workflows","Automated sync from Notion, Sheets, or your existing data sources","Forms, approval flows, and dashboards with audit trails and role-based access"]
-  proof: "Built Notion-to-web systems and service request portals that replaced manual workflows with real-time, auditable applications."
-  caseStudies: [{"slug":"dynamic-crud-app-free","category":"Notion","title":"Dynamic CRUD App Free","blurb":"Notion database to a full web application, no code."},{"slug":"service-request-system","category":"Operations","title":"Service Request System","blurb":"Portal with automated notifications and file uploads."},{"slug":"contact-form-plugin","category":"Automation","title":"Contact Form Plugin","blurb":"Embeddable forms that forward submissions to Notion."}]
-  faq: [{"question":"Do I need to rebuild how my team works?","answer":"No. The portal is built around your current processes first, then improves them with automation — so adoption is natural instead of forced."},{"question":"Can you connect it to Notion or Google Sheets?","answer":"Yes. Most internal tooling starts by syncing existing Notion databases or spreadsheets into a real application layer with forms, search, and workflows."}]
-  previousService: {"name":"Legacy Modernization","link":"/web-development-services/legacy-modernization/"}
-  nextService: {"name":"Tech Stack Audit","link":"/web-development-services/tech-stack-audit-service/"}
+  name: "Tech Stack Audit"
+  descriptions: ["A fixed-scope tech stack audit for startups, SaaS, and enterprise teams: a senior engineer reviews deployment, resilience, scaling, engineering velocity, data, and security, then ranks every finding by business risk.","Delivered in 48-72 hours as a risk map and a prioritized 90-day remediation roadmap — so you know exactly what to fix before your next growth stage, funding round, or security review."]
+  icon: "blueprint"
+  code: "tech-stack-audit-service"
+  imageCode: "tech-stack-audit-service"
+  metric: "48-72 Hours to Roadmap"
+  outcome: "Prioritized Risk Roadmap"
+  keywords: ["tech stack audit service","technical audit for startups","startup technical audit service","tech stack review","tech stack audit company"]
+  idealFor: ["Founders who suspect their stack will not survive the next growth stage","Startups preparing for funding, a security review, or enterprise procurement","Teams inheriting a codebase with no documentation, tests, or architecture diagram"]
+  problems: ["Nobody can say which risk would break first if traffic doubled next month","Every release is a judgement call because there is no documented architecture","Engineering cost grows faster than product output, and it is unclear why"]
+  deliverables: ["Audit across six areas: deployment, resilience, scaling, engineering velocity, data, security","Risk map scored by business impact, not just technical severity","Prioritized 90-day remediation roadmap with effort estimates","Recorded walkthrough for your team, with time for questions"]
+  proof: "Built on the same six-area framework behind Stack Seekers' free audit checklist, applied to enterprise-grade systems including ABN AMRO banking work and high-growth product environments."
+  caseStudies: [{"slug":"ibrebuild-for-abn-amro-bank-n-v","category":"Enterprise","title":"ABN AMRO Rebuild","blurb":"Legacy AngularJS platform assessed and migrated to Vue.js."},{"slug":"emerald-design-system","category":"Design Systems","title":"Emerald Design System","blurb":"Design-token audit that removed styling sprawl across a bank."},{"slug":"local-home-services-pros","category":"Scalable Web","title":"LocalXR Platform","blurb":"Programmatic platform serving thousands of dynamic routes."}]
+  faq: [{"question":"What is a tech stack audit?","answer":"A structured technical audit of the infrastructure your product runs on. It reviews deployment, platform resilience, scaling headroom, engineering velocity, data strategy, and security, then ranks what should be fixed first by business risk."},{"question":"What is the difference between the free checklist and this audit?","answer":"The free startup technical audit checklist is a self-assessment you can finish in five minutes — useful for spotting obvious gaps. The paid tech stack audit service is a hands-on review of your actual codebase, infrastructure, and configuration by a senior engineer, which produces evidence-based findings rather than self-reported ones."},{"question":"How long does a tech stack audit take?","answer":"48-72 hours of engineer time once access is granted. The critical path is usually gathering access to repositories, hosting, and documentation, which is why the audit-ready checklist exists — having those seven artefacts ready keeps the audit on schedule."},{"question":"What do I receive at the end?","answer":"A risk map scored by business impact, a prioritized 90-day remediation roadmap with effort estimates, and a recorded walkthrough for your team. You can execute the roadmap with your own engineers or hand it back to us."},{"question":"Do we have to fix everything the audit finds?","answer":"No. Most teams fix only the items that block the next stage of growth. The point of scoring findings by business impact is so you can deliberately defer the low-risk ones instead of guessing."},{"question":"Is a tech stack audit only for startups?","answer":"No. Startups use audits before a funding round or enterprise procurement; established companies use them before a platform migration or a scale-up. The six areas reviewed are the same regardless of company size."}]
+  previousService: {"name":"Internal Tools & Portals","link":"/web-development-services/internal-tools-and-portals/"}
+  nextService: null
 ---
 <article class="service-sales-page">
   <section class="mb-6">

@@ -99,6 +99,12 @@ Adopt these habits for a professional Git workflow:
 - **Keep Repositories in Sync**: Regularly prune branches to avoid conflicts and clutter.
 - **Test Before Force-Deleting**: Use `git branch -d` before `-D` to avoid losing unmerged work.
 
+<div class="my-4 p-4 surface-50 border-round-2xl border-1 border-100">
+  <p class="m-0 text-700 line-height-3">
+    <strong>Moving the repository to a team or client?</strong> Changing owner changes your <code>origin</code> remote, so prune and re-point your remotes right after the move. See <a href="/posts/transfer-github-repository/">how to transfer a GitHub repository to an organization</a> for the full flow, including what happens to collaborators, secrets, and deploy keys.
+  </p>
+</div>
+
 ## Conclusion
 
 Cleaning up local Git branches that no longer exist on the remote is a simple way to maintain an organized development environment. The improved Bash script makes this process safe and efficient, with an exclusion list to protect critical branches. Combine this with the bonus tips, visual tools, and best practices to optimize your Git workflow. Whether you're a solo developer or part of a team, these techniques will save time and reduce errors.

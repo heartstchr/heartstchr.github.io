@@ -1001,6 +1001,11 @@ const getLastModified = (filePath, pagePath) => {
   if (video?.publishedAt) return toIsoDate(video.publishedAt);
 
   const post = posts.find((item) => item.link === pagePath);
+  // Prefer an explicitly declared lastUpdated over date. Reporting the publish
+  // date for a post that has since been revised tells crawlers the content is
+  // unchanged since then, which suppresses re-crawling exactly the pages that
+  // were just refreshed.
+  if (post?.lastUpdated) return toIsoDate(post.lastUpdated);
   if (post?.date) return toIsoDate(post.date);
 
   const stats = fs.statSync(filePath);

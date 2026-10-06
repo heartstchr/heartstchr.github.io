@@ -9,9 +9,6 @@ pageInfo: false
 contributors: false
 head:
   - - meta
-    - name: keywords
-      content: hire nuxt developer, hire nuxt.js developers, nuxt.js developer, nuxt developer for hire, vue nuxt developer, hire nuxt js developers, ssr vue.js, nuxt ssg developer, hire vue nuxt engineer, nuxt freelancer, hire freelance nuxt.js developer
-  - - meta
     - property: og:title
       content: "Hire Nuxt.js Developers | Senior Nuxt Developer for Hire"
   - - meta
@@ -34,7 +31,7 @@ head:
         Hire a senior Nuxt.js developer who builds <span class="text-gradient">SEO-dominant, high-performance</span> Vue applications.
       </h1>
       <p class="text-xl md:text-2xl mt-4 line-height-3 text-700">
-        From ABN AMRO banking-grade SSR to programmatic SEO platforms with thousands of dynamic routes — I architect and build Nuxt applications that rank, load fast, and scale cleanly.
+        From ABN AMRO banking-grade engineering to programmatic SEO platforms with thousands of dynamic routes — I architect and build Nuxt applications that rank, load fast, and scale cleanly.
       </p>
       <div class="flex flex-column md:flex-row gap-3 mt-5">
         <a href="https://cal.com/stackseekers/25min?utm_source=website&utm_medium=cta&utm_campaign=hire-nuxt" target="_blank" class="no-underline">
@@ -178,8 +175,8 @@ head:
 <!-- Case Studies -->
 <div class="mb-8 px-4 py-8 surface-50 border-round-3xl" id="case-studies">
   <div class="text-center mb-6">
-    <h2 class="text-4xl font-bold mb-2">Nuxt & Vue.js Case Studies</h2>
-    <p class="text-xl text-600">SSR, SSG, and hybrid rendering in production.</p>
+    <h2 class="text-4xl font-bold mb-2">Vue.js Case Studies</h2>
+    <p class="text-xl text-600">Nuxt-ready Vue 3 engineering in production — the same composables, state management, and SSR skills transfer directly to Nuxt.</p>
   </div>
   <div class="grid">
     <div class="col-12 md:col-6 lg:col-4 p-3">
@@ -251,7 +248,7 @@ head:
     <div class="col-12 md:col-6 p-3">
       <div class="surface-0 p-4 border-round-2xl shadow-1 h-full">
         <h3 class="text-lg font-bold mb-2">Do you prefer Nuxt or Next.js?</h3>
-        <p class="text-600 line-height-3 text-sm m-0">Both. I choose the framework based on your project needs. Nuxt is ideal for Vue-ecosystem teams; Next.js is ideal for React teams. Both support SSR, SSG, and hybrid rendering.</p>
+        <p class="text-600 line-height-3 text-sm m-0">Both. I choose the framework based on your project needs. Nuxt is ideal for Vue-ecosystem teams; <a href="/hire-nextjs-developer/" class="text-primary font-bold">Next.js is ideal for React teams</a>. Both support SSR, SSG, and hybrid rendering.</p>
       </div>
     </div>
     <div class="col-12 md:col-6 p-3">

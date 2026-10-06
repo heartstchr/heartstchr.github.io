@@ -257,7 +257,7 @@ export const freelance = [
   },
   {
     name: "Contact Form Plugin",
-    seoTitle: "Free Contact Form Plugin with Notion",
+    seoTitle: "Embeddable Contact Form for Any Website | Free Notion-Powered Plugin",
     seoDescription: "Embed a secure contact form on any website with one script tag. Submissions auto-save to Notion, with CAPTCHA, rate limiting, and sanitization built in.",
     category: "Ready-made Apps",
     description:

@@ -29,12 +29,18 @@ export default defineUserConfig({
         {
           name: "emit-build-version",
           apply: "build",
-          closeBundle() {
+          // writeBundle runs after the bundler has written output files to
+          // disk in both rollup and rolldown. closeBundle does not — under
+          // rolldown-vite the assets dir does not exist yet at closeBundle
+          // time, which made this plugin throw ENOENT.
+          writeBundle() {
             const distDir = path.resolve(__dirname, "./dist");
             const assetsDir = path.join(distDir, "assets");
-            const appFile = fs
-              .readdirSync(assetsDir)
-              .find((f: string) => /^app-[A-Za-z0-9_-]+\.js$/.test(f));
+            const appFile = fs.existsSync(assetsDir)
+              ? fs
+                  .readdirSync(assetsDir)
+                  .find((f: string) => /^app-[A-Za-z0-9_-]+\.js$/.test(f))
+              : undefined;
             const bundleHash = appFile ? appFile.replace(/^app-/, "").replace(/\.js$/, "") : "";
             const version = {
               hash: bundleHash,

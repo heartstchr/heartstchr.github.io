@@ -179,6 +179,7 @@ export const posts = [
     title: "How to Move or Transfer a GitHub Repository to an Organization",
     link: "/posts/transfer-github-repository/",
     date: "2024-05-26",
+    lastUpdated: "2026-10-06",
     summary: "Move or transfer a GitHub repository to an organization in minutes — public or private, with full commit history preserved and automatic redirects from the old URL. Step-by-step guide with video.",
     category: "Version Control",
     tags: ["GitHub", "Repository Management", "Collaboration", "Freelancing"]

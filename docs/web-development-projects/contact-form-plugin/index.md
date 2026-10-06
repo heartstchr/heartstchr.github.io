@@ -1,5 +1,5 @@
 ---
-title: "Free Contact Form Plugin with Notion"
+title: "Embeddable Contact Form for Any Website | Free Notion-Powered Plugin"
 description: "Embed a secure contact form on any website with one script tag. Submissions auto-save to Notion, with CAPTCHA, rate limiting, and sanitization built in."
 lastUpdated: false
 editLink: false
