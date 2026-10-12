@@ -9,6 +9,21 @@ export const footer = `
             <div class="text-lg font-semibold" style="color: #000000;">Stack Seekers</div>
           </div>
           <div class="text-xs font-bold text-primary uppercase tracking-widest opacity-80">Engineering Architecture. Scaling Growth.</div>
+          <div class="flex flex-column gap-2 mt-2">
+            <a href="mailto:support@stackseekers.com" class="no-underline text-color hover:text-primary font-medium transition-colors text-sm flex align-items-center gap-2">
+              <i class="pi pi-envelope"></i>
+              <span>support@stackseekers.com</span>
+            </a>
+            <a href="https://wa.me/917026217029" target="_blank" rel="noopener noreferrer" class="no-underline text-color hover:text-primary font-medium transition-colors text-sm flex align-items-center gap-2">
+              <i class="pi pi-whatsapp"></i>
+              <span>+91 70262 17029</span>
+            </a>
+            <div class="flex align-items-center gap-3 mt-1">
+              <a href="https://www.linkedin.com/in/jiwanghosal/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="no-underline text-color hover:text-primary"><i class="pi pi-linkedin"></i></a>
+              <a href="https://www.youtube.com/@stackseekers" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="no-underline text-color hover:text-primary"><i class="pi pi-youtube"></i></a>
+              <a href="https://www.instagram.com/jiwan_ghosal/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="no-underline text-color hover:text-primary"><i class="pi pi-instagram"></i></a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="col-12 md:col-3 p-2 border-bottom-1 md:border-bottom-none border-50 pb-2 md:pb-4">
