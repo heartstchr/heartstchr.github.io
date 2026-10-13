@@ -80,7 +80,7 @@ head:
             <i class="pi pi-times-circle text-red-500 text-xl mt-1"></i>
             <div>
               <div class="font-bold mb-1">Broken on mobile</div>
-              <div class="text-600 text-sm">Over 60% of local searches happen on mobile. If your site is not mobile-first, you are invisible.</div>
+              <div class="text-600 text-sm">Most local searches and first visits now happen on a phone. If your site is not mobile-first, you are invisible.</div>
             </div>
           </div>
         </div>
@@ -89,8 +89,8 @@ head:
     <div class="col-12 lg:col-6 text-center">
       <div class="surface-0 p-6 border-round-3xl shadow-4">
         <div class="text-center mb-4">
-          <div class="text-6xl font-bold text-primary mb-2">60%</div>
-          <div class="text-xl font-bold text-900">Searches Are Mobile</div>
+          <div class="text-4xl font-bold text-primary mb-2">Mobile-First</div>
+          <div class="text-xl font-bold text-900">Where Customers Search</div>
         </div>
         <div class="grid text-left">
           <div class="col-12 mb-2 flex align-items-center gap-3">
@@ -162,6 +162,38 @@ head:
         <i class="pi pi-shield text-primary text-3xl mb-3"></i>
         <h3 class="text-xl font-bold mb-2">SSL, Hosting & Maintenance</h3>
         <p class="text-600 line-height-3 text-sm">Secure HTTPS, reliable hosting, and optional maintenance plans. Your site stays up-to-date and secure without you lifting a finger.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- AI for Small Business -->
+<div class="mb-8" id="ai-for-small-business">
+  <div class="grid align-items-center surface-0 border-round-3xl p-4 md:p-6 shadow-2">
+    <div class="col-12 lg:col-7">
+      <div class="flex align-items-center gap-2 text-primary font-bold mb-2 uppercase tracking-wider text-xs">
+        <i class="pi pi-sparkles"></i> AI for Small Business
+      </div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-3">Want AI to save your business time, not just a nicer website?</h2>
+      <p class="text-lg line-height-3 text-700 mb-3">
+        Once your website is sorted, the next question is usually AI: where it can save hours, what is safe to automate, and what it would cost. I run a short AI readiness assessment for small businesses, then build the quick wins — quoting, follow-ups, content, support, and reporting.
+      </p>
+      <div class="flex flex-column md:flex-row gap-3 mt-2">
+        <a href="/ai-implementation-for-small-business/" class="no-underline">
+          <Button label="AI Implementation for Small Business" icon="pi pi-arrow-right" severity="primary" raised rounded />
+        </a>
+        <a href="/startup-stack-audit-checklist/" class="no-underline">
+          <Button label="Free AI Readiness Check" icon="pi pi-check-square" severity="secondary" raised rounded outlined />
+        </a>
+      </div>
+    </div>
+    <div class="col-12 lg:col-5">
+      <div class="surface-50 border-round-2xl p-4">
+        <ul class="list-none p-0 m-0">
+          <li class="flex align-items-start gap-2 mb-3"><i class="pi pi-check-circle text-primary mt-1"></i><span class="text-sm line-height-3">AI readiness assessment for your business</span></li>
+          <li class="flex align-items-start gap-2 mb-3"><i class="pi pi-check-circle text-primary mt-1"></i><span class="text-sm line-height-3">Automate quoting, follow-ups, and admin</span></li>
+          <li class="flex align-items-start gap-2 mb-3"><i class="pi pi-check-circle text-primary mt-1"></i><span class="text-sm line-height-3">Data privacy and governance built in</span></li>
+        </ul>
       </div>
     </div>
   </div>

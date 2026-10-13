@@ -42,6 +42,7 @@ export const audienceTags: string[] = [
   "transparency",
   "communication",
   "developer-tools",
+  "small business",
 ];
 
 export const postClusters: PostCluster[] = [
@@ -95,6 +96,10 @@ export const postClusters: PostCluster[] = [
     tags: [
       "seo",
       "programmatic seo",
+      "generative engine optimization",
+      "geo",
+      "ai search",
+      "content strategy",
       "lead generation",
       "webp",
       "image optimization",
@@ -107,6 +112,9 @@ export const postClusters: PostCluster[] = [
     label: "AI & Automation",
     tags: [
       "ai",
+      "ai readiness",
+      "ai strategy",
+      "ai adoption",
       "llm",
       "gemini",
       "prompt engineering",

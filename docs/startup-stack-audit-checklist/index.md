@@ -7,7 +7,7 @@ pageInfo: false
 head:
   - - meta
     - name: keywords
-      content: startup technical audit, tech stack audit, audit ready checklist for startups, saas infrastructure checklist, technical debt assessment, fractional cto audit, scalable tech stack, startup architecture review, tech stack audit service
+      content: startup technical audit, tech stack audit, audit ready checklist for startups, AI readiness assessment, saas infrastructure checklist, technical debt assessment, fractional cto audit, scalable tech stack, startup architecture review, tech stack audit service
 ---
 
 <div class="p-2 md:p-4" style="max-width: 1000px; margin: 0 auto;">

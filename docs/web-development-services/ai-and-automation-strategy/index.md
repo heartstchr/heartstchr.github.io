@@ -1,6 +1,6 @@
 ---
-title: "AI Automation That Cuts Lead Turnaround From Days to Hours"
-description: "We build production AI automation, not chatbots. LLM architecture, guardrails, and tool integrations that cut lead turnaround from days to hours."
+title: "AI Implementation for Business | AI Automation Consultant"
+description: "AI implementation for small and mid-size businesses: readiness assessment, quick-win automation, and production LLM systems. Fixed scope, senior engineer, measurable ROI."
 lastUpdated: false
 editLink: false
 contributors: false
@@ -10,19 +10,19 @@ layout: Layout
 hidePageTitle: true
 service:
   name: "ROI-Driven AI Automation"
-  descriptions: ["I integrate Large Language Models (LLMs) and custom AI agents to drive measurable business results. From reducing lead response times from days to hours to automating complex manual data workflows.","I don't just 'add a chatbot'; I build intelligent systems that move your core business metrics and save thousands of manual hours."]
+  descriptions: ["I help small and mid-size businesses implement AI that actually pays for itself — starting with a readiness assessment, then focused automation and production-grade LLM features. Not chatbots, and not hype.","Whether you are adopting AI for the first time or rescuing a stalled pilot, I bring senior enterprise engineering (banking-grade systems) to work that agencies overcomplicate and freelancers underdeliver."]
   icon: "openai"
   code: "ai-and-automation-strategy"
   imageCode: "ai-and-automation-strategy"
   metric: "Days → Hours Lead Turnaround"
   outcome: "Operational Efficiency"
-  keywords: ["AI automation consultant","LLM integration developer","AI workflow automation"]
-  idealFor: ["Founders turning manual workflows into productized automation","Teams that want LLM features inside their app, not bolted on top","Operations-heavy businesses losing time to repetitive work"]
-  problems: ["Teams wasting hours on repetitive content, support, or back-office work","AI ideas stuck at prototype stage with no production architecture","Loose prompts and disconnected tools that do not move business metrics"]
-  deliverables: ["AI opportunity audit tied to ROI and workflow impact","LLM architecture with context, guardrails, and tool integrations","Production-ready automation flows inside your existing stack"]
+  keywords: ["AI implementation company","AI consultant for small business","AI automation consultant","AI readiness assessment","LLM integration developer","AI workflow automation"]
+  idealFor: ["Small and mid-size businesses that know AI matters but do not know where to start","Founders turning manual workflows into productized automation","Teams that want LLM features inside their app, not bolted on top","Operations-heavy businesses losing time to repetitive work"]
+  problems: ["Teams wasting hours on repetitive content, support, or back-office work","AI ideas stuck at prototype stage with no production architecture","Loose prompts and disconnected tools that do not move business metrics","Unclear AI governance, data privacy, and cost exposure"]
+  deliverables: ["AI readiness assessment: data, tools, privacy, and governance gaps scored by business impact","AI opportunity audit tied to ROI and workflow impact","LLM architecture with context, guardrails, and tool integrations","Production-ready automation flows inside your existing stack"]
   proof: "Built AI-powered matching, content generation, and automation systems that reduced lead turnaround from days to hours."
   caseStudies: [{"slug":"ai-dynamic-crud-app","category":"AI Automation","title":"AI Dynamic CRUD","blurb":"Gemini-driven Notion-to-app generator with schema review."},{"slug":"ai-voice-generator","category":"AI Content","title":"AI Voice Generator","blurb":"Gemini TTS pipeline turning scripts into natural voiceovers."},{"slug":"ai-powered-influencer-platform-vibe3","category":"AI Platform","title":"Vibe3","blurb":"AI-powered influencer platform with smart matching."}]
-  faq: [{"question":"Do you only build chatbots?","answer":"No. The focus is on useful AI systems like copilots, workflows, agents, classification, summarization, and decision support inside real products."},{"question":"Can you work with OpenAI, Gemini, or other models?","answer":"Yes. I choose models based on product fit, latency, cost, and data sensitivity rather than forcing a single vendor."}]
+  faq: [{"question":"Do you only build chatbots?","answer":"No. The focus is on useful AI systems like copilots, workflows, agents, classification, summarization, and decision support inside real products."},{"question":"Can you work with OpenAI, Gemini, or other models?","answer":"Yes. I choose models based on product fit, latency, cost, and data sensitivity rather than forcing a single vendor."},{"question":"Is this only for large companies?","answer":"No. Small and mid-size businesses are often the best fit, because one well-chosen automation can free up hours every week. Engagements start with a readiness assessment so you only invest in changes that pay for themselves."},{"question":"How do you handle AI governance and data privacy?","answer":"Every engagement includes a data and governance review: what data is safe to send to a model, where personal data must be redacted, what an AI feature is allowed to decide, and how it is logged. That keeps you aligned with GDPR and emerging AI rules without slowing delivery."}]
   previousService: {"name":"Product Architecture & Scale","link":"/web-development-services/product-architecture-and-scaling/"}
   nextService: {"name":"Fractional CTO Strategy","link":"/web-development-services/fractional-cto-and-advisory/"}
 ---

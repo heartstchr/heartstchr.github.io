@@ -14,11 +14,8 @@ export const footer = `
               <i class="pi pi-envelope"></i>
               <span>support@stackseekers.com</span>
             </a>
-            <a href="https://wa.me/917026217029" target="_blank" rel="noopener noreferrer" class="no-underline text-color hover:text-primary font-medium transition-colors text-sm flex align-items-center gap-2">
-              <i class="pi pi-whatsapp"></i>
-              <span>+91 70262 17029</span>
-            </a>
             <div class="flex align-items-center gap-3 mt-1">
+              <a href="https://wa.me/917026217029" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="no-underline text-color hover:text-primary"><i class="pi pi-whatsapp"></i></a>
               <a href="https://www.linkedin.com/in/jiwanghosal/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="no-underline text-color hover:text-primary"><i class="pi pi-linkedin"></i></a>
               <a href="https://www.youtube.com/@stackseekers" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="no-underline text-color hover:text-primary"><i class="pi pi-youtube"></i></a>
               <a href="https://www.instagram.com/jiwan_ghosal/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="no-underline text-color hover:text-primary"><i class="pi pi-instagram"></i></a>

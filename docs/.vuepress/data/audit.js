@@ -47,10 +47,11 @@ export const auditChecklist = [
     title: 'Data & AI Strategy',
     risk: 'Opportunity Cost Risk',
     icon: 'pi-database',
-    description: 'Is your data organized for the AI era? This measures if you can leverage your own data for custom intelligence or if it’s trapped in silos.',
+    description: 'Is your data organized for the AI era? This acts as a quick AI readiness assessment: whether you can safely use your own data for automation and AI, or whether it is trapped in silos.',
     items: [
       { label: 'Structured Data Pipeline', insight: 'Your data is clean and accessible for analysis, not just buried in logs.', score: null },
       { label: 'AI Readiness', insight: 'Your architecture can support custom LLM or Gemini integrations safely.', score: null },
+      { label: 'AI Governance & Review', insight: 'You know what data may reach a model and who reviews AI outputs before customers see them.', score: null },
       { label: 'User Data Ownership', insight: 'You have full control over your customer data for future training or insights.', score: null }
     ]
   },

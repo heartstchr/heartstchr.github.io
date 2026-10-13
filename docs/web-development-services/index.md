@@ -49,7 +49,7 @@ pageInfo: false
             <i class="pi pi-check-circle text-primary text-xl mt-1"></i>
             <div>
               <div class="font-bold mb-1">Elite Execution</div>
-              <div class="text-600 text-sm">10 years of enterprise seniority at your service.</div>
+              <div class="text-600 text-sm">Over 10 years of enterprise seniority at your service.</div>
             </div>
           </div>
         </div>

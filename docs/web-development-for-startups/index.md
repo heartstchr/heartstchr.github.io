@@ -159,7 +159,7 @@ head:
       <div class="surface-0 shadow-2 border-round-2xl p-5 h-full">
         <i class="pi pi-users text-primary text-3xl mb-3"></i>
         <h3 class="text-xl font-bold mb-2">Senior-Level Execution</h3>
-        <p class="text-600 line-height-3 text-sm">10+ years of enterprise architecture experience (ABN AMRO, banking-grade systems) applied to your startup.</p>
+        <p class="text-600 line-height-3 text-sm">Over 10 years of enterprise architecture experience (ABN AMRO, banking-grade systems) applied to your startup.</p>
       </div>
     </div>
   </div>

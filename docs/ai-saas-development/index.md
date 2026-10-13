@@ -167,6 +167,42 @@ head:
   </div>
 </div>
 
+<!-- Build vs Adopt -->
+<div class="mb-8 surface-0 border-round-3xl p-4 md:p-6 shadow-2" id="build-vs-adopt">
+  <div class="grid align-items-center">
+    <div class="col-12 lg:col-7">
+      <div class="flex align-items-center gap-2 text-primary font-bold mb-2 uppercase tracking-wider text-xs">
+        <i class="pi pi-directions"></i> Build vs Adopt
+      </div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-3">Building an AI product, or adopting AI in your business?</h2>
+      <p class="text-lg line-height-3 text-700 mb-3">
+        This page is for building AI into the software you sell. If instead you want to use AI to run your business faster — automating admin, support, quoting, or reporting — that is a different engagement.
+      </p>
+      <p class="text-lg line-height-3 text-700 mb-3">
+        Choosing the right track stops you over-building. For adoption, I start with an AI readiness assessment; for governance, a fractional CTO engagement sets the rules before anything ships.
+      </p>
+      <div class="flex flex-column md:flex-row gap-3 mt-2">
+        <a href="/ai-implementation-for-small-business/" class="no-underline">
+          <Button label="Adopt AI in My Business" icon="pi pi-arrow-right" severity="primary" raised rounded />
+        </a>
+        <a href="/web-development-services/fractional-cto-and-advisory/" class="no-underline">
+          <Button label="AI Governance & Advisory" icon="pi pi-shield" severity="secondary" raised rounded outlined />
+        </a>
+      </div>
+    </div>
+    <div class="col-12 lg:col-5">
+      <div class="surface-50 border-round-2xl p-4">
+        <div class="font-bold mb-3">Quick guide</div>
+        <ul class="list-none p-0 m-0">
+          <li class="flex align-items-start gap-2 mb-3"><i class="pi pi-box text-primary mt-1"></i><span class="text-sm line-height-3"><strong>Building a product?</strong> Stay on this page.</span></li>
+          <li class="flex align-items-start gap-2 mb-3"><i class="pi pi-cog text-primary mt-1"></i><span class="text-sm line-height-3"><strong>Automating your own ops?</strong> See AI for Small Business.</span></li>
+          <li class="flex align-items-start gap-2 mb-3"><i class="pi pi-shield text-primary mt-1"></i><span class="text-sm line-height-3"><strong>Need rules and oversight?</strong> See fractional CTO advisory.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Case Studies -->
 <div class="mb-8 px-4 py-8 surface-50 border-round-3xl" id="case-studies">
   <div class="text-center mb-6">
@@ -249,7 +285,7 @@ head:
     <div class="col-12 md:col-6 p-3">
       <div class="surface-0 p-4 border-round-2xl shadow-1 h-full">
         <h3 class="text-lg font-bold mb-2">How do you control AI API costs?</h3>
-        <p class="text-600 line-height-3 text-sm m-0">Multi-model routing (cheap models for simple tasks), prompt caching, response caching, and usage analytics. Most products see 60-80% cost reduction after optimization.</p>
+        <p class="text-600 line-height-3 text-sm m-0">Multi-model routing (cheap models for simple tasks), prompt caching, response caching, and usage analytics. These levers often cut model spend substantially — the exact saving depends on your workloads, and I measure it rather than promise a number.</p>
       </div>
     </div>
     <div class="col-12 md:col-6 p-3">

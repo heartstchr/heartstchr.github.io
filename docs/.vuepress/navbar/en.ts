@@ -111,6 +111,10 @@ export const enNavbar = navbar([
         text: "AI SaaS Development",
         link: "/ai-saas-development/",
       },
+      {
+        text: "AI for Small Business",
+        link: "/ai-implementation-for-small-business/",
+      },
     ],
   },
   {

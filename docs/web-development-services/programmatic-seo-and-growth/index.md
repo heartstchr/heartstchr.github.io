@@ -1,6 +1,6 @@
 ---
-title: "Programmatic SEO Development: 1,000+ Pages"
-description: "We build programmatic SEO platforms that generate thousands of optimized landing pages — capturing long-tail local traffic without ad spend."
+title: "Programmatic SEO & GEO Development Services"
+description: "Programmatic SEO and GEO (Generative Engine Optimization) that capture both Google's long tail and citations in AI answers. Scalable, structured, conversion-focused."
 lastUpdated: false
 editLink: false
 contributors: false
@@ -10,19 +10,19 @@ layout: Layout
 hidePageTitle: true
 service:
   name: "Programmatic Growth Engines"
-  descriptions: ["I build high-velocity programmatic SEO platforms that dominate search rankings. Using database-driven routing to generate thousands of optimized landing pages that capture long-tail local traffic.","Perfect for marketplaces and lead-generation platforms that need to scale traffic natively without high ad-spend."]
+  descriptions: ["I build high-velocity programmatic SEO and GEO platforms that capture long-tail search demand and citations inside AI answer engines. Database-driven routing generates thousands of optimized landing pages without high ad spend.","Perfect for marketplaces, directories, and lead-generation platforms that want to be found — on Google and in the AI answers customers now trust first."]
   icon: "googlechrome"
   code: "programmatic-seo-and-growth"
   imageCode: "programmatic-seo-and-growth"
   metric: "1,000+ Lead Pages"
   outcome: "Organic Traffic Expansion"
-  keywords: ["programmatic SEO developer","lead generation engineering","location page SEO"]
-  idealFor: ["Marketplaces, directories, and local-service platforms","Businesses with location, category, or inventory-driven search demand","Founders who need scalable organic acquisition without bloated CMS setups"]
-  problems: ["Manual content workflows that cannot scale to thousands of landing pages","Slow sites that waste long-tail demand and fail to index well","SEO content disconnected from conversion and lead capture"]
-  deliverables: ["Search architecture for scalable location and category pages","Fast page-generation system with templates, data, and internal linking","Lead capture flows tied directly to commercial search intent"]
+  keywords: ["programmatic SEO developer","GEO consultant","generative engine optimization","AI search visibility","lead generation engineering","location page SEO"]
+  idealFor: ["Marketplaces, directories, and local-service platforms","Businesses with location, category, or inventory-driven search demand","Teams that want to be cited in AI answers and Google AI Overviews, not only ranked on page one","Founders who need scalable organic acquisition without bloated CMS setups"]
+  problems: ["Manual content workflows that cannot scale to thousands of landing pages","Slow sites that waste long-tail demand and fail to index well","SEO content disconnected from conversion and lead capture","Invisible in AI-generated answers while competitors get cited"]
+  deliverables: ["Search architecture for scalable location and category pages","Fast page-generation system with templates, data, and internal linking","GEO layer: structured, citation-ready content that AI answer engines can quote","Lead capture flows tied directly to commercial search intent"]
   proof: "Built directory and lead-generation platforms with dynamic routing, strong crawlability, and conversion-focused page structures."
   caseStudies: [{"slug":"local-home-services-pros","category":"Programmatic SEO","title":"LocalXR","blurb":"Thousands of dynamic location-service routes."},{"slug":"sr-22-insurance-now","category":"Lead Generation","title":"SR-22 Insurance Now","blurb":"JSON-driven landing pages tied to insurance campaigns."},{"slug":"appliance-repair-service-platform","category":"Content Platform","title":"Appliance Repair","blurb":"Category and guide pages built to capture long-tail demand."}]
-  faq: [{"question":"Is programmatic SEO just AI content at scale?","answer":"No. The core is structured data, useful page templates, clean internal linking, performance, and commercial intent. AI can help, but it is not the strategy by itself."},{"question":"Can you build both the SEO system and the lead funnel?","answer":"Yes. The strongest results come when information architecture, page generation, forms, and routing are designed together."}]
+  faq: [{"question":"Is programmatic SEO just AI content at scale?","answer":"No. The core is structured data, useful page templates, clean internal linking, performance, and commercial intent. AI can help, but it is not the strategy by itself."},{"question":"Can you build both the SEO system and the lead funnel?","answer":"Yes. The strongest results come when information architecture, page generation, forms, and routing are designed together."},{"question":"What is GEO, and do we need it as well as SEO?","answer":"GEO (Generative Engine Optimization) is the practice of making your content easy for AI answer engines and AI Overviews to cite. It builds on the same structured data and page architecture as programmatic SEO, so the two are delivered together rather than as separate projects."}]
   previousService: {"name":"Fractional CTO Strategy","link":"/web-development-services/fractional-cto-and-advisory/"}
   nextService: {"name":"High-Performance API Design","link":"/web-development-services/api-performance-and-integration/"}
 ---

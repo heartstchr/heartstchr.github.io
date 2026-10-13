@@ -1,5 +1,21 @@
 export const posts = [
   {
+    title: "GEO: How to Get Found When Customers Ask AI Instead of Google",
+    link: "/posts/generative-engine-optimization-guide/",
+    date: "2026-10-12",
+    summary: "Generative Engine Optimization (GEO) is how you get cited by AI Overviews, ChatGPT, and Perplexity. Learn the principles, the checklist, and how GEO builds on programmatic SEO.",
+    category: "Growth",
+    tags: ["SEO", "Generative Engine Optimization", "GEO", "AI Search", "Content Strategy", "Programmatic SEO"]
+  },
+  {
+    title: "AI Readiness Assessment: A Founder's Guide Without the Hype",
+    link: "/posts/ai-readiness-assessment-small-business/",
+    date: "2026-10-12",
+    summary: "An AI readiness assessment shows where AI can save real hours — and where it is risky. This founder's guide covers data, tools, governance, and the quick wins to ship first.",
+    category: "AI",
+    tags: ["AI", "AI Readiness", "AI Strategy", "AI Adoption", "Automation", "Small Business"]
+  },
+  {
     title: "SaaS MVP Timeline in 2026: Scope, Effort, and Decisions",
     link: "/posts/saas-mvp-cost-timeline-2026/",
     date: "2026-08-17",

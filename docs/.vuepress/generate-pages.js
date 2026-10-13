@@ -975,6 +975,7 @@ const toPagePath = (filePath) => {
 const getPriority = (pagePath) => {
   if (pagePath === "/") return "1.0";
   if (pagePath === "/contact/") return "0.95";
+  if (pagePath === "/ai-implementation-for-small-business/") return "0.9";
   if (pagePath === "/web-development-services/") return "0.95";
   if (pagePath.startsWith("/web-development-services/")) return "0.90";
   if (pagePath === "/web-development-projects/") return "0.85";

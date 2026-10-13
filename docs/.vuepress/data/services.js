@@ -46,14 +46,15 @@ export const services = [
   },
   {
     name: "ROI-Driven AI Automation",
-    seoTitle: "AI Automation That Cuts Lead Turnaround From Days to Hours",
-    seoDescription: "We build production AI automation, not chatbots. LLM architecture, guardrails, and tool integrations that cut lead turnaround from days to hours.",
+    seoTitle: "AI Implementation for Business | AI Automation Consultant",
+    seoDescription: "AI implementation for small and mid-size businesses: readiness assessment, quick-win automation, and production LLM systems. Fixed scope, senior engineer, measurable ROI.",
     icon: "openai",
     code: "ai-and-automation-strategy",
     outcome: "Operational Efficiency",
     metric: "Days → Hours Lead Turnaround",
-    keywords: ["AI automation consultant", "LLM integration developer", "AI workflow automation"],
+    keywords: ["AI implementation company", "AI consultant for small business", "AI automation consultant", "AI readiness assessment", "LLM integration developer", "AI workflow automation"],
     idealFor: [
+      "Small and mid-size businesses that know AI matters but do not know where to start",
       "Founders turning manual workflows into productized automation",
       "Teams that want LLM features inside their app, not bolted on top",
       "Operations-heavy businesses losing time to repetitive work",
@@ -62,8 +63,10 @@ export const services = [
       "Teams wasting hours on repetitive content, support, or back-office work",
       "AI ideas stuck at prototype stage with no production architecture",
       "Loose prompts and disconnected tools that do not move business metrics",
+      "Unclear AI governance, data privacy, and cost exposure",
     ],
     deliverables: [
+      "AI readiness assessment: data, tools, privacy, and governance gaps scored by business impact",
       "AI opportunity audit tied to ROI and workflow impact",
       "LLM architecture with context, guardrails, and tool integrations",
       "Production-ready automation flows inside your existing stack",
@@ -83,10 +86,18 @@ export const services = [
         question: "Can you work with OpenAI, Gemini, or other models?",
         answer: "Yes. I choose models based on product fit, latency, cost, and data sensitivity rather than forcing a single vendor.",
       },
+      {
+        question: "Is this only for large companies?",
+        answer: "No. Small and mid-size businesses are often the best fit, because one well-chosen automation can free up hours every week. Engagements start with a readiness assessment so you only invest in changes that pay for themselves.",
+      },
+      {
+        question: "How do you handle AI governance and data privacy?",
+        answer: "Every engagement includes a data and governance review: what data is safe to send to a model, where personal data must be redacted, what an AI feature is allowed to decide, and how it is logged. That keeps you aligned with GDPR and emerging AI rules without slowing delivery.",
+      },
     ],
     descriptions: [
-      "I integrate Large Language Models (LLMs) and custom AI agents to drive measurable business results. From reducing lead response times from days to hours to automating complex manual data workflows.",
-      "I don't just 'add a chatbot'; I build intelligent systems that move your core business metrics and save thousands of manual hours.",
+      "I help small and mid-size businesses implement AI that actually pays for itself — starting with a readiness assessment, then focused automation and production-grade LLM features. Not chatbots, and not hype.",
+      "Whether you are adopting AI for the first time or rescuing a stalled pilot, I bring senior enterprise engineering (banking-grade systems) to work that agencies overcomplicate and freelancers underdeliver.",
     ],
   },
   {
@@ -97,7 +108,7 @@ export const services = [
     code: "fractional-cto-and-advisory",
     outcome: "Strategic Technical Partnership",
     metric: "6-Month Roadmap",
-    keywords: ["fractional CTO", "startup technical advisor", "technical leadership consultant"],
+    keywords: ["fractional CTO", "fractional CTO for startups", "startup technical advisor", "AI governance consultant", "technical leadership consultant"],
     idealFor: [
       "Founders who need senior technical leadership without a full-time CTO",
       "Product teams making architecture, hiring, or delivery decisions",
@@ -111,11 +122,12 @@ export const services = [
     deliverables: [
       "Technical roadmap aligned to business milestones",
       "Architecture oversight, sprint guidance, and vendor review",
+      "AI governance and responsible-adoption oversight",
       "Mentorship for developers and sharper technical decision-making",
     ],
     proof: "Trusted by enterprise and high-growth teams as an architect who can connect roadmap, execution, and long-term platform health.",
     caseStudies: [
-      { slug: "ibrebuild-for-abn-amro-bank-n-v", category: "Enterprise", title: "ABN AMRO Rebuild", blurb: "Award-winning architecture for a global bank's internet app." },
+      { slug: "ibrebuild-for-abn-amro-bank-n-v", category: "Enterprise", title: "ABN AMRO Rebuild", blurb: "Enterprise architecture for a global bank's internet banking app." },
       { slug: "emerald-design-system", category: "Governance", title: "Emerald Design System", blurb: "Design-system governance for engineering teams at scale." },
       { slug: "momentum-incident-management", category: "Product", title: "Momentum", blurb: "Incident management product with a role-based portal." },
     ],
@@ -128,6 +140,10 @@ export const services = [
         question: "What stage companies benefit most from fractional CTO support?",
         answer: "Usually pre-scale startups, post-MVP teams, and companies going through a platform transition or technical reset.",
       },
+      {
+        question: "Can you help with AI governance and roadmap decisions?",
+        answer: "Yes. As part of the advisory, I help decide which AI use cases are worth pursuing, what data is allowed, how outputs are reviewed, and how the work stays aligned with GDPR and emerging AI regulation such as the EU AI Act.",
+      },
     ],
     descriptions: [
       "For international partners seeking an elite technical lead. I provide roadmap planning, architectural oversight, and team mentorship without the overhead of a full-time executive.",
@@ -136,26 +152,29 @@ export const services = [
   },
   {
     name: "Programmatic Growth Engines",
-    seoTitle: "Programmatic SEO Development: 1,000+ Pages",
-    seoDescription: "We build programmatic SEO platforms that generate thousands of optimized landing pages — capturing long-tail local traffic without ad spend.",
+    seoTitle: "Programmatic SEO & GEO Development Services",
+    seoDescription: "Programmatic SEO and GEO (Generative Engine Optimization) that capture both Google's long tail and citations in AI answers. Scalable, structured, conversion-focused.",
     icon: "googlechrome",
     code: "programmatic-seo-and-growth",
     outcome: "Organic Traffic Expansion",
     metric: "1,000+ Lead Pages",
-    keywords: ["programmatic SEO developer", "lead generation engineering", "location page SEO"],
+    keywords: ["programmatic SEO developer", "GEO consultant", "generative engine optimization", "AI search visibility", "lead generation engineering", "location page SEO"],
     idealFor: [
       "Marketplaces, directories, and local-service platforms",
       "Businesses with location, category, or inventory-driven search demand",
+      "Teams that want to be cited in AI answers and Google AI Overviews, not only ranked on page one",
       "Founders who need scalable organic acquisition without bloated CMS setups",
     ],
     problems: [
       "Manual content workflows that cannot scale to thousands of landing pages",
       "Slow sites that waste long-tail demand and fail to index well",
       "SEO content disconnected from conversion and lead capture",
+      "Invisible in AI-generated answers while competitors get cited",
     ],
     deliverables: [
       "Search architecture for scalable location and category pages",
       "Fast page-generation system with templates, data, and internal linking",
+      "GEO layer: structured, citation-ready content that AI answer engines can quote",
       "Lead capture flows tied directly to commercial search intent",
     ],
     proof: "Built directory and lead-generation platforms with dynamic routing, strong crawlability, and conversion-focused page structures.",
@@ -173,10 +192,14 @@ export const services = [
         question: "Can you build both the SEO system and the lead funnel?",
         answer: "Yes. The strongest results come when information architecture, page generation, forms, and routing are designed together.",
       },
+      {
+        question: "What is GEO, and do we need it as well as SEO?",
+        answer: "GEO (Generative Engine Optimization) is the practice of making your content easy for AI answer engines and AI Overviews to cite. It builds on the same structured data and page architecture as programmatic SEO, so the two are delivered together rather than as separate projects.",
+      },
     ],
     descriptions: [
-      "I build high-velocity programmatic SEO platforms that dominate search rankings. Using database-driven routing to generate thousands of optimized landing pages that capture long-tail local traffic.",
-      "Perfect for marketplaces and lead-generation platforms that need to scale traffic natively without high ad-spend.",
+      "I build high-velocity programmatic SEO and GEO platforms that capture long-tail search demand and citations inside AI answer engines. Database-driven routing generates thousands of optimized landing pages without high ad spend.",
+      "Perfect for marketplaces, directories, and lead-generation platforms that want to be found — on Google and in the AI answers customers now trust first.",
     ],
   },
   {
@@ -375,7 +398,7 @@ export const services = [
     code: "tech-stack-audit-service",
     outcome: "Prioritized Risk Roadmap",
     metric: "48-72 Hours to Roadmap",
-    keywords: ["tech stack audit service", "technical audit for startups", "startup technical audit service", "tech stack review", "tech stack audit company"],
+    keywords: ["tech stack audit service", "technical audit for startups", "startup technical audit service", "AI readiness assessment", "tech stack review", "tech stack audit company"],
     idealFor: [
       "Founders who suspect their stack will not survive the next growth stage",
       "Startups preparing for funding, a security review, or enterprise procurement",
@@ -388,6 +411,7 @@ export const services = [
     ],
     deliverables: [
       "Audit across six areas: deployment, resilience, scaling, engineering velocity, data, security",
+      "AI-readiness review: data quality, safe model usage, governance, and privacy exposure",
       "Risk map scored by business impact, not just technical severity",
       "Prioritized 90-day remediation roadmap with effort estimates",
       "Recorded walkthrough for your team, with time for questions",
@@ -422,6 +446,10 @@ export const services = [
       {
         question: "Is a tech stack audit only for startups?",
         answer: "No. Startups use audits before a funding round or enterprise procurement; established companies use them before a platform migration or a scale-up. The six areas reviewed are the same regardless of company size.",
+      },
+      {
+        question: "Can the audit tell us whether we are ready to adopt AI?",
+        answer: "Yes. The audit reviews data quality, integration points, privacy exposure, and governance, then reports where AI would be safe and useful to apply — and where it would be risky. It works as an AI readiness assessment inside a broader tech stack audit.",
       },
     ],
     previousService: null,
