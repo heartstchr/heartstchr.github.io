@@ -7,6 +7,7 @@ import { PrimeVueResolver } from "unplugin-vue-components/resolvers";
 import { path } from "vuepress/utils";
 import theme from "./theme.js";
 import { globalSchemas, pageSpecificSchemas } from "./data/schemas.js";
+import { ADSENSE_CLIENT } from "./data/ads.js";
 
 const mode = process.env.NODE_ENV || "development";
 process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
@@ -132,7 +133,7 @@ export default defineUserConfig({
       "script",
       {
         async: "",
-        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6802795079617307",
+        src: `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`,
         crossorigin: "anonymous",
       },
     ],

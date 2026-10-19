@@ -1413,3 +1413,21 @@ $dropdown-accent: var(--theme-color, #3b82f6);
     padding-bottom: 0.375rem !important;
   }
 }
+
+.ad-slot {
+  margin: 1.75rem 0;
+}
+
+.ad-slot--inline {
+  margin: 1.5rem 0;
+}
+
+.ad-slot > ins.adsbygoogle,
+.ad-slot--inline > ins.adsbygoogle {
+  display: block;
+}
+
+.ad-slot--inline ins.adsbygoogle {
+  margin: 1.5rem auto;
+  text-align: center;
+}

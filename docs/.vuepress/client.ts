@@ -25,6 +25,7 @@ import Pagination from "./components/Pagination.vue";
 import ProjectRequestForm from "./components/ProjectRequestForm.vue";
 import BlogNavigation from "./components/BlogNavigation.vue";
 import RelatedPosts from "./components/RelatedPosts.vue";
+import AdSlot from "./components/AdSlot.vue";
 
 import TagPage from "./components/TagPage.vue";
 import GlobalLeadCapture from "./components/GlobalLeadCapture.vue";
@@ -77,6 +78,7 @@ export default defineClientConfig({
     app.component("ConsultingBridge", ConsultingBridge);
     app.component("TagIndex", TagIndex);
     app.component("RazorpayButton", RazorpayButton);
+    app.component("AdSlot", AdSlot);
   },
   rootComponents: [GlobalLeadCapture, StickyMobileCta],
   setup() {
